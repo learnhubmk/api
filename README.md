@@ -1,4 +1,4 @@
-# Project Management System
+# LearnHub.mk API
 
 #### Laravel Sail (Docker) installation
 1. Install Docker and Docker Compose for the operating system of your choice.
