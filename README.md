@@ -13,7 +13,7 @@
 10. Access the site using `learnhub.test:8000` in your browser
 
 #### Installation (without Docker)
-0. Install the neccessary software that Laravel, Vue and React require in order to use them (check their documentation respectively)
+0. Install the neccessary software that Laravel requires in order to use them (check their documentation respectively)
 1. Clone the repository
 2. Get into your project directory (`cd api`)
 3. Run `composer install` to install of the composer dependencies.
