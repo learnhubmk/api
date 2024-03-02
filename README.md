@@ -22,3 +22,16 @@
 6. Run `php artisan migrate --seed` to run all migrations and database seeders
 7. Run `php artisan serve` to start the PHP server.
 8. Access the site using `localhost:8000` in your browser
+
+
+#### Working with Scribe API Documentation
+
+Access the documentation:
+
+- With Docker:
+  - `learnhub.test:8000/docs`
+- Without Docker
+  - `localhost:8000/docs`
+
+In order to generate documentation for APIs use: `php artisan scribe:generate`
+
