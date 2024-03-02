@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: LearnHub
+  title: 'LearnHub API Documentation'
   description: ''
   version: 1.0.0
 servers:
