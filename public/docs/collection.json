@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "a7f7813e-0319-437f-968d-f5038207b688",
+        "_postman_id": "c5d8a42a-0970-4d35-a4d9-adece2da33b0",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -76,7 +76,7 @@
                         {
                             "header": [],
                             "code": 400,
-                            "body": "{\"status\": \"down\", \"services\": {\"database\": \"up\", \"redis\": \"down\"}}",
+                            "body": "{\"status\":\"down\",\"services\":{\"database\":\"up\",\"redis\":\"down\"}}",
                             "name": "Service is unhealthy"
                         }
                     ]

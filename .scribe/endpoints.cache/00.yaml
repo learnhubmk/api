@@ -43,26 +43,26 @@ endpoints:
         custom: []
       -
         status: 400
-        content: '{"status": "down", "services": {"database": "up", "redis": "down"}}'
+        content: '{"status":"down","services":{"database":"up","redis":"down"}}'
         headers: []
         description: 'Service is unhealthy'
         custom: []
     responseFields:
       status:
         name: status
-        description: 'The status of this API (`up` or `down`).'
-        required: false
+        description: ''
+        required: true
         example: null
-        type: string
+        type: 'The status of this API (`up` or `down`).'
         enumValues: []
         exampleWasSpecified: false
         custom: []
       services:
         name: services
-        description: 'Map of each downstream service and their status (`up` or `down`).'
-        required: false
+        description: ''
+        required: true
         example: null
-        type: object
+        type: 'Map of each downstream service and their status (`up` or `down`).'
         enumValues: []
         exampleWasSpecified: false
         custom: []

@@ -29,7 +29,7 @@ paths:
                   status:
                     type: string
                     example: up
-                    description: 'The status of this API (`up` or `down`).'
+                    description: ''
                   services:
                     type: object
                     properties:
@@ -54,7 +54,7 @@ paths:
                   status:
                     type: string
                     example: down
-                    description: 'The status of this API (`up` or `down`).'
+                    description: ''
                   services:
                     type: object
                     properties:
