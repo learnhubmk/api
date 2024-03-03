@@ -14,6 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * Healthcheck
+ *
+ * Check that the service is up. If everything is okay, you'll get a 200 OK response.
+ *
+ * Otherwise, the request will fail with a 400 error, and a response listing the failed services.
+ *
+ */
+
+Route::get('/healthcheck',
+    #[\Knuckles\Scribe\Attributes\Response (["status" => "down", "services" => ["database" => "up", "redis" => "down"]], status: 400, description: "Service is unhealthy")]
+    #[\Knuckles\Scribe\Attributes\ResponseField("status", "The status of this API (`up` or `down`).")]
+    #[\Knuckles\Scribe\Attributes\ResponseField("services", "Map of each downstream service and their status (`up` or `down`).")]
+    function () {
+        return [
+            'status' => 'up',
+            'services' => [
+                'database' => 'up',
+                'redis' => 'up',
+            ],
+        ];
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
