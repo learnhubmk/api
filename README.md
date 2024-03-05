@@ -10,7 +10,9 @@
   1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc....
    Then run the curl command:
 
-        ````curl -s https://laravel.build/example-app | bash```
+        ````
+        curl -s https://laravel.build/example-app | bash
+        ```
 
 2. Clone the repository
 3. Get into your project directory (`cd api`)
