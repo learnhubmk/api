@@ -4,7 +4,9 @@
 1.0. Install Docker and Docker Compose for the operating system of your choice.
 ### The following 3 steps apply only if you do Laravel setup for the first time. Otherwise, jump to point 2.
   1.1. Install Linux distro
-        ```wsl --install -d Ubuntu-22.04```
+    
+    wsl --install -d Ubuntu-22.04
+        
   1.2. Enable Ubuntu from Docker Desktop, see screenshot
   ![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
   1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc....
