@@ -8,7 +8,7 @@
   1.2. Enable Ubuntu from Docker Desktop, see screenshot
   ![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
   1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc.
-  Then run the curl command:
+   Then run the curl command:
 
         ````curl -s https://laravel.build/example-app | bash```
 
