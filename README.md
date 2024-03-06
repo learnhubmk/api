@@ -14,16 +14,15 @@
 
     curl -s https://laravel.build/example-app | bash
 
-2. Clone the repository
-3. Get into your project directory (`cd api`)
-4. Build the docker containers using `./vendor/bin/sail build`
-5. Run the containers using `./vendor/bin/sail up -d`
-6. Access the PHP container using `./vendor/bin/sail shell`
-7. Run `composer install` to install of the composer dependencies.
-8. Rename the docker example `.env` file using `cp .env.example .env`
-9. Run `php artisan key:generate` to generate an application key (`APP_KEY`)
-10. Run `php artisan migrate` to run all migrations and database seeders
-11. Access the site using `learnhub.test:8000` in your browser
+1. `git clone git@github.com:learnhubmkd/api.git` - clone the repository
+1. `cd api` Get into your project directory 
+1. `composer install` - if you don't have it, please [install](https://getcomposer.org/)
+1. `cp .env.example .env` - copy the .env file and edit if needed (note: DB_PASSWORD most be entered cos MySQL container will fail to run)
+1. `./vendor/bin/sail up` - run the containers (use `-d` for process to go in background)
+1. `sail artisan key:generate` to generate an application key (`APP_KEY`)
+1. `sail artisan migrate:fresh --seed` to run all migrations and database seeders 
+1. (http://localhost)[http://localhost] - access the site in your browser
+1. `./vendor/bin/sail shell` - to access the PHP container using
 
 #### Installation (without Docker)
 0. Install the neccessary software that Laravel requires in order to use them (check their documentation respectively)
