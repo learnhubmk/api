@@ -8,6 +8,7 @@
 > - Tags matching the terminal are provided inside the documentation.
 > > - [OS] OS Terminal - the terminal native to your operating system.
 > > - [WSL] WSL Terminal - the terminal inside the virtual machine.
+> > - [SAIL] Sail Terminal - terminal used after ```./vendor/bin/sail shell``` is called. 
 
 2. [OS] Install the Linux distro 
 > `wsl --install -d Ubuntu-22.04`
@@ -22,7 +23,7 @@
 > ```git clone https://github.com/learnhubmkd/api.git```
 3. [OS] Get into your project directory 
 > ```cd api```
-4. [OS] Create a local environment `.env` file 
+4. [WSL] Create a local environment `.env` file 
 > - `cp .env.example .env`
 > - You can modify the `.env` file to test different configurations.
 > - Related: [Scribe Socialite](/.scribe/SCRIBE.md)
@@ -35,8 +36,9 @@
 > `./vendor/bin/sail up -d`
 7. [WSL] Access the PHP container 
 > `./vendor/bin/sail shell`
-8. [WSL] Generate an application key (`APP_KEY`)
+> - this opens a Sail Terminal
+8. [SAIL] Generate an application key (`APP_KEY`)
 > `php artisan key:generate`  
-9. [WSL] Run all migrations and database seeders
+9. [SAIL] Run all migrations and database seeders
 > `php artisan migrate` 
-10. Access the site using [learnhub.test:8000](http://learnhub.test:8000) in your browser
+10. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
