@@ -1,0 +1,24 @@
+{
+	"name": "modules/admin",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Admin\\": "src/",
+			"Modules\\Admin\\Tests\\": "tests/",
+			"Modules\\Admin\\Database\\Factories\\": "database/factories/",
+			"Modules\\Admin\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Admin\\Providers\\AdminServiceProvider"
+			]
+		}
+	}
+}
