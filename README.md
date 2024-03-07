@@ -1,94 +1,42 @@
 # LearnHub.mk Backend API
 
-#### Laravel Sail (Docker) installation
-1.0. Install Docker and Docker Compose for the operating system of your choice.
-### The following 3 steps apply only if you do Laravel setup for the first time. Otherwise, jump to point 2.
-  1.1. Install Linux distro
-    
-    wsl --install -d Ubuntu-22.04
-        
-  1.2. Enable Ubuntu from Docker Desktop, see screenshot
-  ![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
-  1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc....
-   Then run the curl command:
-
-    curl -s https://laravel.build/example-app | bash
-
-2. Clone the repository
-3. Get into your project directory (`cd api`)
-4. Build the docker containers using `./vendor/bin/sail build`
-5. Run the containers using `./vendor/bin/sail up -d`
-6. Access the PHP container using `./vendor/bin/sail shell`
-7. Run `composer install` to install of the composer dependencies.
-8. Rename the docker example `.env` file using `cp .env.example .env`
-9. Run `php artisan key:generate` to generate an application key (`APP_KEY`)
-10. Run `php artisan migrate` to run all migrations and database seeders
-11. Access the site using `learnhub.test:8000` in your browser
-
-#### Installation (without Docker)
-0. Install the neccessary software that Laravel requires in order to use them (check their documentation respectively)
-1. Clone the repository
-2. Get into your project directory (`cd api`)
-3. Run `composer install` to install of the composer dependencies.
-4. Rename the docker example `.env` file using `cp .env.example .env`
-5. Run `php artisan key:generate` to generate an application key (`APP_KEY`)
-6. Run `php artisan migrate --seed` to run all migrations and database seeders
-7. Run `php artisan serve` to start the PHP server.
-8. Access the site using `localhost:8000` in your browser
+### First Time Setup
+1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/desktop/install/windows-install/).
 
 
-#### Working with Scribe API Documentation
+> - Be mindful of which terminal you are using.
+> - Tags matching the terminal are provided inside the documentation.
+> > - [OS] OS Terminal - the terminal native to your operating system.
+> > - [WSL] WSL Terminal - the terminal inside the virtual machine.
 
-Access the documentation:
+2. [OS] Install the Linux distro 
+> `wsl --install -d Ubuntu-22.04`
 
-- With Docker:
-  - `learnhub.test:8000/docs`
-- Without Docker
-  - `localhost:8000/docs`
+3. Enable Ubuntu from Docker Desktop
+![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
+4. [OS] Connect to the WSL Distro Terminal 
+>  `wsl --distribution Ubuntu-22.04`
 
-In order to generate documentation for APIs use: `php artisan scribe:generate`
-
-#### Working with Socialite 
-
-##### Github
-
-- Go to https://github.com/settings/developers and create new application. 
-- You need to provide app name, callback url and website name. 
-- Callback url should be the redirect url to your application for e.g. `localhost/login/github`
-- From the dashboard get the `APP ID` and paste into `GITHUB_CLIENT_ID`, and `APP SECRET` into `GITHUB_CLIENT_SECRET`. 
-- `GITHUB_REDIRECT_URI` should be the callback url provided in previous step. 
-
-Developer Guide:
-https://socialiteproviders.com/GitHub/#installation-basic-usage
-
-https://laravel.com/docs/10.x/socialite#configuration
-
-##### Google
-
-- Go to https://console.cloud.google.com/projectcreate?pli=1 and create new project. 
-- Go to  https://console.cloud.google.com/apis/credentials/consent and choose External. Fill the required data and 
-after that go to https://console.cloud.google.com/apis/credentials to get the credentials. 
-- Click on `Create 
-Credentials` and from the popup choose `OAuth clientID`. 
-- Set the application type to `Web application` and set the 
-`Authorized Redirect URL` to your redirect url for e.g. `localhost/login/google`. 
-- Next copy the `CLIENT ID` and 
-paste into `GOOGLE_CLIENT_ID` and `CLIENT SECRET` into `GOOGLE_CLIENT_SECRET`. `GOOGLE_REDIRECT_URI` should be the 
-same as your Authorized Redirect URL. 
-
-Developers Guide:
-https://socialiteproviders.com/Google-Plus/
-
-##### LinkedIn
-
-- Go to https://www.linkedin.com/developers/apps and create new application.
-- Fill the form with the requested data
-- Provide your callback url for e.g. `localhost/login/linkedin`
-- Copy `Client ID` and paste it into `LINKEDIN_CLIENT_ID`and `Client Secret` into `LINKEDIN_CLIENT_SECRET`.
-- `LINKEDIN_REDIRECT_URI` should be the redirect url provided in previous step.
-- Go to Products and select `Sign In with LinkedIn`
-
-Developers Guide:
-https://socialiteproviders.com/LinkedIn/#linkedin
-
-
+### Regular Setup
+2. [OS] Clone the repository
+> ```git clone https://github.com/learnhubmkd/api.git```
+3. [OS] Get into your project directory 
+> ```cd api```
+4. [OS] Create a local environment `.env` file 
+> - `cp .env.example .env`
+> - You can modify the `.env` file to test different configurations.
+> - Related: [Scribe Socialite](/.scribe/SCRIBE.md)
+5. [WSL] Install sail dependencies
+> `docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs`
+> - You can copy the command from the official documentation on [Sail dependencies](https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects)
+5. [WSL] Build the docker containers
+> `./vendor/bin/sail build`
+6. [WSL]  Run the containers
+> `./vendor/bin/sail up -d`
+7. Access the PHP container 
+> `./vendor/bin/sail shell`
+8. Generate an application key (`APP_KEY`)
+> `php artisan key:generate`  
+9. Run all migrations and database seeders
+> `php artisan migrate` 
+10. Access the site using [learnhub.test:8000](http://learnhub.test:8000) in your browser
