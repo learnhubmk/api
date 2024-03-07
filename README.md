@@ -33,10 +33,10 @@
 > `./vendor/bin/sail build`
 6. [WSL]  Run the containers
 > `./vendor/bin/sail up -d`
-7. Access the PHP container 
+7. [WSL] Access the PHP container 
 > `./vendor/bin/sail shell`
-8. Generate an application key (`APP_KEY`)
+8. [WSL] Generate an application key (`APP_KEY`)
 > `php artisan key:generate`  
-9. Run all migrations and database seeders
+9. [WSL] Run all migrations and database seeders
 > `php artisan migrate` 
 10. Access the site using [learnhub.test:8000](http://learnhub.test:8000) in your browser
