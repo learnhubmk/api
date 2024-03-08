@@ -11,7 +11,7 @@
             "version": "1.0",
             "dist": {
                 "type": "path",
-                "url": "app/admin",
+                "url": "app/Admin",
                 "reference": "2ba3c8dfd7a05e754e7bd8b6fd022530b7bee67b"
             },
             "type": "library",
@@ -43,7 +43,7 @@
             "version": "1.0",
             "dist": {
                 "type": "path",
-                "url": "app/platform",
+                "url": "app/Platform",
                 "reference": "81769a0880cc25de25229bed176913c543f38d18"
             },
             "type": "library",
@@ -75,7 +75,7 @@
             "version": "1.0",
             "dist": {
                 "type": "path",
-                "url": "app/website",
+                "url": "app/Website",
                 "reference": "48a44da3f0a80158c8da7825dcd0f5e2529cd95d"
             },
             "type": "library",
