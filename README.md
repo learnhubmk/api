@@ -1,6 +1,6 @@
 # LearnHub.mk Backend API
 
-### First Time Setup
+### Setup using Docker
 1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/desktop/install/windows-install/).
 
 
@@ -21,41 +21,82 @@
 
          wsl --distribution Ubuntu-22.04
 
-### Regular Setup
-2. [OS] Clone the repository
+
+5. [OS] Clone the repository
 
         git clone https://github.com/learnhubmkd/api.git
 
-3. [OS] Get into your project directory 
+6. [OS] Get into your project directory 
 
          cd api
 
-4. [WSL] Create a local environment `.env` file 
-                
-         cp .env.example .env
+7. Create an ```.env``` file by copying ```.env.example```
+    - Windows:
+
+          xcopy .env.example .env /y /f
+    - Linux/Mac/WSL:
+
+          cp .env.example .env
 
 > - You can modify the `.env` file to test different configurations.
-> - Related: [Scribe Socialite](/.scribe/SCRIBE.md)
+> - Related read: [SOCIALITE.md](SOCIALITE.md)
  
 
-5. [WSL] Install sail dependencies
+8. [WSL] Install sail dependencies
         
         docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs
 > - You can copy the command from the official documentation on [Sail dependencies](https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects)
-5. [WSL] Build the docker containers
+9. [WSL] Build the docker containers
 
         ./vendor/bin/sail build
-6. [WSL]  Run the containers
+10. [WSL]  Run the containers
 
         ./vendor/bin/sail up -d
-7. [WSL] Access the PHP container
+11. [WSL] Access the PHP container
 
         ./vendor/bin/sail shell
 
-8. [SAIL] Generate an application key (`APP_KEY`)
+12. [SAIL] Generate an application key (`APP_KEY`)
 
         php artisan key:generate  
-9. [SAIL] Run all migrations and database seeders
+13. [SAIL] Run all migrations and database seeders
 
         php artisan migrate
-10. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+14. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+
+### Regular Setup
+0. Install [PHP 8.3](https://windows.php.net/download/) or later
+> Currently, [XAMPP](https://www.apachefriends.org/download.html) contains PHP 8.2, and will not work with this project?
+1. Install [Composer 2.7.1](https://getcomposer.org/download/#manual-download) or later
+
+2. Clone the repository
+
+        git clone https://github.com/learnhubmkd/api.git
+ 
+3. Get into your project directory
+
+        cd api
+4. Create an ```.env``` file by copying ```.env.example```
+- Windows:
+
+         xcopy .env.example .env /y /f
+- Linux/Mac: 
+     
+         cp .env.example .env
+
+
+5. Install composer dependencies
+
+         composer install
+
+6. Generate an application key (`APP_KEY`)
+
+        php artisan key:generate  
+7. Run all migrations and database seeders
+
+        php artisan migrate --seed
+8. Start the PHP server
+
+        php artisan serve
+
+9. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
