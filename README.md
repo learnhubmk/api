@@ -10,13 +10,13 @@
   1.2. Enable Ubuntu from Docker Desktop, see screenshot
   ![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
   1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc....
-   Then run the curl command:
-
-    curl -s https://laravel.build/example-app | bash
 
 1. `git clone git@github.com:learnhubmkd/api.git` - clone the repository
 1. `cd api` Get into your project directory 
-1. `composer install` - if you don't have it, please [install](https://getcomposer.org/)
+1. ```
+           docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs
+    ```
+    - to install the composer dependencies.
 1. `cp .env.example .env` - copy the .env file and edit if needed (note: DB_PASSWORD most be entered cos MySQL container will fail to run)
 1. `./vendor/bin/sail up` - run the containers (use `-d` for process to go in background)
 1. `sail artisan key:generate` to generate an application key (`APP_KEY`)
