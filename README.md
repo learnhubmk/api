@@ -63,7 +63,7 @@ To work with `artisan` commands for each module check the documentation:
 
 https://github.com/InterNACHI/modular?tab=readme-ov-file#commands
 
-Note: All modules are placed under `app-modules` folder
+Note: All modules are placed under `app` folder
 #### Working with Socialite 
 
 ##### Github
