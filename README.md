@@ -1,5 +1,10 @@
 # LearnHub.mk Backend API
 
+- [Setup using Docker](#setup-using-docker)
+- [Regular Setup](#regular-setup)
+
+
+
 ### Setup using Docker
 1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/desktop/install/windows-install/).
 
