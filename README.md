@@ -48,6 +48,22 @@ Access the documentation:
 
 In order to generate documentation for APIs use: `php artisan scribe:generate`
 
+#### Working with Modular Structure
+
+For documentation and reference use the following package:
+
+https://github.com/InterNACHI/modular?tab=readme-ov-file
+
+Initially our system has 3 modules:
+- `Website` - everything related to the website will be here (blog, contact, newsletter etc.)
+- `Platform` - The members area
+- `Admin` - The admin area
+
+To work with `artisan` commands for each module check the documentation:
+
+https://github.com/InterNACHI/modular?tab=readme-ov-file#commands
+
+Note: All modules are placed under `app-modules` folder
 #### Working with Socialite 
 
 ##### Github
