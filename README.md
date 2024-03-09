@@ -36,13 +36,14 @@
          cd api
 
 7. Create an ```.env``` file by copying ```.env.example```
-    - Windows:
+   - Windows:
 
           xcopy .env.example .env /y /f
-    - Linux/Mac/WSL:
+   - Linux/Mac/WSL:
 
           cp .env.example .env
-
+    
+> - Note: The MySQL container will fail if the DB_PASSWORD value is empty
 > - You can modify the `.env` file to test different configurations.
 > - Related read: [SOCIALITE.md](SOCIALITE.md)
  
@@ -89,6 +90,8 @@
      
          cp .env.example .env
 
+> - You can modify the `.env` file to test different configurations.
+> - Related read: [SOCIALITE.md](SOCIALITE.md)
 
 5. Install composer dependencies
 
