@@ -38,10 +38,10 @@
 7. Create an ```.env``` file by copying ```.env.example```
    - Windows:
 
-          xcopy .env.example .env /y /f
+          xcopy .env.docker.example .env /y /f
    - Linux/Mac/WSL:
 
-          cp .env.example .env
+          cp .env.docker.example .env
     
 > - Note: The MySQL container will fail if the DB_PASSWORD value is empty
 > - You can modify the `.env` file to test different configurations.
@@ -67,12 +67,12 @@
         php artisan key:generate  
 13. [SAIL] Run all migrations and database seeders
 
-        php artisan migrate
+        php artisan migrate --seed
 14. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
 ### Regular Setup
 0. Install [PHP 8.3](https://windows.php.net/download/) or later
-> Currently, [XAMPP](https://www.apachefriends.org/download.html) contains PHP 8.2, and will not work with this project?
+> Currently, [XAMPP](https://www.apachefriends.org/download.html) contains PHP 8.2, and may not work.
 1. Install [Composer 2.7.1](https://getcomposer.org/download/#manual-download) or later
 
 2. Clone the repository
