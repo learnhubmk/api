@@ -1,109 +1,110 @@
 # LearnHub.mk Backend API
 
-#### Laravel Sail (Docker) installation
-1.0. Install Docker and Docker Compose for the operating system of your choice.
-### The following 3 steps apply only if you do Laravel setup for the first time. Otherwise, jump to point 2.
-  1.1. Install Linux distro
+- [Setup using Docker](#setup-using-docker)
+- [Regular Setup](#regular-setup)
+
+
+
+### Setup using Docker
+1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/desktop/install/windows-install/).
+
+
+> - Be mindful of which terminal you are using.
+> - Tags matching the terminal are provided inside the documentation.
+> > - [OS] OS Terminal - the terminal native to your operating system. Always available.
+> > - [WSL] WSL Terminal - the terminal inside the virtual machine.
+> > - [SAIL] Sail Terminal - the terminal available after the `sail shell` command is called.
+
+2. [OS] Install the Linux distro 
+
+        wsl --install -d Ubuntu-22.04
+
+3. Enable Ubuntu from Docker Desktop
+![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
+
+4. [OS] Connect to the WSL Distro Terminal 
+
+         wsl --distribution Ubuntu-22.04
+
+
+5. [OS] Clone the repository
+
+        git clone https://github.com/learnhubmkd/api.git
+
+6. [OS] Get into your project directory 
+
+         cd api
+
+7. Create an ```.env``` file by copying ```.env.example```
+   - Windows:
+
+          xcopy .env.docker.example .env /y /f
+   - Linux/Mac/WSL:
+
+          cp .env.docker.example .env
     
-    wsl --install -d Ubuntu-22.04
+> - Note: The MySQL container will fail if the DB_PASSWORD value is empty
+> - You can modify the `.env` file to test different configurations.
+> - Related read: [SOCIALITE.md](SOCIALITE.md)
+ 
+
+8. [WSL] Install sail dependencies
         
-  1.2. Enable Ubuntu from Docker Desktop, see screenshot
-  ![enable ubuntu on docker desktop](https://i.postimg.cc/vYZRKKfL/docker-desktop-ubuntu-enable.jpg)
-  1.3. Use the newly installed terminal from Ubuntu, or SSH into Ubutu from other terminal,such as Windows Terminal etc....
+        docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs
+> - You can copy the command from the official documentation on [Sail dependencies](https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects)
+9. [WSL] Build the docker containers
 
-1. `git clone git@github.com:learnhubmkd/api.git` - clone the repository
-1. `cd api` Get into your project directory 
-1. ```
-           docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs
-    ```
-    - to install the composer dependencies.
-1. `cp .env.example .env` - copy the .env file and edit if needed (note: DB_PASSWORD most be entered cos MySQL container will fail to run)
-1. `./vendor/bin/sail up` - run the containers (use `-d` for process to go in background)
-1. `sail artisan key:generate` to generate an application key (`APP_KEY`)
-1. `sail artisan migrate:fresh --seed` to run all migrations and database seeders 
-1. (http://localhost)[http://localhost] - access the site in your browser
-1. `./vendor/bin/sail shell` - to access the PHP container using
+        ./vendor/bin/sail build
+10. [WSL]  Run the containers
 
-#### Installation (without Docker)
-0. Install the neccessary software that Laravel requires in order to use them (check their documentation respectively)
-1. Clone the repository
-2. Get into your project directory (`cd api`)
-3. Run `composer install` to install of the composer dependencies.
-4. Rename the docker example `.env` file using `cp .env.example .env`
-5. Run `php artisan key:generate` to generate an application key (`APP_KEY`)
-6. Run `php artisan migrate --seed` to run all migrations and database seeders
-7. Run `php artisan serve` to start the PHP server.
-8. Access the site using `localhost:8000` in your browser
+        ./vendor/bin/sail up -d
+11. [WSL] Access the PHP container
 
+        ./vendor/bin/sail shell
 
-#### Working with Scribe API Documentation
+12. [SAIL] Generate an application key (`APP_KEY`)
 
-Access the documentation:
+        php artisan key:generate  
+13. [SAIL] Run all migrations and database seeders
 
-- With Docker:
-  - `learnhub.test:8000/docs`
-- Without Docker
-  - `localhost:8000/docs`
+        php artisan migrate --seed
+14. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
-In order to generate documentation for APIs use: `php artisan scribe:generate`
+### Regular Setup
+0. Install [PHP 8.3](https://windows.php.net/download/) or later
+> Currently, [XAMPP](https://www.apachefriends.org/download.html) contains PHP 8.2, and may not work.
+1. Install [Composer 2.7.1](https://getcomposer.org/download/#manual-download) or later
 
-#### Working with Modular Structure
+2. Clone the repository
 
-For documentation and reference use the following package:
+        git clone https://github.com/learnhubmkd/api.git
+ 
+3. Get into your project directory
 
-https://github.com/InterNACHI/modular?tab=readme-ov-file
+        cd api
+4. Create an ```.env``` file by copying ```.env.example```
+- Windows:
 
-Initially our system has 3 modules:
-- `Website` - everything related to the website will be here (blog, contact, newsletter etc.)
-- `Platform` - The members area
-- `Admin` - The admin area
+         xcopy .env.example .env /y /f
+- Linux/Mac: 
+     
+         cp .env.example .env
 
-To work with `artisan` commands for each module check the documentation:
+> - You can modify the `.env` file to test different configurations.
+> - Related read: [SOCIALITE.md](SOCIALITE.md)
 
-https://github.com/InterNACHI/modular?tab=readme-ov-file#commands
+5. Install composer dependencies
 
-Note: All modules are placed under `app` folder
-#### Working with Socialite 
+         composer install
 
-##### Github
+6. Generate an application key (`APP_KEY`)
 
-- Go to https://github.com/settings/developers and create new application. 
-- You need to provide app name, callback url and website name. 
-- Callback url should be the redirect url to your application for e.g. `localhost/login/github`
-- From the dashboard get the `APP ID` and paste into `GITHUB_CLIENT_ID`, and `APP SECRET` into `GITHUB_CLIENT_SECRET`. 
-- `GITHUB_REDIRECT_URI` should be the callback url provided in previous step. 
+        php artisan key:generate  
+7. Run all migrations and database seeders
 
-Developer Guide:
-https://socialiteproviders.com/GitHub/#installation-basic-usage
+        php artisan migrate --seed
+8. Start the PHP server
 
-https://laravel.com/docs/10.x/socialite#configuration
+        php artisan serve
 
-##### Google
-
-- Go to https://console.cloud.google.com/projectcreate?pli=1 and create new project. 
-- Go to  https://console.cloud.google.com/apis/credentials/consent and choose External. Fill the required data and 
-after that go to https://console.cloud.google.com/apis/credentials to get the credentials. 
-- Click on `Create 
-Credentials` and from the popup choose `OAuth clientID`. 
-- Set the application type to `Web application` and set the 
-`Authorized Redirect URL` to your redirect url for e.g. `localhost/login/google`. 
-- Next copy the `CLIENT ID` and 
-paste into `GOOGLE_CLIENT_ID` and `CLIENT SECRET` into `GOOGLE_CLIENT_SECRET`. `GOOGLE_REDIRECT_URI` should be the 
-same as your Authorized Redirect URL. 
-
-Developers Guide:
-https://socialiteproviders.com/Google-Plus/
-
-##### LinkedIn
-
-- Go to https://www.linkedin.com/developers/apps and create new application.
-- Fill the form with the requested data
-- Provide your callback url for e.g. `localhost/login/linkedin`
-- Copy `Client ID` and paste it into `LINKEDIN_CLIENT_ID`and `Client Secret` into `LINKEDIN_CLIENT_SECRET`.
-- `LINKEDIN_REDIRECT_URI` should be the redirect url provided in previous step.
-- Go to Products and select `Sign In with LinkedIn`
-
-Developers Guide:
-https://socialiteproviders.com/LinkedIn/#linkedin
-
-
+9. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
