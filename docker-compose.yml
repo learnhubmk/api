@@ -1,5 +1,5 @@
 services:
-    laravel.test:
+    learnhub.test:
         build:
             context: ./vendor/laravel/sail/runtimes/8.3
             dockerfile: Dockerfile
