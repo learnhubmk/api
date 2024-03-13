@@ -2,6 +2,7 @@
 
 - [Setup using Docker](#setup-using-docker)
 - [Regular Setup](#regular-setup)
+- [Packages](#packages)
 
 
 
@@ -45,7 +46,7 @@
     
 > - Note: The MySQL container will fail if the DB_PASSWORD value is empty
 > - You can modify the `.env` file to test different configurations.
-> - Related read: [SOCIALITE.md](SOCIALITE.md)
+
  
 
 8. [WSL] Install sail dependencies
@@ -91,7 +92,7 @@
          cp .env.example .env
 
 > - You can modify the `.env` file to test different configurations.
-> - Related read: [SOCIALITE.md](SOCIALITE.md)
+
 
 5. Install composer dependencies
 
@@ -108,3 +109,10 @@
         php artisan serve
 
 9. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+
+
+### Packages 
+
+> - Laravel Socialite: [SOCIALITE.md](SOCIALITE.md)
+> - Laravel Scribe: [SCRIBE.md](SCRIBE.md)
+> - Laravel Modular: [MODULAR.md](MODULAR.md)

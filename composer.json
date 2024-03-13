@@ -14,7 +14,12 @@
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
-        "spatie/laravel-permission": "^6.4"
+        "spatie/laravel-permission": "^6.4",
+        "app/admin": "*",
+        "app/platform": "*",
+        "app/website": "*",
+        "internachi/modular": "^2.0"
+
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
