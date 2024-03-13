@@ -15,16 +15,16 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $user= \App\Models\User::factory()->create([
+        $user = \App\Models\User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
 
         $adminRole = Role::create([
-            "name" => "Admin"
+            'name' => 'Admin',
         ]);
         Role::create([
-            "name" => "Member"
+            'name' => 'Member',
         ]);
         $user->assignRole($adminRole);
 

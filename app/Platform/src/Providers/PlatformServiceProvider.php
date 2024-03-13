@@ -6,11 +6,11 @@ use Illuminate\Support\ServiceProvider;
 
 class PlatformServiceProvider extends ServiceProvider
 {
-	public function register()
-	{
-	}
-	
-	public function boot()
-	{
-	}
+    public function register()
+    {
+    }
+
+    public function boot()
+    {
+    }
 }

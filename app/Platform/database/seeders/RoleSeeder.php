@@ -1,8 +1,7 @@
 <?php
 
-namespace Database\Seeders;
+namespace App\Platform\Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class RoleSeeder extends Seeder
@@ -12,6 +11,6 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+       //
     }
 }
