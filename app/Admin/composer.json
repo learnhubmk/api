@@ -1,0 +1,24 @@
+{
+	"name": "app/admin",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"App\\Admin\\": "src/",
+			"App\\Admin\\Tests\\": "tests/",
+			"App\\Admin\\Database\\Factories\\": "database/factories/",
+			"App\\Admin\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"App\\Admin\\Providers\\AdminServiceProvider"
+			]
+		}
+	}
+}
