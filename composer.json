@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.8",
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
-        "socialiteproviders/linkedin": "^4.2"
+        "socialiteproviders/linkedin": "^4.2",
+        "spatie/laravel-permission": "^6.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
