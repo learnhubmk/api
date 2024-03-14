@@ -24,6 +24,6 @@ class Blog extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class)->select('name', 'img_src');
+        return $this->belongsTo(User::class);
     }
 }
