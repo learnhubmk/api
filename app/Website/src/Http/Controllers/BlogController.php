@@ -6,12 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Website\Http\Resources\Blogs\ListBlogsResource;
 use App\Website\Models\Blog;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    #[Endpoint("Website/List Blogs", <<<DESC
+  This endpoint list all blogpost from newest ones to the oldest.
+  Additionally you may use ?title= query param to filter by title
+ DESC)]
+    #[QueryParam("title", "string", required: false)]
     public function index(Request $request)
     {
         $blogs = Blog::with('user');

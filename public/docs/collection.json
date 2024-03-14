@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/learnhub.test"
+            "value": "http:\/\/localhost"
         }
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "c5d8a42a-0970-4d35-a4d9-adece2da33b0",
+        "_postman_id": "b2863e23-e789-4a7b-b0f8-b5936aa67076",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -19,6 +19,61 @@
             "name": "Endpoints",
             "description": "",
             "item": [
+                {
+                    "name": "Website\/List Blogs",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/website\/blogs\/list",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "esse",
+                                    "description": "",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/website\/blogs\/list?title=esse"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": " This endpoint list all blogpost from newest ones to the oldest.\n Additionally you may use ?title= query param to filter by title",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "name": ""
+                        }
+                    ]
+                },
                 {
                     "name": "Healthcheck",
                     "request": {

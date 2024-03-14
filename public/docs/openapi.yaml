@@ -5,8 +5,132 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://learnhub.test'
+    url: 'http://localhost'
 paths:
+  /api/website/blogs/list:
+    get:
+      summary: 'Website/List Blogs'
+      operationId: websiteListBlogs
+      description: " This endpoint list all blogpost from newest ones to the oldest.\n Additionally you may use ?title= query param to filter by title"
+      parameters:
+        -
+          in: query
+          name: title
+          description: ''
+          example: esse
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: esse
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  links:
+                    first: 'http://localhost/api/website/blogs/list?page=1'
+                    last: 'http://localhost/api/website/blogs/list?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: null
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/website/blogs/list?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/website/blogs/list'
+                    per_page: 15
+                    to: null
+                    total: 0
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/website/blogs/list?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/website/blogs/list?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/website/blogs/list?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/website/blogs/list'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Endpoints
+      security: []
   /api/healthcheck:
     get:
       summary: Healthcheck
