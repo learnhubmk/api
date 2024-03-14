@@ -11,7 +11,6 @@ use Illuminate\Support\Str;
  */
 class BlogFactory extends Factory
 {
-
     /**
      * Define the model's default state.
      *
@@ -27,7 +26,7 @@ class BlogFactory extends Factory
             'slug' => $slug,
             'excerpt' => $this->faker->text,
             'user_id' => User::all()->random()->id,
-            'tags' => ['php', 'laravel', 'react']
+            'tags' => ['php', 'laravel', 'react'],
         ];
     }
 }

@@ -15,11 +15,11 @@ class Blog extends Model
         'slug',
         'excerpt',
         'tags',
-        'user_id'
+        'user_id',
     ];
 
     protected $casts = [
-        'tags' => 'json'
+        'tags' => 'json',
     ];
 
     public function user()

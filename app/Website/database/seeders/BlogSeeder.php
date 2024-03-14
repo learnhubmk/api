@@ -2,9 +2,7 @@
 
 namespace App\Website\Database\Seeders;
 
-use App\Website\Database\Factories\BlogFactory;
 use App\Website\Models\Blog;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class BlogSeeder extends Seeder

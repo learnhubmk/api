@@ -11,17 +11,17 @@ use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogController extends Controller
 {
-    #[Endpoint("Website/List Blogs", <<<DESC
+    #[Endpoint('Website/List Blogs', <<<'DESC'
   This endpoint list all blogpost from newest ones to the oldest.
   Additionally you may use ?title= query param to filter by title
  DESC)]
-    #[QueryParam("title", "string", required: false)]
+    #[QueryParam('title', 'string', required: false)]
     public function index(Request $request)
     {
         $blogs = Blog::with('user');
 
         if ($request->has('title')) {
-            $blogs->where('title', 'like' , "%{$request->title}%");
+            $blogs->where('title', 'like', "%{$request->title}%");
         }
 
         $blogs = $blogs->orderBy('created_at', 'desc')->paginate(15);

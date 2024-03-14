@@ -7,4 +7,3 @@ Route::group(['prefix' => 'api/website'], function () {
         Route::get('/list', [\App\Website\Http\Controllers\BlogController::class, 'index']);
     });
 });
-
