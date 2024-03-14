@@ -2,10 +2,9 @@
 
 namespace App\Platform\Database\Seeders;
 
-use App\Enums\RolesEnum;
+use App\Platform\Enums\RolesEnum;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 
 class RoleSeeder extends Seeder
 {
@@ -14,8 +13,7 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $AdminRole =Role::findOrCreate(RolesEnum::ADMIN->value);
-        $memberRole =Role::findOrCreate(RolesEnum::MEMBER->value);
+        $AdminRole = Role::create(['name' => RolesEnum::ADMIN->value]);
+        $memberRole = Role::create(['name' => RolesEnum::MEMBER->value]);
     }
 }
-
