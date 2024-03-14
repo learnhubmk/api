@@ -12,9 +12,15 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $blogs = Blog::orderBy('created_at', 'desc')->paginate(15);
+        $blogs = Blog::with('user');
+
+        if ($request->has('title')) {
+            $blogs->where('title', 'like' , "%{$request->title}%");
+        }
+
+        $blogs = $blogs->orderBy('created_at', 'desc')->paginate(15);
 
         return ListBlogsResource::collection($blogs);
     }
