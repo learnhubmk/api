@@ -2,10 +2,10 @@
 
 namespace App\Platform\Enums;
 
-enum RolesEnum: string
+enum RoleName: string
 {
-    case ADMIN = 'Admin';
-    case MEMBER = 'Member';
+    case ADMIN = 'admin';
+    case MEMBER = 'member';
 
     public function label(): string
     {
