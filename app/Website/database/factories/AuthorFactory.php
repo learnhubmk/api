@@ -3,13 +3,15 @@
 namespace App\Website\Database\Factories;
 
 use App\Models\User;
+use App\Website\Models\BlogPost;
+use App\Website\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Website\Models\Model>
  */
-class BlogFactory extends Factory
+class AuthorFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,15 +20,11 @@ class BlogFactory extends Factory
      */
     public function definition(): array
     {
-        $title = $this->faker->sentence;
-        $slug = Str::slug($title, '-');
-
         return [
-            'title' => $title,
-            'slug' => $slug,
-            'excerpt' => $this->faker->text,
+            'first_name' => fake()->name,
+            'last_name' => fake()->lastName,
             'user_id' => User::all()->random()->id,
-            'tags' => ['php', 'laravel', 'react'],
         ];
     }
+
 }

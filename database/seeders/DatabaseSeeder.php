@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Website\Database\Seeders\AuthorSeeder;
 use App\Website\Database\Seeders\BlogSeeder;
+use App\Website\Database\Seeders\TagSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 
@@ -17,8 +19,19 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         Artisan::call('db:seed', [
+            '--class' => AuthorSeeder::class,
+            '--module' => 'Website',
+        ]);
+
+        Artisan::call('db:seed', [
+            '--class' => TagSeeder::class,
+            '--module' => 'Website',
+        ]);
+
+        Artisan::call('db:seed', [
             '--class' => BlogSeeder::class,
             '--module' => 'Website',
         ]);
+
     }
 }
