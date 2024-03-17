@@ -8,7 +8,7 @@ enum BlogPostStatus: string
 
     case PUBLISHED = 'published';
 
-    case IN_REVIEW = 'in-review';
+    case IN_REVIEW = 'in_review';
 
     case ARCHIVED = 'archived';
 
