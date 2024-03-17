@@ -4,6 +4,57 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: api/website/blog-posts
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Website/List Blogs'
+      description: |2-
+         This endpoint list all blogpost from newest ones to the oldest.
+         Additionally you may use ?title= query param to filter by title
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      title:
+        name: title
+        description: ''
+        required: false
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      title: dolorem
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"title":"Quia pariatur rerum et sunt est quasi dolorem.","slug":"quia-pariatur-rerum-et-sunt-est-quasi-dolorem","excerpt":"Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Iure et magnam dolorem voluptas.","slug":"iure-et-magnam-dolorem-voluptas","excerpt":"Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Kenna Kassulke","last_name":"Boyer","image":null}},{"title":"Ut ut dolorem ad laboriosam.","slug":"ut-ut-dolorem-ad-laboriosam","excerpt":"Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Incidunt porro nulla dolores iure dolorem a autem.","slug":"incidunt-porro-nulla-dolores-iure-dolorem-a-autem","excerpt":"Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Dr. Winona Bogisich","last_name":"Breitenberg","image":null}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: api/healthcheck
     metadata:
       groupName: Endpoints

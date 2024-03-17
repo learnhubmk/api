@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Website\Database\Seeders\AuthorSeeder;
+use App\Website\Database\Seeders\BlogPostSeeder;
+use App\Website\Database\Seeders\TagSeeder;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,12 +16,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
 
-        //\App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Artisan::call('db:seed', [
+            '--class' => AuthorSeeder::class,
+            '--module' => 'Website',
+        ]);
+
+        Artisan::call('db:seed', [
+            '--class' => TagSeeder::class,
+            '--module' => 'Website',
+        ]);
+
+        Artisan::call('db:seed', [
+            '--class' => BlogPostSeeder::class,
+            '--module' => 'Website',
+        ]);
 
     }
 }
