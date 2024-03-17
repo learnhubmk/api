@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "b2863e23-e789-4a7b-b0f8-b5936aa67076",
+        "_postman_id": "4b65ca53-79d2-4cf5-a723-a8d192d5c19c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -24,16 +24,16 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/website\/blogs\/list",
+                            "path": "api\/website\/blog-posts\/list",
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "esse",
+                                    "value": "illum",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/website\/blogs\/list?title=esse"
+                            "raw": "{{baseUrl}}\/api\/website\/blog-posts\/list?title=illum"
                         },
                         "method": "GET",
                         "header": [
@@ -69,7 +69,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blogs\\\/list\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[{\"title\":\"Dolorem ducimus molestiae voluptas voluptatem illum velit.\",\"slug\":\"dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit\",\"excerpt\":\"Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.\",\"tags\":[{\"tag_name\":\"php\"},{\"tag_name\":\"laravel\"},{\"tag_name\":\"react\"}],\"publish_date\":\"2024-03-17T02:41:21.000000Z\",\"author\":{\"first_name\":\"Prof. Madalyn Donnelly V\",\"last_name\":\"Upton\",\"profile_img\":null}}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\\\/list?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\\\/list?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\\\/list?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\\\/list\",\"per_page\":15,\"to\":1,\"total\":1}}",
                             "name": ""
                         }
                     ]

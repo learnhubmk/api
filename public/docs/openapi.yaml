@@ -7,7 +7,7 @@ servers:
   -
     url: 'http://localhost'
 paths:
-  /api/website/blogs/list:
+  /api/website/blog-posts/list:
     get:
       summary: 'Website/List Blogs'
       operationId: websiteListBlogs
@@ -17,12 +17,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: esse
+          example: illum
           required: false
           schema:
             type: string
             description: ''
-            example: esse
+            example: illum
       responses:
         200:
           description: ''
@@ -31,15 +31,31 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    -
+                      title: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
+                      slug: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
+                      excerpt: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                      tags:
+                        -
+                          tag_name: php
+                        -
+                          tag_name: laravel
+                        -
+                          tag_name: react
+                      publish_date: '2024-03-17T02:41:21.000000Z'
+                      author:
+                        first_name: 'Prof. Madalyn Donnelly V'
+                        last_name: Upton
+                        profile_img: null
                   links:
-                    first: 'http://localhost/api/website/blogs/list?page=1'
-                    last: 'http://localhost/api/website/blogs/list?page=1'
+                    first: 'http://localhost/api/website/blog-posts/list?page=1'
+                    last: 'http://localhost/api/website/blog-posts/list?page=1'
                     prev: null
                     next: null
                   meta:
                     current_page: 1
-                    from: null
+                    from: 1
                     last_page: 1
                     links:
                       -
@@ -47,30 +63,88 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blogs/list?page=1'
+                        url: 'http://localhost/api/website/blog-posts/list?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blogs/list'
+                    path: 'http://localhost/api/website/blog-posts/list'
                     per_page: 15
-                    to: null
-                    total: 0
+                    to: 1
+                    total: 1
                 properties:
                   data:
                     type: array
-                    example: []
+                    example:
+                      -
+                        title: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
+                        slug: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
+                        excerpt: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                        tags:
+                          -
+                            tag_name: php
+                          -
+                            tag_name: laravel
+                          -
+                            tag_name: react
+                        publish_date: '2024-03-17T02:41:21.000000Z'
+                        author:
+                          first_name: 'Prof. Madalyn Donnelly V'
+                          last_name: Upton
+                          profile_img: null
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
+                        slug:
+                          type: string
+                          example: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
+                        excerpt:
+                          type: string
+                          example: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                        tags:
+                          type: array
+                          example:
+                            -
+                              tag_name: php
+                            -
+                              tag_name: laravel
+                            -
+                              tag_name: react
+                          items:
+                            type: object
+                            properties:
+                              tag_name:
+                                type: string
+                                example: php
+                        publish_date:
+                          type: string
+                          example: '2024-03-17T02:41:21.000000Z'
+                        author:
+                          type: object
+                          properties:
+                            first_name:
+                              type: string
+                              example: 'Prof. Madalyn Donnelly V'
+                            last_name:
+                              type: string
+                              example: Upton
+                            profile_img:
+                              type: string
+                              example: null
                   links:
                     type: object
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blogs/list?page=1'
+                        example: 'http://localhost/api/website/blog-posts/list?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blogs/list?page=1'
+                        example: 'http://localhost/api/website/blog-posts/list?page=1'
                       prev:
                         type: string
                         example: null
@@ -84,8 +158,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       last_page:
                         type: integer
                         example: 1
@@ -97,7 +171,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blogs/list?page=1'
+                            url: 'http://localhost/api/website/blog-posts/list?page=1'
                             label: '1'
                             active: true
                           -
@@ -118,16 +192,16 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blogs/list'
+                        example: 'http://localhost/api/website/blog-posts/list'
                       per_page:
                         type: integer
                         example: 15
                       to:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       total:
                         type: integer
-                        example: 0
+                        example: 1
       tags:
         - Endpoints
       security: []
