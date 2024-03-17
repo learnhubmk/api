@@ -2,7 +2,6 @@
 
 namespace App\Website\Database\Factories;
 
-use App\Models\User;
 use App\Website\Enums\BlogStatusEnum;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
@@ -30,7 +29,7 @@ class BlogPostFactory extends Factory
             'slug' => $slug,
             'excerpt' => $this->faker->text,
             'author_id' => Author::all()->random()->id,
-            'status' => BlogStatusEnum::PUBLISHED
+            'status' => BlogStatusEnum::PUBLISHED,
         ];
     }
 

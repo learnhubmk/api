@@ -18,7 +18,7 @@ class Author extends Model
         'image',
         'bio',
         'website_url',
-        'linkedin_url'
+        'linkedin_url',
     ];
 
     public function user(): BelongsTo

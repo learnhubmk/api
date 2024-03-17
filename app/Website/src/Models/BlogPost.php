@@ -28,5 +28,4 @@ class BlogPost extends Model
     {
         return $this->belongsToMany(Tag::class, 'blog_post_tags', 'blog_post_id', 'tag_id');
     }
-
 }

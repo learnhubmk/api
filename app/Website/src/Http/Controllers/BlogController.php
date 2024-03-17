@@ -27,8 +27,6 @@ class BlogController extends Controller
             })
             ->get();
 
-
         return BlogPostsResource::collection($blogs);
     }
-
 }

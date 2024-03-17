@@ -3,7 +3,6 @@
 namespace App\Website\Database\Seeders;
 
 use App\Website\Models\Tag;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
