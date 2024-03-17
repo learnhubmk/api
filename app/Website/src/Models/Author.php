@@ -6,20 +6,18 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Author extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'slug',
-        'excerpt',
-        'tags',
         'user_id',
-    ];
-
-    protected $casts = [
-        'tags' => 'json',
+        'first_name',
+        'last_name',
+        'img_src',
+        'bio',
+        'website_url',
+        'linkedin_url'
     ];
 
     public function user()

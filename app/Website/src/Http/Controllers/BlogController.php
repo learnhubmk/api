@@ -4,7 +4,7 @@ namespace App\Website\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Website\Http\Resources\Blogs\ListBlogsResource;
-use App\Website\Models\Blog;
+use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\QueryParam;
@@ -18,7 +18,7 @@ class BlogController extends Controller
     #[QueryParam('title', 'string', required: false)]
     public function index(Request $request)
     {
-        $blogs = Blog::with('user');
+        $blogs = BlogPost::with('user');
 
         if ($request->has('title')) {
             $blogs->where('title', 'like', "%{$request->title}%");
