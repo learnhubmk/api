@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/website/blog-posts/list
+    uri: api/website/blog-posts
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -26,20 +26,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: illum
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: illum
+      title: voluptas
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Dolorem ducimus molestiae voluptas voluptatem illum velit.","slug":"dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit","excerpt":"Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T02:41:21.000000Z","author":{"first_name":"Prof. Madalyn Donnelly V","last_name":"Upton","profile_img":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts\/list?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts\/list?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts\/list?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts\/list","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"title":"Sint dolore nesciunt et veniam sequi corrupti voluptas.","slug":"sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas","excerpt":"Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:53.000000Z","author":{"first_name":"Prof. Damian Kautzer","last_name":"Thompson","img":null}},{"title":"Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.","slug":"quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem","excerpt":"Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:53.000000Z","author":{"first_name":"Felicity Langosh","last_name":"Johns","img":null}},{"title":"Quisquam voluptas pariatur numquam eveniet eligendi quia.","slug":"quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia","excerpt":"Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:54.000000Z","author":{"first_name":"Mr. Dock Stoltenberg","last_name":"Wilderman","img":null}},{"title":"Maiores est doloribus voluptas quo molestiae.","slug":"maiores-est-doloribus-voluptas-quo-molestiae","excerpt":"Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:54.000000Z","author":{"first_name":"Marie Heidenreich","last_name":"Pouros","img":null}}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

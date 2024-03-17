@@ -7,7 +7,7 @@ servers:
   -
     url: 'http://localhost'
 paths:
-  /api/website/blog-posts/list:
+  /api/website/blog-posts:
     get:
       summary: 'Website/List Blogs'
       operationId: websiteListBlogs
@@ -17,12 +17,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: illum
+          example: voluptas
           required: false
           schema:
             type: string
             description: ''
-            example: illum
+            example: voluptas
       responses:
         200:
           description: ''
@@ -33,9 +33,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
-                      slug: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
-                      excerpt: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                      title: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
+                      slug: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
+                      excerpt: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
                       tags:
                         -
                           tag_name: php
@@ -43,45 +43,67 @@ paths:
                           tag_name: laravel
                         -
                           tag_name: react
-                      publish_date: '2024-03-17T02:41:21.000000Z'
+                      publish_date: '2024-03-17T16:34:53.000000Z'
                       author:
-                        first_name: 'Prof. Madalyn Donnelly V'
-                        last_name: Upton
-                        profile_img: null
-                  links:
-                    first: 'http://localhost/api/website/blog-posts/list?page=1'
-                    last: 'http://localhost/api/website/blog-posts/list?page=1'
-                    prev: null
-                    next: null
-                  meta:
-                    current_page: 1
-                    from: 1
-                    last_page: 1
-                    links:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost/api/website/blog-posts/list?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    path: 'http://localhost/api/website/blog-posts/list'
-                    per_page: 15
-                    to: 1
-                    total: 1
+                        first_name: 'Prof. Damian Kautzer'
+                        last_name: Thompson
+                        img: null
+                    -
+                      title: 'Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.'
+                      slug: quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem
+                      excerpt: 'Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.'
+                      tags:
+                        -
+                          tag_name: php
+                        -
+                          tag_name: laravel
+                        -
+                          tag_name: react
+                      publish_date: '2024-03-17T16:34:53.000000Z'
+                      author:
+                        first_name: 'Felicity Langosh'
+                        last_name: Johns
+                        img: null
+                    -
+                      title: 'Quisquam voluptas pariatur numquam eveniet eligendi quia.'
+                      slug: quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia
+                      excerpt: 'Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.'
+                      tags:
+                        -
+                          tag_name: php
+                        -
+                          tag_name: laravel
+                        -
+                          tag_name: react
+                      publish_date: '2024-03-17T16:34:54.000000Z'
+                      author:
+                        first_name: 'Mr. Dock Stoltenberg'
+                        last_name: Wilderman
+                        img: null
+                    -
+                      title: 'Maiores est doloribus voluptas quo molestiae.'
+                      slug: maiores-est-doloribus-voluptas-quo-molestiae
+                      excerpt: 'Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.'
+                      tags:
+                        -
+                          tag_name: php
+                        -
+                          tag_name: laravel
+                        -
+                          tag_name: react
+                      publish_date: '2024-03-17T16:34:54.000000Z'
+                      author:
+                        first_name: 'Marie Heidenreich'
+                        last_name: Pouros
+                        img: null
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
-                        slug: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
-                        excerpt: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                        title: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
+                        slug: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
+                        excerpt: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
                         tags:
                           -
                             tag_name: php
@@ -89,23 +111,71 @@ paths:
                             tag_name: laravel
                           -
                             tag_name: react
-                        publish_date: '2024-03-17T02:41:21.000000Z'
+                        publish_date: '2024-03-17T16:34:53.000000Z'
                         author:
-                          first_name: 'Prof. Madalyn Donnelly V'
-                          last_name: Upton
-                          profile_img: null
+                          first_name: 'Prof. Damian Kautzer'
+                          last_name: Thompson
+                          img: null
+                      -
+                        title: 'Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.'
+                        slug: quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem
+                        excerpt: 'Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.'
+                        tags:
+                          -
+                            tag_name: php
+                          -
+                            tag_name: laravel
+                          -
+                            tag_name: react
+                        publish_date: '2024-03-17T16:34:53.000000Z'
+                        author:
+                          first_name: 'Felicity Langosh'
+                          last_name: Johns
+                          img: null
+                      -
+                        title: 'Quisquam voluptas pariatur numquam eveniet eligendi quia.'
+                        slug: quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia
+                        excerpt: 'Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.'
+                        tags:
+                          -
+                            tag_name: php
+                          -
+                            tag_name: laravel
+                          -
+                            tag_name: react
+                        publish_date: '2024-03-17T16:34:54.000000Z'
+                        author:
+                          first_name: 'Mr. Dock Stoltenberg'
+                          last_name: Wilderman
+                          img: null
+                      -
+                        title: 'Maiores est doloribus voluptas quo molestiae.'
+                        slug: maiores-est-doloribus-voluptas-quo-molestiae
+                        excerpt: 'Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.'
+                        tags:
+                          -
+                            tag_name: php
+                          -
+                            tag_name: laravel
+                          -
+                            tag_name: react
+                        publish_date: '2024-03-17T16:34:54.000000Z'
+                        author:
+                          first_name: 'Marie Heidenreich'
+                          last_name: Pouros
+                          img: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Dolorem ducimus molestiae voluptas voluptatem illum velit.'
+                          example: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
                         slug:
                           type: string
-                          example: dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit
+                          example: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
                         excerpt:
                           type: string
-                          example: 'Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.'
+                          example: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
                         tags:
                           type: array
                           example:
@@ -123,85 +193,19 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-03-17T02:41:21.000000Z'
+                          example: '2024-03-17T16:34:53.000000Z'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Prof. Madalyn Donnelly V'
+                              example: 'Prof. Damian Kautzer'
                             last_name:
                               type: string
-                              example: Upton
-                            profile_img:
+                              example: Thompson
+                            img:
                               type: string
                               example: null
-                  links:
-                    type: object
-                    properties:
-                      first:
-                        type: string
-                        example: 'http://localhost/api/website/blog-posts/list?page=1'
-                      last:
-                        type: string
-                        example: 'http://localhost/api/website/blog-posts/list?page=1'
-                      prev:
-                        type: string
-                        example: null
-                      next:
-                        type: string
-                        example: null
-                  meta:
-                    type: object
-                    properties:
-                      current_page:
-                        type: integer
-                        example: 1
-                      from:
-                        type: integer
-                        example: 1
-                      last_page:
-                        type: integer
-                        example: 1
-                      links:
-                        type: array
-                        example:
-                          -
-                            url: null
-                            label: '&laquo; Previous'
-                            active: false
-                          -
-                            url: 'http://localhost/api/website/blog-posts/list?page=1'
-                            label: '1'
-                            active: true
-                          -
-                            url: null
-                            label: 'Next &raquo;'
-                            active: false
-                        items:
-                          type: object
-                          properties:
-                            url:
-                              type: string
-                              example: null
-                            label:
-                              type: string
-                              example: '&laquo; Previous'
-                            active:
-                              type: boolean
-                              example: false
-                      path:
-                        type: string
-                        example: 'http://localhost/api/website/blog-posts/list'
-                      per_page:
-                        type: integer
-                        example: 15
-                      to:
-                        type: integer
-                        example: 1
-                      total:
-                        type: integer
-                        example: 1
       tags:
         - Endpoints
       security: []

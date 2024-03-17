@@ -71,8 +71,8 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts-list">
-                                <a href="#endpoints-GETapi-website-blog-posts-list">Website/List Blogs</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts">
+                                <a href="#endpoints-GETapi-website-blog-posts">Website/List Blogs</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-healthcheck">
                                 <a href="#endpoints-GETapi-healthcheck">Healthcheck</a>
@@ -113,7 +113,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-GETapi-website-blog-posts-list">Website/List Blogs</h2>
+                                <h2 id="endpoints-GETapi-website-blog-posts">Website/List Blogs</h2>
 
 <p>
 </p>
@@ -121,24 +121,24 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>This endpoint list all blogpost from newest ones to the oldest.
 Additionally you may use ?title= query param to filter by title</p>
 
-<span id="example-requests-GETapi-website-blog-posts-list">
+<span id="example-requests-GETapi-website-blog-posts">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/website/blog-posts/list?title=illum" \
+    --get "http://localhost/api/website/blog-posts?title=voluptas" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/website/blog-posts/list"
+    "http://localhost/api/website/blog-posts"
 );
 
 const params = {
-    "title": "illum",
+    "title": "voluptas",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -155,7 +155,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-website-blog-posts-list">
+<span id="example-responses-GETapi-website-blog-posts">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -171,9 +171,9 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Dolorem ducimus molestiae voluptas voluptatem illum velit.&quot;,
-            &quot;slug&quot;: &quot;dolorem-ducimus-molestiae-voluptas-voluptatem-illum-velit&quot;,
-            &quot;excerpt&quot;: &quot;Sit dolores quas ut qui aliquam hic consequatur. Voluptates ab dolor quis dolor sit sit. Placeat eligendi sed fugiat neque praesentium aut. Corrupti ut accusamus autem quaerat a amet neque.&quot;,
+            &quot;title&quot;: &quot;Sint dolore nesciunt et veniam sequi corrupti voluptas.&quot;,
+            &quot;slug&quot;: &quot;sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas&quot;,
+            &quot;excerpt&quot;: &quot;Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;tag_name&quot;: &quot;php&quot;
@@ -185,86 +185,120 @@ access-control-allow-origin: *
                     &quot;tag_name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-17T02:41:21.000000Z&quot;,
+            &quot;publish_date&quot;: &quot;2024-03-17T16:34:53.000000Z&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Prof. Madalyn Donnelly V&quot;,
-                &quot;last_name&quot;: &quot;Upton&quot;,
-                &quot;profile_img&quot;: null
+                &quot;first_name&quot;: &quot;Prof. Damian Kautzer&quot;,
+                &quot;last_name&quot;: &quot;Thompson&quot;,
+                &quot;img&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.&quot;,
+            &quot;slug&quot;: &quot;quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem&quot;,
+            &quot;excerpt&quot;: &quot;Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;tag_name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17T16:34:53.000000Z&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Felicity Langosh&quot;,
+                &quot;last_name&quot;: &quot;Johns&quot;,
+                &quot;img&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quisquam voluptas pariatur numquam eveniet eligendi quia.&quot;,
+            &quot;slug&quot;: &quot;quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia&quot;,
+            &quot;excerpt&quot;: &quot;Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;tag_name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17T16:34:54.000000Z&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Mr. Dock Stoltenberg&quot;,
+                &quot;last_name&quot;: &quot;Wilderman&quot;,
+                &quot;img&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Maiores est doloribus voluptas quo molestiae.&quot;,
+            &quot;slug&quot;: &quot;maiores-est-doloribus-voluptas-quo-molestiae&quot;,
+            &quot;excerpt&quot;: &quot;Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;tag_name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;tag_name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17T16:34:54.000000Z&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Marie Heidenreich&quot;,
+                &quot;last_name&quot;: &quot;Pouros&quot;,
+                &quot;img&quot;: null
             }
         }
-    ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost/api/website/blog-posts/list?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/blog-posts/list?page=1&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: null
-    },
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
-        &quot;last_page&quot;: 1,
-        &quot;links&quot;: [
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost/api/website/blog-posts/list?page=1&quot;,
-                &quot;label&quot;: &quot;1&quot;,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                &quot;active&quot;: false
-            }
-        ],
-        &quot;path&quot;: &quot;http://localhost/api/website/blog-posts/list&quot;,
-        &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
-    }
+    ]
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-website-blog-posts-list" hidden>
+<span id="execution-results-GETapi-website-blog-posts" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-website-blog-posts-list"></span>:
+                id="execution-response-status-GETapi-website-blog-posts"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-website-blog-posts-list"
+    <pre class="json"><code id="execution-response-content-GETapi-website-blog-posts"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-website-blog-posts-list" hidden>
+<span id="execution-error-GETapi-website-blog-posts" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-website-blog-posts-list">
+    <pre><code id="execution-error-message-GETapi-website-blog-posts">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-website-blog-posts-list" data-method="GET"
-      data-path="api/website/blog-posts/list"
+<form id="form-GETapi-website-blog-posts" data-method="GET"
+      data-path="api/website/blog-posts"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-website-blog-posts-list', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-website-blog-posts', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-website-blog-posts-list"
-                    onclick="tryItOut('GETapi-website-blog-posts-list');">Try it out ⚡
+                    id="btn-tryout-GETapi-website-blog-posts"
+                    onclick="tryItOut('GETapi-website-blog-posts');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-website-blog-posts-list"
-                    onclick="cancelTryOut('GETapi-website-blog-posts-list');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-website-blog-posts"
+                    onclick="cancelTryOut('GETapi-website-blog-posts');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-website-blog-posts-list"
+                    id="btn-executetryout-GETapi-website-blog-posts"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -272,7 +306,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/website/blog-posts/list</code></b>
+            <b><code>api/website/blog-posts</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -280,7 +314,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-website-blog-posts-list"
+                              name="Content-Type"                data-endpoint="GETapi-website-blog-posts"
                value="application/json"
                data-component="header">
     <br>
@@ -291,7 +325,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-website-blog-posts-list"
+                              name="Accept"                data-endpoint="GETapi-website-blog-posts"
                value="application/json"
                data-component="header">
     <br>
@@ -303,11 +337,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="title"                data-endpoint="GETapi-website-blog-posts-list"
-               value="illum"
+                              name="title"                data-endpoint="GETapi-website-blog-posts"
+               value="voluptas"
                data-component="query">
     <br>
-<p>Example: <code>illum</code></p>
+<p>Example: <code>voluptas</code></p>
             </div>
                 </form>
 
