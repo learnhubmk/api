@@ -13,6 +13,8 @@ class Tag extends Model
         'tag_name'
     ];
 
+    public $timestamps = null;
+
     public function blogPosts()
     {
         return $this->belongsToMany(BlogPost::class, 'blog_post_tags', 'tag_id', 'blog_post_id');

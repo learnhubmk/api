@@ -30,6 +30,7 @@ class BlogPostFactory extends Factory
             'slug' => $slug,
             'excerpt' => $this->faker->text,
             'author_id' => Author::all()->random()->id,
+            'status' => BlogStatusEnum::PUBLISHED
         ];
     }
 
