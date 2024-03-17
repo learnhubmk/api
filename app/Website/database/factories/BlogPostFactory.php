@@ -3,6 +3,7 @@
 namespace App\Website\Database\Factories;
 
 use App\Models\User;
+use App\Website\Enums\BlogStatusEnum;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
 use App\Website\Models\Tag;

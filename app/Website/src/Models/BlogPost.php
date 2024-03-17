@@ -12,12 +12,8 @@ class BlogPost extends Model
         'title',
         'slug',
         'excerpt',
-        'tags',
+        'status',
         'author_id',
-    ];
-
-    protected $casts = [
-        'tags' => 'json',
     ];
 
     public function author()

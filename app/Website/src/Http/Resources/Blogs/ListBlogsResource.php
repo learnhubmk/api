@@ -2,6 +2,7 @@
 
 namespace App\Website\Http\Resources\Blogs;
 
+use App\Http\Resources\Tags\TagResource;
 use App\Website\Http\Resources\User\AuthorBlogResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -19,9 +20,9 @@ class ListBlogsResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
-            'tags' => $this->tags,
+            'tags' => $this->whenLoaded('tags', TagResource::collection($this->tags)),
             'publish_date' => $this->created_at,
-            'author' => $this->whenLoaded('user', new AuthorBlogResource($this->user)),
+            'author' => $this->whenLoaded('author', new AuthorBlogResource($this->author)),
         ];
     }
 }

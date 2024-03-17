@@ -3,6 +3,7 @@
 namespace App\Website\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Website\Enums\BlogStatusEnum;
 use App\Website\Http\Resources\Blogs\ListBlogsResource;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class BlogController extends Controller
     #[QueryParam('title', 'string', required: false)]
     public function index(Request $request)
     {
-        $blogs = BlogPost::with('user');
+        $blogs = BlogPost::with('author', 'tags')->where('status', BlogStatusEnum::PUBLISHED);
 
         if ($request->has('title')) {
             $blogs->where('title', 'like', "%{$request->title}%");
