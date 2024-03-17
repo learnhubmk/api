@@ -2,7 +2,7 @@
 
 namespace App\Website\Database\Seeders;
 
-use App\Website\Models\Tag;
+use App\Website\Models\BlogPostTag;
 use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
@@ -20,7 +20,7 @@ class TagSeeder extends Seeder
             $tagData[] = ['name' => $tagName];
         }
 
-        Tag::insert($tagData);
+        BlogPostTag::insert($tagData);
 
     }
 }

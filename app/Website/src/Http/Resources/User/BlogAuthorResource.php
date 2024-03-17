@@ -5,7 +5,7 @@ namespace App\Website\Http\Resources\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthorBlogResource extends JsonResource
+class BlogAuthorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

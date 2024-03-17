@@ -2,10 +2,10 @@
 
 namespace App\Website\Database\Factories;
 
-use App\Website\Enums\BlogStatusEnum;
+use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
-use App\Website\Models\Tag;
+use App\Website\Models\BlogPostTag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -29,7 +29,7 @@ class BlogPostFactory extends Factory
             'slug' => $slug,
             'excerpt' => $this->faker->text,
             'author_id' => Author::all()->random()->id,
-            'status' => BlogStatusEnum::PUBLISHED,
+            'status' => BlogPostStatus::PUBLISHED,
             'publish_date' => now()
         ];
     }
@@ -42,7 +42,7 @@ class BlogPostFactory extends Factory
     public function configure()
     {
         return $this->afterCreating(function (BlogPost $blogPost) {
-            $tags = Tag::all()->random()->limit(3)->get();
+            $tags = BlogPostTag::all()->random()->limit(3)->get();
             $blogPost->tags()->sync($tags);
         });
     }

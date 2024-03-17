@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Website\Database\Seeders\AuthorSeeder;
-use App\Website\Database\Seeders\BlogSeeder;
+use App\Website\Database\Seeders\BlogPostSeeder;
 use App\Website\Database\Seeders\TagSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Artisan::call('db:seed', [
-            '--class' => BlogSeeder::class,
+            '--class' => BlogPostSeeder::class,
             '--module' => 'Website',
         ]);
 

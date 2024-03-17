@@ -17,12 +17,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: quis
+          example: dolorem
           required: false
           schema:
             type: string
             description: ''
-            example: quis
+            example: dolorem
       responses:
         200:
           description: ''
@@ -33,9 +33,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Earum autem voluptas quisquam impedit qui sint aut.'
-                      slug: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
-                      excerpt: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
+                      title: 'Quia pariatur rerum et sunt est quasi dolorem.'
+                      slug: quia-pariatur-rerum-et-sunt-est-quasi-dolorem
+                      excerpt: 'Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.'
                       tags:
                         -
                           name: php
@@ -45,13 +45,13 @@ paths:
                           name: react
                       publish_date: '2024-03-17'
                       author:
-                        first_name: 'Prof. Madeline Marvin'
-                        last_name: Dietrich
+                        first_name: "Hollie D'Amore"
+                        last_name: Hammes
                         image: null
                     -
-                      title: 'Aut consectetur quisquam est et et.'
-                      slug: aut-consectetur-quisquam-est-et-et
-                      excerpt: 'Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.'
+                      title: 'Iure et magnam dolorem voluptas.'
+                      slug: iure-et-magnam-dolorem-voluptas
+                      excerpt: 'Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.'
                       tags:
                         -
                           name: php
@@ -61,13 +61,13 @@ paths:
                           name: react
                       publish_date: '2024-03-17'
                       author:
-                        first_name: 'Prof. Madeline Marvin'
-                        last_name: Dietrich
+                        first_name: 'Kenna Kassulke'
+                        last_name: Boyer
                         image: null
                     -
-                      title: 'Qui placeat totam quis accusantium.'
-                      slug: qui-placeat-totam-quis-accusantium
-                      excerpt: 'Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.'
+                      title: 'Ut ut dolorem ad laboriosam.'
+                      slug: ut-ut-dolorem-ad-laboriosam
+                      excerpt: 'Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.'
                       tags:
                         -
                           name: php
@@ -77,13 +77,13 @@ paths:
                           name: react
                       publish_date: '2024-03-17'
                       author:
-                        first_name: 'Tiana Larson'
-                        last_name: Rolfson
+                        first_name: "Hollie D'Amore"
+                        last_name: Hammes
                         image: null
                     -
-                      title: 'Animi quis ipsa vel incidunt accusamus.'
-                      slug: animi-quis-ipsa-vel-incidunt-accusamus
-                      excerpt: 'Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.'
+                      title: 'Incidunt porro nulla dolores iure dolorem a autem.'
+                      slug: incidunt-porro-nulla-dolores-iure-dolorem-a-autem
+                      excerpt: 'Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.'
                       tags:
                         -
                           name: php
@@ -93,49 +93,17 @@ paths:
                           name: react
                       publish_date: '2024-03-17'
                       author:
-                        first_name: 'Prof. Olin Schuster MD'
-                        last_name: McKenzie
-                        image: null
-                    -
-                      title: 'Earum quisquam ut officiis alias itaque voluptatem inventore.'
-                      slug: earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore
-                      excerpt: 'Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-17'
-                      author:
-                        first_name: 'Mariano Schiller Sr.'
-                        last_name: Schmitt
-                        image: null
-                    -
-                      title: 'Quis eum iste quod.'
-                      slug: quis-eum-iste-quod
-                      excerpt: 'Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-17'
-                      author:
-                        first_name: 'Brendon Johns'
-                        last_name: Kessler
+                        first_name: 'Dr. Winona Bogisich'
+                        last_name: Breitenberg
                         image: null
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Earum autem voluptas quisquam impedit qui sint aut.'
-                        slug: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
-                        excerpt: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
+                        title: 'Quia pariatur rerum et sunt est quasi dolorem.'
+                        slug: quia-pariatur-rerum-et-sunt-est-quasi-dolorem
+                        excerpt: 'Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.'
                         tags:
                           -
                             name: php
@@ -145,13 +113,13 @@ paths:
                             name: react
                         publish_date: '2024-03-17'
                         author:
-                          first_name: 'Prof. Madeline Marvin'
-                          last_name: Dietrich
+                          first_name: "Hollie D'Amore"
+                          last_name: Hammes
                           image: null
                       -
-                        title: 'Aut consectetur quisquam est et et.'
-                        slug: aut-consectetur-quisquam-est-et-et
-                        excerpt: 'Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.'
+                        title: 'Iure et magnam dolorem voluptas.'
+                        slug: iure-et-magnam-dolorem-voluptas
+                        excerpt: 'Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.'
                         tags:
                           -
                             name: php
@@ -161,13 +129,13 @@ paths:
                             name: react
                         publish_date: '2024-03-17'
                         author:
-                          first_name: 'Prof. Madeline Marvin'
-                          last_name: Dietrich
+                          first_name: 'Kenna Kassulke'
+                          last_name: Boyer
                           image: null
                       -
-                        title: 'Qui placeat totam quis accusantium.'
-                        slug: qui-placeat-totam-quis-accusantium
-                        excerpt: 'Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.'
+                        title: 'Ut ut dolorem ad laboriosam.'
+                        slug: ut-ut-dolorem-ad-laboriosam
+                        excerpt: 'Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.'
                         tags:
                           -
                             name: php
@@ -177,13 +145,13 @@ paths:
                             name: react
                         publish_date: '2024-03-17'
                         author:
-                          first_name: 'Tiana Larson'
-                          last_name: Rolfson
+                          first_name: "Hollie D'Amore"
+                          last_name: Hammes
                           image: null
                       -
-                        title: 'Animi quis ipsa vel incidunt accusamus.'
-                        slug: animi-quis-ipsa-vel-incidunt-accusamus
-                        excerpt: 'Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.'
+                        title: 'Incidunt porro nulla dolores iure dolorem a autem.'
+                        slug: incidunt-porro-nulla-dolores-iure-dolorem-a-autem
+                        excerpt: 'Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.'
                         tags:
                           -
                             name: php
@@ -193,53 +161,21 @@ paths:
                             name: react
                         publish_date: '2024-03-17'
                         author:
-                          first_name: 'Prof. Olin Schuster MD'
-                          last_name: McKenzie
-                          image: null
-                      -
-                        title: 'Earum quisquam ut officiis alias itaque voluptatem inventore.'
-                        slug: earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore
-                        excerpt: 'Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-17'
-                        author:
-                          first_name: 'Mariano Schiller Sr.'
-                          last_name: Schmitt
-                          image: null
-                      -
-                        title: 'Quis eum iste quod.'
-                        slug: quis-eum-iste-quod
-                        excerpt: 'Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-17'
-                        author:
-                          first_name: 'Brendon Johns'
-                          last_name: Kessler
+                          first_name: 'Dr. Winona Bogisich'
+                          last_name: Breitenberg
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Earum autem voluptas quisquam impedit qui sint aut.'
+                          example: 'Quia pariatur rerum et sunt est quasi dolorem.'
                         slug:
                           type: string
-                          example: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
+                          example: quia-pariatur-rerum-et-sunt-est-quasi-dolorem
                         excerpt:
                           type: string
-                          example: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
+                          example: 'Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.'
                         tags:
                           type: array
                           example:
@@ -263,10 +199,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Prof. Madeline Marvin'
+                              example: "Hollie D'Amore"
                             last_name:
                               type: string
-                              example: Dietrich
+                              example: Hammes
                             image:
                               type: string
                               example: null

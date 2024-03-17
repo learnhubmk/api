@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->longText('excerpt');
-            $table->string('status')->default(\App\Website\Enums\BlogStatusEnum::DRAFT);
+            $table->string('status')->default(\App\Website\Enums\BlogPostStatus::DRAFT);
             $table->unsignedBigInteger('author_id');
             $table->date('publish_date')->nullable();
             $table->timestamps();

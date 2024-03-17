@@ -26,20 +26,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: voluptas
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: voluptas
+      title: dolorem
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Sint dolore nesciunt et veniam sequi corrupti voluptas.","slug":"sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas","excerpt":"Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:53.000000Z","author":{"first_name":"Prof. Damian Kautzer","last_name":"Thompson","img":null}},{"title":"Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.","slug":"quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem","excerpt":"Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:53.000000Z","author":{"first_name":"Felicity Langosh","last_name":"Johns","img":null}},{"title":"Quisquam voluptas pariatur numquam eveniet eligendi quia.","slug":"quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia","excerpt":"Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:54.000000Z","author":{"first_name":"Mr. Dock Stoltenberg","last_name":"Wilderman","img":null}},{"title":"Maiores est doloribus voluptas quo molestiae.","slug":"maiores-est-doloribus-voluptas-quo-molestiae","excerpt":"Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.","tags":[{"tag_name":"php"},{"tag_name":"laravel"},{"tag_name":"react"}],"publish_date":"2024-03-17T16:34:54.000000Z","author":{"first_name":"Marie Heidenreich","last_name":"Pouros","img":null}}]}'
+        content: '{"data":[{"title":"Quia pariatur rerum et sunt est quasi dolorem.","slug":"quia-pariatur-rerum-et-sunt-est-quasi-dolorem","excerpt":"Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Iure et magnam dolorem voluptas.","slug":"iure-et-magnam-dolorem-voluptas","excerpt":"Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Kenna Kassulke","last_name":"Boyer","image":null}},{"title":"Ut ut dolorem ad laboriosam.","slug":"ut-ut-dolorem-ad-laboriosam","excerpt":"Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Incidunt porro nulla dolores iure dolorem a autem.","slug":"incidunt-porro-nulla-dolores-iure-dolorem-a-autem","excerpt":"Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Dr. Winona Bogisich","last_name":"Breitenberg","image":null}}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
