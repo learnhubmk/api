@@ -26,7 +26,7 @@ class BlogPostController extends Controller
                 return $query->where('title', 'like', "%{$request->title}%");
             })
             ->orderBy('publish_date', 'desc')
-            ->get();
+            ->paginate(15);
 
         return BlogPostsResource::collection($blogs);
     }

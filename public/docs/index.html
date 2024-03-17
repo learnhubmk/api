@@ -127,7 +127,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/website/blog-posts?title=dolorem" \
+    --get "http://localhost/api/website/blog-posts?title=qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -138,7 +138,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "dolorem",
+    "title": "qui",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -171,6 +171,182 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
+            &quot;title&quot;: &quot;Vero qui nesciunt quis quidem distinctio.&quot;,
+            &quot;slug&quot;: &quot;vero-qui-nesciunt-quis-quidem-distinctio&quot;,
+            &quot;excerpt&quot;: &quot;Totam nisi et voluptatum alias tempore. Corrupti voluptatibus ut ducimus voluptatibus voluptates. Incidunt animi alias voluptas ipsam aliquam. Cupiditate repudiandae ab omnis ut dignissimos.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Genevieve Kilback Sr.&quot;,
+                &quot;last_name&quot;: &quot;Ruecker&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Est est voluptate eligendi facere sunt veritatis quia expedita.&quot;,
+            &quot;slug&quot;: &quot;est-est-voluptate-eligendi-facere-sunt-veritatis-quia-expedita&quot;,
+            &quot;excerpt&quot;: &quot;Et nihil aut odio nesciunt corporis. At voluptatem assumenda optio sit. Occaecati sit qui veniam aut explicabo est cum. Laborum doloremque omnis illo maiores velit corporis.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Grace McCullough&quot;,
+                &quot;last_name&quot;: &quot;Wehner&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quasi vero quia officiis sed facere.&quot;,
+            &quot;slug&quot;: &quot;quasi-vero-quia-officiis-sed-facere&quot;,
+            &quot;excerpt&quot;: &quot;Ducimus perferendis et exercitationem. Ut aperiam dolore quas ut. Beatae sunt nemo veritatis quis odit nostrum. Sed tempore nam tenetur aut fugit ipsum quaerat. Veritatis aliquid rem quasi voluptate.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Kenna Kassulke&quot;,
+                &quot;last_name&quot;: &quot;Boyer&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Dolores saepe est est nobis qui.&quot;,
+            &quot;slug&quot;: &quot;dolores-saepe-est-est-nobis-qui&quot;,
+            &quot;excerpt&quot;: &quot;Quis rem et voluptatem ut. Et aut totam distinctio officiis architecto iste sed earum. Quo harum in dolor quo quia harum.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Ezekiel O&#039;Reilly&quot;,
+                &quot;last_name&quot;: &quot;Muller&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Iure dignissimos et qui voluptas laborum distinctio.&quot;,
+            &quot;slug&quot;: &quot;iure-dignissimos-et-qui-voluptas-laborum-distinctio&quot;,
+            &quot;excerpt&quot;: &quot;Et et sit ullam ea. Quas consequatur velit et laboriosam perspiciatis voluptatem nihil quis. Et odit aspernatur reprehenderit adipisci officiis eum tenetur.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Grace McCullough&quot;,
+                &quot;last_name&quot;: &quot;Wehner&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Tempora voluptatem exercitationem deserunt quis dolores cum officia eius.&quot;,
+            &quot;slug&quot;: &quot;tempora-voluptatem-exercitationem-deserunt-quis-dolores-cum-officia-eius&quot;,
+            &quot;excerpt&quot;: &quot;Id unde omnis recusandae omnis modi dignissimos quia. Eum culpa ipsum sed quasi vel. Possimus dolorem et exercitationem ut.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Devyn Hyatt&quot;,
+                &quot;last_name&quot;: &quot;Sawayn&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Et est velit sequi porro.&quot;,
+            &quot;slug&quot;: &quot;et-est-velit-sequi-porro&quot;,
+            &quot;excerpt&quot;: &quot;Atque ab eum est impedit. Delectus dolor incidunt aut nisi. Iure reprehenderit similique excepturi debitis voluptatem.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Ezekiel O&#039;Reilly&quot;,
+                &quot;last_name&quot;: &quot;Muller&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quasi ipsa veritatis qui cumque est dolores.&quot;,
+            &quot;slug&quot;: &quot;quasi-ipsa-veritatis-qui-cumque-est-dolores&quot;,
+            &quot;excerpt&quot;: &quot;Dolores tempora inventore dicta ut. Neque ab doloribus nisi perspiciatis. Porro non architecto sapiente necessitatibus qui vitae.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Hans Rogahn&quot;,
+                &quot;last_name&quot;: &quot;Lockman&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
             &quot;title&quot;: &quot;Quia pariatur rerum et sunt est quasi dolorem.&quot;,
             &quot;slug&quot;: &quot;quia-pariatur-rerum-et-sunt-est-quasi-dolorem&quot;,
             &quot;excerpt&quot;: &quot;Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.&quot;,
@@ -193,9 +369,53 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;title&quot;: &quot;Iure et magnam dolorem voluptas.&quot;,
-            &quot;slug&quot;: &quot;iure-et-magnam-dolorem-voluptas&quot;,
-            &quot;excerpt&quot;: &quot;Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.&quot;,
+            &quot;title&quot;: &quot;Autem temporibus nemo ipsa quisquam ipsam.&quot;,
+            &quot;slug&quot;: &quot;autem-temporibus-nemo-ipsa-quisquam-ipsam&quot;,
+            &quot;excerpt&quot;: &quot;Odio explicabo autem accusamus et. Itaque quia non est ipsum rerum. Ut dolor labore dicta corporis odit tempora iure. Eaque facere tempora omnis voluptatem.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Genevieve Kilback Sr.&quot;,
+                &quot;last_name&quot;: &quot;Ruecker&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Ut earum vel quibusdam hic reprehenderit.&quot;,
+            &quot;slug&quot;: &quot;ut-earum-vel-quibusdam-hic-reprehenderit&quot;,
+            &quot;excerpt&quot;: &quot;Dolorem omnis et quia aperiam. Explicabo quo fugiat quia voluptatibus. Id quia ut provident delectus repudiandae est. Et ut nulla similique reprehenderit laborum eaque vitae.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Dr. Winona Bogisich&quot;,
+                &quot;last_name&quot;: &quot;Breitenberg&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Qui id dolor exercitationem quisquam recusandae.&quot;,
+            &quot;slug&quot;: &quot;qui-id-dolor-exercitationem-quisquam-recusandae&quot;,
+            &quot;excerpt&quot;: &quot;Ullam expedita labore sed. Modi doloribus dolor enim debitis veritatis occaecati voluptates.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -215,9 +435,9 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;title&quot;: &quot;Ut ut dolorem ad laboriosam.&quot;,
-            &quot;slug&quot;: &quot;ut-ut-dolorem-ad-laboriosam&quot;,
-            &quot;excerpt&quot;: &quot;Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.&quot;,
+            &quot;title&quot;: &quot;Ut autem fugit et culpa ut qui.&quot;,
+            &quot;slug&quot;: &quot;ut-autem-fugit-et-culpa-ut-qui&quot;,
+            &quot;excerpt&quot;: &quot;Beatae tempore aut dolorem architecto. Vel delectus et velit dicta. Facere aperiam quo et architecto sint id sit.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -231,15 +451,15 @@ access-control-allow-origin: *
             ],
             &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Hollie D&#039;Amore&quot;,
-                &quot;last_name&quot;: &quot;Hammes&quot;,
+                &quot;first_name&quot;: &quot;Genevieve Kilback Sr.&quot;,
+                &quot;last_name&quot;: &quot;Ruecker&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Incidunt porro nulla dolores iure dolorem a autem.&quot;,
-            &quot;slug&quot;: &quot;incidunt-porro-nulla-dolores-iure-dolorem-a-autem&quot;,
-            &quot;excerpt&quot;: &quot;Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.&quot;,
+            &quot;title&quot;: &quot;Repellendus quod sequi aliquam sed accusantium impedit inventore.&quot;,
+            &quot;slug&quot;: &quot;repellendus-quod-sequi-aliquam-sed-accusantium-impedit-inventore&quot;,
+            &quot;excerpt&quot;: &quot;Ut qui est in et. Eum sit qui quisquam quis cum. Magni saepe quae voluptas.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -253,12 +473,71 @@ access-control-allow-origin: *
             ],
             &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Dr. Winona Bogisich&quot;,
-                &quot;last_name&quot;: &quot;Breitenberg&quot;,
+                &quot;first_name&quot;: &quot;Genevieve Kilback Sr.&quot;,
+                &quot;last_name&quot;: &quot;Ruecker&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Rerum ad in neque quia corporis velit.&quot;,
+            &quot;slug&quot;: &quot;rerum-ad-in-neque-quia-corporis-velit&quot;,
+            &quot;excerpt&quot;: &quot;Ab deleniti magni deleniti ut. Ab quia dolores hic voluptas sint dolorum. Aut maiores et excepturi quasi reiciendis et eius.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Maximillia Mills&quot;,
+                &quot;last_name&quot;: &quot;Runolfsdottir&quot;,
                 &quot;image&quot;: null
             }
         }
-    ]
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost/api/website/blog-posts?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/blog-posts?page=2&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://localhost/api/website/blog-posts?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 2,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-posts?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-posts?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-posts?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost/api/website/blog-posts&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: 15,
+        &quot;total&quot;: 19
+    }
 }</code>
  </pre>
     </span>
@@ -338,10 +617,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="dolorem"
+               value="qui"
                data-component="query">
     <br>
-<p>Example: <code>dolorem</code></p>
+<p>Example: <code>qui</code></p>
             </div>
                 </form>
 
