@@ -17,12 +17,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: voluptas
+          example: quis
           required: false
           schema:
             type: string
             description: ''
-            example: voluptas
+            example: quis
       responses:
         200:
           description: ''
@@ -33,177 +33,241 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
-                      slug: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
-                      excerpt: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
+                      title: 'Earum autem voluptas quisquam impedit qui sint aut.'
+                      slug: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
+                      excerpt: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
                       tags:
                         -
-                          tag_name: php
+                          name: php
                         -
-                          tag_name: laravel
+                          name: laravel
                         -
-                          tag_name: react
-                      publish_date: '2024-03-17T16:34:53.000000Z'
+                          name: react
+                      publish_date: '2024-03-17'
                       author:
-                        first_name: 'Prof. Damian Kautzer'
-                        last_name: Thompson
-                        img: null
+                        first_name: 'Prof. Madeline Marvin'
+                        last_name: Dietrich
+                        image: null
                     -
-                      title: 'Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.'
-                      slug: quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem
-                      excerpt: 'Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.'
+                      title: 'Aut consectetur quisquam est et et.'
+                      slug: aut-consectetur-quisquam-est-et-et
+                      excerpt: 'Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.'
                       tags:
                         -
-                          tag_name: php
+                          name: php
                         -
-                          tag_name: laravel
+                          name: laravel
                         -
-                          tag_name: react
-                      publish_date: '2024-03-17T16:34:53.000000Z'
+                          name: react
+                      publish_date: '2024-03-17'
                       author:
-                        first_name: 'Felicity Langosh'
-                        last_name: Johns
-                        img: null
+                        first_name: 'Prof. Madeline Marvin'
+                        last_name: Dietrich
+                        image: null
                     -
-                      title: 'Quisquam voluptas pariatur numquam eveniet eligendi quia.'
-                      slug: quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia
-                      excerpt: 'Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.'
+                      title: 'Qui placeat totam quis accusantium.'
+                      slug: qui-placeat-totam-quis-accusantium
+                      excerpt: 'Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.'
                       tags:
                         -
-                          tag_name: php
+                          name: php
                         -
-                          tag_name: laravel
+                          name: laravel
                         -
-                          tag_name: react
-                      publish_date: '2024-03-17T16:34:54.000000Z'
+                          name: react
+                      publish_date: '2024-03-17'
                       author:
-                        first_name: 'Mr. Dock Stoltenberg'
-                        last_name: Wilderman
-                        img: null
+                        first_name: 'Tiana Larson'
+                        last_name: Rolfson
+                        image: null
                     -
-                      title: 'Maiores est doloribus voluptas quo molestiae.'
-                      slug: maiores-est-doloribus-voluptas-quo-molestiae
-                      excerpt: 'Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.'
+                      title: 'Animi quis ipsa vel incidunt accusamus.'
+                      slug: animi-quis-ipsa-vel-incidunt-accusamus
+                      excerpt: 'Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.'
                       tags:
                         -
-                          tag_name: php
+                          name: php
                         -
-                          tag_name: laravel
+                          name: laravel
                         -
-                          tag_name: react
-                      publish_date: '2024-03-17T16:34:54.000000Z'
+                          name: react
+                      publish_date: '2024-03-17'
                       author:
-                        first_name: 'Marie Heidenreich'
-                        last_name: Pouros
-                        img: null
+                        first_name: 'Prof. Olin Schuster MD'
+                        last_name: McKenzie
+                        image: null
+                    -
+                      title: 'Earum quisquam ut officiis alias itaque voluptatem inventore.'
+                      slug: earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore
+                      excerpt: 'Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-17'
+                      author:
+                        first_name: 'Mariano Schiller Sr.'
+                        last_name: Schmitt
+                        image: null
+                    -
+                      title: 'Quis eum iste quod.'
+                      slug: quis-eum-iste-quod
+                      excerpt: 'Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-17'
+                      author:
+                        first_name: 'Brendon Johns'
+                        last_name: Kessler
+                        image: null
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
-                        slug: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
-                        excerpt: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
+                        title: 'Earum autem voluptas quisquam impedit qui sint aut.'
+                        slug: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
+                        excerpt: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
                         tags:
                           -
-                            tag_name: php
+                            name: php
                           -
-                            tag_name: laravel
+                            name: laravel
                           -
-                            tag_name: react
-                        publish_date: '2024-03-17T16:34:53.000000Z'
+                            name: react
+                        publish_date: '2024-03-17'
                         author:
-                          first_name: 'Prof. Damian Kautzer'
-                          last_name: Thompson
-                          img: null
+                          first_name: 'Prof. Madeline Marvin'
+                          last_name: Dietrich
+                          image: null
                       -
-                        title: 'Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.'
-                        slug: quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem
-                        excerpt: 'Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.'
+                        title: 'Aut consectetur quisquam est et et.'
+                        slug: aut-consectetur-quisquam-est-et-et
+                        excerpt: 'Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.'
                         tags:
                           -
-                            tag_name: php
+                            name: php
                           -
-                            tag_name: laravel
+                            name: laravel
                           -
-                            tag_name: react
-                        publish_date: '2024-03-17T16:34:53.000000Z'
+                            name: react
+                        publish_date: '2024-03-17'
                         author:
-                          first_name: 'Felicity Langosh'
-                          last_name: Johns
-                          img: null
+                          first_name: 'Prof. Madeline Marvin'
+                          last_name: Dietrich
+                          image: null
                       -
-                        title: 'Quisquam voluptas pariatur numquam eveniet eligendi quia.'
-                        slug: quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia
-                        excerpt: 'Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.'
+                        title: 'Qui placeat totam quis accusantium.'
+                        slug: qui-placeat-totam-quis-accusantium
+                        excerpt: 'Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.'
                         tags:
                           -
-                            tag_name: php
+                            name: php
                           -
-                            tag_name: laravel
+                            name: laravel
                           -
-                            tag_name: react
-                        publish_date: '2024-03-17T16:34:54.000000Z'
+                            name: react
+                        publish_date: '2024-03-17'
                         author:
-                          first_name: 'Mr. Dock Stoltenberg'
-                          last_name: Wilderman
-                          img: null
+                          first_name: 'Tiana Larson'
+                          last_name: Rolfson
+                          image: null
                       -
-                        title: 'Maiores est doloribus voluptas quo molestiae.'
-                        slug: maiores-est-doloribus-voluptas-quo-molestiae
-                        excerpt: 'Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.'
+                        title: 'Animi quis ipsa vel incidunt accusamus.'
+                        slug: animi-quis-ipsa-vel-incidunt-accusamus
+                        excerpt: 'Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.'
                         tags:
                           -
-                            tag_name: php
+                            name: php
                           -
-                            tag_name: laravel
+                            name: laravel
                           -
-                            tag_name: react
-                        publish_date: '2024-03-17T16:34:54.000000Z'
+                            name: react
+                        publish_date: '2024-03-17'
                         author:
-                          first_name: 'Marie Heidenreich'
-                          last_name: Pouros
-                          img: null
+                          first_name: 'Prof. Olin Schuster MD'
+                          last_name: McKenzie
+                          image: null
+                      -
+                        title: 'Earum quisquam ut officiis alias itaque voluptatem inventore.'
+                        slug: earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore
+                        excerpt: 'Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-17'
+                        author:
+                          first_name: 'Mariano Schiller Sr.'
+                          last_name: Schmitt
+                          image: null
+                      -
+                        title: 'Quis eum iste quod.'
+                        slug: quis-eum-iste-quod
+                        excerpt: 'Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-17'
+                        author:
+                          first_name: 'Brendon Johns'
+                          last_name: Kessler
+                          image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Sint dolore nesciunt et veniam sequi corrupti voluptas.'
+                          example: 'Earum autem voluptas quisquam impedit qui sint aut.'
                         slug:
                           type: string
-                          example: sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas
+                          example: earum-autem-voluptas-quisquam-impedit-qui-sint-aut
                         excerpt:
                           type: string
-                          example: 'Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.'
+                          example: 'Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.'
                         tags:
                           type: array
                           example:
                             -
-                              tag_name: php
+                              name: php
                             -
-                              tag_name: laravel
+                              name: laravel
                             -
-                              tag_name: react
+                              name: react
                           items:
                             type: object
                             properties:
-                              tag_name:
+                              name:
                                 type: string
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-03-17T16:34:53.000000Z'
+                          example: '2024-03-17'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Prof. Damian Kautzer'
+                              example: 'Prof. Madeline Marvin'
                             last_name:
                               type: string
-                              example: Thompson
-                            img:
+                              example: Dietrich
+                            image:
                               type: string
                               example: null
       tags:

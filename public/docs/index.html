@@ -127,7 +127,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/website/blog-posts?title=voluptas" \
+    --get "http://localhost/api/website/blog-posts?title=quis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -138,7 +138,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "voluptas",
+    "title": "quis",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -171,91 +171,135 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Sint dolore nesciunt et veniam sequi corrupti voluptas.&quot;,
-            &quot;slug&quot;: &quot;sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas&quot;,
-            &quot;excerpt&quot;: &quot;Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.&quot;,
+            &quot;title&quot;: &quot;Earum autem voluptas quisquam impedit qui sint aut.&quot;,
+            &quot;slug&quot;: &quot;earum-autem-voluptas-quisquam-impedit-qui-sint-aut&quot;,
+            &quot;excerpt&quot;: &quot;Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.&quot;,
             &quot;tags&quot;: [
                 {
-                    &quot;tag_name&quot;: &quot;php&quot;
+                    &quot;name&quot;: &quot;php&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;laravel&quot;
+                    &quot;name&quot;: &quot;laravel&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;react&quot;
+                    &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-17T16:34:53.000000Z&quot;,
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Prof. Damian Kautzer&quot;,
-                &quot;last_name&quot;: &quot;Thompson&quot;,
-                &quot;img&quot;: null
+                &quot;first_name&quot;: &quot;Prof. Madeline Marvin&quot;,
+                &quot;last_name&quot;: &quot;Dietrich&quot;,
+                &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.&quot;,
-            &quot;slug&quot;: &quot;quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem&quot;,
-            &quot;excerpt&quot;: &quot;Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.&quot;,
+            &quot;title&quot;: &quot;Aut consectetur quisquam est et et.&quot;,
+            &quot;slug&quot;: &quot;aut-consectetur-quisquam-est-et-et&quot;,
+            &quot;excerpt&quot;: &quot;Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.&quot;,
             &quot;tags&quot;: [
                 {
-                    &quot;tag_name&quot;: &quot;php&quot;
+                    &quot;name&quot;: &quot;php&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;laravel&quot;
+                    &quot;name&quot;: &quot;laravel&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;react&quot;
+                    &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-17T16:34:53.000000Z&quot;,
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Felicity Langosh&quot;,
-                &quot;last_name&quot;: &quot;Johns&quot;,
-                &quot;img&quot;: null
+                &quot;first_name&quot;: &quot;Prof. Madeline Marvin&quot;,
+                &quot;last_name&quot;: &quot;Dietrich&quot;,
+                &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Quisquam voluptas pariatur numquam eveniet eligendi quia.&quot;,
-            &quot;slug&quot;: &quot;quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia&quot;,
-            &quot;excerpt&quot;: &quot;Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.&quot;,
+            &quot;title&quot;: &quot;Qui placeat totam quis accusantium.&quot;,
+            &quot;slug&quot;: &quot;qui-placeat-totam-quis-accusantium&quot;,
+            &quot;excerpt&quot;: &quot;Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.&quot;,
             &quot;tags&quot;: [
                 {
-                    &quot;tag_name&quot;: &quot;php&quot;
+                    &quot;name&quot;: &quot;php&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;laravel&quot;
+                    &quot;name&quot;: &quot;laravel&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;react&quot;
+                    &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-17T16:34:54.000000Z&quot;,
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Mr. Dock Stoltenberg&quot;,
-                &quot;last_name&quot;: &quot;Wilderman&quot;,
-                &quot;img&quot;: null
+                &quot;first_name&quot;: &quot;Tiana Larson&quot;,
+                &quot;last_name&quot;: &quot;Rolfson&quot;,
+                &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Maiores est doloribus voluptas quo molestiae.&quot;,
-            &quot;slug&quot;: &quot;maiores-est-doloribus-voluptas-quo-molestiae&quot;,
-            &quot;excerpt&quot;: &quot;Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.&quot;,
+            &quot;title&quot;: &quot;Animi quis ipsa vel incidunt accusamus.&quot;,
+            &quot;slug&quot;: &quot;animi-quis-ipsa-vel-incidunt-accusamus&quot;,
+            &quot;excerpt&quot;: &quot;Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.&quot;,
             &quot;tags&quot;: [
                 {
-                    &quot;tag_name&quot;: &quot;php&quot;
+                    &quot;name&quot;: &quot;php&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;laravel&quot;
+                    &quot;name&quot;: &quot;laravel&quot;
                 },
                 {
-                    &quot;tag_name&quot;: &quot;react&quot;
+                    &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-17T16:34:54.000000Z&quot;,
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Marie Heidenreich&quot;,
-                &quot;last_name&quot;: &quot;Pouros&quot;,
-                &quot;img&quot;: null
+                &quot;first_name&quot;: &quot;Prof. Olin Schuster MD&quot;,
+                &quot;last_name&quot;: &quot;McKenzie&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Earum quisquam ut officiis alias itaque voluptatem inventore.&quot;,
+            &quot;slug&quot;: &quot;earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore&quot;,
+            &quot;excerpt&quot;: &quot;Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Mariano Schiller Sr.&quot;,
+                &quot;last_name&quot;: &quot;Schmitt&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quis eum iste quod.&quot;,
+            &quot;slug&quot;: &quot;quis-eum-iste-quod&quot;,
+            &quot;excerpt&quot;: &quot;Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-17&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Brendon Johns&quot;,
+                &quot;last_name&quot;: &quot;Kessler&quot;,
+                &quot;image&quot;: null
             }
         }
     ]
@@ -338,10 +382,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="voluptas"
+               value="quis"
                data-component="query">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>quis</code></p>
             </div>
                 </form>
 

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "766e7549-4172-4916-a5de-1f3430c553f1",
+        "_postman_id": "df64b494-ffa1-4b7d-9ce0-66e5d2119bf1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -28,12 +28,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "voluptas",
+                                    "value": "quis",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=voluptas"
+                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=quis"
                         },
                         "method": "GET",
                         "header": [
@@ -69,7 +69,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Sint dolore nesciunt et veniam sequi corrupti voluptas.\",\"slug\":\"sint-dolore-nesciunt-et-veniam-sequi-corrupti-voluptas\",\"excerpt\":\"Necessitatibus voluptatem qui accusamus ratione. Veniam eum cumque enim totam modi qui. Autem assumenda velit et labore temporibus provident.\",\"tags\":[{\"tag_name\":\"php\"},{\"tag_name\":\"laravel\"},{\"tag_name\":\"react\"}],\"publish_date\":\"2024-03-17T16:34:53.000000Z\",\"author\":{\"first_name\":\"Prof. Damian Kautzer\",\"last_name\":\"Thompson\",\"img\":null}},{\"title\":\"Quia odio reprehenderit placeat molestiae voluptas aut voluptatem.\",\"slug\":\"quia-odio-reprehenderit-placeat-molestiae-voluptas-aut-voluptatem\",\"excerpt\":\"Sapiente quas quis commodi voluptatibus officiis ea. Sint eos ea dolor voluptas modi velit. Minus autem qui quis corrupti repellat magnam.\",\"tags\":[{\"tag_name\":\"php\"},{\"tag_name\":\"laravel\"},{\"tag_name\":\"react\"}],\"publish_date\":\"2024-03-17T16:34:53.000000Z\",\"author\":{\"first_name\":\"Felicity Langosh\",\"last_name\":\"Johns\",\"img\":null}},{\"title\":\"Quisquam voluptas pariatur numquam eveniet eligendi quia.\",\"slug\":\"quisquam-voluptas-pariatur-numquam-eveniet-eligendi-quia\",\"excerpt\":\"Voluptatem neque ipsum autem quidem et quia. Eius temporibus quo temporibus reiciendis sint dolorem.\",\"tags\":[{\"tag_name\":\"php\"},{\"tag_name\":\"laravel\"},{\"tag_name\":\"react\"}],\"publish_date\":\"2024-03-17T16:34:54.000000Z\",\"author\":{\"first_name\":\"Mr. Dock Stoltenberg\",\"last_name\":\"Wilderman\",\"img\":null}},{\"title\":\"Maiores est doloribus voluptas quo molestiae.\",\"slug\":\"maiores-est-doloribus-voluptas-quo-molestiae\",\"excerpt\":\"Est sunt ratione illo possimus non. Assumenda atque atque aut aspernatur quidem atque. Ipsam eos et quia nostrum quam. Itaque et cupiditate laudantium.\",\"tags\":[{\"tag_name\":\"php\"},{\"tag_name\":\"laravel\"},{\"tag_name\":\"react\"}],\"publish_date\":\"2024-03-17T16:34:54.000000Z\",\"author\":{\"first_name\":\"Marie Heidenreich\",\"last_name\":\"Pouros\",\"img\":null}}]}",
+                            "body": "{\"data\":[{\"title\":\"Earum autem voluptas quisquam impedit qui sint aut.\",\"slug\":\"earum-autem-voluptas-quisquam-impedit-qui-sint-aut\",\"excerpt\":\"Rem necessitatibus est dolor dolore. Natus commodi ut velit magni dicta repudiandae quidem.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Prof. Madeline Marvin\",\"last_name\":\"Dietrich\",\"image\":null}},{\"title\":\"Aut consectetur quisquam est et et.\",\"slug\":\"aut-consectetur-quisquam-est-et-et\",\"excerpt\":\"Similique quasi possimus sequi quas. Nisi placeat odit quas doloremque eligendi rerum modi. Quisquam cum nisi iure quas voluptatibus aut optio. Minima dolores molestiae ullam ratione minima.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Prof. Madeline Marvin\",\"last_name\":\"Dietrich\",\"image\":null}},{\"title\":\"Qui placeat totam quis accusantium.\",\"slug\":\"qui-placeat-totam-quis-accusantium\",\"excerpt\":\"Debitis labore quas ut deleniti qui. Sunt tempore rerum qui qui minus. Illum praesentium inventore voluptates minima quo. Non sint ratione esse. Expedita cum voluptatum eos debitis perferendis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Tiana Larson\",\"last_name\":\"Rolfson\",\"image\":null}},{\"title\":\"Animi quis ipsa vel incidunt accusamus.\",\"slug\":\"animi-quis-ipsa-vel-incidunt-accusamus\",\"excerpt\":\"Sunt quia et nam. Fuga quasi odit distinctio rerum autem omnis. Est et laborum soluta quod qui porro id. Quas aut iusto quo inventore perferendis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Prof. Olin Schuster MD\",\"last_name\":\"McKenzie\",\"image\":null}},{\"title\":\"Earum quisquam ut officiis alias itaque voluptatem inventore.\",\"slug\":\"earum-quisquam-ut-officiis-alias-itaque-voluptatem-inventore\",\"excerpt\":\"Et adipisci dolor labore. Est adipisci sit nihil nobis nisi autem corporis. Aut voluptatum vel itaque et atque aut quidem. Omnis aut exercitationem laudantium doloribus magnam in et.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Mariano Schiller Sr.\",\"last_name\":\"Schmitt\",\"image\":null}},{\"title\":\"Quis eum iste quod.\",\"slug\":\"quis-eum-iste-quod\",\"excerpt\":\"Quidem sed porro molestiae dicta. Qui est iste est ut voluptatem in. Qui tempora modi eligendi ipsum sit. Et qui ab itaque in. Id sapiente voluptas quia quae nemo ut. Et quis sint enim.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-03-17\",\"author\":{\"first_name\":\"Brendon Johns\",\"last_name\":\"Kessler\",\"image\":null}}]}",
                             "name": ""
                         }
                     ]
