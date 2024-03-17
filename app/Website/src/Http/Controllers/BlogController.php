@@ -25,6 +25,7 @@ class BlogController extends Controller
             ->when($request->has('title'), function ($query) use ($request) {
                 return $query->where('title', 'like', "%{$request->title}%");
             })
+            ->orderBy('publish_date', 'desc')
             ->get();
 
         return BlogPostsResource::collection($blogs);

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('excerpt');
             $table->string('status')->default(\App\Website\Enums\BlogStatusEnum::DRAFT);
             $table->unsignedBigInteger('author_id');
+            $table->date('publish_date')->nullable();
             $table->timestamps();
 
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');

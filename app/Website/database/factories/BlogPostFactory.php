@@ -30,6 +30,7 @@ class BlogPostFactory extends Factory
             'excerpt' => $this->faker->text,
             'author_id' => Author::all()->random()->id,
             'status' => BlogStatusEnum::PUBLISHED,
+            'publish_date' => now()
         ];
     }
 

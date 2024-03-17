@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Tags;
+namespace App\Website\Http\Resources\Tags;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -15,7 +15,7 @@ class TagResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'tag_name' => $this->name,
+            'name' => $this->name,
         ];
     }
 }
