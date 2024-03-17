@@ -18,7 +18,7 @@ class TagSeeder extends Seeder
         $tagData = [];
 
         foreach ($tags as $tagName) {
-            $tagData[] = ['tag_name' => $tagName];
+            $tagData[] = ['name' => $tagName];
         }
 
         Tag::insert($tagData);

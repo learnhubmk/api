@@ -4,9 +4,10 @@ namespace App\Website\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Website\Enums\BlogStatusEnum;
-use App\Website\Http\Resources\Blogs\ListBlogsResource;
+use App\Website\Http\Resources\Blogs\BlogPostsResource;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\QueryParam;
 
@@ -17,48 +18,17 @@ class BlogController extends Controller
   Additionally you may use ?title= query param to filter by title
  DESC)]
     #[QueryParam('title', 'string', required: false)]
-    public function index(Request $request)
+    public function index(Request $request): AnonymousResourceCollection
     {
-        $blogs = BlogPost::with('author', 'tags')->where('status', BlogStatusEnum::PUBLISHED);
+        $blogs = BlogPost::with('author', 'tags')
+            ->where('status', BlogStatusEnum::PUBLISHED)
+            ->when($request->has('title'), function ($query) use ($request) {
+                return $query->where('title', 'like', "%{$request->title}%");
+            })
+            ->get();
 
-        if ($request->has('title')) {
-            $blogs->where('title', 'like', "%{$request->title}%");
-        }
 
-        $blogs = $blogs->orderBy('created_at', 'desc')->paginate(15);
-
-        return ListBlogsResource::collection($blogs);
+        return BlogPostsResource::collection($blogs);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

@@ -17,7 +17,7 @@ class AuthorBlogResource extends JsonResource
         return [
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
-            'profile_img' => $this->img_src,
+            'img' => $this->image,
         ];
     }
 }
