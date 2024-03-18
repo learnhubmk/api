@@ -31,7 +31,7 @@ class BlogPostFactory extends Factory
             'author_id' => Author::all()->random()->id,
             'content' => $this->faker->text,
             'status' => BlogPostStatus::PUBLISHED,
-            'publish_date' => now()
+            'publish_date' => now(),
         ];
     }
 

@@ -18,11 +18,11 @@ class BlogPost extends Model
         'status',
         'author_id',
         'publish_date',
-        'content'
+        'content',
     ];
 
     protected $casts = [
-        'publish_date ' => 'date'
+        'publish_date ' => 'date',
     ];
 
     public function author(): BelongsTo
