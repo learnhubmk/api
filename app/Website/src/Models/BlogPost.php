@@ -17,7 +17,8 @@ class BlogPost extends Model
         'excerpt',
         'status',
         'author_id',
-        'publish_date '
+        'publish_date',
+        'content'
     ];
 
     protected $casts = [
