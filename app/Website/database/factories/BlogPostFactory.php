@@ -27,10 +27,11 @@ class BlogPostFactory extends Factory
         return [
             'title' => $title,
             'slug' => $slug,
-            'excerpt' => $this->faker->text,
+            'excerpt' => $this->faker->sentence,
             'author_id' => Author::all()->random()->id,
+            'content' => $this->faker->text,
             'status' => BlogPostStatus::PUBLISHED,
-            'publish_date' => now()
+            'publish_date' => now(),
         ];
     }
 

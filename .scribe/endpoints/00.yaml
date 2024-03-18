@@ -32,7 +32,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: dolorem
+      title: molestias
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -40,6 +40,55 @@ endpoints:
       -
         status: 200
         content: '{"data":[{"title":"Quia pariatur rerum et sunt est quasi dolorem.","slug":"quia-pariatur-rerum-et-sunt-est-quasi-dolorem","excerpt":"Fugit quod est expedita facilis. Est magnam quaerat ea quaerat dolores nisi molestiae. Et qui dolore corporis sit incidunt.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Iure et magnam dolorem voluptas.","slug":"iure-et-magnam-dolorem-voluptas","excerpt":"Quidem voluptatem et et reiciendis. Voluptate sed vel dolorem quaerat sunt. Vero eos ea voluptas aut deleniti. Dolores commodi possimus unde voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Kenna Kassulke","last_name":"Boyer","image":null}},{"title":"Ut ut dolorem ad laboriosam.","slug":"ut-ut-dolorem-ad-laboriosam","excerpt":"Facere eius sed sed quaerat velit quas. Quibusdam saepe adipisci libero sed. Natus expedita quia blanditiis qui voluptas odio esse. Impedit reprehenderit aperiam sit aut voluptatum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Hollie D''Amore","last_name":"Hammes","image":null}},{"title":"Incidunt porro nulla dolores iure dolorem a autem.","slug":"incidunt-porro-nulla-dolores-iure-dolorem-a-autem","excerpt":"Veniam quasi labore est vel. Sunt iste dolor earum. Sed in numquam consequatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-17","author":{"first_name":"Dr. Winona Bogisich","last_name":"Breitenberg","image":null}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/website/blog-posts/{slug}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Website/Get Blog Post'
+      description: '  This endpoint retrieve blogpost by a slug.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      slug:
+        name: slug
+        description: 'The slug of the blog post.'
+        required: true
+        example: assumenda
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      slug: assumenda
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"title":"Ut dolorem voluptate voluptates assumenda accusantium tempora voluptates.","slug":"ut-dolorem-voluptate-voluptates-assumenda-accusantium-tempora-voluptates","excerpt":"Laboriosam expedita dolorum ipsam expedita sed qui.","content":"Nihil voluptas dolores accusamus corrupti error reprehenderit culpa. Mollitia molestiae sint culpa ab. Repellat sed est sit vel ut.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-18","author":{"first_name":"Prof. Tyrel Kassulke DVM","last_name":"Langworth","image":null}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

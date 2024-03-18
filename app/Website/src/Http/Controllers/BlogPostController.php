@@ -5,6 +5,7 @@ namespace App\Website\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Http\Resources\Blogs\BlogPostsResource;
+use App\Website\Http\Resources\Blogs\SingleBlogPostResource;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -29,5 +30,18 @@ class BlogPostController extends Controller
             ->paginate(15);
 
         return BlogPostsResource::collection($blogs);
+    }
+
+    #[Endpoint('Website/Get Blog Post', <<<'DESC'
+  This endpoint retrieve blogpost by a slug.
+DESC)]
+    public function show(string $slug): SingleBlogPostResource
+    {
+        $blog = BlogPost::with('author', 'tags')
+            ->where('status', BlogPostStatus::PUBLISHED)
+            ->where('slug',  $slug)
+            ->first();
+
+        return new SingleBlogPostResource($blog);
     }
 }
