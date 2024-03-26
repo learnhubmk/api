@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
  *
  * Otherwise, the request will fail with a 400 error, and a response listing the failed services.
  */
-Route::get('/healthcheck',
+Route::get(
+    '/healthcheck',
     #[\Knuckles\Scribe\Attributes\Response(['status' => 'down', 'services' => ['database' => 'up', 'redis' => 'down']], status: 400, description: 'Service is unhealthy')]
     #[\Knuckles\Scribe\Attributes\ResponseField('status', 'The status of this API (`up` or `down`).')]
     #[\Knuckles\Scribe\Attributes\ResponseField('services', 'Map of each downstream service and their status (`up` or `down`).')]
@@ -33,7 +34,8 @@ Route::get('/healthcheck',
                 'redis' => 'up',
             ],
         ];
-    });
+    }
+);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
