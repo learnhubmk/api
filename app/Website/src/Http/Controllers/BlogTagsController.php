@@ -26,5 +26,4 @@ class BlogTagsController extends Controller
         return BlogPostTagResource::collection($tags);
     }
 
-    // TODO: In future we may use other methods to create/update tags
 }
