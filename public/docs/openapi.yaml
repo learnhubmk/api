@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://learnhub.test:80'
+    url: 'http://localhost:8000'
 paths:
   /api/website/blog-posts:
     get:
@@ -17,839 +17,351 @@ paths:
           in: query
           name: title
           description: ''
-          example: iste
+          example: vero
           required: false
           schema:
             type: string
             description: ''
-            example: iste
+            example: vero
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'example_app.blog_posts' doesn't exist (Connection: mysql, SQL: select count(*) as aggregate from `blog_posts` where `status` = published and `title` like %iste%)"
-                  exception: Illuminate\Database\QueryException
-                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                  line: 829
-                  trace:
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                      line: 783
-                      function: runQueryCallback
-                      class: Illuminate\Database\Connection
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                      line: 414
-                      function: run
-                      class: Illuminate\Database\Connection
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2797
-                      function: select
-                      class: Illuminate\Database\Connection
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2786
-                      function: runSelect
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 3340
-                      function: 'Illuminate\Database\Query\{closure}'
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2785
-                      function: onceWithColumns
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2950
-                      function: get
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2909
-                      function: runPaginationCountQuery
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                      line: 922
-                      function: getCountForPagination
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/app/Website/src/Http/Controllers/BlogPostController.php
-                      line: 30
-                      function: paginate
-                      class: Illuminate\Database\Eloquent\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                      line: 54
-                      function: index
-                      class: App\Website\Http\Controllers\BlogPostController
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 43
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 259
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 205
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 806
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 144
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 119
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 805
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 784
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 748
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 737
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 200
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 144
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 99
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 183
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 119
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 175
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 144
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 300
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 288
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 91
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 44
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 236
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 163
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 125
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 72
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 50
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 53
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 211
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/symfony/console/Command/Command.php
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 180
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 1096
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 324
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 175
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 201
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/html/artisan
-                      line: 35
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  data:
+                    -
+                      title: 'Consequatur iste voluptates vero ea vitae animi quasi.'
+                      slug: consequatur-iste-voluptates-vero-ea-vitae-animi-quasi
+                      excerpt: 'Voluptas nobis dolorem nisi natus itaque at qui.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Constance Borer'
+                        last_name: Barrows
+                        image: null
+                    -
+                      title: 'Exercitationem quis soluta id fuga totam vero sit.'
+                      slug: exercitationem-quis-soluta-id-fuga-totam-vero-sit
+                      excerpt: 'Ut voluptas nesciunt beatae modi totam.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Elizabeth Kilback'
+                        last_name: Reynolds
+                        image: null
+                    -
+                      title: 'Natus et ea exercitationem non quo vero.'
+                      slug: natus-et-ea-exercitationem-non-quo-vero
+                      excerpt: 'Debitis quia modi esse dicta reiciendis.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Ms. Naomi Willms DVM'
+                        last_name: Botsford
+                        image: null
+                    -
+                      title: 'Velit sapiente voluptates vero molestias ipsa nobis officia.'
+                      slug: velit-sapiente-voluptates-vero-molestias-ipsa-nobis-officia
+                      excerpt: 'Repellendus molestiae eum culpa velit non quasi tenetur vero.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Mr. Mckenna Purdy'
+                        last_name: Hansen
+                        image: null
+                    -
+                      title: 'Vero nulla totam soluta et in sunt.'
+                      slug: vero-nulla-totam-soluta-et-in-sunt
+                      excerpt: 'Minus aut alias aut ipsum similique id perferendis.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Kacie Mosciski'
+                        last_name: Pollich
+                        image: null
+                    -
+                      title: 'Vero maxime qui est dolore quos praesentium.'
+                      slug: vero-maxime-qui-est-dolore-quos-praesentium
+                      excerpt: 'Minus ab perferendis architecto esse inventore.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Kacie Mosciski'
+                        last_name: Pollich
+                        image: null
+                  links:
+                    first: 'http://localhost/api/website/blog-posts?page=1'
+                    last: 'http://localhost/api/website/blog-posts?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/website/blog-posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/website/blog-posts'
+                    per_page: 15
+                    to: 6
+                    total: 6
                 properties:
-                  message:
-                    type: string
-                    example: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'example_app.blog_posts' doesn't exist (Connection: mysql, SQL: select count(*) as aggregate from `blog_posts` where `status` = published and `title` like %iste%)"
-                  exception:
-                    type: string
-                    example: Illuminate\Database\QueryException
-                  file:
-                    type: string
-                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                  line:
-                    type: integer
-                    example: 829
-                  trace:
+                  data:
                     type: array
                     example:
                       -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                        line: 783
-                        function: runQueryCallback
-                        class: Illuminate\Database\Connection
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                        line: 414
-                        function: run
-                        class: Illuminate\Database\Connection
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2797
-                        function: select
-                        class: Illuminate\Database\Connection
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2786
-                        function: runSelect
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 3340
-                        function: 'Illuminate\Database\Query\{closure}'
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2785
-                        function: onceWithColumns
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2950
-                        function: get
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2909
-                        function: runPaginationCountQuery
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                        line: 922
-                        function: getCountForPagination
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/app/Website/src/Http/Controllers/BlogPostController.php
-                        line: 30
-                        function: paginate
-                        class: Illuminate\Database\Eloquent\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                        line: 54
-                        function: index
-                        class: App\Website\Http\Controllers\BlogPostController
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 43
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 259
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 205
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 806
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 144
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 119
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 805
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 784
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 748
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 737
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 200
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 144
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 99
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 183
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 119
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 175
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 144
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 300
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 288
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 91
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 44
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 236
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 163
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 125
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 72
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 50
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 53
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 211
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/symfony/console/Command/Command.php
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 180
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 1096
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 324
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 175
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 201
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/html/artisan
-                        line: 35
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
+                        title: 'Consequatur iste voluptates vero ea vitae animi quasi.'
+                        slug: consequatur-iste-voluptates-vero-ea-vitae-animi-quasi
+                        excerpt: 'Voluptas nobis dolorem nisi natus itaque at qui.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Constance Borer'
+                          last_name: Barrows
+                          image: null
+                      -
+                        title: 'Exercitationem quis soluta id fuga totam vero sit.'
+                        slug: exercitationem-quis-soluta-id-fuga-totam-vero-sit
+                        excerpt: 'Ut voluptas nesciunt beatae modi totam.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Elizabeth Kilback'
+                          last_name: Reynolds
+                          image: null
+                      -
+                        title: 'Natus et ea exercitationem non quo vero.'
+                        slug: natus-et-ea-exercitationem-non-quo-vero
+                        excerpt: 'Debitis quia modi esse dicta reiciendis.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Ms. Naomi Willms DVM'
+                          last_name: Botsford
+                          image: null
+                      -
+                        title: 'Velit sapiente voluptates vero molestias ipsa nobis officia.'
+                        slug: velit-sapiente-voluptates-vero-molestias-ipsa-nobis-officia
+                        excerpt: 'Repellendus molestiae eum culpa velit non quasi tenetur vero.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Mr. Mckenna Purdy'
+                          last_name: Hansen
+                          image: null
+                      -
+                        title: 'Vero nulla totam soluta et in sunt.'
+                        slug: vero-nulla-totam-soluta-et-in-sunt
+                        excerpt: 'Minus aut alias aut ipsum similique id perferendis.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Kacie Mosciski'
+                          last_name: Pollich
+                          image: null
+                      -
+                        title: 'Vero maxime qui est dolore quos praesentium.'
+                        slug: vero-maxime-qui-est-dolore-quos-praesentium
+                        excerpt: 'Minus ab perferendis architecto esse inventore.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Kacie Mosciski'
+                          last_name: Pollich
+                          image: null
                     items:
                       type: object
                       properties:
-                        file:
+                        title:
                           type: string
-                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                        line:
-                          type: integer
-                          example: 783
-                        function:
+                          example: 'Consequatur iste voluptates vero ea vitae animi quasi.'
+                        slug:
                           type: string
-                          example: runQueryCallback
-                        class:
+                          example: consequatur-iste-voluptates-vero-ea-vitae-animi-quasi
+                        excerpt:
                           type: string
-                          example: Illuminate\Database\Connection
-                        type:
+                          example: 'Voluptas nobis dolorem nisi natus itaque at qui.'
+                        tags:
+                          type: array
+                          example:
+                            -
+                              name: php
+                            -
+                              name: laravel
+                            -
+                              name: react
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                example: php
+                        publish_date:
                           type: string
-                          example: '->'
+                          example: '2024-03-26'
+                        author:
+                          type: object
+                          properties:
+                            first_name:
+                              type: string
+                              example: 'Constance Borer'
+                            last_name:
+                              type: string
+                              example: Barrows
+                            image:
+                              type: string
+                              example: null
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/website/blog-posts?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 6
+                      total:
+                        type: integer
+                        example: 6
       tags:
         - Endpoints
       security: []
@@ -860,113 +372,41 @@ paths:
       description: '  This endpoint retrieve blogpost by a slug.'
       parameters: []
       responses:
-        500:
+        404:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'example_app.blog_posts' doesn't exist (Connection: mysql, SQL: select * from `blog_posts` where `status` = published and `slug` = architecto limit 1)"
-                  exception: Illuminate\Database\QueryException
-                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                  line: 829
+                  message: 'No query results for model [App\Website\Models\BlogPost].'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 487
                   trace:
                     -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                      line: 783
-                      function: runQueryCallback
-                      class: Illuminate\Database\Connection
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 463
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
                       type: '->'
                     -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                      line: 414
-                      function: run
-                      class: Illuminate\Database\Connection
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2797
-                      function: select
-                      class: Illuminate\Database\Connection
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2786
-                      function: runSelect
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 3340
-                      function: 'Illuminate\Database\Query\{closure}'
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                      line: 2785
-                      function: onceWithColumns
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                      line: 738
-                      function: get
-                      class: Illuminate\Database\Query\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                      line: 722
-                      function: getModels
-                      class: Illuminate\Database\Eloquent\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php
-                      line: 333
-                      function: get
-                      class: Illuminate\Database\Eloquent\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/app/Website/src/Http/Controllers/BlogPostController.php
-                      line: 43
-                      function: first
-                      class: Illuminate\Database\Eloquent\Builder
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                      file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
                       line: 54
-                      function: show
-                      class: App\Website\Http\Controllers\BlogPostController
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
                       type: '->'
                     -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 43
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 259
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 205
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 806
-                      function: run
-                      class: Illuminate\Routing\Route
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 144
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
+                      line: 146
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
@@ -1265,114 +705,42 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'example_app.blog_posts' doesn't exist (Connection: mysql, SQL: select * from `blog_posts` where `status` = published and `slug` = architecto limit 1)"
+                    example: 'No query results for model [App\Website\Models\BlogPost].'
                   exception:
                     type: string
-                    example: Illuminate\Database\QueryException
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file:
                     type: string
-                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line:
                     type: integer
-                    example: 829
+                    example: 487
                   trace:
                     type: array
                     example:
                       -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                        line: 783
-                        function: runQueryCallback
-                        class: Illuminate\Database\Connection
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 463
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
                         type: '->'
                       -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-                        line: 414
-                        function: run
-                        class: Illuminate\Database\Connection
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2797
-                        function: select
-                        class: Illuminate\Database\Connection
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2786
-                        function: runSelect
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 3340
-                        function: 'Illuminate\Database\Query\{closure}'
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
-                        line: 2785
-                        function: onceWithColumns
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                        line: 738
-                        function: get
-                        class: Illuminate\Database\Query\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
-                        line: 722
-                        function: getModels
-                        class: Illuminate\Database\Eloquent\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php
-                        line: 333
-                        function: get
-                        class: Illuminate\Database\Eloquent\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/app/Website/src/Http/Controllers/BlogPostController.php
-                        line: 43
-                        function: first
-                        class: Illuminate\Database\Eloquent\Builder
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                        file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
                         line: 54
-                        function: show
-                        class: App\Website\Http\Controllers\BlogPostController
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
                         type: '->'
                       -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 43
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 259
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 205
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 806
-                        function: run
-                        class: Illuminate\Routing\Route
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 144
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
+                        line: 146
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
@@ -1673,16 +1041,16 @@ paths:
                       properties:
                         file:
                           type: string
-                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                         line:
                           type: integer
-                          example: 783
+                          example: 463
                         function:
                           type: string
-                          example: runQueryCallback
+                          example: prepareException
                         class:
                           type: string
-                          example: Illuminate\Database\Connection
+                          example: Illuminate\Foundation\Exceptions\Handler
                         type:
                           type: string
                           example: '->'
@@ -1694,10 +1062,134 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: architecto
+        example: cupiditate
         required: true
         schema:
           type: string
+  /api/website/tags:
+    get:
+      summary: 'Website/List Blog Post Tags'
+      operationId: websiteListBlogPostTags
+      description: "          This endpoint list all blogpost tags in alphabetically order paginated by 20.\n          Additionally you may use ?name= query param to search by name"
+      parameters:
+        -
+          in: query
+          name: name
+          description: ''
+          example: alias
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: alias
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  links:
+                    first: 'http://localhost/api/website/tags?page=1'
+                    last: 'http://localhost/api/website/tags?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: null
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/website/tags?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/website/tags'
+                    per_page: 20
+                    to: null
+                    total: 0
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/website/tags?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/website/tags?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/website/tags?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/website/tags'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Endpoints
+      security: []
   /api/healthcheck:
     get:
       summary: Healthcheck
