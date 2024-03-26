@@ -14,14 +14,10 @@ class BlogTagsController extends Controller
 {
     #[Endpoint('Website/List Blog Post Tags', <<<'DESC'
               This endpoint list all blogpost tags in alphabetically order paginated by 20.
-              Additionally you may use ?name= query param to search by name
     DESC)]
-    #[QueryParam('name', 'string', required: false)]
     public function index(Request $request): AnonymousResourceCollection
     {
-        $tags = BlogPostTag::when($request->has('name'), function ($query) use ($request) {
-            return $query->where('name', 'like', "{$request->name}%");
-        })->orderBy('name', 'asc')->paginate(20);
+        $tags = BlogPostTag::orderBy('name', 'asc')->paginate(20);
 
         return BlogPostTagResource::collection($tags);
     }

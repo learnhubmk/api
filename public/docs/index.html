@@ -133,7 +133,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts?title=vero" \
+    --get "http://localhost:8000/api/website/blog-posts?title=rem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -144,7 +144,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "vero",
+    "title": "rem",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -177,53 +177,9 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Consequatur iste voluptates vero ea vitae animi quasi.&quot;,
-            &quot;slug&quot;: &quot;consequatur-iste-voluptates-vero-ea-vitae-animi-quasi&quot;,
-            &quot;excerpt&quot;: &quot;Voluptas nobis dolorem nisi natus itaque at qui.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Constance Borer&quot;,
-                &quot;last_name&quot;: &quot;Barrows&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Exercitationem quis soluta id fuga totam vero sit.&quot;,
-            &quot;slug&quot;: &quot;exercitationem-quis-soluta-id-fuga-totam-vero-sit&quot;,
-            &quot;excerpt&quot;: &quot;Ut voluptas nesciunt beatae modi totam.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Elizabeth Kilback&quot;,
-                &quot;last_name&quot;: &quot;Reynolds&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Natus et ea exercitationem non quo vero.&quot;,
-            &quot;slug&quot;: &quot;natus-et-ea-exercitationem-non-quo-vero&quot;,
-            &quot;excerpt&quot;: &quot;Debitis quia modi esse dicta reiciendis.&quot;,
+            &quot;title&quot;: &quot;Ducimus dolorem officia omnis et ut eos libero reprehenderit.&quot;,
+            &quot;slug&quot;: &quot;ducimus-dolorem-officia-omnis-et-ut-eos-libero-reprehenderit&quot;,
+            &quot;excerpt&quot;: &quot;Neque repellendus aspernatur voluptatem quisquam voluptas.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -243,9 +199,53 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;title&quot;: &quot;Velit sapiente voluptates vero molestias ipsa nobis officia.&quot;,
-            &quot;slug&quot;: &quot;velit-sapiente-voluptates-vero-molestias-ipsa-nobis-officia&quot;,
-            &quot;excerpt&quot;: &quot;Repellendus molestiae eum culpa velit non quasi tenetur vero.&quot;,
+            &quot;title&quot;: &quot;Earum iure omnis aut maxime et doloremque sed ratione.&quot;,
+            &quot;slug&quot;: &quot;earum-iure-omnis-aut-maxime-et-doloremque-sed-ratione&quot;,
+            &quot;excerpt&quot;: &quot;Aut laborum ratione dolorem qui sit.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Roberta Gusikowski&quot;,
+                &quot;last_name&quot;: &quot;Pfannerstill&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Qui quia quidem eligendi facilis dolorem doloribus.&quot;,
+            &quot;slug&quot;: &quot;qui-quia-quidem-eligendi-facilis-dolorem-doloribus&quot;,
+            &quot;excerpt&quot;: &quot;Culpa sint voluptatem sunt quia aut dolore.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Miss Angelina Veum&quot;,
+                &quot;last_name&quot;: &quot;Bernhard&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quasi tempore ratione eos dolorum laborum ex similique dolorem.&quot;,
+            &quot;slug&quot;: &quot;quasi-tempore-ratione-eos-dolorum-laborum-ex-similique-dolorem&quot;,
+            &quot;excerpt&quot;: &quot;Ipsum aliquam esse qui aut quia iusto iste.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -265,9 +265,141 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;title&quot;: &quot;Vero nulla totam soluta et in sunt.&quot;,
-            &quot;slug&quot;: &quot;vero-nulla-totam-soluta-et-in-sunt&quot;,
-            &quot;excerpt&quot;: &quot;Minus aut alias aut ipsum similique id perferendis.&quot;,
+            &quot;title&quot;: &quot;Qui itaque dolore dolorem.&quot;,
+            &quot;slug&quot;: &quot;qui-itaque-dolore-dolorem&quot;,
+            &quot;excerpt&quot;: &quot;Facilis est sint amet non nostrum nam reprehenderit.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Minnie Bayer II&quot;,
+                &quot;last_name&quot;: &quot;Wiegand&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Et rem similique ea ipsam inventore optio.&quot;,
+            &quot;slug&quot;: &quot;et-rem-similique-ea-ipsam-inventore-optio&quot;,
+            &quot;excerpt&quot;: &quot;Commodi rerum architecto maxime tempore nihil repellat dolorem.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Miss Angelina Veum&quot;,
+                &quot;last_name&quot;: &quot;Bernhard&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Eos nemo atque qui rem unde.&quot;,
+            &quot;slug&quot;: &quot;eos-nemo-atque-qui-rem-unde&quot;,
+            &quot;excerpt&quot;: &quot;Reiciendis dicta dolorem vero voluptatibus a.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Darien Gerlach&quot;,
+                &quot;last_name&quot;: &quot;Toy&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Esse velit voluptas doloremque magnam omnis rerum.&quot;,
+            &quot;slug&quot;: &quot;esse-velit-voluptas-doloremque-magnam-omnis-rerum&quot;,
+            &quot;excerpt&quot;: &quot;Ex velit laborum autem qui unde.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Prof. Carey Willms&quot;,
+                &quot;last_name&quot;: &quot;Keeling&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Neque nihil nihil nisi rem at ut voluptatum.&quot;,
+            &quot;slug&quot;: &quot;neque-nihil-nihil-nisi-rem-at-ut-voluptatum&quot;,
+            &quot;excerpt&quot;: &quot;Architecto hic deleniti ex provident amet et.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Nyah Collier&quot;,
+                &quot;last_name&quot;: &quot;Marvin&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Mollitia at dolorem beatae possimus est.&quot;,
+            &quot;slug&quot;: &quot;mollitia-at-dolorem-beatae-possimus-est&quot;,
+            &quot;excerpt&quot;: &quot;Rem autem enim eos perferendis odit.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Osborne Mertz&quot;,
+                &quot;last_name&quot;: &quot;Jast&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Delectus officiis nemo dolorem tempora.&quot;,
+            &quot;slug&quot;: &quot;delectus-officiis-nemo-dolorem-tempora&quot;,
+            &quot;excerpt&quot;: &quot;Provident voluptas maxime quod in cupiditate.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -287,9 +419,9 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;title&quot;: &quot;Vero maxime qui est dolore quos praesentium.&quot;,
-            &quot;slug&quot;: &quot;vero-maxime-qui-est-dolore-quos-praesentium&quot;,
-            &quot;excerpt&quot;: &quot;Minus ab perferendis architecto esse inventore.&quot;,
+            &quot;title&quot;: &quot;Magnam laborum facere doloremque beatae qui et.&quot;,
+            &quot;slug&quot;: &quot;magnam-laborum-facere-doloremque-beatae-qui-et&quot;,
+            &quot;excerpt&quot;: &quot;Est et commodi voluptates.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -303,8 +435,30 @@ access-control-allow-origin: *
             ],
             &quot;publish_date&quot;: &quot;2024-03-26&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Kacie Mosciski&quot;,
-                &quot;last_name&quot;: &quot;Pollich&quot;,
+                &quot;first_name&quot;: &quot;Ms. Naomi Willms DVM&quot;,
+                &quot;last_name&quot;: &quot;Botsford&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Quia sunt quis magnam dolorem impedit.&quot;,
+            &quot;slug&quot;: &quot;quia-sunt-quis-magnam-dolorem-impedit&quot;,
+            &quot;excerpt&quot;: &quot;Repellendus error autem ex sapiente necessitatibus a.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-03-26&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Frances Ferry&quot;,
+                &quot;last_name&quot;: &quot;Bins&quot;,
                 &quot;image&quot;: null
             }
         }
@@ -338,8 +492,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost/api/website/blog-posts&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 6,
-        &quot;total&quot;: 6
+        &quot;to&quot;: 13,
+        &quot;total&quot;: 13
     }
 }</code>
  </pre>
@@ -420,10 +574,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="vero"
+               value="rem"
                data-component="query">
     <br>
-<p>Example: <code>vero</code></p>
+<p>Example: <code>rem</code></p>
             </div>
                 </form>
 
@@ -440,14 +594,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts/cupiditate" \
+    --get "http://localhost:8000/api/website/blog-posts/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-posts/cupiditate"
+    "http://localhost:8000/api/website/blog-posts/et"
 );
 
 const headers = {
@@ -932,10 +1086,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="slug"                data-endpoint="GETapi-website-blog-posts--slug-"
-               value="cupiditate"
+               value="et"
                data-component="url">
     <br>
-<p>The slug of the blog post. Example: <code>cupiditate</code></p>
+<p>The slug of the blog post. Example: <code>et</code></p>
             </div>
                     </form>
 
@@ -944,8 +1098,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>
 </p>
 
-<pre><code>      This endpoint list all blogpost tags in alphabetically order paginated by 20.
-      Additionally you may use ?name= query param to search by name</code></pre>
+<pre><code>      This endpoint list all blogpost tags in alphabetically order paginated by 20.</code></pre>
 
 <span id="example-requests-GETapi-website-tags">
 <blockquote>Example request:</blockquote>
@@ -953,7 +1106,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/tags?name=alias" \
+    --get "http://localhost:8000/api/website/tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -962,12 +1115,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-javascript">const url = new URL(
     "http://localhost:8000/api/website/tags"
 );
-
-const params = {
-    "name": "alias",
-};
-Object.keys(params)
-    .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
     "Content-Type": "application/json",
@@ -995,17 +1142,78 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;name&quot;: &quot;.net&quot;
+        },
+        {
+            &quot;name&quot;: &quot;algorithms&quot;
+        },
+        {
+            &quot;name&quot;: &quot;c#&quot;
+        },
+        {
+            &quot;name&quot;: &quot;c++&quot;
+        },
+        {
+            &quot;name&quot;: &quot;databases&quot;
+        },
+        {
+            &quot;name&quot;: &quot;design&quot;
+        },
+        {
+            &quot;name&quot;: &quot;development&quot;
+        },
+        {
+            &quot;name&quot;: &quot;docker&quot;
+        },
+        {
+            &quot;name&quot;: &quot;docker&quot;
+        },
+        {
+            &quot;name&quot;: &quot;java&quot;
+        },
+        {
+            &quot;name&quot;: &quot;javascript&quot;
+        },
+        {
+            &quot;name&quot;: &quot;javascript&quot;
+        },
+        {
+            &quot;name&quot;: &quot;laravel&quot;
+        },
+        {
+            &quot;name&quot;: &quot;laravel&quot;
+        },
+        {
+            &quot;name&quot;: &quot;marketing&quot;
+        },
+        {
+            &quot;name&quot;: &quot;mongodb&quot;
+        },
+        {
+            &quot;name&quot;: &quot;mysql&quot;
+        },
+        {
+            &quot;name&quot;: &quot;mysql&quot;
+        },
+        {
+            &quot;name&quot;: &quot;nodejs&quot;
+        },
+        {
+            &quot;name&quot;: &quot;php&quot;
+        }
+    ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost/api/website/tags?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/tags?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/tags?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: null
+        &quot;next&quot;: &quot;http://localhost/api/website/tags?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
-        &quot;last_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 2,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -1018,15 +1226,20 @@ access-control-allow-origin: *
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: null,
+                &quot;url&quot;: &quot;http://localhost/api/website/tags?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/website/tags?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
         &quot;path&quot;: &quot;http://localhost/api/website/tags&quot;,
         &quot;per_page&quot;: 20,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 20,
+        &quot;total&quot;: 30
     }
 }</code>
  </pre>
@@ -1100,19 +1313,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
-                                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
-                <input type="text" style="display: none"
-                              name="name"                data-endpoint="GETapi-website-tags"
-               value="alias"
-               data-component="query">
-    <br>
-<p>Example: <code>alias</code></p>
-            </div>
-                </form>
+                        </form>
 
                     <h2 id="endpoints-GETapi-healthcheck">Healthcheck</h2>
 
