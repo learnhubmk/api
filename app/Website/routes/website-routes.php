@@ -8,4 +8,6 @@ Route::group(['prefix' => 'api/website'], function () {
         Route::get('/', [BlogPostController::class, 'index']);
         Route::get('/{slug}', [BlogPostController::class, 'show']);
     });
+
+    Route::get('/tags', [\App\Website\Http\Controllers\BlogTagsController::class, 'index']);
 });

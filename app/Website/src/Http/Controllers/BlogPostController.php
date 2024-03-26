@@ -39,7 +39,7 @@ DESC)]
     {
         $blog = BlogPost::with('author', 'tags')
             ->where('status', BlogPostStatus::PUBLISHED)
-            ->where('slug',  $slug)
+            ->where('slug', $slug)
             ->firstOrFail();
 
         return new SingleBlogPostResource($blog);

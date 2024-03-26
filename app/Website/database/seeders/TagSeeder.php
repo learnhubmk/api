@@ -12,7 +12,11 @@ class TagSeeder extends Seeder
      */
     public function run(): void
     {
-        $tags = ['php', 'laravel', 'react', 'javascript', 'mysql', 'postgresql', 'docker'];
+        $tags = ['php', 'laravel', 'react', 'javascript', 'mysql',
+            'postgresql', 'docker', '.net', 'java', 'ux/ui', 'redis',
+            'web', 'development', 'marketing', 'design', 'unity', 'c++',
+            'c#', 'python', 'algorithms', 'databases', 'mongodb', 'nodejs',
+        ];
 
         $tagData = [];
 
