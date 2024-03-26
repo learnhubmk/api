@@ -14,15 +14,10 @@ jobs:
       - name: "laravel-pint"
         uses: aglipanci/laravel-pint-action@0.1.0
         with:
-          preset: laravel
+          preset: psr12
           verboseMode: true
           testMode: true
           configPath: "/pint.json"
           pintVersion: 1.8.0
           onlyDirty: true
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: PHP Linting (Pint)
-          skip_fetch: true
