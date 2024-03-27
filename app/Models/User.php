@@ -46,4 +46,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public const MEMBER_ROLE = 'member';
 }

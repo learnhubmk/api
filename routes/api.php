@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,14 @@ Route::get(
         ];
     }
 );
+
+Route::as('v1.')
+    ->middleware(['throttle:api'])
+    ->prefix('v1')
+    ->group(function () {
+        Route::post('/signup', [RegisteredUserController::class, 'store'])
+            ->name('signup');
+    });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
