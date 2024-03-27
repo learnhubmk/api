@@ -6,7 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "app/admin": "*",
+        "app/platform": "*",
+        "app/website": "*",
         "guzzlehttp/guzzle": "^7.2",
+        "internachi/modular": "^2.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.12",
@@ -14,12 +18,8 @@
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
-        "spatie/laravel-permission": "^6.4",
-        "app/admin": "*",
-        "app/platform": "*",
-        "app/website": "*",
-        "internachi/modular": "^2.0"
-
+        "spatie/laravel-mailcoach-sdk": "^1.2",
+        "spatie/laravel-permission": "^6.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
