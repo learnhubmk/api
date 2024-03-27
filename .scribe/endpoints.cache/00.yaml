@@ -28,20 +28,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: voluptatibus
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: voluptatibus
+      title: eum
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Magnam voluptatibus quibusdam beatae similique.","slug":"magnam-voluptatibus-quibusdam-beatae-similique","excerpt":"Officiis debitis id et reprehenderit sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Kelli O''Hara","last_name":"Torphy","image":null}},{"title":"Aut ipsum assumenda voluptatibus aut itaque totam.","slug":"aut-ipsum-assumenda-voluptatibus-aut-itaque-totam","excerpt":"Labore et vero magnam eius eos excepturi laudantium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Ashley Conn","last_name":"Leuschke","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"title":"Eum illo praesentium est sed nulla qui.","slug":"eum-illo-praesentium-est-sed-nulla-qui","excerpt":"Quod ratione et beatae expedita.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Kelli O''Hara","last_name":"Torphy","image":null}},{"title":"Fugiat neque eum vel.","slug":"fugiat-neque-eum-vel","excerpt":"Suscipit aut nihil ea eos.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Vickie Hackett DDS","last_name":"Oberbrunner","image":null}},{"title":"Ad est et dolores eum quaerat.","slug":"ad-est-et-dolores-eum-quaerat","excerpt":"Ex quo ratione distinctio omnis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Kelli O''Hara","last_name":"Torphy","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":3,"total":3}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -75,13 +75,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: fuga
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: fuga
+      slug: quia
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -485,55 +485,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/website/blog-posts/tag/{tag}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Website/Get Blog Post By Tag'
-      description: 'This endpoint retrieve blogpost by a specific tag.'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      tag:
-        name: tag
-        description: 'The tag.'
-        required: true
-        example: perspiciatis
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      tag: perspiciatis
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis","per_page":15,"to":null,"total":0}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
     uri: api/website/tags
     metadata:
       groupName: Endpoints
@@ -558,6 +509,55 @@ endpoints:
       -
         status: 200
         content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/localhost\/api\/website\/tags?page=1","last":"http:\/\/localhost\/api\/website\/tags?page=2","prev":null,"next":"http:\/\/localhost\/api\/website\/tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/tags","per_page":20,"to":20,"total":23}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/website/blog-post-tags/{tag}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Website/Get Blog Post By Tag'
+      description: 'This endpoint retrieve blogpost by a specific tag.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: voluptate
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      tag: voluptate
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/voluptate?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/voluptate?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/voluptate?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/voluptate","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
