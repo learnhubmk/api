@@ -10,4 +10,5 @@ Route::group(['prefix' => 'api/website'], function () {
     });
 
     Route::get('/tags', [\App\Website\Http\Controllers\BlogTagsController::class, 'index']);
+    Route::get('/blog-post-tags/{tag}', [BlogPostController::class, 'listByTag']);
 });
