@@ -17,12 +17,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: rem
+          example: voluptatibus
           required: false
           schema:
             type: string
             description: ''
-            example: rem
+            example: voluptatibus
       responses:
         200:
           description: ''
@@ -33,9 +33,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Ducimus dolorem officia omnis et ut eos libero reprehenderit.'
-                      slug: ducimus-dolorem-officia-omnis-et-ut-eos-libero-reprehenderit
-                      excerpt: 'Neque repellendus aspernatur voluptatem quisquam voluptas.'
+                      title: 'Magnam voluptatibus quibusdam beatae similique.'
+                      slug: magnam-voluptatibus-quibusdam-beatae-similique
+                      excerpt: 'Officiis debitis id et reprehenderit sed.'
                       tags:
                         -
                           name: php
@@ -43,15 +43,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-03-26'
+                      publish_date: '2024-03-27'
                       author:
-                        first_name: 'Ms. Naomi Willms DVM'
-                        last_name: Botsford
+                        first_name: "Kelli O'Hara"
+                        last_name: Torphy
                         image: null
                     -
-                      title: 'Earum iure omnis aut maxime et doloremque sed ratione.'
-                      slug: earum-iure-omnis-aut-maxime-et-doloremque-sed-ratione
-                      excerpt: 'Aut laborum ratione dolorem qui sit.'
+                      title: 'Aut ipsum assumenda voluptatibus aut itaque totam.'
+                      slug: aut-ipsum-assumenda-voluptatibus-aut-itaque-totam
+                      excerpt: 'Labore et vero magnam eius eos excepturi laudantium.'
                       tags:
                         -
                           name: php
@@ -59,186 +59,10 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-03-26'
+                      publish_date: '2024-03-27'
                       author:
-                        first_name: 'Roberta Gusikowski'
-                        last_name: Pfannerstill
-                        image: null
-                    -
-                      title: 'Qui quia quidem eligendi facilis dolorem doloribus.'
-                      slug: qui-quia-quidem-eligendi-facilis-dolorem-doloribus
-                      excerpt: 'Culpa sint voluptatem sunt quia aut dolore.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Miss Angelina Veum'
-                        last_name: Bernhard
-                        image: null
-                    -
-                      title: 'Quasi tempore ratione eos dolorum laborum ex similique dolorem.'
-                      slug: quasi-tempore-ratione-eos-dolorum-laborum-ex-similique-dolorem
-                      excerpt: 'Ipsum aliquam esse qui aut quia iusto iste.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Mr. Mckenna Purdy'
-                        last_name: Hansen
-                        image: null
-                    -
-                      title: 'Qui itaque dolore dolorem.'
-                      slug: qui-itaque-dolore-dolorem
-                      excerpt: 'Facilis est sint amet non nostrum nam reprehenderit.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Minnie Bayer II'
-                        last_name: Wiegand
-                        image: null
-                    -
-                      title: 'Et rem similique ea ipsam inventore optio.'
-                      slug: et-rem-similique-ea-ipsam-inventore-optio
-                      excerpt: 'Commodi rerum architecto maxime tempore nihil repellat dolorem.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Miss Angelina Veum'
-                        last_name: Bernhard
-                        image: null
-                    -
-                      title: 'Eos nemo atque qui rem unde.'
-                      slug: eos-nemo-atque-qui-rem-unde
-                      excerpt: 'Reiciendis dicta dolorem vero voluptatibus a.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Darien Gerlach'
-                        last_name: Toy
-                        image: null
-                    -
-                      title: 'Esse velit voluptas doloremque magnam omnis rerum.'
-                      slug: esse-velit-voluptas-doloremque-magnam-omnis-rerum
-                      excerpt: 'Ex velit laborum autem qui unde.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Prof. Carey Willms'
-                        last_name: Keeling
-                        image: null
-                    -
-                      title: 'Neque nihil nihil nisi rem at ut voluptatum.'
-                      slug: neque-nihil-nihil-nisi-rem-at-ut-voluptatum
-                      excerpt: 'Architecto hic deleniti ex provident amet et.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Nyah Collier'
-                        last_name: Marvin
-                        image: null
-                    -
-                      title: 'Mollitia at dolorem beatae possimus est.'
-                      slug: mollitia-at-dolorem-beatae-possimus-est
-                      excerpt: 'Rem autem enim eos perferendis odit.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Osborne Mertz'
-                        last_name: Jast
-                        image: null
-                    -
-                      title: 'Delectus officiis nemo dolorem tempora.'
-                      slug: delectus-officiis-nemo-dolorem-tempora
-                      excerpt: 'Provident voluptas maxime quod in cupiditate.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Kacie Mosciski'
-                        last_name: Pollich
-                        image: null
-                    -
-                      title: 'Magnam laborum facere doloremque beatae qui et.'
-                      slug: magnam-laborum-facere-doloremque-beatae-qui-et
-                      excerpt: 'Est et commodi voluptates.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Ms. Naomi Willms DVM'
-                        last_name: Botsford
-                        image: null
-                    -
-                      title: 'Quia sunt quis magnam dolorem impedit.'
-                      slug: quia-sunt-quis-magnam-dolorem-impedit
-                      excerpt: 'Repellendus error autem ex sapiente necessitatibus a.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-26'
-                      author:
-                        first_name: 'Frances Ferry'
-                        last_name: Bins
+                        first_name: 'Ashley Conn'
+                        last_name: Leuschke
                         image: null
                   links:
                     first: 'http://localhost/api/website/blog-posts?page=1'
@@ -264,16 +88,16 @@ paths:
                         active: false
                     path: 'http://localhost/api/website/blog-posts'
                     per_page: 15
-                    to: 13
-                    total: 13
+                    to: 2
+                    total: 2
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Ducimus dolorem officia omnis et ut eos libero reprehenderit.'
-                        slug: ducimus-dolorem-officia-omnis-et-ut-eos-libero-reprehenderit
-                        excerpt: 'Neque repellendus aspernatur voluptatem quisquam voluptas.'
+                        title: 'Magnam voluptatibus quibusdam beatae similique.'
+                        slug: magnam-voluptatibus-quibusdam-beatae-similique
+                        excerpt: 'Officiis debitis id et reprehenderit sed.'
                         tags:
                           -
                             name: php
@@ -281,15 +105,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-03-26'
+                        publish_date: '2024-03-27'
                         author:
-                          first_name: 'Ms. Naomi Willms DVM'
-                          last_name: Botsford
+                          first_name: "Kelli O'Hara"
+                          last_name: Torphy
                           image: null
                       -
-                        title: 'Earum iure omnis aut maxime et doloremque sed ratione.'
-                        slug: earum-iure-omnis-aut-maxime-et-doloremque-sed-ratione
-                        excerpt: 'Aut laborum ratione dolorem qui sit.'
+                        title: 'Aut ipsum assumenda voluptatibus aut itaque totam.'
+                        slug: aut-ipsum-assumenda-voluptatibus-aut-itaque-totam
+                        excerpt: 'Labore et vero magnam eius eos excepturi laudantium.'
                         tags:
                           -
                             name: php
@@ -297,199 +121,23 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-03-26'
+                        publish_date: '2024-03-27'
                         author:
-                          first_name: 'Roberta Gusikowski'
-                          last_name: Pfannerstill
-                          image: null
-                      -
-                        title: 'Qui quia quidem eligendi facilis dolorem doloribus.'
-                        slug: qui-quia-quidem-eligendi-facilis-dolorem-doloribus
-                        excerpt: 'Culpa sint voluptatem sunt quia aut dolore.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Miss Angelina Veum'
-                          last_name: Bernhard
-                          image: null
-                      -
-                        title: 'Quasi tempore ratione eos dolorum laborum ex similique dolorem.'
-                        slug: quasi-tempore-ratione-eos-dolorum-laborum-ex-similique-dolorem
-                        excerpt: 'Ipsum aliquam esse qui aut quia iusto iste.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Mr. Mckenna Purdy'
-                          last_name: Hansen
-                          image: null
-                      -
-                        title: 'Qui itaque dolore dolorem.'
-                        slug: qui-itaque-dolore-dolorem
-                        excerpt: 'Facilis est sint amet non nostrum nam reprehenderit.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Minnie Bayer II'
-                          last_name: Wiegand
-                          image: null
-                      -
-                        title: 'Et rem similique ea ipsam inventore optio.'
-                        slug: et-rem-similique-ea-ipsam-inventore-optio
-                        excerpt: 'Commodi rerum architecto maxime tempore nihil repellat dolorem.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Miss Angelina Veum'
-                          last_name: Bernhard
-                          image: null
-                      -
-                        title: 'Eos nemo atque qui rem unde.'
-                        slug: eos-nemo-atque-qui-rem-unde
-                        excerpt: 'Reiciendis dicta dolorem vero voluptatibus a.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Darien Gerlach'
-                          last_name: Toy
-                          image: null
-                      -
-                        title: 'Esse velit voluptas doloremque magnam omnis rerum.'
-                        slug: esse-velit-voluptas-doloremque-magnam-omnis-rerum
-                        excerpt: 'Ex velit laborum autem qui unde.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Prof. Carey Willms'
-                          last_name: Keeling
-                          image: null
-                      -
-                        title: 'Neque nihil nihil nisi rem at ut voluptatum.'
-                        slug: neque-nihil-nihil-nisi-rem-at-ut-voluptatum
-                        excerpt: 'Architecto hic deleniti ex provident amet et.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Nyah Collier'
-                          last_name: Marvin
-                          image: null
-                      -
-                        title: 'Mollitia at dolorem beatae possimus est.'
-                        slug: mollitia-at-dolorem-beatae-possimus-est
-                        excerpt: 'Rem autem enim eos perferendis odit.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Osborne Mertz'
-                          last_name: Jast
-                          image: null
-                      -
-                        title: 'Delectus officiis nemo dolorem tempora.'
-                        slug: delectus-officiis-nemo-dolorem-tempora
-                        excerpt: 'Provident voluptas maxime quod in cupiditate.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Kacie Mosciski'
-                          last_name: Pollich
-                          image: null
-                      -
-                        title: 'Magnam laborum facere doloremque beatae qui et.'
-                        slug: magnam-laborum-facere-doloremque-beatae-qui-et
-                        excerpt: 'Est et commodi voluptates.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Ms. Naomi Willms DVM'
-                          last_name: Botsford
-                          image: null
-                      -
-                        title: 'Quia sunt quis magnam dolorem impedit.'
-                        slug: quia-sunt-quis-magnam-dolorem-impedit
-                        excerpt: 'Repellendus error autem ex sapiente necessitatibus a.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-26'
-                        author:
-                          first_name: 'Frances Ferry'
-                          last_name: Bins
+                          first_name: 'Ashley Conn'
+                          last_name: Leuschke
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Ducimus dolorem officia omnis et ut eos libero reprehenderit.'
+                          example: 'Magnam voluptatibus quibusdam beatae similique.'
                         slug:
                           type: string
-                          example: ducimus-dolorem-officia-omnis-et-ut-eos-libero-reprehenderit
+                          example: magnam-voluptatibus-quibusdam-beatae-similique
                         excerpt:
                           type: string
-                          example: 'Neque repellendus aspernatur voluptatem quisquam voluptas.'
+                          example: 'Officiis debitis id et reprehenderit sed.'
                         tags:
                           type: array
                           example:
@@ -507,16 +155,16 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-03-26'
+                          example: '2024-03-27'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Ms. Naomi Willms DVM'
+                              example: "Kelli O'Hara"
                             last_name:
                               type: string
-                              example: Botsford
+                              example: Torphy
                             image:
                               type: string
                               example: null
@@ -582,10 +230,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 13
+                        example: 2
                       total:
                         type: integer
-                        example: 13
+                        example: 2
       tags:
         - Endpoints
       security: []
@@ -1286,7 +934,130 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: et
+        example: fuga
+        required: true
+        schema:
+          type: string
+  '/api/website/blog-posts/tag/{tag}':
+    get:
+      summary: 'Website/Get Blog Post By Tag'
+      operationId: websiteGetBlogPostByTag
+      description: 'This endpoint retrieve blogpost by a specific tag.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  links:
+                    first: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                    last: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: null
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/website/blog-posts/tag/perspiciatis'
+                    per_page: 15
+                    to: null
+                    total: 0
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/website/blog-posts/tag/perspiciatis?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/website/blog-posts/tag/perspiciatis'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: tag
+        description: 'The tag.'
+        example: perspiciatis
         required: true
         schema:
           type: string
@@ -1322,15 +1093,9 @@ paths:
                     -
                       name: docker
                     -
-                      name: docker
-                    -
                       name: java
                     -
                       name: javascript
-                    -
-                      name: javascript
-                    -
-                      name: laravel
                     -
                       name: laravel
                     -
@@ -1340,11 +1105,17 @@ paths:
                     -
                       name: mysql
                     -
-                      name: mysql
-                    -
                       name: nodejs
                     -
                       name: php
+                    -
+                      name: postgresql
+                    -
+                      name: python
+                    -
+                      name: react
+                    -
+                      name: redis
                   links:
                     first: 'http://localhost/api/website/tags?page=1'
                     last: 'http://localhost/api/website/tags?page=2'
@@ -1374,7 +1145,7 @@ paths:
                     path: 'http://localhost/api/website/tags'
                     per_page: 20
                     to: 20
-                    total: 30
+                    total: 23
                 properties:
                   data:
                     type: array
@@ -1396,15 +1167,9 @@ paths:
                       -
                         name: docker
                       -
-                        name: docker
-                      -
                         name: java
                       -
                         name: javascript
-                      -
-                        name: javascript
-                      -
-                        name: laravel
                       -
                         name: laravel
                       -
@@ -1414,11 +1179,17 @@ paths:
                       -
                         name: mysql
                       -
-                        name: mysql
-                      -
                         name: nodejs
                       -
                         name: php
+                      -
+                        name: postgresql
+                      -
+                        name: python
+                      -
+                        name: react
+                      -
+                        name: redis
                     items:
                       type: object
                       properties:
@@ -1494,7 +1265,7 @@ paths:
                         example: 20
                       total:
                         type: integer
-                        example: 30
+                        example: 23
       tags:
         - Endpoints
       security: []

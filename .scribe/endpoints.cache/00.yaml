@@ -28,20 +28,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: rem
+        example: voluptatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: rem
+      title: voluptatibus
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Ducimus dolorem officia omnis et ut eos libero reprehenderit.","slug":"ducimus-dolorem-officia-omnis-et-ut-eos-libero-reprehenderit","excerpt":"Neque repellendus aspernatur voluptatem quisquam voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Ms. Naomi Willms DVM","last_name":"Botsford","image":null}},{"title":"Earum iure omnis aut maxime et doloremque sed ratione.","slug":"earum-iure-omnis-aut-maxime-et-doloremque-sed-ratione","excerpt":"Aut laborum ratione dolorem qui sit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Roberta Gusikowski","last_name":"Pfannerstill","image":null}},{"title":"Qui quia quidem eligendi facilis dolorem doloribus.","slug":"qui-quia-quidem-eligendi-facilis-dolorem-doloribus","excerpt":"Culpa sint voluptatem sunt quia aut dolore.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Miss Angelina Veum","last_name":"Bernhard","image":null}},{"title":"Quasi tempore ratione eos dolorum laborum ex similique dolorem.","slug":"quasi-tempore-ratione-eos-dolorum-laborum-ex-similique-dolorem","excerpt":"Ipsum aliquam esse qui aut quia iusto iste.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Mr. Mckenna Purdy","last_name":"Hansen","image":null}},{"title":"Qui itaque dolore dolorem.","slug":"qui-itaque-dolore-dolorem","excerpt":"Facilis est sint amet non nostrum nam reprehenderit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Minnie Bayer II","last_name":"Wiegand","image":null}},{"title":"Et rem similique ea ipsam inventore optio.","slug":"et-rem-similique-ea-ipsam-inventore-optio","excerpt":"Commodi rerum architecto maxime tempore nihil repellat dolorem.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Miss Angelina Veum","last_name":"Bernhard","image":null}},{"title":"Eos nemo atque qui rem unde.","slug":"eos-nemo-atque-qui-rem-unde","excerpt":"Reiciendis dicta dolorem vero voluptatibus a.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Darien Gerlach","last_name":"Toy","image":null}},{"title":"Esse velit voluptas doloremque magnam omnis rerum.","slug":"esse-velit-voluptas-doloremque-magnam-omnis-rerum","excerpt":"Ex velit laborum autem qui unde.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Prof. Carey Willms","last_name":"Keeling","image":null}},{"title":"Neque nihil nihil nisi rem at ut voluptatum.","slug":"neque-nihil-nihil-nisi-rem-at-ut-voluptatum","excerpt":"Architecto hic deleniti ex provident amet et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Nyah Collier","last_name":"Marvin","image":null}},{"title":"Mollitia at dolorem beatae possimus est.","slug":"mollitia-at-dolorem-beatae-possimus-est","excerpt":"Rem autem enim eos perferendis odit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Osborne Mertz","last_name":"Jast","image":null}},{"title":"Delectus officiis nemo dolorem tempora.","slug":"delectus-officiis-nemo-dolorem-tempora","excerpt":"Provident voluptas maxime quod in cupiditate.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Kacie Mosciski","last_name":"Pollich","image":null}},{"title":"Magnam laborum facere doloremque beatae qui et.","slug":"magnam-laborum-facere-doloremque-beatae-qui-et","excerpt":"Est et commodi voluptates.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Ms. Naomi Willms DVM","last_name":"Botsford","image":null}},{"title":"Quia sunt quis magnam dolorem impedit.","slug":"quia-sunt-quis-magnam-dolorem-impedit","excerpt":"Repellendus error autem ex sapiente necessitatibus a.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-26","author":{"first_name":"Frances Ferry","last_name":"Bins","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":13,"total":13}}'
+        content: '{"data":[{"title":"Magnam voluptatibus quibusdam beatae similique.","slug":"magnam-voluptatibus-quibusdam-beatae-similique","excerpt":"Officiis debitis id et reprehenderit sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Kelli O''Hara","last_name":"Torphy","image":null}},{"title":"Aut ipsum assumenda voluptatibus aut itaque totam.","slug":"aut-ipsum-assumenda-voluptatibus-aut-itaque-totam","excerpt":"Labore et vero magnam eius eos excepturi laudantium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Ashley Conn","last_name":"Leuschke","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":2,"total":2}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -75,13 +75,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: et
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: et
+      slug: fuga
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -485,6 +485,55 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: 'api/website/blog-posts/tag/{tag}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Website/Get Blog Post By Tag'
+      description: 'This endpoint retrieve blogpost by a specific tag.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tag:
+        name: tag
+        description: 'The tag.'
+        required: true
+        example: perspiciatis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      tag: perspiciatis
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis","per_page":15,"to":null,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: api/website/tags
     metadata:
       groupName: Endpoints
@@ -508,7 +557,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"javascript"},{"name":"laravel"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"}],"links":{"first":"http:\/\/localhost\/api\/website\/tags?page=1","last":"http:\/\/localhost\/api\/website\/tags?page=2","prev":null,"next":"http:\/\/localhost\/api\/website\/tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/tags","per_page":20,"to":20,"total":30}}'
+        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/localhost\/api\/website\/tags?page=1","last":"http:\/\/localhost\/api\/website\/tags?page=2","prev":null,"next":"http:\/\/localhost\/api\/website\/tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/website\/tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/tags","per_page":20,"to":20,"total":23}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
