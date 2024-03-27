@@ -8,7 +8,6 @@ use App\Website\Models\BlogPostTag;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\Endpoint;
-use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogTagsController extends Controller
 {
