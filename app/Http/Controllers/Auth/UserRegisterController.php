@@ -10,11 +10,10 @@ use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Response;
 
-class RegisteredUserController extends BaseApiController
+class UserRegisterController extends BaseApiController
 {
-    private UserRepositoryInterface $userRepository;
 
-    public function __construct(UserRepositoryInterface $userRepository)
+    public function __construct(private UserRepositoryInterface $userRepository)
     {
         $this->userRepository = $userRepository;
     }
