@@ -15,6 +15,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.8",
+        "ryangjchandler/laravel-cloudflare-turnstile": "^1.1",
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
