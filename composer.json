@@ -18,7 +18,8 @@
         "app/admin": "*",
         "app/platform": "*",
         "app/website": "*",
-        "internachi/modular": "^2.0"
+        "internachi/modular": "^2.0",        
+        "bugsnag/bugsnag-laravel": "^2.27.0"
 
     },
     "require-dev": {
