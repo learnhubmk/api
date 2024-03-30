@@ -44,20 +44,4 @@ DESC)]
 
         return new SingleBlogPostResource($blog);
     }
-
-    #[Endpoint('Website/Get Blog Post By Tag', <<<'DESC'
-  This endpoint retrieve blogpost by a specific tag.
-  DESC)]
-    public function listByTag(string $tag): AnonymousResourceCollection
-    {
-        $blogs = BlogPost::with('author', 'tags')
-            ->where('status', BlogPostStatus::PUBLISHED)
-            ->whereHas('tags', function ($query) use ($tag) {
-                $query->where('name', $tag);
-            })
-            ->orderBy('publish_date', 'desc')
-            ->paginate(15);
-
-        return BlogPostsResource::collection($blogs);
-    }
 }

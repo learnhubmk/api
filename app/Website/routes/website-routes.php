@@ -1,14 +1,11 @@
 <?php
 
 use App\Website\Http\Controllers\BlogPostController;
+use App\Website\Http\Controllers\BlogPostTagsController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'api/website'], function () {
-    Route::prefix('blog-posts')->group(function () {
-        Route::get('/', [BlogPostController::class, 'index']);
-        Route::get('/{slug}', [BlogPostController::class, 'show']);
-    });
+Route::get('blog-posts', [BlogPostController::class, 'index']);
+Route::get('blog-posts/{slug}', [BlogPostController::class, 'show']);
 
-    Route::get('/tags', [\App\Website\Http\Controllers\BlogTagsController::class, 'index']);
-    Route::get('/blog-post-tags/{tag}', [BlogPostController::class, 'listByTag']);
-});
+Route::get('/blog-post-tags', [BlogPostTagsController::class, 'index']);
+Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show']);
