@@ -1,6 +1,7 @@
 <?php
 
 use App\Website\Http\Controllers\BlogPostController;
+use App\Website\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'api/website'], function () {
@@ -11,4 +12,5 @@ Route::group(['prefix' => 'api/website'], function () {
 
     Route::get('/tags', [\App\Website\Http\Controllers\BlogTagsController::class, 'index']);
     Route::get('/blog-post-tags/{tag}', [BlogPostController::class, 'listByTag']);
+    Route::post('/contact', [ContactController::class, 'sendContactEmail'])->middleware('throttle:5,1');
 });

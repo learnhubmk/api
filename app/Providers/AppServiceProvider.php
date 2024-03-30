@@ -17,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
             $this->app->register(TelescopeServiceProvider::class);
         }
+        $this->loadViewsFrom(base_path('app/Website/resources/views'), 'website');
     }
 
     /**
