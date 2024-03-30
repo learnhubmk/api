@@ -17,7 +17,6 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
             $this->app->register(TelescopeServiceProvider::class);
         }
-        $this->loadViewsFrom(base_path('app/Website/resources/views'), 'website');
     }
 
     /**
@@ -26,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
+        \View::addNamespace('website', app_path('Website/resources/views'));
     }
 }
