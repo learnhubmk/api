@@ -21,24 +21,21 @@ class AuthController
     This endpoint enable users with admin role to sign in
  DESC)]
     #[BodyParam('email', 'password', required: true)]
-    public function login(LoginRequest $request): AdminResource
+    public function login(LoginRequest $request): JsonResponse
     {
-        $credentials = $request->only('email', 'password');
+        $request->authenticate();
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
+        $user = $request->user();
+        $token = $user->tokens->where('name', $user->email)->first();
 
-            if ($user->hasRole('admin')) {
-                return new AdminResource($user);
-            } else {
-                throw ValidationException::withMessages([
-                    'error' => ['Unauthenticated'],
-                ])->status(403);
-            }
+        if ($token) {
+            $token->delete();
         }
+        $token = $user->createToken($user->email)->plainTextToken;
 
-        throw ValidationException::withMessages([
-            'error' => ['Invalid credentials'],
+        return response()->json([
+            'token' => $token,
+            'user' => $user,
         ]);
 
     }
