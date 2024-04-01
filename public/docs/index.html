@@ -30,9 +30,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="../docs/js/tryitout-4.33.0.js"></script>
+    <script src="../docs/js/tryitout-4.35.0.js"></script>
 
-    <script src="../docs/js/theme-default-4.33.0.js"></script>
+    <script src="../docs/js/theme-default-4.35.0.js"></script>
 
 </head>
 
@@ -71,7 +71,10 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTadmin-login">
+                                <a href="#endpoints-POSTadmin-login">Admin/Login</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts">
                                 <a href="#endpoints-GETapi-website-blog-posts">Website/List Blogs</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts--slug-">
@@ -82,12 +85,6 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-post-tags--tag-">
                                 <a href="#endpoints-GETapi-website-blog-post-tags--tag-">Website/Get Blog Post By Tag</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-healthcheck">
-                                <a href="#endpoints-GETapi-healthcheck">Healthcheck</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
-                                <a href="#endpoints-GETapi-user">GET api/user</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -100,7 +97,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 27, 2024</li>
+        <li>Last updated: April 1, 2024</li>
     </ul>
 </div>
 
@@ -122,7 +119,149 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-GETapi-website-blog-posts">Website/List Blogs</h2>
+                                <h2 id="endpoints-POSTadmin-login">Admin/Login</h2>
+
+<p>
+</p>
+
+<p>This endpoint enable users with admin role to sign in</p>
+
+<span id="example-requests-POSTadmin-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/admin/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"ohomenick@example.org\",
+    \"password\": \"consequatur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/admin/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "ohomenick@example.org",
+    "password": "consequatur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTadmin-login">
+</span>
+<span id="execution-results-POSTadmin-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTadmin-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTadmin-login"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTadmin-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTadmin-login">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTadmin-login" data-method="POST"
+      data-path="admin/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTadmin-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTadmin-login"
+                    onclick="tryItOut('POSTadmin-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTadmin-login"
+                    onclick="cancelTryOut('POSTadmin-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTadmin-login"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>admin/login</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTadmin-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTadmin-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>password</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTadmin-login"
+               value="ohomenick@example.org"
+               data-component="body">
+    <br>
+<p>Example: <code>ohomenick@example.org</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTadmin-login"
+               value="consequatur"
+               data-component="body">
+    <br>
+<p>Example: <code>consequatur</code></p>
+        </div>
+        </form>
+
+                    <h2 id="endpoints-GETapi-website-blog-posts">Website/List Blogs</h2>
 
 <p>
 </p>
@@ -136,7 +275,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts?title=eum" \
+    --get "http://localhost:8000/api/website/blog-posts?title=quisquam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -147,7 +286,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "eum",
+    "title": "quisquam",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -180,9 +319,9 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Eum illo praesentium est sed nulla qui.&quot;,
-            &quot;slug&quot;: &quot;eum-illo-praesentium-est-sed-nulla-qui&quot;,
-            &quot;excerpt&quot;: &quot;Quod ratione et beatae expedita.&quot;,
+            &quot;title&quot;: &quot;Exercitationem aliquam ipsum et quisquam.&quot;,
+            &quot;slug&quot;: &quot;exercitationem-aliquam-ipsum-et-quisquam&quot;,
+            &quot;excerpt&quot;: &quot;Odit laudantium molestias quasi dolorem et qui dolor rem.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -194,17 +333,17 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-27&quot;,
+            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Kelli O&#039;Hara&quot;,
-                &quot;last_name&quot;: &quot;Torphy&quot;,
+                &quot;first_name&quot;: &quot;Efrain Tremblay&quot;,
+                &quot;last_name&quot;: &quot;Mayer&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Fugiat neque eum vel.&quot;,
-            &quot;slug&quot;: &quot;fugiat-neque-eum-vel&quot;,
-            &quot;excerpt&quot;: &quot;Suscipit aut nihil ea eos.&quot;,
+            &quot;title&quot;: &quot;Esse ea autem id quisquam beatae velit.&quot;,
+            &quot;slug&quot;: &quot;esse-ea-autem-id-quisquam-beatae-velit&quot;,
+            &quot;excerpt&quot;: &quot;Id eius et tempore eum dignissimos eum.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -216,32 +355,10 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-03-27&quot;,
+            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Vickie Hackett DDS&quot;,
-                &quot;last_name&quot;: &quot;Oberbrunner&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Ad est et dolores eum quaerat.&quot;,
-            &quot;slug&quot;: &quot;ad-est-et-dolores-eum-quaerat&quot;,
-            &quot;excerpt&quot;: &quot;Ex quo ratione distinctio omnis.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-03-27&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Kelli O&#039;Hara&quot;,
-                &quot;last_name&quot;: &quot;Torphy&quot;,
+                &quot;first_name&quot;: &quot;Dr. Okey Kuvalis II&quot;,
+                &quot;last_name&quot;: &quot;Schneider&quot;,
                 &quot;image&quot;: null
             }
         }
@@ -275,8 +392,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost/api/website/blog-posts&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 3,
-        &quot;total&quot;: 3
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
     }
 }</code>
  </pre>
@@ -357,10 +474,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="eum"
+               value="quisquam"
                data-component="query">
     <br>
-<p>Example: <code>eum</code></p>
+<p>Example: <code>quisquam</code></p>
             </div>
                 </form>
 
@@ -377,14 +494,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts/quia" \
+    --get "http://localhost:8000/api/website/blog-posts/aliquid" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-posts/quia"
+    "http://localhost:8000/api/website/blog-posts/aliquid"
 );
 
 const headers = {
@@ -416,11 +533,11 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;No query results for model [App\\Website\\Models\\BlogPost].&quot;,
     &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
     &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
-    &quot;line&quot;: 487,
+    &quot;line&quot;: 628,
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
-            &quot;line&quot;: 463,
+            &quot;line&quot;: 576,
             &quot;function&quot;: &quot;prepareException&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -525,7 +642,7 @@ access-control-allow-origin: *
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -538,7 +655,7 @@ access-control-allow-origin: *
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php&quot;,
             &quot;line&quot;: 27,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
@@ -548,12 +665,12 @@ access-control-allow-origin: *
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 99,
+            &quot;line&quot;: 110,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -581,7 +698,7 @@ access-control-allow-origin: *
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
+            &quot;line&quot;: 57,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -735,49 +852,49 @@ access-control-allow-origin: *
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 211,
+            &quot;line&quot;: 212,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 326,
+            &quot;line&quot;: 279,
             &quot;function&quot;: &quot;execute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 181,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 1096,
+            &quot;line&quot;: 1049,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 324,
+            &quot;line&quot;: 318,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 175,
+            &quot;line&quot;: 169,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 201,
+            &quot;line&quot;: 196,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -869,10 +986,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="slug"                data-endpoint="GETapi-website-blog-posts--slug-"
-               value="quia"
+               value="aliquid"
                data-component="url">
     <br>
-<p>The slug of the blog post. Example: <code>quia</code></p>
+<p>The slug of the blog post. Example: <code>aliquid</code></p>
             </div>
                     </form>
 
@@ -1111,14 +1228,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-post-tags/voluptate" \
+    --get "http://localhost:8000/api/website/blog-post-tags/officia" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-post-tags/voluptate"
+    "http://localhost:8000/api/website/blog-post-tags/officia"
 );
 
 const headers = {
@@ -1149,8 +1266,8 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/voluptate?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/voluptate?page=1&quot;,
+        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/officia?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/officia?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -1165,7 +1282,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/voluptate?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/officia?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -1175,7 +1292,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/voluptate&quot;,
+        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/officia&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -1259,296 +1376,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="tag"                data-endpoint="GETapi-website-blog-post-tags--tag-"
-               value="voluptate"
+               value="officia"
                data-component="url">
     <br>
-<p>Example: <code>voluptate</code></p>
+<p>Example: <code>officia</code></p>
             </div>
                     </form>
-
-                    <h2 id="endpoints-GETapi-healthcheck">Healthcheck</h2>
-
-<p>
-</p>
-
-<p>Check that the service is up. If everything is okay, you'll get a 200 OK response.</p>
-<p>Otherwise, the request will fail with a 400 error, and a response listing the failed services.</p>
-
-<span id="example-requests-GETapi-healthcheck">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/healthcheck" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/healthcheck"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-healthcheck">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;status&quot;: &quot;up&quot;,
-    &quot;services&quot;: {
-        &quot;database&quot;: &quot;up&quot;,
-        &quot;redis&quot;: &quot;up&quot;
-    }
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (400, Service is unhealthy):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;status&quot;: &quot;down&quot;,
-    &quot;services&quot;: {
-        &quot;database&quot;: &quot;up&quot;,
-        &quot;redis&quot;: &quot;down&quot;
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-healthcheck" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-healthcheck"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-healthcheck"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-healthcheck" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-healthcheck">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-healthcheck" data-method="GET"
-      data-path="api/healthcheck"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-healthcheck', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-healthcheck"
-                    onclick="tryItOut('GETapi-healthcheck');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-healthcheck"
-                    onclick="cancelTryOut('GETapi-healthcheck');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-healthcheck"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/healthcheck</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-healthcheck"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-healthcheck"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-    <h3>Response</h3>
-    <h4 class="fancy-heading-panel"><b>Response Fields</b></h4>
-    <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
-<small>The status of this API (`up` or `down`).</small>&nbsp;
- &nbsp;
-<br>
-
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>services</code></b>&nbsp;&nbsp;
-<small>Map of each downstream service and their status (`up` or `down`).</small>&nbsp;
- &nbsp;
-<br>
-
-        </div>
-                        <h2 id="endpoints-GETapi-user">GET api/user</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-user">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/user" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/user"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-user">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-user" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-user"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-user"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-user" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-user">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-user" data-method="GET"
-      data-path="api/user"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-user"
-                    onclick="tryItOut('GETapi-user');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-user"
-                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-user"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/user</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-user"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-user"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
 
             
 
