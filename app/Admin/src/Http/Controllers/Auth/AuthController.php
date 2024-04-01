@@ -3,14 +3,12 @@
 namespace App\Admin\Http\Controllers\Auth;
 
 use App\Admin\Http\Requests\Auth\LoginRequest;
-use App\Admin\Http\Resources\Auth\AdminResource;
+use App\Admin\Http\Requests\Auth\LogoutRequest;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
-use Knuckles\Scribe\Attributes\QueryParam;
 
 class AuthController
 {
@@ -38,5 +36,15 @@ class AuthController
             'user' => $user,
         ]);
 
+    }
+
+    #[Endpoint('Admin/Logout', <<<'DESC'
+    This endpoint enable users with admin role to log out
+ DESC)]
+    public function logout(LogoutRequest $request): Response
+    {
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->noContent();
     }
 }

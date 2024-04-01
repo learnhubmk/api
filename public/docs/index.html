@@ -74,6 +74,9 @@
                                                     <li class="tocify-item level-2" data-unique="endpoints-POSTadmin-login">
                                 <a href="#endpoints-POSTadmin-login">Admin/Login</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTadmin-logout">
+                                <a href="#endpoints-POSTadmin-logout">Admin/Logout</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-website-blog-posts">
                                 <a href="#endpoints-GETapi-website-blog-posts">Website/List Blogs</a>
                             </li>
@@ -136,8 +139,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ntrantow@example.net\",
-    \"password\": \"quod\"
+    \"email\": \"gibson.lia@example.org\",
+    \"password\": \"architecto\"
 }"
 </code></pre></div>
 
@@ -153,8 +156,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ntrantow@example.net",
-    "password": "quod"
+    "email": "gibson.lia@example.org",
+    "password": "architecto"
 };
 
 fetch(url, {
@@ -243,10 +246,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTadmin-login"
-               value="ntrantow@example.net"
+               value="gibson.lia@example.org"
                data-component="body">
     <br>
-<p>Example: <code>ntrantow@example.net</code></p>
+<p>Example: <code>gibson.lia@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -254,12 +257,120 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTadmin-login"
-               value="quod"
+               value="architecto"
                data-component="body">
     <br>
-<p>Example: <code>quod</code></p>
+<p>Example: <code>architecto</code></p>
         </div>
         </form>
+
+                    <h2 id="endpoints-POSTadmin-logout">Admin/Logout</h2>
+
+<p>
+</p>
+
+<p>This endpoint enable users with admin role to log out</p>
+
+<span id="example-requests-POSTadmin-logout">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/admin/logout" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/admin/logout"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTadmin-logout">
+</span>
+<span id="execution-results-POSTadmin-logout" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTadmin-logout"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTadmin-logout"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTadmin-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTadmin-logout">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTadmin-logout" data-method="POST"
+      data-path="admin/logout"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTadmin-logout', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTadmin-logout"
+                    onclick="tryItOut('POSTadmin-logout');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTadmin-logout"
+                    onclick="cancelTryOut('POSTadmin-logout');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTadmin-logout"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>admin/logout</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTadmin-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTadmin-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
 
                     <h2 id="endpoints-GETapi-website-blog-posts">Website/List Blogs</h2>
 
@@ -275,7 +386,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts?title=sed" \
+    --get "http://localhost:8000/api/website/blog-posts?title=consequatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -286,7 +397,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "sed",
+    "title": "consequatur",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -319,9 +430,9 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Et id explicabo sed libero eos quod temporibus.&quot;,
-            &quot;slug&quot;: &quot;et-id-explicabo-sed-libero-eos-quod-temporibus&quot;,
-            &quot;excerpt&quot;: &quot;Ut sint totam sint non quia.&quot;,
+            &quot;title&quot;: &quot;Voluptatum placeat consequatur quia enim quam voluptatibus.&quot;,
+            &quot;slug&quot;: &quot;voluptatum-placeat-consequatur-quia-enim-quam-voluptatibus&quot;,
+            &quot;excerpt&quot;: &quot;Rem ducimus et repellat culpa id rerum quia ea.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -335,8 +446,30 @@ access-control-allow-origin: *
             ],
             &quot;publish_date&quot;: &quot;2024-04-01&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Alden Haley&quot;,
-                &quot;last_name&quot;: &quot;Reilly&quot;,
+                &quot;first_name&quot;: &quot;Aletha Boehm&quot;,
+                &quot;last_name&quot;: &quot;Parker&quot;,
+                &quot;image&quot;: null
+            }
+        },
+        {
+            &quot;title&quot;: &quot;Deleniti corporis nulla perferendis consequatur nisi voluptate ipsam.&quot;,
+            &quot;slug&quot;: &quot;deleniti-corporis-nulla-perferendis-consequatur-nisi-voluptate-ipsam&quot;,
+            &quot;excerpt&quot;: &quot;Dolor accusamus dicta explicabo est id perferendis repudiandae in.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Dr. Lenore Hills&quot;,
+                &quot;last_name&quot;: &quot;Ortiz&quot;,
                 &quot;image&quot;: null
             }
         },
@@ -359,94 +492,6 @@ access-control-allow-origin: *
             &quot;author&quot;: {
                 &quot;first_name&quot;: &quot;Harrison Cummerata&quot;,
                 &quot;last_name&quot;: &quot;Schaden&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Placeat laudantium enim fugiat sed eius tenetur.&quot;,
-            &quot;slug&quot;: &quot;placeat-laudantium-enim-fugiat-sed-eius-tenetur&quot;,
-            &quot;excerpt&quot;: &quot;Et delectus molestias sit esse rem ad asperiores.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Leola Parisian&quot;,
-                &quot;last_name&quot;: &quot;Schneider&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Sed cupiditate error qui aut ipsam.&quot;,
-            &quot;slug&quot;: &quot;sed-cupiditate-error-qui-aut-ipsam&quot;,
-            &quot;excerpt&quot;: &quot;Exercitationem facere aut quis praesentium aut.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Dr. Lenore Hills&quot;,
-                &quot;last_name&quot;: &quot;Ortiz&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Sed fugit ipsa accusantium dicta dolor.&quot;,
-            &quot;slug&quot;: &quot;sed-fugit-ipsa-accusantium-dicta-dolor&quot;,
-            &quot;excerpt&quot;: &quot;Et iusto voluptas suscipit mollitia non.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Alden Haley&quot;,
-                &quot;last_name&quot;: &quot;Reilly&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Perspiciatis fuga ut a atque sed.&quot;,
-            &quot;slug&quot;: &quot;perspiciatis-fuga-ut-a-atque-sed&quot;,
-            &quot;excerpt&quot;: &quot;Quibusdam amet dicta labore dolore nihil aspernatur.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Dr. Okey Kuvalis II&quot;,
-                &quot;last_name&quot;: &quot;Schneider&quot;,
                 &quot;image&quot;: null
             }
         }
@@ -480,8 +525,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost/api/website/blog-posts&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 6,
-        &quot;total&quot;: 6
+        &quot;to&quot;: 3,
+        &quot;total&quot;: 3
     }
 }</code>
  </pre>
@@ -562,10 +607,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="sed"
+               value="consequatur"
                data-component="query">
     <br>
-<p>Example: <code>sed</code></p>
+<p>Example: <code>consequatur</code></p>
             </div>
                 </form>
 
@@ -582,14 +627,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts/et" \
+    --get "http://localhost:8000/api/website/blog-posts/ratione" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-posts/et"
+    "http://localhost:8000/api/website/blog-posts/ratione"
 );
 
 const headers = {
@@ -1074,10 +1119,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="slug"                data-endpoint="GETapi-website-blog-posts--slug-"
-               value="et"
+               value="ratione"
                data-component="url">
     <br>
-<p>The slug of the blog post. Example: <code>et</code></p>
+<p>The slug of the blog post. Example: <code>ratione</code></p>
             </div>
                     </form>
 
@@ -1316,14 +1361,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-post-tags/iusto" \
+    --get "http://localhost:8000/api/website/blog-post-tags/sunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-post-tags/iusto"
+    "http://localhost:8000/api/website/blog-post-tags/sunt"
 );
 
 const headers = {
@@ -1354,8 +1399,8 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/iusto?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/iusto?page=1&quot;,
+        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/sunt?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/sunt?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -1370,7 +1415,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/iusto?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/sunt?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -1380,7 +1425,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/iusto&quot;,
+        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/sunt&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -1464,10 +1509,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="tag"                data-endpoint="GETapi-website-blog-post-tags--tag-"
-               value="iusto"
+               value="sunt"
                data-component="url">
     <br>
-<p>Example: <code>iusto</code></p>
+<p>Example: <code>sunt</code></p>
             </div>
                     </form>
 

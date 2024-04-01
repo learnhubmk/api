@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Requests\Auth;
 
+use App\Platform\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
@@ -66,7 +67,7 @@ class LoginRequest extends FormRequest
 
         if (Auth::attempt($this->credentials())) {
             $user = Auth::user();
-            if (!$user->hasRole('admin')) {
+            if (!$user->hasRole(RoleName::ADMIN)) {
                 throw ValidationException::withMessages([
                     'error' => 'Forbidden',
                 ])->status(403);

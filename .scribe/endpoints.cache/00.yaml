@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: ntrantow@example.net
+        example: gibson.lia@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,44 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quod
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: reilly.linda@example.net
-      password: sit
+      email: gibson.lia@example.org
+      password: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: admin/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Admin/Logout
+      description: '   This endpoint enable users with admin role to log out'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
@@ -78,20 +108,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: sed
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: deserunt
+      title: consequatur
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Et id explicabo sed libero eos quod temporibus.","slug":"et-id-explicabo-sed-libero-eos-quod-temporibus","excerpt":"Ut sint totam sint non quia.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Alden Haley","last_name":"Reilly","image":null}},{"title":"Ut sed ut consequatur dolores ut.","slug":"ut-sed-ut-consequatur-dolores-ut","excerpt":"Cumque nulla tempore impedit praesentium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Harrison Cummerata","last_name":"Schaden","image":null}},{"title":"Placeat laudantium enim fugiat sed eius tenetur.","slug":"placeat-laudantium-enim-fugiat-sed-eius-tenetur","excerpt":"Et delectus molestias sit esse rem ad asperiores.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Leola Parisian","last_name":"Schneider","image":null}},{"title":"Sed cupiditate error qui aut ipsam.","slug":"sed-cupiditate-error-qui-aut-ipsam","excerpt":"Exercitationem facere aut quis praesentium aut.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Dr. Lenore Hills","last_name":"Ortiz","image":null}},{"title":"Sed fugit ipsa accusantium dicta dolor.","slug":"sed-fugit-ipsa-accusantium-dicta-dolor","excerpt":"Et iusto voluptas suscipit mollitia non.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Alden Haley","last_name":"Reilly","image":null}},{"title":"Perspiciatis fuga ut a atque sed.","slug":"perspiciatis-fuga-ut-a-atque-sed","excerpt":"Quibusdam amet dicta labore dolore nihil aspernatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Dr. Okey Kuvalis II","last_name":"Schneider","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":6,"total":6}}'
+        content: '{"data":[{"title":"Voluptatum placeat consequatur quia enim quam voluptatibus.","slug":"voluptatum-placeat-consequatur-quia-enim-quam-voluptatibus","excerpt":"Rem ducimus et repellat culpa id rerum quia ea.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Aletha Boehm","last_name":"Parker","image":null}},{"title":"Deleniti corporis nulla perferendis consequatur nisi voluptate ipsam.","slug":"deleniti-corporis-nulla-perferendis-consequatur-nisi-voluptate-ipsam","excerpt":"Dolor accusamus dicta explicabo est id perferendis repudiandae in.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Dr. Lenore Hills","last_name":"Ortiz","image":null}},{"title":"Ut sed ut consequatur dolores ut.","slug":"ut-sed-ut-consequatur-dolores-ut","excerpt":"Cumque nulla tempore impedit praesentium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Harrison Cummerata","last_name":"Schaden","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":3,"total":3}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -125,13 +155,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: et
+        example: ratione
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: quos
+      slug: ratione
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -592,13 +622,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: iusto
+        example: sunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: impedit
+      tag: sunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -607,7 +637,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/iusto?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/iusto?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/iusto?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/iusto","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/sunt?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/sunt?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/sunt?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/sunt","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
