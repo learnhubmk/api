@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: magali27@example.com
+        example: ullrich.krista@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: aspernatur
+        example: magni
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: magali27@example.com
-      password: aspernatur
+      email: ullrich.krista@example.org
+      password: magni
     fileParameters: []
     responses: []
     responseFields: []
@@ -108,20 +108,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: ipsum
+        example: necessitatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: ipsum
+      title: necessitatibus
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Exercitationem aliquam ipsum et quisquam.","slug":"exercitationem-aliquam-ipsum-et-quisquam","excerpt":"Odit laudantium molestias quasi dolorem et qui dolor rem.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Efrain Tremblay","last_name":"Mayer","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"title":"Similique sit qui illo necessitatibus fuga at.","slug":"similique-sit-qui-illo-necessitatibus-fuga-at","excerpt":"Eaque et sed esse est nihil hic.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-01","author":{"first_name":"Dr. Lenore Hills","last_name":"Ortiz","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -155,13 +155,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: unde
+        example: cum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: unde
+      slug: cum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -622,13 +622,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: sint
+        example: provident
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: sint
+      tag: provident
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -637,7 +637,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/sint?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/sint?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/sint?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/sint","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/provident?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/provident?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/provident?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/provident","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

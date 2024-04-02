@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: magali27@example.com
+                  example: ullrich.krista@example.org
                 password:
                   type: string
                   description: ''
-                  example: aspernatur
+                  example: magni
               required:
                 - email
                 - password
@@ -54,12 +54,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: ipsum
+          example: necessitatibus
           required: false
           schema:
             type: string
             description: ''
-            example: ipsum
+            example: necessitatibus
       responses:
         200:
           description: ''
@@ -70,9 +70,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Exercitationem aliquam ipsum et quisquam.'
-                      slug: exercitationem-aliquam-ipsum-et-quisquam
-                      excerpt: 'Odit laudantium molestias quasi dolorem et qui dolor rem.'
+                      title: 'Similique sit qui illo necessitatibus fuga at.'
+                      slug: similique-sit-qui-illo-necessitatibus-fuga-at
+                      excerpt: 'Eaque et sed esse est nihil hic.'
                       tags:
                         -
                           name: php
@@ -82,8 +82,8 @@ paths:
                           name: react
                       publish_date: '2024-04-01'
                       author:
-                        first_name: 'Efrain Tremblay'
-                        last_name: Mayer
+                        first_name: 'Dr. Lenore Hills'
+                        last_name: Ortiz
                         image: null
                   links:
                     first: 'http://localhost/api/website/blog-posts?page=1'
@@ -116,9 +116,9 @@ paths:
                     type: array
                     example:
                       -
-                        title: 'Exercitationem aliquam ipsum et quisquam.'
-                        slug: exercitationem-aliquam-ipsum-et-quisquam
-                        excerpt: 'Odit laudantium molestias quasi dolorem et qui dolor rem.'
+                        title: 'Similique sit qui illo necessitatibus fuga at.'
+                        slug: similique-sit-qui-illo-necessitatibus-fuga-at
+                        excerpt: 'Eaque et sed esse est nihil hic.'
                         tags:
                           -
                             name: php
@@ -128,21 +128,21 @@ paths:
                             name: react
                         publish_date: '2024-04-01'
                         author:
-                          first_name: 'Efrain Tremblay'
-                          last_name: Mayer
+                          first_name: 'Dr. Lenore Hills'
+                          last_name: Ortiz
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Exercitationem aliquam ipsum et quisquam.'
+                          example: 'Similique sit qui illo necessitatibus fuga at.'
                         slug:
                           type: string
-                          example: exercitationem-aliquam-ipsum-et-quisquam
+                          example: similique-sit-qui-illo-necessitatibus-fuga-at
                         excerpt:
                           type: string
-                          example: 'Odit laudantium molestias quasi dolorem et qui dolor rem.'
+                          example: 'Eaque et sed esse est nihil hic.'
                         tags:
                           type: array
                           example:
@@ -166,10 +166,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Efrain Tremblay'
+                              example: 'Dr. Lenore Hills'
                             last_name:
                               type: string
-                              example: Mayer
+                              example: Ortiz
                             image:
                               type: string
                               example: null
@@ -939,7 +939,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: unde
+        example: cum
         required: true
         schema:
           type: string
@@ -1167,8 +1167,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/api/website/blog-post-tags/sint?page=1'
-                    last: 'http://localhost/api/website/blog-post-tags/sint?page=1'
+                    first: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                    last: 'http://localhost/api/website/blog-post-tags/provident?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1181,14 +1181,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blog-post-tags/sint?page=1'
+                        url: 'http://localhost/api/website/blog-post-tags/provident?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blog-post-tags/sint'
+                    path: 'http://localhost/api/website/blog-post-tags/provident'
                     per_page: 15
                     to: null
                     total: 0
@@ -1201,10 +1201,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/sint?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/provident?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/sint?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/provident?page=1'
                       prev:
                         type: string
                         example: null
@@ -1231,7 +1231,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blog-post-tags/sint?page=1'
+                            url: 'http://localhost/api/website/blog-post-tags/provident?page=1'
                             label: '1'
                             active: true
                           -
@@ -1252,7 +1252,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/sint'
+                        example: 'http://localhost/api/website/blog-post-tags/provident'
                       per_page:
                         type: integer
                         example: 15
@@ -1270,7 +1270,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: sint
+        example: provident
         required: true
         schema:
           type: string

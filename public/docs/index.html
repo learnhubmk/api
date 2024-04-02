@@ -139,8 +139,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"magali27@example.com\",
-    \"password\": \"aspernatur\"
+    \"email\": \"ullrich.krista@example.org\",
+    \"password\": \"magni\"
 }"
 </code></pre></div>
 
@@ -156,8 +156,8 @@ const headers = {
 };
 
 let body = {
-    "email": "magali27@example.com",
-    "password": "aspernatur"
+    "email": "ullrich.krista@example.org",
+    "password": "magni"
 };
 
 fetch(url, {
@@ -246,10 +246,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTadmin-login"
-               value="magali27@example.com"
+               value="ullrich.krista@example.org"
                data-component="body">
     <br>
-<p>Example: <code>magali27@example.com</code></p>
+<p>Example: <code>ullrich.krista@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -257,10 +257,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTadmin-login"
-               value="aspernatur"
+               value="magni"
                data-component="body">
     <br>
-<p>Example: <code>aspernatur</code></p>
+<p>Example: <code>magni</code></p>
         </div>
         </form>
 
@@ -387,7 +387,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts?title=ipsum" \
+    --get "http://localhost:8000/api/website/blog-posts?title=necessitatibus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -398,7 +398,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "ipsum",
+    "title": "necessitatibus",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -431,9 +431,9 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Exercitationem aliquam ipsum et quisquam.&quot;,
-            &quot;slug&quot;: &quot;exercitationem-aliquam-ipsum-et-quisquam&quot;,
-            &quot;excerpt&quot;: &quot;Odit laudantium molestias quasi dolorem et qui dolor rem.&quot;,
+            &quot;title&quot;: &quot;Similique sit qui illo necessitatibus fuga at.&quot;,
+            &quot;slug&quot;: &quot;similique-sit-qui-illo-necessitatibus-fuga-at&quot;,
+            &quot;excerpt&quot;: &quot;Eaque et sed esse est nihil hic.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -447,8 +447,8 @@ access-control-allow-origin: *
             ],
             &quot;publish_date&quot;: &quot;2024-04-01&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Efrain Tremblay&quot;,
-                &quot;last_name&quot;: &quot;Mayer&quot;,
+                &quot;first_name&quot;: &quot;Dr. Lenore Hills&quot;,
+                &quot;last_name&quot;: &quot;Ortiz&quot;,
                 &quot;image&quot;: null
             }
         }
@@ -564,10 +564,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="ipsum"
+               value="necessitatibus"
                data-component="query">
     <br>
-<p>Example: <code>ipsum</code></p>
+<p>Example: <code>necessitatibus</code></p>
             </div>
                 </form>
 
@@ -584,14 +584,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts/unde" \
+    --get "http://localhost:8000/api/website/blog-posts/cum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-posts/unde"
+    "http://localhost:8000/api/website/blog-posts/cum"
 );
 
 const headers = {
@@ -1076,10 +1076,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="slug"                data-endpoint="GETapi-website-blog-posts--slug-"
-               value="unde"
+               value="cum"
                data-component="url">
     <br>
-<p>The slug of the blog post. Example: <code>unde</code></p>
+<p>The slug of the blog post. Example: <code>cum</code></p>
             </div>
                     </form>
 
@@ -1318,14 +1318,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-post-tags/sint" \
+    --get "http://localhost:8000/api/website/blog-post-tags/provident" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-post-tags/sint"
+    "http://localhost:8000/api/website/blog-post-tags/provident"
 );
 
 const headers = {
@@ -1356,8 +1356,8 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/sint?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/sint?page=1&quot;,
+        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -1372,7 +1372,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/sint?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -1382,7 +1382,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/sint&quot;,
+        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/provident&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -1466,10 +1466,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="tag"                data-endpoint="GETapi-website-blog-post-tags--tag-"
-               value="sint"
+               value="provident"
                data-component="url">
     <br>
-<p>Example: <code>sint</code></p>
+<p>Example: <code>provident</code></p>
             </div>
                     </form>
 

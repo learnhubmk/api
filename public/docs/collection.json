@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "720ef51f-5b89-45e7-9cdd-56ecc79f00fe",
+        "_postman_id": "0b333c37-352b-4d04-aa8a-bd25149131db",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"magali27@example.com\",\"password\":\"aspernatur\"}"
+                            "raw": "{\"email\":\"ullrich.krista@example.org\",\"password\":\"magni\"}"
                         },
                         "description": "   This endpoint enable users with admin role to sign in",
                         "auth": {
@@ -84,12 +84,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "ipsum",
+                                    "value": "necessitatibus",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=ipsum"
+                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=necessitatibus"
                         },
                         "method": "GET",
                         "header": [
@@ -125,7 +125,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Exercitationem aliquam ipsum et quisquam.\",\"slug\":\"exercitationem-aliquam-ipsum-et-quisquam\",\"excerpt\":\"Odit laudantium molestias quasi dolorem et qui dolor rem.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-01\",\"author\":{\"first_name\":\"Efrain Tremblay\",\"last_name\":\"Mayer\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                            "body": "{\"data\":[{\"title\":\"Similique sit qui illo necessitatibus fuga at.\",\"slug\":\"similique-sit-qui-illo-necessitatibus-fuga-at\",\"excerpt\":\"Eaque et sed esse est nihil hic.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-01\",\"author\":{\"first_name\":\"Dr. Lenore Hills\",\"last_name\":\"Ortiz\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
                             "name": ""
                         }
                     ]
@@ -142,7 +142,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "unde",
+                                    "value": "cum",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -246,7 +246,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "sint",
+                                    "value": "provident",
                                     "description": ""
                                 }
                             ]
@@ -285,7 +285,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/sint?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/sint?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/sint?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/sint\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
