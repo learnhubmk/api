@@ -4,8 +4,9 @@ namespace App\Admin\Http\Controllers\Auth;
 
 use App\Admin\Http\Requests\Auth\LoginRequest;
 use App\Admin\Http\Requests\Auth\LogoutRequest;
-use Illuminate\Http\JsonResponse;
+use App\Platform\Enums\RoleName;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
@@ -20,21 +21,37 @@ class AuthController
     This endpoint enable users with admin role to sign in
  DESC)]
     #[BodyParam('email', 'password', required: true)]
-    public function login(LoginRequest $request): JsonResponse
+    public function login(LoginRequest $request)
     {
-        $request->authenticate();
+        $credentials = $request->only('email', 'password');
 
-        $user = $request->user();
-        $token = $user->tokens->where('name', $user->email)->first();
+        if (Auth::attempt($credentials)) {
 
-        if ($token) {
-            $token->delete();
+            $user = Auth::user();
+
+            if ($user->hasRole(RoleName::ADMIN)) {
+                $user = $request->user();
+                $token = $user->tokens->where('name', $user->email)->first();
+
+                if ($token) {
+                    $token->delete();
+                }
+                $token = $user->createToken($user->email)->plainTextToken;
+
+                return response()->json([
+                    'token' => $token,
+                    'user' => $user,
+                ]);
+
+            } else {
+                throw ValidationException::withMessages([
+                    'error' => ['Unauthenticated'],
+                ])->status(403);
+            }
         }
-        $token = $user->createToken($user->email)->plainTextToken;
 
-        return response()->json([
-            'token' => $token,
-            'user' => $user,
+        throw ValidationException::withMessages([
+            'error' => ['Invalid credentials'],
         ]);
 
     }
