@@ -7,6 +7,7 @@ use App\Admin\Http\Requests\Auth\LogoutRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 
@@ -38,6 +39,7 @@ class AuthController
 
     }
 
+    #[Authenticated]
     #[Endpoint('Admin/Logout', <<<'DESC'
     This endpoint enable users with admin role to log out
  DESC)]

@@ -12,11 +12,7 @@ class LogoutRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        if ($this->user()->hasRole(RoleName::ADMIN)) {
-            return true;
-        }
-
-        return false;
+       return $this->user()->hasRole(RoleName::ADMIN);
     }
 
     /**
