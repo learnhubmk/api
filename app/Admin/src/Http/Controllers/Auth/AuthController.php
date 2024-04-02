@@ -4,7 +4,7 @@ namespace App\Admin\Http\Controllers\Auth;
 
 use App\Admin\Http\Requests\Auth\LoginRequest;
 use App\Admin\Http\Requests\Auth\LogoutRequest;
-use App\Platform\Enums\RoleName;
+use App\Admin\Http\Resources\Auth\AdminResource;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -21,39 +21,20 @@ class AuthController
     This endpoint enable users with admin role to sign in
  DESC)]
     #[BodyParam('email', 'password', required: true)]
-    public function login(LoginRequest $request)
+    public function login(LoginRequest $request): AdminResource
     {
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-
             $user = Auth::user();
+            $user->tokens()->where('name', $user->email)->delete();
 
-            if ($user->hasRole(RoleName::ADMIN)) {
-                $user = $request->user();
-                $token = $user->tokens->where('name', $user->email)->first();
-
-                if ($token) {
-                    $token->delete();
-                }
-                $token = $user->createToken($user->email)->plainTextToken;
-
-                return response()->json([
-                    'token' => $token,
-                    'user' => $user,
-                ]);
-
-            } else {
-                throw ValidationException::withMessages([
-                    'error' => ['Unauthenticated'],
-                ])->status(403);
-            }
+            return new AdminResource($user);
+        } else {
+            throw ValidationException::withMessages([
+                'error' => ['Invalid Credentials'],
+            ])->status(403);
         }
-
-        throw ValidationException::withMessages([
-            'error' => ['Invalid credentials'],
-        ]);
-
     }
 
     #[Authenticated]
