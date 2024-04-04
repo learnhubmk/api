@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: ullrich.krista@example.org
+                  example: bailey.osinski@example.net
                 password:
                   type: string
                   description: ''
-                  example: magni
+                  example: a
               required:
                 - email
                 - password
@@ -54,12 +54,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: necessitatibus
+          example: vitae
           required: false
           schema:
             type: string
             description: ''
-            example: necessitatibus
+            example: vitae
       responses:
         200:
           description: ''
@@ -68,23 +68,7 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    -
-                      title: 'Similique sit qui illo necessitatibus fuga at.'
-                      slug: similique-sit-qui-illo-necessitatibus-fuga-at
-                      excerpt: 'Eaque et sed esse est nihil hic.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-01'
-                      author:
-                        first_name: 'Dr. Lenore Hills'
-                        last_name: Ortiz
-                        image: null
+                  data: []
                   links:
                     first: 'http://localhost/api/website/blog-posts?page=1'
                     last: 'http://localhost/api/website/blog-posts?page=1'
@@ -92,7 +76,7 @@ paths:
                     next: null
                   meta:
                     current_page: 1
-                    from: 1
+                    from: null
                     last_page: 1
                     links:
                       -
@@ -109,70 +93,12 @@ paths:
                         active: false
                     path: 'http://localhost/api/website/blog-posts'
                     per_page: 15
-                    to: 1
-                    total: 1
+                    to: null
+                    total: 0
                 properties:
                   data:
                     type: array
-                    example:
-                      -
-                        title: 'Similique sit qui illo necessitatibus fuga at.'
-                        slug: similique-sit-qui-illo-necessitatibus-fuga-at
-                        excerpt: 'Eaque et sed esse est nihil hic.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-01'
-                        author:
-                          first_name: 'Dr. Lenore Hills'
-                          last_name: Ortiz
-                          image: null
-                    items:
-                      type: object
-                      properties:
-                        title:
-                          type: string
-                          example: 'Similique sit qui illo necessitatibus fuga at.'
-                        slug:
-                          type: string
-                          example: similique-sit-qui-illo-necessitatibus-fuga-at
-                        excerpt:
-                          type: string
-                          example: 'Eaque et sed esse est nihil hic.'
-                        tags:
-                          type: array
-                          example:
-                            -
-                              name: php
-                            -
-                              name: laravel
-                            -
-                              name: react
-                          items:
-                            type: object
-                            properties:
-                              name:
-                                type: string
-                                example: php
-                        publish_date:
-                          type: string
-                          example: '2024-04-01'
-                        author:
-                          type: object
-                          properties:
-                            first_name:
-                              type: string
-                              example: 'Dr. Lenore Hills'
-                            last_name:
-                              type: string
-                              example: Ortiz
-                            image:
-                              type: string
-                              example: null
+                    example: []
                   links:
                     type: object
                     properties:
@@ -195,8 +121,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       last_page:
                         type: integer
                         example: 1
@@ -234,11 +160,11 @@ paths:
                         type: integer
                         example: 15
                       to:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       total:
                         type: integer
-                        example: 1
+                        example: 0
       tags:
         - Endpoints
       security: []
@@ -939,7 +865,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: cum
+        example: harum
         required: true
         schema:
           type: string
@@ -1167,8 +1093,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/api/website/blog-post-tags/provident?page=1'
-                    last: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                    first: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                    last: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1181,14 +1107,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                        url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blog-post-tags/provident'
+                    path: 'http://localhost/api/website/blog-post-tags/maiores'
                     per_page: 15
                     to: null
                     total: 0
@@ -1201,10 +1127,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                       prev:
                         type: string
                         example: null
@@ -1231,7 +1157,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blog-post-tags/provident?page=1'
+                            url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                             label: '1'
                             active: true
                           -
@@ -1252,7 +1178,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/provident'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores'
                       per_page:
                         type: integer
                         example: 15
@@ -1270,7 +1196,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: provident
+        example: maiores
         required: true
         schema:
           type: string

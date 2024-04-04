@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "0b333c37-352b-4d04-aa8a-bd25149131db",
+        "_postman_id": "710653fb-7ea7-4086-aebe-a5bef1dc1294",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"ullrich.krista@example.org\",\"password\":\"magni\"}"
+                            "raw": "{\"email\":\"bailey.osinski@example.net\",\"password\":\"a\"}"
                         },
                         "description": "   This endpoint enable users with admin role to sign in",
                         "auth": {
@@ -84,12 +84,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "necessitatibus",
+                                    "value": "vitae",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=necessitatibus"
+                            "raw": "{{baseUrl}}\/api\/website\/blog-posts?title=vitae"
                         },
                         "method": "GET",
                         "header": [
@@ -125,7 +125,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Similique sit qui illo necessitatibus fuga at.\",\"slug\":\"similique-sit-qui-illo-necessitatibus-fuga-at\",\"excerpt\":\"Eaque et sed esse est nihil hic.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-01\",\"author\":{\"first_name\":\"Dr. Lenore Hills\",\"last_name\":\"Ortiz\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -142,7 +142,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "cum",
+                                    "value": "harum",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -246,7 +246,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "provident",
+                                    "value": "maiores",
                                     "description": ""
                                 }
                             ]
@@ -285,7 +285,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/provident\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/maiores?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/maiores?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/maiores?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/api\\\/website\\\/blog-post-tags\\\/maiores\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
