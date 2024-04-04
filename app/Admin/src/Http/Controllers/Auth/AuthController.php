@@ -5,6 +5,8 @@ namespace App\Admin\Http\Controllers\Auth;
 use App\Admin\Http\Requests\Auth\LoginRequest;
 use App\Admin\Http\Requests\Auth\LogoutRequest;
 use App\Admin\Http\Resources\Auth\AdminResource;
+use App\Models\User;
+use App\Platform\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -25,16 +27,20 @@ class AuthController
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            $user->tokens()->where('name', $user->email)->delete();
+        $user = User::where('email', $request->email)->first();
 
-            return new AdminResource($user);
-        } else {
-            throw ValidationException::withMessages([
-                'error' => ['Invalid Credentials'],
-            ])->status(403);
+        if ($user && $user->hasRole(RoleName::ADMIN)) {
+            if (Auth::attempt($credentials)) {
+                $user->tokens()->where('name', $user->email)->delete();
+
+                return new AdminResource($user);
+            }
         }
+
+        throw ValidationException::withMessages([
+            'error' => ['Invalid credentials'],
+        ])->status(403);
+
     }
 
     #[Authenticated]

@@ -17,7 +17,6 @@ class AdminResource extends JsonResource
         return [
             'id' => $this->id,
             'email' => $this->email,
-            'token' => $this->createToken($this->email)->plainTextToken,
         ];
     }
 }
