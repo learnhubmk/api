@@ -29,12 +29,15 @@ class AuthController
 
         $user = User::where('email', $request->email)->first();
 
-        if ($user && $user->hasRole(RoleName::ADMIN)) {
-            if (Auth::attempt($credentials)) {
-                $user->tokens()->where('name', $user->email)->delete();
+        if (!$user || !$user->hasRole(RoleName::ADMIN)) {
+            throw ValidationException::withMessages([
+                'error' => ['Invalid credentials'],
+            ])->status(403);
+        }
 
-                return new AdminResource($user);
-            }
+        if (Auth::attempt($credentials)) {
+            $user->tokens()->where('name', $user->email)->delete();
+            return new AdminResource($user);
         }
 
         throw ValidationException::withMessages([
