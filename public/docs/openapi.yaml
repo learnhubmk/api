@@ -7,6 +7,43 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /admin/login:
+    post:
+      summary: Admin/Login
+      operationId: adminLogin
+      description: '   This endpoint enable users with admin role to sign in'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: password
+                  description: ''
+                  example: bailey.osinski@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: a
+              required:
+                - email
+                - password
+      security: []
+  /admin/logout:
+    post:
+      summary: Admin/Logout
+      operationId: adminLogout
+      description: '   This endpoint enable users with admin role to log out'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
   /api/website/blog-posts:
     get:
       summary: 'Website/List Blogs'
@@ -17,12 +54,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: eum
+          example: vitae
           required: false
           schema:
             type: string
             description: ''
-            example: eum
+            example: vitae
       responses:
         200:
           description: ''
@@ -31,55 +68,7 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    -
-                      title: 'Eum illo praesentium est sed nulla qui.'
-                      slug: eum-illo-praesentium-est-sed-nulla-qui
-                      excerpt: 'Quod ratione et beatae expedita.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-27'
-                      author:
-                        first_name: "Kelli O'Hara"
-                        last_name: Torphy
-                        image: null
-                    -
-                      title: 'Fugiat neque eum vel.'
-                      slug: fugiat-neque-eum-vel
-                      excerpt: 'Suscipit aut nihil ea eos.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-27'
-                      author:
-                        first_name: 'Vickie Hackett DDS'
-                        last_name: Oberbrunner
-                        image: null
-                    -
-                      title: 'Ad est et dolores eum quaerat.'
-                      slug: ad-est-et-dolores-eum-quaerat
-                      excerpt: 'Ex quo ratione distinctio omnis.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-03-27'
-                      author:
-                        first_name: "Kelli O'Hara"
-                        last_name: Torphy
-                        image: null
+                  data: []
                   links:
                     first: 'http://localhost/api/website/blog-posts?page=1'
                     last: 'http://localhost/api/website/blog-posts?page=1'
@@ -87,7 +76,7 @@ paths:
                     next: null
                   meta:
                     current_page: 1
-                    from: 1
+                    from: null
                     last_page: 1
                     links:
                       -
@@ -104,102 +93,12 @@ paths:
                         active: false
                     path: 'http://localhost/api/website/blog-posts'
                     per_page: 15
-                    to: 3
-                    total: 3
+                    to: null
+                    total: 0
                 properties:
                   data:
                     type: array
-                    example:
-                      -
-                        title: 'Eum illo praesentium est sed nulla qui.'
-                        slug: eum-illo-praesentium-est-sed-nulla-qui
-                        excerpt: 'Quod ratione et beatae expedita.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-27'
-                        author:
-                          first_name: "Kelli O'Hara"
-                          last_name: Torphy
-                          image: null
-                      -
-                        title: 'Fugiat neque eum vel.'
-                        slug: fugiat-neque-eum-vel
-                        excerpt: 'Suscipit aut nihil ea eos.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-27'
-                        author:
-                          first_name: 'Vickie Hackett DDS'
-                          last_name: Oberbrunner
-                          image: null
-                      -
-                        title: 'Ad est et dolores eum quaerat.'
-                        slug: ad-est-et-dolores-eum-quaerat
-                        excerpt: 'Ex quo ratione distinctio omnis.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-03-27'
-                        author:
-                          first_name: "Kelli O'Hara"
-                          last_name: Torphy
-                          image: null
-                    items:
-                      type: object
-                      properties:
-                        title:
-                          type: string
-                          example: 'Eum illo praesentium est sed nulla qui.'
-                        slug:
-                          type: string
-                          example: eum-illo-praesentium-est-sed-nulla-qui
-                        excerpt:
-                          type: string
-                          example: 'Quod ratione et beatae expedita.'
-                        tags:
-                          type: array
-                          example:
-                            -
-                              name: php
-                            -
-                              name: laravel
-                            -
-                              name: react
-                          items:
-                            type: object
-                            properties:
-                              name:
-                                type: string
-                                example: php
-                        publish_date:
-                          type: string
-                          example: '2024-03-27'
-                        author:
-                          type: object
-                          properties:
-                            first_name:
-                              type: string
-                              example: "Kelli O'Hara"
-                            last_name:
-                              type: string
-                              example: Torphy
-                            image:
-                              type: string
-                              example: null
+                    example: []
                   links:
                     type: object
                     properties:
@@ -222,8 +121,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       last_page:
                         type: integer
                         example: 1
@@ -261,11 +160,11 @@ paths:
                         type: integer
                         example: 15
                       to:
-                        type: integer
-                        example: 3
+                        type: string
+                        example: null
                       total:
                         type: integer
-                        example: 3
+                        example: 0
       tags:
         - Endpoints
       security: []
@@ -286,11 +185,11 @@ paths:
                   message: 'No query results for model [App\Website\Models\BlogPost].'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                  line: 487
+                  line: 628
                   trace:
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                      line: 463
+                      line: 576
                       function: prepareException
                       class: Illuminate\Foundation\Exceptions\Handler
                       type: '->'
@@ -380,7 +279,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
+                      line: 50
                       function: handle
                       class: Illuminate\Foundation\Http\Middleware\TransformsRequest
                       type: '->'
@@ -391,7 +290,7 @@ paths:
                       class: Illuminate\Foundation\Http\Middleware\TrimStrings
                       type: '->'
                     -
-                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
                       line: 27
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
@@ -400,11 +299,11 @@ paths:
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
                       line: 183
                       function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      class: Illuminate\Http\Middleware\ValidatePostSize
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 99
+                      line: 110
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -428,7 +327,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
+                      line: 57
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -560,43 +459,43 @@ paths:
                       type: '::'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 211
+                      line: 212
                       function: call
                       class: Illuminate\Container\Container
                       type: '->'
                     -
                       file: /var/www/html/vendor/symfony/console/Command/Command.php
-                      line: 326
+                      line: 279
                       function: execute
                       class: Illuminate\Console\Command
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 180
+                      line: 181
                       function: run
                       class: Symfony\Component\Console\Command\Command
                       type: '->'
                     -
                       file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 1096
+                      line: 1049
                       function: run
                       class: Illuminate\Console\Command
                       type: '->'
                     -
                       file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 324
+                      line: 318
                       function: doRunCommand
                       class: Symfony\Component\Console\Application
                       type: '->'
                     -
                       file: /var/www/html/vendor/symfony/console/Application.php
-                      line: 175
+                      line: 169
                       function: doRun
                       class: Symfony\Component\Console\Application
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 201
+                      line: 196
                       function: run
                       class: Symfony\Component\Console\Application
                       type: '->'
@@ -618,13 +517,13 @@ paths:
                     example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line:
                     type: integer
-                    example: 487
+                    example: 628
                   trace:
                     type: array
                     example:
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                        line: 463
+                        line: 576
                         function: prepareException
                         class: Illuminate\Foundation\Exceptions\Handler
                         type: '->'
@@ -714,7 +613,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
+                        line: 50
                         function: handle
                         class: Illuminate\Foundation\Http\Middleware\TransformsRequest
                         type: '->'
@@ -725,7 +624,7 @@ paths:
                         class: Illuminate\Foundation\Http\Middleware\TrimStrings
                         type: '->'
                       -
-                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
                         line: 27
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
@@ -734,11 +633,11 @@ paths:
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
                         line: 183
                         function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        class: Illuminate\Http\Middleware\ValidatePostSize
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 99
+                        line: 110
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -762,7 +661,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
+                        line: 57
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -894,43 +793,43 @@ paths:
                         type: '::'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 211
+                        line: 212
                         function: call
                         class: Illuminate\Container\Container
                         type: '->'
                       -
                         file: /var/www/html/vendor/symfony/console/Command/Command.php
-                        line: 326
+                        line: 279
                         function: execute
                         class: Illuminate\Console\Command
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 180
+                        line: 181
                         function: run
                         class: Symfony\Component\Console\Command\Command
                         type: '->'
                       -
                         file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 1096
+                        line: 1049
                         function: run
                         class: Illuminate\Console\Command
                         type: '->'
                       -
                         file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 324
+                        line: 318
                         function: doRunCommand
                         class: Symfony\Component\Console\Application
                         type: '->'
                       -
                         file: /var/www/html/vendor/symfony/console/Application.php
-                        line: 175
+                        line: 169
                         function: doRun
                         class: Symfony\Component\Console\Application
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 201
+                        line: 196
                         function: run
                         class: Symfony\Component\Console\Application
                         type: '->'
@@ -948,7 +847,7 @@ paths:
                           example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                         line:
                           type: integer
-                          example: 463
+                          example: 576
                         function:
                           type: string
                           example: prepareException
@@ -966,7 +865,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: quia
+        example: harum
         required: true
         schema:
           type: string
@@ -1194,8 +1093,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
-                    last: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
+                    first: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                    last: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1208,14 +1107,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
+                        url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blog-post-tags/voluptate'
+                    path: 'http://localhost/api/website/blog-post-tags/maiores'
                     per_page: 15
                     to: null
                     total: 0
@@ -1228,10 +1127,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                       prev:
                         type: string
                         example: null
@@ -1258,7 +1157,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blog-post-tags/voluptate?page=1'
+                            url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
                             label: '1'
                             active: true
                           -
@@ -1279,7 +1178,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/voluptate'
+                        example: 'http://localhost/api/website/blog-post-tags/maiores'
                       per_page:
                         type: integer
                         example: 15
@@ -1297,92 +1196,10 @@ paths:
         in: path
         name: tag
         description: ''
-        example: voluptate
+        example: maiores
         required: true
         schema:
           type: string
-  /api/healthcheck:
-    get:
-      summary: Healthcheck
-      operationId: healthcheck
-      description: "Check that the service is up. If everything is okay, you'll get a 200 OK response.\n\nOtherwise, the request will fail with a 400 error, and a response listing the failed services."
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: up
-                  services:
-                    database: up
-                    redis: up
-                properties:
-                  status:
-                    type: string
-                    example: up
-                    description: ''
-                  services:
-                    type: object
-                    properties:
-                      database:
-                        type: string
-                        example: up
-                      redis:
-                        type: string
-                        example: up
-        400:
-          description: 'Service is unhealthy'
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: down
-                  services:
-                    database: up
-                    redis: down
-                properties:
-                  status:
-                    type: string
-                    example: down
-                    description: ''
-                  services:
-                    type: object
-                    properties:
-                      database:
-                        type: string
-                        example: up
-                      redis:
-                        type: string
-                        example: down
-      tags:
-        - Endpoints
-      security: []
-  /api/user:
-    get:
-      summary: ''
-      operationId: getApiUser
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
 tags:
   -
     name: Endpoints

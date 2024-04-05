@@ -3,6 +3,86 @@ description: ''
 endpoints:
   -
     httpMethods:
+      - POST
+    uri: admin/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Admin/Login
+      description: '   This endpoint enable users with admin role to sign in'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: bailey.osinski@example.net
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: a
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: bailey.osinski@example.net
+      password: a
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: admin/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Admin/Logout
+      description: '   This endpoint enable users with admin role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - GET
     uri: api/website/blog-posts
     metadata:
@@ -26,20 +106,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: voluptatibus
+        example: vitae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: voluptatibus
+      title: vitae
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Magnam voluptatibus quibusdam beatae similique.","slug":"magnam-voluptatibus-quibusdam-beatae-similique","excerpt":"Officiis debitis id et reprehenderit sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Kelli O''Hara","last_name":"Torphy","image":null}},{"title":"Aut ipsum assumenda voluptatibus aut itaque totam.","slug":"aut-ipsum-assumenda-voluptatibus-aut-itaque-totam","excerpt":"Labore et vero magnam eius eos excepturi laudantium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-03-27","author":{"first_name":"Ashley Conn","last_name":"Leuschke","image":null}}],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -73,13 +153,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: fuga
+        example: harum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: fuga
+      slug: harum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -93,11 +173,11 @@ endpoints:
               "message": "No query results for model [App\\Website\\Models\\BlogPost].",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 487,
+              "line": 628,
               "trace": [
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 463,
+                      "line": 576,
                       "function": "prepareException",
                       "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
@@ -202,7 +282,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 40,
+                      "line": 50,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
                       "type": "->"
@@ -215,7 +295,7 @@ endpoints:
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
                       "line": 27,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
@@ -225,12 +305,12 @@ endpoints:
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
                       "line": 183,
                       "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 99,
+                      "line": 110,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -258,7 +338,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 39,
+                      "line": 57,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -412,49 +492,49 @@ endpoints:
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 211,
+                      "line": 212,
                       "function": "call",
                       "class": "Illuminate\\Container\\Container",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/symfony/console/Command/Command.php",
-                      "line": 326,
+                      "line": 279,
                       "function": "execute",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 180,
+                      "line": 181,
                       "function": "run",
                       "class": "Symfony\\Component\\Console\\Command\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 1096,
+                      "line": 1049,
                       "function": "run",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 324,
+                      "line": 318,
                       "function": "doRunCommand",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 175,
+                      "line": 169,
                       "function": "doRun",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 201,
+                      "line": 196,
                       "function": "run",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
@@ -468,55 +548,6 @@ endpoints:
                   }
               ]
           }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/website/blog-posts/tag/{tag}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Website/Get Blog Post By Tag'
-      description: 'This endpoint retrieve blogpost by a specific tag.'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      tag:
-        name: tag
-        description: 'The tag.'
-        required: true
-        example: perspiciatis
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      tag: perspiciatis
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","last":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-posts\/tag\/perspiciatis","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -571,24 +602,31 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/healthcheck
+    uri: 'api/website/blog-post-tags/{tag}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Healthcheck
-      description: |-
-        Check that the service is up. If everything is okay, you'll get a 200 OK response.
-
-        Otherwise, the request will fail with a 400 error, and a response listing the failed services.
+      title: 'Website/Get Blog Post By Tag'
+      description: 'This endpoint retrieve blogpost by a specific tag.'
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      tag:
+        name: tag
+        description: ''
+        required: true
+        example: maiores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      tag: maiores
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -597,72 +635,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":"up","services":{"database":"up","redis":"up"}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-      -
-        status: 400
-        content: '{"status":"down","services":{"database":"up","redis":"down"}}'
-        headers: []
-        description: 'Service is unhealthy'
-        custom: []
-    responseFields:
-      status:
-        name: status
-        description: ''
-        required: true
-        example: null
-        type: 'The status of this API (`up` or `down`).'
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      services:
-        name: services
-        description: ''
-        required: true
-        example: null
-        type: 'Map of each downstream service and their status (`up` or `down`).'
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/user
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/api\/website\/blog-post-tags\/maiores?page=1","last":"http:\/\/localhost\/api\/website\/blog-post-tags\/maiores?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/website\/blog-post-tags\/maiores?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/website\/blog-post-tags\/maiores","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
