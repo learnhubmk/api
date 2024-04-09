@@ -10,7 +10,6 @@ enum RoleName: string
     public function label(): string
     {
         return match ($this) {
-
             self::ADMIN => ucfirst(self::ADMIN->value),
             self::MEMBER => ucfirst(self::MEMBER->value),
         };

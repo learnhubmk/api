@@ -3,8 +3,10 @@
 namespace App\Admin\Http\Controllers;
 
 use App\Models\User;
+use App\Platform\Enums\UserStatusName;
 use Illuminate\Http\Request;
 use App\Admin\Http\Resources\UserResource;
+use Illuminate\Http\Response;
 
 class UserController
 {
@@ -39,8 +41,12 @@ class UserController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id): Response
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->update(['status' => UserStatusName::DELETED]);
+
+        return response()->noContent();
     }
 }
