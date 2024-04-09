@@ -100,7 +100,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 2, 2024</li>
+        <li>Last updated: April 4, 2024</li>
     </ul>
 </div>
 
@@ -139,8 +139,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ullrich.krista@example.org\",
-    \"password\": \"magni\"
+    \"email\": \"bailey.osinski@example.net\",
+    \"password\": \"a\"
 }"
 </code></pre></div>
 
@@ -156,8 +156,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ullrich.krista@example.org",
-    "password": "magni"
+    "email": "bailey.osinski@example.net",
+    "password": "a"
 };
 
 fetch(url, {
@@ -246,10 +246,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTadmin-login"
-               value="ullrich.krista@example.org"
+               value="bailey.osinski@example.net"
                data-component="body">
     <br>
-<p>Example: <code>ullrich.krista@example.org</code></p>
+<p>Example: <code>bailey.osinski@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -257,10 +257,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTadmin-login"
-               value="magni"
+               value="a"
                data-component="body">
     <br>
-<p>Example: <code>magni</code></p>
+<p>Example: <code>a</code></p>
         </div>
         </form>
 
@@ -387,7 +387,7 @@ Additionally you may use ?title= query param to filter by title</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts?title=necessitatibus" \
+    --get "http://localhost:8000/api/website/blog-posts?title=vitae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -398,7 +398,7 @@ Additionally you may use ?title= query param to filter by title</p>
 );
 
 const params = {
-    "title": "necessitatibus",
+    "title": "vitae",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -429,30 +429,7 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;title&quot;: &quot;Similique sit qui illo necessitatibus fuga at.&quot;,
-            &quot;slug&quot;: &quot;similique-sit-qui-illo-necessitatibus-fuga-at&quot;,
-            &quot;excerpt&quot;: &quot;Eaque et sed esse est nihil hic.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-04-01&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Dr. Lenore Hills&quot;,
-                &quot;last_name&quot;: &quot;Ortiz&quot;,
-                &quot;image&quot;: null
-            }
-        }
-    ],
+    &quot;data&quot;: [],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost/api/website/blog-posts?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost/api/website/blog-posts?page=1&quot;,
@@ -461,7 +438,7 @@ access-control-allow-origin: *
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
+        &quot;from&quot;: null,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -482,8 +459,8 @@ access-control-allow-origin: *
         ],
         &quot;path&quot;: &quot;http://localhost/api/website/blog-posts&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
     }
 }</code>
  </pre>
@@ -564,10 +541,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="GETapi-website-blog-posts"
-               value="necessitatibus"
+               value="vitae"
                data-component="query">
     <br>
-<p>Example: <code>necessitatibus</code></p>
+<p>Example: <code>vitae</code></p>
             </div>
                 </form>
 
@@ -584,14 +561,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-posts/cum" \
+    --get "http://localhost:8000/api/website/blog-posts/harum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-posts/cum"
+    "http://localhost:8000/api/website/blog-posts/harum"
 );
 
 const headers = {
@@ -1076,10 +1053,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="slug"                data-endpoint="GETapi-website-blog-posts--slug-"
-               value="cum"
+               value="harum"
                data-component="url">
     <br>
-<p>The slug of the blog post. Example: <code>cum</code></p>
+<p>The slug of the blog post. Example: <code>harum</code></p>
             </div>
                     </form>
 
@@ -1318,14 +1295,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/website/blog-post-tags/provident" \
+    --get "http://localhost:8000/api/website/blog-post-tags/maiores" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/website/blog-post-tags/provident"
+    "http://localhost:8000/api/website/blog-post-tags/maiores"
 );
 
 const headers = {
@@ -1356,8 +1333,8 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
+        &quot;first&quot;: &quot;http://localhost/api/website/blog-post-tags/maiores?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/api/website/blog-post-tags/maiores?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -1372,7 +1349,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/provident?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost/api/website/blog-post-tags/maiores?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -1382,7 +1359,7 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/provident&quot;,
+        &quot;path&quot;: &quot;http://localhost/api/website/blog-post-tags/maiores&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -1466,10 +1443,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="tag"                data-endpoint="GETapi-website-blog-post-tags--tag-"
-               value="provident"
+               value="maiores"
                data-component="url">
     <br>
-<p>Example: <code>provident</code></p>
+<p>Example: <code>maiores</code></p>
             </div>
                     </form>
 
