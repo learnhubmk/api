@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Platform\Http\Controllers\Auth;
+
+use App\Platform\Http\Controllers\BaseApiController;
+use App\Platform\Http\Requests\RegisterUserRequest;
+use App\Platform\Http\Resources\UserResource;
+use App\Platform\Interfaces\MemberRepositoryInterface;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+class UserRegisterController extends BaseApiController
+{
+    public function __construct(private MemberRepositoryInterface $memberRepository)
+    {
+        $this->memberRepository = $memberRepository;
+    }
+    /**
+     * Handle an incoming registration request.
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function store(RegisterUserRequest $request): Response
+    {
+        $user = $this->memberRepository->createMember($request->all());
+
+        event(new Registered($user));
+
+        return $this->response(UserResource::make($user));
+    }
+}

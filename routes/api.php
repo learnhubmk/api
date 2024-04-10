@@ -38,14 +38,6 @@ Route::get(
     }
 );
 
-Route::as('v1.')
-    ->middleware(['throttle:api'])
-    ->prefix('v1')
-    ->group(function () {
-        Route::post('/signup', [UserRegisterController::class, 'store'])
-            ->name('signup');
-    });
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

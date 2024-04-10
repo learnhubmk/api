@@ -1,18 +1,16 @@
 <?php
 
-namespace App\Models;
+namespace App\Platform\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use App\Enums\UserType;
-use App\Enums\UserTypeEnum;
+use App\Platform\Enums\UserTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class Member extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
@@ -48,5 +46,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'role' => UserTypeEnum::class
     ];
+
+    protected $guard_name = "web";
 }
