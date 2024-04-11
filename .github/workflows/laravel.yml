@@ -36,6 +36,8 @@ jobs:
         mysql:
           image: mysql:latest
           env:
+            MYSQL_DATABASE: learnhub
+            MYSQL_USER: learnhub_testing
             MYSQL_ROOT_PASSWORD: password
             MYSQL_DATABASE: test
           ports:
