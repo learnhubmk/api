@@ -4,7 +4,7 @@ namespace App\Platform\Http\Controllers\Auth;
 
 use App\Platform\Http\Controllers\BaseApiController;
 use App\Platform\Http\Requests\RegisterUserRequest;
-use App\Platform\Http\Resources\UserResource;
+use App\Platform\Http\Resources\MemberResource;
 use App\Platform\Interfaces\MemberRepositoryInterface;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -23,10 +23,9 @@ class UserRegisterController extends BaseApiController
      */
     public function store(RegisterUserRequest $request): Response
     {
-        $user = $this->memberRepository->createMember($request->all());
+        $member = $this->memberRepository->createMember($request);
+        event(new Registered($member));
 
-        event(new Registered($user));
-
-        return $this->response(UserResource::make($user));
+        return $this->response(MemberResource::make($member));
     }
 }

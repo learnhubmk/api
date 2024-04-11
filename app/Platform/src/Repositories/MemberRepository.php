@@ -10,10 +10,12 @@ use App\Platform\Models\Member;
 class MemberRepository implements MemberRepositoryInterface
 {
 
-    public function createMember(array $data)
+    public function createMember($request)
     {
-        $user = Member::create($data);
-        $user->assignRole(UserTypeEnum::Member);
-        return $user;
+        $member = Member::create($request->only('email', 'password'));
+        $member->assignRole(UserTypeEnum::Member);
+        $member->memberProfile()->create($request->only('first_name', 'last_name', 'website_url', 'linkedIn_url', 'gitHub_url', 'behance_url', 'dribbble_url'));
+
+        return $member;
     }
 }

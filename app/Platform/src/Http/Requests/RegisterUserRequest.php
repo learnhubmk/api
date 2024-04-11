@@ -22,8 +22,15 @@ class RegisterUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'string|required|email|max:255|unique:users,email',
+            'email' => 'string|required|email|max:255|unique:members,email',
             'password' => 'required|max:50|min:6',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'website_url' => 'url',
+            'linkedIn_url' => 'url',
+            'gitHub_url' => 'url',
+            'behance_url' => 'url',
+            'dribbble_url' => 'url',
         ];
     }
 }

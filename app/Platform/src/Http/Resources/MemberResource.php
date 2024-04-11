@@ -2,10 +2,11 @@
 
 namespace App\Platform\Http\Resources;
 
+use App\Platform\Models\MemberProfile;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class MemberResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,9 +15,10 @@ class UserResource extends JsonResource
      */
     public function toArray(Request $request)
     {
-        return [
-            'id' => $this->id,
-            'email' => $this->email,
-        ];
+        $member = [];
+        $member['id'] = $this->id;
+        $member['email'] = $this->email;
+        $member['memberProfile'] = new MemberProfileResource($this->memberProfile);
+        return $member;
     }
 }
