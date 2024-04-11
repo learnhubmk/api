@@ -31,5 +31,14 @@ jobs:
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: mysql
-        DB_DATABASE: database/database.mysql
+        DB_DATABASE: database/database.mysql        
+      services:
+        mysql:
+          image: mysql:latest
+          env:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: test
+          ports:
+            - 33306:3306
+          options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
       run: php artisan test --parallel
