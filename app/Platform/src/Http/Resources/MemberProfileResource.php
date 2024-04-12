@@ -22,6 +22,6 @@ class MemberProfileResource extends JsonResource
             'gitHub_url' => $this->gitHub_url,
             'behance_url' => $this->behance_url,
             'dribbble_url' => $this->dribbble_url,
-        ];;
+        ];
     }
 }

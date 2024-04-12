@@ -31,6 +31,9 @@ class RegisterUserRequest extends FormRequest
             'gitHub_url' => 'url',
             'behance_url' => 'url',
             'dribbble_url' => 'url',
+            'skills' => 'array',
+            'skills.*.skill_name' => 'string',
+            'skills.*.level' => 'integer|between:1,10',
         ];
     }
 }

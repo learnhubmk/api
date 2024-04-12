@@ -5,6 +5,7 @@ namespace App\Platform\Models;
 use App\Platform\Enums\UserTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -54,5 +55,10 @@ class Member extends Authenticatable
     public function memberProfile(): HasOne
     {
         return $this->hasOne(MemberProfile::class);
+    }
+
+    public function skills(): HasMany
+    {
+        return $this->hasMany(Skills::class);
     }
 }

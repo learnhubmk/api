@@ -19,6 +19,7 @@ class MemberResource extends JsonResource
         $member['id'] = $this->id;
         $member['email'] = $this->email;
         $member['memberProfile'] = new MemberProfileResource($this->memberProfile);
+        $member['skills'] = SkillsResource::make($this->skills)->all();
         return $member;
     }
 }
