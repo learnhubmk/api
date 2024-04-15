@@ -1,19 +1,15 @@
 <?php
 
 namespace App\Website\Mail;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 class ContactMail extends Mailable
 {
-    use Queueable, SerializesModels;
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(public array $contactData)
-    {
-    }
+    use Queueable;
+    use SerializesModels;
 
     public function build(): ContactMail
     {

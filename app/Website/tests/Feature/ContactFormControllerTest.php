@@ -11,7 +11,8 @@ use App\Website\Mail\ContactMail;
 
 class ContactFormControllerTest extends TestCase
 {
-    use WithFaker, RefreshDatabase;
+    use WithFaker;
+    use RefreshDatabase;
 
     public function setUp(): void
     {
