@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost:8000'
+    url: 'http://learnhub.test:8000'
 paths:
   /admin/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: bailey.osinski@example.net
+                  example: mohamed.hoeger@example.com
                 password:
                   type: string
                   description: ''
-                  example: a
+                  example: sit
               required:
                 - email
                 - password
@@ -54,12 +54,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: vitae
+          example: laboriosam
           required: false
           schema:
             type: string
             description: ''
-            example: vitae
+            example: laboriosam
       responses:
         200:
           description: ''
@@ -68,15 +68,63 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    -
+                      title: 'Et qui laboriosam vel itaque delectus.'
+                      slug: et-qui-laboriosam-vel-itaque-delectus
+                      excerpt: 'Odit ut nam perspiciatis id dignissimos.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Dr. Sandy Kessler III'
+                        last_name: Flatley
+                        image: null
+                    -
+                      title: 'Voluptatem veniam laboriosam quia.'
+                      slug: voluptatem-veniam-laboriosam-quia
+                      excerpt: 'Et voluptatem commodi nostrum totam alias aspernatur aut.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Kristofer Thompson'
+                        last_name: Wolff
+                        image: null
+                    -
+                      title: 'Sed laboriosam provident magni veritatis distinctio saepe maiores.'
+                      slug: sed-laboriosam-provident-magni-veritatis-distinctio-saepe-maiores
+                      excerpt: 'Ut quia omnis quaerat fugit ad.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-03-26'
+                      author:
+                        first_name: 'Ms. Clarissa Kunde'
+                        last_name: Kautzer
+                        image: null
                   links:
-                    first: 'http://localhost/api/website/blog-posts?page=1'
-                    last: 'http://localhost/api/website/blog-posts?page=1'
+                    first: 'http://learnhub.test/api/website/blog-posts?page=1'
+                    last: 'http://learnhub.test/api/website/blog-posts?page=1'
                     prev: null
                     next: null
                   meta:
                     current_page: 1
-                    from: null
+                    from: 1
                     last_page: 1
                     links:
                       -
@@ -84,30 +132,120 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blog-posts?page=1'
+                        url: 'http://learnhub.test/api/website/blog-posts?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blog-posts'
+                    path: 'http://learnhub.test/api/website/blog-posts'
                     per_page: 15
-                    to: null
-                    total: 0
+                    to: 3
+                    total: 3
                 properties:
                   data:
                     type: array
-                    example: []
+                    example:
+                      -
+                        title: 'Et qui laboriosam vel itaque delectus.'
+                        slug: et-qui-laboriosam-vel-itaque-delectus
+                        excerpt: 'Odit ut nam perspiciatis id dignissimos.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Dr. Sandy Kessler III'
+                          last_name: Flatley
+                          image: null
+                      -
+                        title: 'Voluptatem veniam laboriosam quia.'
+                        slug: voluptatem-veniam-laboriosam-quia
+                        excerpt: 'Et voluptatem commodi nostrum totam alias aspernatur aut.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Kristofer Thompson'
+                          last_name: Wolff
+                          image: null
+                      -
+                        title: 'Sed laboriosam provident magni veritatis distinctio saepe maiores.'
+                        slug: sed-laboriosam-provident-magni-veritatis-distinctio-saepe-maiores
+                        excerpt: 'Ut quia omnis quaerat fugit ad.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-03-26'
+                        author:
+                          first_name: 'Ms. Clarissa Kunde'
+                          last_name: Kautzer
+                          image: null
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Et qui laboriosam vel itaque delectus.'
+                        slug:
+                          type: string
+                          example: et-qui-laboriosam-vel-itaque-delectus
+                        excerpt:
+                          type: string
+                          example: 'Odit ut nam perspiciatis id dignissimos.'
+                        tags:
+                          type: array
+                          example:
+                            -
+                              name: php
+                            -
+                              name: laravel
+                            -
+                              name: react
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                example: php
+                        publish_date:
+                          type: string
+                          example: '2024-03-26'
+                        author:
+                          type: object
+                          properties:
+                            first_name:
+                              type: string
+                              example: 'Dr. Sandy Kessler III'
+                            last_name:
+                              type: string
+                              example: Flatley
+                            image:
+                              type: string
+                              example: null
                   links:
                     type: object
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blog-posts?page=1'
+                        example: 'http://learnhub.test/api/website/blog-posts?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blog-posts?page=1'
+                        example: 'http://learnhub.test/api/website/blog-posts?page=1'
                       prev:
                         type: string
                         example: null
@@ -121,8 +259,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       last_page:
                         type: integer
                         example: 1
@@ -134,7 +272,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blog-posts?page=1'
+                            url: 'http://learnhub.test/api/website/blog-posts?page=1'
                             label: '1'
                             active: true
                           -
@@ -155,16 +293,16 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blog-posts'
+                        example: 'http://learnhub.test/api/website/blog-posts'
                       per_page:
                         type: integer
                         example: 15
                       to:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 3
                       total:
                         type: integer
-                        example: 0
+                        example: 3
       tags:
         - Endpoints
       security: []
@@ -279,7 +417,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 50
+                      line: 51
                       function: handle
                       class: Illuminate\Foundation\Http\Middleware\TransformsRequest
                       type: '->'
@@ -613,7 +751,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 50
+                        line: 51
                         function: handle
                         class: Illuminate\Foundation\Http\Middleware\TransformsRequest
                         type: '->'
@@ -865,7 +1003,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: harum
+        example: optio
         required: true
         schema:
           type: string
@@ -925,10 +1063,10 @@ paths:
                     -
                       name: redis
                   links:
-                    first: 'http://localhost/api/website/tags?page=1'
-                    last: 'http://localhost/api/website/tags?page=2'
+                    first: 'http://learnhub.test/api/website/tags?page=1'
+                    last: 'http://learnhub.test/api/website/tags?page=2'
                     prev: null
-                    next: 'http://localhost/api/website/tags?page=2'
+                    next: 'http://learnhub.test/api/website/tags?page=2'
                   meta:
                     current_page: 1
                     from: 1
@@ -939,18 +1077,18 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/tags?page=1'
+                        url: 'http://learnhub.test/api/website/tags?page=1'
                         label: '1'
                         active: true
                       -
-                        url: 'http://localhost/api/website/tags?page=2'
+                        url: 'http://learnhub.test/api/website/tags?page=2'
                         label: '2'
                         active: false
                       -
-                        url: 'http://localhost/api/website/tags?page=2'
+                        url: 'http://learnhub.test/api/website/tags?page=2'
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/tags'
+                    path: 'http://learnhub.test/api/website/tags'
                     per_page: 20
                     to: 20
                     total: 23
@@ -1009,16 +1147,16 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/tags?page=1'
+                        example: 'http://learnhub.test/api/website/tags?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/tags?page=2'
+                        example: 'http://learnhub.test/api/website/tags?page=2'
                       prev:
                         type: string
                         example: null
                       next:
                         type: string
-                        example: 'http://localhost/api/website/tags?page=2'
+                        example: 'http://learnhub.test/api/website/tags?page=2'
                   meta:
                     type: object
                     properties:
@@ -1039,15 +1177,15 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/tags?page=1'
+                            url: 'http://learnhub.test/api/website/tags?page=1'
                             label: '1'
                             active: true
                           -
-                            url: 'http://localhost/api/website/tags?page=2'
+                            url: 'http://learnhub.test/api/website/tags?page=2'
                             label: '2'
                             active: false
                           -
-                            url: 'http://localhost/api/website/tags?page=2'
+                            url: 'http://learnhub.test/api/website/tags?page=2'
                             label: 'Next &raquo;'
                             active: false
                         items:
@@ -1064,7 +1202,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/tags'
+                        example: 'http://learnhub.test/api/website/tags'
                       per_page:
                         type: integer
                         example: 20
@@ -1093,8 +1231,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
-                    last: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                    first: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
+                    last: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1107,14 +1245,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                        url: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/api/website/blog-post-tags/maiores'
+                    path: 'http://learnhub.test/api/website/blog-post-tags/qui'
                     per_page: 15
                     to: null
                     total: 0
@@ -1127,10 +1265,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                        example: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                        example: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
                       prev:
                         type: string
                         example: null
@@ -1157,7 +1295,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/api/website/blog-post-tags/maiores?page=1'
+                            url: 'http://learnhub.test/api/website/blog-post-tags/qui?page=1'
                             label: '1'
                             active: true
                           -
@@ -1178,7 +1316,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/api/website/blog-post-tags/maiores'
+                        example: 'http://learnhub.test/api/website/blog-post-tags/qui'
                       per_page:
                         type: integer
                         example: 15
@@ -1196,10 +1334,58 @@ paths:
         in: path
         name: tag
         description: ''
-        example: maiores
+        example: qui
         required: true
         schema:
           type: string
+  /api/website/contact:
+    post:
+      summary: 'Submit Contact Form'
+      operationId: submitContactForm
+      description: 'This endpoint is used for submitting contact form data.'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'The first name of the user.'
+                  example: veniam
+                last_name:
+                  type: string
+                  description: 'The last name of the user.'
+                  example: mollitia
+                email:
+                  type: string
+                  description: 'The email address of the user.'
+                  example: bkutch@example.com
+                subject:
+                  type: string
+                  description: 'The subject of the message.'
+                  example: error
+                message:
+                  type: string
+                  description: 'The body of the message.'
+                  example: voluptates
+                cf-turnstile-response:
+                  type: string
+                  description: 'Cloudflare Turnstile ReCaptcha token'
+                  example: rerum
+              required:
+                - first_name
+                - last_name
+                - email
+                - subject
+                - message
+                - cf-turnstile-response
+      security: []
 tags:
   -
     name: Endpoints
