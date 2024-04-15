@@ -23,5 +23,4 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
-    </php>
-<formatOutput>1</formatOutput></phpunit>
+    </php></phpunit>
