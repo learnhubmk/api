@@ -9,6 +9,7 @@ use Knuckles\Scribe\Attributes\Endpoint;
 use App\Website\Mail\ContactMail;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\JsonResponse;
 
 class ContactFormController extends Controller
 {
@@ -19,18 +20,12 @@ class ContactFormController extends Controller
     #[BodyParam(name: "subject", type: "string", description: "The subject of the message.", required: true)]
     #[BodyParam(name: "message", type: "string", description: "The body of the message.", required: true)]
     #[BodyParam(name: "cf-turnstile-response", type: "string", description: "Cloudflare Turnstile ReCaptcha token")]
-    public function __invoke(ContactFormRequest $request): \Illuminate\Http\JsonResponse
+    public function __invoke(ContactFormRequest $request): JsonResponse
     {
-        try {
-            $mailData = $request->validated();
-            $contactAddress = config('mail.contact_email');
-
-            Mail::to($contactAddress)->send(new ContactMail($mailData));
-            return response()->json(['message' => 'Your message has been sent successfully!'], Response::HTTP_OK);
-        } catch (\Exception $e) {
-            return response()->json(['message' => 'Failed to send your message, please try again later.'], Response::HTTP_INTERNAL_SERVER_ERROR);
-        }
-
+        $mailData = $request->validated();
+        $contactAddress = config('mail.contact_email');
+        Mail::to($contactAddress)->queue(new ContactMail($mailData));
+        return response()->json(['message' => 'Your message has been sent successfully!'], Response::HTTP_OK);
     }
 
 }
