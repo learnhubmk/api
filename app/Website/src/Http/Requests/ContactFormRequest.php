@@ -4,6 +4,7 @@ namespace App\Website\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ContactFormRequest extends FormRequest
 {
@@ -22,12 +23,20 @@ class ContactFormRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|email:filter',
             'subject' => 'required|string|max:255',
             'message' => 'required|string|max:1000',
         ];
+
+        if (app()->environment('production')) {
+            // Only apply the captcha rule if not in the testing environment
+            $rules['cf-turnstile-response'] = ['required', Rule::turnstile()];
+        }
+
+        return $rules;
+
     }
 }

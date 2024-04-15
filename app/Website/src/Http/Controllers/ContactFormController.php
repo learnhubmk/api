@@ -18,6 +18,7 @@ class ContactFormController extends Controller
     #[BodyParam(name: "email", type: "string", description: "The email address of the user.", required: true)]
     #[BodyParam(name: "subject", type: "string", description: "The subject of the message.", required: true)]
     #[BodyParam(name: "message", type: "string", description: "The body of the message.", required: true)]
+    #[BodyParam(name: "cf-turnstile-response", type: "string", description: "Cloudflare Turnstile ReCaptcha token")]
     public function __invoke(ContactFormRequest $request): \Illuminate\Http\JsonResponse
     {
         try {

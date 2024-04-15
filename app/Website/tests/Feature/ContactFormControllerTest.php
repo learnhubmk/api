@@ -37,11 +37,11 @@ class ContactFormControllerTest extends TestCase
 
         Mail::assertSent(ContactMail::class, function ($mail) use ($formData) {
             return $mail->hasTo(config('mail.contact_email')) &&
-                $mail->contactData['first_name'] === 'Malista';
-                $mail->contactData['last_name'] === 'Polikala';
-                $mail->contactData['email'] === 'malista.polikala@on.net.mk';
-                $mail->contactData['subject'] === 'Test Subject';
-                $mail->contactData['message'] === 'Test message content';
+                $mail->contactData['first_name'] === $formData['first_name'] &&
+                $mail->contactData['last_name'] === $formData['last_name'] &&
+                $mail->contactData['email'] === $formData['email'] &&
+                $mail->contactData['subject'] === $formData['subject'] &&
+                $mail->contactData['message'] === $formData['message'];
         });
     }
 
