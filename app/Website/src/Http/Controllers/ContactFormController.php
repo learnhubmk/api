@@ -22,9 +22,7 @@ class ContactFormController extends Controller
     #[BodyParam(name: "cf-turnstile-response", type: "string", description: "Cloudflare Turnstile ReCaptcha token")]
     public function __invoke(ContactFormRequest $request): JsonResponse
     {
-        $mailData = $request->validated();
-        $contactAddress = config('mail.contact_email');
-        Mail::to($contactAddress)->queue(new ContactMail($mailData));
+        Mail::to(config('mail.contact_email'))->queue(new ContactMail($request->validated()));
         return response()->json(['message' => 'Your message has been sent successfully!'], Response::HTTP_OK);
     }
 
