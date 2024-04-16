@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Arr;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
@@ -35,5 +36,19 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    public function scopeFilter($query, array $filters)
+    {
+        $query
+            ->when(Arr::get($filters, 'first_name'), function ($query, $firstName) {
+                return $query->whereRelation('profile', 'first_name', 'LIKE', "{$firstName}%");
+            })
+            ->when(Arr::get($filters, 'last_name'), function ($query, $lastName) {
+                return $query->whereRelation('profile', 'last_name', 'LIKE', "{$lastName}%");
+            })
+            ->when(Arr::get($filters, 'role'), function ($query, $role) {
+                return $query->whereRelation('roles', 'name', $role);
+            });
     }
 }

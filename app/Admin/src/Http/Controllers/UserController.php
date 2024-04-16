@@ -6,18 +6,27 @@ use App\Models\User;
 use App\Platform\Enums\UserStatusName;
 use Illuminate\Http\Request;
 use App\Admin\Http\Resources\UserResource;
+use App\Platform\Enums\RoleName;
 use Illuminate\Http\Response;
+use Illuminate\Validation\Rule;
 
 class UserController
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $validated = $request->validate([
+            'first_name' => ['nullable', 'string'],
+            'last_name' => ['nullable', 'string'],
+            'role' => ['nullable', Rule::enum(RoleName::class)],
+        ]);
+
         return UserResource::collection(
             User::query()
                 ->with(['roles'])
+                ->filter($validated)
                 ->paginate(20)
         );
     }

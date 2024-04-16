@@ -2,6 +2,7 @@
 
 namespace App\Admin\Tests\Feature;
 
+use App\Models\Profile;
 use App\Platform\Enums\UserStatusName;
 use Tests\TestCase;
 use App\Models\User;
@@ -9,6 +10,7 @@ use Laravel\Sanctum\Sanctum;
 use App\Platform\Enums\RoleName;
 use PHPUnit\Framework\Attributes\Test;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class UsersTest extends TestCase
 {
@@ -38,6 +40,43 @@ class UsersTest extends TestCase
 
         $this->assertSame('user@learnhub.com', $response['data'][0]['email']);
         $this->assertSame(['admin', 'member'], $response['data'][0]['roles']);
+    }
+
+    public static function userDataProvider()
+    {
+        return [
+            'wrong_first_name' => ['first_name', 'blablabla', 0],
+            'correct_first_name' => ['first_name', 'john', 1],
+            'wrong_last_name' => ['last_name', 'blablabla', 0],
+            'correct_last_name' => ['last_name', 'doe', 1],
+            'wrong_role' => ['role', 'member', 0],
+            'correct_role' => ['role', 'admin', 1],
+        ];
+    }
+
+    #[Test]
+    #[DataProvider('userDataProvider')]
+    public function it_can_filter_users(string $field, string $value, int $count): void
+    {
+        $this->withoutExceptionHandling();
+
+        $user = User::factory()->create([
+            'email' => 'user@learnhub.com',
+        ]);
+
+        Profile::factory()->for($user)->create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+        ]);
+
+        $user->assignRole(RoleName::ADMIN);
+
+        Sanctum::actingAs($user);
+
+        $response = $this->getJson("/admin/users?{$field}={$value}")->json();
+        $this->assertCount($count, $response['data']);
+
+        // dd($response);
     }
 
     #[Test]
