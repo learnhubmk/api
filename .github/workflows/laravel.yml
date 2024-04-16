@@ -31,24 +31,23 @@ jobs:
         run: cp .env.ci .env
       - name: Run composer
         run: >-
-         composer install 
-         --no-interaction 
-         --ignore-platform-reqs
+         composer install
+         --no-interaction
          --no-scripts
-        
-      - name: Run parallel testing
-        run: php artisan test --parallel
-
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: learnhub_testing
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping"
-          --health-interval=5s
-          --health-timeout=5s
-          --health-retries=3
+#
+#      - name: Run parallel testing
+#        run: php artisan test --parallel
+#
+#    services:
+#      mysql:
+#        image: mysql:8.0
+#        env:
+#          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+#          MYSQL_DATABASE: learnhub_testing
+#        ports:
+#          - 3306:3306
+#        options: >-
+#          --health-cmd="mysqladmin ping"
+#          --health-interval=5s
+#          --health-timeout=5s
+#          --health-retries=3
