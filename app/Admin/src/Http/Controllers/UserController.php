@@ -47,6 +47,8 @@ class UserController
 
         $user->update(['status' => UserStatusName::DELETED]);
 
+        $user->delete();
+
         return response()->noContent();
     }
 }

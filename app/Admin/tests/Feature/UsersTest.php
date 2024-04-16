@@ -103,6 +103,7 @@ class UsersTest extends TestCase
         $this->assertDatabaseHas($member->getTable(), [
             'id' => $member->id,
             'status' => UserStatusName::DELETED,
+            'deleted_at' => now(),
         ]);
     }
 
