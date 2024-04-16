@@ -2,6 +2,7 @@
 
 namespace App\Admin\Database\Seeders;
 
+use App\Models\Profile;
 use App\Models\User;
 use App\Platform\Enums\RoleName;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,11 @@ class AdminSeeder extends Seeder
         ]);
 
         $user->assignRole(RoleName::ADMIN);
+
+        Profile::create([
+            'user_id' => $user->id,
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+        ]);
     }
 }
