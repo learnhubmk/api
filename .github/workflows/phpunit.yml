@@ -1,4 +1,4 @@
-name: PHP Unit tests
+name: PHPUnit tests
 
 on:
   pull_request:
@@ -31,13 +31,13 @@ jobs:
         run: cp .env.ci .env
       - name: Run composer
         run: >-
-         composer install 
-         --no-interaction 
+         composer install
+         --no-interaction
          --ignore-platform-reqs
          --no-scripts
-        
+
       - name: Run parallel testing
-        run: php artisan test --parallel
+        run: php artisan test --parallel --create-databases
 
     services:
       mysql:
