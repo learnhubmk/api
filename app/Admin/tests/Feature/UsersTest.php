@@ -75,8 +75,57 @@ class UsersTest extends TestCase
 
         $response = $this->getJson("/admin/users?{$field}={$value}")->json();
         $this->assertCount($count, $response['data']);
+    }
 
-        // dd($response);
+    public static function userSortDataProvider()
+    {
+        return [
+            // 'Can sort by id in asc dir' => ['id', 'asc', [1, 2, 3, 4]],
+            // 'Can sort by id in desc dir' => ['id', 'desc', [8, 7, 6, 5]],
+            'Can sort by first name in asc dir' => ['first_name', 'asc', ['a', 'b', 'c', 'd']],
+            'Can sort by first name in desc dir' => ['first_name', 'desc', ['d', 'c', 'b', 'a']],
+            'Can sort by last name in asc dir' => ['last_name', 'asc', ['a', 'b', 'c', 'd']],
+            'Can sort by last name in desc dir' => ['last_name', 'desc', ['d', 'c', 'b', 'a']],
+        ];
+    }
+
+    #[Test]
+    #[DataProvider('userSortDataProvider')]
+    public function it_can_sort_the_users(string $field, string $direction, array $dataset): void
+    {
+        $this->withoutExceptionHandling();
+
+        collect([
+            ['a', 'b'],
+            ['c', 'c'],
+            ['b', 'a'],
+        ])->each(function ($user) {
+            [$first, $last] = $user;
+
+            Profile::factory()->create([
+                'first_name' => $first,
+                'last_name' => $last,
+            ]);
+        });
+
+        $user = User::factory()->create([
+            'email' => 'user@learnhub.com',
+        ]);
+
+        Profile::factory()->for($user)->create([
+            'first_name' => 'd',
+            'last_name' => 'd',
+        ]);
+
+        $user->assignRole(RoleName::ADMIN);
+
+        Sanctum::actingAs($user);
+
+        $response = $this->getJson("/admin/users?sortBy={$field}&sortDirection={$direction}")->json();
+
+        collect($dataset)->each(function ($name, $index) use ($response, $field) {
+            $this->assertSame($name, $response['data'][$index][$field]);
+        });
     }
 
     #[Test]
@@ -88,12 +137,20 @@ class UsersTest extends TestCase
         $adminUser->assignRole(RoleName::ADMIN);
         $adminUser->assignRole(RoleName::MEMBER);
 
+        Profile::factory()->for($adminUser)->create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+        ]);
+
         Sanctum::actingAs($adminUser);
 
         $response = $this->getJson('/admin/users/' . $adminUser->id);
 
         $response->assertExactJson([
             'data' => [
+                'id' => $adminUser->id,
+                'first_name' => 'John',
+                'last_name' => 'Doe',
                 'id' => $adminUser->id,
                 'email' => $adminUser->email,
                 'roles' => ['admin', 'member'],

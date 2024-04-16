@@ -21,20 +21,46 @@ class UserController
             'first_name' => ['nullable', 'string'],
             'last_name' => ['nullable', 'string'],
             'role' => ['nullable', Rule::enum(RoleName::class)],
+            'sortBy' => ['nullable', 'in:id,first_name,last_name'],
+            'sortDirection' => ['nullable', 'in:asc,desc'],
         ]);
+
+        $sortFieldMap = [
+            'id' => 'users.id',
+            'first_name' => 'profiles.first_name',
+            'last_name' => 'profiles.last_name',
+        ][$validated['sortBy'] ?? 'id'];
 
         return UserResource::collection(
             User::query()
                 ->with(['roles'])
+                ->leftJoin('profiles', 'users.id', '=', 'profiles.user_id')
+                ->orderBy($sortFieldMap, $validated['sortDirection'] ?? 'asc')
                 ->filter($validated)
+                ->select([
+                    'users.id as id',
+                    'users.email as email',
+                    'profiles.first_name as first_name',
+                    'profiles.last_name as last_name',
+                ])
                 ->paginate(20)
         );
     }
 
-    // TODO: Check why model binding is not working, ex: User $user
     public function show(int $id)
     {
-        $user = User::findOrFail($id);
+        $user = User::query()
+            ->leftJoin('profiles', 'users.id', '=', 'profiles.user_id')
+            ->where('users.id', $id)
+            ->select([
+                'users.id as id',
+                'users.email as email',
+                'profiles.first_name as first_name',
+                'profiles.last_name as last_name',
+            ])
+            ->first();
+
+        abort_unless($user, 404);
 
         return new UserResource($user);
     }
