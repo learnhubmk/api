@@ -37,14 +37,15 @@ jobs:
          --no-scripts
 
       - name: Run parallel testing
-        run: php artisan test --parallel --recreate-databases
+        run: php artisan test --parallel
 
     services:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: learnhub_testing
+          DB_USER: root
+          DB_ROOT_PASSWORD: learnhub
+          DB_USER_PASSWORD: learnhub
         ports:
           - 3306:3306
         options: >-
