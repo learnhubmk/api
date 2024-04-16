@@ -27,8 +27,6 @@ jobs:
         uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.3'
-      - name: Copy .env file
-        run: cp .env.ci .env
       - name: Run composer
         run: >-
          composer install
