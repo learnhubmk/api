@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:8000</code>
+    <strong>Base URL</strong>: <code>http://learnhub.test:8000</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

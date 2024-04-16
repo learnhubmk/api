@@ -201,12 +201,14 @@ return [
                 'maxProcesses' => 10,
                 'balanceMaxShift' => 1,
                 'balanceCooldown' => 3,
+                'queue' => ['default', 'contact-emails'],
             ],
         ],
 
         'local' => [
             'supervisor-1' => [
                 'maxProcesses' => 3,
+                'queue' => ['default', 'contact-emails'],
             ],
         ],
     ],

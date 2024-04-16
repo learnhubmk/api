@@ -131,4 +131,6 @@ return [
         ],
     ],
 
+    'contact_email' => env('MAIL_CONTACT_ADDRESS', 'contact@learnhub.mk')
+
 ];

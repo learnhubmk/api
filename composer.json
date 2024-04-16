@@ -17,10 +17,13 @@
         "laravel/sanctum": "^4.0",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.8",
+        "ryangjchandler/laravel-cloudflare-turnstile": "^1.1",
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
-        "spatie/laravel-permission": "^6.4"
+        "spatie/laravel-permission": "^6.4",
+        "symfony/http-client": "^7.0",
+        "symfony/postmark-mailer": "^7.0"
     },
     "require-dev": {
         "brianium/paratest": "^7.4",
