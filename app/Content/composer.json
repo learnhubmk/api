@@ -1,0 +1,24 @@
+{
+	"name": "app/content",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"App\\Content\\": "src/",
+			"App\\Content\\Tests\\": "tests/",
+			"App\\Content\\Database\\Factories\\": "database/factories/",
+			"App\\Content\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"App\\Content\\Providers\\ContentServiceProvider"
+			]
+		}
+	}
+}

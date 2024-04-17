@@ -17,3 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/schemas/githubAcitons.json
+!/storage/app/scribe/
