@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://learnhub.test'
+    url: 'https://learnhub.mk'
 paths:
   /admin/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: nschneider@example.net
+                  example: frami.adonis@example.org
                 password:
                   type: string
                   description: ''
-                  example: enim
+                  example: laudantium
               required:
                 - email
                 - password
@@ -96,12 +96,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: magnam
+          example: sequi
           required: false
           schema:
             type: string
             description: ''
-            example: magnam
+            example: sequi
       responses:
         200:
           description: ''
@@ -112,8 +112,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-posts?page=1'
-                    last: 'http://learnhub.test/blog-posts?page=1'
+                    first: 'https://learnhub.mk/blog-posts?page=1'
+                    last: 'https://learnhub.mk/blog-posts?page=1'
                     prev: null
                     next: null
                   meta:
@@ -126,14 +126,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-posts?page=1'
+                        url: 'https://learnhub.mk/blog-posts?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-posts'
+                    path: 'https://learnhub.mk/blog-posts'
                     per_page: 15
                     to: null
                     total: 0
@@ -146,10 +146,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-posts?page=1'
+                        example: 'https://learnhub.mk/blog-posts?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-posts?page=1'
+                        example: 'https://learnhub.mk/blog-posts?page=1'
                       prev:
                         type: string
                         example: null
@@ -176,7 +176,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-posts?page=1'
+                            url: 'https://learnhub.mk/blog-posts?page=1'
                             label: '1'
                             active: true
                           -
@@ -197,7 +197,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-posts'
+                        example: 'https://learnhub.mk/blog-posts'
                       per_page:
                         type: integer
                         example: 15
@@ -907,7 +907,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: rerum
+        example: quia
         required: true
         schema:
           type: string
@@ -927,8 +927,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags?page=1'
-                    last: 'http://learnhub.test/blog-post-tags?page=1'
+                    first: 'https://learnhub.mk/blog-post-tags?page=1'
+                    last: 'https://learnhub.mk/blog-post-tags?page=1'
                     prev: null
                     next: null
                   meta:
@@ -941,14 +941,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=1'
+                        url: 'https://learnhub.mk/blog-post-tags?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags'
+                    path: 'https://learnhub.mk/blog-post-tags'
                     per_page: 20
                     to: null
                     total: 0
@@ -961,10 +961,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=1'
+                        example: 'https://learnhub.mk/blog-post-tags?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=1'
+                        example: 'https://learnhub.mk/blog-post-tags?page=1'
                       prev:
                         type: string
                         example: null
@@ -991,7 +991,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags?page=1'
+                            url: 'https://learnhub.mk/blog-post-tags?page=1'
                             label: '1'
                             active: true
                           -
@@ -1012,7 +1012,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags'
+                        example: 'https://learnhub.mk/blog-post-tags'
                       per_page:
                         type: integer
                         example: 20
@@ -1041,8 +1041,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/enim?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                    first: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
+                    last: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1055,14 +1055,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        url: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/enim'
+                    path: 'https://learnhub.mk/blog-post-tags/molestiae'
                     per_page: 15
                     to: null
                     total: 0
@@ -1075,10 +1075,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        example: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        example: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
                       prev:
                         type: string
                         example: null
@@ -1105,7 +1105,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                            url: 'https://learnhub.mk/blog-post-tags/molestiae?page=1'
                             label: '1'
                             active: true
                           -
@@ -1126,7 +1126,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim'
+                        example: 'https://learnhub.mk/blog-post-tags/molestiae'
                       per_page:
                         type: integer
                         example: 15
@@ -1144,7 +1144,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: enim
+        example: molestiae
         required: true
         schema:
           type: string
@@ -1167,27 +1167,27 @@ paths:
                 first_name:
                   type: string
                   description: 'The first name of the user.'
-                  example: quia
+                  example: nostrum
                 last_name:
                   type: string
                   description: 'The last name of the user.'
-                  example: et
+                  example: atque
                 email:
                   type: string
                   description: 'The email address of the user.'
-                  example: cleve13@example.net
+                  example: lgulgowski@example.net
                 subject:
                   type: string
                   description: 'The subject of the message.'
-                  example: quasi
+                  example: ab
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: quia
+                  example: vitae
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: vitae
+                  example: et
               required:
                 - first_name
                 - last_name

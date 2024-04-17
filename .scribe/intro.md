@@ -3,7 +3,7 @@
 The documentation
 
 <aside>
-    <strong>Base URL</strong>: <code>http://learnhub.test</code>
+    <strong>Base URL</strong>: <code>https://learnhub.mk</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

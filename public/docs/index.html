@@ -22,7 +22,7 @@
     </script>
 
             <script>
-            var tryItOutBaseUrl = "http://learnhub.test";
+            var tryItOutBaseUrl = "https://learnhub.mk";
             var useCsrf = Boolean();
             var csrfUrl = "/sanctum/csrf-cookie";
         </script>
@@ -489,7 +489,7 @@
                 <h1 id="introduction">Introduction</h1>
 <p>The documentation</p>
 <aside>
-    <strong>Base URL</strong>: <code>http://learnhub.test</code>
+    <strong>Base URL</strong>: <code>https://learnhub.mk</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -520,7 +520,7 @@ You can switch the language used with the tabs at the top right (or from the nav
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/admin/login"
+            <div title="https://learnhub.mk/admin/login"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -530,7 +530,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/admin/login</div>
                     </div>
 
@@ -610,7 +610,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        nschneider@example.net
+                        frami.adonis@example.org
                     </div>
                 </div>
             </div>
@@ -634,7 +634,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        enim
+                        laudantium
                     </div>
                 </div>
             </div>
@@ -728,8 +728,8 @@ You can switch the language used with the tabs at the top right (or from the nav
                                      id="json-body-POSTadmin-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "nschneider@example.net",
-    "password": "enim"
+    "email": "frami.adonis@example.org",
+    "password": "laudantium"
 }</div>
                             </div>
                                             </div>
@@ -823,12 +823,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://learnhub.test/admin/login" \
+    "https://learnhub.mk/admin/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"nschneider@example.net\",
-    \"password\": \"enim\"
+    \"email\": \"frami.adonis@example.org\",
+    \"password\": \"laudantium\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -838,7 +838,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/admin/login"
+    "https://learnhub.mk/admin/login"
 );
 
 const headers = {
@@ -847,8 +847,8 @@ const headers = {
 };
 
 let body = {
-    "email": "nschneider@example.net",
-    "password": "enim"
+    "email": "frami.adonis@example.org",
+    "password": "laudantium"
 };
 
 fetch(url, {
@@ -863,7 +863,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/admin/login';
+$url = 'https://learnhub.mk/admin/login';
 $response = $client-&gt;post(
     $url,
     [
@@ -872,8 +872,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'nschneider@example.net',
-            'password' =&gt; 'enim',
+            'email' =&gt; 'frami.adonis@example.org',
+            'password' =&gt; 'laudantium',
         ],
     ]
 );
@@ -888,10 +888,10 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/admin/login'
+url = 'https://learnhub.mk/admin/login'
 payload = {
-    "email": "nschneider@example.net",
-    "password": "enim"
+    "email": "frami.adonis@example.org",
+    "password": "laudantium"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -920,7 +920,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/admin/logout"
+            <div title="https://learnhub.mk/admin/logout"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -930,7 +930,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/admin/logout</div>
                     </div>
 
@@ -1181,7 +1181,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://learnhub.test/admin/logout" \
+    "https://learnhub.mk/admin/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -1191,7 +1191,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/admin/logout"
+    "https://learnhub.mk/admin/logout"
 );
 
 const headers = {
@@ -1210,7 +1210,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/admin/logout';
+$url = 'https://learnhub.mk/admin/logout';
 $response = $client-&gt;post(
     $url,
     [
@@ -1231,7 +1231,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/admin/logout'
+url = 'https://learnhub.mk/admin/logout'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1267,7 +1267,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/"
+            <div title="https://learnhub.mk/"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1277,7 +1277,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/</div>
                     </div>
 
@@ -1488,7 +1488,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/" \
+    --get "https://learnhub.mk/" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -1498,7 +1498,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/"
+    "https://learnhub.mk/"
 );
 
 const headers = {
@@ -1517,7 +1517,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/';
+$url = 'https://learnhub.mk/';
 $response = $client-&gt;get(
     $url,
     [
@@ -1538,7 +1538,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test//'
+url = 'https://learnhub.mk//'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1629,7 +1629,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/sanctum/csrf-cookie"
+            <div title="https://learnhub.mk/sanctum/csrf-cookie"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1639,7 +1639,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/sanctum/csrf-cookie</div>
                     </div>
 
@@ -1850,7 +1850,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/sanctum/csrf-cookie" \
+    --get "https://learnhub.mk/sanctum/csrf-cookie" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -1860,7 +1860,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/sanctum/csrf-cookie"
+    "https://learnhub.mk/sanctum/csrf-cookie"
 );
 
 const headers = {
@@ -1879,7 +1879,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/sanctum/csrf-cookie';
+$url = 'https://learnhub.mk/sanctum/csrf-cookie';
 $response = $client-&gt;get(
     $url,
     [
@@ -1900,7 +1900,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/sanctum/csrf-cookie'
+url = 'https://learnhub.mk/sanctum/csrf-cookie'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1964,7 +1964,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     access-control-allow-origin
                                                             : *
                                                                                                                     set-cookie
-                                                            : XSRF-TOKEN=eyJpdiI6ImxBMDZQTjZML1lHWVc5b084citHTVE9PSIsInZhbHVlIjoianJ3bG8vcVVuUU9MaHlIVkFEQk5wZ3dDcWVUR3RnYlZWbUNWdi9zQnZmNHU0WjVBZTRpME5iVmJNS0ROZVErSDNvZUYyamI1N0JRdEdPdDZuclhBcC9Ic25nY21XOWNyYWNzUmM1V20zbzJnNXpMdzdlZkFFUTBDSEd0bGo2T3ciLCJtYWMiOiI4ZjJlNzk3YWJhYTFlNjdiY2MzNzY4NWI1OWE4MTNiN2FlNDU0YWVlOTVhZDljN2M2MDI1YWYyYmZkMzI2N2E2IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:12:47 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6IjV4amYvRE1wRWNnVGlhcmtqVzRrd0E9PSIsInZhbHVlIjoiczlDbjlyZ0ZKeHROcXlBdy9JUmh3Vm1DdmtlTnlHaWlDeENsRy8rSzU2UWV3TVRSSEM3T0l2V0xvTE5Yb0NZSEx1QkYrMTlydk9TMW5ySW04VU1ETUZCczU3OE1wdzdvY3NzdXA4eU92K0xXMnZmeGI3WXdZN0hRTkdyamVrMVoiLCJtYWMiOiIzMjA0YjI2YjdkZGRiMDgyZTc1YmY5ZjQzMGM0NTljMmI0ZWQ2YjA2YjE5ZTAxNzY3M2EwZjg1NmE4MzQwYzEzIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:12:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+                                                            : XSRF-TOKEN=eyJpdiI6InlxQUNEemdYV3VZNk52dGNKYnd6NXc9PSIsInZhbHVlIjoiYk1rZUcwVGJnZDdKdkttbVlld0NGbWE4MXloTGdNTDM1SUR0WVRibXp6VFRYb1FJM1liZW9vSFNmMlZKS1h5MWs1MjJnMkxlK2lOM0c0T0V1aXRNcmkxdndJcm9HQk9uOStaVUZ0TVY3cU5sOVJaU1FzOE12YU05Y3pySTZiK0wiLCJtYWMiOiIwZGM3YTFlMWMyYWE2N2NjMzE4ZDIwYWEyMzE0YWIxZmQyZWM3NWFlNzViZTRhNGI5YmNmMzI1NzJhNjdkYmMzIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:16:29 GMT; Max-Age=7200; path=/; secure; samesite=lax; learnhub_session=eyJpdiI6IkFLYndzVElveGJqSVRxcjF6T1JSbmc9PSIsInZhbHVlIjoia05QeWVBQnVZc2tmOWNXNml1b0tjdEhBRWN3V0hHUmt4T0lYTThHcDdiWXBmTEFmMDN4dnNmS3NJQk13Z1pBYjJ5T0pvREtlTmdZekVxRTVLSXh6NmlzMlZuakZUd2YyRVp2YTdJaVNPZmVRSS83VHh1RUxUVE5UZnVmaytpUHEiLCJtYWMiOiJlNzcyYzA5YTMxYzMyNTkwMzdiNGRhOWY2N2MwNGY2NDgxMDNmNGY0MzhlNzY3MjU1YmMzOWMwYzkxN2YzOWQ5IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:16:29 GMT; Max-Age=7200; path=/; httponly; samesite=lax
                                                          </code></pre>
                                             </details>
                                                                                                                             <pre><code>[Empty response]</code></pre>
@@ -1995,7 +1995,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/blog-posts"
+            <div title="https://learnhub.mk/blog-posts"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -2005,7 +2005,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/blog-posts</div>
                     </div>
 
@@ -2081,7 +2081,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        magnam
+                        sequi
                     </div>
                 </div>
             </div>
@@ -2177,7 +2177,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="title" name="title"
                                                    id="queryparam-GETblog-posts-title"
                                                    placeholder=""
-                                                   value="magnam" data-component="query"
+                                                   value="sequi" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -2275,7 +2275,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-posts?title=magnam" \
+    --get "https://learnhub.mk/blog-posts?title=sequi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2285,11 +2285,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-posts"
+    "https://learnhub.mk/blog-posts"
 );
 
 const params = {
-    "title": "magnam",
+    "title": "sequi",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2310,7 +2310,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-posts';
+$url = 'https://learnhub.mk/blog-posts';
 $response = $client-&gt;get(
     $url,
     [
@@ -2319,7 +2319,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'title' =&gt; 'magnam',
+            'title' =&gt; 'sequi',
         ],
     ]
 );
@@ -2334,9 +2334,9 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-posts'
+url = 'https://learnhub.mk/blog-posts'
 params = {
-  'title': 'magnam',
+  'title': 'sequi',
 }
 headers = {
   'Content-Type': 'application/json',
@@ -2407,8 +2407,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
+        &quot;first&quot;: &quot;https://learnhub.mk/blog-posts?page=1&quot;,
+        &quot;last&quot;: &quot;https://learnhub.mk/blog-posts?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -2423,7 +2423,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
+                &quot;url&quot;: &quot;https://learnhub.mk/blog-posts?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -2433,7 +2433,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://learnhub.test/blog-posts&quot;,
+        &quot;path&quot;: &quot;https://learnhub.mk/blog-posts&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -2458,7 +2458,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/blog-posts/{slug}"
+            <div title="https://learnhub.mk/blog-posts/{slug}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -2468,7 +2468,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/blog-posts/{slug}</div>
                     </div>
 
@@ -2547,7 +2547,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rerum
+                        quia
                     </div>
                 </div>
             </div>
@@ -2644,7 +2644,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="slug" name="slug"
                                                id="urlparam-GETblog-posts--slug--slug"
                                                placeholder="The slug of the blog post."
-                                               value="rerum" data-component="url"
+                                               value="quia" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -2742,7 +2742,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-posts/rerum" \
+    --get "https://learnhub.mk/blog-posts/quia" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2752,7 +2752,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-posts/rerum"
+    "https://learnhub.mk/blog-posts/quia"
 );
 
 const headers = {
@@ -2771,7 +2771,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-posts/rerum';
+$url = 'https://learnhub.mk/blog-posts/quia';
 $response = $client-&gt;get(
     $url,
     [
@@ -2792,7 +2792,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-posts/rerum'
+url = 'https://learnhub.mk/blog-posts/quia'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3257,7 +3257,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/blog-post-tags"
+            <div title="https://learnhub.mk/blog-post-tags"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3267,7 +3267,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/blog-post-tags</div>
                     </div>
 
@@ -3478,7 +3478,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-post-tags" \
+    --get "https://learnhub.mk/blog-post-tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3488,7 +3488,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-post-tags"
+    "https://learnhub.mk/blog-post-tags"
 );
 
 const headers = {
@@ -3507,7 +3507,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-post-tags';
+$url = 'https://learnhub.mk/blog-post-tags';
 $response = $client-&gt;get(
     $url,
     [
@@ -3528,7 +3528,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-post-tags'
+url = 'https://learnhub.mk/blog-post-tags'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3598,8 +3598,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
+        &quot;first&quot;: &quot;https://learnhub.mk/blog-post-tags?page=1&quot;,
+        &quot;last&quot;: &quot;https://learnhub.mk/blog-post-tags?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -3614,7 +3614,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
+                &quot;url&quot;: &quot;https://learnhub.mk/blog-post-tags?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -3624,7 +3624,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags&quot;,
+        &quot;path&quot;: &quot;https://learnhub.mk/blog-post-tags&quot;,
         &quot;per_page&quot;: 20,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -3649,7 +3649,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/blog-post-tags/{tag}"
+            <div title="https://learnhub.mk/blog-post-tags/{tag}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3659,7 +3659,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/blog-post-tags/{tag}</div>
                     </div>
 
@@ -3735,7 +3735,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        enim
+                        molestiae
                     </div>
                 </div>
             </div>
@@ -3832,7 +3832,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="tag" name="tag"
                                                id="urlparam-GETblog-post-tags--tag--tag"
                                                placeholder=""
-                                               value="enim" data-component="url"
+                                               value="molestiae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3930,7 +3930,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-post-tags/enim" \
+    --get "https://learnhub.mk/blog-post-tags/molestiae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3940,7 +3940,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-post-tags/enim"
+    "https://learnhub.mk/blog-post-tags/molestiae"
 );
 
 const headers = {
@@ -3959,7 +3959,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-post-tags/enim';
+$url = 'https://learnhub.mk/blog-post-tags/molestiae';
 $response = $client-&gt;get(
     $url,
     [
@@ -3980,7 +3980,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-post-tags/enim'
+url = 'https://learnhub.mk/blog-post-tags/molestiae'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4050,8 +4050,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/enim?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/enim?page=1&quot;,
+        &quot;first&quot;: &quot;https://learnhub.mk/blog-post-tags/molestiae?page=1&quot;,
+        &quot;last&quot;: &quot;https://learnhub.mk/blog-post-tags/molestiae?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -4066,7 +4066,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/enim?page=1&quot;,
+                &quot;url&quot;: &quot;https://learnhub.mk/blog-post-tags/molestiae?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -4076,7 +4076,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/enim&quot;,
+        &quot;path&quot;: &quot;https://learnhub.mk/blog-post-tags/molestiae&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -4101,7 +4101,7 @@ response.json()</code></pre>                                        </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://learnhub.test/contact"
+            <div title="https://learnhub.mk/contact"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -4111,7 +4111,7 @@ response.json()</code></pre>                                        </div>
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://learnhub.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://learnhub.mk</div>
                         <div class="sl-flex-1 sl-font-semibold">/contact</div>
                     </div>
 
@@ -4194,7 +4194,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        nostrum
                     </div>
                 </div>
             </div>
@@ -4221,7 +4221,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        atque
                     </div>
                 </div>
             </div>
@@ -4248,7 +4248,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        cleve13@example.net
+                        lgulgowski@example.net
                     </div>
                 </div>
             </div>
@@ -4275,7 +4275,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quasi
+                        ab
                     </div>
                 </div>
             </div>
@@ -4302,7 +4302,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        vitae
                     </div>
                 </div>
             </div>
@@ -4329,7 +4329,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        vitae
+                        et
                     </div>
                 </div>
             </div>
@@ -4423,12 +4423,12 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontact"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "first_name": "quia",
-    "last_name": "et",
-    "email": "cleve13@example.net",
-    "subject": "quasi",
-    "message": "quia",
-    "cf-turnstile-response": "vitae"
+    "first_name": "nostrum",
+    "last_name": "atque",
+    "email": "lgulgowski@example.net",
+    "subject": "ab",
+    "message": "vitae",
+    "cf-turnstile-response": "et"
 }</div>
                             </div>
                                             </div>
@@ -4522,16 +4522,16 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://learnhub.test/contact" \
+    "https://learnhub.mk/contact" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"quia\",
-    \"last_name\": \"et\",
-    \"email\": \"cleve13@example.net\",
-    \"subject\": \"quasi\",
-    \"message\": \"quia\",
-    \"cf-turnstile-response\": \"vitae\"
+    \"first_name\": \"nostrum\",
+    \"last_name\": \"atque\",
+    \"email\": \"lgulgowski@example.net\",
+    \"subject\": \"ab\",
+    \"message\": \"vitae\",
+    \"cf-turnstile-response\": \"et\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4541,7 +4541,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/contact"
+    "https://learnhub.mk/contact"
 );
 
 const headers = {
@@ -4550,12 +4550,12 @@ const headers = {
 };
 
 let body = {
-    "first_name": "quia",
-    "last_name": "et",
-    "email": "cleve13@example.net",
-    "subject": "quasi",
-    "message": "quia",
-    "cf-turnstile-response": "vitae"
+    "first_name": "nostrum",
+    "last_name": "atque",
+    "email": "lgulgowski@example.net",
+    "subject": "ab",
+    "message": "vitae",
+    "cf-turnstile-response": "et"
 };
 
 fetch(url, {
@@ -4570,7 +4570,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/contact';
+$url = 'https://learnhub.mk/contact';
 $response = $client-&gt;post(
     $url,
     [
@@ -4579,12 +4579,12 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'first_name' =&gt; 'quia',
-            'last_name' =&gt; 'et',
-            'email' =&gt; 'cleve13@example.net',
-            'subject' =&gt; 'quasi',
-            'message' =&gt; 'quia',
-            'cf-turnstile-response' =&gt; 'vitae',
+            'first_name' =&gt; 'nostrum',
+            'last_name' =&gt; 'atque',
+            'email' =&gt; 'lgulgowski@example.net',
+            'subject' =&gt; 'ab',
+            'message' =&gt; 'vitae',
+            'cf-turnstile-response' =&gt; 'et',
         ],
     ]
 );
@@ -4599,14 +4599,14 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/contact'
+url = 'https://learnhub.mk/contact'
 payload = {
-    "first_name": "quia",
-    "last_name": "et",
-    "email": "cleve13@example.net",
-    "subject": "quasi",
-    "message": "quia",
-    "cf-turnstile-response": "vitae"
+    "first_name": "nostrum",
+    "last_name": "atque",
+    "email": "lgulgowski@example.net",
+    "subject": "ab",
+    "message": "vitae",
+    "cf-turnstile-response": "et"
 }
 headers = {
   'Content-Type': 'application/json',
