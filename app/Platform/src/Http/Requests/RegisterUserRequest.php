@@ -32,8 +32,11 @@ class RegisterUserRequest extends FormRequest
             'behance_url' => 'url',
             'dribbble_url' => 'url',
             'skills' => 'array',
-            'skills.*.skill_name' => 'string',
+            'skills.*.skill_name' => 'string|max:255',
             'skills.*.level' => 'integer|between:1,10',
+            'learning_interests' => 'array',
+            'learning_interests.*.category_name' => 'string|max:255',
+            'learning_interests.*.note' => 'string|max:255',
         ];
     }
 }

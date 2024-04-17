@@ -2,7 +2,7 @@
 
 namespace App\Platform\Http\Resources;
 
-use App\Platform\Models\MemberProfile;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -19,7 +19,8 @@ class MemberResource extends JsonResource
         $member['id'] = $this->id;
         $member['email'] = $this->email;
         $member['memberProfile'] = new MemberProfileResource($this->memberProfile);
-        $member['skills'] = SkillsResource::make($this->skills)->all();
+        $member['skills'] = SkillsResource::collection($this->skills);
+        $member['learning_interests'] = LearningInterestResource::collection($this->learning_interests);
         return $member;
     }
 }

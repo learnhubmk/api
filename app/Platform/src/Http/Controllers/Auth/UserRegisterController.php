@@ -25,7 +25,6 @@ class UserRegisterController extends BaseApiController
     {
         $member = $this->memberRepository->createMember($request);
         event(new Registered($member));
-
         return $this->response(MemberResource::make($member));
     }
 }

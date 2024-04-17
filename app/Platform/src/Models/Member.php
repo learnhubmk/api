@@ -61,4 +61,9 @@ class Member extends Authenticatable
     {
         return $this->hasMany(Skills::class);
     }
+
+    public function learning_interests(): HasMany
+    {
+        return $this->hasMany(LearningInterest::class);
+    }
 }
