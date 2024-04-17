@@ -18,6 +18,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/.scribe
 /schemas/githubAcitons.json
-resources/views/scribe/index.blade.php
