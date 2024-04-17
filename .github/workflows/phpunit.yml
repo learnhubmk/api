@@ -1,0 +1,63 @@
+name: PHP Unit tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  phpunit:
+    env:
+      BROADCAST_DRIVER: log
+      CACHE_DRIVER: file
+      QUEUE_CONNECTION: sync
+      SESSION_DRIVER: array
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PASSWORD: learnhub_testing
+      DB_USERNAME: learnhub_testing
+      DB_DATABASE: learnhub_testing
+    name: Run PHPUnit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: composer-${{hashFiles('/**composer.lock')}}
+          restore-keys: |
+            composer-
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+        with:
+          php-version: '8.3'
+      - name: Run composer
+        run: >-
+         composer install
+         --no-interaction
+         --no-scripts
+
+      - name: Run tests
+        run: php artisan test
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: learnhub_testing
+          MYSQL_USER: learnhub_testing
+          MYSQL_PASSWORD: learnhub_testing
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=3

@@ -2,10 +2,10 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="Unit">
-            <directory>tests/Unit</directory>
+            <directory>tests/*/Unit</directory>
         </testsuite>
         <testsuite name="Feature">
-            <directory>tests/Feature</directory>
+            <directory>tests/*/Feature</directory>
         </testsuite>
     <testsuite name="Modules"><directory suffix="Test.php">./app/*/tests</directory></testsuite></testsuites>
     <source>
@@ -17,7 +17,9 @@
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
+        <env name="DB_CONNECTION" value="mysql"/>
         <env name="DB_DATABASE" value="testing"/>
+        <env name="DB_USERNAME" value="root"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
