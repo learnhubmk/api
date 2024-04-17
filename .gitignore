@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/docs
 /storage/*.key
 /vendor
 .env
@@ -18,3 +19,4 @@ yarn-error.log
 /.idea
 /.vscode
 /.scribe
+/schemas/githubAcitons.json
