@@ -11,6 +11,8 @@ on:
 jobs:
   phpunit:
     env:
+      APP_DEBUG: true
+      MAIL_MAILER: array
       BROADCAST_DRIVER: log
       CACHE_DRIVER: file
       QUEUE_CONNECTION: sync

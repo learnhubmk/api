@@ -28,14 +28,14 @@ class ContactControllerTest extends TestCase
         $formData = [
             'first_name' => 'Malista',
             'last_name' => 'Polikala',
-            'email' => 'malista.polikala@on.net.mk',
+            'email' => 'malista.polikala@onnet.mk',
             'subject' => 'Test Subject',
             'message' => 'Test message content'
         ];
 
         $response = $this->postJson(route('contact'), $formData);
 
-        $response->assertStatus(200)
+        $response->assertOk()
             ->assertJson(['message' => 'Your message has been sent successfully!']);
 
         Mail::assertQueued(ContactMail::class, function ($mail) use ($formData) {
@@ -52,7 +52,7 @@ class ContactControllerTest extends TestCase
     public function contact_form_submission_fails_on_mail_error()
     {
         Mail::fake();
-        
+
         Mail::shouldReceive('to')
             ->andThrow(new \Exception('Mail sending failed'));
 
