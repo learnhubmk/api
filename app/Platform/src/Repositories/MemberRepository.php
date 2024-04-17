@@ -26,6 +26,11 @@ class MemberRepository implements MemberRepositoryInterface
             }
         }
 
+        if (isset($request->experiences)) {
+            foreach ($request->experiences as $experience) {
+                $member->experiences()->create($experience);
+            }
+        }
 
         return $member;
     }

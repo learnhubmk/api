@@ -21,6 +21,7 @@ class MemberResource extends JsonResource
         $member['memberProfile'] = new MemberProfileResource($this->memberProfile);
         $member['skills'] = SkillsResource::collection($this->skills);
         $member['learning_interests'] = LearningInterestResource::collection($this->learning_interests);
+        $member['experiences'] = ExperienceResource::collection($this->experiences);
         return $member;
     }
 }

@@ -37,6 +37,9 @@ class RegisterUserRequest extends FormRequest
             'learning_interests' => 'array',
             'learning_interests.*.category_name' => 'string|max:255',
             'learning_interests.*.note' => 'string|max:255',
+            'experiences' => 'array',
+            'experiences.*.category_name' => 'string|max:255',
+            'experiences.*.current_position' => 'string|max:255',
         ];
     }
 }
