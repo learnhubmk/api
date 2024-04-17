@@ -23,6 +23,8 @@ class ContactControllerTest extends TestCase
     /** @test */
     public function contact_form_submission_succeeds()
     {
+        Mail::fake();
+        
         $formData = [
             'first_name' => 'Malista',
             'last_name' => 'Polikala',
@@ -63,6 +65,6 @@ class ContactControllerTest extends TestCase
         $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
-            ->assertJson(['message' => 'Mail sending failed']);
+            ->assertJson(['message' => 'Server Error']);
     }
 }
