@@ -36,7 +36,7 @@ class ContactControllerTest extends TestCase
         $response->assertStatus(200)
             ->assertJson(['message' => 'Your message has been sent successfully!']);
 
-        Mail::assertSent(ContactMail::class, function ($mail) use ($formData) {
+        Mail::assertQueued(ContactMail::class, function ($mail) use ($formData) {
             return $mail->hasTo(config('mail.contact_email')) &&
                 $mail->contactData['first_name'] === $formData['first_name'] &&
                 $mail->contactData['last_name'] === $formData['last_name'] &&
@@ -63,6 +63,6 @@ class ContactControllerTest extends TestCase
         $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
-            ->assertJson(['message' => 'Failed to send your message, please try again later.']);
+            ->assertJson(['message' => 'Mail sending failed']);
     }
 }
