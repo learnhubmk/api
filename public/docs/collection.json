@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "870604f7-c8c5-412a-9c1d-2570783e89ec",
+        "_postman_id": "6ebcd8b0-0381-4d84-875e-767c76f1e772",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"reinger.hunter@example.org\",\"password\":\"porro\"}"
+                            "raw": "{\"email\":\"zieme.gardner@example.com\",\"password\":\"alias\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -164,7 +164,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Ik5LYmlTUlcwdlBKc20yQThJZ3NOK3c9PSIsInZhbHVlIjoiQjhoNFRoQUlkVitUVVV0V0VtZXFKVG9HdFFzc1p2Ny80QXNCZFN4SWozYStQeWZIMkVjOWhvN3F5V0ZzUTlXWFZmSm5uVitmN2k5a045MnI0Z3ZEZVpzVng0bUtOekhDbmJiUXVvZEtsbDV2d0VySytBS01QYlozYUZBWXp2WDIiLCJtYWMiOiIwNTA1NTE4NGMxYjNiMzA3YzM1MmUzZWMxZmEzNDBkMjdjNTdjYzA5YzA5NjJmNTllMWZhOTEwYjU0NWJmNDJlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:24:16 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Ii9oL0JsVUZrTExvR1FaRGYwK2Rqc1E9PSIsInZhbHVlIjoidEdETk9Cb3JpaG1NaTZ3TnBCbStSQnFubkZieWZyNDNkREZjMzVvY2oyaXFaQzE2eFRueER6a1lMeTljRG1JeTFPQWFZYXRCMXNiTEk1NlFSSFNHVEF6ZjlXdTdDRk5va3RWdDVGSFRhNSs4Tmx6Z0ZaUzBXMisybzhoZzR2NzQiLCJtYWMiOiI5ZGE3OWUxNGFiYTUxMWJjZDAxNjZjZDViMjQ0MDM3ZjlmZjMzNzQ1OTY1OTNlNDgyMTI2MTZkMmRiNDg3MjBlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:24:16 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6InVFS2VUMFVubEtRdTllQmNBbHhKbEE9PSIsInZhbHVlIjoieDYvbTZNVFhNVE5lbkRkN1FJRit4VHF6Wm9JVEk1dkIvTzN2eUxpalQvMlVxSDdIMGh0V0FPbU53VitYMit6ZHRXYjVQZWNyRStTdzg3c1lKRFR5L2d4OE5PbEtOTEd3T1M1WFErMnU2MVYydWdlUmQ3NG5HK3o1bjZKb1FCS3IiLCJtYWMiOiJmOWM2Y2MwYzRhOWNmYzJiOTRmYzcyMmFmY2YzYTIyZWZjNTk5OGQyNTEzMTgwZjhiYzc5ODA4MTMxNTdmM2U5IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:36:20 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6IkxzdmVMeWgvc21VQ0tGS2xycUV5S3c9PSIsInZhbHVlIjoiMGJTSDhlV09VUVFXYWhCcERYaXJEU3pPOGZSMk5rSjdNbUNQa0kwdHNwbHJ0ZEMxZHVCNGhHWEhBOEZoSWtvU20xblhTVlNvMnZoVGx5Z2g1ZzI0N3VicHRUN2QwM293cUdQNHM2eDB1SDZwa2w4YkVxL2Ewc2pDdmVENmRJVG0iLCJtYWMiOiJjODEwMTEzM2NhYmFkOGE4Njg2ODIyZTAzMDZiYzYwNjM4MGRmNjM0ZGRjMjliYTQ0ODQxOWEwNjU2ODE1NzljIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:36:20 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -188,12 +188,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "illo",
+                                    "value": "non",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=illo"
+                            "raw": "{{baseUrl}}\/blog-posts?title=non"
                         },
                         "method": "GET",
                         "header": [
@@ -242,7 +242,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "ea",
+                                    "value": "numquam",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -338,7 +338,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "enim",
+                                    "value": "repellat",
                                     "description": ""
                                 }
                             ]
@@ -373,7 +373,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/repellat?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/repellat?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/repellat?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/repellat\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -400,7 +400,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"nobis\",\"last_name\":\"quasi\",\"email\":\"eliseo00@example.org\",\"subject\":\"culpa\",\"message\":\"quis\",\"cf-turnstile-response\":\"quaerat\"}"
+                            "raw": "{\"first_name\":\"cum\",\"last_name\":\"voluptatibus\",\"email\":\"scasper@example.com\",\"subject\":\"nihil\",\"message\":\"sed\",\"cf-turnstile-response\":\"consequuntur\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -413,6 +413,12 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "key",
+                "type": "string"
+            }
+        ]
     }
 }

@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: reinger.hunter@example.org
+                  example: zieme.gardner@example.com
                 password:
                   type: string
                   description: ''
-                  example: porro
+                  example: alias
               required:
                 - email
                 - password
@@ -96,12 +96,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: illo
+          example: non
           required: false
           schema:
             type: string
             description: ''
-            example: illo
+            example: non
       responses:
         200:
           description: ''
@@ -907,7 +907,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: ea
+        example: numquam
         required: true
         schema:
           type: string
@@ -1041,8 +1041,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/enim?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/repellat?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1055,14 +1055,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/repellat?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/enim'
+                    path: 'http://learnhub.test/blog-post-tags/repellat'
                     per_page: 15
                     to: null
                     total: 0
@@ -1075,10 +1075,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/repellat?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/repellat?page=1'
                       prev:
                         type: string
                         example: null
@@ -1105,7 +1105,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/enim?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/repellat?page=1'
                             label: '1'
                             active: true
                           -
@@ -1126,7 +1126,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/enim'
+                        example: 'http://learnhub.test/blog-post-tags/repellat'
                       per_page:
                         type: integer
                         example: 15
@@ -1144,7 +1144,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: enim
+        example: repellat
         required: true
         schema:
           type: string
@@ -1167,27 +1167,27 @@ paths:
                 first_name:
                   type: string
                   description: 'The first name of the user.'
-                  example: nobis
+                  example: cum
                 last_name:
                   type: string
                   description: 'The last name of the user.'
-                  example: quasi
+                  example: voluptatibus
                 email:
                   type: string
                   description: 'The email address of the user.'
-                  example: eliseo00@example.org
+                  example: scasper@example.com
                 subject:
                   type: string
                   description: 'The subject of the message.'
-                  example: culpa
+                  example: nihil
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: quis
+                  example: sed
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: quaerat
+                  example: consequuntur
               required:
                 - first_name
                 - last_name
@@ -1206,3 +1206,12 @@ tags:
   -
     name: Website
     description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

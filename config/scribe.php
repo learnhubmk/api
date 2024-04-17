@@ -80,7 +80,7 @@ return [
 
         // The base URL for the API tester to use (for example, you can set this to your staging URL).
         // Leave as null to use the current app URL when generating (config("app.url")).
-        'base_url' => null,
+        'base_url' => env('APP_PRODUCTION_URL'),
 
         // [Laravel Sanctum] Fetch a CSRF token before each request, and add it as an X-XSRF-TOKEN header.
         'use_csrf' => true,
@@ -92,7 +92,7 @@ return [
     // How is your API authenticated? This information will be used in the displayed docs, generated examples and response calls.
     'auth' => [
         // Set this to true if ANY endpoints in your API use authentication.
-        'enabled' => false,
+        'enabled' => true,
 
         // Set this to true if your API should be authenticated by default. If so, you must also set `enabled` (above) to true.
         // You can then use @unauthenticated or @authenticated on individual endpoints to change their status from the default.
