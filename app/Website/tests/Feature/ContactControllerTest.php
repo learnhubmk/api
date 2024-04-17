@@ -67,6 +67,6 @@ class ContactControllerTest extends TestCase
         $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
-            ->assertJson(['message' => 'Server Error']);
+            ->assertJson(['message' => 'Mail sending failed']);
     }
 }
