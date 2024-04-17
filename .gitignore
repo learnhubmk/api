@@ -18,4 +18,4 @@ yarn-error.log
 /.idea
 /.vscode
 /schemas/githubAcitons.json
-!storage/app/scribe/
+!/storage/app/scribe/

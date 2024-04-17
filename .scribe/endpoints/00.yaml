@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: orlo.shields@example.org
+        example: nschneider@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: vitae
+        example: enim
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: orlo.shields@example.org
-      password: vitae
+      email: nschneider@example.net
+      password: enim
     fileParameters: []
     responses: []
     responseFields: []
