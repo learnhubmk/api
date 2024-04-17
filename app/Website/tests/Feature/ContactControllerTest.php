@@ -24,7 +24,7 @@ class ContactControllerTest extends TestCase
     public function contact_form_submission_succeeds()
     {
         Mail::fake();
-        
+
         $formData = [
             'first_name' => 'Malista',
             'last_name' => 'Polikala',
@@ -51,6 +51,8 @@ class ContactControllerTest extends TestCase
     /** @test */
     public function contact_form_submission_fails_on_mail_error()
     {
+        Mail::fake();
+        
         Mail::shouldReceive('to')
             ->andThrow(new \Exception('Mail sending failed'));
 
