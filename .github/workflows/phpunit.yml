@@ -22,6 +22,8 @@ jobs:
       DB_PASSWORD: learnhub_testing
       DB_USERNAME: learnhub_testing
       DB_DATABASE: learnhub_testing
+      TURNSTILE_SITE_KEY: 'test'
+      TURNSTILE_SECRET_KEY: 'test'
     name: Run PHPUnit tests
     runs-on: ubuntu-latest
     steps:
