@@ -5,10 +5,10 @@ use App\Website\Http\Controllers\BlogPostTagsController;
 use App\Website\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('blog-posts', [BlogPostController::class, 'index']);
-Route::get('blog-posts/{slug}', [BlogPostController::class, 'show']);
+Route::get('blog-posts', [BlogPostController::class, 'index'])->name('blog-post.index');
+Route::get('blog-posts/{slug}', [BlogPostController::class, 'show'])->name('blog-post.show');
 
-Route::get('/blog-post-tags', [BlogPostTagsController::class, 'index']);
-Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show']);
+Route::get('/blog-post-tags', [BlogPostTagsController::class, 'index'])->name('blog-post-tags.index');
+Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show'])->name('blog-post-tags.show');
 
-Route::post('/contact', ContactController::class)->middleware('throttle:5,1');
+Route::post('/contact', ContactController::class)->name('contact')->middleware('throttle:5,1');

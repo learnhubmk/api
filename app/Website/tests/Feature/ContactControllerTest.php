@@ -9,7 +9,7 @@ use Tests\TestCase;
 use Illuminate\Support\Facades\Mail;
 use App\Website\Mail\ContactMail;
 
-class ContactFormControllerTest extends TestCase
+class ContactControllerTest extends TestCase
 {
     use WithFaker;
     use RefreshDatabase;
@@ -31,7 +31,7 @@ class ContactFormControllerTest extends TestCase
             'message' => 'Test message content'
         ];
 
-        $response = $this->postJson('/api/website/contact', $formData);
+        $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(200)
             ->assertJson(['message' => 'Your message has been sent successfully!']);
@@ -60,7 +60,7 @@ class ContactFormControllerTest extends TestCase
             'message' => 'Test failure message content'
         ];
 
-        $response = $this->postJson('/api/website/contact', $formData);
+        $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
             ->assertJson(['message' => 'Failed to send your message, please try again later.']);
