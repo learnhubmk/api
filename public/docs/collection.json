@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "https:\/\/learnhub.mk"
+            "value": "https:\/\/api.learnhub.mk"
         }
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "120a1799-501e-4e4e-83e6-37910a855e4f",
+        "_postman_id": "870604f7-c8c5-412a-9c1d-2570783e89ec",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"mnikolaus@example.net\",\"password\":\"ex\"}"
+                            "raw": "{\"email\":\"reinger.hunter@example.org\",\"password\":\"porro\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -164,7 +164,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IjMyVUZid05zQVdTSDZFVzJnaUF6cXc9PSIsInZhbHVlIjoiNjNLcXU2M1krMEdJVGxxOG5Vc0FDZTlsQ1o1NGdHNzA3eWdiVG9keHlRaURJc0hUOXFOdDlMWEcyWDgwUU9rVGV4TEtxUkt0YmoyNk94SUEySUhMcWhSMVRsSXhzQ2ZHdE1GY3hwemdNUVhKUjdDS2F3TjRZOHBVZUNyY1Z6dHkiLCJtYWMiOiJkMmIzZGNhZTIwNTdlMjA5ZjY5ODBmMDViZGVjZWZmOTU0Y2Y4ZGYxMDQ5MmQyNDkzODM4MzllMmFhYmQzOWE4IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:21:50 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Im8vNkZmcDAxMDdTc2FQaHJBR0llR3c9PSIsInZhbHVlIjoiZGMyTXc0RFptK0d0NW9WZS82UTAvbXZwZFJPckR5TytZQ0s3ZjhEcU1jYmxyNms5bWFjNDZLTXVvOUplVFhuajJGTitRMVJzSUpnL3d0eG8vQjduMWVTWkx5SmdjQW5iaHc4YUllYzR6aW93Mk1NZEJkWm5wejBLUW82UW9hTVMiLCJtYWMiOiJiOGVmY2Q2Y2FhZWJiYmIwOTRmNGI2Y2NjZWU4Njk2YTM2NTBkYWUzY2NkZTY3ODM0Y2UwODExZmY0ZjBjZGZjIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:21:50 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6Ik5LYmlTUlcwdlBKc20yQThJZ3NOK3c9PSIsInZhbHVlIjoiQjhoNFRoQUlkVitUVVV0V0VtZXFKVG9HdFFzc1p2Ny80QXNCZFN4SWozYStQeWZIMkVjOWhvN3F5V0ZzUTlXWFZmSm5uVitmN2k5a045MnI0Z3ZEZVpzVng0bUtOekhDbmJiUXVvZEtsbDV2d0VySytBS01QYlozYUZBWXp2WDIiLCJtYWMiOiIwNTA1NTE4NGMxYjNiMzA3YzM1MmUzZWMxZmEzNDBkMjdjNTdjYzA5YzA5NjJmNTllMWZhOTEwYjU0NWJmNDJlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:24:16 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Ii9oL0JsVUZrTExvR1FaRGYwK2Rqc1E9PSIsInZhbHVlIjoidEdETk9Cb3JpaG1NaTZ3TnBCbStSQnFubkZieWZyNDNkREZjMzVvY2oyaXFaQzE2eFRueER6a1lMeTljRG1JeTFPQWFZYXRCMXNiTEk1NlFSSFNHVEF6ZjlXdTdDRk5va3RWdDVGSFRhNSs4Tmx6Z0ZaUzBXMisybzhoZzR2NzQiLCJtYWMiOiI5ZGE3OWUxNGFiYTUxMWJjZDAxNjZjZDViMjQ0MDM3ZjlmZjMzNzQ1OTY1OTNlNDgyMTI2MTZkMmRiNDg3MjBlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:24:16 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -188,12 +188,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "harum",
+                                    "value": "illo",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=harum"
+                            "raw": "{{baseUrl}}\/blog-posts?title=illo"
                         },
                         "method": "GET",
                         "header": [
@@ -242,7 +242,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "quo",
+                                    "value": "ea",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -338,7 +338,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "ipsa",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -373,7 +373,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/enim\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -400,7 +400,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"quis\",\"last_name\":\"aliquam\",\"email\":\"rodrigo43@example.com\",\"subject\":\"in\",\"message\":\"cumque\",\"cf-turnstile-response\":\"aut\"}"
+                            "raw": "{\"first_name\":\"nobis\",\"last_name\":\"quasi\",\"email\":\"eliseo00@example.org\",\"subject\":\"culpa\",\"message\":\"quis\",\"cf-turnstile-response\":\"quaerat\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
