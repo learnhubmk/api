@@ -24,20 +24,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: sequi
+        example: harum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: sequi
+      title: harum
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"https:\/\/learnhub.mk\/blog-posts?page=1","last":"https:\/\/learnhub.mk\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/learnhub.mk\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"https:\/\/learnhub.mk\/blog-posts","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -70,13 +70,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: quia
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: quia
+      slug: quo
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -502,7 +502,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"https:\/\/learnhub.mk\/blog-post-tags?page=1","last":"https:\/\/learnhub.mk\/blog-post-tags?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/learnhub.mk\/blog-post-tags?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"https:\/\/learnhub.mk\/blog-post-tags","per_page":20,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags?page=1","last":"http:\/\/learnhub.test\/blog-post-tags?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags","per_page":20,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -535,13 +535,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: molestiae
+        example: ipsa
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: molestiae
+      tag: ipsa
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -550,7 +550,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"https:\/\/learnhub.mk\/blog-post-tags\/molestiae?page=1","last":"https:\/\/learnhub.mk\/blog-post-tags\/molestiae?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/learnhub.mk\/blog-post-tags\/molestiae?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"https:\/\/learnhub.mk\/blog-post-tags\/molestiae","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/ipsa?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/ipsa?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/ipsa?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/ipsa","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -587,7 +587,7 @@ endpoints:
         name: first_name
         description: 'The first name of the user.'
         required: true
-        example: nostrum
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -596,7 +596,7 @@ endpoints:
         name: last_name
         description: 'The last name of the user.'
         required: true
-        example: atque
+        example: aliquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -605,7 +605,7 @@ endpoints:
         name: email
         description: 'The email address of the user.'
         required: true
-        example: lgulgowski@example.net
+        example: rodrigo43@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -614,7 +614,7 @@ endpoints:
         name: subject
         description: 'The subject of the message.'
         required: true
-        example: ab
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -623,7 +623,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: vitae
+        example: cumque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -632,18 +632,18 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: et
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: nostrum
-      last_name: atque
-      email: lgulgowski@example.net
-      subject: ab
-      message: vitae
-      cf-turnstile-response: et
+      first_name: quis
+      last_name: aliquam
+      email: rodrigo43@example.com
+      subject: in
+      message: cumque
+      cf-turnstile-response: aut
     fileParameters: []
     responses: []
     responseFields: []

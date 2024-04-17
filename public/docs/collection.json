@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "1305a161-4608-48c7-88c2-c519b26602b6",
+        "_postman_id": "120a1799-501e-4e4e-83e6-37910a855e4f",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"frami.adonis@example.org\",\"password\":\"laudantium\"}"
+                            "raw": "{\"email\":\"mnikolaus@example.net\",\"password\":\"ex\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -164,7 +164,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6InlxQUNEemdYV3VZNk52dGNKYnd6NXc9PSIsInZhbHVlIjoiYk1rZUcwVGJnZDdKdkttbVlld0NGbWE4MXloTGdNTDM1SUR0WVRibXp6VFRYb1FJM1liZW9vSFNmMlZKS1h5MWs1MjJnMkxlK2lOM0c0T0V1aXRNcmkxdndJcm9HQk9uOStaVUZ0TVY3cU5sOVJaU1FzOE12YU05Y3pySTZiK0wiLCJtYWMiOiIwZGM3YTFlMWMyYWE2N2NjMzE4ZDIwYWEyMzE0YWIxZmQyZWM3NWFlNzViZTRhNGI5YmNmMzI1NzJhNjdkYmMzIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:16:29 GMT; Max-Age=7200; path=\/; secure; samesite=lax; learnhub_session=eyJpdiI6IkFLYndzVElveGJqSVRxcjF6T1JSbmc9PSIsInZhbHVlIjoia05QeWVBQnVZc2tmOWNXNml1b0tjdEhBRWN3V0hHUmt4T0lYTThHcDdiWXBmTEFmMDN4dnNmS3NJQk13Z1pBYjJ5T0pvREtlTmdZekVxRTVLSXh6NmlzMlZuakZUd2YyRVp2YTdJaVNPZmVRSS83VHh1RUxUVE5UZnVmaytpUHEiLCJtYWMiOiJlNzcyYzA5YTMxYzMyNTkwMzdiNGRhOWY2N2MwNGY2NDgxMDNmNGY0MzhlNzY3MjU1YmMzOWMwYzkxN2YzOWQ5IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:16:29 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IjMyVUZid05zQVdTSDZFVzJnaUF6cXc9PSIsInZhbHVlIjoiNjNLcXU2M1krMEdJVGxxOG5Vc0FDZTlsQ1o1NGdHNzA3eWdiVG9keHlRaURJc0hUOXFOdDlMWEcyWDgwUU9rVGV4TEtxUkt0YmoyNk94SUEySUhMcWhSMVRsSXhzQ2ZHdE1GY3hwemdNUVhKUjdDS2F3TjRZOHBVZUNyY1Z6dHkiLCJtYWMiOiJkMmIzZGNhZTIwNTdlMjA5ZjY5ODBmMDViZGVjZWZmOTU0Y2Y4ZGYxMDQ5MmQyNDkzODM4MzllMmFhYmQzOWE4IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:21:50 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Im8vNkZmcDAxMDdTc2FQaHJBR0llR3c9PSIsInZhbHVlIjoiZGMyTXc0RFptK0d0NW9WZS82UTAvbXZwZFJPckR5TytZQ0s3ZjhEcU1jYmxyNms5bWFjNDZLTXVvOUplVFhuajJGTitRMVJzSUpnL3d0eG8vQjduMWVTWkx5SmdjQW5iaHc4YUllYzR6aW93Mk1NZEJkWm5wejBLUW82UW9hTVMiLCJtYWMiOiJiOGVmY2Q2Y2FhZWJiYmIwOTRmNGI2Y2NjZWU4Njk2YTM2NTBkYWUzY2NkZTY3ODM0Y2UwODExZmY0ZjBjZGZjIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:21:50 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -188,12 +188,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "sequi",
+                                    "value": "harum",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=sequi"
+                            "raw": "{{baseUrl}}\/blog-posts?title=harum"
                         },
                         "method": "GET",
                         "header": [
@@ -225,7 +225,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"https:\\\/\\\/learnhub.mk\\\/blog-posts?page=1\",\"last\":\"https:\\\/\\\/learnhub.mk\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"https:\\\/\\\/learnhub.mk\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"https:\\\/\\\/learnhub.mk\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -242,7 +242,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "quia",
+                                    "value": "quo",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -321,7 +321,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags?page=1\",\"last\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags\",\"per_page\":20,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\",\"per_page\":20,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -338,7 +338,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "molestiae",
+                                    "value": "ipsa",
                                     "description": ""
                                 }
                             ]
@@ -373,7 +373,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags\\\/molestiae?page=1\",\"last\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags\\\/molestiae?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags\\\/molestiae?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"https:\\\/\\\/learnhub.mk\\\/blog-post-tags\\\/molestiae\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/ipsa\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -400,7 +400,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"nostrum\",\"last_name\":\"atque\",\"email\":\"lgulgowski@example.net\",\"subject\":\"ab\",\"message\":\"vitae\",\"cf-turnstile-response\":\"et\"}"
+                            "raw": "{\"first_name\":\"quis\",\"last_name\":\"aliquam\",\"email\":\"rodrigo43@example.com\",\"subject\":\"in\",\"message\":\"cumque\",\"cf-turnstile-response\":\"aut\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
