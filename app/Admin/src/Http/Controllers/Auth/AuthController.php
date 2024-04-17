@@ -13,13 +13,15 @@ use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
 
 class AuthController
 {
     /**
      * @throws ValidationException
      */
-    #[Endpoint(title: 'Admin/Login', description: 'This endpoint enable users with admin role to sign in')]
+    #[Endpoint(title: 'Login', description: 'This endpoint enables users with admin role to sign in')]
+    #[Group('Admin')]
     #[BodyParam('email', 'password', required: true)]
     public function login(LoginRequest $request): AuthenticatedAdminResource
     {
@@ -42,7 +44,8 @@ class AuthController
     }
 
     #[Authenticated]
-    #[Endpoint(title: 'Admin/Logout', description: 'This endpoint enable users with admin role to log out')]
+    #[Endpoint(title: 'Logout', description: 'This endpoint enables users with admin role to log out')]
+    #[Group('Admin')]
     public function logout(LogoutRequest $request): Response
     {
         $request->user()->currentAccessToken()->delete();

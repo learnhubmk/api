@@ -11,10 +11,12 @@ use App\Website\Models\BlogPostTag;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
 
 class BlogPostTagsController extends Controller
 {
-    #[Endpoint(title: 'Website/Blog Post Tags', description: 'This endpoint list all blog post tags in alphabetically order paginated by 20.')]
+    #[Endpoint(title: 'Blog Post Tags', description: 'This endpoint list all blog post tags in alphabetically order paginated by 20.')]
+    #[Group('Website')]
     public function index(Request $request): AnonymousResourceCollection
     {
         $tags = BlogPostTag::orderBy('name', 'asc')->paginate(20);
@@ -22,9 +24,8 @@ class BlogPostTagsController extends Controller
         return BlogPostTagResource::collection($tags);
     }
 
-    #[Endpoint('Website/Blog Post By Tag', <<<'DESC'
-  This endpoint retrieve blogpost by a specific tag.
-  DESC)]
+    #[Endpoint(title: 'Blog Post By Tag', description: 'This endpoint retrieves blog posts by a specific tag.')]
+    #[Group('Website')]
     public function show(string $tag): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')

@@ -10,10 +10,12 @@ use App\Website\Mail\ContactMail;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\Group;
 
 class ContactController extends Controller
 {
-    #[Endpoint(title: "Website/Contact", description: "This endpoint is used for submitting contact form data.")]
+    #[Endpoint(title: "Contact", description: "This endpoint is used for submitting contact form data.")]
+    #[Group('Website')]
     #[BodyParam(name: "first_name", type: "string", description: "The first name of the user.", required: true)]
     #[BodyParam(name: "last_name", type: "string", description: "The last name of the user.", required: true)]
     #[BodyParam(name: "email", type: "string", description: "The email address of the user.", required: true)]

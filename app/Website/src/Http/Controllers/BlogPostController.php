@@ -10,14 +10,13 @@ use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogPostController extends Controller
 {
-    #[Endpoint('Website/Blog posts', <<<'DESC'
-  This endpoint list all blog post from newest ones to the oldest.
-  Additionally you may use ?title= query param to filter by title
- DESC)]
+    #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post from newest ones to the oldest.Additionally you may use ?title= query param to filter by title')]
+    #[Group('Website')]
     #[QueryParam('title', 'string', required: false)]
     public function index(Request $request): AnonymousResourceCollection
     {
@@ -32,7 +31,8 @@ class BlogPostController extends Controller
         return BlogPostsResource::collection($blogs);
     }
 
-    #[Endpoint(title: 'Website/Blog Post', description: 'This endpoint retrieves blog post by a slug.')]
+    #[Endpoint(title: 'Blog Post', description: 'This endpoint retrieves blog post by a slug.')]
+    #[Group('Website')]
     public function show(string $slug): SingleBlogPostResource
     {
         $blog = BlogPost::with('author', 'tags')
