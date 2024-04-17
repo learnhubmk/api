@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(10)->create();
+        \App\Admin\Models\User::factory(10)->create();
 
         Artisan::call('db:seed', [
             '--class' => AdminSeeder::class,

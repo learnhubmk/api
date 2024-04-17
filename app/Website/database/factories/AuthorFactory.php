@@ -2,7 +2,7 @@
 
 namespace App\Website\Database\Factories;
 
-use App\Models\User;
+use App\Admin\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
