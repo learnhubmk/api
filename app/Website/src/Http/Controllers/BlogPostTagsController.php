@@ -14,9 +14,7 @@ use Knuckles\Scribe\Attributes\Endpoint;
 
 class BlogPostTagsController extends Controller
 {
-    #[Endpoint('Website/List Blog Post Tags', <<<'DESC'
-              This endpoint list all blogpost tags in alphabetically order paginated by 20.
-    DESC)]
+    #[Endpoint(title: 'Website/Blog Post Tags', description: 'This endpoint list all blog post tags in alphabetically order paginated by 20.')]
     public function index(Request $request): AnonymousResourceCollection
     {
         $tags = BlogPostTag::orderBy('name', 'asc')->paginate(20);
@@ -24,7 +22,7 @@ class BlogPostTagsController extends Controller
         return BlogPostTagResource::collection($tags);
     }
 
-    #[Endpoint('Website/Get Blog Post By Tag', <<<'DESC'
+    #[Endpoint('Website/Blog Post By Tag', <<<'DESC'
   This endpoint retrieve blogpost by a specific tag.
   DESC)]
     public function show(string $tag): AnonymousResourceCollection

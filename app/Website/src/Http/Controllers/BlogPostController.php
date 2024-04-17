@@ -14,8 +14,8 @@ use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogPostController extends Controller
 {
-    #[Endpoint('Website/List Blogs', <<<'DESC'
-  This endpoint list all blogpost from newest ones to the oldest.
+    #[Endpoint('Website/Blog posts', <<<'DESC'
+  This endpoint list all blog post from newest ones to the oldest.
   Additionally you may use ?title= query param to filter by title
  DESC)]
     #[QueryParam('title', 'string', required: false)]
@@ -32,9 +32,7 @@ class BlogPostController extends Controller
         return BlogPostsResource::collection($blogs);
     }
 
-    #[Endpoint('Website/Get Blog Post', <<<'DESC'
-  This endpoint retrieve blogpost by a slug.
-DESC)]
+    #[Endpoint(title: 'Website/Blog Post', description: 'This endpoint retrieves blog post by a slug.')]
     public function show(string $slug): SingleBlogPostResource
     {
         $blog = BlogPost::with('author', 'tags')

@@ -19,9 +19,7 @@ class AuthController
     /**
      * @throws ValidationException
      */
-    #[Endpoint('Admin/Login', <<<'DESC'
-    This endpoint enable users with admin role to sign in
- DESC)]
+    #[Endpoint(title: 'Admin/Login', description: 'This endpoint enable users with admin role to sign in')]
     #[BodyParam('email', 'password', required: true)]
     public function login(LoginRequest $request): AuthenticatedAdminResource
     {
@@ -44,9 +42,7 @@ class AuthController
     }
 
     #[Authenticated]
-    #[Endpoint('Admin/Logout', <<<'DESC'
-    This endpoint enable users with admin role to log out
- DESC)]
+    #[Endpoint(title: 'Admin/Logout', description: 'This endpoint enable users with admin role to log out')]
     public function logout(LogoutRequest $request): Response
     {
         $request->user()->currentAccessToken()->delete();

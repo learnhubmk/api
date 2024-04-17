@@ -13,7 +13,7 @@ use Illuminate\Http\JsonResponse;
 
 class ContactController extends Controller
 {
-    #[Endpoint(title: "Contact", description: "This endpoint is used for submitting contact form data.")]
+    #[Endpoint(title: "Website/Contact", description: "This endpoint is used for submitting contact form data.")]
     #[BodyParam(name: "first_name", type: "string", description: "The first name of the user.", required: true)]
     #[BodyParam(name: "last_name", type: "string", description: "The last name of the user.", required: true)]
     #[BodyParam(name: "email", type: "string", description: "The email address of the user.", required: true)]

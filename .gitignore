@@ -20,3 +20,4 @@ yarn-error.log
 /.vscode
 /.scribe
 /schemas/githubAcitons.json
+resources/views/scribe/index.blade.php
