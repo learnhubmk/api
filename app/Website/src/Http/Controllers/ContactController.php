@@ -10,10 +10,12 @@ use App\Website\Mail\ContactMail;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\Group;
 
-class ContactFormController extends Controller
+class ContactController extends Controller
 {
-    #[Endpoint(title: "Submit Contact Form", description: "This endpoint is used for submitting contact form data.")]
+    #[Endpoint(title: "Contact", description: "This endpoint is used for submitting contact form data.")]
+    #[Group('Website')]
     #[BodyParam(name: "first_name", type: "string", description: "The first name of the user.", required: true)]
     #[BodyParam(name: "last_name", type: "string", description: "The last name of the user.", required: true)]
     #[BodyParam(name: "email", type: "string", description: "The email address of the user.", required: true)]
@@ -23,6 +25,7 @@ class ContactFormController extends Controller
     public function __invoke(ContactFormRequest $request): JsonResponse
     {
         Mail::to(config('mail.contact_email'))->queue(new ContactMail($request->validated()));
+
         return response()->json(['message' => 'Your message has been sent successfully!'], Response::HTTP_OK);
     }
 

@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/docs
 /storage/*.key
 /vendor
 .env
@@ -17,4 +18,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/.scribe
 /schemas/githubAcitons.json
+resources/views/scribe/index.blade.php

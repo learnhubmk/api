@@ -7,35 +7,31 @@ return [
     'title' => 'LearnHub API Documentation',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
-    'description' => '',
+    'description' => 'The documentation',
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
-    'base_url' => env('APP_URL').':'.env('APP_PORT'),
+    'base_url' => env('APP_URL'),
 
     'routes' => [
         [
             // Routes that match these conditions will be included in the docs
             'match' => [
                 // Match only routes whose paths match this pattern (use * as a wildcard to match any characters). Example: 'users/*'.
-                'prefixes' => ['api/*', 'admin/*', 'website/*', 'platform/*'],
+                'prefixes' => ['*'],
 
                 // Match only routes whose domains match this pattern (use * as a wildcard to match any characters). Example: 'api.*'.
                 'domains' => ['*'],
 
                 // [Dingo router only] Match only routes registered under this version. Wildcards are NOT supported.
-                'versions' => ['v1'],
+                'versions' => [],
             ],
 
             // Include these routes even if they did not match the rules above.
-            'include' => [
-                // 'users.index', 'POST /new', '/auth/*'
-            ],
+            'include' => [],
 
             // Exclude these routes even if they matched the rules above.
-            'exclude' => [
-                // 'GET /health', 'admin.*'
-            ],
+            'exclude' => ['/horizon*', '/telescope*', '_ignition*'],
         ],
     ],
 
@@ -44,10 +40,10 @@ return [
     // - "laravel" will generate the documentation as a Blade view, so you can add routing and authentication.
     // - "external_static" and "external_laravel" do the same as above, but generate a basic template,
     // passing the OpenAPI spec as a URL, allowing you to easily use the docs with an external generator
-    'type' => 'static',
+    'type' => 'laravel',
 
     // See https://scribe.knuckles.wtf/laravel/reference/config#theme for supported options
-    'theme' => 'default',
+    'theme' => 'elements',
 
     'static' => [
         // HTML documentation, assets and Postman collection will be generated to this folder.
@@ -136,6 +132,8 @@ INTRO
     'example_languages' => [
         'bash',
         'javascript',
+        'php',
+        'python',
     ],
 
     // Generate a Postman collection (v2.1.0) in addition to HTML docs.
@@ -164,7 +162,7 @@ INTRO
 
     'groups' => [
         // Endpoints which don't have a @group will be placed in this default group.
-        'default' => 'Endpoints',
+        'default' => 'General',
 
         // By default, Scribe will sort groups alphabetically, and endpoints in the order their routes are defined.
         // You can override this by listing the groups, subgroups and endpoints here in the order you want them.

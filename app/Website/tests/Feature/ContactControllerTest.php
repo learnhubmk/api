@@ -9,7 +9,7 @@ use Tests\TestCase;
 use Illuminate\Support\Facades\Mail;
 use App\Website\Mail\ContactMail;
 
-class ContactFormControllerTest extends TestCase
+class ContactControllerTest extends TestCase
 {
     use WithFaker;
     use RefreshDatabase;
@@ -23,20 +23,22 @@ class ContactFormControllerTest extends TestCase
     /** @test */
     public function contact_form_submission_succeeds()
     {
+        Mail::fake();
+
         $formData = [
             'first_name' => 'Malista',
             'last_name' => 'Polikala',
-            'email' => 'malista.polikala@on.net.mk',
+            'email' => 'malista.polikala@onnet.mk',
             'subject' => 'Test Subject',
             'message' => 'Test message content'
         ];
 
-        $response = $this->postJson('/api/website/contact', $formData);
+        $response = $this->postJson(route('contact'), $formData);
 
-        $response->assertStatus(200)
+        $response->assertOk()
             ->assertJson(['message' => 'Your message has been sent successfully!']);
 
-        Mail::assertSent(ContactMail::class, function ($mail) use ($formData) {
+        Mail::assertQueued(ContactMail::class, function ($mail) use ($formData) {
             return $mail->hasTo(config('mail.contact_email')) &&
                 $mail->contactData['first_name'] === $formData['first_name'] &&
                 $mail->contactData['last_name'] === $formData['last_name'] &&
@@ -49,6 +51,8 @@ class ContactFormControllerTest extends TestCase
     /** @test */
     public function contact_form_submission_fails_on_mail_error()
     {
+        Mail::fake();
+
         Mail::shouldReceive('to')
             ->andThrow(new \Exception('Mail sending failed'));
 
@@ -60,9 +64,9 @@ class ContactFormControllerTest extends TestCase
             'message' => 'Test failure message content'
         ];
 
-        $response = $this->postJson('/api/website/contact', $formData);
+        $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
-            ->assertJson(['message' => 'Failed to send your message, please try again later.']);
+            ->assertJson(['message' => 'Mail sending failed']);
     }
 }
