@@ -16,3 +16,5 @@ Route::get('/blog-post-tags', [BlogPostTagsController::class, 'index'])->name('b
 Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show'])->name('blog-post-tags.show');
 
 Route::post('/contact', ContactController::class)->name('contact')->middleware('throttle:5,1');
+
+Route::post('newsletter/subscribe', [NewsletterSubscribeController::class, 'subscribe']);
