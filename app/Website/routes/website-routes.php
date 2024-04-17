@@ -1,6 +1,7 @@
 <?php
 
 use App\Website\Http\Controllers\BlogPostController;
+use App\Website\Http\Controllers\NewsletterSubscribeController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'api/website'], function () {
