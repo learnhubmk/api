@@ -24,13 +24,13 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: voluptas
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: voluptas
+      title: sed
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -70,13 +70,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: enim
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: enim
+      slug: dolorem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -535,13 +535,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: ut
+        example: culpa
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: ut
+      tag: culpa
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -550,7 +550,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/ut?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/ut?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/ut?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/ut","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/culpa?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/culpa?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/culpa?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/culpa","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -587,7 +587,7 @@ endpoints:
         name: first_name
         description: 'The first name of the user.'
         required: true
-        example: molestiae
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -596,7 +596,7 @@ endpoints:
         name: last_name
         description: 'The last name of the user.'
         required: true
-        example: qui
+        example: rem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -605,7 +605,7 @@ endpoints:
         name: email
         description: 'The email address of the user.'
         required: true
-        example: tgusikowski@example.com
+        example: korey.gleason@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -614,7 +614,7 @@ endpoints:
         name: subject
         description: 'The subject of the message.'
         required: true
-        example: et
+        example: veritatis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -623,7 +623,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: reprehenderit
+        example: eligendi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -632,18 +632,18 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: impedit
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: molestiae
-      last_name: qui
-      email: tgusikowski@example.com
-      subject: et
-      message: reprehenderit
-      cf-turnstile-response: impedit
+      first_name: quia
+      last_name: rem
+      email: korey.gleason@example.net
+      subject: veritatis
+      message: eligendi
+      cf-turnstile-response: inventore
     fileParameters: []
     responses: []
     responseFields: []

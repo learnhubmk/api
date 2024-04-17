@@ -610,7 +610,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        klocko.lacy@example.com
+                        ally.johnston@example.com
                     </div>
                 </div>
             </div>
@@ -634,7 +634,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        repudiandae
+                        amet
                     </div>
                 </div>
             </div>
@@ -728,8 +728,8 @@ You can switch the language used with the tabs at the top right (or from the nav
                                      id="json-body-POSTadmin-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "klocko.lacy@example.com",
-    "password": "repudiandae"
+    "email": "ally.johnston@example.com",
+    "password": "amet"
 }</div>
                             </div>
                                             </div>
@@ -827,8 +827,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"klocko.lacy@example.com\",
-    \"password\": \"repudiandae\"
+    \"email\": \"ally.johnston@example.com\",
+    \"password\": \"amet\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -847,8 +847,8 @@ const headers = {
 };
 
 let body = {
-    "email": "klocko.lacy@example.com",
-    "password": "repudiandae"
+    "email": "ally.johnston@example.com",
+    "password": "amet"
 };
 
 fetch(url, {
@@ -872,8 +872,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'klocko.lacy@example.com',
-            'password' =&gt; 'repudiandae',
+            'email' =&gt; 'ally.johnston@example.com',
+            'password' =&gt; 'amet',
         ],
     ]
 );
@@ -890,8 +890,8 @@ import json
 
 url = 'http://learnhub.test/admin/login'
 payload = {
-    "email": "klocko.lacy@example.com",
-    "password": "repudiandae"
+    "email": "ally.johnston@example.com",
+    "password": "amet"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1964,7 +1964,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     access-control-allow-origin
                                                             : *
                                                                                                                     set-cookie
-                                                            : XSRF-TOKEN=eyJpdiI6Ik1BZEFxSmZ1NWtoZU1jYzZLVGNMclE9PSIsInZhbHVlIjoibGVDeWVPMnM0N3pYaUJjamJ5aTRkTUpoY3RWZ3VMVDlFRkR1VWtYejVQc2hGd3M5dXFTdFFLSUFlMlR0R2FMaDk5alRMMnQ2ckl0L3B3U1FvMW5aSXhvVDhYS0tFdWpONlB4eFcybFFNdnh6dTdUUVhqMG1SZ1RzNWh4aEkvcGwiLCJtYWMiOiJmNDI5YTcxYzgwNzBlNzcyYmYxZTg5YmEyZDU3NGFhMTlkZjBmZDk1MDdjMzMwYmMxYTE4NWFlMDEwMWZjYzVlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 04:22:27 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6IithSUUyaWUzWjVxVWtaNm1xeURpMnc9PSIsInZhbHVlIjoiQU02RDVUOHdJelkvSC9oQzJLdHFPdTRhVEk5UHZ4QVl4d3RnQk5DeCtzUTh6OGFCVmwrSXIvVjQ5cTh5TFpuWkdYQnp4Y3cwTjlYSy9qMzRmYlRrdWltdmxjT2lqY0hRRVpvVjJWSTZUVnpvSHExSWhJWm1VQVMrVzMzd0EvdjYiLCJtYWMiOiI1NWViYWY5YjZjMjhkYTdjMzY4MjA4OGExYmYzYjk3MjU2NmY3ZTIwODUyOWZjNzM5NThkMjllMmVmZjkwMTVkIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 04:22:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+                                                            : XSRF-TOKEN=eyJpdiI6IjAyVjhiMlVWR1I4MXdjV080K0VQWUE9PSIsInZhbHVlIjoiYkdCQ2dwaWJnSFlPRG9EcTJza08xayt0N3plbWlRZmxBZnJUb2NsNGxrSlkydU9XQy9aaU40RDQ2UXRMeXdDeUVsbEpHQTJhb3B1NWxPTW04cVNGNUNMOTF1b3lSelhseVh5STNlSFFOcG11eWo5RFI4Wm9aZTUyQ2QzRzZleXkiLCJtYWMiOiI0Yjg5NmRjNGE1NDNlNjg3OTVjMzFjM2UzZGUzNzlmODQwMmUyMDJkNDc1ZWFlZGYxY2I0MmI0MmZkZWVkNmY4IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 04:26:11 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6IndmR1RuSkZ3RUhySVRmcWVCWGNXTGc9PSIsInZhbHVlIjoiY2JUbmFtcXUvUEgwdEVTenA2OXNVRkxmNHBJVEY1amlIdjU2YzlVdjd3SytuMXRSa1liWXZRcFE1MWxvZ2xHZnZJaWp1U0NkZzJpSHlLUjlGeDdFdmI5WkxIV0VSTW1WT2Q0aEZqYkZGV2NGcEVaM0Y2QjJPVStxYlJrZk52Z1EiLCJtYWMiOiIyNDAyZDcxOTNmOTk1MmIwMmY4NTA5ODZkNmNmYzNlZWRlZDdiODQyMDE1MzE0OTNkOTg0YjA5YWQ4YWM3NmJmIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 04:26:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax
                                                          </code></pre>
                                             </details>
                                                                                                                             <pre><code>[Empty response]</code></pre>
@@ -2081,7 +2081,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        voluptas
+                        sed
                     </div>
                 </div>
             </div>
@@ -2177,7 +2177,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="title" name="title"
                                                    id="queryparam-GETblog-posts-title"
                                                    placeholder=""
-                                                   value="voluptas" data-component="query"
+                                                   value="sed" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -2275,7 +2275,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-posts?title=voluptas" \
+    --get "http://learnhub.test/blog-posts?title=sed" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2289,7 +2289,7 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
-    "title": "voluptas",
+    "title": "sed",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2319,7 +2319,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'title' =&gt; 'voluptas',
+            'title' =&gt; 'sed',
         ],
     ]
 );
@@ -2336,7 +2336,7 @@ import json
 
 url = 'http://learnhub.test/blog-posts'
 params = {
-  'title': 'voluptas',
+  'title': 'sed',
 }
 headers = {
   'Content-Type': 'application/json',
@@ -2547,7 +2547,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        enim
+                        dolorem
                     </div>
                 </div>
             </div>
@@ -2644,7 +2644,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="slug" name="slug"
                                                id="urlparam-GETblog-posts--slug--slug"
                                                placeholder="The slug of the blog post."
-                                               value="enim" data-component="url"
+                                               value="dolorem" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -2742,7 +2742,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-posts/enim" \
+    --get "http://learnhub.test/blog-posts/dolorem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2752,7 +2752,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-posts/enim"
+    "http://learnhub.test/blog-posts/dolorem"
 );
 
 const headers = {
@@ -2771,7 +2771,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-posts/enim';
+$url = 'http://learnhub.test/blog-posts/dolorem';
 $response = $client-&gt;get(
     $url,
     [
@@ -2792,7 +2792,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-posts/enim'
+url = 'http://learnhub.test/blog-posts/dolorem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3735,7 +3735,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ut
+                        culpa
                     </div>
                 </div>
             </div>
@@ -3832,7 +3832,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="tag" name="tag"
                                                id="urlparam-GETblog-post-tags--tag--tag"
                                                placeholder=""
-                                               value="ut" data-component="url"
+                                               value="culpa" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3930,7 +3930,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://learnhub.test/blog-post-tags/ut" \
+    --get "http://learnhub.test/blog-post-tags/culpa" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3940,7 +3940,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://learnhub.test/blog-post-tags/ut"
+    "http://learnhub.test/blog-post-tags/culpa"
 );
 
 const headers = {
@@ -3959,7 +3959,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://learnhub.test/blog-post-tags/ut';
+$url = 'http://learnhub.test/blog-post-tags/culpa';
 $response = $client-&gt;get(
     $url,
     [
@@ -3980,7 +3980,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://learnhub.test/blog-post-tags/ut'
+url = 'http://learnhub.test/blog-post-tags/culpa'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4050,8 +4050,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/ut?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/ut?page=1&quot;,
+        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/culpa?page=1&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/culpa?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -4066,7 +4066,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/ut?page=1&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/culpa?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -4076,7 +4076,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/ut&quot;,
+        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/culpa&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -4194,7 +4194,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        molestiae
+                        quia
                     </div>
                 </div>
             </div>
@@ -4221,7 +4221,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        qui
+                        rem
                     </div>
                 </div>
             </div>
@@ -4248,7 +4248,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        tgusikowski@example.com
+                        korey.gleason@example.net
                     </div>
                 </div>
             </div>
@@ -4275,7 +4275,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        veritatis
                     </div>
                 </div>
             </div>
@@ -4302,7 +4302,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        reprehenderit
+                        eligendi
                     </div>
                 </div>
             </div>
@@ -4329,7 +4329,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        impedit
+                        inventore
                     </div>
                 </div>
             </div>
@@ -4423,12 +4423,12 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontact"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "first_name": "molestiae",
-    "last_name": "qui",
-    "email": "tgusikowski@example.com",
-    "subject": "et",
-    "message": "reprehenderit",
-    "cf-turnstile-response": "impedit"
+    "first_name": "quia",
+    "last_name": "rem",
+    "email": "korey.gleason@example.net",
+    "subject": "veritatis",
+    "message": "eligendi",
+    "cf-turnstile-response": "inventore"
 }</div>
                             </div>
                                             </div>
@@ -4526,12 +4526,12 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"molestiae\",
-    \"last_name\": \"qui\",
-    \"email\": \"tgusikowski@example.com\",
-    \"subject\": \"et\",
-    \"message\": \"reprehenderit\",
-    \"cf-turnstile-response\": \"impedit\"
+    \"first_name\": \"quia\",
+    \"last_name\": \"rem\",
+    \"email\": \"korey.gleason@example.net\",
+    \"subject\": \"veritatis\",
+    \"message\": \"eligendi\",
+    \"cf-turnstile-response\": \"inventore\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4550,12 +4550,12 @@ const headers = {
 };
 
 let body = {
-    "first_name": "molestiae",
-    "last_name": "qui",
-    "email": "tgusikowski@example.com",
-    "subject": "et",
-    "message": "reprehenderit",
-    "cf-turnstile-response": "impedit"
+    "first_name": "quia",
+    "last_name": "rem",
+    "email": "korey.gleason@example.net",
+    "subject": "veritatis",
+    "message": "eligendi",
+    "cf-turnstile-response": "inventore"
 };
 
 fetch(url, {
@@ -4579,12 +4579,12 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'first_name' =&gt; 'molestiae',
-            'last_name' =&gt; 'qui',
-            'email' =&gt; 'tgusikowski@example.com',
-            'subject' =&gt; 'et',
-            'message' =&gt; 'reprehenderit',
-            'cf-turnstile-response' =&gt; 'impedit',
+            'first_name' =&gt; 'quia',
+            'last_name' =&gt; 'rem',
+            'email' =&gt; 'korey.gleason@example.net',
+            'subject' =&gt; 'veritatis',
+            'message' =&gt; 'eligendi',
+            'cf-turnstile-response' =&gt; 'inventore',
         ],
     ]
 );
@@ -4601,12 +4601,12 @@ import json
 
 url = 'http://learnhub.test/contact'
 payload = {
-    "first_name": "molestiae",
-    "last_name": "qui",
-    "email": "tgusikowski@example.com",
-    "subject": "et",
-    "message": "reprehenderit",
-    "cf-turnstile-response": "impedit"
+    "first_name": "quia",
+    "last_name": "rem",
+    "email": "korey.gleason@example.net",
+    "subject": "veritatis",
+    "message": "eligendi",
+    "cf-turnstile-response": "inventore"
 }
 headers = {
   'Content-Type': 'application/json',

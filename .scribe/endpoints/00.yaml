@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: klocko.lacy@example.com
+        example: ally.johnston@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: repudiandae
+        example: amet
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: klocko.lacy@example.com
-      password: repudiandae
+      email: ally.johnston@example.com
+      password: amet
     fileParameters: []
     responses: []
     responseFields: []
