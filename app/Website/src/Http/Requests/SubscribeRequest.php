@@ -2,7 +2,9 @@
 
 namespace App\Website\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+
 
 class SubscribeRequest extends FormRequest
 {
@@ -22,8 +24,9 @@ class SubscribeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "firstName" => "required|max:20",
-            "email" => "required|max:30"
+            'first_name' => ['required, string, max:20'],
+            'email' => ['required, email:filter'],
+            'cf-turnstile-response' => ['required', Rule::turnstile()]
         ];
     }
 }
