@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: zieme.gardner@example.com
+                  example: wunsch.marion@example.net
                 password:
                   type: string
                   description: ''
-                  example: alias
+                  example: quo
               required:
                 - email
                 - password
@@ -96,12 +96,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: non
+          example: laudantium
           required: false
           schema:
             type: string
             description: ''
-            example: non
+            example: laudantium
       responses:
         200:
           description: ''
@@ -357,7 +357,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 49
+                      line: 62
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -691,7 +691,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 49
+                        line: 62
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -907,7 +907,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: numquam
+        example: laudantium
         required: true
         schema:
           type: string
@@ -1041,8 +1041,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/repellat?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1055,14 +1055,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/repellat'
+                    path: 'http://learnhub.test/blog-post-tags/dolorum'
                     per_page: 15
                     to: null
                     total: 0
@@ -1075,10 +1075,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
                       prev:
                         type: string
                         example: null
@@ -1105,7 +1105,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/repellat?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
                             label: '1'
                             active: true
                           -
@@ -1126,7 +1126,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/repellat'
+                        example: 'http://learnhub.test/blog-post-tags/dolorum'
                       per_page:
                         type: integer
                         example: 15
@@ -1144,7 +1144,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: repellat
+        example: dolorum
         required: true
         schema:
           type: string
@@ -1164,35 +1164,25 @@ paths:
             schema:
               type: object
               properties:
-                first_name:
+                name:
                   type: string
-                  description: 'The first name of the user.'
-                  example: cum
-                last_name:
-                  type: string
-                  description: 'The last name of the user.'
-                  example: voluptatibus
+                  description: 'The name of the visitor.'
+                  example: voluptas
                 email:
                   type: string
-                  description: 'The email address of the user.'
-                  example: scasper@example.com
-                subject:
-                  type: string
-                  description: 'The subject of the message.'
-                  example: nihil
+                  description: 'The email address of the visitor.'
+                  example: crona.lois@example.net
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: sed
+                  example: adipisci
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: consequuntur
+                  example: voluptatibus
               required:
-                - first_name
-                - last_name
+                - name
                 - email
-                - subject
                 - message
                 - cf-turnstile-response
       security: []

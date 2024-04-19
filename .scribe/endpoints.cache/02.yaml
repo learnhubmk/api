@@ -26,13 +26,13 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: non
+        example: laudantium
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: non
+      title: laudantium
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -43,6 +43,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
@@ -72,13 +73,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: numquam
+        example: laudantium
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: numquam
+      slug: laudantium
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -243,7 +244,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 49,
+                      "line": 62,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -470,6 +471,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
@@ -508,6 +510,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
@@ -537,13 +540,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: repellat
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: repellat
+      tag: dolorum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -552,10 +555,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/repellat?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/repellat?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/repellat?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/repellat","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/dolorum","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
@@ -585,38 +589,20 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      first_name:
-        name: first_name
-        description: 'The first name of the user.'
+      name:
+        name: name
+        description: 'The name of the visitor.'
         required: true
-        example: cum
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      last_name:
-        name: last_name
-        description: 'The last name of the user.'
-        required: true
-        example: voluptatibus
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       email:
         name: email
-        description: 'The email address of the user.'
+        description: 'The email address of the visitor.'
         required: true
-        example: scasper@example.com
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      subject:
-        name: subject
-        description: 'The subject of the message.'
-        required: true
-        example: nihil
+        example: crona.lois@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -625,7 +611,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: sed
+        example: adipisci
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -634,18 +620,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: consequuntur
+        example: voluptatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: cum
-      last_name: voluptatibus
-      email: scasper@example.com
-      subject: nihil
-      message: sed
-      cf-turnstile-response: consequuntur
+      name: voluptas
+      email: crona.lois@example.net
+      message: adipisci
+      cf-turnstile-response: voluptatibus
     fileParameters: []
     responses: []
     responseFields: []

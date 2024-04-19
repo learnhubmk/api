@@ -25,10 +25,8 @@ class ContactFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email:filter'],
-            'subject' => ['required', 'string', 'max:255'],
             'message' => ['required', 'string', 'max:1000'],
             'cf-turnstile-response' => [
                 new RequiredIf(function () {

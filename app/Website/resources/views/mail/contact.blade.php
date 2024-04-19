@@ -1,15 +1,9 @@
 @component('mail::message')
-# Contact Form Submission
+# Порака од контакт формата на LearnHub.mk
 
-You have received a new message from your website's contact form.
-
-**First Name:** {{ $data['first_name'] }}
-
-**Last Name:** {{ $data['last_name'] }}
+**Name:** {{ $data['name'] }}
 
 **Email:** {{ $data['email'] }}
-
-**Subject:** {{ $data['subject'] }}
 
 **Message:**
 

@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class ContactEmail extends Mailable
 {
     use Queueable;
     use SerializesModels;
@@ -17,9 +17,9 @@ class ContactMail extends Mailable
     {
     }
 
-    public function build(): ContactMail
+    public function build(): ContactEmail
     {
-        return $this->subject('Contact Mail')
+        return $this->subject('LearnHub.mk: нова порака од контакт формата!')
             ->markdown('website::mail.contact', [
                 'data' => $this->contactData
             ]);
