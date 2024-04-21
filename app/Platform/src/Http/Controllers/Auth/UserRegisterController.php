@@ -6,9 +6,12 @@ use App\Platform\Http\Controllers\BaseApiController;
 use App\Platform\Http\Requests\RegisterUserRequest;
 use App\Platform\Http\Resources\MemberResource;
 use App\Platform\Interfaces\MemberRepositoryInterface;
+use App\Platform\Mail\ActivationEmail;
+use App\Platform\Models\Member;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Mail;
 
 class UserRegisterController extends BaseApiController
 {
