@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'https://api.learnhub.mk'
+    url: 'https://staging-api.learnhub.mk'
 paths:
   /admin/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: wunsch.marion@example.net
+                  example: audreanne40@example.net
                 password:
                   type: string
                   description: ''
-                  example: quo
+                  example: qui
               required:
                 - email
                 - password
@@ -96,12 +96,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: laudantium
+          example: odio
           required: false
           schema:
             type: string
             description: ''
-            example: laudantium
+            example: odio
       responses:
         200:
           description: ''
@@ -907,7 +907,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: laudantium
+        example: in
         required: true
         schema:
           type: string
@@ -1041,8 +1041,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1055,14 +1055,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/dolorum'
+                    path: 'http://learnhub.test/blog-post-tags/voluptas'
                     per_page: 15
                     to: null
                     total: 0
@@ -1075,10 +1075,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
                       prev:
                         type: string
                         example: null
@@ -1105,7 +1105,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/dolorum?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/voluptas?page=1'
                             label: '1'
                             active: true
                           -
@@ -1126,7 +1126,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/dolorum'
+                        example: 'http://learnhub.test/blog-post-tags/voluptas'
                       per_page:
                         type: integer
                         example: 15
@@ -1144,7 +1144,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: dolorum
+        example: voluptas
         required: true
         schema:
           type: string
@@ -1167,19 +1167,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: voluptas
+                  example: fugiat
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: crona.lois@example.net
+                  example: sherman22@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: adipisci
+                  example: eaque
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: voluptatibus
+                  example: maiores
               required:
                 - name
                 - email

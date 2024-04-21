@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "https:\/\/api.learnhub.mk"
+            "value": "https:\/\/staging-api.learnhub.mk"
         }
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "09a0bae1-d1f3-447a-94d5-45820a58ec70",
+        "_postman_id": "1989d266-50eb-425d-becf-1ef0de855d16",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"wunsch.marion@example.net\",\"password\":\"quo\"}"
+                            "raw": "{\"email\":\"audreanne40@example.net\",\"password\":\"qui\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -168,7 +168,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6InN3Z0UydlRORkVhVkVtSGR6dGtONlE9PSIsInZhbHVlIjoiRXA0enVPTjV4eElkVmt3WW9YdWMybDZKZmxxZEo4Ujc1WXJ6aVZHNkVCZ3MrazEzNEc3RCs5VnVBaXBlV2Y5N0JHOHA5VFl0bkd3MEdIN1lEWTZROEt0WFBBNDI4RE1ueDJaTWEwY2tMRU5TZ2RZM2VDbEZnYWQ1K1NiZzhOczciLCJtYWMiOiIxZTUxYjA2MWUzM2RkM2JmOGQyYjdkMjAxYmU0M2JhNTRkODJhZjJiODIxYWNkOWQwYmUzNTQ4NGZlYzBlYzlmIiwidGFnIjoiIn0%3D; expires=Fri, 19 Apr 2024 02:11:53 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6IlZLU0liSmo2L09TTTBFdXQrQ1RsUmc9PSIsInZhbHVlIjoiUGdXdS8rclUyNXFXWVNHTjFLYjBMK1FhYzZYSkRoTnE1YVFzNWFVR1k1T1UyVW8zVzNEN0VKNUpWOU5ITitCNHNpY1djejlvKzIzVnFlREQ5dnBBWlNCNUhoMmNPTStwNFpBajZ6Y1N4b0Y1TXFYV00ya1NubG11TmdNWnlVQ0siLCJtYWMiOiJiNWEwMzdiZWE5M2U1YjFkNTBmNmZiZGIxZDQxN2IyZTc0ODg1OWZkYmI5ZjY1YWJjNjgwYTMyZTA5NjNmOGU1IiwidGFnIjoiIn0%3D; expires=Fri, 19 Apr 2024 02:11:53 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6Ikd3NUlKRWY1ZWl2SDAveG9kMVpOR0E9PSIsInZhbHVlIjoiYk0zRWtNLzlJMkRESXNESU1wMy94YzQvenRnQ0pXVFAvSUlMMzg0U283amxDdjcydDRUZEtrTWNkRU1NeThCYUhQdUphV2VyYi9kWDFOOERKNTlpMC9CakI4L2NMNS92U25tWW1mOXhwN3MrcVcxV0RucFp2RHF4WG5UdTlUU3EiLCJtYWMiOiJhNjBlMDQxYjllYTBlYTQ3OTlhYjAzYjE0Y2Y4MmMwYWM2YjI1N2UzNjQ1NmI4YzI3MGYyNDlmYWU4YmJlOWVjIiwidGFnIjoiIn0%3D; expires=Sun, 21 Apr 2024 19:53:05 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Ii9YaldReWRZWmFQYVRVeEZmSkJmVUE9PSIsInZhbHVlIjoiYmJIYkg4YjBBbFUzYktNRGx1cllhOVcxbGtReGk1NktNSVVyRld3U2pmTjU1Um1rVVA2RnNRZ3gvci9nekpHek1Ga0ZvV3hSVnUyOStFejArVTI1T3lqS2hCZFgvSGhRSnl2b3l4T0RvbTYySWVtbFg0bmtxV1hMQVpuRXZFNzgiLCJtYWMiOiIyNWU2YmY3MTEzZTY0NWMxNWVlZTZiZDdlMDc2YzA1OWRiMTA1YjNkYzE1MDFjNTk0NjBlNWEwOWZjNmFjNjYxIiwidGFnIjoiIn0%3D; expires=Sun, 21 Apr 2024 19:53:05 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -192,12 +192,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "laudantium",
+                                    "value": "odio",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=laudantium"
+                            "raw": "{{baseUrl}}\/blog-posts?title=odio"
                         },
                         "method": "GET",
                         "header": [
@@ -250,7 +250,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "laudantium",
+                                    "value": "in",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -354,7 +354,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "dolorum",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]
@@ -393,7 +393,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/dolorum?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/dolorum?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/dolorum?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/dolorum\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -420,7 +420,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"voluptas\",\"email\":\"crona.lois@example.net\",\"message\":\"adipisci\",\"cf-turnstile-response\":\"voluptatibus\"}"
+                            "raw": "{\"name\":\"fugiat\",\"email\":\"sherman22@example.org\",\"message\":\"eaque\",\"cf-turnstile-response\":\"maiores\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {

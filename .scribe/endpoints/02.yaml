@@ -24,13 +24,13 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: laudantium
+        example: odio
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: laudantium
+      title: odio
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -71,13 +71,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: laudantium
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: laudantium
+      slug: in
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -538,13 +538,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: dolorum
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: dolorum
+      tag: voluptas
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -553,7 +553,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/dolorum?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/dolorum","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/voluptas?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/voluptas?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/voluptas?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/voluptas","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -591,7 +591,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: voluptas
+        example: fugiat
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -600,7 +600,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: crona.lois@example.net
+        example: sherman22@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -609,7 +609,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: adipisci
+        example: eaque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -618,16 +618,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: voluptatibus
+        example: maiores
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: voluptas
-      email: crona.lois@example.net
-      message: adipisci
-      cf-turnstile-response: voluptatibus
+      name: fugiat
+      email: sherman22@example.org
+      message: eaque
+      cf-turnstile-response: maiores
     fileParameters: []
     responses: []
     responseFields: []
