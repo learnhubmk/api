@@ -15,7 +15,7 @@ class NewsletterSubscribeController extends Controller
   Additionally it uses Cloudflare Turnstile ReCaptcha for validation.
  DESC)]
     public function subscribe(SubscribeRequest $request) {
-        
+
         $first_name = $request->input('first_name');
         $email = $request->input('email');
 
@@ -25,6 +25,6 @@ class NewsletterSubscribeController extends Controller
              'email' => $email,
          ]);
 
-
+        return response()->json(["message" => "Successful subcription"], 200);
     }
 }
