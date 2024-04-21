@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use Bugsnag\BugsnagLaravel\OomBootstrapper;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -23,5 +24,13 @@ class Kernel extends ConsoleKernel
         $this->load(__DIR__.'/Commands');
 
         require base_path('routes/console.php');
+    }
+
+    protected function bootstrappers(): array
+    {
+        return array_merge(
+            [OomBootstrapper::class],
+            parent::bootstrappers(),
+        );
     }
 }
