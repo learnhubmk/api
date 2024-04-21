@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Knuckles\Scribe\Attributes\Endpoint;
 use App\Website\Http\Requests\SubscribeRequest;
+use Illuminate\Support\Facades\RateLimiter;
 
 class NewsletterSubscribeController extends Controller
 {
@@ -19,12 +20,23 @@ class NewsletterSubscribeController extends Controller
         $first_name = $request->input('first_name');
         $email = $request->input('email');
 
+        $executed = RateLimiter::attempt(
+            'subscribe:' . $email,
+            $perMinute = 5,
+            function() use ($first_name, $email) {
 
-        $response = Http::post(' https://mailcoach.learnhub.mk/subscribe/c7d93b24-50a3-4d64-bc95-f0e1b0d67b9a', [
-             'first_name' => $first_name,
-             'email' => $email,
-         ]);
+                $response = Http::post(' https://mailcoach.learnhub.mk/subscribe/c7d93b24-50a3-4d64-bc95-f0e1b0d67b9a', [
+                'first_name' => $first_name,
+                'email' => $email,
+                ]);
 
-        return response()->json(["message" => "Successful subcription"], 200);
+                return response()->json(["message" => "Successful subcription"], 200);
+            }
+        );
+
+        if (! $executed) {
+            return response()->json(["message" => 'Too many subscription attempts.Try later!'], 429);
+        }
+
     }
 }
