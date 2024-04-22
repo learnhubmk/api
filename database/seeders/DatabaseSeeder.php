@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Admin\Database\Seeders\AdminSeeder;
-use App\Admin\Models\User;
 use App\Platform\Models\User as PlatformUser;
 use App\Website\Database\Seeders\AuthorSeeder;
 use App\Website\Database\Seeders\BlogPostSeeder;
