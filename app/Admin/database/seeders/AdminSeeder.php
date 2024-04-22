@@ -20,6 +20,6 @@ class AdminSeeder extends Seeder
             'email_verified_at' => now()
         ]);
 
-        $user->assignRole(RoleName::ADMIN);
+        $user->assignRole(RoleName::ADMIN->value);
     }
 }

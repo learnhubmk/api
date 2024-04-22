@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Admin\Models;
+namespace App\Content\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\AdminUserFactory;
+use Database\Factories\ContentUserFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -29,7 +29,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @property-read int|null $roles_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @property-read int|null $tokens_count
- * @method static \Database\Factories\AdminUserFactory factory($count = null, $state = [])
+ * @method static \Database\Factories\ContentUserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions, $without = false)
@@ -88,7 +88,7 @@ class User extends Authenticatable
      */
     protected static function newFactory(): Factory
     {
-        return AdminUserFactory::new();
+        return ContentUserFactory::new();
     }
 
     public function guardName(): string
