@@ -4,6 +4,7 @@ namespace App\Website\Http\Requests;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\RequiredIf;
 
 
 class SubscribeRequest extends FormRequest
@@ -24,9 +25,17 @@ class SubscribeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'first_name' => ['required, string, max:20'],
-            'email' => ['required, email:filter'],
-            'cf-turnstile-response' => ['required', Rule::turnstile()]
+            'first_name' => ['required', 'string', 'max:20'],
+            'email' => ['required', 'email:filter'],
+            'cf-turnstile-response' => [
+                new RequiredIf(function () {
+                    return app()->isProduction();
+                }),
+                Rule::when(app()->isProduction(), [
+                    'string',
+                    Rule::turnstile(),
+                ]),
+            ],
         ];
     }
 }

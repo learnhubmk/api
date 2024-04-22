@@ -25,10 +25,11 @@ class NewsletterSubscribeController extends Controller
             $perMinute = 5,
             function() use ($first_name, $email) {
 
-                $response = Http::post(' https://mailcoach.learnhub.mk/subscribe/c7d93b24-50a3-4d64-bc95-f0e1b0d67b9a', [
+                $response = Http::post('https://mailcoach.learnhub.mk/subscribe/c7d93b24-50a3-4d64-bc95-f0e1b0d67b9a', [
                 'first_name' => $first_name,
                 'email' => $email,
                 ]);
+                dd($response);
 
                 return response()->json(["message" => "Successful subcription"], 200);
             }
