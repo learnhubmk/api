@@ -7,6 +7,38 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $slug
+ * @property string $excerpt
+ * @property string $content
+ * @property string $status
+ * @property int $author_id
+ * @property string|null $publish_date
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Website\Models\Author $author
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Website\Models\BlogPostTag> $tags
+ * @property-read int|null $tags_count
+ * @method static \App\Website\Database\Factories\BlogPostFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost query()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereExcerpt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost wherePublishDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class BlogPost extends Model
 {
     use HasFactory;
