@@ -76,7 +76,7 @@ services:
             - laravelapp
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
-        platform: linux/amd64
+#        platform: linux/amd64 # Enable this line if you are on mac m1 or later
         container_name: LearnHub_phpmyadmin
         environment:
             PMA_HOST: db
