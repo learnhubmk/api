@@ -4,7 +4,6 @@ namespace App\Content\Database\Seeders;
 
 use App\Content\Models\User;
 use App\Platform\Enums\RoleName;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
