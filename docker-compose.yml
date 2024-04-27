@@ -23,25 +23,25 @@ services:
             - XDEBUG_LOG=/tmp/xdebug.log
             - PHP_IDE_CONFIG=serverName=Docker
         networks:
-            - laravelapp
+            - learnhub
     db:
         image: mysql:latest
         container_name: LearnHub_mysql
         restart: unless-stopped
         environment:
-            MYSQL_DATABASE: learnhub
-            MYSQL_USER: learnhub
-            MYSQL_PASSWORD: learnhub
-            MYSQL_ROOT_PASSWORD: learnhub
-            SERVICE_TAGS: dev
-            SERVICE_NAME: mysql
+            - MYSQL_DATABASE=learnhub
+            - MYSQL_USER=learnhub
+            - MYSQL_PASSWORD=learnhub
+            - MYSQL_ROOT_PASSWORD=learnhub
+            - SERVICE_TAGS=dev
+            - SERVICE_NAME=mysql
         ports:
             - "3306:3306"
         volumes:
             - ./docker/dbdata:/var/lib/mysql
             - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
         networks:
-            - laravelapp
+            - learnhub
     nginx:
         image: nginx:latest
         container_name: LearnHub_nginx
@@ -52,17 +52,17 @@ services:
             - ./:/var/www
             - ./docker/nginx:/etc/nginx/conf.d
         networks:
-            - laravelapp
+            - learnhub
     redis:
         image: redis:latest
         container_name: LearnHub_redis
         restart: unless-stopped
-        networks:
-            - laravelapp
         ports:
             - "6379:6379"
         volumes:
             - ./docker/redis:/data
+        networks:
+            - learnhub
     meilisearch:
         image: getmeili/meilisearch:latest
         container_name: LearnHub_meilisearch
@@ -73,20 +73,27 @@ services:
         volumes:
             - ./docker/meilisearch/data:/data.ms
         networks:
-            - laravelapp
+            - learnhub
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
-#        platform: linux/amd64 # Enable this line if you are on mac m1 or later
         container_name: LearnHub_phpmyadmin
         environment:
-            PMA_HOST: db
-            PMA_PORT: 3306
+            - PMA_HOST=db
+            - PMA_PORT=3306
         ports:
             - "8080:80"
         depends_on:
             - db
         networks:
-            - laravelapp
+            - learnhub
+    mailhog:
+        image: mailhog/mailhog:latest
+        container_name: LearnHub_mailhog
+        ports:
+            - "8025:8025"  # Web interface
+            - "1025:1025"  # SMTP server
+        networks:
+            - learnhub
 networks:
-    laravelapp:
+    learnhub:
         driver: bridge
