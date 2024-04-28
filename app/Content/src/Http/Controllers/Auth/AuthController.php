@@ -5,7 +5,7 @@ namespace App\Content\Http\Controllers\Auth;
 use App\Content\Models\User;
 use App\Content\Http\Requests\Auth\LoginRequest;
 use App\Content\Http\Requests\Auth\LogoutRequest;
-use App\Content\Http\Resources\Auth\AuthenticatedContentResource;
+use App\Content\Http\Resources\Auth\AuthenticatedContentManagerResource;
 use App\Platform\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +23,7 @@ class AuthController
     #[Endpoint(title: 'Login', description: 'This endpoint enables users with content role to sign in')]
     #[Group('Content')]
     #[BodyParam('email', 'password', required: true)]
-    public function login(LoginRequest $request): AuthenticatedContentResource
+    public function login(LoginRequest $request): AuthenticatedContentManagerResource
     {
         $user = User::where('email', $request->email)->first();
 
@@ -37,7 +37,7 @@ class AuthController
 
         $token = $user->createToken($user->email)->plainTextToken;
 
-        return new AuthenticatedContentResource($user, $token);
+        return new AuthenticatedContentManagerResource($user, $token);
 
     }
 

@@ -7,7 +7,7 @@ use App\Platform\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class ContentSeeder extends Seeder
+class ContentManagerSeeder extends Seeder
 {
     /**
      * Run the database seeds.

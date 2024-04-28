@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Admin\Database\Seeders\AdminSeeder;
-use App\Content\Database\Seeders\ContentSeeder;
+use App\Content\Database\Seeders\ContentManagerSeeder;
 use App\Platform\Models\User as PlatformUser;
 use App\Website\Database\Seeders\AuthorSeeder;
 use App\Website\Database\Seeders\BlogPostSeeder;
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Artisan::call('db:seed', [
-            '--class' => ContentSeeder::class,
+            '--class' => ContentManagerSeeder::class,
             '--module' => 'Content',
         ]);
 

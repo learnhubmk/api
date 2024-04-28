@@ -5,7 +5,7 @@ namespace App\Content\Http\Resources\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthenticatedContentResource extends JsonResource
+class AuthenticatedContentManagerResource extends JsonResource
 {
     protected $token;
 
