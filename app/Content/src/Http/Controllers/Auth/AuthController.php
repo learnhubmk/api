@@ -27,7 +27,7 @@ class AuthController
     {
         $user = User::where('email', $request->email)->first();
 
-        if (!$user || !$user->hasRole(RoleName::CONTENT) || !Auth::attempt($request->only('email', 'password'))) {
+        if (!$user || !$user->hasRole(RoleName::CONTENT_MANAGER) || !Auth::attempt($request->only('email', 'password'))) {
             throw ValidationException::withMessages([
                 'error' => ['Invalid credentials'],
             ])->status(403);

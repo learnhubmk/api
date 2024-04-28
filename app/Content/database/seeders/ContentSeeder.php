@@ -20,6 +20,6 @@ class ContentSeeder extends Seeder
             'email_verified_at' => now()
         ]);
 
-        $user->assignRole(RoleName::CONTENT->value);
+        $user->assignRole(RoleName::CONTENT_MANAGER->value);
     }
 }
