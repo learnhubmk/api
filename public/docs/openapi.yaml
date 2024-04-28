@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'https://staging-api.learnhub.mk'
 paths:
   /admin/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: jennifer.cole@example.com
+                  example: rvandervort@example.org
                 password:
                   type: string
                   description: ''
-                  example: cum
+                  example: totam
               required:
                 - email
                 - password
@@ -63,11 +63,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: ogutkowski@example.org
+                  example: marks.camille@example.org
                 password:
                   type: string
                   description: ''
-                  example: nisi
+                  example: saepe
               required:
                 - email
                 - password
@@ -133,12 +133,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: rerum
+          example: ut
           required: false
           schema:
             type: string
             description: ''
-            example: rerum
+            example: ut
       responses:
         200:
           description: ''
@@ -149,9 +149,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Porro ullam quo qui sunt rerum fuga neque.'
-                      slug: porro-ullam-quo-qui-sunt-rerum-fuga-neque
-                      excerpt: 'Consequatur voluptatum et dolor rerum.'
+                      title: 'Omnis nostrum quia quidem ut.'
+                      slug: omnis-nostrum-quia-quidem-ut
+                      excerpt: 'Velit sed ullam at nam excepturi culpa nisi officia.'
                       tags:
                         -
                           name: php
@@ -159,15 +159,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-27'
+                      publish_date: '2024-04-28'
                       author:
-                        first_name: 'Miss Yesenia Gibson'
-                        last_name: Romaguera
+                        first_name: 'Kariane Treutel'
+                        last_name: Schoen
                         image: null
                     -
-                      title: 'Ea blanditiis sed rerum ut.'
-                      slug: ea-blanditiis-sed-rerum-ut
-                      excerpt: 'Doloremque fuga impedit qui maxime.'
+                      title: 'Impedit id dolorem aliquam et et ut quis.'
+                      slug: impedit-id-dolorem-aliquam-et-et-ut-quis
+                      excerpt: 'Facilis sint quo sunt dolorum veritatis.'
                       tags:
                         -
                           name: php
@@ -175,15 +175,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-27'
+                      publish_date: '2024-04-28'
                       author:
-                        first_name: 'Ms. Julie Keebler Jr.'
-                        last_name: Thompson
+                        first_name: 'Germaine Franecki'
+                        last_name: Block
                         image: null
                     -
-                      title: 'Sint unde quod minus rerum itaque.'
-                      slug: sint-unde-quod-minus-rerum-itaque
-                      excerpt: 'Ab doloribus ea rerum debitis blanditiis et.'
+                      title: 'Reprehenderit omnis aut nemo voluptatum facere.'
+                      slug: reprehenderit-omnis-aut-nemo-voluptatum-facere
+                      excerpt: 'Quia eum vel libero consequatur et voluptatibus blanditiis.'
                       tags:
                         -
                           name: php
@@ -191,15 +191,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-27'
+                      publish_date: '2024-04-28'
                       author:
-                        first_name: 'Prof. Devin Kutch'
-                        last_name: Miller
+                        first_name: 'Ms. Rebeka Kerluke DDS'
+                        last_name: Jenkins
                         image: null
                     -
-                      title: 'Soluta quod culpa rerum deleniti fugit.'
-                      slug: soluta-quod-culpa-rerum-deleniti-fugit
-                      excerpt: 'Consectetur adipisci et nesciunt molestiae deleniti soluta ex.'
+                      title: 'Optio sapiente recusandae esse ut unde aspernatur.'
+                      slug: optio-sapiente-recusandae-esse-ut-unde-aspernatur
+                      excerpt: 'Qui eligendi dolor voluptatibus aut et nobis quas.'
                       tags:
                         -
                           name: php
@@ -207,15 +207,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-27'
+                      publish_date: '2024-04-28'
                       author:
-                        first_name: 'Miss Yesenia Gibson'
-                        last_name: Romaguera
+                        first_name: 'Germaine Franecki'
+                        last_name: Block
                         image: null
                     -
-                      title: 'Ad qui eligendi quis rerum.'
-                      slug: ad-qui-eligendi-quis-rerum
-                      excerpt: 'Iste aliquam veritatis aut cupiditate dicta.'
+                      title: 'Aut nobis aut voluptatem.'
+                      slug: aut-nobis-aut-voluptatem
+                      excerpt: 'Quaerat ut vel nobis aut neque.'
                       tags:
                         -
                           name: php
@@ -223,10 +223,122 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-27'
+                      publish_date: '2024-04-28'
                       author:
-                        first_name: 'Ms. Annette Nicolas I'
-                        last_name: "D'Amore"
+                        first_name: 'Prof. Felton Ratke Jr.'
+                        last_name: Sporer
+                        image: null
+                    -
+                      title: 'Sed aut non est.'
+                      slug: sed-aut-non-est
+                      excerpt: 'Voluptas dolorum dolores laborum veritatis veniam quam quo.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Raquel Reilly'
+                        last_name: Lang
+                        image: null
+                    -
+                      title: 'Vel provident et voluptatem labore quis enim deserunt aut.'
+                      slug: vel-provident-et-voluptatem-labore-quis-enim-deserunt-aut
+                      excerpt: 'Perferendis vel explicabo qui ipsam.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Prof. Felton Ratke Jr.'
+                        last_name: Sporer
+                        image: null
+                    -
+                      title: 'Autem quisquam placeat porro porro a aliquid qui.'
+                      slug: autem-quisquam-placeat-porro-porro-a-aliquid-qui
+                      excerpt: 'Omnis libero quasi perferendis distinctio est iure.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Raquel Reilly'
+                        last_name: Lang
+                        image: null
+                    -
+                      title: 'Ullam magni fugiat aut eligendi vel.'
+                      slug: ullam-magni-fugiat-aut-eligendi-vel
+                      excerpt: 'Odio officiis aliquam eos excepturi.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Prof. Felton Ratke Jr.'
+                        last_name: Sporer
+                        image: null
+                    -
+                      title: 'Molestias ut ullam maxime impedit.'
+                      slug: molestias-ut-ullam-maxime-impedit
+                      excerpt: 'Velit quae nemo necessitatibus et.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Raquel Reilly'
+                        last_name: Lang
+                        image: null
+                    -
+                      title: 'Sapiente velit et ut voluptate dicta nostrum aut placeat.'
+                      slug: sapiente-velit-et-ut-voluptate-dicta-nostrum-aut-placeat
+                      excerpt: 'Voluptatum ipsa velit cupiditate aspernatur.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Ms. Rebeka Kerluke DDS'
+                        last_name: Jenkins
+                        image: null
+                    -
+                      title: 'Quis eligendi recusandae impedit vel aliquid tenetur aut cupiditate.'
+                      slug: quis-eligendi-recusandae-impedit-vel-aliquid-tenetur-aut-cupiditate
+                      excerpt: 'Suscipit natus ut illo debitis et.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-28'
+                      author:
+                        first_name: 'Dr. Shanny Beahan'
+                        last_name: Kassulke
                         image: null
                   links:
                     first: 'http://localhost/blog-posts?page=1'
@@ -252,16 +364,16 @@ paths:
                         active: false
                     path: 'http://localhost/blog-posts'
                     per_page: 15
-                    to: 5
-                    total: 5
+                    to: 12
+                    total: 12
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Porro ullam quo qui sunt rerum fuga neque.'
-                        slug: porro-ullam-quo-qui-sunt-rerum-fuga-neque
-                        excerpt: 'Consequatur voluptatum et dolor rerum.'
+                        title: 'Omnis nostrum quia quidem ut.'
+                        slug: omnis-nostrum-quia-quidem-ut
+                        excerpt: 'Velit sed ullam at nam excepturi culpa nisi officia.'
                         tags:
                           -
                             name: php
@@ -269,15 +381,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-27'
+                        publish_date: '2024-04-28'
                         author:
-                          first_name: 'Miss Yesenia Gibson'
-                          last_name: Romaguera
+                          first_name: 'Kariane Treutel'
+                          last_name: Schoen
                           image: null
                       -
-                        title: 'Ea blanditiis sed rerum ut.'
-                        slug: ea-blanditiis-sed-rerum-ut
-                        excerpt: 'Doloremque fuga impedit qui maxime.'
+                        title: 'Impedit id dolorem aliquam et et ut quis.'
+                        slug: impedit-id-dolorem-aliquam-et-et-ut-quis
+                        excerpt: 'Facilis sint quo sunt dolorum veritatis.'
                         tags:
                           -
                             name: php
@@ -285,15 +397,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-27'
+                        publish_date: '2024-04-28'
                         author:
-                          first_name: 'Ms. Julie Keebler Jr.'
-                          last_name: Thompson
+                          first_name: 'Germaine Franecki'
+                          last_name: Block
                           image: null
                       -
-                        title: 'Sint unde quod minus rerum itaque.'
-                        slug: sint-unde-quod-minus-rerum-itaque
-                        excerpt: 'Ab doloribus ea rerum debitis blanditiis et.'
+                        title: 'Reprehenderit omnis aut nemo voluptatum facere.'
+                        slug: reprehenderit-omnis-aut-nemo-voluptatum-facere
+                        excerpt: 'Quia eum vel libero consequatur et voluptatibus blanditiis.'
                         tags:
                           -
                             name: php
@@ -301,15 +413,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-27'
+                        publish_date: '2024-04-28'
                         author:
-                          first_name: 'Prof. Devin Kutch'
-                          last_name: Miller
+                          first_name: 'Ms. Rebeka Kerluke DDS'
+                          last_name: Jenkins
                           image: null
                       -
-                        title: 'Soluta quod culpa rerum deleniti fugit.'
-                        slug: soluta-quod-culpa-rerum-deleniti-fugit
-                        excerpt: 'Consectetur adipisci et nesciunt molestiae deleniti soluta ex.'
+                        title: 'Optio sapiente recusandae esse ut unde aspernatur.'
+                        slug: optio-sapiente-recusandae-esse-ut-unde-aspernatur
+                        excerpt: 'Qui eligendi dolor voluptatibus aut et nobis quas.'
                         tags:
                           -
                             name: php
@@ -317,15 +429,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-27'
+                        publish_date: '2024-04-28'
                         author:
-                          first_name: 'Miss Yesenia Gibson'
-                          last_name: Romaguera
+                          first_name: 'Germaine Franecki'
+                          last_name: Block
                           image: null
                       -
-                        title: 'Ad qui eligendi quis rerum.'
-                        slug: ad-qui-eligendi-quis-rerum
-                        excerpt: 'Iste aliquam veritatis aut cupiditate dicta.'
+                        title: 'Aut nobis aut voluptatem.'
+                        slug: aut-nobis-aut-voluptatem
+                        excerpt: 'Quaerat ut vel nobis aut neque.'
                         tags:
                           -
                             name: php
@@ -333,23 +445,135 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-27'
+                        publish_date: '2024-04-28'
                         author:
-                          first_name: 'Ms. Annette Nicolas I'
-                          last_name: "D'Amore"
+                          first_name: 'Prof. Felton Ratke Jr.'
+                          last_name: Sporer
+                          image: null
+                      -
+                        title: 'Sed aut non est.'
+                        slug: sed-aut-non-est
+                        excerpt: 'Voluptas dolorum dolores laborum veritatis veniam quam quo.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Raquel Reilly'
+                          last_name: Lang
+                          image: null
+                      -
+                        title: 'Vel provident et voluptatem labore quis enim deserunt aut.'
+                        slug: vel-provident-et-voluptatem-labore-quis-enim-deserunt-aut
+                        excerpt: 'Perferendis vel explicabo qui ipsam.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Prof. Felton Ratke Jr.'
+                          last_name: Sporer
+                          image: null
+                      -
+                        title: 'Autem quisquam placeat porro porro a aliquid qui.'
+                        slug: autem-quisquam-placeat-porro-porro-a-aliquid-qui
+                        excerpt: 'Omnis libero quasi perferendis distinctio est iure.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Raquel Reilly'
+                          last_name: Lang
+                          image: null
+                      -
+                        title: 'Ullam magni fugiat aut eligendi vel.'
+                        slug: ullam-magni-fugiat-aut-eligendi-vel
+                        excerpt: 'Odio officiis aliquam eos excepturi.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Prof. Felton Ratke Jr.'
+                          last_name: Sporer
+                          image: null
+                      -
+                        title: 'Molestias ut ullam maxime impedit.'
+                        slug: molestias-ut-ullam-maxime-impedit
+                        excerpt: 'Velit quae nemo necessitatibus et.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Raquel Reilly'
+                          last_name: Lang
+                          image: null
+                      -
+                        title: 'Sapiente velit et ut voluptate dicta nostrum aut placeat.'
+                        slug: sapiente-velit-et-ut-voluptate-dicta-nostrum-aut-placeat
+                        excerpt: 'Voluptatum ipsa velit cupiditate aspernatur.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Ms. Rebeka Kerluke DDS'
+                          last_name: Jenkins
+                          image: null
+                      -
+                        title: 'Quis eligendi recusandae impedit vel aliquid tenetur aut cupiditate.'
+                        slug: quis-eligendi-recusandae-impedit-vel-aliquid-tenetur-aut-cupiditate
+                        excerpt: 'Suscipit natus ut illo debitis et.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-28'
+                        author:
+                          first_name: 'Dr. Shanny Beahan'
+                          last_name: Kassulke
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Porro ullam quo qui sunt rerum fuga neque.'
+                          example: 'Omnis nostrum quia quidem ut.'
                         slug:
                           type: string
-                          example: porro-ullam-quo-qui-sunt-rerum-fuga-neque
+                          example: omnis-nostrum-quia-quidem-ut
                         excerpt:
                           type: string
-                          example: 'Consequatur voluptatum et dolor rerum.'
+                          example: 'Velit sed ullam at nam excepturi culpa nisi officia.'
                         tags:
                           type: array
                           example:
@@ -367,16 +591,16 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-04-27'
+                          example: '2024-04-28'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Miss Yesenia Gibson'
+                              example: 'Kariane Treutel'
                             last_name:
                               type: string
-                              example: Romaguera
+                              example: Schoen
                             image:
                               type: string
                               example: null
@@ -442,10 +666,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 5
+                        example: 12
                       total:
                         type: integer
-                        example: 5
+                        example: 12
       tags:
         - Website
       security: []
@@ -1146,7 +1370,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: distinctio
+        example: vel
         required: true
         schema:
           type: string
@@ -1374,8 +1598,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/blog-post-tags/voluptates?page=1'
-                    last: 'http://localhost/blog-post-tags/voluptates?page=1'
+                    first: 'http://localhost/blog-post-tags/sit?page=1'
+                    last: 'http://localhost/blog-post-tags/sit?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1388,14 +1612,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/blog-post-tags/voluptates?page=1'
+                        url: 'http://localhost/blog-post-tags/sit?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/blog-post-tags/voluptates'
+                    path: 'http://localhost/blog-post-tags/sit'
                     per_page: 15
                     to: null
                     total: 0
@@ -1408,10 +1632,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/blog-post-tags/voluptates?page=1'
+                        example: 'http://localhost/blog-post-tags/sit?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/blog-post-tags/voluptates?page=1'
+                        example: 'http://localhost/blog-post-tags/sit?page=1'
                       prev:
                         type: string
                         example: null
@@ -1438,7 +1662,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/blog-post-tags/voluptates?page=1'
+                            url: 'http://localhost/blog-post-tags/sit?page=1'
                             label: '1'
                             active: true
                           -
@@ -1459,7 +1683,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/blog-post-tags/voluptates'
+                        example: 'http://localhost/blog-post-tags/sit'
                       per_page:
                         type: integer
                         example: 15
@@ -1477,7 +1701,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: voluptates
+        example: sit
         required: true
         schema:
           type: string
@@ -1500,19 +1724,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: ipsa
+                  example: rerum
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: chandler00@example.net
+                  example: lemke.nyah@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: ex
+                  example: sed
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: et
+                  example: tempore
               required:
                 - name
                 - email

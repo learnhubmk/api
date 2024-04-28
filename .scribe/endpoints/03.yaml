@@ -24,20 +24,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: rerum
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: rerum
+      title: ut
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Porro ullam quo qui sunt rerum fuga neque.","slug":"porro-ullam-quo-qui-sunt-rerum-fuga-neque","excerpt":"Consequatur voluptatum et dolor rerum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-27","author":{"first_name":"Miss Yesenia Gibson","last_name":"Romaguera","image":null}},{"title":"Ea blanditiis sed rerum ut.","slug":"ea-blanditiis-sed-rerum-ut","excerpt":"Doloremque fuga impedit qui maxime.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-27","author":{"first_name":"Ms. Julie Keebler Jr.","last_name":"Thompson","image":null}},{"title":"Sint unde quod minus rerum itaque.","slug":"sint-unde-quod-minus-rerum-itaque","excerpt":"Ab doloribus ea rerum debitis blanditiis et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-27","author":{"first_name":"Prof. Devin Kutch","last_name":"Miller","image":null}},{"title":"Soluta quod culpa rerum deleniti fugit.","slug":"soluta-quod-culpa-rerum-deleniti-fugit","excerpt":"Consectetur adipisci et nesciunt molestiae deleniti soluta ex.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-27","author":{"first_name":"Miss Yesenia Gibson","last_name":"Romaguera","image":null}},{"title":"Ad qui eligendi quis rerum.","slug":"ad-qui-eligendi-quis-rerum","excerpt":"Iste aliquam veritatis aut cupiditate dicta.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-27","author":{"first_name":"Ms. Annette Nicolas I","last_name":"D''Amore","image":null}}],"links":{"first":"http:\/\/localhost\/blog-posts?page=1","last":"http:\/\/localhost\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-posts","per_page":15,"to":5,"total":5}}'
+        content: '{"data":[{"title":"Omnis nostrum quia quidem ut.","slug":"omnis-nostrum-quia-quidem-ut","excerpt":"Velit sed ullam at nam excepturi culpa nisi officia.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Kariane Treutel","last_name":"Schoen","image":null}},{"title":"Impedit id dolorem aliquam et et ut quis.","slug":"impedit-id-dolorem-aliquam-et-et-ut-quis","excerpt":"Facilis sint quo sunt dolorum veritatis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Germaine Franecki","last_name":"Block","image":null}},{"title":"Reprehenderit omnis aut nemo voluptatum facere.","slug":"reprehenderit-omnis-aut-nemo-voluptatum-facere","excerpt":"Quia eum vel libero consequatur et voluptatibus blanditiis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Ms. Rebeka Kerluke DDS","last_name":"Jenkins","image":null}},{"title":"Optio sapiente recusandae esse ut unde aspernatur.","slug":"optio-sapiente-recusandae-esse-ut-unde-aspernatur","excerpt":"Qui eligendi dolor voluptatibus aut et nobis quas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Germaine Franecki","last_name":"Block","image":null}},{"title":"Aut nobis aut voluptatem.","slug":"aut-nobis-aut-voluptatem","excerpt":"Quaerat ut vel nobis aut neque.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Prof. Felton Ratke Jr.","last_name":"Sporer","image":null}},{"title":"Sed aut non est.","slug":"sed-aut-non-est","excerpt":"Voluptas dolorum dolores laborum veritatis veniam quam quo.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Raquel Reilly","last_name":"Lang","image":null}},{"title":"Vel provident et voluptatem labore quis enim deserunt aut.","slug":"vel-provident-et-voluptatem-labore-quis-enim-deserunt-aut","excerpt":"Perferendis vel explicabo qui ipsam.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Prof. Felton Ratke Jr.","last_name":"Sporer","image":null}},{"title":"Autem quisquam placeat porro porro a aliquid qui.","slug":"autem-quisquam-placeat-porro-porro-a-aliquid-qui","excerpt":"Omnis libero quasi perferendis distinctio est iure.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Raquel Reilly","last_name":"Lang","image":null}},{"title":"Ullam magni fugiat aut eligendi vel.","slug":"ullam-magni-fugiat-aut-eligendi-vel","excerpt":"Odio officiis aliquam eos excepturi.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Prof. Felton Ratke Jr.","last_name":"Sporer","image":null}},{"title":"Molestias ut ullam maxime impedit.","slug":"molestias-ut-ullam-maxime-impedit","excerpt":"Velit quae nemo necessitatibus et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Raquel Reilly","last_name":"Lang","image":null}},{"title":"Sapiente velit et ut voluptate dicta nostrum aut placeat.","slug":"sapiente-velit-et-ut-voluptate-dicta-nostrum-aut-placeat","excerpt":"Voluptatum ipsa velit cupiditate aspernatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Ms. Rebeka Kerluke DDS","last_name":"Jenkins","image":null}},{"title":"Quis eligendi recusandae impedit vel aliquid tenetur aut cupiditate.","slug":"quis-eligendi-recusandae-impedit-vel-aliquid-tenetur-aut-cupiditate","excerpt":"Suscipit natus ut illo debitis et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-28","author":{"first_name":"Dr. Shanny Beahan","last_name":"Kassulke","image":null}}],"links":{"first":"http:\/\/localhost\/blog-posts?page=1","last":"http:\/\/localhost\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-posts","per_page":15,"to":12,"total":12}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -71,13 +71,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: distinctio
+        example: vel
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: distinctio
+      slug: vel
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -538,13 +538,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: voluptates
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: voluptates
+      tag: sit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -553,7 +553,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/blog-post-tags\/voluptates?page=1","last":"http:\/\/localhost\/blog-post-tags\/voluptates?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-post-tags\/voluptates?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-post-tags\/voluptates","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/blog-post-tags\/sit?page=1","last":"http:\/\/localhost\/blog-post-tags\/sit?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-post-tags\/sit?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-post-tags\/sit","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -591,7 +591,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: ipsa
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -600,7 +600,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: chandler00@example.net
+        example: lemke.nyah@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -609,7 +609,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: ex
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -618,16 +618,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: et
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: ipsa
-      email: chandler00@example.net
-      message: ex
-      cf-turnstile-response: et
+      name: rerum
+      email: lemke.nyah@example.org
+      message: sed
+      cf-turnstile-response: tempore
     fileParameters: []
     responses: []
     responseFields: []
