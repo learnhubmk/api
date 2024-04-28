@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
         View::addNamespace('website', app_path('Website/resources/views'));
 
-        RateLimiter::for('admin.login', function (Request $request) {
+        RateLimiter::for('login', function (Request $request) {
             return [
                 Limit::perMinute(5),
                 Limit::perMinute(5)->by($request->input('email')),

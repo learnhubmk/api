@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "1989d266-50eb-425d-becf-1ef0de855d16",
+        "_postman_id": "fb39b9e5-0416-483b-86f4-8ee9097e930b",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"audreanne40@example.net\",\"password\":\"qui\"}"
+                            "raw": "{\"email\":\"rvandervort@example.org\",\"password\":\"totam\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -72,6 +72,68 @@
                         ],
                         "body": null,
                         "description": "This endpoint enables users with admin role to log out"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Content",
+            "description": "",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "content\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/content\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"marks.camille@example.org\",\"password\":\"saepe\"}"
+                        },
+                        "description": "This endpoint enables users with content role to sign in",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "content\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/content\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enables users with content role to log out"
                     },
                     "response": []
                 }
@@ -168,7 +230,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Ikd3NUlKRWY1ZWl2SDAveG9kMVpOR0E9PSIsInZhbHVlIjoiYk0zRWtNLzlJMkRESXNESU1wMy94YzQvenRnQ0pXVFAvSUlMMzg0U283amxDdjcydDRUZEtrTWNkRU1NeThCYUhQdUphV2VyYi9kWDFOOERKNTlpMC9CakI4L2NMNS92U25tWW1mOXhwN3MrcVcxV0RucFp2RHF4WG5UdTlUU3EiLCJtYWMiOiJhNjBlMDQxYjllYTBlYTQ3OTlhYjAzYjE0Y2Y4MmMwYWM2YjI1N2UzNjQ1NmI4YzI3MGYyNDlmYWU4YmJlOWVjIiwidGFnIjoiIn0%3D; expires=Sun, 21 Apr 2024 19:53:05 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Ii9YaldReWRZWmFQYVRVeEZmSkJmVUE9PSIsInZhbHVlIjoiYmJIYkg4YjBBbFUzYktNRGx1cllhOVcxbGtReGk1NktNSVVyRld3U2pmTjU1Um1rVVA2RnNRZ3gvci9nekpHek1Ga0ZvV3hSVnUyOStFejArVTI1T3lqS2hCZFgvSGhRSnl2b3l4T0RvbTYySWVtbFg0bmtxV1hMQVpuRXZFNzgiLCJtYWMiOiIyNWU2YmY3MTEzZTY0NWMxNWVlZTZiZDdlMDc2YzA1OWRiMTA1YjNkYzE1MDFjNTk0NjBlNWEwOWZjNmFjNjYxIiwidGFnIjoiIn0%3D; expires=Sun, 21 Apr 2024 19:53:05 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IlBOckdHN3ZKM1pCYU9CZTNBVng1QkE9PSIsInZhbHVlIjoib0dkaUNpK1ZORGo0a3J5Yk9xT1g5RXVPcGpkb3VTbnkrZU8wNXBmSzRsdk5LVk1HajdRMGNiL0lHWlVyNm1Gcnh5R3RnMktiZndvR2YzWDBQUmEyUXpqcUs4WnNQK1E2QSs2RVU5b081eGhTbGcwdjlIVERVSTZCNitaMUdXZFIiLCJtYWMiOiJhODQ1NzVkZDVkODRhNTc5NWUyOWU1NDBmOTY3ZGJiZTc4MDUyZGFkNzdlZDRlNjNiY2Q0Y2E3YTI2NTM4NDUyIiwidGFnIjoiIn0%3D; expires=Sun, 28 Apr 2024 20:07:21 GMT; Max-Age=7200; path=\/; samesite=lax; laravel_session=eyJpdiI6InFNTWFpNnRJU1pscXdDUGw2emQwZWc9PSIsInZhbHVlIjoiOGoxWHExR002cVN1TmErOXE2eTVuVmdCSjNNbXRycFZROXFJZnIrTTF2NGVhcWZUZGVhWEdTMEVQVFdsaWpQUUh2KzZwaXM5d0hTUHNDRVF5dU5aMkpXbzRpclJmbDdtbWtwNFpIRmJFQVZBZ1FOazZYVHpIZEUyeVBYTytMVmQiLCJtYWMiOiI4ODMyMWJjZmNkNmZjNzA1OThkODkxY2Y2YmUwNzRjNzMxNjA2ZWYwMzg3N2Q2ZjY3ZDVhZmU2ODU4NTZhOGRkIiwidGFnIjoiIn0%3D; expires=Sun, 28 Apr 2024 20:07:21 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -192,12 +254,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "odio",
+                                    "value": "ut",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=odio"
+                            "raw": "{{baseUrl}}\/blog-posts?title=ut"
                         },
                         "method": "GET",
                         "header": [
@@ -233,7 +295,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[{\"title\":\"Omnis nostrum quia quidem ut.\",\"slug\":\"omnis-nostrum-quia-quidem-ut\",\"excerpt\":\"Velit sed ullam at nam excepturi culpa nisi officia.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Kariane Treutel\",\"last_name\":\"Schoen\",\"image\":null}},{\"title\":\"Impedit id dolorem aliquam et et ut quis.\",\"slug\":\"impedit-id-dolorem-aliquam-et-et-ut-quis\",\"excerpt\":\"Facilis sint quo sunt dolorum veritatis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Germaine Franecki\",\"last_name\":\"Block\",\"image\":null}},{\"title\":\"Reprehenderit omnis aut nemo voluptatum facere.\",\"slug\":\"reprehenderit-omnis-aut-nemo-voluptatum-facere\",\"excerpt\":\"Quia eum vel libero consequatur et voluptatibus blanditiis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Ms. Rebeka Kerluke DDS\",\"last_name\":\"Jenkins\",\"image\":null}},{\"title\":\"Optio sapiente recusandae esse ut unde aspernatur.\",\"slug\":\"optio-sapiente-recusandae-esse-ut-unde-aspernatur\",\"excerpt\":\"Qui eligendi dolor voluptatibus aut et nobis quas.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Germaine Franecki\",\"last_name\":\"Block\",\"image\":null}},{\"title\":\"Aut nobis aut voluptatem.\",\"slug\":\"aut-nobis-aut-voluptatem\",\"excerpt\":\"Quaerat ut vel nobis aut neque.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Prof. Felton Ratke Jr.\",\"last_name\":\"Sporer\",\"image\":null}},{\"title\":\"Sed aut non est.\",\"slug\":\"sed-aut-non-est\",\"excerpt\":\"Voluptas dolorum dolores laborum veritatis veniam quam quo.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Raquel Reilly\",\"last_name\":\"Lang\",\"image\":null}},{\"title\":\"Vel provident et voluptatem labore quis enim deserunt aut.\",\"slug\":\"vel-provident-et-voluptatem-labore-quis-enim-deserunt-aut\",\"excerpt\":\"Perferendis vel explicabo qui ipsam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Prof. Felton Ratke Jr.\",\"last_name\":\"Sporer\",\"image\":null}},{\"title\":\"Autem quisquam placeat porro porro a aliquid qui.\",\"slug\":\"autem-quisquam-placeat-porro-porro-a-aliquid-qui\",\"excerpt\":\"Omnis libero quasi perferendis distinctio est iure.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Raquel Reilly\",\"last_name\":\"Lang\",\"image\":null}},{\"title\":\"Ullam magni fugiat aut eligendi vel.\",\"slug\":\"ullam-magni-fugiat-aut-eligendi-vel\",\"excerpt\":\"Odio officiis aliquam eos excepturi.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Prof. Felton Ratke Jr.\",\"last_name\":\"Sporer\",\"image\":null}},{\"title\":\"Molestias ut ullam maxime impedit.\",\"slug\":\"molestias-ut-ullam-maxime-impedit\",\"excerpt\":\"Velit quae nemo necessitatibus et.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Raquel Reilly\",\"last_name\":\"Lang\",\"image\":null}},{\"title\":\"Sapiente velit et ut voluptate dicta nostrum aut placeat.\",\"slug\":\"sapiente-velit-et-ut-voluptate-dicta-nostrum-aut-placeat\",\"excerpt\":\"Voluptatum ipsa velit cupiditate aspernatur.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Ms. Rebeka Kerluke DDS\",\"last_name\":\"Jenkins\",\"image\":null}},{\"title\":\"Quis eligendi recusandae impedit vel aliquid tenetur aut cupiditate.\",\"slug\":\"quis-eligendi-recusandae-impedit-vel-aliquid-tenetur-aut-cupiditate\",\"excerpt\":\"Suscipit natus ut illo debitis et.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-28\",\"author\":{\"first_name\":\"Dr. Shanny Beahan\",\"last_name\":\"Kassulke\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/blog-posts\",\"per_page\":15,\"to\":12,\"total\":12}}",
                             "name": ""
                         }
                     ]
@@ -250,7 +312,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "in",
+                                    "value": "vel",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -337,7 +399,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\",\"per_page\":20,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"},{\"name\":\"react\"},{\"name\":\"redis\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/blog-post-tags?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/blog-post-tags\",\"per_page\":20,\"to\":20,\"total\":23}}",
                             "name": ""
                         }
                     ]
@@ -354,7 +416,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "voluptas",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -393,7 +455,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/voluptas\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/blog-post-tags\\\/sit?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/blog-post-tags\\\/sit?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/blog-post-tags\\\/sit?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/blog-post-tags\\\/sit\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -420,7 +482,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fugiat\",\"email\":\"sherman22@example.org\",\"message\":\"eaque\",\"cf-turnstile-response\":\"maiores\"}"
+                            "raw": "{\"name\":\"rerum\",\"email\":\"lemke.nyah@example.org\",\"message\":\"sed\",\"cf-turnstile-response\":\"tempore\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
