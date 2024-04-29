@@ -86,9 +86,9 @@ services:
             - db
         networks:
             - learnhub
-    mailhog:
-        image: mailhog/mailhog:latest
-        container_name: LearnHub_mailhog
+    mailpit:
+        image: 'axllent/mailpit:latest'
+        container_name: LearnHub_mailpit
         ports:
             - "8025:8025"  # Web interface
             - "1025:1025"  # SMTP server

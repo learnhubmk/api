@@ -37,8 +37,7 @@ RUN pecl install xdebug \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Get latest Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
-
+COPY --from=composer:2.5.8 /usr/bin/composer /usr/bin/composer
 # Create system user
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 
