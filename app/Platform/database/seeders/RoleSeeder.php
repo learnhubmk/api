@@ -17,6 +17,5 @@ class RoleSeeder extends Seeder
         //        Http::post()->
         Role::create(['name' => RoleName::ADMIN->value]);
         Role::create(['name' => RoleName::MEMBER->value]);
-        Role::create(['name' => RoleName::CONTENT_MANAGER->value]);
     }
 }
