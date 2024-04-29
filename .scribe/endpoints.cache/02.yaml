@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: google/redirect
+    uri: login/google/redirect
     metadata:
       groupName: Platform
       groupDescription: ''
@@ -58,7 +58,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: google/callback
+    uri: login/google/callback
     metadata:
       groupName: Platform
       groupDescription: ''

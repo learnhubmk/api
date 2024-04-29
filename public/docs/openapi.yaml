@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: jjones@example.org
+                  example: ethyl07@example.org
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: nam
               required:
                 - email
                 - password
@@ -63,11 +63,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: anibal16@example.com
+                  example: pat.hilpert@example.net
                 password:
                   type: string
                   description: ''
-                  example: in
+                  example: eaque
               required:
                 - email
                 - password
@@ -123,7 +123,7 @@ paths:
       tags:
         - General
       security: []
-  /google/redirect:
+  /login/google/redirect:
     get:
       summary: Redirect
       operationId: redirect
@@ -140,7 +140,7 @@ paths:
       tags:
         - Platform
       security: []
-  /google/callback:
+  /login/google/callback:
     get:
       summary: Callback
       operationId: callback
@@ -1034,12 +1034,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: dolor
+          example: minus
           required: false
           schema:
             type: string
             description: ''
-            example: dolor
+            example: minus
       responses:
         200:
           description: ''
@@ -1050,9 +1050,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Quasi dolorem aut sint ducimus.'
-                      slug: quasi-dolorem-aut-sint-ducimus
-                      excerpt: 'Vel repellendus enim aperiam exercitationem ad.'
+                      title: 'Ducimus quod rem minus ab.'
+                      slug: ducimus-quod-rem-minus-ab
+                      excerpt: 'Et est quia enim praesentium.'
                       tags:
                         -
                           name: php
@@ -1064,166 +1064,6 @@ paths:
                       author:
                         first_name: 'Dr. Newton Daugherty'
                         last_name: Weimann
-                        image: null
-                    -
-                      title: 'Maiores quisquam dolor ea harum ea.'
-                      slug: maiores-quisquam-dolor-ea-harum-ea
-                      excerpt: 'Voluptatem perferendis qui exercitationem deleniti voluptas.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Sherwood Feeney'
-                        last_name: Hane
-                        image: null
-                    -
-                      title: 'Facere vel tenetur dolor.'
-                      slug: facere-vel-tenetur-dolor
-                      excerpt: 'Eum dicta soluta sit est.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Dr. Newton Daugherty'
-                        last_name: Weimann
-                        image: null
-                    -
-                      title: 'Eum dolorem veritatis modi molestias itaque est et.'
-                      slug: eum-dolorem-veritatis-modi-molestias-itaque-est-et
-                      excerpt: 'Dolor consectetur perspiciatis nobis accusantium.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Consequatur illum dolor sint animi et deserunt.'
-                      slug: consequatur-illum-dolor-sint-animi-et-deserunt
-                      excerpt: 'Earum quo nihil non modi.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Corene Hills'
-                        last_name: Mante
-                        image: null
-                    -
-                      title: 'Doloremque nihil quibusdam rerum quibusdam ipsam.'
-                      slug: doloremque-nihil-quibusdam-rerum-quibusdam-ipsam
-                      excerpt: 'Laudantium unde nobis aliquid nobis.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Dolorem molestias aut nemo.'
-                      slug: dolorem-molestias-aut-nemo
-                      excerpt: 'Perferendis sint et voluptas aut.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Dr. Newton Daugherty'
-                        last_name: Weimann
-                        image: null
-                    -
-                      title: 'Unde culpa dolor et recusandae.'
-                      slug: unde-culpa-dolor-et-recusandae
-                      excerpt: 'Sed consequatur illum sit adipisci beatae.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Id voluptas vel molestiae ducimus rem enim dolor.'
-                      slug: id-voluptas-vel-molestiae-ducimus-rem-enim-dolor
-                      excerpt: 'Aliquid rerum enim nobis ut veritatis in cumque.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Rerum velit tenetur qui numquam dolor ut quia.'
-                      slug: rerum-velit-tenetur-qui-numquam-dolor-ut-quia
-                      excerpt: 'Incidunt unde quibusdam occaecati porro eos.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Bobbie Oberbrunner'
-                        last_name: Koch
-                        image: null
-                    -
-                      title: 'Quis et voluptatem suscipit nam hic voluptate dolorem.'
-                      slug: quis-et-voluptatem-suscipit-nam-hic-voluptate-dolorem
-                      excerpt: 'Totam incidunt rerum veritatis enim.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Kyla Dibbert III'
-                        last_name: Becker
                         image: null
                   links:
                     first: 'http://learnhub.test/blog-posts?page=1'
@@ -1249,16 +1089,16 @@ paths:
                         active: false
                     path: 'http://learnhub.test/blog-posts'
                     per_page: 15
-                    to: 11
-                    total: 11
+                    to: 1
+                    total: 1
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Quasi dolorem aut sint ducimus.'
-                        slug: quasi-dolorem-aut-sint-ducimus
-                        excerpt: 'Vel repellendus enim aperiam exercitationem ad.'
+                        title: 'Ducimus quod rem minus ab.'
+                        slug: ducimus-quod-rem-minus-ab
+                        excerpt: 'Et est quia enim praesentium.'
                         tags:
                           -
                             name: php
@@ -1270,179 +1110,19 @@ paths:
                         author:
                           first_name: 'Dr. Newton Daugherty'
                           last_name: Weimann
-                          image: null
-                      -
-                        title: 'Maiores quisquam dolor ea harum ea.'
-                        slug: maiores-quisquam-dolor-ea-harum-ea
-                        excerpt: 'Voluptatem perferendis qui exercitationem deleniti voluptas.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Sherwood Feeney'
-                          last_name: Hane
-                          image: null
-                      -
-                        title: 'Facere vel tenetur dolor.'
-                        slug: facere-vel-tenetur-dolor
-                        excerpt: 'Eum dicta soluta sit est.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Dr. Newton Daugherty'
-                          last_name: Weimann
-                          image: null
-                      -
-                        title: 'Eum dolorem veritatis modi molestias itaque est et.'
-                        slug: eum-dolorem-veritatis-modi-molestias-itaque-est-et
-                        excerpt: 'Dolor consectetur perspiciatis nobis accusantium.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Consequatur illum dolor sint animi et deserunt.'
-                        slug: consequatur-illum-dolor-sint-animi-et-deserunt
-                        excerpt: 'Earum quo nihil non modi.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Corene Hills'
-                          last_name: Mante
-                          image: null
-                      -
-                        title: 'Doloremque nihil quibusdam rerum quibusdam ipsam.'
-                        slug: doloremque-nihil-quibusdam-rerum-quibusdam-ipsam
-                        excerpt: 'Laudantium unde nobis aliquid nobis.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Dolorem molestias aut nemo.'
-                        slug: dolorem-molestias-aut-nemo
-                        excerpt: 'Perferendis sint et voluptas aut.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Dr. Newton Daugherty'
-                          last_name: Weimann
-                          image: null
-                      -
-                        title: 'Unde culpa dolor et recusandae.'
-                        slug: unde-culpa-dolor-et-recusandae
-                        excerpt: 'Sed consequatur illum sit adipisci beatae.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Id voluptas vel molestiae ducimus rem enim dolor.'
-                        slug: id-voluptas-vel-molestiae-ducimus-rem-enim-dolor
-                        excerpt: 'Aliquid rerum enim nobis ut veritatis in cumque.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Rerum velit tenetur qui numquam dolor ut quia.'
-                        slug: rerum-velit-tenetur-qui-numquam-dolor-ut-quia
-                        excerpt: 'Incidunt unde quibusdam occaecati porro eos.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Bobbie Oberbrunner'
-                          last_name: Koch
-                          image: null
-                      -
-                        title: 'Quis et voluptatem suscipit nam hic voluptate dolorem.'
-                        slug: quis-et-voluptatem-suscipit-nam-hic-voluptate-dolorem
-                        excerpt: 'Totam incidunt rerum veritatis enim.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Kyla Dibbert III'
-                          last_name: Becker
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Quasi dolorem aut sint ducimus.'
+                          example: 'Ducimus quod rem minus ab.'
                         slug:
                           type: string
-                          example: quasi-dolorem-aut-sint-ducimus
+                          example: ducimus-quod-rem-minus-ab
                         excerpt:
                           type: string
-                          example: 'Vel repellendus enim aperiam exercitationem ad.'
+                          example: 'Et est quia enim praesentium.'
                         tags:
                           type: array
                           example:
@@ -1535,10 +1215,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 11
+                        example: 1
                       total:
                         type: integer
-                        example: 11
+                        example: 1
       tags:
         - Website
       security: []
@@ -2239,7 +1919,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: est
+        example: modi
         required: true
         schema:
           type: string
@@ -2467,8 +2147,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/maiores?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/maiores?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/libero?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/libero?page=1'
                     prev: null
                     next: null
                   meta:
@@ -2481,14 +2161,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/maiores?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/libero?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/maiores'
+                    path: 'http://learnhub.test/blog-post-tags/libero'
                     per_page: 15
                     to: null
                     total: 0
@@ -2501,10 +2181,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/maiores?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/libero?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/maiores?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/libero?page=1'
                       prev:
                         type: string
                         example: null
@@ -2531,7 +2211,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/maiores?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/libero?page=1'
                             label: '1'
                             active: true
                           -
@@ -2552,7 +2232,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/maiores'
+                        example: 'http://learnhub.test/blog-post-tags/libero'
                       per_page:
                         type: integer
                         example: 15
@@ -2570,7 +2250,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: maiores
+        example: libero
         required: true
         schema:
           type: string
@@ -2593,19 +2273,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: non
+                  example: et
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: dexter00@example.org
+                  example: goldner.precious@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: totam
+                  example: quia
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: commodi
+                  example: qui
               required:
                 - name
                 - email

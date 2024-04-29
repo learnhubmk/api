@@ -26,6 +26,10 @@ class GoogleAuthController extends Controller
         $googleUser = Socialite::driver('google')->stateless()->user();
         $user = User::where('email', $googleUser->email)->first();
 
+        if (!$user) {
+            abort(404, 'Account not found');
+        }
+
         $user->tokens()->where('name', $user->email)->delete();
 
         $token = $user->createToken($user->email)->plainTextToken;
