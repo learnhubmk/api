@@ -37,7 +37,7 @@ RUN pecl install xdebug \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Get latest Composer
-COPY --from=composer:2.5.8 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Create system user
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 

@@ -24,6 +24,7 @@ services:
             - PHP_IDE_CONFIG=serverName=Docker
         networks:
             - learnhub
+
     db:
         image: mysql:latest
         container_name: LearnHub_mysql
@@ -38,10 +39,10 @@ services:
         ports:
             - "3306:3306"
         volumes:
-            - ./docker/dbdata:/var/lib/mysql
-            - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+            - dbdata:/var/lib/mysql
         networks:
             - learnhub
+
     nginx:
         image: nginx:latest
         container_name: LearnHub_nginx
@@ -53,6 +54,7 @@ services:
             - ./docker/nginx:/etc/nginx/conf.d
         networks:
             - learnhub
+
     redis:
         image: redis:latest
         container_name: LearnHub_redis
@@ -60,9 +62,10 @@ services:
         ports:
             - "6379:6379"
         volumes:
-            - ./docker/redis:/data
+            - redisdata:/data
         networks:
             - learnhub
+
     meilisearch:
         image: getmeili/meilisearch:latest
         container_name: LearnHub_meilisearch
@@ -71,9 +74,10 @@ services:
         environment:
             - MEILI_MASTER_KEY=your_master_key_here
         volumes:
-            - ./docker/meilisearch/data:/data.ms
+            - meilisearchdata:/data.ms
         networks:
             - learnhub
+
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: LearnHub_phpmyadmin
@@ -86,6 +90,7 @@ services:
             - db
         networks:
             - learnhub
+
     mailpit:
         image: 'axllent/mailpit:latest'
         container_name: LearnHub_mailpit
@@ -94,6 +99,12 @@ services:
             - "1025:1025"  # SMTP server
         networks:
             - learnhub
+
 networks:
     learnhub:
         driver: bridge
+
+volumes:
+    dbdata:
+    redisdata:
+    meilisearchdata:
