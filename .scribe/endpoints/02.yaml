@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: platform/social/google/redirect
+    uri: google/redirect
     metadata:
       groupName: Platform
       groupDescription: ''
@@ -56,7 +56,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: platform/social/google/callback
+    uri: google/callback
     metadata:
       groupName: Platform
       groupDescription: ''
@@ -179,7 +179,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php",
-                      "line": 27,
+                      "line": 26,
                       "function": "user",
                       "class": "SocialiteProviders\\Manager\\OAuth2\\AbstractProvider",
                       "type": "->"
