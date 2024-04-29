@@ -26,20 +26,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: minus
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: minus
+      title: dolores
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Ducimus quod rem minus ab.","slug":"ducimus-quod-rem-minus-ab","excerpt":"Et est quia enim praesentium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-04-29","author":{"first_name":"Dr. Newton Daugherty","last_name":"Weimann","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -73,13 +73,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: modi
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: modi
+      slug: in
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -540,13 +540,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: libero
+        example: sunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: libero
+      tag: sunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -555,7 +555,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/libero","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/sunt?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/sunt?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/sunt?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/sunt","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -593,7 +593,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: et
+        example: ipsum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -602,7 +602,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: goldner.precious@example.org
+        example: cole.dustin@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -611,7 +611,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: quia
+        example: quidem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -620,16 +620,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: qui
+        example: doloremque
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: et
-      email: goldner.precious@example.org
-      message: quia
-      cf-turnstile-response: qui
+      name: ipsum
+      email: cole.dustin@example.net
+      message: quidem
+      cf-turnstile-response: doloremque
     fileParameters: []
     responses: []
     responseFields: []
