@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "66a98bdb-9df2-4e32-a2cc-f029515d1517",
+        "_postman_id": "a284a284-af03-49e1-a005-1ff27cefe8f8",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"rebekah60@example.com\",\"password\":\"est\"}"
+                            "raw": "{\"email\":\"eschamberger@example.com\",\"password\":\"est\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -103,7 +103,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"maude.yost@example.com\",\"password\":\"maiores\"}"
+                            "raw": "{\"email\":\"lennie62@example.com\",\"password\":\"praesentium\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -230,11 +230,117 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImExc2R3S00xMXhQT2tHNHBhUk5GZkE9PSIsInZhbHVlIjoiNG54MUVXTHN4VHh1cTYxWjlqV3p0THBuemFPQXFVOHNBOEJzTlVvYjdrL3hxQTdndzJXeGRibzlMNXlSOUVCTCswMXkrNUpPc2NhaVM3cy9HbEdPcDRLb3pGY0R6azJrL1RINm41UjhEYzJiYlUzeDJ4UmxFMXpVR2g0bHhrZk0iLCJtYWMiOiI2ZjVmMGYxNmE2ZjM4MWE0MGZjNmVmNTdlOGFmYjAwOWRmZDk2NDgwZWIzMDgyNDBhOTIxOWUwZWZkODdkMTcwIiwidGFnIjoiIn0%3D; expires=Mon, 29 Apr 2024 23:35:39 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6Ik5Vb1pCSEw1TEE1UVdRWWp5a3pVb3c9PSIsInZhbHVlIjoic0Z2d0IxbDFjSVVHZFVJalpmWlgzUkdRMG9DcGM4ZTdYS1pEV09uNFNCWWt2MUhucUZTem9IWFlaQUdqb0RKZnpxK2RQSG1aWnNmaFBRTFhWYzI0SVdXalY0Wm45WFBvWHhCNFhUTTBKVjQ1RGhQMVJjN1VjSlF0OWduUzBpRkwiLCJtYWMiOiJlODgwMzczMmZmYjU0NmZjZTdhNDQ2MjEyNDIwNGI4OWRjZTY4ZDViZTY0NTg0NjZiNGUxMWZkM2U0YjYzY2U2IiwidGFnIjoiIn0%3D; expires=Mon, 29 Apr 2024 23:35:39 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IkExY0w3ZGU0anNnWkREN2FOOU9scGc9PSIsInZhbHVlIjoiTUMrTUlEK2ZFOHg5UklQNlBtR0dQQUw2YkQ3Qk5BcjNPaHFNK2FNdEdlbmwrMEdEeVNRZFgvVTFrakJjeDNzVVZhMHdBcUFFdDJMaFhVQktFRC8za1hKVGxpbjdNLzRYZWpjTzdTMlF6b0oraVR3YW1rN1dmY21LN3FKaUpsOXMiLCJtYWMiOiJhNDczNzgzMjRhY2FlZGNjYTBjOWRiMmViNmYzNzAyNDQzMTQ1OGJkMTc5YzJiYTlmODUwODcxOWFkN2U0MGYxIiwidGFnIjoiIn0%3D; expires=Mon, 29 Apr 2024 23:55:05 GMT; Max-Age=7200; path=\/; samesite=lax; learnhub_session=eyJpdiI6ImNtaHNHeU9pSnlyZ3IvaEV2U2FJWUE9PSIsInZhbHVlIjoiYklUNURiaXQxSFRYZW1IVEV4YVQ1cjJYb3RJYXVwWXVaRzE3cVJ4YjdMdiswRWNGeEJEVG9ENit6WFNLUTdpNEN0L1lIb2dYQzMrZzlLNjJUcVRqelhIdGJjYVJlTUV1UTAyc0kxS2pVYUVVSFlFNW4vOXFFRjBvWXBxL1pvTDIiLCJtYWMiOiJmNDIwYzJkNzk3M2FlMjNlOWJiMzgxZjg3MzZlNDRkYzlhZTc4YjM0ZDU4MzI1ODFmODU4YWM0ZTFiMGQ2ZGQxIiwidGFnIjoiIn0%3D; expires=Mon, 29 Apr 2024 23:55:05 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
                             "body": "",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Platform",
+            "description": "",
+            "item": [
+                {
+                    "name": "Redirect",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "platform\/social\/google\/redirect",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/platform\/social\/google\/redirect"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint redirect to the Google SignIn Form",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 302,
+                            "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url='https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code'\" \/>\n\n        <title>Redirecting to https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code\">https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code<\/a>.\n    <\/body>\n<\/html>",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Callback",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "platform\/social\/google\/callback",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/platform\/social\/google\/callback"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint sign in the users with Google Account",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Client error: `POST https:\/\/oauth2.googleapis.com\/token` resulted in a `400 Bad Request` response:\\n{\\n  \\\"error\\\": \\\"invalid_request\\\",\\n  \\\"error_description\\\": \\\"Missing required parameter: code\\\"\\n}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"\/var\/www\/vendor\/guzzlehttp\/guzzle\/src\/Exception\/RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/guzzle\/src\/Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/promises\/src\/Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/guzzle\/src\/Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/guzzlehttp\/guzzle\/src\/ClientTrait.php\",\n            \"line\": 95,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/socialite\/src\/Two\/AbstractProvider.php\",\n            \"line\": 301,\n            \"function\": \"post\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/socialiteproviders\/manager\/src\/OAuth2\/AbstractProvider.php\",\n            \"line\": 52,\n            \"function\": \"getAccessTokenResponse\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/app\/Platform\/src\/Http\/Controllers\/Auth\/Social\/GoogleAuthController.php\",\n            \"line\": 27,\n            \"function\": \"user\",\n            \"class\": \"SocialiteProviders\\\\Manager\\\\OAuth2\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"handleCallback\",\n            \"class\": \"App\\\\Platform\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\GoogleAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 206,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 300,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 288,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 212,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 181,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 1049,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 318,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 169,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 196,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
                             "name": ""
                         }
                     ]
@@ -254,12 +360,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "omnis",
+                                    "value": "sed",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=omnis"
+                            "raw": "{{baseUrl}}\/blog-posts?title=sed"
                         },
                         "method": "GET",
                         "header": [
@@ -295,7 +401,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Enim animi laudantium animi veniam omnis id.\",\"slug\":\"enim-animi-laudantium-animi-veniam-omnis-id\",\"excerpt\":\"Velit doloribus voluptas dolorem odio.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Corene Hills\",\"last_name\":\"Mante\",\"image\":null}},{\"title\":\"Laudantium aut omnis esse accusamus.\",\"slug\":\"laudantium-aut-omnis-esse-accusamus\",\"excerpt\":\"Culpa tenetur et qui modi rem.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Jade Pollich\",\"last_name\":\"Aufderhar\",\"image\":null}},{\"title\":\"Numquam sit quo delectus omnis consequatur.\",\"slug\":\"numquam-sit-quo-delectus-omnis-consequatur\",\"excerpt\":\"Aut nisi dolorem ea tempora a officiis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Corene Hills\",\"last_name\":\"Mante\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":15,\"to\":3,\"total\":3}}",
+                            "body": "{\"data\":[{\"title\":\"Iusto rerum quibusdam enim natus mollitia sed sed.\",\"slug\":\"iusto-rerum-quibusdam-enim-natus-mollitia-sed-sed\",\"excerpt\":\"Impedit quam harum est consequatur est velit.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Tatyana Fisher\",\"last_name\":\"McKenzie\",\"image\":null}},{\"title\":\"Autem ut ut sed laudantium sit praesentium.\",\"slug\":\"autem-ut-ut-sed-laudantium-sit-praesentium\",\"excerpt\":\"Explicabo assumenda ut nemo et laboriosam sit sed expedita.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Jade Pollich\",\"last_name\":\"Aufderhar\",\"image\":null}},{\"title\":\"Recusandae repudiandae sunt consequatur sed laborum.\",\"slug\":\"recusandae-repudiandae-sunt-consequatur-sed-laborum\",\"excerpt\":\"Hic eos laboriosam veritatis aut qui quam fuga.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Bobbie Oberbrunner\",\"last_name\":\"Koch\",\"image\":null}},{\"title\":\"Voluptate sed ipsam quae et.\",\"slug\":\"voluptate-sed-ipsam-quae-et\",\"excerpt\":\"Dignissimos et non repellendus esse id id nemo.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Tatyana Fisher\",\"last_name\":\"McKenzie\",\"image\":null}},{\"title\":\"Est ullam hic perspiciatis quidem sed culpa perferendis.\",\"slug\":\"est-ullam-hic-perspiciatis-quidem-sed-culpa-perferendis\",\"excerpt\":\"Molestias accusamus vel officia.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-04-29\",\"author\":{\"first_name\":\"Cindy Grant V\",\"last_name\":\"Fahey\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":15,\"to\":5,\"total\":5}}",
                             "name": ""
                         }
                     ]
@@ -312,7 +418,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "minima",
+                                    "value": "et",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -416,7 +522,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "quis",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -455,7 +561,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/quis?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/quis?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/quis?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/quis\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/autem?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/autem?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/autem?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/autem\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -482,7 +588,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"explicabo\",\"email\":\"chesley70@example.org\",\"message\":\"ullam\",\"cf-turnstile-response\":\"placeat\"}"
+                            "raw": "{\"name\":\"deserunt\",\"email\":\"jaylan.breitenberg@example.org\",\"message\":\"et\",\"cf-turnstile-response\":\"qui\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
