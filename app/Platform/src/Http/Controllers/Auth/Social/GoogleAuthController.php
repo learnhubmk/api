@@ -3,7 +3,6 @@
 namespace App\Platform\Http\Controllers\Auth\Social;
 
 use App\Http\Controllers\Controller;
-use App\Platform\Enums\RoleName;
 use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
 use App\Platform\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
@@ -26,20 +25,6 @@ class GoogleAuthController extends Controller
     {
         $googleUser = Socialite::driver('google')->stateless()->user();
         $user = User::where('email', $googleUser->email)->first();
-
-        if (!$user) {
-            $user = User::create([
-                'name' => $googleUser->name,
-                'email' => $googleUser->email,
-                'email_verified_at' => now(),
-            ]);
-
-            $user->assignRole(RoleName::MEMBER->value);
-        }
-
-        if (!$user->hasRole(RoleName::MEMBER)) {
-            abort(403, 'Forbidden');
-        }
 
         $user->tokens()->where('name', $user->email)->delete();
 
