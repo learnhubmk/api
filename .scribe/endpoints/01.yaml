@@ -41,8 +41,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: anibal16@example.com
-      password: in
+      email: liza.cassin@example.org
+      password: voluptas
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,7 +80,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6b5V6h8gaacvf1PeDEkdZ43'
+      - 'Bearer Z3PcfavdV66eb5gEDh8ak41'
     controller: null
     method: null
     route: null

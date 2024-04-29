@@ -41,8 +41,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: jjones@example.org
-      password: aut
+      email: bryon.schuster@example.org
+      password: omnis
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,7 +80,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Zbv14a6kd5e6PDag8h3EfVc'
+      - 'Bearer eVE8Dgk6bcav1463fhaZ5Pd'
     controller: null
     method: null
     route: null
