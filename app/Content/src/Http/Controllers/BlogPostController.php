@@ -8,6 +8,7 @@ use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
 use App\Http\Controllers\Controller;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\QueryParam;
@@ -16,9 +17,10 @@ class BlogPostController extends Controller
 {
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
-    #[QueryParam('title', 'string', required: false)]
-    #[QueryParam('tag', 'string', required: false)]
-    #[QueryParam('author', 'string', required: false)]
+    #[QueryParam('title', 'string', required: false, example: "?title=learnhub")]
+    #[QueryParam('tag', 'string', required: false, example: "?tag=php")]
+    #[QueryParam('author', 'string', required: false, example: "?author=john")]
+    #[QueryParam('sort', 'array', required: false, example: "?sort=[id,title]", enum: ['id', 'title', 'publish_date', 'created_at'])]
     public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
@@ -36,7 +38,13 @@ class BlogPostController extends Controller
                     ->orWhere('last_name', 'like', "%$request->author%" );
                 });
             })
-            ->orderByDesc('created_at')
+            ->when($request->has('sort'), function ($query) use ($request) {
+                $sortFields = explode(',', str_replace(['[', ']'], '', $request->sort));
+                foreach ($sortFields as $sortField) {
+                    $direction = 'desc';
+                    $query->orderBy($sortField, $direction);
+                }
+            })
             ->paginate(15);
 
         return BlogPostsResource::collection($blogs);
