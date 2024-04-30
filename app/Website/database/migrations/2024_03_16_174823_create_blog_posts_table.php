@@ -20,6 +20,7 @@ return new class () extends Migration {
             $table->unsignedBigInteger('author_id');
             $table->date('publish_date')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });

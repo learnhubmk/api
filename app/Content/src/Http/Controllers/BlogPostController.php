@@ -50,11 +50,12 @@ class BlogPostController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
+    #[Group('Website')]
+    public function destroy(BlogPost $blog_post)
     {
-        //
+        $blog_post->delete();
+
+        return response()->noContent();
     }
 }
