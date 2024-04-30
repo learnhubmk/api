@@ -33,12 +33,13 @@ class BlogPostController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
+    #[Group('Website')]
+    public function show(BlogPost $blog_post) : BlogPostsResource
     {
-        //
+        $blog_post->load('author', 'tags');
+
+        return new BlogPostsResource($blog_post);
     }
 
     /**
