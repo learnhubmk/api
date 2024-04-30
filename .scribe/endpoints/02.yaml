@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Redirect
+      title: 'Google Login Redirect'
       description: 'This endpoint redirect to the Google SignIn Form'
       authenticated: false
       custom: []
@@ -26,23 +26,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 302
-        content: |-
-          <!DOCTYPE html>
-          <html>
-              <head>
-                  <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code'" />
-
-                  <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code</title>
-              </head>
-              <body>
-                  Redirecting to <a href="https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code">https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code</a>.
-              </body>
-          </html>
+        status: 200
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
-          location: 'https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
@@ -62,7 +49,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Callback
+      title: 'Google Login Callback'
       description: 'This endpoint sign in the users with Google Account'
       authenticated: false
       custom: []
@@ -179,7 +166,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php",
-                      "line": 26,
+                      "line": 27,
                       "function": "user",
                       "class": "SocialiteProviders\\Manager\\OAuth2\\AbstractProvider",
                       "type": "->"
@@ -592,7 +579,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Redirect
+      title: 'GitHub Login Redirect'
       description: 'This endpoint redirect to the GitHub SignIn Form'
       authenticated: false
       custom: []
@@ -608,23 +595,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 302
-        content: |-
-          <!DOCTYPE html>
-          <html>
-              <head>
-                  <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code'" />
-
-                  <title>Redirecting to https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code</title>
-              </head>
-              <body>
-                  Redirecting to <a href="https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code">https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code</a>.
-              </body>
-          </html>
+        status: 200
+        content: '{"data":{"redirect_link":"https:\/\/github.com\/login\/oauth\/authorize?client_id=&redirect_uri=&scope=user%3Aemail&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
-          location: 'https://github.com/login/oauth/authorize?client_id=&redirect_uri=&scope=user%3Aemail&response_type=code'
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
@@ -644,7 +618,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Callback
+      title: 'GitHub Login Callback'
       description: 'This endpoint sign in the users with GitHub Account'
       authenticated: false
       custom: []
@@ -761,7 +735,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/app/Platform/src/Http/Controllers/Auth/Social/GitHubAuthController.php",
-                      "line": 25,
+                      "line": 26,
                       "function": "user",
                       "class": "Laravel\\Socialite\\Two\\AbstractProvider",
                       "type": "->"
@@ -1174,7 +1148,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Redirect
+      title: 'LinkedIn Login Redirect'
       description: 'This endpoint redirect to the LinkedIn SignIn Form'
       authenticated: false
       custom: []
@@ -1190,23 +1164,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 302
-        content: |-
-          <!DOCTYPE html>
-          <html>
-              <head>
-                  <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code'" />
-
-                  <title>Redirecting to https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code</title>
-              </head>
-              <body>
-                  Redirecting to <a href="https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code">https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code</a>.
-              </body>
-          </html>
+        status: 200
+        content: '{"data":{"redirect_link":"https:\/\/www.linkedin.com\/oauth\/v2\/authorization?client_id=&redirect_uri=&scope=r_liteprofile+r_emailaddress&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
-          location: 'https://www.linkedin.com/oauth/v2/authorization?client_id=&redirect_uri=&scope=r_liteprofile+r_emailaddress&response_type=code'
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
@@ -1226,7 +1187,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Callback
+      title: 'LinkedIn Login Callback'
       description: 'This endpoint sign in the users with LinkedIn Account'
       authenticated: false
       custom: []

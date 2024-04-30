@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: walker11@example.com
+                  example: hwalter@example.org
                 password:
                   type: string
                   description: ''
-                  example: illum
+                  example: ea
               required:
                 - email
                 - password
@@ -63,11 +63,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: clarissa43@example.com
+                  example: stracke.chadd@example.com
                 password:
                   type: string
                   description: ''
-                  example: atque
+                  example: amet
               required:
                 - email
                 - password
@@ -125,25 +125,34 @@ paths:
       security: []
   /login/google/redirect:
     get:
-      summary: Redirect
-      operationId: redirect
+      summary: 'Google Login Redirect'
+      operationId: googleLoginRedirect
       description: 'This endpoint redirect to the Google SignIn Form'
       parameters: []
       responses:
-        302:
+        200:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code'\" />\n\n        <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code\">https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code</a>.\n    </body>\n</html>"
+                type: object
+                example:
+                  data:
+                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      redirect_link:
+                        type: string
+                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
       tags:
         - Platform
       security: []
   /login/google/callback:
     get:
-      summary: Callback
-      operationId: callback
+      summary: 'Google Login Callback'
+      operationId: googleLoginCallback
       description: 'This endpoint sign in the users with Google Account'
       parameters: []
       responses:
@@ -239,7 +248,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php
-                      line: 26
+                      line: 27
                       function: user
                       class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                       type: '->'
@@ -669,7 +678,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php
-                        line: 26
+                        line: 27
                         function: user
                         class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                         type: '->'
@@ -1026,25 +1035,34 @@ paths:
       security: []
   /login/github/redirect:
     get:
-      summary: Redirect
-      operationId: redirect
+      summary: 'GitHub Login Redirect'
+      operationId: gitHubLoginRedirect
       description: 'This endpoint redirect to the GitHub SignIn Form'
       parameters: []
       responses:
-        302:
+        200:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code'\" />\n\n        <title>Redirecting to https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code\">https://github.com/login/oauth/authorize?client_id=&amp;redirect_uri=&amp;scope=user%3Aemail&amp;response_type=code</a>.\n    </body>\n</html>"
+                type: object
+                example:
+                  data:
+                    redirect_link: 'https://github.com/login/oauth/authorize?client_id=&redirect_uri=&scope=user%3Aemail&response_type=code'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      redirect_link:
+                        type: string
+                        example: 'https://github.com/login/oauth/authorize?client_id=&redirect_uri=&scope=user%3Aemail&response_type=code'
       tags:
         - Platform
       security: []
   /login/github/callback:
     get:
-      summary: Callback
-      operationId: callback
+      summary: 'GitHub Login Callback'
+      operationId: gitHubLoginCallback
       description: 'This endpoint sign in the users with GitHub Account'
       parameters: []
       responses:
@@ -1140,7 +1158,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GitHubAuthController.php
-                      line: 25
+                      line: 26
                       function: user
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
@@ -1570,7 +1588,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GitHubAuthController.php
-                        line: 25
+                        line: 26
                         function: user
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
@@ -1927,25 +1945,34 @@ paths:
       security: []
   /login/linkedin/redirect:
     get:
-      summary: Redirect
-      operationId: redirect
+      summary: 'LinkedIn Login Redirect'
+      operationId: linkedInLoginRedirect
       description: 'This endpoint redirect to the LinkedIn SignIn Form'
       parameters: []
       responses:
-        302:
+        200:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code'\" />\n\n        <title>Redirecting to https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code\">https://www.linkedin.com/oauth/v2/authorization?client_id=&amp;redirect_uri=&amp;scope=r_liteprofile+r_emailaddress&amp;response_type=code</a>.\n    </body>\n</html>"
+                type: object
+                example:
+                  data:
+                    redirect_link: 'https://www.linkedin.com/oauth/v2/authorization?client_id=&redirect_uri=&scope=r_liteprofile+r_emailaddress&response_type=code'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      redirect_link:
+                        type: string
+                        example: 'https://www.linkedin.com/oauth/v2/authorization?client_id=&redirect_uri=&scope=r_liteprofile+r_emailaddress&response_type=code'
       tags:
         - Platform
       security: []
   /login/linkedin/callback:
     get:
-      summary: Callback
-      operationId: callback
+      summary: 'LinkedIn Login Callback'
+      operationId: linkedInLoginCallback
       description: 'This endpoint sign in the users with LinkedIn Account'
       parameters: []
       responses:
@@ -2836,12 +2863,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: id
+          example: recusandae
           required: false
           schema:
             type: string
             description: ''
-            example: id
+            example: recusandae
       responses:
         200:
           description: ''
@@ -2852,9 +2879,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Fugit quia totam libero quidem voluptates occaecati.'
-                      slug: fugit-quia-totam-libero-quidem-voluptates-occaecati
-                      excerpt: 'Occaecati labore officia tenetur perspiciatis non minima.'
+                      title: 'Unde culpa dolor et recusandae.'
+                      slug: unde-culpa-dolor-et-recusandae
+                      excerpt: 'Sed consequatur illum sit adipisci beatae.'
                       tags:
                         -
                           name: php
@@ -2864,13 +2891,29 @@ paths:
                           name: react
                       publish_date: '2024-04-29'
                       author:
-                        first_name: 'Kyla Dibbert III'
-                        last_name: Becker
+                        first_name: 'Josh Ortiz IV'
+                        last_name: Roob
                         image: null
                     -
-                      title: 'Cupiditate reiciendis et eaque ut itaque itaque est eum.'
-                      slug: cupiditate-reiciendis-et-eaque-ut-itaque-itaque-est-eum
-                      excerpt: 'Consequatur et corporis non voluptatem nihil.'
+                      title: 'Recusandae repudiandae sunt consequatur sed laborum.'
+                      slug: recusandae-repudiandae-sunt-consequatur-sed-laborum
+                      excerpt: 'Hic eos laboriosam veritatis aut qui quam fuga.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-04-29'
+                      author:
+                        first_name: 'Bobbie Oberbrunner'
+                        last_name: Koch
+                        image: null
+                    -
+                      title: 'Quis ea quia enim earum recusandae labore earum.'
+                      slug: quis-ea-quia-enim-earum-recusandae-labore-earum
+                      excerpt: 'Qui vero provident id quia consequatur temporibus nesciunt dolores.'
                       tags:
                         -
                           name: php
@@ -2882,118 +2925,6 @@ paths:
                       author:
                         first_name: 'Tatyana Fisher'
                         last_name: McKenzie
-                        image: null
-                    -
-                      title: 'Voluptates iure molestiae nostrum cupiditate.'
-                      slug: voluptates-iure-molestiae-nostrum-cupiditate
-                      excerpt: 'Quidem reiciendis omnis dolore soluta ut illum.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Miss Mertie Dooley'
-                        last_name: Howell
-                        image: null
-                    -
-                      title: 'Ratione blanditiis nemo quisquam porro provident.'
-                      slug: ratione-blanditiis-nemo-quisquam-porro-provident
-                      excerpt: 'Hic consequatur unde quia nostrum dolores veritatis repellat.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Miss Mertie Dooley'
-                        last_name: Howell
-                        image: null
-                    -
-                      title: 'Enim animi laudantium animi veniam omnis id.'
-                      slug: enim-animi-laudantium-animi-veniam-omnis-id
-                      excerpt: 'Velit doloribus voluptas dolorem odio.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Corene Hills'
-                        last_name: Mante
-                        image: null
-                    -
-                      title: 'Sit commodi in id cupiditate ea sint reprehenderit.'
-                      slug: sit-commodi-in-id-cupiditate-ea-sint-reprehenderit
-                      excerpt: 'Aut et ut atque necessitatibus aut quam.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Id voluptas vel molestiae ducimus rem enim dolor.'
-                      slug: id-voluptas-vel-molestiae-ducimus-rem-enim-dolor
-                      excerpt: 'Aliquid rerum enim nobis ut veritatis in cumque.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Explicabo incidunt quibusdam consequatur explicabo adipisci odio.'
-                      slug: explicabo-incidunt-quibusdam-consequatur-explicabo-adipisci-odio
-                      excerpt: 'Repellat et est id explicabo aut.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
-                        image: null
-                    -
-                      title: 'Est ullam hic perspiciatis quidem sed culpa perferendis.'
-                      slug: est-ullam-hic-perspiciatis-quidem-sed-culpa-perferendis
-                      excerpt: 'Molestias accusamus vel officia.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Cindy Grant V'
-                        last_name: Fahey
                         image: null
                   links:
                     first: 'http://learnhub.test/blog-posts?page=1'
@@ -3019,16 +2950,16 @@ paths:
                         active: false
                     path: 'http://learnhub.test/blog-posts'
                     per_page: 15
-                    to: 9
-                    total: 9
+                    to: 3
+                    total: 3
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Fugit quia totam libero quidem voluptates occaecati.'
-                        slug: fugit-quia-totam-libero-quidem-voluptates-occaecati
-                        excerpt: 'Occaecati labore officia tenetur perspiciatis non minima.'
+                        title: 'Unde culpa dolor et recusandae.'
+                        slug: unde-culpa-dolor-et-recusandae
+                        excerpt: 'Sed consequatur illum sit adipisci beatae.'
                         tags:
                           -
                             name: php
@@ -3038,13 +2969,29 @@ paths:
                             name: react
                         publish_date: '2024-04-29'
                         author:
-                          first_name: 'Kyla Dibbert III'
-                          last_name: Becker
+                          first_name: 'Josh Ortiz IV'
+                          last_name: Roob
                           image: null
                       -
-                        title: 'Cupiditate reiciendis et eaque ut itaque itaque est eum.'
-                        slug: cupiditate-reiciendis-et-eaque-ut-itaque-itaque-est-eum
-                        excerpt: 'Consequatur et corporis non voluptatem nihil.'
+                        title: 'Recusandae repudiandae sunt consequatur sed laborum.'
+                        slug: recusandae-repudiandae-sunt-consequatur-sed-laborum
+                        excerpt: 'Hic eos laboriosam veritatis aut qui quam fuga.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-04-29'
+                        author:
+                          first_name: 'Bobbie Oberbrunner'
+                          last_name: Koch
+                          image: null
+                      -
+                        title: 'Quis ea quia enim earum recusandae labore earum.'
+                        slug: quis-ea-quia-enim-earum-recusandae-labore-earum
+                        excerpt: 'Qui vero provident id quia consequatur temporibus nesciunt dolores.'
                         tags:
                           -
                             name: php
@@ -3057,130 +3004,18 @@ paths:
                           first_name: 'Tatyana Fisher'
                           last_name: McKenzie
                           image: null
-                      -
-                        title: 'Voluptates iure molestiae nostrum cupiditate.'
-                        slug: voluptates-iure-molestiae-nostrum-cupiditate
-                        excerpt: 'Quidem reiciendis omnis dolore soluta ut illum.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Miss Mertie Dooley'
-                          last_name: Howell
-                          image: null
-                      -
-                        title: 'Ratione blanditiis nemo quisquam porro provident.'
-                        slug: ratione-blanditiis-nemo-quisquam-porro-provident
-                        excerpt: 'Hic consequatur unde quia nostrum dolores veritatis repellat.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Miss Mertie Dooley'
-                          last_name: Howell
-                          image: null
-                      -
-                        title: 'Enim animi laudantium animi veniam omnis id.'
-                        slug: enim-animi-laudantium-animi-veniam-omnis-id
-                        excerpt: 'Velit doloribus voluptas dolorem odio.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Corene Hills'
-                          last_name: Mante
-                          image: null
-                      -
-                        title: 'Sit commodi in id cupiditate ea sint reprehenderit.'
-                        slug: sit-commodi-in-id-cupiditate-ea-sint-reprehenderit
-                        excerpt: 'Aut et ut atque necessitatibus aut quam.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Id voluptas vel molestiae ducimus rem enim dolor.'
-                        slug: id-voluptas-vel-molestiae-ducimus-rem-enim-dolor
-                        excerpt: 'Aliquid rerum enim nobis ut veritatis in cumque.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Explicabo incidunt quibusdam consequatur explicabo adipisci odio.'
-                        slug: explicabo-incidunt-quibusdam-consequatur-explicabo-adipisci-odio
-                        excerpt: 'Repellat et est id explicabo aut.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
-                          image: null
-                      -
-                        title: 'Est ullam hic perspiciatis quidem sed culpa perferendis.'
-                        slug: est-ullam-hic-perspiciatis-quidem-sed-culpa-perferendis
-                        excerpt: 'Molestias accusamus vel officia.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Cindy Grant V'
-                          last_name: Fahey
-                          image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Fugit quia totam libero quidem voluptates occaecati.'
+                          example: 'Unde culpa dolor et recusandae.'
                         slug:
                           type: string
-                          example: fugit-quia-totam-libero-quidem-voluptates-occaecati
+                          example: unde-culpa-dolor-et-recusandae
                         excerpt:
                           type: string
-                          example: 'Occaecati labore officia tenetur perspiciatis non minima.'
+                          example: 'Sed consequatur illum sit adipisci beatae.'
                         tags:
                           type: array
                           example:
@@ -3204,10 +3039,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Kyla Dibbert III'
+                              example: 'Josh Ortiz IV'
                             last_name:
                               type: string
-                              example: Becker
+                              example: Roob
                             image:
                               type: string
                               example: null
@@ -3273,10 +3108,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 9
+                        example: 3
                       total:
                         type: integer
-                        example: 9
+                        example: 3
       tags:
         - Website
       security: []
@@ -3977,7 +3812,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: assumenda
+        example: optio
         required: true
         schema:
           type: string
@@ -4205,8 +4040,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/quo?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/quo?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/omnis?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4219,14 +4054,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/quo?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/omnis?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/quo'
+                    path: 'http://learnhub.test/blog-post-tags/omnis'
                     per_page: 15
                     to: null
                     total: 0
@@ -4239,10 +4074,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/quo?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/omnis?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/quo?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/omnis?page=1'
                       prev:
                         type: string
                         example: null
@@ -4269,7 +4104,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/quo?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/omnis?page=1'
                             label: '1'
                             active: true
                           -
@@ -4290,7 +4125,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/quo'
+                        example: 'http://learnhub.test/blog-post-tags/omnis'
                       per_page:
                         type: integer
                         example: 15
@@ -4308,7 +4143,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: quo
+        example: omnis
         required: true
         schema:
           type: string
@@ -4331,19 +4166,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: perferendis
+                  example: dolorem
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: awilliamson@example.com
+                  example: kemmer.daija@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: omnis
+                  example: optio
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: accusamus
+                  example: minus
               required:
                 - name
                 - email
