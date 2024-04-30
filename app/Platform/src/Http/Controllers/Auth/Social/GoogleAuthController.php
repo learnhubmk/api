@@ -4,22 +4,22 @@ namespace App\Platform\Http\Controllers\Auth\Social;
 
 use App\Http\Controllers\Controller;
 use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
+use App\Platform\Http\Resources\Auth\RedirectLinkResource;
 use App\Platform\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GoogleAuthController extends Controller
 {
-    #[Endpoint(title: 'Redirect', description: 'This endpoint redirect to the Google SignIn Form')]
+    #[Endpoint(title: 'Google Login Redirect', description: 'This endpoint redirect to the Google SignIn Form')]
     #[Group('Platform')]
-    public function redirect(): RedirectResponse|\Illuminate\Http\RedirectResponse
+    public function redirect(): RedirectLinkResource
     {
-        return Socialite::driver('google')->stateless()->redirect();
+        return new RedirectLinkResource(Socialite::driver('google')->stateless()->redirect()->getTargetUrl());
     }
 
-    #[Endpoint(title: 'Callback', description: 'This endpoint sign in the users with Google Account')]
+    #[Endpoint(title: 'Google Login Callback', description: 'This endpoint sign in the users with Google Account')]
     #[Group('Platform')]
     public function handleCallback(): AuthenticatedMemberResource
     {

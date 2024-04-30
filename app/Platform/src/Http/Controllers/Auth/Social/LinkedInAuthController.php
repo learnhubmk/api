@@ -10,21 +10,21 @@ use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Laravel\Socialite\Facades\Socialite;
 
-class GitHubAuthController extends Controller
+class LinkedInAuthController extends Controller
 {
-    #[Endpoint(title: 'GitHub Login Redirect', description: 'This endpoint redirect to the GitHub SignIn Form')]
+    #[Endpoint(title: 'LinkedIn Login Redirect', description: 'This endpoint redirect to the LinkedIn SignIn Form')]
     #[Group('Platform')]
     public function redirect(): RedirectLinkResource
     {
-        return new RedirectLinkResource(Socialite::driver('github')->stateless()->redirect()->getTargetUrl());
+        return new RedirectLinkResource(Socialite::driver('linkedin')->stateless()->redirect()->getTargetUrl());
     }
 
-    #[Endpoint(title: 'GitHub Login Callback', description: 'This endpoint sign in the users with GitHub Account')]
+    #[Endpoint(title: 'LinkedIn Login Callback', description: 'This endpoint sign in the users with LinkedIn Account')]
     #[Group('Platform')]
     public function handleCallback(): AuthenticatedMemberResource
     {
-        $githubUser = Socialite::driver('github')->stateless()->user();
-        $user = User::where('email', $githubUser->email)->first();
+        $linkedinUser = Socialite::driver('linkedin')->stateless()->user();
+        $user = User::where('email', $linkedinUser->email)->first();
 
         if (!$user) {
             abort(404, 'Account not found');
