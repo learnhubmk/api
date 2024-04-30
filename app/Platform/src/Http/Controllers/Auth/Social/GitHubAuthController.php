@@ -4,19 +4,19 @@ namespace App\Platform\Http\Controllers\Auth\Social;
 
 use App\Http\Controllers\Controller;
 use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
+use App\Platform\Http\Resources\Auth\RedirectLinkResource;
 use App\Platform\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GitHubAuthController extends Controller
 {
     #[Endpoint(title: 'GitHub Login Redirect', description: 'This endpoint redirect to the GitHub SignIn Form')]
     #[Group('Platform')]
-    public function redirect(): RedirectResponse|\Illuminate\Http\RedirectResponse
+    public function redirect(): RedirectLinkResource
     {
-        return Socialite::driver('github')->stateless()->redirect();
+        return new RedirectLinkResource(Socialite::driver('github')->stateless()->redirect()->getTargetUrl());
     }
 
     #[Endpoint(title: 'GitHub Login Callback', description: 'This endpoint sign in the users with GitHub Account')]
