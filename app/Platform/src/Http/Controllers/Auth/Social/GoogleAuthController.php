@@ -9,7 +9,6 @@ use App\Platform\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GoogleAuthController extends Controller
 {
