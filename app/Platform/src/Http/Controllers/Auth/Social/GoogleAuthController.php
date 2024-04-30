@@ -12,14 +12,14 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GoogleAuthController extends Controller
 {
-    #[Endpoint(title: 'Redirect', description: 'This endpoint redirect to the Google SignIn Form')]
+    #[Endpoint(title: 'Google Login Redirect', description: 'This endpoint redirect to the Google SignIn Form')]
     #[Group('Platform')]
     public function redirect(): RedirectResponse|\Illuminate\Http\RedirectResponse
     {
         return Socialite::driver('google')->stateless()->redirect();
     }
 
-    #[Endpoint(title: 'Callback', description: 'This endpoint sign in the users with Google Account')]
+    #[Endpoint(title: 'Google Login Callback', description: 'This endpoint sign in the users with Google Account')]
     #[Group('Platform')]
     public function handleCallback(): AuthenticatedMemberResource
     {

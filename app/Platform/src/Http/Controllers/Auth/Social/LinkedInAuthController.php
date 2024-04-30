@@ -3,6 +3,7 @@
 namespace App\Platform\Http\Controllers\Auth\Social;
 
 use App\Http\Controllers\Controller;
+use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
 use App\Platform\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
@@ -11,14 +12,14 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class LinkedInAuthController extends Controller
 {
-    #[Endpoint(title: 'Redirect', description: 'This endpoint redirect to the LinkedIn SignIn Form')]
+    #[Endpoint(title: 'LinkedIn Login Redirect', description: 'This endpoint redirect to the LinkedIn SignIn Form')]
     #[Group('Platform')]
     public function redirect(): RedirectResponse|\Illuminate\Http\RedirectResponse
     {
         return Socialite::driver('linkedin')->stateless()->redirect();
     }
 
-    #[Endpoint(title: 'Callback', description: 'This endpoint sign in the users with LinkedIn Account')]
+    #[Endpoint(title: 'LinkedIn Login Callback', description: 'This endpoint sign in the users with LinkedIn Account')]
     #[Group('Platform')]
     public function handleCallback(): AuthenticatedMemberResource
     {
