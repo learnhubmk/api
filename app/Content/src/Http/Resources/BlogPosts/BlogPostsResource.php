@@ -19,6 +19,7 @@ class BlogPostsResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
+            'status' => $this->status,
             'tags' => $this->whenLoaded('tags', BlogPostTagResource::collection($this->tags)),
             'publish_date' => $this->publish_date,
             'created_at' => $this->created_at,

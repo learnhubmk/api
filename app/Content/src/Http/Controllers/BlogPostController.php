@@ -6,9 +6,12 @@ use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
 use App\Http\Controllers\Controller;
+use App\Website\Enums\BlogPostStatus;
+use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\QueryParam;
@@ -50,12 +53,26 @@ class BlogPostController extends Controller
         return BlogPostsResource::collection($blogs);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(CreateBlogPostRequest $request)
+    #[Endpoint(title: 'Create Blog posts', description: 'This endpoint will create a dingle blog post')]
+    #[Group('Content')]
+    #[BodyParam('title', 'string', required: true, example: "Example Blog Post Title ")]
+    #[BodyParam('excerpt', 'string', required: true, example: "This is test blogpost example")]
+    #[BodyParam('content', 'string', required: true, example: "Lorem ipsum dolor sit amet, consectetur adipiscing ...")]
+    #[BodyParam('tags', 'array', required: true, example: "[1,2,3]")]
+    public function store(CreateBlogPostRequest $request): BlogPostsResource
     {
+        $blogPost = BlogPost::create([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'excerpt' => $request->excerpt,
+            'content' => $request->content,
+            'status' => BlogPostStatus::IN_REVIEW,
+            'author_id' => Author::where('user_id',$request->user()->id)->value('id')
+        ]);
 
+        $blogPost->tags()->sync($request->tags);
+
+        return new BlogPostsResource($blogPost);
     }
 
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
