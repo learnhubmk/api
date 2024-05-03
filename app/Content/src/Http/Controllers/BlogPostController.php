@@ -32,13 +32,13 @@ class BlogPostController extends Controller
             })
             ->when($request->has('tag'), function ($query) use ($request) {
                 return $query->whereHas('tags', function ($tagQuery) use ($request) {
-                    $tagQuery->where('name', 'like',  "%$request->tag%");
+                    $tagQuery->where('name', 'like', "%$request->tag%");
                 });
             })
             ->when($request->has('author'), function ($query) use ($request) {
                 return $query->whereHas('author', function ($authorQuery) use ($request) {
                     $authorQuery->where('first_name', 'like', "%$request->author%")
-                    ->orWhere('last_name', 'like', "%$request->author%" );
+                    ->orWhere('last_name', 'like', "%$request->author%");
                 });
             })
             ->when($request->has('sort'), function ($query) use ($request) {
@@ -67,7 +67,7 @@ class BlogPostController extends Controller
             'excerpt' => $request->excerpt,
             'content' => $request->content,
             'status' => BlogPostStatus::IN_REVIEW,
-            'author_id' => Author::where('user_id',$request->user()->id)->value('id')
+            'author_id' => Author::where('user_id', $request->user()->id)->value('id')
         ]);
 
         $blogPost->tags()->sync($request->tags);
@@ -77,7 +77,7 @@ class BlogPostController extends Controller
 
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
-    public function show(BlogPost $blog_post, BlogPostPermissionsRequest $request) : BlogPostsResource
+    public function show(BlogPost $blog_post, BlogPostPermissionsRequest $request): BlogPostsResource
     {
         $blog_post->load('author', 'tags');
 

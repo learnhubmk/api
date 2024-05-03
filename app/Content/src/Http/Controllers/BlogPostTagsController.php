@@ -7,7 +7,6 @@ use App\Content\Http\Requests\BlogPosts\BlogPostTagsRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostTagResource;
 use App\Http\Controllers\Controller;
 use App\Website\Models\BlogPostTag;
-use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
