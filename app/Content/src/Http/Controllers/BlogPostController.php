@@ -53,7 +53,7 @@ class BlogPostController extends Controller
         return BlogPostsResource::collection($blogs);
     }
 
-    #[Endpoint(title: 'Create Blog posts', description: 'This endpoint will create a dingle blog post')]
+    #[Endpoint(title: 'Create Blog posts', description: 'This endpoint will create a single blog post')]
     #[Group('Content')]
     #[BodyParam('title', 'string', required: true, example: "Example Blog Post Title ")]
     #[BodyParam('excerpt', 'string', required: true, example: "This is test blogpost example")]
