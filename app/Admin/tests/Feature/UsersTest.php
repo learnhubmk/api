@@ -195,6 +195,8 @@ class UsersTest extends TestCase
 
         $response->assertNoContent();
 
+        $member->fresh();
+
         $this->assertDatabaseHas($member->getTable(), [
             'id' => $member->id,
             'status' => UserStatusName::DELETED,
