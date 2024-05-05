@@ -2,15 +2,15 @@
 
 namespace App\Admin\Tests\Feature;
 
-use App\Models\Profile;
-use App\Platform\Enums\UserStatusName;
-use Tests\TestCase;
-use App\Models\User;
-use Laravel\Sanctum\Sanctum;
+use App\Admin\Models\User;
 use App\Platform\Enums\RoleName;
-use PHPUnit\Framework\Attributes\Test;
+use App\Platform\Enums\UserStatusName;
+use App\Platform\Models\Profile;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Sanctum\Sanctum;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 class UsersTest extends TestCase
 {
@@ -42,7 +42,7 @@ class UsersTest extends TestCase
         $this->assertSame(['admin', 'member'], $response['data'][0]['roles']);
     }
 
-    public static function userDataProvider()
+    public static function userDataProvider(): array
     {
         return [
             'wrong_first_name' => ['first_name', 'blablabla', 0],
@@ -77,7 +77,7 @@ class UsersTest extends TestCase
         $this->assertCount($count, $response['data']);
     }
 
-    public static function userSortDataProvider()
+    public static function userSortDataProvider(): array
     {
         return [
             // 'Can sort by id in asc dir' => ['id', 'asc', [1, 2, 3, 4]],
@@ -151,7 +151,6 @@ class UsersTest extends TestCase
                 'id' => $adminUser->id,
                 'first_name' => 'John',
                 'last_name' => 'Doe',
-                'id' => $adminUser->id,
                 'email' => $adminUser->email,
                 'roles' => ['admin', 'member'],
             ]

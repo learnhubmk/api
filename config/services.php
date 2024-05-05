@@ -49,4 +49,9 @@ return [
         'redirect' => env('LINKEDIN_REDIRECT_URI'),
     ],
 
+    'turnstile' => [
+        'key' => env('TURNSTILE_SITE_KEY', null),
+        'secret' => env('TURNSTILE_SECRET_KEY', null),
+    ],
+
 ];

@@ -2,7 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
-use App\Models\User;
+use App\Admin\Models\User;
 use App\Platform\Enums\UserStatusName;
 use Illuminate\Http\Request;
 use App\Admin\Http\Resources\UserResource;

@@ -18,3 +18,8 @@ yarn-error.log
 /.idea
 /.vscode
 /schemas/githubAcitons.json
+!/storage/app/scribe/
+/docker/dbdata/
+/docker/meilisearch/data/
+/docker/supervisor/supervisor_logs/
+/docker/redis/

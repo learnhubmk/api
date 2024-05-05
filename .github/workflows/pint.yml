@@ -1,11 +1,11 @@
-name: PHP Linting (Pint)
+name: Fix code style issues
 on:
   workflow_dispatch:
   push:
     branches-ignore:
       - 'dependabot/npm_and_yarn/*'
 jobs:
-  phplint:
+  pint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

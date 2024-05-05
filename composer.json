@@ -2,11 +2,15 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.3",
         "app/admin": "*",
+        "app/content": "*",
         "app/platform": "*",
         "app/website": "*",
         "bugsnag/bugsnag-laravel": "^2.27.0",
@@ -17,12 +21,16 @@
         "laravel/sanctum": "^4.0",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.8",
+        "ryangjchandler/laravel-cloudflare-turnstile": "^1.1",
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
-        "spatie/laravel-permission": "^6.4"
+        "spatie/laravel-permission": "^6.4",
+        "symfony/http-client": "^7.0",
+        "symfony/postmark-mailer": "^7.0"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.0",
         "brianium/paratest": "^7.4",
         "fakerphp/faker": "^1.9.1",
         "knuckleswtf/scribe": "^4.33",
@@ -64,7 +72,8 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/telescope"
+                "laravel/telescope",
+                "barryvdh/laravel-ide-helper"
             ]
         }
     },
