@@ -3,16 +3,15 @@
 namespace App\Admin\Tests\Feature;
 
 use App\Admin\Models\User;
-use App\Platform\Enums\RoleName;
-use App\Platform\Enums\UserStatusName;
-use App\Platform\Models\Profile;
+use App\Admin\Enums\RoleName;
+use App\Admin\Enums\UserStatusName;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
-class UsersTest extends TestCase
+class UserControllerTest extends TestCase
 {
     use RefreshDatabase;
 

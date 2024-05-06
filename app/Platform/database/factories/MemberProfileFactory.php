@@ -1,17 +1,17 @@
 <?php
 
-namespace Database\Factories;
+namespace App\Platform\Database\factories;
 
 use App\Platform\Models\User;
-use App\Platform\Models\Profile;
+use App\Platform\Models\MemberProfile;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Profile>
+ * @extends Factory<MemberProfile>
  */
 class MemberProfileFactory extends Factory
 {
-    protected $model = Profile::class;
+    protected $model = MemberProfile::class;
 
     public function definition(): array
     {

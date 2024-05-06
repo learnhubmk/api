@@ -1,9 +1,9 @@
 <?php
 
-namespace Database\Factories;
+namespace App\Admin\Database\factories;
 
 use App\Admin\Models\User;
-use App\Platform\Enums\UserStatusName;
+use App\Admin\Enums\UserStatusName;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;

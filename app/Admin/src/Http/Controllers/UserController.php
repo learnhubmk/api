@@ -3,10 +3,10 @@
 namespace App\Admin\Http\Controllers;
 
 use App\Admin\Models\User;
-use App\Platform\Enums\UserStatusName;
+use App\Admin\Enums\UserStatusName;
 use Illuminate\Http\Request;
 use App\Admin\Http\Resources\UserResource;
-use App\Platform\Enums\RoleName;
+use App\Admin\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
 

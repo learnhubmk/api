@@ -1,6 +1,5 @@
 <?php
 
-use App\Platform\Enums\UserStatusName;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,8 +10,13 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('status')->default(UserStatusName::ACTIVE);
+        Schema::create('admin_profiles', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id');
+            $table->string('first_name', 100);
+            $table->string('last_name', 100);
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -21,8 +25,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['status']);
-        });
+        Schema::dropIfExists('admin_profiles');
     }
 };

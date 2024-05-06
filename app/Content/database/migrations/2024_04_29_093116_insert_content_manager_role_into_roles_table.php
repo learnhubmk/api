@@ -1,6 +1,6 @@
 <?php
 
-use App\Platform\Enums\RoleName;
+use App\Content\Enums\RoleName;
 use Illuminate\Database\Migrations\Migration;
 use Spatie\Permission\Models\Role;
 

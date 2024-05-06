@@ -6,7 +6,7 @@ use App\Admin\Http\Requests\Auth\LoginRequest;
 use App\Admin\Http\Requests\Auth\LogoutRequest;
 use App\Admin\Http\Resources\Auth\AuthenticatedAdminResource;
 use App\Admin\Models\User;
-use App\Platform\Enums\RoleName;
+use App\Admin\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
