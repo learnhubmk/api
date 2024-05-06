@@ -16,6 +16,7 @@ Route::group(['prefix' => '/content'], function () {
             Route::get('/{blogPost}', [BlogPostController::class, 'show']);
             Route::patch('/{blogPost}', [BlogPostController::class, 'update']);
             Route::delete('/{blogPost}', [BlogPostController::class, 'destroy']);
+            Route::get('/changeStatus/{blogPost}', [BlogPostController::class, 'changeStatus']);
         });
 
         Route::group(['prefix' => '/blog-posts-tags'], function () {

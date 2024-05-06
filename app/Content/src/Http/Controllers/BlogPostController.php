@@ -116,4 +116,17 @@ class BlogPostController extends Controller
 
         return response()->noContent();
     }
+
+    #[Endpoint(title: 'Publish/Unpublish Blog posts', description: 'This endpoint publish or unpublish blog post')]
+    #[Group('Content')]
+    public function changeStatus(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    {
+        if ($blogPost->status == BlogPostStatus::PUBLISHED) {
+            $blogPost->update(['status' => BlogPostStatus::DRAFT, 'publish_date' => null]);
+        } else {
+            $blogPost->update(['status' => BlogPostStatus::PUBLISHED, 'publish_date' => now()]);
+        }
+
+        return response()->noContent();
+    }
 }
