@@ -4,12 +4,13 @@ namespace App\Content\Http\Controllers;
 
 use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
+use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
 use App\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
-use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
@@ -77,26 +78,41 @@ class BlogPostController extends Controller
 
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
-    public function show(BlogPost $blog_post, BlogPostPermissionsRequest $request): BlogPostsResource
+    public function show(BlogPost $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
     {
-        $blog_post->load('author', 'tags');
+        $blogPost->load('author', 'tags');
 
-        return new BlogPostsResource($blog_post);
+        return new BlogPostsResource($blogPost);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    #[Endpoint(title: 'Update Blog post', description: 'This endpoint will update a single blog post')]
+    #[Group('Content')]
+    #[BodyParam('title', 'string', required: false, example: "Example Blog Post Title ")]
+    #[BodyParam('slug', 'string', required: false, example: "example-blog-post-title ")]
+    #[BodyParam('excerpt', 'string', required: false, example: "This is test blogpost example")]
+    #[BodyParam('content', 'string', required: false, example: "Lorem ipsum dolor sit amet, consectetur adipiscing ...")]
+    #[BodyParam('tags', 'array', required: false, example: "[1,2,3]")]
+    public function update(UpdateBlogPostRequest $request, BlogPost $blogPost): BlogPostsResource
     {
-        //
+        $data = $request->validated();
+
+        $blogPostData = (new Collection($data))->except('tags')->all();
+
+        $blogPost->update($blogPostData);
+
+        if ($request->has('tags')) {
+            $blogPost->tags()->sync($request->tags);
+        }
+
+        return new BlogPostsResource($blogPost);
+
     }
 
     #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
     #[Group('Content')]
-    public function destroy(BlogPost $blog_post, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    public function destroy(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
     {
-        $blog_post->delete();
+        $blogPost->delete();
 
         return response()->noContent();
     }
