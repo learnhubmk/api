@@ -2,6 +2,7 @@
 
 use App\Content\Http\Controllers\Auth\AuthController;
 use App\Content\Http\Controllers\BlogPostController;
+use App\Content\Http\Controllers\BlogPostTagsController;
 
 Route::group(['prefix' => '/content'], function () {
     Route::post('/login', [AuthController::class, 'login'])->middleware(['throttle:login']);
@@ -15,6 +16,12 @@ Route::group(['prefix' => '/content'], function () {
             Route::get('/{blogPost}', [BlogPostController::class, 'show']);
             Route::patch('/{blogPost}', [BlogPostController::class, 'update']);
             Route::delete('/{blogPost}', [BlogPostController::class, 'destroy']);
+        });
+
+        Route::group(['prefix' => '/blog-posts-tags'], function () {
+            Route::post('/', [BlogPostTagsController::class, 'store']);
+            Route::patch('/{blogPostTag}', [BlogPostTagsController::class, 'update']);
+            Route::delete('/{blogPostTag}', [BlogPostTagsController::class, 'destroy']);
         });
     });
 
