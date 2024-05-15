@@ -1,0 +1,81 @@
+name: General
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: /
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"name":"LearnHub.mk API","version":1,"message":"Welcome to the LearnHub.mk API!"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: sanctum/csrf-cookie
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: ''
+        headers:
+          cache-control: 'no-cache, private'
+          access-control-allow-origin: '*'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im1KNVdMbVRrVG8wemZ2em1nR1AvZ3c9PSIsInZhbHVlIjoiVm9pcGg5TUp4cWZIdDl4ZEJ4clhqcjUvZ3ppUGRuUlZIY3dVbWMyQkZUbkppdkM2ZnRDRzFWK0tJMk5tVVFHaktaZHRSMVo3NWV2ZSt2QVBqYWZQdi9DV1V2S3VlR0lxZFF2UUE4TUJCL1p3djlrbGdkdU44SktGTTIrSEJFa3AiLCJtYWMiOiJkNjM1YmU2YTM3MjA5YjY1OTg2OTMwMzBjNGMxMmUyZmQxZWE0OTNhM2M0M2YyOGQwYjgxNTc5NTlmYTkwZTJkIiwidGFnIjoiIn0%3D; expires=Tue, 30 Apr 2024 10:26:20 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6ImlLbG5aWnBEVVozSnFsbkFzVTF3dFE9PSIsInZhbHVlIjoiQmZqMEkwWi95Y1czR2tGL1A1MXVMcVEyRUQ2VkdLSEc3OW1wY2ZNbzZ4U1hxaXI0Q3RLNHhUSGVPR0pQZ3VZUXQ4dThBVDBQY1pXNWpPWi94WWd0bHJNTWVHY0VSaHNHNDF1bkkwdE5KZDdsNSt2VzJsaHlRZjJudnBqVWY4L2EiLCJtYWMiOiJiZGU4MjhjNzYwYzFiZTY2NWMzZWE5N2NkYmM2YzM3ZDIyZjNjNDY1NTdmYzA3NGZjNjU2YWUxOTQxNGIyNWJlIiwidGFnIjoiIn0%3D; expires=Tue, 30 Apr 2024 10:26:20 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

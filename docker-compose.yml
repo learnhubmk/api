@@ -1,103 +1,110 @@
+version: "3.7"
 services:
-    learnhub.test:
+    app:
+        ports:
+            - "9003:9003"  # Expose Xdebug port
         build:
-            context: ./vendor/laravel/sail/runtimes/8.3
+            context: docker
             dockerfile: Dockerfile
-            args:
-                WWWGROUP: '${WWWGROUP}'
-        image: sail-8.3/app
-        extra_hosts:
-            - 'host.docker.internal:host-gateway'
-        ports:
-            - '${APP_PORT:-80}:80'
-            - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
-        environment:
-            WWWUSER: '${WWWUSER}'
-            LARAVEL_SAIL: 1
-            XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
-            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
-            IGNITION_LOCAL_SITES_PATH: '${PWD}'
+        container_name: LearnHub_app
+        restart: unless-stopped
+        working_dir: /var/www/
         volumes:
-            - '.:/var/www/html'
-        networks:
-            - sail
-        depends_on:
-            - mysql
-            - redis
-            - meilisearch
-            - mailpit
-    mysql:
-        image: 'mysql/mysql-server:8.0'
-        ports:
-            - '${FORWARD_DB_PORT:-3306}:3306'
+            - ./:/var/www
+            - ./docker/php/conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+            - ./docker/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+            - ./docker/supervisor/supervisor_logs:/var/log/supervisor
+            - ./docker/supervisor/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf
         environment:
-            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ROOT_HOST: '%'
-            MYSQL_DATABASE: '${DB_DATABASE}'
-            MYSQL_USER: '${DB_USERNAME}'
-            MYSQL_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ALLOW_EMPTY_PASSWORD: 1
-        volumes:
-            - 'sail-mysql:/var/lib/mysql'
-            - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'
+            - XDEBUG_CONFIG=client_host=host.docker.internal
+            - XDEBUG_MODE=debug
+            - XDEBUG_START_WITH_REQUEST=yes
+            - XDEBUG_CLIENT_PORT=9003
+            - XDEBUG_LOG=/tmp/xdebug.log
+            - PHP_IDE_CONFIG=serverName=Docker
         networks:
-            - sail
-        healthcheck:
-            test:
-                - CMD
-                - mysqladmin
-                - ping
-                - '-p${DB_PASSWORD}'
-            retries: 3
-            timeout: 5s
+            - learnhub
+
+    db:
+        image: mysql:latest
+        container_name: LearnHub_mysql
+        restart: unless-stopped
+        environment:
+            - MYSQL_DATABASE=learnhub
+            - MYSQL_USER=learnhub
+            - MYSQL_PASSWORD=learnhub
+            - MYSQL_ROOT_PASSWORD=learnhub
+            - SERVICE_TAGS=dev
+            - SERVICE_NAME=mysql
+        ports:
+            - "3306:3306"
+        volumes:
+            - dbdata:/var/lib/mysql
+        networks:
+            - learnhub
+
+    nginx:
+        image: nginx:latest
+        container_name: LearnHub_nginx
+        restart: unless-stopped
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/var/www
+            - ./docker/nginx:/etc/nginx/conf.d
+        networks:
+            - learnhub
+
     redis:
-        image: 'redis:alpine'
+        image: redis:latest
+        container_name: LearnHub_redis
+        restart: unless-stopped
         ports:
-            - '${FORWARD_REDIS_PORT:-6379}:6379'
+            - "6379:6379"
         volumes:
-            - 'sail-redis:/data'
+            - redisdata:/data
         networks:
-            - sail
-        healthcheck:
-            test:
-                - CMD
-                - redis-cli
-                - ping
-            retries: 3
-            timeout: 5s
+            - learnhub
+
     meilisearch:
-        image: 'getmeili/meilisearch:latest'
+        image: getmeili/meilisearch:latest
+        container_name: LearnHub_meilisearch
         ports:
-            - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
+            - "7700:7700"
         environment:
-            MEILI_NO_ANALYTICS: '${MEILISEARCH_NO_ANALYTICS:-false}'
+            - MEILI_MASTER_KEY=your_master_key_here
         volumes:
-            - 'sail-meilisearch:/meili_data'
+            - meilisearchdata:/data.ms
         networks:
-            - sail
-        healthcheck:
-            test:
-                - CMD
-                - wget
-                - '--no-verbose'
-                - '--spider'
-                - 'http://localhost:7700/health'
-            retries: 3
-            timeout: 5s
+            - learnhub
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: LearnHub_phpmyadmin
+        environment:
+            - PMA_HOST=db
+            - PMA_PORT=3306
+        ports:
+            - "8080:80"
+        depends_on:
+            - db
+        networks:
+            - learnhub
+
     mailpit:
         image: 'axllent/mailpit:latest'
+        container_name: LearnHub_mailpit
         ports:
-            - '${FORWARD_MAILPIT_PORT:-1025}:1025'
-            - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'
+            - "8025:8025"  # Web interface
+            - "1025:1025"  # SMTP server
         networks:
-            - sail
+            - learnhub
+
 networks:
-    sail:
+    learnhub:
         driver: bridge
+
 volumes:
-    sail-mysql:
-        driver: local
-    sail-redis:
-        driver: local
-    sail-meilisearch:
-        driver: local
+    dbdata:
+    redisdata:
+    meilisearchdata:

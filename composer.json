@@ -30,6 +30,7 @@
         "symfony/postmark-mailer": "^7.0"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.0",
         "brianium/paratest": "^7.4",
         "fakerphp/faker": "^1.9.1",
         "knuckleswtf/scribe": "^4.33",
@@ -71,7 +72,8 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/telescope"
+                "laravel/telescope",
+                "barryvdh/laravel-ide-helper"
             ]
         }
     },

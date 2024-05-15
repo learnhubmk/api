@@ -43,33 +43,21 @@
    - Linux/Mac/WSL:
 
           cp .env.docker.example .env
-    
-> - Note: The MySQL container will fail if the DB_PASSWORD value is empty
-> - You can modify the `.env` file to test different configurations.
+8. Create an ```.env``` file by copying ```.env.example```
+    - Windows:
+   
+           docker-compose up -d
+    - Linux/Mac/WSL:
 
- 
-
-8. [WSL] Install sail dependencies
+          docker compose up -d
         
-        docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs
-> - You can copy the command from the official documentation on [Sail dependencies](https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects)
-9. [WSL] Build the docker containers
+9. Run all migrations and database seeders
 
-        ./vendor/bin/sail build
-10. [WSL]  Run the containers
+         docker exec -it LearnHub_app sh -c "php artisan migrate --seed"
+10. Generate key
 
-        ./vendor/bin/sail up -d
-11. [WSL] Access the PHP container
-
-        ./vendor/bin/sail shell
-
-12. [SAIL] Generate an application key (`APP_KEY`)
-
-        php artisan key:generate  
-13. [SAIL] Run all migrations and database seeders
-
-        php artisan migrate --seed
-14. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+         docker exec -it LearnHub_app sh -c "php artisan key:generate"
+11. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
 ### Regular Setup
 0. Install [PHP 8.3](https://windows.php.net/download/) or later

@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Admin\Database\Seeders\AdminSeeder;
+use App\Content\Database\Seeders\ContentManagerSeeder;
+use App\Platform\Models\User as PlatformUser;
 use App\Website\Database\Seeders\AuthorSeeder;
 use App\Website\Database\Seeders\BlogPostSeeder;
 use App\Website\Database\Seeders\TagSeeder;
@@ -17,11 +19,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Admin\Models\User::factory(10)->create();
+        PlatformUser::factory(10)->create();
 
         Artisan::call('db:seed', [
             '--class' => AdminSeeder::class,
             '--module' => 'Admin',
+        ]);
+
+        Artisan::call('db:seed', [
+            '--class' => ContentManagerSeeder::class,
+            '--module' => 'Content',
         ]);
 
         Artisan::call('db:seed', [

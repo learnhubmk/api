@@ -1,17 +1,17 @@
-name: General
+name: Content
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: /
+      - POST
+    uri: content/login
     metadata:
-      groupName: General
+      groupName: Content
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: Login
+      description: 'This endpoint enables users with content role to sign in'
       authenticated: false
       custom: []
     headers:
@@ -21,18 +21,30 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"name":"LearnHub.mk API","version":1,"message":"Welcome to the LearnHub.mk API!"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: stracke.chadd@example.com
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
         custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: amet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: stracke.chadd@example.com
+      password: amet
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -41,18 +53,19 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
-    uri: sanctum/csrf-cookie
+      - POST
+    uri: content/logout
     metadata:
-      groupName: General
+      groupName: Content
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      description: ''
-      authenticated: false
+      title: Logout
+      description: 'This endpoint enables users with content role to log out'
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -62,18 +75,12 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 204
-        content: ''
-        headers:
-          cache-control: 'no-cache, private'
-          access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InVFS2VUMFVubEtRdTllQmNBbHhKbEE9PSIsInZhbHVlIjoieDYvbTZNVFhNVE5lbkRkN1FJRit4VHF6Wm9JVEk1dkIvTzN2eUxpalQvMlVxSDdIMGh0V0FPbU53VitYMit6ZHRXYjVQZWNyRStTdzg3c1lKRFR5L2d4OE5PbEtOTEd3T1M1WFErMnU2MVYydWdlUmQ3NG5HK3o1bjZKb1FCS3IiLCJtYWMiOiJmOWM2Y2MwYzRhOWNmYzJiOTRmYzcyMmFmY2YzYTIyZWZjNTk5OGQyNTEzMTgwZjhiYzc5ODA4MTMxNTdmM2U5IiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:36:20 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6IkxzdmVMeWgvc21VQ0tGS2xycUV5S3c9PSIsInZhbHVlIjoiMGJTSDhlV09VUVFXYWhCcERYaXJEU3pPOGZSMk5rSjdNbUNQa0kwdHNwbHJ0ZEMxZHVCNGhHWEhBOEZoSWtvU20xblhTVlNvMnZoVGx5Z2g1ZzI0N3VicHRUN2QwM293cUdQNHM2eDB1SDZwa2w4YkVxL2Ewc2pDdmVENmRJVG0iLCJtYWMiOiJjODEwMTEzM2NhYmFkOGE4Njg2ODIyZTAzMDZiYzYwNjM4MGRmNjM0ZGRjMjliYTQ0ODQxOWEwNjU2ODE1NzljIiwidGFnIjoiIn0%3D; expires=Wed, 17 Apr 2024 05:36:20 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4kVhcbaf86v153EdeaDZP6g'
     controller: null
     method: null
     route: null
