@@ -22,9 +22,10 @@ class BlogPostController extends Controller
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
     #[QueryParam('title', 'string', required: false, example: "?title=learnhub")]
-    #[QueryParam('tag', 'string', required: false, example: "?tag=php")]
+    #[QueryParam('tag', 'array', required: false, example: "?tag=[php,laravel,react]")]
     #[QueryParam('author', 'string', required: false, example: "?author=john")]
-    #[QueryParam('sort', 'array', required: false, example: "?sort=[id,title]", enum: ['id', 'title', 'publish_date', 'created_at'])]
+    #[QueryParam('sort', 'string', required: false, example: "?sort=title", enum: ['id', 'title', 'publish_date',
+        'created_at'])]
     public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
@@ -32,8 +33,9 @@ class BlogPostController extends Controller
                 return $query->where('title', 'like', "%{$request->title}%");
             })
             ->when($request->has('tag'), function ($query) use ($request) {
-                return $query->whereHas('tags', function ($tagQuery) use ($request) {
-                    $tagQuery->where('name', 'like', "%$request->tag%");
+                $tags = explode(',', $request->tag);
+                return $query->whereHas('tags', function ($tagQuery) use ($tags) {
+                    $tagQuery->whereIn('name', $tags);
                 });
             })
             ->when($request->has('author'), function ($query) use ($request) {
@@ -43,11 +45,7 @@ class BlogPostController extends Controller
                 });
             })
             ->when($request->has('sort'), function ($query) use ($request) {
-                $sortFields = explode(',', str_replace(['[', ']'], '', $request->sort));
-                foreach ($sortFields as $sortField) {
-                    $direction = 'desc';
-                    $query->orderBy($sortField, $direction);
-                }
+                $query->orderByDesc($request->sort);
             })
             ->paginate(15);
 
