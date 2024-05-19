@@ -4,15 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('blog_post_tags', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::table('blog_post_tags', function (Blueprint $table) {
+            //
         });
     }
 
@@ -21,6 +21,8 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('tags');
+        Schema::table('blog_post_tags', function (Blueprint $table) {
+            //
+        });
     }
 };
