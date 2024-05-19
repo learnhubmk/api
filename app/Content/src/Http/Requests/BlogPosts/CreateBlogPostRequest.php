@@ -23,9 +23,9 @@ class CreateBlogPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required'],
-            'excerpt' => ['required'],
-            'content' => ['required'],
+            'title' => ['required', 'string', 'max:255'],
+            'excerpt' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string'],
             'tags' => ['required', 'array'],
             'tags.*' => ['required', 'exists:blog_post_tags,id']
         ];

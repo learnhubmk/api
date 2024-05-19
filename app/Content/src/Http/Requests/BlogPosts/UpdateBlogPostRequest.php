@@ -23,10 +23,10 @@ class UpdateBlogPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['sometimes'],
-            'excerpt' => ['sometimes'],
-            'slug' => ['sometimes'],
-            'content' => ['sometimes'],
+            'title' => ['sometimes', 'string', 'max:255'],
+            'excerpt' => ['sometimes', 'string', 'max:255'],
+            'slug' => ['sometimes', 'string', 'max:255'],
+            'content' => ['sometimes', 'string'],
             'tags' => ['sometimes', 'array'],
             'tags.*' => ['sometimes', 'exists:blog_post_tags,id']
         ];
