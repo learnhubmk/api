@@ -20,6 +20,7 @@ Route::group(['prefix' => '/content'], function () {
         });
 
         Route::group(['prefix' => '/blog-posts-tags'], function () {
+            Route::post('/', [BlogPostTagsController::class, 'index']);
             Route::post('/', [BlogPostTagsController::class, 'store']);
             Route::patch('/{blogPostTag}', [BlogPostTagsController::class, 'update']);
             Route::delete('/{blogPostTag}', [BlogPostTagsController::class, 'destroy']);

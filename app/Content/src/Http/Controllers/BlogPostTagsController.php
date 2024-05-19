@@ -6,13 +6,24 @@ use App\Content\Http\Requests\BlogPosts\BlogPostTagsDeleteRequest;
 use App\Content\Http\Requests\BlogPosts\BlogPostTagsRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostTagResource;
 use App\Http\Controllers\Controller;
+use App\Website\Models\BlogPost;
 use App\Website\Models\BlogPostTag;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 
 class BlogPostTagsController extends Controller
 {
+    #[Endpoint(title: 'List Blog post tag', description: 'List Blog Post Tags in Ascending Order')]
+    #[Group('Content')]
+    public function index(): AnonymousResourceCollection
+    {
+        $tags = BlogPostTag::orderBy('name', 'asc')->paginate(20);
+
+        return BlogPostTagResource::collection($tags);
+    }
+
     #[Endpoint(title: 'Create Blog post tag', description: 'This endpoint will create a single blog post tag')]
     #[Group('Content')]
     #[BodyParam('name', 'string', required: true, example: "test")]
