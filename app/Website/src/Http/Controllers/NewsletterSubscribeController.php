@@ -22,8 +22,8 @@ class NewsletterSubscribeController extends Controller
         $subscriber = Mailcoach::createSubscriber(
             emailListUuid: '<email-list-uuid>',
             attributes: [
-                'email' => $email,
                 'first_name' => $first_name,
+                'email' => $email,
         ]);
 
         return response()->json(["message" => "Successful subcription"], 200);
