@@ -23,7 +23,7 @@ class BlogPostTagsRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'name' => ['required']
+           'name' => ['required', 'string', 'max:255', 'unique:blog_post_tags,name'],
         ];
     }
 }
