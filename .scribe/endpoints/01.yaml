@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: lourdes48@example.org
+        example: lubowitz.keegan@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: sint
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: lourdes48@example.org
-      password: sint
+      email: lubowitz.keegan@example.org
+      password: sit
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,7 +80,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kfchvg4beZ86EVaDP6153ad'
+      - 'Bearer a6V4DhcfkdZgv381ea6b5PE'
     controller: null
     method: null
     route: null
@@ -117,8 +117,8 @@ endpoints:
         name: tag
         description: ''
         required: false
-        example: '?tag=php'
-        type: string
+        example: '?tag=[php,laravel,react]'
+        type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -135,8 +135,8 @@ endpoints:
         name: sort
         description: ''
         required: false
-        example: '?sort=[id,title]'
-        type: 'string[]'
+        example: '?sort=title'
+        type: string
         enumValues:
           - id
           - title
@@ -146,9 +146,9 @@ endpoints:
         custom: []
     cleanQueryParameters:
       title: '?title=learnhub'
-      tag: '?tag=php'
+      tag: '?tag=[php,laravel,react]'
       author: '?author=john'
-      sort: '?sort=[id,title]'
+      sort: '?sort=title'
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

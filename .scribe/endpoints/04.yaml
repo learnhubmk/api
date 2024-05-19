@@ -24,20 +24,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: et
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: et
+      title: velit
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Ipsum officia tenetur quae consectetur in vel.","slug":"ipsum-officia-tenetur-quae-consectetur-in-vel","excerpt":"Unde voluptas iusto consequatur expedita odio omnis excepturi est.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}},{"title":"Doloribus quam qui sint iusto pariatur et.","slug":"doloribus-quam-qui-sint-iusto-pariatur-et","excerpt":"Qui ut et aliquam facere voluptate.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Brooks Parisian","last_name":"Wiegand","image":null}},{"title":"Qui numquam et omnis esse enim aut.","slug":"qui-numquam-et-omnis-esse-enim-aut","excerpt":"Expedita nostrum ratione velit pariatur ab.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Everardo Koelpin Jr.","last_name":"Harvey","image":null}},{"title":"Porro et voluptatem qui quam delectus.","slug":"porro-et-voluptatem-qui-quam-delectus","excerpt":"Quibusdam debitis debitis sequi ut quos et ut.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Mara Corwin","last_name":"Ziemann","image":null}},{"title":"Omnis et vel quis sit.","slug":"omnis-et-vel-quis-sit","excerpt":"Ut incidunt qui magni ut omnis omnis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Novella Kunde DVM","last_name":"Purdy","image":null}},{"title":"Non commodi delectus amet nam.","slug":"non-commodi-delectus-amet-nam","excerpt":"Debitis provident quidem cumque cum ut odit ad.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Amaya Lehner","last_name":"Treutel","image":null}},{"title":"Iure qui et beatae quia.","slug":"iure-qui-et-beatae-quia","excerpt":"Illo nulla inventore hic et enim.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Bettie Kunze","last_name":"Dooley","image":null}},{"title":"Quas et ut ut natus.","slug":"quas-et-ut-ut-natus","excerpt":"Qui sunt aspernatur voluptas et sint aut.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Mara Corwin","last_name":"Ziemann","image":null}},{"title":"Ut excepturi dolores tempora quis nulla et.","slug":"ut-excepturi-dolores-tempora-quis-nulla-et","excerpt":"Distinctio ea similique omnis qui.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Bettie Kunze","last_name":"Dooley","image":null}},{"title":"Hic minima modi amet et sed est.","slug":"hic-minima-modi-amet-et-sed-est","excerpt":"Quo tempore neque et iure voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Amaya Lehner","last_name":"Treutel","image":null}},{"title":"Eos et velit totam minima a architecto.","slug":"eos-et-velit-totam-minima-a-architecto","excerpt":"Pariatur consequuntur ipsum nobis sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}},{"title":"Impedit corporis dolor dignissimos et.","slug":"impedit-corporis-dolor-dignissimos-et","excerpt":"Accusamus sunt id repellat velit quis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}},{"title":"Eveniet aut et ut est dolorem autem dolore iusto.","slug":"eveniet-aut-et-ut-est-dolorem-autem-dolore-iusto","excerpt":"Rem praesentium dolore dicta est qui aut.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}},{"title":"Cumque eius commodi ipsam quas totam tenetur illum.","slug":"cumque-eius-commodi-ipsam-quas-totam-tenetur-illum","excerpt":"Expedita iste reprehenderit dolorum officia commodi suscipit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Amaya Lehner","last_name":"Treutel","image":null}},{"title":"Aspernatur id perspiciatis quae aliquid id et dolorem.","slug":"aspernatur-id-perspiciatis-quae-aliquid-id-et-dolorem","excerpt":"Sequi explicabo ut dolore voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Mara Corwin","last_name":"Ziemann","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":15,"total":15}}'
+        content: '{"data":[{"title":"Quisquam quisquam velit consequatur magni aut sed.","slug":"quisquam-quisquam-velit-consequatur-magni-aut-sed","excerpt":"Id nam harum doloribus omnis et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Novella Kunde DVM","last_name":"Purdy","image":null}},{"title":"Eos et velit totam minima a architecto.","slug":"eos-et-velit-totam-minima-a-architecto","excerpt":"Pariatur consequuntur ipsum nobis sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":2,"total":2}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -71,13 +71,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: reprehenderit
+        example: quisquam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: reprehenderit
+      slug: quisquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -538,13 +538,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: quia
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: quia
+      tag: numquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -553,7 +553,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/quia?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/quia?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/quia?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/quia","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/numquam","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -591,7 +591,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: dolorum
+        example: vero
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -600,7 +600,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: hkovacek@example.net
+        example: tmuller@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -609,7 +609,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: tempora
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -618,16 +618,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: aut
+        example: asperiores
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: dolorum
-      email: hkovacek@example.net
-      message: tempora
-      cf-turnstile-response: aut
+      name: vero
+      email: tmuller@example.com
+      message: rerum
+      cf-turnstile-response: asperiores
     fileParameters: []
     responses: []
     responseFields: []
