@@ -17,7 +17,7 @@ Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show'])->na
 
 Route::post('/contact', ContactController::class)->name('contact')->middleware('throttle:5,1');
 
-Route::post('newsletter/subscribe', [NewsletterSubscribeController::class, 'subscribe'])->middleware('throttle:5,1');
+Route::post('newsletter/store', [NewsletterSubscribeController::class, 'store'])->middleware('throttle:5,1');
 
 //Which way to be used the above or the bellow?
 
