@@ -2,11 +2,9 @@
 
 namespace App\Website\Http\Requests;
 
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\RequiredIf;
-
 
 class SubscribeRequest extends FormRequest
 {
