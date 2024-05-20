@@ -3,7 +3,7 @@
 namespace App\Admin\Database\factories;
 
 use App\Admin\Models\AdminProfile;
-use App\Admin\Models\User;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +18,8 @@ class AdminProfileFactory extends Factory
         return [
             'user_id' => User::factory(),
             'first_name' => fake()->name(),
-            'last_name' => fake()->lastName()
+            'last_name' => fake()->lastName(),
+            'image' => fake()->imageUrl(),
         ];
     }
 }

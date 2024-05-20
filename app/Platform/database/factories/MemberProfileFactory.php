@@ -2,7 +2,7 @@
 
 namespace App\Platform\Database\factories;
 
-use App\Platform\Models\User;
+use App\Models\User;
 use App\Platform\Models\MemberProfile;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -18,7 +18,8 @@ class MemberProfileFactory extends Factory
         return [
             'user_id' => User::factory(),
             'first_name' => fake()->name(),
-            'last_name' => fake()->lastName()
+            'last_name' => fake()->lastName(),
+            'image' => fake()->imageUrl(),
         ];
     }
 }

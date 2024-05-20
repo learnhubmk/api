@@ -3,6 +3,7 @@
 namespace App\Admin\Models;
 
 use App\Admin\Database\factories\ContentManagerProfileFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

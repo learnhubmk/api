@@ -2,11 +2,12 @@
 
 namespace App\Admin\Http\Controllers;
 
-use App\Admin\Models\User;
-use App\Admin\Enums\UserStatusName;
-use Illuminate\Http\Request;
+use App\Enums\RoleName;
 use App\Admin\Http\Resources\UserResource;
-use App\Admin\Enums\RoleName;
+use App\Enums\UserStatusName;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
 
@@ -15,7 +16,7 @@ class UserController
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request): AnonymousResourceCollection
     {
         $validated = $request->validate([
             'first_name' => ['nullable', 'string'],
@@ -25,44 +26,56 @@ class UserController
             'sortDirection' => ['nullable', 'in:asc,desc'],
         ]);
 
-        $sortFieldMap = [
-            'id' => 'users.id',
-            'first_name' => 'profiles.first_name',
-            'last_name' => 'profiles.last_name',
-        ][$validated['sortBy'] ?? 'id'];
+        $role = $request->get('role', RoleName::MEMBER->value);
 
-        return UserResource::collection(
-            User::query()
-                ->with(['roles'])
-                ->leftJoin('profiles', 'users.id', '=', 'profiles.user_id')
-                ->orderBy($sortFieldMap, $validated['sortDirection'] ?? 'asc')
-                ->filter($validated)
-                ->select([
-                    'users.id as id',
-                    'users.email as email',
-                    'profiles.first_name as first_name',
-                    'profiles.last_name as last_name',
-                ])
-                ->paginate(20)
-        );
+        $sortBy = match(true) {
+            $role === RoleName::MEMBER->value && $request->get('first_name') => 'member_profiles.first_name',
+            $role === RoleName::MEMBER->value && $request->get('last_name') => 'member_profiles.last_name',
+            $role === RoleName::ADMIN->value && $request->get('first_name') => 'admin_profiles.first_name',
+            $role === RoleName::ADMIN->value && $request->get('last_name') => 'admin_profiles.last_name',
+            $role === RoleName::CONTENT_MANAGER->value && $request->get('first_name') => 'content_manager_profiles.first_name',
+            $role === RoleName::CONTENT_MANAGER->value && $request->get('last_name') => 'content_manager_profiles.last_name',
+            default => 'users.id',
+        };
+
+        $joinTable = match ($role) {
+            RoleName::MEMBER->value => 'member_profiles',
+            RoleName::ADMIN->value => 'admin_profiles',
+            RoleName::CONTENT_MANAGER->value => 'content_manager_profiles',
+        };
+
+        $users = User::query()
+            ->with(['roles'])
+            ->join($joinTable, 'users.id', '=', "$joinTable.user_id")
+            ->orderBy($sortBy, $validated['sortDirection'] ?? 'asc')
+            ->filter($validated)
+            ->paginate(20);
+
+        return UserResource::collection($users);
     }
 
-    public function show(int $id)
+    public function show(int $id): UserResource
     {
-        $user = User::query()
-            ->leftJoin('profiles', 'users.id', '=', 'profiles.user_id')
-            ->where('users.id', $id)
-            ->select([
-                'users.id as id',
-                'users.email as email',
-                'profiles.first_name as first_name',
-                'profiles.last_name as last_name',
-            ])
-            ->first();
+        $user = User::query()->with(['roles'])->findOrFail($id);
 
-        abort_unless($user, 404);
+        $profileRelation = match($user->roles->first()->name) {
+            RoleName::MEMBER->value => 'memberProfile',
+            RoleName::CONTENT_MANAGER->value => 'contentManagerProfile',
+            RoleName::ADMIN->value => 'adminProfile',
+            default => null,
+        };
+
+        $user->load([$profileRelation]);
 
         return new UserResource($user);
+    }
+
+    /**
+     * Store a new resource in storage.
+     */
+    public function store(Request $request, string $id)
+    {
+        //
     }
 
     /**

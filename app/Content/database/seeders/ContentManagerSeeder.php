@@ -2,8 +2,8 @@
 
 namespace App\Content\Database\Seeders;
 
-use App\Content\Models\User;
-use App\Content\Enums\RoleName;
+use App\Models\User;
+use App\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 

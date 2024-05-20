@@ -2,10 +2,10 @@
 
 namespace App\Admin\Database\Seeders;
 
-use App\Admin\Models\User;
-use App\Admin\Enums\RoleName;
-use App\Admin\Enums\UserStatusName;
+use App\Enums\RoleName;
 use App\Admin\Models\AdminProfile;
+use App\Enums\UserStatusName;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -29,6 +29,7 @@ class AdminSeeder extends Seeder
             'user_id' => $user->id,
             'first_name' => 'John',
             'last_name' => 'Doe',
+            'image' => 'https://google.com/'
         ]);
     }
 }

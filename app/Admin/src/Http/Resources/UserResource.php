@@ -19,9 +19,7 @@ class UserResource extends JsonResource
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
             'email' => $this->email,
-            'roles' => $this->roles->map(function ($role) {
-                return $role->name;
-            }),
+            'role' => $this->roles->first()->name,
         ];
     }
 }

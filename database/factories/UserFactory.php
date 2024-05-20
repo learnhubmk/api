@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Platform\Database\factories;
+namespace Database\Factories;
 
-use App\Platform\Models\User;
+use App\Enums\UserStatusName;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -10,9 +11,8 @@ use Illuminate\Support\Str;
 /**
  * @extends Factory<User>
  */
-class PlatformUserFactory extends Factory
+class UserFactory extends Factory
 {
-    protected $model = User::class;
 
     /**
      * The current password being used by the factory.
@@ -31,6 +31,7 @@ class PlatformUserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'status' => UserStatusName::ACTIVE,
         ];
     }
 

@@ -2,10 +2,14 @@
 
 namespace App\Admin\Tests\Feature;
 
-use App\Admin\Models\User;
-use App\Admin\Enums\RoleName;
-use App\Admin\Enums\UserStatusName;
+use App\Enums\RoleName;
+use App\Admin\Models\AdminProfile;
+use App\Admin\Models\MemberProfile;
+use App\Enums\UserStatusName;
+use App\Models\User;
+use App\Models\User as Admin;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Arr;
 use Laravel\Sanctum\Sanctum;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
@@ -18,27 +22,31 @@ class UserControllerTest extends TestCase
     #[Test]
     public function it_can_list_all_users(): void
     {
-        $this->withoutExceptionHandling();
+        $members = User::factory()->times(5)->create();
 
-        $memberUser = User::factory()->create([
-            'email' => 'user@learnhub.com',
+        $members->each(function (User $user) {
+            $user->assignRole(RoleName::MEMBER);
+
+            MemberProfile::factory()->create([
+                'user_id' => $user->id,
+            ]);
+        });
+
+        $admin = Admin::factory()->create([
+            'email' => 'admin@learnhub.mk',
         ]);
-        $memberUser->assignRole(RoleName::ADMIN);
-        $memberUser->assignRole(RoleName::MEMBER);
 
+        $admin->assignRole(RoleName::ADMIN);
 
-        $adminUser = User::factory()->create();
-        $adminUser->assignRole(RoleName::ADMIN);
+        Sanctum::actingAs($admin);
 
-        Sanctum::actingAs($adminUser);
+        $response = $this->getJson(route('users.index'));
 
-        $response = $this->getJson('/admin/users')->json();
-
-        $this->assertCount(2, $response['data']);
-        $this->assertSame(2, $response['meta']['total']);
-
-        $this->assertSame('user@learnhub.com', $response['data'][0]['email']);
-        $this->assertSame(['admin', 'member'], $response['data'][0]['roles']);
+        $this->assertCount(5, $response->json()['data']);
+        $this->assertSame(5, $response->json()['meta']['total']);
+        $response->assertJsonFragment([
+            'data' => $this->dataResponse($response->json()['data']),
+        ]);
     }
 
     public static function userDataProvider(): array
@@ -57,20 +65,18 @@ class UserControllerTest extends TestCase
     #[DataProvider('userDataProvider')]
     public function it_can_filter_users(string $field, string $value, int $count): void
     {
-        $this->withoutExceptionHandling();
-
-        $user = User::factory()->create([
-            'email' => 'user@learnhub.com',
+        $admin = User::factory()->create([
+            'email' => 'admin@learnhub.mk',
         ]);
 
-        Profile::factory()->for($user)->create([
+        AdminProfile::factory()->for($admin)->create([
             'first_name' => 'John',
             'last_name' => 'Doe',
         ]);
 
-        $user->assignRole(RoleName::ADMIN);
+        $admin->assignRole(RoleName::ADMIN);
 
-        Sanctum::actingAs($user);
+        Sanctum::actingAs($admin);
 
         $response = $this->getJson("/admin/users?{$field}={$value}")->json();
         $this->assertCount($count, $response['data']);
@@ -92,33 +98,31 @@ class UserControllerTest extends TestCase
     #[DataProvider('userSortDataProvider')]
     public function it_can_sort_the_users(string $field, string $direction, array $dataset): void
     {
-        $this->withoutExceptionHandling();
-
         collect([
             ['a', 'b'],
             ['c', 'c'],
             ['b', 'a'],
-        ])->each(function ($user) {
-            [$first, $last] = $user;
+        ])->each(function (array $member) {
+            [$first, $last] = $member;
 
-            Profile::factory()->create([
+            MemberProfile::factory()->create([
                 'first_name' => $first,
                 'last_name' => $last,
             ]);
         });
 
-        $user = User::factory()->create([
-            'email' => 'user@learnhub.com',
+        $admin = User::factory()->create([
+            'email' => 'admin@learnhub.mk',
         ]);
 
-        Profile::factory()->for($user)->create([
+        AdminProfile::factory()->for($admin)->create([
             'first_name' => 'd',
             'last_name' => 'd',
         ]);
 
-        $user->assignRole(RoleName::ADMIN);
+        $admin->assignRole(RoleName::ADMIN);
 
-        Sanctum::actingAs($user);
+        Sanctum::actingAs($admin);
 
         $response = $this->getJson("/admin/users?sortBy={$field}&sortDirection={$direction}")->json();
 
@@ -130,27 +134,27 @@ class UserControllerTest extends TestCase
     #[Test]
     public function it_can_show_single_user(): void
     {
-        $adminUser = User::factory()->create([
-            'email' => 'user@learnhub.com',
+        $admin = User::factory()->create([
+            'email' => 'admin@learnhub.mk',
         ]);
-        $adminUser->assignRole(RoleName::ADMIN);
-        $adminUser->assignRole(RoleName::MEMBER);
 
-        Profile::factory()->for($adminUser)->create([
+        $admin->assignRole(RoleName::ADMIN);
+
+        AdminProfile::factory()->for($admin)->create([
             'first_name' => 'John',
             'last_name' => 'Doe',
         ]);
 
-        Sanctum::actingAs($adminUser);
+        Sanctum::actingAs($admin);
 
-        $response = $this->getJson('/admin/users/' . $adminUser->id);
+        $response = $this->getJson('/admin/users/' . $admin->id);
 
         $response->assertExactJson([
             'data' => [
-                'id' => $adminUser->id,
+                'id' => $admin->id,
                 'first_name' => 'John',
                 'last_name' => 'Doe',
-                'email' => $adminUser->email,
+                'email' => $admin->email,
                 'roles' => ['admin', 'member'],
             ]
         ]);
@@ -241,5 +245,18 @@ class UserControllerTest extends TestCase
             'id' => $member->id,
             'status' => UserStatusName::ACTIVE,
         ]);
+    }
+
+    private function dataResponse(array $data): array
+    {
+        return collect($data)->map(function ($item) {
+            return [
+                'id' => Arr::get($item, 'id'),
+                'first_name' => Arr::get($item, 'first_name'),
+                'last_name' => Arr::get($item, 'last_name'),
+                'email' => Arr::get($item, 'email'),
+                'role' => Arr::get($item, 'role'),
+            ];
+        })->toArray();
     }
 }
