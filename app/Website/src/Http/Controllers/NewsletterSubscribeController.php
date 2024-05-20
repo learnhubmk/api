@@ -20,7 +20,7 @@ class NewsletterSubscribeController extends Controller
         $email = $request->input('email');
 
         $subscriber = Mailcoach::createSubscriber(
-            emailListUuid: '<email-list-uuid>',
+           emailListUuid: config('mailcoach-sdk.email_list'),
             attributes: [
                 'first_name' => $first_name,
                 'email' => $email,
