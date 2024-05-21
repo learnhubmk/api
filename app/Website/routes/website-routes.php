@@ -1,11 +1,11 @@
 <?php
 
-use App\Website\Http\Controllers\BlogPostController;
-use App\Website\Http\Controllers\NewsletterSubscribeController;
-use App\Website\Http\Controllers\BlogPostTagsController;
-use App\Website\Http\Controllers\ContactController;
-use App\Website\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Website\Http\Controllers\HomeController;
+use App\Website\Http\Controllers\ContactController;
+use App\Website\Http\Controllers\BlogPostController;
+use App\Website\Http\Controllers\BlogPostTagsController;
+use App\Website\Http\Controllers\NewsletterSubscriberController;
 
 Route::get('/', HomeController::class)->name('home');
 
@@ -17,13 +17,6 @@ Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show'])->na
 
 Route::post('/contact', ContactController::class)->name('contact')->middleware('throttle:5,1');
 
-Route::post('newsletter/store', [NewsletterSubscribeController::class, 'store'])->middleware('throttle:5,1');
+Route::post('newsletter-subscribers/store', [NewsletterSubscriberController::class, 'store'])->middleware('throttle:5,1');
 
-//Which way to be used the above or the bellow?
 
-// Route::middleware('throttle:5,1')->group(function () {
-
-//     Route::post('/contact', ContactController::class);
-//     Route::post('newsletter/subscribe', [NewsletterSubscribeController::class, 'subscribe']);
-
-// });

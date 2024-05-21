@@ -6,7 +6,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\RequiredIf;
 
-class SubscribeRequest extends FormRequest
+class StoreNewsletterSubscriberRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class SubscribeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'first_name' => ['required', 'string', 'max:20'],
+            'first_name' => ['required', 'string', 'max:50'],
             'email' => ['required', 'email:filter'],
             'cf-turnstile-response' => [
                 new RequiredIf(function () {
