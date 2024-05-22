@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'https://staging-api.learnhub.mk'
+    url: staging-api.learnhub.mk
 paths:
   /admin/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: hwalter@example.org
+                  example: leon57@example.net
                 password:
                   type: string
                   description: ''
-                  example: ea
+                  example: cumque
               required:
                 - email
                 - password
@@ -63,11 +63,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: stracke.chadd@example.com
+                  example: garrison54@example.com
                 password:
                   type: string
                   description: ''
-                  example: amet
+                  example: porro
               required:
                 - email
                 - password
@@ -138,14 +138,14 @@ paths:
                 type: object
                 example:
                   data:
-                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
+                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
                 properties:
                   data:
                     type: object
                     properties:
                       redirect_link:
                         type: string
-                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
+                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
       tags:
         - Platform
       security: []
@@ -242,13 +242,13 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php
-                      line: 52
+                      line: 53
                       function: getAccessTokenResponse
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
                     -
                       file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php
-                      line: 27
+                      line: 26
                       function: user
                       class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                       type: '->'
@@ -672,13 +672,13 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php
-                        line: 52
+                        line: 53
                         function: getAccessTokenResponse
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
                       -
                         file: /var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php
-                        line: 27
+                        line: 26
                         function: user
                         class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                         type: '->'
@@ -2863,12 +2863,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: recusandae
+          example: repudiandae
           required: false
           schema:
             type: string
             description: ''
-            example: recusandae
+            example: repudiandae
       responses:
         200:
           description: ''
@@ -2879,9 +2879,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Unde culpa dolor et recusandae.'
-                      slug: unde-culpa-dolor-et-recusandae
-                      excerpt: 'Sed consequatur illum sit adipisci beatae.'
+                      title: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
+                      slug: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
+                      excerpt: 'Natus hic veritatis quibusdam consequatur.'
                       tags:
                         -
                           name: php
@@ -2889,15 +2889,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-29'
+                      publish_date: '2024-05-15'
                       author:
-                        first_name: 'Josh Ortiz IV'
-                        last_name: Roob
+                        first_name: 'Dr. Emmanuel Jacobs'
+                        last_name: Aufderhar
                         image: null
                     -
-                      title: 'Recusandae repudiandae sunt consequatur sed laborum.'
-                      slug: recusandae-repudiandae-sunt-consequatur-sed-laborum
-                      excerpt: 'Hic eos laboriosam veritatis aut qui quam fuga.'
+                      title: 'Voluptatem beatae repudiandae natus consequatur sit quidem sint eligendi.'
+                      slug: voluptatem-beatae-repudiandae-natus-consequatur-sit-quidem-sint-eligendi
+                      excerpt: 'Est incidunt aperiam aut debitis delectus.'
                       tags:
                         -
                           name: php
@@ -2905,30 +2905,14 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-04-29'
+                      publish_date: '2024-05-15'
                       author:
-                        first_name: 'Bobbie Oberbrunner'
-                        last_name: Koch
-                        image: null
-                    -
-                      title: 'Quis ea quia enim earum recusandae labore earum.'
-                      slug: quis-ea-quia-enim-earum-recusandae-labore-earum
-                      excerpt: 'Qui vero provident id quia consequatur temporibus nesciunt dolores.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-04-29'
-                      author:
-                        first_name: 'Tatyana Fisher'
+                        first_name: 'Edyth Kuhlman'
                         last_name: McKenzie
                         image: null
                   links:
-                    first: 'http://learnhub.test/blog-posts?page=1'
-                    last: 'http://learnhub.test/blog-posts?page=1'
+                    first: 'http://localhost/blog-posts?page=1'
+                    last: 'http://localhost/blog-posts?page=1'
                     prev: null
                     next: null
                   meta:
@@ -2941,25 +2925,25 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-posts?page=1'
+                        url: 'http://localhost/blog-posts?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-posts'
+                    path: 'http://localhost/blog-posts'
                     per_page: 15
-                    to: 3
-                    total: 3
+                    to: 2
+                    total: 2
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Unde culpa dolor et recusandae.'
-                        slug: unde-culpa-dolor-et-recusandae
-                        excerpt: 'Sed consequatur illum sit adipisci beatae.'
+                        title: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
+                        slug: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
+                        excerpt: 'Natus hic veritatis quibusdam consequatur.'
                         tags:
                           -
                             name: php
@@ -2967,15 +2951,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-29'
+                        publish_date: '2024-05-15'
                         author:
-                          first_name: 'Josh Ortiz IV'
-                          last_name: Roob
+                          first_name: 'Dr. Emmanuel Jacobs'
+                          last_name: Aufderhar
                           image: null
                       -
-                        title: 'Recusandae repudiandae sunt consequatur sed laborum.'
-                        slug: recusandae-repudiandae-sunt-consequatur-sed-laborum
-                        excerpt: 'Hic eos laboriosam veritatis aut qui quam fuga.'
+                        title: 'Voluptatem beatae repudiandae natus consequatur sit quidem sint eligendi.'
+                        slug: voluptatem-beatae-repudiandae-natus-consequatur-sit-quidem-sint-eligendi
+                        excerpt: 'Est incidunt aperiam aut debitis delectus.'
                         tags:
                           -
                             name: php
@@ -2983,25 +2967,9 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-04-29'
+                        publish_date: '2024-05-15'
                         author:
-                          first_name: 'Bobbie Oberbrunner'
-                          last_name: Koch
-                          image: null
-                      -
-                        title: 'Quis ea quia enim earum recusandae labore earum.'
-                        slug: quis-ea-quia-enim-earum-recusandae-labore-earum
-                        excerpt: 'Qui vero provident id quia consequatur temporibus nesciunt dolores.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-04-29'
-                        author:
-                          first_name: 'Tatyana Fisher'
+                          first_name: 'Edyth Kuhlman'
                           last_name: McKenzie
                           image: null
                     items:
@@ -3009,13 +2977,13 @@ paths:
                       properties:
                         title:
                           type: string
-                          example: 'Unde culpa dolor et recusandae.'
+                          example: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
                         slug:
                           type: string
-                          example: unde-culpa-dolor-et-recusandae
+                          example: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
                         excerpt:
                           type: string
-                          example: 'Sed consequatur illum sit adipisci beatae.'
+                          example: 'Natus hic veritatis quibusdam consequatur.'
                         tags:
                           type: array
                           example:
@@ -3033,16 +3001,16 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-04-29'
+                          example: '2024-05-15'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Josh Ortiz IV'
+                              example: 'Dr. Emmanuel Jacobs'
                             last_name:
                               type: string
-                              example: Roob
+                              example: Aufderhar
                             image:
                               type: string
                               example: null
@@ -3051,10 +3019,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-posts?page=1'
+                        example: 'http://localhost/blog-posts?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-posts?page=1'
+                        example: 'http://localhost/blog-posts?page=1'
                       prev:
                         type: string
                         example: null
@@ -3081,7 +3049,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-posts?page=1'
+                            url: 'http://localhost/blog-posts?page=1'
                             label: '1'
                             active: true
                           -
@@ -3102,16 +3070,16 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-posts'
+                        example: 'http://localhost/blog-posts'
                       per_page:
                         type: integer
                         example: 15
                       to:
                         type: integer
-                        example: 3
+                        example: 2
                       total:
                         type: integer
-                        example: 3
+                        example: 2
       tags:
         - Website
       security: []
@@ -3812,7 +3780,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: optio
+        example: consectetur
         required: true
         schema:
           type: string
@@ -3872,10 +3840,10 @@ paths:
                     -
                       name: redis
                   links:
-                    first: 'http://learnhub.test/blog-post-tags?page=1'
-                    last: 'http://learnhub.test/blog-post-tags?page=2'
+                    first: 'http://localhost/blog-post-tags?page=1'
+                    last: 'http://localhost/blog-post-tags?page=2'
                     prev: null
-                    next: 'http://learnhub.test/blog-post-tags?page=2'
+                    next: 'http://localhost/blog-post-tags?page=2'
                   meta:
                     current_page: 1
                     from: 1
@@ -3886,18 +3854,18 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=1'
+                        url: 'http://localhost/blog-post-tags?page=1'
                         label: '1'
                         active: true
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=2'
+                        url: 'http://localhost/blog-post-tags?page=2'
                         label: '2'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=2'
+                        url: 'http://localhost/blog-post-tags?page=2'
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags'
+                    path: 'http://localhost/blog-post-tags'
                     per_page: 20
                     to: 20
                     total: 23
@@ -3956,16 +3924,16 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=1'
+                        example: 'http://localhost/blog-post-tags?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=2'
+                        example: 'http://localhost/blog-post-tags?page=2'
                       prev:
                         type: string
                         example: null
                       next:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=2'
+                        example: 'http://localhost/blog-post-tags?page=2'
                   meta:
                     type: object
                     properties:
@@ -3986,15 +3954,15 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags?page=1'
+                            url: 'http://localhost/blog-post-tags?page=1'
                             label: '1'
                             active: true
                           -
-                            url: 'http://learnhub.test/blog-post-tags?page=2'
+                            url: 'http://localhost/blog-post-tags?page=2'
                             label: '2'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags?page=2'
+                            url: 'http://localhost/blog-post-tags?page=2'
                             label: 'Next &raquo;'
                             active: false
                         items:
@@ -4011,7 +3979,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags'
+                        example: 'http://localhost/blog-post-tags'
                       per_page:
                         type: integer
                         example: 20
@@ -4040,8 +4008,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/omnis?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                    first: 'http://localhost/blog-post-tags/illum?page=1'
+                    last: 'http://localhost/blog-post-tags/illum?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4054,14 +4022,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                        url: 'http://localhost/blog-post-tags/illum?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/omnis'
+                    path: 'http://localhost/blog-post-tags/illum'
                     per_page: 15
                     to: null
                     total: 0
@@ -4074,10 +4042,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                        example: 'http://localhost/blog-post-tags/illum?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                        example: 'http://localhost/blog-post-tags/illum?page=1'
                       prev:
                         type: string
                         example: null
@@ -4104,7 +4072,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/omnis?page=1'
+                            url: 'http://localhost/blog-post-tags/illum?page=1'
                             label: '1'
                             active: true
                           -
@@ -4125,7 +4093,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/omnis'
+                        example: 'http://localhost/blog-post-tags/illum'
                       per_page:
                         type: integer
                         example: 15
@@ -4143,7 +4111,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: omnis
+        example: illum
         required: true
         schema:
           type: string
@@ -4166,24 +4134,56 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: dolorem
+                  example: sint
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: kemmer.daija@example.org
+                  example: tremayne88@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: optio
+                  example: debitis
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: minus
+                  example: delectus
               required:
                 - name
                 - email
                 - message
                 - cf-turnstile-response
+      security: []
+  /newsletter-subscribers:
+    post:
+      summary: Website/Subscribe
+      operationId: websiteSubscribe
+      description: " This endpoint is for subscribing to Leanhub.mk.\n Additionally it uses Cloudflare Turnstile ReCaptcha for validation."
+      parameters: []
+      responses: {  }
+      tags:
+        - Website
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: xxvtbspdubbkdx
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: cletus.zieme@example.net
+                cf-turnstile-response:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - email
       security: []
 tags:
   -
