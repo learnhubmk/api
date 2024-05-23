@@ -27,7 +27,8 @@
         "socialiteproviders/linkedin": "^4.2",
         "spatie/laravel-permission": "^6.4",
         "symfony/http-client": "^7.0",
-        "symfony/postmark-mailer": "^7.0"
+        "symfony/postmark-mailer": "^7.0",
+        "treblle/treblle-laravel": "^4.5"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
