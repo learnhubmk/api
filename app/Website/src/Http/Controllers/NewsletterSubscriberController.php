@@ -11,7 +11,7 @@ use App\Website\Http\Requests\StoreNewsletterSubscriberRequest;
 
 class NewsletterSubscriberController extends Controller
 {
-    #[Endpoint('Website/Subscribe', <<<'DESC'
+    #[Endpoint('Subscribe To Newsletter', <<<'DESC'
   This endpoint is for subscribing to Leanhub.mk.
   Additionally it uses Cloudflare Turnstile ReCaptcha for validation.
  DESC)]

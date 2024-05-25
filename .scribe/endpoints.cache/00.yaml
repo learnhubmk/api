@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: mosciski.enos@example.org
+        example: hill.kailey@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: placeat
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: mosciski.enos@example.org
-      password: placeat
+      email: hill.kailey@example.com
+      password: aut
     fileParameters: []
     responses: []
     responseFields: []
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer d5a1VPEchkDf38ebg6av6Z4'
+      - 'Bearer dava4behcfZ5k6D61E8P3gV'
     controller: null
     method: null
     route: null
