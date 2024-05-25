@@ -24,20 +24,20 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: repudiandae
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: repudiandae
+      title: omnis
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Repudiandae voluptas voluptas autem qui incidunt sint vel.","slug":"repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel","excerpt":"Natus hic veritatis quibusdam consequatur.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-15","author":{"first_name":"Dr. Emmanuel Jacobs","last_name":"Aufderhar","image":null}},{"title":"Voluptatem beatae repudiandae natus consequatur sit quidem sint eligendi.","slug":"voluptatem-beatae-repudiandae-natus-consequatur-sit-quidem-sint-eligendi","excerpt":"Est incidunt aperiam aut debitis delectus.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-15","author":{"first_name":"Edyth Kuhlman","last_name":"McKenzie","image":null}}],"links":{"first":"http:\/\/localhost\/blog-posts?page=1","last":"http:\/\/localhost\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-posts","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"title":"Voluptatem omnis doloremque omnis sunt sunt rem.","slug":"voluptatem-omnis-doloremque-omnis-sunt-sunt-rem","excerpt":"Consequatur quis quo unde officiis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-15","author":{"first_name":"Hettie Swaniawski","last_name":"Shields","image":null}},{"title":"Deserunt omnis similique quia fugit similique rerum repellendus eum.","slug":"deserunt-omnis-similique-quia-fugit-similique-rerum-repellendus-eum","excerpt":"Rem quo numquam consequatur blanditiis fugit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-15","author":{"first_name":"Elinore Gutkowski","last_name":"Gusikowski","image":null}},{"title":"Omnis eligendi tempore ut sed numquam eaque qui.","slug":"omnis-eligendi-tempore-ut-sed-numquam-eaque-qui","excerpt":"Eaque vitae assumenda ut mollitia sapiente.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-15","author":{"first_name":"Lorna Mitchell DVM","last_name":"Morissette","image":null}}],"links":{"first":"http:\/\/localhost\/blog-posts?page=1","last":"http:\/\/localhost\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-posts","per_page":15,"to":3,"total":3}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -71,13 +71,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: consectetur
+        example: atque
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: consectetur
+      slug: atque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -538,13 +538,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: illum
+        example: iure
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: illum
+      tag: iure
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -553,7 +553,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/localhost\/blog-post-tags\/illum?page=1","last":"http:\/\/localhost\/blog-post-tags\/illum?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-post-tags\/illum?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-post-tags\/illum","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/localhost\/blog-post-tags\/iure?page=1","last":"http:\/\/localhost\/blog-post-tags\/iure?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/blog-post-tags\/iure?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/blog-post-tags\/iure","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -591,7 +591,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: sint
+        example: corporis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -600,7 +600,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: tremayne88@example.org
+        example: richard80@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -609,7 +609,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: debitis
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -618,16 +618,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: delectus
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: sint
-      email: tremayne88@example.org
-      message: debitis
-      cf-turnstile-response: delectus
+      name: corporis
+      email: richard80@example.com
+      message: tempore
+      cf-turnstile-response: quia
     fileParameters: []
     responses: []
     responseFields: []
@@ -663,7 +663,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: xxvtbspdubbkdx
+        example: kakjbjefqwpde
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -672,7 +672,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: cletus.zieme@example.net
+        example: chelsea.lebsack@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -687,8 +687,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: xxvtbspdubbkdx
-      email: cletus.zieme@example.net
+      first_name: kakjbjefqwpde
+      email: chelsea.lebsack@example.org
     fileParameters: []
     responses: []
     responseFields: []

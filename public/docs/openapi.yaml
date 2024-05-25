@@ -26,11 +26,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: leon57@example.net
+                  example: mosciski.enos@example.org
                 password:
                   type: string
                   description: ''
-                  example: cumque
+                  example: placeat
               required:
                 - email
                 - password
@@ -63,11 +63,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: garrison54@example.com
+                  example: maya23@example.org
                 password:
                   type: string
                   description: ''
-                  example: porro
+                  example: est
               required:
                 - email
                 - password
@@ -2863,12 +2863,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: repudiandae
+          example: omnis
           required: false
           schema:
             type: string
             description: ''
-            example: repudiandae
+            example: omnis
       responses:
         200:
           description: ''
@@ -2879,9 +2879,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
-                      slug: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
-                      excerpt: 'Natus hic veritatis quibusdam consequatur.'
+                      title: 'Voluptatem omnis doloremque omnis sunt sunt rem.'
+                      slug: voluptatem-omnis-doloremque-omnis-sunt-sunt-rem
+                      excerpt: 'Consequatur quis quo unde officiis.'
                       tags:
                         -
                           name: php
@@ -2891,13 +2891,13 @@ paths:
                           name: react
                       publish_date: '2024-05-15'
                       author:
-                        first_name: 'Dr. Emmanuel Jacobs'
-                        last_name: Aufderhar
+                        first_name: 'Hettie Swaniawski'
+                        last_name: Shields
                         image: null
                     -
-                      title: 'Voluptatem beatae repudiandae natus consequatur sit quidem sint eligendi.'
-                      slug: voluptatem-beatae-repudiandae-natus-consequatur-sit-quidem-sint-eligendi
-                      excerpt: 'Est incidunt aperiam aut debitis delectus.'
+                      title: 'Deserunt omnis similique quia fugit similique rerum repellendus eum.'
+                      slug: deserunt-omnis-similique-quia-fugit-similique-rerum-repellendus-eum
+                      excerpt: 'Rem quo numquam consequatur blanditiis fugit.'
                       tags:
                         -
                           name: php
@@ -2907,8 +2907,24 @@ paths:
                           name: react
                       publish_date: '2024-05-15'
                       author:
-                        first_name: 'Edyth Kuhlman'
-                        last_name: McKenzie
+                        first_name: 'Elinore Gutkowski'
+                        last_name: Gusikowski
+                        image: null
+                    -
+                      title: 'Omnis eligendi tempore ut sed numquam eaque qui.'
+                      slug: omnis-eligendi-tempore-ut-sed-numquam-eaque-qui
+                      excerpt: 'Eaque vitae assumenda ut mollitia sapiente.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-05-15'
+                      author:
+                        first_name: 'Lorna Mitchell DVM'
+                        last_name: Morissette
                         image: null
                   links:
                     first: 'http://localhost/blog-posts?page=1'
@@ -2934,16 +2950,16 @@ paths:
                         active: false
                     path: 'http://localhost/blog-posts'
                     per_page: 15
-                    to: 2
-                    total: 2
+                    to: 3
+                    total: 3
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
-                        slug: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
-                        excerpt: 'Natus hic veritatis quibusdam consequatur.'
+                        title: 'Voluptatem omnis doloremque omnis sunt sunt rem.'
+                        slug: voluptatem-omnis-doloremque-omnis-sunt-sunt-rem
+                        excerpt: 'Consequatur quis quo unde officiis.'
                         tags:
                           -
                             name: php
@@ -2953,13 +2969,13 @@ paths:
                             name: react
                         publish_date: '2024-05-15'
                         author:
-                          first_name: 'Dr. Emmanuel Jacobs'
-                          last_name: Aufderhar
+                          first_name: 'Hettie Swaniawski'
+                          last_name: Shields
                           image: null
                       -
-                        title: 'Voluptatem beatae repudiandae natus consequatur sit quidem sint eligendi.'
-                        slug: voluptatem-beatae-repudiandae-natus-consequatur-sit-quidem-sint-eligendi
-                        excerpt: 'Est incidunt aperiam aut debitis delectus.'
+                        title: 'Deserunt omnis similique quia fugit similique rerum repellendus eum.'
+                        slug: deserunt-omnis-similique-quia-fugit-similique-rerum-repellendus-eum
+                        excerpt: 'Rem quo numquam consequatur blanditiis fugit.'
                         tags:
                           -
                             name: php
@@ -2969,21 +2985,37 @@ paths:
                             name: react
                         publish_date: '2024-05-15'
                         author:
-                          first_name: 'Edyth Kuhlman'
-                          last_name: McKenzie
+                          first_name: 'Elinore Gutkowski'
+                          last_name: Gusikowski
+                          image: null
+                      -
+                        title: 'Omnis eligendi tempore ut sed numquam eaque qui.'
+                        slug: omnis-eligendi-tempore-ut-sed-numquam-eaque-qui
+                        excerpt: 'Eaque vitae assumenda ut mollitia sapiente.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-05-15'
+                        author:
+                          first_name: 'Lorna Mitchell DVM'
+                          last_name: Morissette
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Repudiandae voluptas voluptas autem qui incidunt sint vel.'
+                          example: 'Voluptatem omnis doloremque omnis sunt sunt rem.'
                         slug:
                           type: string
-                          example: repudiandae-voluptas-voluptas-autem-qui-incidunt-sint-vel
+                          example: voluptatem-omnis-doloremque-omnis-sunt-sunt-rem
                         excerpt:
                           type: string
-                          example: 'Natus hic veritatis quibusdam consequatur.'
+                          example: 'Consequatur quis quo unde officiis.'
                         tags:
                           type: array
                           example:
@@ -3007,10 +3039,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Dr. Emmanuel Jacobs'
+                              example: 'Hettie Swaniawski'
                             last_name:
                               type: string
-                              example: Aufderhar
+                              example: Shields
                             image:
                               type: string
                               example: null
@@ -3076,10 +3108,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 2
+                        example: 3
                       total:
                         type: integer
-                        example: 2
+                        example: 3
       tags:
         - Website
       security: []
@@ -3780,7 +3812,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: consectetur
+        example: atque
         required: true
         schema:
           type: string
@@ -4008,8 +4040,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://localhost/blog-post-tags/illum?page=1'
-                    last: 'http://localhost/blog-post-tags/illum?page=1'
+                    first: 'http://localhost/blog-post-tags/iure?page=1'
+                    last: 'http://localhost/blog-post-tags/iure?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4022,14 +4054,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://localhost/blog-post-tags/illum?page=1'
+                        url: 'http://localhost/blog-post-tags/iure?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://localhost/blog-post-tags/illum'
+                    path: 'http://localhost/blog-post-tags/iure'
                     per_page: 15
                     to: null
                     total: 0
@@ -4042,10 +4074,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://localhost/blog-post-tags/illum?page=1'
+                        example: 'http://localhost/blog-post-tags/iure?page=1'
                       last:
                         type: string
-                        example: 'http://localhost/blog-post-tags/illum?page=1'
+                        example: 'http://localhost/blog-post-tags/iure?page=1'
                       prev:
                         type: string
                         example: null
@@ -4072,7 +4104,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://localhost/blog-post-tags/illum?page=1'
+                            url: 'http://localhost/blog-post-tags/iure?page=1'
                             label: '1'
                             active: true
                           -
@@ -4093,7 +4125,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://localhost/blog-post-tags/illum'
+                        example: 'http://localhost/blog-post-tags/iure'
                       per_page:
                         type: integer
                         example: 15
@@ -4111,7 +4143,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: illum
+        example: iure
         required: true
         schema:
           type: string
@@ -4134,19 +4166,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: sint
+                  example: corporis
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: tremayne88@example.org
+                  example: richard80@example.com
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: debitis
+                  example: tempore
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: delectus
+                  example: quia
               required:
                 - name
                 - email
@@ -4172,11 +4204,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: xxvtbspdubbkdx
+                  example: kakjbjefqwpde
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cletus.zieme@example.net
+                  example: chelsea.lebsack@example.org
                 cf-turnstile-response:
                   type: string
                   description: ''

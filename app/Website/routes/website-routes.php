@@ -18,5 +18,3 @@ Route::get('/blog-post-tags/{tag}', [BlogPostTagsController::class, 'show'])->na
 Route::post('/contact', ContactController::class)->name('contact')->middleware('throttle:5,1');
 
 Route::post('newsletter-subscribers', [NewsletterSubscriberController::class, 'store'])->middleware('throttle:5,1');
-
-
