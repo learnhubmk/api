@@ -25,6 +25,7 @@
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",
         "socialiteproviders/linkedin": "^4.2",
+        "spatie/laravel-mailcoach-sdk": "^1.2",
         "spatie/laravel-permission": "^6.4",
         "symfony/http-client": "^7.0",
         "symfony/postmark-mailer": "^7.0",
