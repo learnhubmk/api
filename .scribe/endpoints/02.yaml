@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=380953089545-lhj58kmgb3f54ckk7cthpmcp8bsb1cfa.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fplatform%2Fsocial%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -159,14 +159,14 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php",
-                      "line": 52,
+                      "line": 53,
                       "function": "getAccessTokenResponse",
                       "class": "Laravel\\Socialite\\Two\\AbstractProvider",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/app/Platform/src/Http/Controllers/Auth/Social/GoogleAuthController.php",
-                      "line": 27,
+                      "line": 26,
                       "function": "user",
                       "class": "SocialiteProviders\\Manager\\OAuth2\\AbstractProvider",
                       "type": "->"

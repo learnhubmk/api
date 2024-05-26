@@ -95,6 +95,7 @@ class Kernel extends HttpKernel
         'role' => RoleMiddleware::class,
         'permission' => PermissionMiddleware::class,
         'role_or_permission' => RoleOrPermissionMiddleware::class,
+        'treblle' => \Treblle\Middlewares\TreblleMiddleware::class,
     ];
 
     protected function bootstrappers(): array
