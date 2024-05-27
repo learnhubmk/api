@@ -12,8 +12,9 @@ class LogoutRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return $this->user()->hasRole(RoleName::ADMIN || $this->user()->hasRole(RoleName::MEMBER));
+        return $this->user()->hasAnyRole([RoleName::ADMIN, RoleName::MEMBER]);
     }
+
 
     /**
      * Get the validation rules that apply to the request.
