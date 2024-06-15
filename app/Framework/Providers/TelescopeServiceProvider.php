@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Framework\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Laravel\Telescope\IncomingEntry;

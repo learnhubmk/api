@@ -2,14 +2,14 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\ContactFormRequest;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
 use App\Website\Mail\ContactEmail;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 
 class ContactController extends Controller

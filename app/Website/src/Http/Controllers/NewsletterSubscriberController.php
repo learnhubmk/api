@@ -2,12 +2,12 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Knuckles\Scribe\Attributes\Group;
-use Knuckles\Scribe\Attributes\Endpoint;
-use Spatie\MailcoachSdk\Facades\Mailcoach;
-use Spatie\MailcoachSdk\Exceptions\InvalidData;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\StoreNewsletterSubscriberRequest;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Spatie\MailcoachSdk\Exceptions\InvalidData;
+use Spatie\MailcoachSdk\Facades\Mailcoach;
 use Symfony\Component\HttpFoundation\Response;
 
 class NewsletterSubscriberController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console;
+namespace App\Framework\Console;
 
 use Bugsnag\BugsnagLaravel\OomBootstrapper;
 use Illuminate\Console\Scheduling\Schedule;
