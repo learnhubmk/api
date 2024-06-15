@@ -2,7 +2,7 @@
 
 namespace App\Platform\Http\Controllers\Auth\Social;
 
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
 use App\Platform\Http\Resources\Auth\RedirectLinkResource;
 use App\Platform\Models\User;
