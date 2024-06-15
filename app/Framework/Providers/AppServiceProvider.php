@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Providers;
+namespace App\Framework\Providers;
 
+use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
-use Laravel\Sanctum\Sanctum;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Cache\RateLimiting\Limit;
 use Laravel\Sanctum\PersonalAccessToken;
-use Illuminate\Support\Facades\RateLimiter;
-use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
+use Laravel\Sanctum\Sanctum;
 
 class AppServiceProvider extends ServiceProvider
 {
