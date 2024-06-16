@@ -2,7 +2,7 @@
 
 namespace App\Content\Http\Requests\Auth;
 
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
 
 class LogoutRequest extends FormRequest
