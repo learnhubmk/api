@@ -2,9 +2,9 @@
 
 namespace App\Admin\Http\Controllers;
 
-use App\Enums\RoleName;
 use App\Admin\Http\Resources\UserResource;
-use App\Enums\UserStatusName;
+use App\Enums\RoleName;
+use App\Framework\Enums\UserStatusName;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;

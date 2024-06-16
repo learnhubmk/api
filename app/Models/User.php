@@ -7,7 +7,7 @@ use App\Admin\Database\factories\ContentManagerProfileFactory;
 use App\Admin\Models\AdminProfile;
 use App\Admin\Models\MemberProfile;
 use App\Enums\RoleName;
-use App\Enums\UserStatusName;
+use App\Framework\Enums\UserStatusName;
 use Arr;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;

@@ -2,18 +2,18 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Knuckles\Scribe\Attributes\Group;
-use Knuckles\Scribe\Attributes\Endpoint;
-use Spatie\MailcoachSdk\Facades\Mailcoach;
-use Spatie\MailcoachSdk\Exceptions\InvalidData;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\StoreNewsletterSubscriberRequest;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Spatie\MailcoachSdk\Exceptions\InvalidData;
+use Spatie\MailcoachSdk\Facades\Mailcoach;
+use Symfony\Component\HttpFoundation\Response;
 
 class NewsletterSubscriberController extends Controller
 {
     #[Endpoint('Subscribe To Newsletter', <<<'DESC'
-  This endpoint is for subscribing to Leanhub.mk.
-  Additionally it uses Cloudflare Turnstile ReCaptcha for validation.
+  This endpoint is for subscribing to the Leanhub.mk newsletter.
  DESC)]
     #[Group('Website')]
     public function store(StoreNewsletterSubscriberRequest $request)
@@ -34,10 +34,10 @@ class NewsletterSubscriberController extends Controller
 
         } catch (InvalidData $e) {
 
-            return response()->json(["message" => "Веќе сте претплатени на нашиот билтен!"], 422);
+            return response()->json(["message" => "Електронската пошта е веќе претплатена!"], 422);
         }
 
-        return response()->json(["message" => "Успешно! Ви благодариме што се претплативте на нашиот билтен! Ве молиме потврдете ја вашата претпата на вашата електронска пошта."], 200);
+        return response()->json(["message" => "Успешно! Ве молиме потврдете ја вашата претпата на вашата електронска пошта."], Response::HTTP_OK);
 
     }
 }

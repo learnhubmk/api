@@ -2,12 +2,10 @@
 
 namespace App\Admin\Database\Seeders;
 
-use App\Enums\RoleName;
-use App\Admin\Models\AdminProfile;
-use App\Enums\UserStatusName;
-use App\Models\User;
+use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Framework\Models\User;
 
 class AdminSeeder extends Seeder
 {
@@ -16,20 +14,12 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::query()->create([
+        $user = User::create([
             'email' => 'admin@learnhub.mk',
             'password' => Hash::make('12345678'),
-            'email_verified_at' => now(),
-            'status' => UserStatusName::ACTIVE
+            'email_verified_at' => now()
         ]);
 
-        $user->assignRole(RoleName::ADMIN);
-
-        AdminProfile::query()->create([
-            'user_id' => $user->id,
-            'first_name' => 'John',
-            'last_name' => 'Doe',
-            'image' => 'https://google.com/'
-        ]);
+        $user->assignRole(RoleName::ADMIN->value);
     }
 }

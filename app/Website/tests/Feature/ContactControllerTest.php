@@ -28,7 +28,7 @@ class ContactControllerTest extends TestCase
         $response = $this->postJson(route('contact'), $formData);
 
         $response->assertOk()
-            ->assertJson(['message' => 'Your message has been sent successfully!']);
+            ->assertJson(['message' => 'Вашата порака е успешно испратена!']);
 
         Mail::assertQueued(ContactEmail::class, function ($mail) use ($formData) {
             return $mail->hasTo(config('mail.contact_email')) &&

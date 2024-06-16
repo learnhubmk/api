@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http;
+namespace App\Framework\Http;
 
-use App\Http\Middleware\Authenticate;
-use App\Http\Middleware\EncryptCookies;
-use App\Http\Middleware\PreventRequestsDuringMaintenance;
-use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\TrimStrings;
-use App\Http\Middleware\TrustProxies;
-use App\Http\Middleware\ValidateSignature;
-use App\Http\Middleware\VerifyCsrfToken;
+use App\Framework\Http\Middleware\Authenticate;
+use App\Framework\Http\Middleware\EncryptCookies;
+use App\Framework\Http\Middleware\PreventRequestsDuringMaintenance;
+use App\Framework\Http\Middleware\RedirectIfAuthenticated;
+use App\Framework\Http\Middleware\TrimStrings;
+use App\Framework\Http\Middleware\TrustProxies;
+use App\Framework\Http\Middleware\ValidateSignature;
+use App\Framework\Http\Middleware\VerifyCsrfToken;
 use Bugsnag\BugsnagLaravel\OomBootstrapper;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;

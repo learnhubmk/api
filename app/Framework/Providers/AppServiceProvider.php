@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Framework\Providers;
 
 use App\Models\User;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
@@ -8,12 +8,12 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\Request;
-use Laravel\Sanctum\Sanctum;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Sanctum\PersonalAccessToken;
 use Laravel\Telescope\TelescopeServiceProvider as LaravelTelescopeServiceProvider;
-use Illuminate\Support\Facades\RateLimiter;
+use Laravel\Sanctum\Sanctum;
 
 class AppServiceProvider extends ServiceProvider
 {

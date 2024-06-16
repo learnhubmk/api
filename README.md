@@ -43,7 +43,7 @@
    - Linux/Mac/WSL:
 
           cp .env.docker.example .env
-8. Create an ```.env``` file by copying ```.env.example```
+8. Start the Docker containers
     - Windows:
    
            docker-compose up -d

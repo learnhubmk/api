@@ -2,14 +2,14 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\ContactFormRequest;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
 use App\Website\Mail\ContactEmail;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 
 class ContactController extends Controller
@@ -24,7 +24,7 @@ class ContactController extends Controller
     {
         Mail::to(config('mail.contact_email'))->queue(new ContactEmail($request->validated()));
 
-        return response()->json(['message' => 'Your message has been sent successfully!'], Response::HTTP_OK);
+        return response()->json(['message' => 'Вашата порака е успешно испратена!'], Response::HTTP_OK);
     }
 
 }

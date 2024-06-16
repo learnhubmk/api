@@ -2,10 +2,10 @@
 
 namespace App\Admin\Tests\Feature;
 
-use App\Enums\RoleName;
 use App\Admin\Models\AdminProfile;
 use App\Admin\Models\MemberProfile;
-use App\Enums\UserStatusName;
+use App\Enums\RoleName;
+use App\Framework\Enums\UserStatusName;
 use App\Models\User;
 use App\Models\User as Admin;
 use Illuminate\Foundation\Testing\RefreshDatabase;

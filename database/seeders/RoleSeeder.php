@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 
