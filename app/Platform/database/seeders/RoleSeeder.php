@@ -4,7 +4,6 @@ namespace App\Platform\Database\Seeders;
 
 use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Http;
 use Spatie\Permission\Models\Role;
 
 class RoleSeeder extends Seeder
