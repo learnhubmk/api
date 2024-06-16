@@ -5,7 +5,7 @@ namespace App\Platform\Http\Controllers\Auth\Social;
 use App\Framework\Http\Controllers\Controller;
 use App\Platform\Http\Resources\Auth\AuthenticatedMemberResource;
 use App\Platform\Http\Resources\Auth\RedirectLinkResource;
-use App\Platform\Models\User;
+use App\Framework\Models\User;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Laravel\Socialite\Facades\Socialite;

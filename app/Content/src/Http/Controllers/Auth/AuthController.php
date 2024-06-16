@@ -2,11 +2,11 @@
 
 namespace App\Content\Http\Controllers\Auth;
 
-use App\Content\Models\User;
+use App\Framework\Models\User;
 use App\Content\Http\Requests\Auth\LoginRequest;
 use App\Content\Http\Requests\Auth\LogoutRequest;
 use App\Content\Http\Resources\Auth\AuthenticatedContentManagerResource;
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
