@@ -31,7 +31,7 @@ class BlogPostController extends Controller
             ->when($request->has('title'), function ($query) use ($request) {
                 return $query->where('title', 'like', "%{$request->title}%");
             })
-            ->when($request->has('tag'), function ($query) use ($request) {
+            ->when($request->has('tags'), function ($query) use ($request) {
                 $tags = explode(',', $request->tag);
                 return $query->whereHas('tags', function ($tagQuery) use ($tags) {
                     $tagQuery->whereIn('name', $tags);
