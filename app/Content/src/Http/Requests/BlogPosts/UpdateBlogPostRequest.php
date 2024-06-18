@@ -2,7 +2,7 @@
 
 namespace App\Content\Http\Requests\BlogPosts;
 
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateBlogPostRequest extends FormRequest
@@ -28,7 +28,7 @@ class UpdateBlogPostRequest extends FormRequest
             'slug' => ['sometimes', 'string', 'max:255'],
             'content' => ['sometimes', 'string'],
             'tags' => ['sometimes', 'array'],
-            'tags.*' => ['sometimes', 'exists:blog_post_tags,id']
+            'tags.*' => ['sometimes', 'exists:blog_post_tags,id', 'distinct:strict']
         ];
     }
 }
