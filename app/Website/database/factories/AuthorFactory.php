@@ -2,8 +2,8 @@
 
 namespace App\Website\Database\Factories;
 
-use App\Admin\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Framework\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Website\Models\Model>

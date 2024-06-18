@@ -4,7 +4,7 @@ use App\Content\Http\Controllers\Auth\AuthController;
 use App\Content\Http\Controllers\BlogPostController;
 use App\Content\Http\Controllers\BlogPostTagsController;
 
-Route::group(['prefix' => '/content'], function () {
+Route::group(['prefix' => '/content', 'middleware' => ['treblle']], function () {
     Route::post('/login', [AuthController::class, 'login'])->middleware(['throttle:login']);
 
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -26,5 +26,4 @@ Route::group(['prefix' => '/content'], function () {
             Route::delete('/{blogPostTag}', [BlogPostTagsController::class, 'destroy']);
         });
     });
-
 });

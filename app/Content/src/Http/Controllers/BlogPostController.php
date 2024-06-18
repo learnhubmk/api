@@ -22,10 +22,9 @@ class BlogPostController extends Controller
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
     #[QueryParam('title', 'string', required: false, example: "?title=learnhub")]
-    #[QueryParam('tag', 'array', required: false, example: "?tag=[php,laravel,react]")]
+    #[QueryParam('tags', 'array', required: false, example: "?tags=[php,laravel,react]")]
     #[QueryParam('author', 'string', required: false, example: "?author=john")]
-    #[QueryParam('sort', 'string', required: false, example: "?sort=title", enum: ['id', 'title', 'publish_date',
-        'created_at'])]
+    #[QueryParam('sort', 'string', required: false, example: "?sort=title", enum: ['id', 'title', 'publish_date', 'created_at'])]
     public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')

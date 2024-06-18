@@ -26,7 +26,11 @@ endpoints:
         name: email
         description: ''
         required: true
+<<<<<<< HEAD
         example: lubowitz.keegan@example.org
+=======
+        example: leffler.ruben@example.org
+>>>>>>> refs/remotes/origin/main
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +39,23 @@ endpoints:
         name: password
         description: ''
         required: true
+<<<<<<< HEAD
         example: sit
+=======
+        example: incidunt
+>>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
+<<<<<<< HEAD
       email: lubowitz.keegan@example.org
       password: sit
+=======
+      email: leffler.ruben@example.org
+      password: incidunt
+>>>>>>> refs/remotes/origin/main
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,6 +93,7 @@ endpoints:
     auth:
       - headers
       - Authorization
+<<<<<<< HEAD
       - 'Bearer a6V4DhcfkdZgv381ea6b5PE'
     controller: null
     method: null
@@ -592,6 +606,9 @@ endpoints:
     responses: []
     responseFields: []
     auth: []
+=======
+      - 'Bearer d3b6hV16fEega84vZkac5PD'
+>>>>>>> refs/remotes/origin/main
     controller: null
     method: null
     route: null

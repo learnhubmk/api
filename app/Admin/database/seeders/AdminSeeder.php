@@ -2,10 +2,10 @@
 
 namespace App\Admin\Database\Seeders;
 
-use App\Admin\Models\User;
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Framework\Models\User;
 
 class AdminSeeder extends Seeder
 {
