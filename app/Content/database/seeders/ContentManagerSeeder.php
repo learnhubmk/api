@@ -2,6 +2,7 @@
 
 namespace App\Content\Database\Seeders;
 
+use App\Admin\Models\ContentManagerProfile;
 use App\Framework\Models\User;
 use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
@@ -14,12 +15,14 @@ class ContentManagerSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::create([
+        $user = User::query()->create([
             'email' => 'content@learnhub.mk',
             'password' => Hash::make('12345678'),
             'email_verified_at' => now()
         ]);
 
         $user->assignRole(RoleName::CONTENT_MANAGER->value);
+
+        ContentManagerProfile::factory()->create(['user_id' => $user->id]);
     }
 }

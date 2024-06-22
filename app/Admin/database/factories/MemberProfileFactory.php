@@ -3,7 +3,7 @@
 namespace App\Admin\Database\factories;
 
 use App\Admin\Models\MemberProfile;
-use App\Models\User;
+use App\Framework\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

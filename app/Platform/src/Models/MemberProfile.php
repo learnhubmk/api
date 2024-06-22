@@ -2,7 +2,7 @@
 
 namespace App\Platform\Models;
 
-use App\Models\User;
+use App\Framework\Models\User;
 use App\Platform\Database\factories\MemberProfileFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

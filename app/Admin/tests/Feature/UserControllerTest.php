@@ -4,10 +4,9 @@ namespace App\Admin\Tests\Feature;
 
 use App\Admin\Models\AdminProfile;
 use App\Admin\Models\MemberProfile;
-use App\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
-use App\Models\User;
-use App\Models\User as Admin;
+use App\Framework\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Arr;
 use Laravel\Sanctum\Sanctum;
@@ -32,7 +31,7 @@ class UserControllerTest extends TestCase
             ]);
         });
 
-        $admin = Admin::factory()->create([
+        $admin = User::factory()->create([
             'email' => 'admin@learnhub.mk',
         ]);
 

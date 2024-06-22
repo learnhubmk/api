@@ -3,9 +3,9 @@
 namespace App\Admin\Http\Controllers;
 
 use App\Admin\Http\Resources\UserResource;
-use App\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
-use App\Models\User;
+use App\Framework\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -18,7 +18,7 @@ class UserController
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        $validated = $request->validate([
+        $data = $request->validate([
             'first_name' => ['nullable', 'string'],
             'last_name' => ['nullable', 'string'],
             'role' => ['nullable', Rule::enum(RoleName::class)],
@@ -26,29 +26,10 @@ class UserController
             'sortDirection' => ['nullable', 'in:asc,desc'],
         ]);
 
-        $role = $request->get('role', RoleName::MEMBER->value);
-
-        $sortBy = match(true) {
-            $role === RoleName::MEMBER->value && $request->get('first_name') => 'member_profiles.first_name',
-            $role === RoleName::MEMBER->value && $request->get('last_name') => 'member_profiles.last_name',
-            $role === RoleName::ADMIN->value && $request->get('first_name') => 'admin_profiles.first_name',
-            $role === RoleName::ADMIN->value && $request->get('last_name') => 'admin_profiles.last_name',
-            $role === RoleName::CONTENT_MANAGER->value && $request->get('first_name') => 'content_manager_profiles.first_name',
-            $role === RoleName::CONTENT_MANAGER->value && $request->get('last_name') => 'content_manager_profiles.last_name',
-            default => 'users.id',
-        };
-
-        $joinTable = match ($role) {
-            RoleName::MEMBER->value => 'member_profiles',
-            RoleName::ADMIN->value => 'admin_profiles',
-            RoleName::CONTENT_MANAGER->value => 'content_manager_profiles',
-        };
+        $role = $request->get('role') ?? RoleName::MEMBER->value;
 
         $users = User::query()
-            ->with(['roles'])
-            ->join($joinTable, 'users.id', '=', "$joinTable.user_id")
-            ->orderBy($sortBy, $validated['sortDirection'] ?? 'asc')
-            ->filter($validated)
+            ->filter($data, $role)
             ->paginate(20);
 
         return UserResource::collection($users);
@@ -62,7 +43,6 @@ class UserController
             RoleName::MEMBER->value => 'memberProfile',
             RoleName::CONTENT_MANAGER->value => 'contentManagerProfile',
             RoleName::ADMIN->value => 'adminProfile',
-            default => null,
         };
 
         $user->load([$profileRelation]);

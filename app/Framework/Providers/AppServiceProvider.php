@@ -2,7 +2,7 @@
 
 namespace App\Framework\Providers;
 
-use App\Models\User;
+use App\Framework\Models\User;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
