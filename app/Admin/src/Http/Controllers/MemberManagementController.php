@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
-use Illuminate\Validation\Rule;
 
 class MemberManagementController
 {
@@ -35,7 +34,7 @@ class MemberManagementController
                     ->whereRelation('memberProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('memberProfile', 'last_name', 'LIKE', "$searchQuery%");
             })
-            ->orderBy(function(Builder $query) use ($sortBy) {
+            ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('member_profiles')
                     ->whereColumn('member_profiles.user_id', '=', 'users.id')
                     ->select("member_profiles.$sortBy");

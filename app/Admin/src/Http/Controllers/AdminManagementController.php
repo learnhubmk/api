@@ -34,7 +34,7 @@ class AdminManagementController
                     ->whereRelation('adminProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('adminProfile', 'last_name', 'LIKE', "$searchQuery%");
             })
-            ->orderBy(function(Builder $query) use ($sortBy) {
+            ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('admin_profiles')
                     ->whereColumn('admin_profiles.user_id', '=', 'users.id')
                     ->select("admin_profiles.$sortBy");

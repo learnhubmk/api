@@ -34,7 +34,7 @@ class ContentManagerManagementController
                     ->whereRelation('contentManagerProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('contentManagerProfile', 'last_name', 'LIKE', "$searchQuery%");
             })
-            ->orderBy(function(Builder $query) use ($sortBy) {
+            ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('content_manager_profiles')
                     ->whereColumn('content_manager_profiles.user_id', '=', 'users.id')
                     ->select("content_manager_profiles.$sortBy");
