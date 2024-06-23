@@ -24,62 +24,17 @@ endpoints:
         name: title
         description: ''
         required: false
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: velit
-=======
         example: accusamus
->>>>>>> refs/remotes/origin/main
-=======
-        example: accusamus
->>>>>>> refs/remotes/origin/main
-=======
-        example: accusamus
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: velit
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[{"title":"Quisquam quisquam velit consequatur magni aut sed.","slug":"quisquam-quisquam-velit-consequatur-magni-aut-sed","excerpt":"Id nam harum doloribus omnis et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Novella Kunde DVM","last_name":"Purdy","image":null}},{"title":"Eos et velit totam minima a architecto.","slug":"eos-et-velit-totam-minima-a-architecto","excerpt":"Pariatur consequuntur ipsum nobis sed.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-05-06","author":{"first_name":"Veronica Mitchell III","last_name":"Russel","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":2,"total":2}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-=======
       title: accusamus
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses: []
->>>>>>> refs/remotes/origin/main
-=======
-      title: accusamus
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
->>>>>>> refs/remotes/origin/main
-=======
-      title: accusamus
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
->>>>>>> refs/remotes/origin/main
     responseFields: []
     auth: []
     controller: null
@@ -107,37 +62,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: quisquam
-=======
         example: quaerat
->>>>>>> refs/remotes/origin/main
-=======
-        example: quaerat
->>>>>>> refs/remotes/origin/main
-=======
-        example: quaerat
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      slug: quisquam
-=======
       slug: quaerat
->>>>>>> refs/remotes/origin/main
-=======
-      slug: quaerat
->>>>>>> refs/remotes/origin/main
-=======
-      slug: quaerat
->>>>>>> refs/remotes/origin/main
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -201,64 +132,19 @@ endpoints:
         name: tag
         description: ''
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: numquam
-=======
         example: sequi
->>>>>>> refs/remotes/origin/main
-=======
-        example: sequi
->>>>>>> refs/remotes/origin/main
-=======
-        example: sequi
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      tag: numquam
-=======
       tag: sequi
->>>>>>> refs/remotes/origin/main
-=======
-      tag: sequi
->>>>>>> refs/remotes/origin/main
-=======
-      tag: sequi
->>>>>>> refs/remotes/origin/main
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    responses:
-      -
-        status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/numquam?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/numquam","per_page":15,"to":null,"total":0}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-=======
     responses: []
->>>>>>> refs/remotes/origin/main
-=======
-    responses: []
->>>>>>> refs/remotes/origin/main
-=======
-    responses: []
->>>>>>> refs/remotes/origin/main
     responseFields: []
     auth: []
     controller: null
@@ -290,19 +176,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: vero
-=======
         example: cupiditate
->>>>>>> refs/remotes/origin/main
-=======
-        example: cupiditate
->>>>>>> refs/remotes/origin/main
-=======
-        example: cupiditate
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -311,19 +185,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: tmuller@example.com
-=======
         example: rhoda.adams@example.org
->>>>>>> refs/remotes/origin/main
-=======
-        example: rhoda.adams@example.org
->>>>>>> refs/remotes/origin/main
-=======
-        example: rhoda.adams@example.org
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -332,19 +194,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: rerum
-=======
         example: omnis
->>>>>>> refs/remotes/origin/main
-=======
-        example: omnis
->>>>>>> refs/remotes/origin/main
-=======
-        example: omnis
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,36 +203,12 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        example: asperiores
-=======
         example: doloremque
->>>>>>> refs/remotes/origin/main
-=======
-        example: doloremque
->>>>>>> refs/remotes/origin/main
-=======
-        example: doloremque
->>>>>>> refs/remotes/origin/main
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: vero
-      email: tmuller@example.com
-      message: rerum
-      cf-turnstile-response: asperiores
-=======
-=======
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> refs/remotes/origin/main
       name: cupiditate
       email: rhoda.adams@example.org
       message: omnis
@@ -448,13 +274,6 @@ endpoints:
     cleanBodyParameters:
       first_name: tneam
       email: rhane@example.org
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> refs/remotes/origin/main
     fileParameters: []
     responses: []
     responseFields: []
