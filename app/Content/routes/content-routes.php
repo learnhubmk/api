@@ -9,6 +9,7 @@ Route::group(['prefix' => '/content', 'middleware' => ['treblle']], function () 
 
     Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/logout', [AuthController::class, 'logout']);
+<<<<<<< HEAD
 
         Route::group(['prefix' => '/blog-posts'], function () {
             Route::get('/', [BlogPostController::class, 'index']);
@@ -25,5 +26,7 @@ Route::group(['prefix' => '/content', 'middleware' => ['treblle']], function () 
             Route::patch('/{blogPostTag}', [BlogPostTagsController::class, 'update']);
             Route::delete('/{blogPostTag}', [BlogPostTagsController::class, 'destroy']);
         });
+=======
+>>>>>>> refs/remotes/origin/main
     });
 });

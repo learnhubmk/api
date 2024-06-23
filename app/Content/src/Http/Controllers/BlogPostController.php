@@ -6,7 +6,7 @@ use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
 use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
@@ -115,14 +115,12 @@ class BlogPostController extends Controller
     }
 
     #[Endpoint(title: 'Publish/Unpublish Blog posts', description: 'This endpoint publish or unpublish blog post')]
+    #[BodyParam('publish_date', 'date', required: false, example: "2024-01-01")]
+    #[BodyParam('status', 'string', required: true, example: "draft, published, in_review, archive")]
     #[Group('Content')]
     public function changeStatus(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
     {
-        if ($blogPost->status == BlogPostStatus::PUBLISHED) {
-            $blogPost->update(['status' => BlogPostStatus::DRAFT, 'publish_date' => null]);
-        } else {
-            $blogPost->update(['status' => BlogPostStatus::PUBLISHED, 'publish_date' => now()]);
-        }
+        $blogPost->update(['status' => $request->status, 'publish_date' => $request->publish_date ?? null]) ;
 
         return response()->noContent();
     }

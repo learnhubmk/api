@@ -2,7 +2,7 @@
 
 namespace App\Content\Http\Requests\BlogPosts;
 
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
 
 class BlogPostPermissionsRequest extends FormRequest

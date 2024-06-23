@@ -25,7 +25,11 @@ endpoints:
         description: ''
         required: false
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: velit
+=======
+        example: accusamus
+>>>>>>> refs/remotes/origin/main
 =======
         example: accusamus
 >>>>>>> refs/remotes/origin/main
@@ -34,6 +38,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: velit
     bodyParameters: []
@@ -49,6 +54,13 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+=======
+      title: accusamus
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+>>>>>>> refs/remotes/origin/main
 =======
       title: accusamus
     bodyParameters: []
@@ -84,7 +96,11 @@ endpoints:
         description: 'The slug of the blog post.'
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: quisquam
+=======
+        example: quaerat
+>>>>>>> refs/remotes/origin/main
 =======
         example: quaerat
 >>>>>>> refs/remotes/origin/main
@@ -94,7 +110,11 @@ endpoints:
         custom: []
     cleanUrlParameters:
 <<<<<<< HEAD
+<<<<<<< HEAD
       slug: quisquam
+=======
+      slug: quaerat
+>>>>>>> refs/remotes/origin/main
 =======
       slug: quaerat
 >>>>>>> refs/remotes/origin/main
@@ -162,7 +182,11 @@ endpoints:
         description: ''
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: numquam
+=======
+        example: sequi
+>>>>>>> refs/remotes/origin/main
 =======
         example: sequi
 >>>>>>> refs/remotes/origin/main
@@ -172,7 +196,11 @@ endpoints:
         custom: []
     cleanUrlParameters:
 <<<<<<< HEAD
+<<<<<<< HEAD
       tag: numquam
+=======
+      tag: sequi
+>>>>>>> refs/remotes/origin/main
 =======
       tag: sequi
 >>>>>>> refs/remotes/origin/main
@@ -181,6 +209,7 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
+<<<<<<< HEAD
 <<<<<<< HEAD
     responses:
       -
@@ -192,6 +221,9 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+=======
+    responses: []
+>>>>>>> refs/remotes/origin/main
 =======
     responses: []
 >>>>>>> refs/remotes/origin/main
@@ -227,7 +259,11 @@ endpoints:
         description: 'The name of the visitor.'
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: vero
+=======
+        example: cupiditate
+>>>>>>> refs/remotes/origin/main
 =======
         example: cupiditate
 >>>>>>> refs/remotes/origin/main
@@ -240,7 +276,11 @@ endpoints:
         description: 'The email address of the visitor.'
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: tmuller@example.com
+=======
+        example: rhoda.adams@example.org
+>>>>>>> refs/remotes/origin/main
 =======
         example: rhoda.adams@example.org
 >>>>>>> refs/remotes/origin/main
@@ -253,7 +293,11 @@ endpoints:
         description: 'The body of the message.'
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: rerum
+=======
+        example: omnis
+>>>>>>> refs/remotes/origin/main
 =======
         example: omnis
 >>>>>>> refs/remotes/origin/main
@@ -266,7 +310,11 @@ endpoints:
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: asperiores
+=======
+        example: doloremque
+>>>>>>> refs/remotes/origin/main
 =======
         example: doloremque
 >>>>>>> refs/remotes/origin/main
@@ -276,11 +324,14 @@ endpoints:
         custom: []
     cleanBodyParameters:
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: vero
       email: tmuller@example.com
       message: rerum
       cf-turnstile-response: asperiores
 =======
+=======
+>>>>>>> refs/remotes/origin/main
       name: cupiditate
       email: rhoda.adams@example.org
       message: omnis
@@ -346,6 +397,9 @@ endpoints:
     cleanBodyParameters:
       first_name: tneam
       email: rhane@example.org
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/main
+=======
 >>>>>>> refs/remotes/origin/main
     fileParameters: []
     responses: []

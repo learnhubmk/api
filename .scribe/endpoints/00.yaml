@@ -27,7 +27,11 @@ endpoints:
         description: ''
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: emmet.powlowski@example.com
+=======
+        example: hill.kailey@example.com
+>>>>>>> refs/remotes/origin/main
 =======
         example: hill.kailey@example.com
 >>>>>>> refs/remotes/origin/main
@@ -40,7 +44,11 @@ endpoints:
         description: ''
         required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: nemo
+=======
+        example: aut
+>>>>>>> refs/remotes/origin/main
 =======
         example: aut
 >>>>>>> refs/remotes/origin/main
@@ -50,8 +58,13 @@ endpoints:
         custom: []
     cleanBodyParameters:
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: emmet.powlowski@example.com
       password: nemo
+=======
+      email: hill.kailey@example.com
+      password: aut
+>>>>>>> refs/remotes/origin/main
 =======
       email: hill.kailey@example.com
       password: aut
@@ -94,7 +107,11 @@ endpoints:
       - headers
       - Authorization
 <<<<<<< HEAD
+<<<<<<< HEAD
       - 'Bearer 8aVd4ke1PDbf6Eh3gZ56acv'
+=======
+      - 'Bearer dava4behcfZ5k6D61E8P3gV'
+>>>>>>> refs/remotes/origin/main
 =======
       - 'Bearer dava4behcfZ5k6D61E8P3gV'
 >>>>>>> refs/remotes/origin/main
