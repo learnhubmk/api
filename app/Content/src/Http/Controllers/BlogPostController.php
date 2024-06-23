@@ -114,14 +114,4 @@ class BlogPostController extends Controller
         return response()->noContent();
     }
 
-    #[Endpoint(title: 'Publish/Unpublish Blog posts', description: 'This endpoint publish or unpublish blog post')]
-    #[BodyParam('publish_date', 'date', required: false, example: "2024-01-01")]
-    #[BodyParam('status', 'string', required: true, example: "draft, published, in_review, archive")]
-    #[Group('Content')]
-    public function changeStatus(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
-    {
-        $blogPost->update(['status' => $request->status, 'publish_date' => $request->publish_date ?? null]) ;
-
-        return response()->noContent();
-    }
 }

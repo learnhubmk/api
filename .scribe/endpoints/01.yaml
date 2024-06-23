@@ -28,7 +28,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: lubowitz.keegan@example.org
+=======
+        example: leffler.ruben@example.org
+>>>>>>> refs/remotes/origin/main
 =======
         example: leffler.ruben@example.org
 >>>>>>> refs/remotes/origin/main
@@ -45,7 +49,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: sit
+=======
+        example: incidunt
+>>>>>>> refs/remotes/origin/main
 =======
         example: incidunt
 >>>>>>> refs/remotes/origin/main
@@ -59,8 +67,13 @@ endpoints:
     cleanBodyParameters:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: lubowitz.keegan@example.org
       password: sit
+=======
+      email: leffler.ruben@example.org
+      password: incidunt
+>>>>>>> refs/remotes/origin/main
 =======
       email: leffler.ruben@example.org
       password: incidunt
@@ -106,6 +119,7 @@ endpoints:
     auth:
       - headers
       - Authorization
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       - 'Bearer a6V4DhcfkdZgv381ea6b5PE'
@@ -620,6 +634,9 @@ endpoints:
     responses: []
     responseFields: []
     auth: []
+=======
+      - 'Bearer d3b6hV16fEega84vZkac5PD'
+>>>>>>> refs/remotes/origin/main
 =======
       - 'Bearer d3b6hV16fEega84vZkac5PD'
 >>>>>>> refs/remotes/origin/main

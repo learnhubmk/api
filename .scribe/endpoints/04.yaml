@@ -26,7 +26,11 @@ endpoints:
         required: false
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: velit
+=======
+        example: accusamus
+>>>>>>> refs/remotes/origin/main
 =======
         example: accusamus
 >>>>>>> refs/remotes/origin/main
@@ -38,6 +42,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: velit
@@ -54,6 +59,13 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+=======
+      title: accusamus
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+>>>>>>> refs/remotes/origin/main
 =======
       title: accusamus
     bodyParameters: []
@@ -97,7 +109,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: quisquam
+=======
+        example: quaerat
+>>>>>>> refs/remotes/origin/main
 =======
         example: quaerat
 >>>>>>> refs/remotes/origin/main
@@ -111,7 +127,11 @@ endpoints:
     cleanUrlParameters:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       slug: quisquam
+=======
+      slug: quaerat
+>>>>>>> refs/remotes/origin/main
 =======
       slug: quaerat
 >>>>>>> refs/remotes/origin/main
@@ -183,7 +203,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: numquam
+=======
+        example: sequi
+>>>>>>> refs/remotes/origin/main
 =======
         example: sequi
 >>>>>>> refs/remotes/origin/main
@@ -197,7 +221,11 @@ endpoints:
     cleanUrlParameters:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       tag: numquam
+=======
+      tag: sequi
+>>>>>>> refs/remotes/origin/main
 =======
       tag: sequi
 >>>>>>> refs/remotes/origin/main
@@ -211,6 +239,7 @@ endpoints:
     fileParameters: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     responses:
       -
         status: 200
@@ -221,6 +250,9 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+=======
+    responses: []
+>>>>>>> refs/remotes/origin/main
 =======
     responses: []
 >>>>>>> refs/remotes/origin/main
@@ -260,7 +292,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: vero
+=======
+        example: cupiditate
+>>>>>>> refs/remotes/origin/main
 =======
         example: cupiditate
 >>>>>>> refs/remotes/origin/main
@@ -277,7 +313,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: tmuller@example.com
+=======
+        example: rhoda.adams@example.org
+>>>>>>> refs/remotes/origin/main
 =======
         example: rhoda.adams@example.org
 >>>>>>> refs/remotes/origin/main
@@ -294,7 +334,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: rerum
+=======
+        example: omnis
+>>>>>>> refs/remotes/origin/main
 =======
         example: omnis
 >>>>>>> refs/remotes/origin/main
@@ -311,7 +355,11 @@ endpoints:
         required: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         example: asperiores
+=======
+        example: doloremque
+>>>>>>> refs/remotes/origin/main
 =======
         example: doloremque
 >>>>>>> refs/remotes/origin/main
@@ -325,11 +373,14 @@ endpoints:
     cleanBodyParameters:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: vero
       email: tmuller@example.com
       message: rerum
       cf-turnstile-response: asperiores
 =======
+=======
+>>>>>>> refs/remotes/origin/main
 =======
 >>>>>>> refs/remotes/origin/main
       name: cupiditate
@@ -398,6 +449,9 @@ endpoints:
       first_name: tneam
       email: rhane@example.org
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/main
+=======
 >>>>>>> refs/remotes/origin/main
 =======
 >>>>>>> refs/remotes/origin/main
