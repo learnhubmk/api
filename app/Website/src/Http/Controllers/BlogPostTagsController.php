@@ -2,7 +2,7 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Http\Resources\Blogs\BlogPostsResource;
 use App\Website\Http\Resources\Tags\BlogPostTagResource;

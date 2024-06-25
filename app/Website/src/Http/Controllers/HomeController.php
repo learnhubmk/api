@@ -2,7 +2,7 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 
 class HomeController extends Controller

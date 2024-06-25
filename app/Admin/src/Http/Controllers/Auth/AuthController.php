@@ -5,8 +5,7 @@ namespace App\Admin\Http\Controllers\Auth;
 use App\Admin\Http\Requests\Auth\LoginRequest;
 use App\Admin\Http\Requests\Auth\LogoutRequest;
 use App\Admin\Http\Resources\Auth\AuthenticatedAdminResource;
-use App\Admin\Models\User;
-use App\Platform\Enums\RoleName;
+use App\Framework\Enums\RoleName;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -14,6 +13,7 @@ use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use App\Framework\Models\User;
 
 class AuthController
 {
