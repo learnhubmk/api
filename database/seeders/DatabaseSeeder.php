@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Admin\Database\Seeders\AdminSeeder;
 use App\Content\Database\Seeders\ContentManagerSeeder;
-use App\Platform\Models\User as PlatformUser;
+use App\Framework\Models\User;
 use App\Website\Database\Seeders\AuthorSeeder;
 use App\Website\Database\Seeders\BlogPostSeeder;
 use App\Website\Database\Seeders\TagSeeder;
@@ -19,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        PlatformUser::factory(10)->create();
+        User::factory(10)->create();
 
         Artisan::call('db:seed', [
             '--class' => AdminSeeder::class,
