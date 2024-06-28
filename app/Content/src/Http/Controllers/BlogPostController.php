@@ -93,7 +93,7 @@ class BlogPostController extends Controller
     {
         $data = $request->validated();
 
-        $blogPostData = (new Collection($data))->except('tags')->all();
+        $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
 
         $blogPost->update($blogPostData);
 
