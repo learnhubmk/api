@@ -10,7 +10,6 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
