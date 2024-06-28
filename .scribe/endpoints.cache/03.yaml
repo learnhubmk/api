@@ -26,16 +26,7 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"name":"LearnHub.mk API","version":1,"message":"Welcome to the LearnHub.mk API!"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -72,7 +63,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IldySkRZVDlvcUpzQWcwSlZ5bzNQU3c9PSIsInZhbHVlIjoiQ3U3aCtHVHpqT3J3L2MwTXo0UFIzVmQ4djNZanRlRlcweEtoL2RBRDVwVVF1NFIydkE3ak5BQ3Z4dzQwMFVwa05FLzlOWkpYay9YUlQ1a01TdWNFVkVnQW5tbW9SeHhhTy9kai80Wjk3VzcvbDgyVzZmS1gySng2a0ttYkJaSGEiLCJtYWMiOiJlZDg2MGE1M2EwYmJlZTU3MjM5ZTMzZjJjNTE1NjVkY2E4YWNhZTBhOWRlODdhNmI0MWZlNTJiZDY1YzU3NDM3IiwidGFnIjoiIn0%3D; expires=Sun, 19 May 2024 17:29:55 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6IlA4eFBvZGlwdk1DRy9lSi9nd0ZuUlE9PSIsInZhbHVlIjoia2l0Z0R2WjdsNldZS0NDeVRlRGVIcmdEWldHNTFBTGpQREhFL1V2UmZNU2ZKcnM4VlhlaFdJT3RhMlVPcU1mS2pNRGlsTWJMNkdMVWxYMERpakdYTzl6NXZ3dllITzhzNURESjhTOTJuUkdaU3p4NkN5QkxEcTAzV1VZVFJBQXciLCJtYWMiOiI3YzRmMjAxZjAwODI3ZjZmMWEwMzNmMTlkMDY2NzQ2YzFmZmVjN2RlNDY5Yjk1NDk0MzU1ZTkzNTFhYzU4ZTI4IiwidGFnIjoiIn0%3D; expires=Sun, 19 May 2024 17:29:55 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImgrSEhveWJDZlFqeXR0QXVna2trQmc9PSIsInZhbHVlIjoiaEFMSjNjWEVNbERudkdGakxYKzRTN1crdWhWbzdXOVQ3Vmk4MjN1WU96OFlDdVVhYmc0SHM2cmNXOUIrR00xaWFJSkJmUUN2a3RDNTNIaFlBMkl4VVdCd215Y1VWZ1hHSDZPSDVUeVV4N1NZVkhBL0JQSG9iOEVzdERFazF1WGsiLCJtYWMiOiJmYjM1ZWQxYzBiNTIxNGMwMzI5OWEwMjY1NDM1NDZkM2UwYzdiZTI4OWMyMTdlNmEyZDMyNDJjZWMyMjljNGEzIiwidGFnIjoiIn0%3D; expires=Sat, 25 May 2024 17:56:30 GMT; Max-Age=7200; path=/; samesite=lax; learnhubmk_api_session=eyJpdiI6InVHK3FaNjZqS2svRnhMcit1aEtReXc9PSIsInZhbHVlIjoiU0s1SlNsc0k3UGlFWnlPTXpmeHRVS3ZmMnp5dTM1ZWlnbXBXOWNteWc4Q2djRzY5UnVDWTJ5U2NFb3NtMzd0MzNKeit6K21UVXZqclB6SnFqSUREZGFmeXV1aFRlU1JTNjZPaFlHaGZrSHNKb1pHZnlKQXMyR25hMVRwbXROc2EiLCJtYWMiOiJmZTI4ZmU1N2NmOGU5ZTBmMGMxNWFhMzI0ZWZmNWQ0MDljMWVjNzQzZDJiYTBjYjEwOTMxYTgwNzMyYjJlMjViIiwidGFnIjoiIn0%3D; expires=Sat, 25 May 2024 17:56:30 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
