@@ -2,7 +2,10 @@
 
 namespace App\Content\Http\Requests\BlogPosts;
 
+use App\Framework\Enums\RoleName;
+use App\Website\Enums\BlogPostStatus;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BlogPostStatusRequest extends FormRequest
 {
@@ -11,7 +14,7 @@ class BlogPostStatusRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return $this->user()->hasRole(RoleName::ADMIN) || $this->user()->hasRole(RoleName::CONTENT_MANAGER);
     }
 
     /**
@@ -22,7 +25,9 @@ class BlogPostStatusRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'publish_date' => ['required', 'date'],
+            'status' => ['required', Rule::enum(BlogPostStatus::class)]
         ];
     }
+
 }
