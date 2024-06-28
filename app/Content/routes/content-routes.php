@@ -4,7 +4,7 @@ use App\Content\Http\Controllers\Auth\AuthController;
 use App\Content\Http\Controllers\BlogPostController;
 use App\Content\Http\Controllers\BlogPostStatusController;
 use App\Content\Http\Controllers\BlogPostTagsController;
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/content', 'middleware' => ['treblle']], function () {
     Route::post('/login', [AuthController::class, 'login'])->middleware(['throttle:login']);

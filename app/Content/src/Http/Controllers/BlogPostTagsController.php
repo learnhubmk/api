@@ -5,7 +5,7 @@ namespace App\Content\Http\Controllers;
 use App\Content\Http\Requests\BlogPosts\BlogPostTagsDeleteRequest;
 use App\Content\Http\Requests\BlogPosts\BlogPostTagsRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostTagResource;
-use App\Http\Controllers\Controller;
+use App\Framework\Http\Controllers\Controller;
 use App\Website\Models\BlogPostTag;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Knuckles\Scribe\Attributes\BodyParam;
