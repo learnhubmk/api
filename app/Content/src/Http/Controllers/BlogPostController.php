@@ -90,8 +90,6 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: false, example: "[1,2,3]")]
     public function update(UpdateBlogPostRequest $request, BlogPost $blogPost): BlogPostsResource
     {
-        $data = $request->validated();
-
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
 
         $blogPost->update($blogPostData);
