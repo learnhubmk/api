@@ -26,13 +26,13 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: accusamus
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: accusamus
+      title: qui
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -64,13 +64,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: quaerat
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: quaerat
+      slug: temporibus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -134,13 +134,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: sequi
+        example: praesentium
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: sequi
+      tag: praesentium
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -178,7 +178,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: cupiditate
+        example: cumque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -187,7 +187,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: rhoda.adams@example.org
+        example: clockman@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -196,7 +196,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: omnis
+        example: aperiam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -205,16 +205,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: doloremque
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: cupiditate
-      email: rhoda.adams@example.org
-      message: omnis
-      cf-turnstile-response: doloremque
+      name: cumque
+      email: clockman@example.org
+      message: aperiam
+      cf-turnstile-response: non
     fileParameters: []
     responses: []
     responseFields: []
@@ -233,9 +233,7 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Subscribe To Newsletter'
-      description: |2-
-         This endpoint is for subscribing to Leanhub.mk.
-         Additionally it uses Cloudflare Turnstile ReCaptcha for validation.
+      description: ' This endpoint is for subscribing to the Leanhub.mk newsletter.'
       authenticated: false
       custom: []
     headers:
@@ -250,7 +248,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: tneam
+        example: qyrqxvcxepypmf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -259,7 +257,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: rhane@example.org
+        example: king.gudrun@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -274,8 +272,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: tneam
-      email: rhane@example.org
+      first_name: qyrqxvcxepypmf
+      email: king.gudrun@example.com
     fileParameters: []
     responses: []
     responseFields: []

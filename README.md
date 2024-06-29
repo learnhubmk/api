@@ -14,7 +14,6 @@
 > - Tags matching the terminal are provided inside the documentation.
 > > - [OS] OS Terminal - the terminal native to your operating system. Always available.
 > > - [WSL] WSL Terminal - the terminal inside the virtual machine.
-> > - [SAIL] Sail Terminal - the terminal available after the `sail shell` command is called.
 
 2. [OS] Install the Linux distro 
 
