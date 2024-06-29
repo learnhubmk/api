@@ -2,7 +2,7 @@ version: "3.7"
 services:
     app:
         ports:
-            - "9003:9003"  # Expose Xdebug port
+            - "9004:9004"  # Expose Xdebug port
         build:
             context: docker
             dockerfile: Dockerfile
