@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\StoreMemberManagementRequest;
 use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
 use App\Framework\Enums\RoleName;
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
 class MemberManagementController
@@ -59,16 +60,26 @@ class MemberManagementController
     /**
      * Store a new resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreMemberManagementRequest $request): MemberManagementResource
     {
-        //
+        /** @var User $member */
+        $member = User::query()->create(['email' => $request->get('email'), 'password' => Str::password()]);
+
+        $member->memberProfile()->create($request->only(['first_name' , 'last_name']));
+
+        $member->assignRole(RoleName::MEMBER);
+
+        Password::broker()->sendResetLink(['email' => $request->get('email')]);
+
+        return new MemberManagementResource($member);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateMemberManagementRequest $request, int $id)
+    public function update(UpdateMemberManagementRequest $request, int $id): MemberManagementResource
     {
+        /** @var User $member */
         $member = User::query()->with(['roles', 'memberProfile'])
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
@@ -77,7 +88,11 @@ class MemberManagementController
 
         $member->update(['email' => $request->get('email')]);
 
-        $member->memberProfile()->update(['first_name', 'last_name', 'image' => $image ?? $member->memberProfile->image]);
+        $member->memberProfile()->update([
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'image' => $image ?? $member->memberProfile->image
+        ]);
 
         return new MemberManagementResource($member);
     }
@@ -85,14 +100,15 @@ class MemberManagementController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): Response
+    public function destroy(int $id): Response
     {
+        /** @var User $member */
         $member = User::query()
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
 
         $member->update(['status' => UserStatusName::DELETED]);
-        $member->memberProfile->delete();
+        $member->memberProfile()->delete();
         $member->delete();
 
         return response()->noContent();

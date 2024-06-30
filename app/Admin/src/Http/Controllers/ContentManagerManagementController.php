@@ -2,7 +2,9 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
+use App\Admin\Http\Resources\AdminManagementResource;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
@@ -12,6 +14,8 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
 
 class ContentManagerManagementController
 {
@@ -57,16 +61,26 @@ class ContentManagerManagementController
     /**
      * Store a new resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreContentManagerManagementRequest $request): ContentManagerManagementResource
     {
-        //
+        /** @var User $contentManager */
+        $contentManager = User::query()->create(['email' => $request->get('email'), 'password' => Str::password()]);
+
+        $contentManager->contentManagerProfile()->create($request->only(['first_name' , 'last_name']));
+
+        $contentManager->assignRole(RoleName::CONTENT_MANAGER);
+
+        Password::broker()->sendResetLink(['email' => $request->get('email')]);
+
+        return new ContentManagerManagementResource($contentManager);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateContentManagerManagementRequest $request, int $id)
+    public function update(UpdateContentManagerManagementRequest $request, int $id): ContentManagerManagementResource
     {
+        /** @var User $contentManager */
         $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->findOrFail($id);
@@ -75,7 +89,11 @@ class ContentManagerManagementController
 
         $contentManager->update(['email' => $request->get('email')]);
 
-        $contentManager->contentManagerProfile()->update(['first_name', 'last_name', 'image' => $image ?? $contentManager->contentManagerProfile->image]);
+        $contentManager->contentManagerProfile()->update([
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'image' => $image ?? $contentManager->contentManagerProfile->image
+        ]);
 
         return new ContentManagerManagementResource($contentManager);
     }
@@ -83,14 +101,15 @@ class ContentManagerManagementController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): Response
+    public function destroy(int $id): Response
     {
+        /** @var User $contentManager */
         $contentManager = User::query()
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->findOrFail($id);
 
         $contentManager->update(['status' => UserStatusName::DELETED]);
-        $contentManager->contentManagerProfile->delete();
+        $contentManager->contentManagerProfile()->delete();
         $contentManager->delete();
 
         return response()->noContent();
