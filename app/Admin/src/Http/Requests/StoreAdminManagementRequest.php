@@ -4,7 +4,6 @@ namespace App\Admin\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rules\File;
 
 class StoreAdminManagementRequest extends FormRequest
 {

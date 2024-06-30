@@ -4,7 +4,6 @@ namespace App\Admin\Http\Controllers;
 
 use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
-use App\Admin\Http\Resources\AdminManagementResource;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
