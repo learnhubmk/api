@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
@@ -11,6 +12,8 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class MemberManagementController
 {
@@ -46,17 +49,17 @@ class MemberManagementController
 
     public function show(int $id): MemberManagementResource
     {
-        $user = User::query()->with(['roles', 'memberProfile'])
+        $member = User::query()->with(['roles', 'memberProfile'])
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
 
-        return new MemberManagementResource($user);
+        return new MemberManagementResource($member);
     }
 
     /**
      * Store a new resource in storage.
      */
-    public function store(Request $request, string $id)
+    public function store(Request $request)
     {
         //
     }
@@ -64,9 +67,19 @@ class MemberManagementController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateMemberManagementRequest $request, int $id)
     {
-        //
+        $member = User::query()->with(['roles', 'memberProfile'])
+            ->whereRelation('roles', 'name', RoleName::MEMBER->value)
+            ->findOrFail($id);
+
+        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+
+        $member->update(['email' => $request->get('email')]);
+
+        $member->memberProfile()->update(['first_name', 'last_name', 'image' => $image ?? $member->memberProfile->image]);
+
+        return new MemberManagementResource($member);
     }
 
     /**
@@ -74,13 +87,13 @@ class MemberManagementController
      */
     public function destroy(string $id): Response
     {
-        $user = User::query()
+        $member = User::query()
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
 
-        $user->update(['status' => UserStatusName::DELETED]);
-        $user->memberProfile->delete();
-        $user->delete();
+        $member->update(['status' => UserStatusName::DELETED]);
+        $member->memberProfile->delete();
+        $member->delete();
 
         return response()->noContent();
     }

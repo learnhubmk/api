@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\UpdateAdminManagementRequest;
 use App\Admin\Http\Resources\AdminManagementResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
@@ -46,17 +47,17 @@ class AdminManagementController
 
     public function show(int $id): AdminManagementResource
     {
-        $user = User::query()->with(['roles', 'adminProfile'])
+        $admin = User::query()->with(['roles', 'adminProfile'])
             ->whereRelation('roles', 'name', RoleName::ADMIN->value)
             ->findOrFail($id);
 
-        return new AdminManagementResource($user);
+        return new AdminManagementResource($admin);
     }
 
     /**
      * Store a new resource in storage.
      */
-    public function store(Request $request, string $id)
+    public function store(Request $request)
     {
         //
     }
@@ -64,9 +65,19 @@ class AdminManagementController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateAdminManagementRequest $request, int $id)
     {
-        //
+        $admin = User::query()->with(['roles', 'adminProfile'])
+            ->whereRelation('roles', 'name', RoleName::ADMIN->value)
+            ->findOrFail($id);
+
+        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+
+        $admin->update(['email' => $request->get('email')]);
+
+        $admin->adminProfile()->update(['first_name', 'last_name', 'image' => $image ?? $admin->adminProfile->image]);
+
+        return new AdminManagementResource($admin);
     }
 
     /**
@@ -74,13 +85,13 @@ class AdminManagementController
      */
     public function destroy(string $id): Response
     {
-        $user = User::query()
+        $admin = User::query()
             ->whereRelation('roles', 'name', RoleName::ADMIN->value)
             ->findOrFail($id);
 
-        $user->update(['status' => UserStatusName::DELETED]);
-        $user->adminProfile->delete();
-        $user->delete();
+        $admin->update(['status' => UserStatusName::DELETED]);
+        $admin->adminProfile->delete();
+        $admin->delete();
 
         return response()->noContent();
     }

@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
@@ -26,7 +27,7 @@ class ContentManagerManagementController
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
         $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
 
-        $users = User::query()
+        $contentManagers = User::query()
             ->with(['roles', 'contentManagerProfile'])
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
@@ -41,7 +42,7 @@ class ContentManagerManagementController
             }, $sortDirection)
             ->paginate($recordsPerPage);
 
-        return ContentManagerManagementResource::collection($users);
+        return ContentManagerManagementResource::collection($contentManagers);
     }
 
     public function show(int $id): ContentManagerManagementResource
@@ -56,7 +57,7 @@ class ContentManagerManagementController
     /**
      * Store a new resource in storage.
      */
-    public function store(Request $request, string $id)
+    public function store(Request $request)
     {
         //
     }
@@ -64,9 +65,19 @@ class ContentManagerManagementController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateContentManagerManagementRequest $request, int $id)
     {
-        //
+        $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
+            ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
+            ->findOrFail($id);
+
+        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+
+        $contentManager->update(['email' => $request->get('email')]);
+
+        $contentManager->contentManagerProfile()->update(['first_name', 'last_name', 'image' => $image ?? $contentManager->contentManagerProfile->image]);
+
+        return new ContentManagerManagementResource($contentManager);
     }
 
     /**
@@ -74,13 +85,13 @@ class ContentManagerManagementController
      */
     public function destroy(string $id): Response
     {
-        $user = User::query()
+        $contentManager = User::query()
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->findOrFail($id);
 
-        $user->update(['status' => UserStatusName::DELETED]);
-        $user->contentManagerProfile->delete();
-        $user->delete();
+        $contentManager->update(['status' => UserStatusName::DELETED]);
+        $contentManager->contentManagerProfile->delete();
+        $contentManager->delete();
 
         return response()->noContent();
     }
