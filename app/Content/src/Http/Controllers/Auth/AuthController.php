@@ -22,7 +22,6 @@ class AuthController
      */
     #[Endpoint(title: 'Login', description: 'This endpoint enables sign in for users with roles: content or member')]
     #[Group('Content')]
-    #[Group('Member')]
     #[BodyParam('email', 'password', required: true)]
     public function login(LoginRequest $request): AuthenticatedContentManagerResource
     {
@@ -45,7 +44,6 @@ class AuthController
     #[Authenticated]
     #[Endpoint(title: 'Logout', description: 'This endpoint enables sign out for users with roles: content or member')]
     #[Group('Content')]
-    #[Group('Member')]
     public function logout(LogoutRequest $request): Response
     {
         $request->user()->currentAccessToken()->delete();
