@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Content\Http\Controllers\Auth\AuthController;
 use App\Platform\Http\Controllers\Auth\Social\GitHubAuthController;
 use App\Platform\Http\Controllers\Auth\Social\GoogleAuthController;
@@ -14,10 +15,10 @@ Route::get('/login/linkedin/callback', [LinkedInAuthController::class, 'handleCa
 
 
 Route::group(['prefix' => '/member'], function () {
-  Route::post('/login', [AuthController::class, 'login'])->name('auth.login')->middleware(['throttle:login']);
+    Route::post('/login', [AuthController::class, 'login'])->name('auth.login')->middleware(['throttle:5,1']);
 
-  Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-      Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
-  });
+    Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+        Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    });
 
 });
