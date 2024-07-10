@@ -39,7 +39,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DgE65a61PVkhZe834vdcabf'
+      - 'Bearer 6e53hdaZEVcf6b1Pvk48Dga'
     controller: null
     method: null
     route: null
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: mitchel.olson@example.net
+        example: floyd.raynor@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: iure
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: mitchel.olson@example.net
-      password: iure
+      email: floyd.raynor@example.org
+      password: blanditiis
     fileParameters: []
     responses: []
     responseFields: []
@@ -123,7 +123,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bfkEe6gVZD3da8c516haPv4'
+      - 'Bearer gdDhEaZ5b1c8kfeVvPa3466'
     controller: null
     method: null
     route: null

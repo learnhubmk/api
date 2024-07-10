@@ -26,24 +26,24 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: sapiente
+        example: illo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: sapiente
+      title: illo
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Dolores sed veniam sapiente atque voluptatem sed dicta.","slug":"dolores-sed-veniam-sapiente-atque-voluptatem-sed-dicta","excerpt":"Et excepturi labore quia aut fuga.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-09","author":{"first_name":"Mrs. Bernadette Cremin II","last_name":"Smith","image":null}}],"links":{"first":"http:\/\/api.myapi.local\/blog-posts?page=1","last":"http:\/\/api.myapi.local\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.local\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.local\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"title":"A id illo ea nostrum quia dicta saepe.","slug":"a-id-illo-ea-nostrum-quia-dicta-saepe","excerpt":"In aperiam dolore quis recusandae cupiditate omnis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-09","author":{"first_name":"Mr. Manuela Thiel","last_name":"Ledner","image":null}}],"links":{"first":"http:\/\/api.myapi.local\/blog-posts?page=1","last":"http:\/\/api.myapi.local\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.local\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.local\/blog-posts","per_page":15,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: dd6b72a6-1e59-4ecc-9888-d67bf1e84cf1
+          x-treblle-trace-id: ff446ff9-a1d7-4e14-84db-7adcc2d19adb
           vary: Origin
         description: null
         custom: []
@@ -74,13 +74,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: optio
+        example: dolor
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: optio
+      slug: dolor
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -486,7 +486,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 4a87a902-7427-4c67-a64a-6ad644f66f30
+          x-treblle-trace-id: 46543659-4331-4268-973b-b876599c230e
           vary: Origin
         description: null
         custom: []
@@ -526,7 +526,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 11e75755-725f-4a24-9bfe-eb4f5d808665
+          x-treblle-trace-id: 81813640-a0ea-48e2-b935-6901b415de42
           vary: Origin
         description: null
         custom: []
@@ -557,13 +557,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: libero
+        example: pariatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: libero
+      tag: pariatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -572,11 +572,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.local\/blog-post-tags\/libero?page=1","last":"http:\/\/api.myapi.local\/blog-post-tags\/libero?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.local\/blog-post-tags\/libero?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.local\/blog-post-tags\/libero","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.local\/blog-post-tags\/pariatur?page=1","last":"http:\/\/api.myapi.local\/blog-post-tags\/pariatur?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.local\/blog-post-tags\/pariatur?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.local\/blog-post-tags\/pariatur","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: cd17ddd1-1cec-444d-abd2-b105ba695138
+          x-treblle-trace-id: 460f47c4-7ca2-49ea-a275-9df791400c56
           vary: Origin
         description: null
         custom: []
@@ -611,7 +611,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: aut
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -620,7 +620,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: janelle.towne@example.org
+        example: susan41@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -629,7 +629,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: nostrum
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -638,16 +638,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: optio
+        example: reprehenderit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: aut
-      email: janelle.towne@example.org
-      message: nostrum
-      cf-turnstile-response: optio
+      name: voluptas
+      email: susan41@example.org
+      message: non
+      cf-turnstile-response: reprehenderit
     fileParameters: []
     responses: []
     responseFields: []
@@ -681,7 +681,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: xbdhhsoypyzczz
+        example: yoxrry
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -690,7 +690,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: wintheiser.leonel@example.com
+        example: jbeahan@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -705,8 +705,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: xbdhhsoypyzczz
-      email: wintheiser.leonel@example.com
+      first_name: yoxrry
+      email: jbeahan@example.net
     fileParameters: []
     responses: []
     responseFields: []

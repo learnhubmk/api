@@ -39,7 +39,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vVP36eEc6fadDbgh18k5Z4a'
+      - 'Bearer 46ac5hfagvEPe18ZkVdb36D'
     controller: null
     method: null
     route: null
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: langworth.ambrose@example.net
+        example: richmond.bauch@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: nobis
+        example: magni
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: langworth.ambrose@example.net
-      password: nobis
+      email: richmond.bauch@example.net
+      password: magni
     fileParameters: []
     responses: []
     responseFields: []
@@ -123,7 +123,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z3k56afdPbchge681a4EvDV'
+      - 'Bearer hcv3VfekZP6g1a84DdabE65'
     controller: null
     method: null
     route: null
@@ -157,7 +157,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Da8Pg4V6be1h6va5d3kcfEZ'
+      - 'Bearer Ddb46hE6a3PvZcgV1f5ke8a'
     controller: null
     method: null
     route: null
@@ -236,7 +236,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: ea6052ab-86e9-4d7a-8b03-48666502014a
+          x-treblle-trace-id: c0bbe245-dd9c-4ad2-89a7-97b51816305d
           vary: Origin
         description: null
         custom: []
@@ -356,7 +356,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 5d7ffd92-824a-49bb-84c6-7d0cc239e027
+          x-treblle-trace-id: a06a9d4e-1661-46d3-b7f1-9e0ab3296992
           vary: Origin
         description: null
         custom: []
