@@ -17,8 +17,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -40,8 +39,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer 46ac5hfagvEPe18ZkVdb36D'
+      - Referer
+      - kchD51gd46P6V3aefvZa8Eb
     controller: null
     method: null
     route: null
@@ -60,8 +59,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -71,7 +71,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: richmond.bauch@example.net
+        example: elda34@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -80,14 +80,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: magni
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: richmond.bauch@example.net
-      password: magni
+      email: elda34@example.com
+      password: voluptas
     fileParameters: []
     responses: []
     responseFields: []
@@ -110,8 +110,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -124,8 +123,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer hcv3VfekZP6g1a84DdabE65'
+      - Referer
+      - c5Pa4D6kagvdZhb816EV3ef
     controller: null
     method: null
     route: null
@@ -144,8 +143,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -158,8 +156,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer Ddb46hE6a3PvZcgV1f5ke8a'
+      - Referer
+      - V6E5dDZPekv4136aafcgh8b
     controller: null
     method: null
     route: null
@@ -178,8 +176,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -197,7 +195,7 @@ endpoints:
         description: ''
         required: false
         example: '?tags=[php,laravel,react]'
-        type: 'string[]'
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -238,7 +236,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: c0bbe245-dd9c-4ad2-89a7-97b51816305d
+          x-treblle-trace-id: 4bfa4e55-28e6-45ec-9e98-40b7889193db
           vary: Origin
         description: null
         custom: []
@@ -262,8 +260,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -332,8 +331,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -358,7 +357,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: a06a9d4e-1661-46d3-b7f1-9e0ab3296992
+          x-treblle-trace-id: e9b04995-6e03-4d7d-968d-2be12c05953a
           vary: Origin
         description: null
         custom: []
@@ -382,8 +381,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -472,8 +472,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -512,8 +512,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -572,8 +573,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -612,8 +614,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPostTag_id:
         name: blogPostTag_id
@@ -662,8 +665,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPostTag_id:
         name: blogPostTag_id

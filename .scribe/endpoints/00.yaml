@@ -15,8 +15,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -38,8 +37,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer 6e53hdaZEVcf6b1Pvk48Dga'
+      - Referer
+      - 6avEPZk68ha5Dceg1f3d4Vb
     controller: null
     method: null
     route: null
@@ -58,8 +57,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: floyd.raynor@example.org
+        example: pat38@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: blanditiis
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: floyd.raynor@example.org
-      password: blanditiis
+      email: pat38@example.org
+      password: fuga
     fileParameters: []
     responses: []
     responseFields: []
@@ -108,8 +108,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -122,8 +121,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer gdDhEaZ5b1c8kfeVvPa3466'
+      - Referer
+      - 3v6D4ah5aEc6ekP1dgfbZV8
     controller: null
     method: null
     route: null

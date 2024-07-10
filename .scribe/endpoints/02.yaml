@@ -15,8 +15,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -38,8 +37,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer hV6P85eZfDdb3ckvEa6a41g'
+      - Referer
+      - a3e15EkgZa6hvPDfbcV86d4
     controller: null
     method: null
     route: null
@@ -58,8 +57,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: kathryne50@example.org
+        example: benedict.runolfsson@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: et
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: kathryne50@example.org
-      password: et
+      email: benedict.runolfsson@example.net
+      password: dolores
     fileParameters: []
     responses: []
     responseFields: []
