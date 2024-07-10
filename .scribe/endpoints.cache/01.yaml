@@ -6,6 +6,167 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: content/user
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Index
+      description: 'This endpoint enables to list content manager information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vVP36eEc6fadDbgh18k5Z4a'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/login
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Login
+      description: 'This endpoint enables users with content role to sign in'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: langworth.ambrose@example.net
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: nobis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: langworth.ambrose@example.net
+      password: nobis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/logout
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: 'This endpoint enables users with content role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Z3k56afdPbchge681a4EvDV'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: 'This endpoint enables users with Member role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Da8Pg4V6be1h6va5d3kcfEZ'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: content/blog-posts
     metadata:
       groupName: Content
@@ -77,7 +238,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 12c5ffd0-cc08-4645-a839-350e17c8333c
+          x-treblle-trace-id: ea6052ab-86e9-4d7a-8b03-48666502014a
           vary: Origin
         description: null
         custom: []
@@ -197,7 +358,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 50838e4a-2b5c-4211-b43d-072460c9a291
+          x-treblle-trace-id: 5d7ffd92-824a-49bb-84c6-7d0cc239e027
           vary: Origin
         description: null
         custom: []
