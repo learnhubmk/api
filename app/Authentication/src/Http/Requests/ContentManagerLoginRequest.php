@@ -34,7 +34,7 @@ class ContentManagerLoginRequest extends FormRequest
         ];
     }
 
-            /**
+    /**
      * Attempt to authenticate the request's credentials.
      *
      * @return void

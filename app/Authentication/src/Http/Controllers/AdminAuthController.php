@@ -12,14 +12,13 @@ use App\Authentication\Http\Resources\AuthResource;
 use App\Authentication\Http\Requests\AdminLoginRequest;
 use App\Authentication\Http\Requests\AdminLogoutRequest;
 
-
 class AdminAuthController extends Controller
 {
     #[Authenticated]
     #[Endpoint(title: 'Index', description: 'This endpoint enables to list admin information after login')]
     #[Group('Admin')]
 
-    public function index():AuthResource
+    public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }

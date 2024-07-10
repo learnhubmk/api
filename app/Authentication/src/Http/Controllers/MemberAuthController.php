@@ -18,7 +18,7 @@ class MemberAuthController extends Controller
     #[Endpoint(title: 'Index', description: 'This endpoint enables member information after login')]
     #[Group('Member')]
 
-    public function index():AuthResource
+    public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }

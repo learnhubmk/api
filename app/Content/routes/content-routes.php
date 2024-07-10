@@ -1,6 +1,5 @@
 <?php
 
-use App\Content\Http\Controllers\Auth\AuthController;
 use App\Content\Http\Controllers\BlogPostController;
 use App\Content\Http\Controllers\BlogPostStatusController;
 use App\Content\Http\Controllers\BlogPostTagsController;

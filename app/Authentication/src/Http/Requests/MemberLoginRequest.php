@@ -33,7 +33,7 @@ class MemberLoginRequest extends FormRequest
                 'password' => ['required']
         ];
     }
-           /**
+    /**
      * Attempt to authenticate the request's credentials.
      *
      * @return void

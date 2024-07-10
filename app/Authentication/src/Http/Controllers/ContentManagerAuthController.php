@@ -18,7 +18,7 @@ class ContentManagerAuthController extends Controller
     #[Endpoint(title: 'Index', description: 'This endpoint enables to list content manager information after login')]
     #[Group('Content')]
 
-    public function index():AuthResource
+    public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }
