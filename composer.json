@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.3",
         "app/admin": "*",
+        "app/authentication": "*",
         "app/content": "*",
         "app/platform": "*",
         "app/website": "*",

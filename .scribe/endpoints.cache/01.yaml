@@ -5,90 +5,6 @@ description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: content/login
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: Login
-      description: 'This endpoint enables users with content role to sign in'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: ''
-        required: true
-        example: hwillms@example.net
-        type: password
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: qui
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      email: hwillms@example.net
-      password: qui
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: content/logout
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: Logout
-      description: 'This endpoint enables users with content role to log out'
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer e6V4c6Dh1gv8dPkEbZ3aaf5'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - GET
     uri: content/blog-posts
     metadata:
@@ -154,7 +70,17 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: 12c5ffd0-cc08-4645-a839-350e17c8333c
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -264,7 +190,17 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: 50838e4a-2b5c-4211-b43d-072460c9a291
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
