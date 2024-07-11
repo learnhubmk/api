@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ec586f23e411b79a4ddabb9654731e7",
+    "content-hash": "4ee8a1d96c7a04351e1f3236a475c7c8",
     "packages": [
         {
             "name": "app/admin",
@@ -28,6 +28,38 @@
                     "App\\Admin\\Tests\\": "tests/",
                     "App\\Admin\\Database\\Factories\\": "database/factories/",
                     "App\\Admin\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "app/authentication",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app/Authentication",
+                "reference": "0e0f8a869f18b3972110b21db50e855efd249182"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "App\\Authentication\\Providers\\AuthenticationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "App\\Authentication\\": "src/",
+                    "App\\Authentication\\Tests\\": "tests/",
+                    "App\\Authentication\\Database\\Factories\\": "database/factories/",
+                    "App\\Authentication\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -12331,5 +12363,5 @@
         "php": "^8.3"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

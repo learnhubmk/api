@@ -1,7 +1,8 @@
 <?php
 
-use App\Platform\Http\Controllers\Auth\Social\GoogleAuthController;
+use Illuminate\Support\Facades\Route;
 use App\Platform\Http\Controllers\Auth\Social\GitHubAuthController;
+use App\Platform\Http\Controllers\Auth\Social\GoogleAuthController;
 use App\Platform\Http\Controllers\Auth\Social\LinkedInAuthController;
 
 Route::get('/login/google/redirect', [GoogleAuthController::class, 'redirect']);
