@@ -16,7 +16,7 @@ class LinkedInAuthController extends Controller
     #[Group('Platform')]
     public function redirect(): RedirectLinkResource
     {
-        return new RedirectLinkResource(Socialite::driver('linkedin')->stateless()->redirect()->getTargetUrl());
+        return new RedirectLinkResource(Socialite::driver('linkedin-openid')->stateless()->redirect()->getTargetUrl());
     }
 
     #[Endpoint(title: 'LinkedIn Login Callback', description: 'This endpoint sign in the users with LinkedIn Account')]
