@@ -38,7 +38,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - kchD51gd46P6V3aefvZa8Eb
+      - adbZvP66egahDf4E3c5V8k1
     controller: null
     method: null
     route: null
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: elda34@example.com
+        example: grant36@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: voluptas
+        example: quae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: elda34@example.com
-      password: voluptas
+      email: grant36@example.com
+      password: quae
     fileParameters: []
     responses: []
     responseFields: []
@@ -122,7 +122,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - c5Pa4D6kagvdZhb816EV3ef
+      - 5Zghda4DVeEabv13fk8cP66
     controller: null
     method: null
     route: null
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - V6E5dDZPekv4136aafcgh8b
+      - baEhD816f6dgvPe5VcZka34
     controller: null
     method: null
     route: null
@@ -234,7 +234,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 4bfa4e55-28e6-45ec-9e98-40b7889193db
+          x-treblle-trace-id: 5cd11968-744b-4345-8102-28d9121605ee
           vary: Origin
         description: null
         custom: []
@@ -355,7 +355,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: e9b04995-6e03-4d7d-968d-2be12c05953a
+          x-treblle-trace-id: e8ae94e7-d91b-48f4-b525-f1e5f82a2024
           vary: Origin
         description: null
         custom: []

@@ -40,7 +40,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - a3e15EkgZa6hvPDfbcV86d4
+      - 5eZdaEhPbc6v3a4D1gf6Vk8
     controller: null
     method: null
     route: null
@@ -71,7 +71,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: benedict.runolfsson@example.net
+        example: rwindler@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -80,14 +80,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: dolores
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: benedict.runolfsson@example.net
-      password: dolores
+      email: rwindler@example.net
+      password: similique
     fileParameters: []
     responses: []
     responseFields: []

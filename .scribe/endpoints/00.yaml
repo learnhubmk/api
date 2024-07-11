@@ -38,7 +38,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 6avEPZk68ha5Dceg1f3d4Vb
+      - VecaD6Pk6h8ZbagEf453d1v
     controller: null
     method: null
     route: null
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: pat38@example.org
+        example: johann71@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: fuga
+        example: quaerat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: pat38@example.org
-      password: fuga
+      email: johann71@example.net
+      password: quaerat
     fileParameters: []
     responses: []
     responseFields: []
@@ -122,7 +122,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 3v6D4ah5aEc6ekP1dgfbZV8
+      - P6d48va5bcaD6Zg3fVE1ehk
     controller: null
     method: null
     route: null

@@ -1,6 +1,6 @@
 # Authenticating requests
 
-To authenticate requests, include a **`Referer`** header with the value **`"{YOUR_AUTH_KEY}"`**.
+To authenticate requests, include a **`Referer`** header with the value **`"learnhub.mk"`**.
 
 All authenticated endpoints are marked with a `requires authentication` badge in the documentation below.
 
