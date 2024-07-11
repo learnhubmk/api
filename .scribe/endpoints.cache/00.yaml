@@ -5,6 +5,48 @@ description: ''
 endpoints:
   -
     httpMethods:
+      - GET
+    uri: admin/user
+    metadata:
+      groupName: Admin
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Index
+      description: 'This endpoint enables to list admin information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - VecaD6Pk6h8ZbagEf453d1v
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - POST
     uri: admin/login
     metadata:
@@ -17,8 +59,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -28,7 +71,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jazmyne.oreilly@example.org
+        example: johann71@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +80,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: eum
+        example: quaerat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: jazmyne.oreilly@example.org
-      password: eum
+      email: johann71@example.net
+      password: quaerat
     fileParameters: []
     responses: []
     responseFields: []
@@ -67,8 +110,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -81,8 +123,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer 4E1bVcdaZPafg3k8e566vDh'
+      - Referer
+      - P6d48va5bcaD6Zg3fVE1ehk
     controller: null
     method: null
     route: null

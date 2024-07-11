@@ -3,6 +3,48 @@ description: ''
 endpoints:
   -
     httpMethods:
+      - GET
+    uri: content/user
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Index
+      description: 'This endpoint enables to list content manager information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - adbZvP66egahDf4E3c5V8k1
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - POST
     uri: content/login
     metadata:
@@ -15,8 +57,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -26,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: hwillms@example.net
+        example: grant36@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: qui
+        example: quae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: hwillms@example.net
-      password: qui
+      email: grant36@example.com
+      password: quae
     fileParameters: []
     responses: []
     responseFields: []
@@ -65,8 +108,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -79,8 +121,41 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Authorization
-      - 'Bearer e6V4c6Dh1gv8dPkEbZ3aaf5'
+      - Referer
+      - 5Zghda4DVeEabv13fk8cP66
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: 'This endpoint enables users with Member role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - baEhD816f6dgvPe5VcZka34
     controller: null
     method: null
     route: null
@@ -99,8 +174,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -118,7 +193,7 @@ endpoints:
         description: ''
         required: false
         example: '?tags=[php,laravel,react]'
-        type: 'string[]'
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -152,7 +227,17 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: 5cd11968-744b-4345-8102-28d9121605ee
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -173,8 +258,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -243,8 +329,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -262,7 +348,17 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: e8ae94e7-d91b-48f4-b525-f1e5f82a2024
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -283,8 +379,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -373,8 +470,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -413,8 +510,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -473,8 +571,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -513,8 +612,9 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
+      Content-Type: application/json
     urlParameters:
       blogPostTag_id:
         name: blogPostTag_id
@@ -563,8 +663,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters:
       blogPostTag_id:
         name: blogPostTag_id
