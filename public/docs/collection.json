@@ -10,17 +10,17 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "43d88580-e127-454e-97c0-382dbb406746",
+        "_postman_id": "f60568b3-3bd0-4547-8d23-5f7d3e2775fd",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Admin",
+            "name": "Authenticiation",
             "description": "",
             "item": [
                 {
-                    "name": "Index",
+                    "name": "Admin User",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -61,7 +61,7 @@
                     ]
                 },
                 {
-                    "name": "Login",
+                    "name": "Admin Login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -82,7 +82,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"johann71@example.net\",\"password\":\"quaerat\"}"
+                            "raw": "{\"email\":\"bret44@example.com\",\"password\":\"consectetur\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -92,7 +92,7 @@
                     "response": []
                 },
                 {
-                    "name": "Logout",
+                    "name": "Admin Logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -111,15 +111,9 @@
                         "description": "This endpoint enables users with admin role to log out"
                     },
                     "response": []
-                }
-            ]
-        },
-        {
-            "name": "Content",
-            "description": "",
-            "item": [
+                },
                 {
-                    "name": "Index",
+                    "name": "Content Manager User",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -160,7 +154,7 @@
                     ]
                 },
                 {
-                    "name": "Login",
+                    "name": "Content Manager Login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -181,7 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"grant36@example.com\",\"password\":\"quae\"}"
+                            "raw": "{\"email\":\"murphy.enid@example.org\",\"password\":\"nemo\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -191,7 +185,7 @@
                     "response": []
                 },
                 {
-                    "name": "Logout",
+                    "name": "Content Manager Logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -212,7 +206,79 @@
                     "response": []
                 },
                 {
-                    "name": "Logout",
+                    "name": "Member User",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enables member information after login"
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Member Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"pearlie74@example.net\",\"password\":\"possimus\"}"
+                        },
+                        "description": "This endpoint enables users with member role to sign in",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Memeber Logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -232,6 +298,132 @@
                     },
                     "response": []
                 },
+                {
+                    "name": "Socialite Login Redirect",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "login\/:provider\/redirect",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/login\/:provider\/redirect",
+                            "variable": [
+                                {
+                                    "id": "provider",
+                                    "key": "provider",
+                                    "value": "google",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint redirect to the Social SignIn Form",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-treblle-trace-id",
+                                    "value": "e3717888-9993-49cf-b7b2-6273d37b25ce"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IjQyYjkxTkF5MGNtTXJnWjFtRFIzL2c9PSIsInZhbHVlIjoic083eXJ0SFBxZGtCNHVGaVd6amNMVTlPK0t5TkFBSmV3ODFqTEFXR011Z3daL1ZnNWJjdmdabllrZ0dTNlNSVnNWVWsxVzE0bnlJUERtMFVSeTBEcTZRUFFJYXRyeExoQW5WZXNMa1JLZENVWGVBTW9xMVNVYVVKMkltL0Nyak4iLCJtYWMiOiJhYzI1MDZkNDc3MzhkOTMwYWRhNDQwOWY5NjZhODFiMzAxYzExMWJhMzQwMWNmZTVmZmU1NjBjMjYzOGZlZWZiIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InVMWkM1WTRjVzNRS05LVjlscHh6MWc9PSIsInZhbHVlIjoiUWNvREdRWnhRcUNIWHR3cFpxSVZhVmtoRUZIM3BDUTdnTFBONkhsQy9weVdmVE5aRlFCTUtiTG5xUnNkS3R6bWUxR0o2STlvU0V3aVRPczRlUFVMelVTb0dxVFlBYytFMS9rbC9ydGYwUWtRSmpjdnBkamhzL3dkYU85SUdxcmEiLCJtYWMiOiJmYTc2YWNlMTgwZDU2MDFiNmVjMzA1NGI1MmRkMjE4ZTBjNGM0NmY0YzI5ZTI1YzgxNDA0Yjc0YzljM2M1ZjUzIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/accounts.google.com\\\/o\\\/oauth2\\\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Socialite Login Callback",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "login\/:provider\/callback",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/login\/:provider\/callback",
+                            "variable": [
+                                {
+                                    "id": "provider",
+                                    "key": "provider",
+                                    "value": "google",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint sign in the users with Google, Github or LinkedIn Account",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-treblle-trace-id",
+                                    "value": "b939535c-73b1-497f-9701-9c99ea5b3ce1"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IlA5dDZ0cWFaT2lSOWE4RmQvODNDaWc9PSIsInZhbHVlIjoiSXJtb2wzb3Q2VmFFQkRzOHdyOXU0WmhaVjJsVTdDQTVoMzYydDlSdTNYUlZkODhvODNhOTdMcndldXVwcGhMNVpFaGk3aVJhQ0xpR3VLSWFUUzYxdVpXSGl4dWFsU0t1Z0VEVnhNU05BaS9QTHVlNkJZTWJCMmVOOWRZL1pxdnoiLCJtYWMiOiIyZjM0NjA0NzRiN2ZkYTNmNmUwMjc0NDUyNjljOWNiNzJiNThhZGJlZmFkYWI2ZGZmM2VhMWE5NmU2NGY3MDI2IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InlOQ0lQenVqaWpTREhYSlJOMGRxTWc9PSIsInZhbHVlIjoia0FIN3BYNEY4QVoyczFhaWdOaUUwZVV4ZzVGU0ZOaEs5emRCNis1SGIreWZ0VWxoNzQ5c2FYMkEwSnhEYlMvK1AreVVrcmtQUUhpU1k4Y1kraWxrZXRIc3pRd0o5V2dpRWJsY1BpZ09kdzl0bEFnT1pRVnJFVmtwVTFwUExVdjYiLCJtYWMiOiI2NTFiMTEwYmJjYTA2OTBkYWQ3YjQ1ZDA1YzMwMGNhY2M0YWMxYTY4YjMxOTRkNWUxYTM1YjNjNjA0NzZlZmRlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 422,
+                            "body": "{\"error\":\"Client error: `POST https:\\\/\\\/oauth2.googleapis.com\\\/token` resulted in a `400 Bad Request` response:\\n{\\n  \\\"error\\\": \\\"invalid_request\\\",\\n  \\\"error_description\\\": \\\"Missing required parameter: code\\\"\\n}\\n\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Content",
+            "description": "",
+            "item": [
                 {
                     "name": "Blog posts",
                     "request": {
@@ -292,7 +484,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "5cd11968-744b-4345-8102-28d9121605ee"
+                                    "value": "8458f947-4312-44b6-96e7-575acf11ad76"
                                 },
                                 {
                                     "key": "vary",
@@ -379,7 +571,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "e8ae94e7-d91b-48f4-b525-f1e5f82a2024"
+                                    "value": "e5ca4752-3cf1-4fb4-a4db-2f55bbc81f5c"
                                 },
                                 {
                                     "key": "vary",
@@ -645,7 +837,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "2f8245c8-25cc-4e6f-a809-271de4a17482"
+                                    "value": "036ce933-8871-43ac-bbe3-87ad03d79fc0"
                                 },
                                 {
                                     "key": "vary",
@@ -693,359 +885,11 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImJtTU9pR2xHa2M3M3lESEFZN0RQcmc9PSIsInZhbHVlIjoiVGFHd3JucTR5bmt1NVIzVzZoa08rQkNLQkVrUkM2Sk9FVlVlYzY1ak1jRzZyeWtwY3pHQzg5WDFIZVRqQk1Wei9OZWt2ajJCaWFIK0t4U2piWG5sMjRPTWNmMEZ4bFY1Vm1RdnB1REtQeUhVSVFIVlk4eVFSWnY4eHRoVnd3MWsiLCJtYWMiOiI3OWZiMzk5M2QwYWNmODE0M2YyMGFhMThjMGM2YzIwZDE3Y2JhNTg3YjVlZmI2OGUzNWY2ZTUzMzhhYTMwNDg0IiwidGFnIjoiIn0%3D; expires=Thu, 11 Jul 2024 09:35:44 GMT; Max-Age=7200; path=\/; domain=.myapi.local; samesite=lax; learnhub_session=eyJpdiI6Ikd4bVNOcTI2MW51QThkQ2NsdmVTZlE9PSIsInZhbHVlIjoiK1Q0ZUFIdXhOQ040NTV5QS9mTy93SXlzdHpnQXBuTGRNTVAvSDI1ZXN3L3orOVpsLzVjMjhibGJ0RndBZjlHWkhXYi9uR1VDVzZYMFhFTEw5UVZudGFUNGJiR1RNT2ZEUWhiSGNjS1M1dW1iR1UxcTNsazFjOWNPZm83MDNkd3IiLCJtYWMiOiJhYjAwNjdlNjdjZWExNTIyM2QyMWY5YzI2ZGQ4MzBiYTJkZWE1YjZjNTg5ZGRjNGNkM2U2YzFkMGMzMGVkMzRhIiwidGFnIjoiIn0%3D; expires=Thu, 11 Jul 2024 09:35:44 GMT; Max-Age=7200; path=\/; domain=.myapi.local; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImNtYXdXeFZzeFNYaWorakVBNDM0VVE9PSIsInZhbHVlIjoiL1labjB6d0NlaTdKcjk3bFdOVHRvMmVyMVRJbGJvTVdxTkdZTjJzSWF2d21YbERGVllDS0M3OFZ0ZE5UTjNhakFUd3loVDF6TXY4UDhVMGp2VGxIRll4OFpQRkhtWVhiV0wxZjU1dU9oanJ0dks5NnN5dlpCU1ZLNWNQZ3pWemgiLCJtYWMiOiJlZmE2ODNjNjMzNGE1ZjM5NjdlYTkwODJlMmVlYzAyNTJjY2MyZmZkMTU5NGMxMjJjNGVhNTM0MTcwNDlkMjVlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ikw0N0dUM2RqZWlGM0hxN1h1R2Nha3c9PSIsInZhbHVlIjoiOUI4TlQzbmJRMUtFemErMTUxZnNrV2xJR2lhdWtMbjVYQllvVEZPWnUrMjF5NzlEVnVYNEVBRHhyKzNwQkpEbnpDUlppaEszUTV6ZnRkNFl4OFJlTWZqMUxPNml3MTVPR1h1d2k5ZytvWEd4WXNUZElpMXBscmNaNzhrdkYwcjIiLCJtYWMiOiI1OGYyOGVhN2U0NjMwMzk1OTUyMmM2ODkwMGIzYjczNzNhN2ZhN2VhOWQzODYyZjAyYTkxYWFkM2VjMzkzNDQ1IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
                             "body": "",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Member",
-            "description": "",
-            "item": [
-                {
-                    "name": "Index",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint enables member information after login"
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Login",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"rwindler@example.net\",\"password\":\"similique\"}"
-                        },
-                        "description": "This endpoint enables users with member role to sign in",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "Platform",
-            "description": "",
-            "item": [
-                {
-                    "name": "Google Login Redirect",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/google\/redirect",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/google\/redirect"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint redirect to the Google SignIn Form",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/accounts.google.com\\\/o\\\/oauth2\\\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code\"}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Google Login Callback",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/google\/callback",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/google\/callback"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint sign in the users with Google Account",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Client error: `POST https:\/\/oauth2.googleapis.com\/token` resulted in a `400 Bad Request` response:\\n{\\n  \\\"error\\\": \\\"invalid_request\\\",\\n  \\\"error_description\\\": \\\"Missing required parameter: code\\\"\\n}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 95,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 301,\n            \"function\": \"post\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\socialiteproviders\\\\manager\\\\src\\\\OAuth2\\\\AbstractProvider.php\",\n            \"line\": 53,\n            \"function\": \"getAccessTokenResponse\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\app\\\\Platform\\\\src\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\GoogleAuthController.php\",\n            \"line\": 26,\n            \"function\": \"user\",\n            \"class\": \"SocialiteProviders\\\\Manager\\\\OAuth2\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"handleCallback\",\n            \"class\": \"App\\\\Platform\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\GoogleAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 206,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 310,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 298,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 213,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 182,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1047,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 316,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 196,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GitHub Login Redirect",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/github\/redirect",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/github\/redirect"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint redirect to the GitHub SignIn Form",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/github.com\\\/login\\\/oauth\\\/authorize?client_id=Ov23liKI52LlPveKrTop&redirect_uri=http%3A%2F%2Fapi.myapi.local%2Flogin%2Fgithub%2Fcallback&scope=user%3Aemail&response_type=code\"}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GitHub Login Callback",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/github\/callback",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/github\/callback"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint sign in the users with GitHub Account",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Client error: `GET https:\/\/api.github.com\/user` resulted in a `401 Unauthorized` response:\\n{\\\"message\\\":\\\"Bad credentials\\\",\\\"documentation_url\\\":\\\"https:\/\/docs.github.com\/rest\\\",\\\"status\\\":\\\"401\\\"}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 44,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\GithubProvider.php\",\n            \"line\": 41,\n            \"function\": \"get\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 242,\n            \"function\": \"getUserByToken\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\GithubProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\app\\\\Platform\\\\src\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\GitHubAuthController.php\",\n            \"line\": 26,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"handleCallback\",\n            \"class\": \"App\\\\Platform\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\GitHubAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 206,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 310,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 298,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 213,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 182,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1047,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 316,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 196,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "LinkedIn Login Redirect",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/linkedin\/redirect",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/linkedin\/redirect"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint redirect to the LinkedIn SignIn Form",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/www.linkedin.com\\\/oauth\\\/v2\\\/authorization?client_id=erersr&redirect_uri=https%3A%2F%2Fsdfsfsfsf.com&scope=r_liteprofile+r_emailaddress&response_type=code\"}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "LinkedIn Login Callback",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "login\/linkedin\/callback",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/login\/linkedin\/callback"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint sign in the users with LinkedIn Account",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Client error: `POST https:\/\/www.linkedin.com\/oauth\/v2\/accessToken` resulted in a `400 Bad Request` response:\\n{\\\"error\\\":\\\"invalid_request\\\",\\\"error_description\\\":\\\"A required parameter \\\\\\\"code\\\\\\\" is missing\\\"}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 95,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 301,\n            \"function\": \"post\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 240,\n            \"function\": \"getAccessTokenResponse\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\app\\\\Platform\\\\src\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\LinkedInAuthController.php\",\n            \"line\": 26,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"handleCallback\",\n            \"class\": \"App\\\\Platform\\\\Http\\\\Controllers\\\\Auth\\\\Social\\\\LinkedInAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 206,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 310,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 298,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 213,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 182,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1047,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 316,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 196,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
                             "name": ""
                         }
                     ]
@@ -1065,12 +909,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "est",
+                                    "value": "vero",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=est"
+                            "raw": "{{baseUrl}}\/blog-posts?title=vero"
                         },
                         "method": "GET",
                         "header": [
@@ -1098,7 +942,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "824e635c-0682-4856-9800-a933ca2ebdab"
+                                    "value": "1fd9f5ee-8e0b-4db5-a494-7ae28c90551e"
                                 },
                                 {
                                     "key": "vary",
@@ -1106,7 +950,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Est accusamus dolore velit ut tempore adipisci.\",\"slug\":\"est-accusamus-dolore-velit-ut-tempore-adipisci\",\"excerpt\":\"Harum voluptatem consequatur nisi eos aut.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Matilde Sipes\",\"last_name\":\"Friesen\",\"image\":null}},{\"title\":\"Sequi modi repellendus est commodi fugit deleniti.\",\"slug\":\"sequi-modi-repellendus-est-commodi-fugit-deleniti\",\"excerpt\":\"Atque doloribus quia delectus ipsa ut consequatur.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Matilde Sipes\",\"last_name\":\"Friesen\",\"image\":null}},{\"title\":\"Est nulla excepturi consequatur ipsum.\",\"slug\":\"est-nulla-excepturi-consequatur-ipsum\",\"excerpt\":\"Vel harum quod harum quam ducimus dolores reiciendis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Mr. Manuela Thiel\",\"last_name\":\"Ledner\",\"image\":null}},{\"title\":\"Voluptatem tempore delectus est sint nobis.\",\"slug\":\"voluptatem-tempore-delectus-est-sint-nobis\",\"excerpt\":\"Aut nesciunt esse quia.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Dr. Danial Nicolas\",\"last_name\":\"Kerluke\",\"image\":null}},{\"title\":\"Non in nisi aliquam nesciunt temporibus ut molestiae.\",\"slug\":\"non-in-nisi-aliquam-nesciunt-temporibus-ut-molestiae\",\"excerpt\":\"Ut aspernatur vel perspiciatis aliquid magnam veniam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Wilhelm Ratke\",\"last_name\":\"McClure\",\"image\":null}},{\"title\":\"Neque odit reprehenderit omnis dolores reprehenderit pariatur est occaecati.\",\"slug\":\"neque-odit-reprehenderit-omnis-dolores-reprehenderit-pariatur-est-occaecati\",\"excerpt\":\"Quasi necessitatibus eum nam eligendi explicabo recusandae debitis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Mr. Manuela Thiel\",\"last_name\":\"Ledner\",\"image\":null}},{\"title\":\"Consequatur est repellat dolor quisquam iusto.\",\"slug\":\"consequatur-est-repellat-dolor-quisquam-iusto\",\"excerpt\":\"Sunt amet velit rerum aut.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Dr. Danial Nicolas\",\"last_name\":\"Kerluke\",\"image\":null}},{\"title\":\"Cumque repudiandae dolorem deleniti omnis dicta id est dolore.\",\"slug\":\"cumque-repudiandae-dolorem-deleniti-omnis-dicta-id-est-dolore\",\"excerpt\":\"In unde in dolores minima quaerat.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Deon Barrows\",\"last_name\":\"Christiansen\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.local\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.local\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.local\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.local\\\/blog-posts\",\"per_page\":15,\"to\":8,\"total\":8}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -1123,7 +967,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "numquam",
+                                    "value": "occaecati",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -1154,7 +998,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "b2d709b3-999b-4a38-9b94-8341df78c77e"
+                                    "value": "df5bb0fc-13f6-472c-a79e-ba964ca58e51"
                                 },
                                 {
                                     "key": "vary",
@@ -1202,7 +1046,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "2561542d-a8b4-4080-aaad-b36ba0e65569"
+                                    "value": "f4dd1532-a4f7-44d0-862e-4867bd62bfde"
                                 },
                                 {
                                     "key": "vary",
@@ -1210,7 +1054,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"},{\"name\":\"react\"},{\"name\":\"redis\"}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags\",\"per_page\":20,\"to\":20,\"total\":23}}",
+                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"},{\"name\":\"react\"},{\"name\":\"redis\"}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\",\"per_page\":20,\"to\":20,\"total\":23}}",
                             "name": ""
                         }
                     ]
@@ -1227,7 +1071,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "dolorem",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1258,7 +1102,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "97505587-07bf-43f2-a486-fde3b4889d3c"
+                                    "value": "977f41ac-89cc-4675-9121-5c80b291b928"
                                 },
                                 {
                                     "key": "vary",
@@ -1266,7 +1110,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags\\\/dolorem?page=1\",\"last\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags\\\/dolorem?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags\\\/dolorem?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.local\\\/blog-post-tags\\\/dolorem\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -1293,7 +1137,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"quo\",\"email\":\"jast.maud@example.com\",\"message\":\"quos\",\"cf-turnstile-response\":\"beatae\"}"
+                            "raw": "{\"name\":\"voluptates\",\"email\":\"leonora.trantow@example.org\",\"message\":\"et\",\"cf-turnstile-response\":\"optio\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -1324,7 +1168,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"falxeowpyenmwdufwokzrxf\",\"email\":\"rupert.nikolaus@example.org\"}"
+                            "raw": "{\"first_name\":\"uxkqiegihxaobvzumpqkbw\",\"email\":\"mrodriguez@example.org\"}"
                         },
                         "description": " This endpoint is for subscribing to the Leanhub.mk newsletter.",
                         "auth": {
