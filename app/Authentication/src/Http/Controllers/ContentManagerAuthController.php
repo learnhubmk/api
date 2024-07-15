@@ -15,15 +15,15 @@ use App\Authentication\Http\Requests\ContentManagerLogoutRequest;
 class ContentManagerAuthController extends Controller
 {
     #[Authenticated]
-    #[Endpoint(title: 'Index', description: 'This endpoint enables to list content manager information after login')]
-    #[Group('Content')]
+    #[Endpoint(title: 'Content Manager User', description: 'This endpoint enables to list content manager information after login')]
+    #[Group('Authentication')]
 
     public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }
-    #[Endpoint(title: 'Login', description: 'This endpoint enables users with content role to sign in')]
-    #[Group('Content')]
+    #[Endpoint(title: 'Content Manager Login', description: 'This endpoint enables users with content role to sign in')]
+    #[Group('Authentication')]
     #[BodyParam('email', 'password', required: true)]
 
     public function login(ContentManagerLoginRequest $request): AuthResource
@@ -36,8 +36,8 @@ class ContentManagerAuthController extends Controller
     }
 
     #[Authenticated]
-    #[Endpoint(title: 'Logout', description: 'This endpoint enables users with content role to log out')]
-    #[Group('Content')]
+    #[Endpoint(title: 'Content Manager Logout', description: 'This endpoint enables users with content role to log out')]
+    #[Group('Authentication')]
 
     public function logout(ContentManagerLogoutRequest $request)
     {
