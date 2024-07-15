@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'logout'   => 'Logged Out!'
+    'failed' => 'Овие податоци за најава не се совпаѓаат со нашите записи.',
+    'password' => 'Внесената лозинка е неточна.',
+    'throttle' => 'Премногу обиди за најава. Обидете се повторно за :seconds секунди.',
+    'logout'   => 'Одјавени сте!'
 
 ];

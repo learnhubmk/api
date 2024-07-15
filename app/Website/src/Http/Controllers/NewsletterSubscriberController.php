@@ -37,7 +37,7 @@ class NewsletterSubscriberController extends Controller
             return response()->json(["message" => "Електронската пошта е веќе претплатена!"], 422);
         }
 
-        return response()->json(["message" => "Успешно! Ве молиме потврдете ја вашата претпата на вашата електронска пошта."], Response::HTTP_OK);
+        return response()->json(["message" => "Успешно! Ве молиме потврдете ја вашата претплата на вашата електронска пошта."], Response::HTTP_OK);
 
     }
 }

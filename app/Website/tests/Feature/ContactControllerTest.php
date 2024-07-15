@@ -44,7 +44,7 @@ class ContactControllerTest extends TestCase
         Mail::fake();
 
         Mail::shouldReceive('to')
-            ->andThrow(new \Exception('Mail sending failed'));
+            ->andThrow(new \Exception('Пораката е неуспешно пратена!'));
 
         $formData = [
             'name' => 'Malista',
@@ -55,6 +55,6 @@ class ContactControllerTest extends TestCase
         $response = $this->postJson(route('contact'), $formData);
 
         $response->assertStatus(500)
-            ->assertJson(['message' => 'Mail sending failed']);
+            ->assertJson(['message' => 'Пораката е неуспешно пратена!']);
     }
 }
