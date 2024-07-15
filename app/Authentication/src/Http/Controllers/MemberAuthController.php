@@ -16,7 +16,7 @@ class MemberAuthController extends Controller
 {
     #[Authenticated]
     #[Endpoint(title: 'Member User', description: 'This endpoint enables member information after login')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function index(): AuthResource
     {
@@ -24,7 +24,7 @@ class MemberAuthController extends Controller
     }
 
     #[Endpoint(title: 'Member Login', description: 'This endpoint enables users with member role to sign in')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
     #[BodyParam('email', 'password', required: true)]
 
     public function login(MemberLoginRequest $request): AuthResource
@@ -38,7 +38,7 @@ class MemberAuthController extends Controller
 
     #[Authenticated]
     #[Endpoint(title: 'Memeber Logout', description: 'This endpoint enables users with Member role to log out')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function logout(MemberLogoutRequest $request)
     {

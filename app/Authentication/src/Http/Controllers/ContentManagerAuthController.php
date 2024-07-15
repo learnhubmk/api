@@ -16,14 +16,14 @@ class ContentManagerAuthController extends Controller
 {
     #[Authenticated]
     #[Endpoint(title: 'Content Manager User', description: 'This endpoint enables to list content manager information after login')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }
     #[Endpoint(title: 'Content Manager Login', description: 'This endpoint enables users with content role to sign in')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
     #[BodyParam('email', 'password', required: true)]
 
     public function login(ContentManagerLoginRequest $request): AuthResource
@@ -37,7 +37,7 @@ class ContentManagerAuthController extends Controller
 
     #[Authenticated]
     #[Endpoint(title: 'Content Manager Logout', description: 'This endpoint enables users with content role to log out')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function logout(ContentManagerLogoutRequest $request)
     {

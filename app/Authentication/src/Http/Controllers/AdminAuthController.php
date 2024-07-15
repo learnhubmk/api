@@ -16,7 +16,7 @@ class AdminAuthController extends Controller
 {
     #[Authenticated]
     #[Endpoint(title: 'Admin User', description: 'This endpoint enables to list admin information after login')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function index(): AuthResource
     {
@@ -24,7 +24,7 @@ class AdminAuthController extends Controller
     }
 
     #[Endpoint(title: 'Admin Login', description: 'This endpoint enables users with admin role to sign in')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
     #[BodyParam('email', 'password', required: true)]
 
     public function login(AdminLoginRequest $request): AuthResource
@@ -38,7 +38,7 @@ class AdminAuthController extends Controller
 
     #[Authenticated]
     #[Endpoint(title: 'Admin Logout', description: 'This endpoint enables users with admin role to log out')]
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
 
     public function logout(AdminLogoutRequest $request)
     {

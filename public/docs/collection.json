@@ -10,13 +10,13 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "f60568b3-3bd0-4547-8d23-5f7d3e2775fd",
+        "_postman_id": "0630a238-cce7-4521-9159-b31a89f4fbfe",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Authenticiation",
+            "name": "Authentication",
             "description": "",
             "item": [
                 {
@@ -82,7 +82,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"bret44@example.com\",\"password\":\"consectetur\"}"
+                            "raw": "{\"email\":\"mortimer.ortiz@example.com\",\"password\":\"quibusdam\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -175,7 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"murphy.enid@example.org\",\"password\":\"nemo\"}"
+                            "raw": "{\"email\":\"spencer.casey@example.com\",\"password\":\"ut\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -268,7 +268,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"pearlie74@example.net\",\"password\":\"possimus\"}"
+                            "raw": "{\"email\":\"gideon88@example.org\",\"password\":\"voluptatem\"}"
                         },
                         "description": "This endpoint enables users with member role to sign in",
                         "auth": {
@@ -341,7 +341,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "e3717888-9993-49cf-b7b2-6273d37b25ce"
+                                    "value": "d7d21894-ec89-41c0-acb4-f7dc20cc3303"
                                 },
                                 {
                                     "key": "vary",
@@ -349,7 +349,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IjQyYjkxTkF5MGNtTXJnWjFtRFIzL2c9PSIsInZhbHVlIjoic083eXJ0SFBxZGtCNHVGaVd6amNMVTlPK0t5TkFBSmV3ODFqTEFXR011Z3daL1ZnNWJjdmdabllrZ0dTNlNSVnNWVWsxVzE0bnlJUERtMFVSeTBEcTZRUFFJYXRyeExoQW5WZXNMa1JLZENVWGVBTW9xMVNVYVVKMkltL0Nyak4iLCJtYWMiOiJhYzI1MDZkNDc3MzhkOTMwYWRhNDQwOWY5NjZhODFiMzAxYzExMWJhMzQwMWNmZTVmZmU1NjBjMjYzOGZlZWZiIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InVMWkM1WTRjVzNRS05LVjlscHh6MWc9PSIsInZhbHVlIjoiUWNvREdRWnhRcUNIWHR3cFpxSVZhVmtoRUZIM3BDUTdnTFBONkhsQy9weVdmVE5aRlFCTUtiTG5xUnNkS3R6bWUxR0o2STlvU0V3aVRPczRlUFVMelVTb0dxVFlBYytFMS9rbC9ydGYwUWtRSmpjdnBkamhzL3dkYU85SUdxcmEiLCJtYWMiOiJmYTc2YWNlMTgwZDU2MDFiNmVjMzA1NGI1MmRkMjE4ZTBjNGM0NmY0YzI5ZTI1YzgxNDA0Yjc0YzljM2M1ZjUzIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6Iml3eFZBRTFJQWJENXhVSG5IQ1VKTWc9PSIsInZhbHVlIjoiQUF2aVVNaEZYaXZXY05USC9UWmZ1eGFjdVJNR2ZDRTFWMFpwUDBVSC8xU3I4Z1BBM0w0dVBIMkJGQm5KS2ZyR01tMVE3SDFwdFdEdHQ1d2xiY2VBTGliK1c4VGQ5VFJGNHorajhxY1BOV1AwakJITkhaY0lTU0JVN3dzdmxWOUkiLCJtYWMiOiI0NTc4MGVmM2NjMmU1Zjc0YzdiMzk0NjdiZjVkYzkxNzdlMGEzMjQ4YjUwNGY3ZjcxZjg4MDYxZWQ3NWZkOWQyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ild1WW52eklVNXVaa29SMmtZTVdXWmc9PSIsInZhbHVlIjoiQ1RDZDZkcng0NXI1V3kza1hCWE8zU1VxTlMxUmcvK2RWQXNlK1VvVlQwN01EeEdpMU53UjVuYkJZejFrcnFpaHVvbVJkUDJtZ2dHYkpLN3ovZEovbU1GOTg5K21xeWdaNTBKNVhsZXNIYUpmM2M5NU9aRWk4WFcrQmhlOG1CRFMiLCJtYWMiOiJjYWFmODRhYjg5ZDljMzZjMjYyZDdlNjMxODcxNGYxZDQwZjI1MjA3ZDE4ZWFiMDk2MmY5YjI3ODc2YTA2ZTlhIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
                                 }
                             ],
                             "code": 200,
@@ -401,7 +401,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "b939535c-73b1-497f-9701-9c99ea5b3ce1"
+                                    "value": "1ec306a8-6f56-4cb2-8a6c-1ae69587fc1b"
                                 },
                                 {
                                     "key": "vary",
@@ -409,7 +409,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IlA5dDZ0cWFaT2lSOWE4RmQvODNDaWc9PSIsInZhbHVlIjoiSXJtb2wzb3Q2VmFFQkRzOHdyOXU0WmhaVjJsVTdDQTVoMzYydDlSdTNYUlZkODhvODNhOTdMcndldXVwcGhMNVpFaGk3aVJhQ0xpR3VLSWFUUzYxdVpXSGl4dWFsU0t1Z0VEVnhNU05BaS9QTHVlNkJZTWJCMmVOOWRZL1pxdnoiLCJtYWMiOiIyZjM0NjA0NzRiN2ZkYTNmNmUwMjc0NDUyNjljOWNiNzJiNThhZGJlZmFkYWI2ZGZmM2VhMWE5NmU2NGY3MDI2IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InlOQ0lQenVqaWpTREhYSlJOMGRxTWc9PSIsInZhbHVlIjoia0FIN3BYNEY4QVoyczFhaWdOaUUwZVV4ZzVGU0ZOaEs5emRCNis1SGIreWZ0VWxoNzQ5c2FYMkEwSnhEYlMvK1AreVVrcmtQUUhpU1k4Y1kraWxrZXRIc3pRd0o5V2dpRWJsY1BpZ09kdzl0bEFnT1pRVnJFVmtwVTFwUExVdjYiLCJtYWMiOiI2NTFiMTEwYmJjYTA2OTBkYWQ3YjQ1ZDA1YzMwMGNhY2M0YWMxYTY4YjMxOTRkNWUxYTM1YjNjNjA0NzZlZmRlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IkQzVWNwd3k2eHNpRFgvTmlITWg0OFE9PSIsInZhbHVlIjoiQzhHSisvTFRBYUlMRlRSdk5Wb25FMnRFWGhDSFFVYXRDM0hEL0xpcm0vdlpjVHBiMWVhemR6ZmNHMTNWSkZkdUhMUTlNNHJwSHYxNFFWQXhJRytrMzVCcE5TQVM1T2pMR1Nod2t4UTZZNWxnUC9rZk5KZlM1SXM4U0RUOG4zWDYiLCJtYWMiOiIzNTI3NDA3NWM5NmNjYmVlOTJiYWVkMmZlYTNkZmRkNGZjYjU3YTE2MzM1M2E3MDI4N2ZhMzMzN2U0YjJhODE0IiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6IlRPU3pUSGNnaVBsM0VTWEl6bDdSTEE9PSIsInZhbHVlIjoiV0NOaEtoNHdPMFlFcTdNSXVCWmZXUEthai9lMmYrbFVhemxNYndMVmNadDRGTVZOSGlvSUlNQnFzZUttRkNodjloQlNOM0tCRUQyR3A1bm1VMi9iOFZST0c1WjdBTkM1eU85V1RtK3pudlZJbUtKcVo4SHpHOFFhSk1tMStPTU8iLCJtYWMiOiJmYjA3NmRlZjEzNWQzNDYyOWE4YzY3MjkyOWFmMTg1MTMyYjYxNjMwZDE0ZjdkYTJjNGNjNjQxNDMwNjdlMzkwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
                                 }
                             ],
                             "code": 422,
@@ -484,7 +484,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "8458f947-4312-44b6-96e7-575acf11ad76"
+                                    "value": "a0697ca5-993d-4565-b176-5c96bde968e2"
                                 },
                                 {
                                     "key": "vary",
@@ -571,7 +571,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "e5ca4752-3cf1-4fb4-a4db-2f55bbc81f5c"
+                                    "value": "44895910-023f-476d-a12c-64d5e22ad2e6"
                                 },
                                 {
                                     "key": "vary",
@@ -837,7 +837,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "036ce933-8871-43ac-bbe3-87ad03d79fc0"
+                                    "value": "ed6e64fd-531a-426a-883c-36da9261cb45"
                                 },
                                 {
                                     "key": "vary",
@@ -885,7 +885,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImNtYXdXeFZzeFNYaWorakVBNDM0VVE9PSIsInZhbHVlIjoiL1labjB6d0NlaTdKcjk3bFdOVHRvMmVyMVRJbGJvTVdxTkdZTjJzSWF2d21YbERGVllDS0M3OFZ0ZE5UTjNhakFUd3loVDF6TXY4UDhVMGp2VGxIRll4OFpQRkhtWVhiV0wxZjU1dU9oanJ0dks5NnN5dlpCU1ZLNWNQZ3pWemgiLCJtYWMiOiJlZmE2ODNjNjMzNGE1ZjM5NjdlYTkwODJlMmVlYzAyNTJjY2MyZmZkMTU5NGMxMjJjNGVhNTM0MTcwNDlkMjVlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ikw0N0dUM2RqZWlGM0hxN1h1R2Nha3c9PSIsInZhbHVlIjoiOUI4TlQzbmJRMUtFemErMTUxZnNrV2xJR2lhdWtMbjVYQllvVEZPWnUrMjF5NzlEVnVYNEVBRHhyKzNwQkpEbnpDUlppaEszUTV6ZnRkNFl4OFJlTWZqMUxPNml3MTVPR1h1d2k5ZytvWEd4WXNUZElpMXBscmNaNzhrdkYwcjIiLCJtYWMiOiI1OGYyOGVhN2U0NjMwMzk1OTUyMmM2ODkwMGIzYjczNzNhN2ZhN2VhOWQzODYyZjAyYTkxYWFkM2VjMzkzNDQ1IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6Ik9tTk1YdDQ3V0NoYzFOOXNzdGYvMHc9PSIsInZhbHVlIjoiR01GZmhnc3FDbXhIU3VrN2dzdGVXLzFFY2RiRjdzN0x0WG1Na21wTXZLUWR2SE5kd29UMW9oY2R5N2NxR2VlVzN3U2p1RExkdUFPVUc0ckNnLzlOaDBFeStUd3FWR0xlSmZzYmxiSkVSdHhXRVJuSm4xOHZCWFlzUXdubk9OQTIiLCJtYWMiOiIxYTYxZDg1Y2NkMmUzNTdhZTlmNzkzMDI3ZGMwYWQ4YzQzY2RlMjViNmMzOGY1NmVlNWE4N2I1YjY2YTc4MTkyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ik9mVno0aFIvYjN5akowdGFZMnJhOEE9PSIsInZhbHVlIjoiZW1PaTZXM21ENzNDbjJ6Vk1FVE1CeTlKRU1WWCtqWXhHdVRvY1BGd1c0Qk1yZTZqT01Nb01iVEs0c21IcXJWTUFKV2tTVG5oKzlWZXZkcFc1YnI1NUJMRDc3MHBOclZNMU9ESG1FMWhleXgxTHVyYkxkZ1BBTUF2QlVmbzFYMDciLCJtYWMiOiIyYjRkNDE5ZWQ1MzUxNDAxOGY4OGU3Mzc1Y2U4MDYxOGE4MzVhODYwZmE0ZGZhNThhNWM2ZWVmYmM2MTlhMGUyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -909,12 +909,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "vero",
+                                    "value": "blanditiis",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=vero"
+                            "raw": "{{baseUrl}}\/blog-posts?title=blanditiis"
                         },
                         "method": "GET",
                         "header": [
@@ -942,7 +942,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "1fd9f5ee-8e0b-4db5-a494-7ae28c90551e"
+                                    "value": "5cb2b775-d9af-4261-8b61-7b728068b7b4"
                                 },
                                 {
                                     "key": "vary",
@@ -950,7 +950,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[{\"title\":\"Et corporis et libero blanditiis quam ut.\",\"slug\":\"et-corporis-et-libero-blanditiis-quam-ut\",\"excerpt\":\"Laborum explicabo voluptatibus incidunt sit totam ut nam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Miss Adelle Wintheiser\",\"last_name\":\"Lind\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
                             "name": ""
                         }
                     ]
@@ -967,7 +967,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "occaecati",
+                                    "value": "ut",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -998,7 +998,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "df5bb0fc-13f6-472c-a79e-ba964ca58e51"
+                                    "value": "a0114e37-807e-4e90-9b46-fa1125a827d0"
                                 },
                                 {
                                     "key": "vary",
@@ -1046,7 +1046,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "f4dd1532-a4f7-44d0-862e-4867bd62bfde"
+                                    "value": "356189c4-6e3b-4213-a74a-f88f7af980d5"
                                 },
                                 {
                                     "key": "vary",
@@ -1071,7 +1071,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "et",
+                                    "value": "quia",
                                     "description": ""
                                 }
                             ]
@@ -1102,7 +1102,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "977f41ac-89cc-4675-9121-5c80b291b928"
+                                    "value": "14bd0a5f-d429-4435-bf4c-18ab6ae9abf0"
                                 },
                                 {
                                     "key": "vary",
@@ -1110,7 +1110,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/et\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -1137,7 +1137,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"voluptates\",\"email\":\"leonora.trantow@example.org\",\"message\":\"et\",\"cf-turnstile-response\":\"optio\"}"
+                            "raw": "{\"name\":\"repellat\",\"email\":\"billie12@example.com\",\"message\":\"enim\",\"cf-turnstile-response\":\"autem\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -1168,7 +1168,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"uxkqiegihxaobvzumpqkbw\",\"email\":\"mrodriguez@example.org\"}"
+                            "raw": "{\"first_name\":\"ardewvemhxcooygizbbw\",\"email\":\"dare.randall@example.net\"}"
                         },
                         "description": " This endpoint is for subscribing to the Leanhub.mk newsletter.",
                         "auth": {

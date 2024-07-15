@@ -31,7 +31,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 036ce933-8871-43ac-bbe3-87ad03d79fc0
+          x-treblle-trace-id: ed6e64fd-531a-426a-883c-36da9261cb45
           vary: Origin
         description: null
         custom: []
@@ -71,7 +71,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImNtYXdXeFZzeFNYaWorakVBNDM0VVE9PSIsInZhbHVlIjoiL1labjB6d0NlaTdKcjk3bFdOVHRvMmVyMVRJbGJvTVdxTkdZTjJzSWF2d21YbERGVllDS0M3OFZ0ZE5UTjNhakFUd3loVDF6TXY4UDhVMGp2VGxIRll4OFpQRkhtWVhiV0wxZjU1dU9oanJ0dks5NnN5dlpCU1ZLNWNQZ3pWemgiLCJtYWMiOiJlZmE2ODNjNjMzNGE1ZjM5NjdlYTkwODJlMmVlYzAyNTJjY2MyZmZkMTU5NGMxMjJjNGVhNTM0MTcwNDlkMjVlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ikw0N0dUM2RqZWlGM0hxN1h1R2Nha3c9PSIsInZhbHVlIjoiOUI4TlQzbmJRMUtFemErMTUxZnNrV2xJR2lhdWtMbjVYQllvVEZPWnUrMjF5NzlEVnVYNEVBRHhyKzNwQkpEbnpDUlppaEszUTV6ZnRkNFl4OFJlTWZqMUxPNml3MTVPR1h1d2k5ZytvWEd4WXNUZElpMXBscmNaNzhrdkYwcjIiLCJtYWMiOiI1OGYyOGVhN2U0NjMwMzk1OTUyMmM2ODkwMGIzYjczNzNhN2ZhN2VhOWQzODYyZjAyYTkxYWFkM2VjMzkzNDQ1IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik9tTk1YdDQ3V0NoYzFOOXNzdGYvMHc9PSIsInZhbHVlIjoiR01GZmhnc3FDbXhIU3VrN2dzdGVXLzFFY2RiRjdzN0x0WG1Na21wTXZLUWR2SE5kd29UMW9oY2R5N2NxR2VlVzN3U2p1RExkdUFPVUc0ckNnLzlOaDBFeStUd3FWR0xlSmZzYmxiSkVSdHhXRVJuSm4xOHZCWFlzUXdubk9OQTIiLCJtYWMiOiIxYTYxZDg1Y2NkMmUzNTdhZTlmNzkzMDI3ZGMwYWQ4YzQzY2RlMjViNmMzOGY1NmVlNWE4N2I1YjY2YTc4MTkyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ik9mVno0aFIvYjN5akowdGFZMnJhOEE9PSIsInZhbHVlIjoiZW1PaTZXM21ENzNDbjJ6Vk1FVE1CeTlKRU1WWCtqWXhHdVRvY1BGd1c0Qk1yZTZqT01Nb01iVEs0c21IcXJWTUFKV2tTVG5oKzlWZXZkcFc1YnI1NUJMRDc3MHBOclZNMU9ESG1FMWhleXgxTHVyYkxkZ1BBTUF2QlVmbzFYMDciLCJtYWMiOiIyYjRkNDE5ZWQ1MzUxNDAxOGY4OGU3Mzc1Y2U4MDYxOGE4MzVhODYwZmE0ZGZhNThhNWM2ZWVmYmM2MTlhMGUyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

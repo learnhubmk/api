@@ -34,7 +34,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Authenticiation
+        - Authentication
   /admin/login:
     post:
       summary: 'Admin Login'
@@ -50,7 +50,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
       requestBody:
         required: true
         content:
@@ -61,11 +61,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: bret44@example.com
+                  example: mortimer.ortiz@example.com
                 password:
                   type: string
                   description: ''
-                  example: consectetur
+                  example: quibusdam
               required:
                 - email
                 - password
@@ -85,7 +85,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
   /content/user:
     get:
       summary: 'Content Manager User'
@@ -113,7 +113,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Authenticiation
+        - Authentication
   /content/login:
     post:
       summary: 'Content Manager Login'
@@ -129,7 +129,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
       requestBody:
         required: true
         content:
@@ -140,11 +140,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: murphy.enid@example.org
+                  example: spencer.casey@example.com
                 password:
                   type: string
                   description: ''
-                  example: nemo
+                  example: ut
               required:
                 - email
                 - password
@@ -164,7 +164,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
   /user:
     get:
       summary: 'Member User'
@@ -192,7 +192,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Authenticiation
+        - Authentication
   /login:
     post:
       summary: 'Member Login'
@@ -208,7 +208,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
       requestBody:
         required: true
         content:
@@ -219,11 +219,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: pearlie74@example.net
+                  example: gideon88@example.org
                 password:
                   type: string
                   description: ''
-                  example: possimus
+                  example: voluptatem
               required:
                 - email
                 - password
@@ -243,7 +243,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Authenticiation
+        - Authentication
   '/login/{provider}/redirect':
     get:
       summary: 'Socialite Login Redirect'
@@ -275,7 +275,7 @@ paths:
                         type: string
                         example: 'https://accounts.google.com/o/oauth2/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
       tags:
-        - Authenticiation
+        - Authentication
       security: []
     parameters:
       -
@@ -313,7 +313,7 @@ paths:
                     type: string
                     example: "Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:\n{\n  \"error\": \"invalid_request\",\n  \"error_description\": \"Missing required parameter: code\"\n}\n"
       tags:
-        - Authenticiation
+        - Authentication
       security: []
     parameters:
       -
@@ -737,12 +737,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: vero
+          example: blanditiis
           required: false
           schema:
             type: string
             description: ''
-            example: vero
+            example: blanditiis
         -
           in: header
           name: Referer
@@ -758,7 +758,23 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    -
+                      title: 'Et corporis et libero blanditiis quam ut.'
+                      slug: et-corporis-et-libero-blanditiis-quam-ut
+                      excerpt: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-09'
+                      author:
+                        first_name: 'Miss Adelle Wintheiser'
+                        last_name: Lind
+                        image: null
                   links:
                     first: 'http://api.myapi.com/blog-posts?page=1'
                     last: 'http://api.myapi.com/blog-posts?page=1'
@@ -766,7 +782,7 @@ paths:
                     next: null
                   meta:
                     current_page: 1
-                    from: null
+                    from: 1
                     last_page: 1
                     links:
                       -
@@ -783,12 +799,70 @@ paths:
                         active: false
                     path: 'http://api.myapi.com/blog-posts'
                     per_page: 15
-                    to: null
-                    total: 0
+                    to: 1
+                    total: 1
                 properties:
                   data:
                     type: array
-                    example: []
+                    example:
+                      -
+                        title: 'Et corporis et libero blanditiis quam ut.'
+                        slug: et-corporis-et-libero-blanditiis-quam-ut
+                        excerpt: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-09'
+                        author:
+                          first_name: 'Miss Adelle Wintheiser'
+                          last_name: Lind
+                          image: null
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Et corporis et libero blanditiis quam ut.'
+                        slug:
+                          type: string
+                          example: et-corporis-et-libero-blanditiis-quam-ut
+                        excerpt:
+                          type: string
+                          example: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                        tags:
+                          type: array
+                          example:
+                            -
+                              name: php
+                            -
+                              name: laravel
+                            -
+                              name: react
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                example: php
+                        publish_date:
+                          type: string
+                          example: '2024-07-09'
+                        author:
+                          type: object
+                          properties:
+                            first_name:
+                              type: string
+                              example: 'Miss Adelle Wintheiser'
+                            last_name:
+                              type: string
+                              example: Lind
+                            image:
+                              type: string
+                              example: null
                   links:
                     type: object
                     properties:
@@ -811,8 +885,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       last_page:
                         type: integer
                         example: 1
@@ -850,11 +924,11 @@ paths:
                         type: integer
                         example: 15
                       to:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       total:
                         type: integer
-                        example: 0
+                        example: 1
       tags:
         - Website
       security: []
@@ -1586,7 +1660,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: occaecati
+        example: ut
         required: true
         schema:
           type: string
@@ -1828,8 +1902,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://api.myapi.com/blog-post-tags/et?page=1'
-                    last: 'http://api.myapi.com/blog-post-tags/et?page=1'
+                    first: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                    last: 'http://api.myapi.com/blog-post-tags/quia?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1842,14 +1916,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://api.myapi.com/blog-post-tags/et?page=1'
+                        url: 'http://api.myapi.com/blog-post-tags/quia?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://api.myapi.com/blog-post-tags/et'
+                    path: 'http://api.myapi.com/blog-post-tags/quia'
                     per_page: 15
                     to: null
                     total: 0
@@ -1862,10 +1936,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/et?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/quia?page=1'
                       last:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/et?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/quia?page=1'
                       prev:
                         type: string
                         example: null
@@ -1892,7 +1966,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://api.myapi.com/blog-post-tags/et?page=1'
+                            url: 'http://api.myapi.com/blog-post-tags/quia?page=1'
                             label: '1'
                             active: true
                           -
@@ -1913,7 +1987,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/et'
+                        example: 'http://api.myapi.com/blog-post-tags/quia'
                       per_page:
                         type: integer
                         example: 15
@@ -1931,7 +2005,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: et
+        example: quia
         required: true
         schema:
           type: string
@@ -1961,19 +2035,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: voluptates
+                  example: repellat
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: leonora.trantow@example.org
+                  example: billie12@example.com
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: et
+                  example: enim
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: optio
+                  example: autem
               required:
                 - name
                 - email
@@ -2006,11 +2080,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: uxkqiegihxaobvzumpqkbw
+                  example: ardewvemhxcooygizbbw
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: mrodriguez@example.org
+                  example: dare.randall@example.net
                 cf-turnstile-response:
                   type: string
                   description: ''
@@ -2021,7 +2095,7 @@ paths:
       security: []
 tags:
   -
-    name: Authenticiation
+    name: Authentication
     description: ''
   -
     name: Content

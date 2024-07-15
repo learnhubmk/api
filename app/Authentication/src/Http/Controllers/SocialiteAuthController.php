@@ -3,17 +3,18 @@
 namespace App\Authentication\Http\Controllers;
 
 use Exception;
+use App\Framework\Models\User;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\UrlParam;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Validation\ValidationException;
 use App\Authentication\Http\Resources\RedirectLinkResource;
 use App\Authentication\Http\Resources\AuthenticatedMemberResource;
-use Knuckles\Scribe\Attributes\UrlParam;
 
 class SocialiteAuthController
 {
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
     #[Endpoint(title: 'Socialite Login Redirect', description: 'This endpoint redirect to the Social SignIn Form')]
     #[UrlParam('provider', 'string', required: true, enum: ["github", "google", "linkedin"], example: "google")]
     public function redirect($provider)
@@ -23,7 +24,7 @@ class SocialiteAuthController
         return new RedirectLinkResource(Socialite::driver($provider)->stateless()->redirect()->getTargetUrl());
     }
 
-    #[Group('Authenticiation')]
+    #[Group('Authentication')]
     #[Endpoint(title: 'Socialite Login Callback', description: 'This endpoint sign in the users with Google, Github or LinkedIn Account')]
     #[UrlParam('provider', 'string', required: true, enum: ["github", "google", "linkedin"], example: "google")]
     public function handleCallback($provider)
@@ -31,7 +32,12 @@ class SocialiteAuthController
         $this->validateProvider($provider);
 
         try {
-            $user = Socialite::driver($provider)->stateless()->user();
+            $sociliteUser = Socialite::driver($provider)->stateless()->user();
+            $user = User::where('email', $sociliteUser->email)->first();
+
+            if (!$user) {
+                abort(404, __('auth.failed'));
+            }
 
         } catch (Exception $e) {
             return response()->json([

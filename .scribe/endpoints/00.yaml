@@ -1,4 +1,4 @@
-name: Authenticiation
+name: Authentication
 description: ''
 endpoints:
   -
@@ -6,7 +6,7 @@ endpoints:
       - GET
     uri: admin/user
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -38,7 +38,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - E6a3Vhe58D1ZPad4cvf6kgb
+      - vV5d6Z3c1P4kgf8eEaah6bD
     controller: null
     method: null
     route: null
@@ -48,7 +48,7 @@ endpoints:
       - POST
     uri: admin/login
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -69,7 +69,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: bret44@example.com
+        example: mortimer.ortiz@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -78,14 +78,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: consectetur
+        example: quibusdam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: bret44@example.com
-      password: consectetur
+      email: mortimer.ortiz@example.com
+      password: quibusdam
     fileParameters: []
     responses: []
     responseFields: []
@@ -99,7 +99,7 @@ endpoints:
       - POST
     uri: admin/logout
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -122,7 +122,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - agckZ45eDv83hPdEV6bf1a6
+      - 5h41ke63dDPZV6gabafv8cE
     controller: null
     method: null
     route: null
@@ -132,7 +132,7 @@ endpoints:
       - GET
     uri: content/user
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -164,7 +164,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - VfPaZdE46c8k65Dahev3g1b
+      - d3ea1gb6f85ak6hZvPVc4DE
     controller: null
     method: null
     route: null
@@ -174,7 +174,7 @@ endpoints:
       - POST
     uri: content/login
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -195,7 +195,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: murphy.enid@example.org
+        example: spencer.casey@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -204,14 +204,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: nemo
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: murphy.enid@example.org
-      password: nemo
+      email: spencer.casey@example.com
+      password: ut
     fileParameters: []
     responses: []
     responseFields: []
@@ -225,7 +225,7 @@ endpoints:
       - POST
     uri: content/logout
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -248,7 +248,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - hv66EgcPa4e3158ZbVDdkfa
+      - 1d34baZvD86cfPgVkhe5E6a
     controller: null
     method: null
     route: null
@@ -258,7 +258,7 @@ endpoints:
       - GET
     uri: user
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -290,7 +290,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 5E1c4e68vhkgVd3ZaabDP6f
+      - hcDkfg18aV6e35ZvabdEP64
     controller: null
     method: null
     route: null
@@ -300,7 +300,7 @@ endpoints:
       - POST
     uri: login
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -321,7 +321,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: pearlie74@example.net
+        example: gideon88@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -330,14 +330,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: possimus
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: pearlie74@example.net
-      password: possimus
+      email: gideon88@example.org
+      password: voluptatem
     fileParameters: []
     responses: []
     responseFields: []
@@ -351,7 +351,7 @@ endpoints:
       - POST
     uri: logout
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -374,7 +374,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 5abe6PEZvha84DgdV3k1c6f
+      - kVZ4hc3baEvPdf6g5aD86e1
     controller: null
     method: null
     route: null
@@ -384,7 +384,7 @@ endpoints:
       - GET
     uri: 'login/{provider}/redirect'
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -422,9 +422,9 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: e3717888-9993-49cf-b7b2-6273d37b25ce
+          x-treblle-trace-id: d7d21894-ec89-41c0-acb4-f7dc20cc3303
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjQyYjkxTkF5MGNtTXJnWjFtRFIzL2c9PSIsInZhbHVlIjoic083eXJ0SFBxZGtCNHVGaVd6amNMVTlPK0t5TkFBSmV3ODFqTEFXR011Z3daL1ZnNWJjdmdabllrZ0dTNlNSVnNWVWsxVzE0bnlJUERtMFVSeTBEcTZRUFFJYXRyeExoQW5WZXNMa1JLZENVWGVBTW9xMVNVYVVKMkltL0Nyak4iLCJtYWMiOiJhYzI1MDZkNDc3MzhkOTMwYWRhNDQwOWY5NjZhODFiMzAxYzExMWJhMzQwMWNmZTVmZmU1NjBjMjYzOGZlZWZiIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InVMWkM1WTRjVzNRS05LVjlscHh6MWc9PSIsInZhbHVlIjoiUWNvREdRWnhRcUNIWHR3cFpxSVZhVmtoRUZIM3BDUTdnTFBONkhsQy9weVdmVE5aRlFCTUtiTG5xUnNkS3R6bWUxR0o2STlvU0V3aVRPczRlUFVMelVTb0dxVFlBYytFMS9rbC9ydGYwUWtRSmpjdnBkamhzL3dkYU85SUdxcmEiLCJtYWMiOiJmYTc2YWNlMTgwZDU2MDFiNmVjMzA1NGI1MmRkMjE4ZTBjNGM0NmY0YzI5ZTI1YzgxNDA0Yjc0YzljM2M1ZjUzIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:36 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Iml3eFZBRTFJQWJENXhVSG5IQ1VKTWc9PSIsInZhbHVlIjoiQUF2aVVNaEZYaXZXY05USC9UWmZ1eGFjdVJNR2ZDRTFWMFpwUDBVSC8xU3I4Z1BBM0w0dVBIMkJGQm5KS2ZyR01tMVE3SDFwdFdEdHQ1d2xiY2VBTGliK1c4VGQ5VFJGNHorajhxY1BOV1AwakJITkhaY0lTU0JVN3dzdmxWOUkiLCJtYWMiOiI0NTc4MGVmM2NjMmU1Zjc0YzdiMzk0NjdiZjVkYzkxNzdlMGEzMjQ4YjUwNGY3ZjcxZjg4MDYxZWQ3NWZkOWQyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ild1WW52eklVNXVaa29SMmtZTVdXWmc9PSIsInZhbHVlIjoiQ1RDZDZkcng0NXI1V3kza1hCWE8zU1VxTlMxUmcvK2RWQXNlK1VvVlQwN01EeEdpMU53UjVuYkJZejFrcnFpaHVvbVJkUDJtZ2dHYkpLN3ovZEovbU1GOTg5K21xeWdaNTBKNVhsZXNIYUpmM2M5NU9aRWk4WFcrQmhlOG1CRFMiLCJtYWMiOiJjYWFmODRhYjg5ZDljMzZjMjYyZDdlNjMxODcxNGYxZDQwZjI1MjA3ZDE4ZWFiMDk2MmY5YjI3ODc2YTA2ZTlhIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -438,7 +438,7 @@ endpoints:
       - GET
     uri: 'login/{provider}/callback'
     metadata:
-      groupName: Authenticiation
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -476,9 +476,9 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: b939535c-73b1-497f-9701-9c99ea5b3ce1
+          x-treblle-trace-id: 1ec306a8-6f56-4cb2-8a6c-1ae69587fc1b
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlA5dDZ0cWFaT2lSOWE4RmQvODNDaWc9PSIsInZhbHVlIjoiSXJtb2wzb3Q2VmFFQkRzOHdyOXU0WmhaVjJsVTdDQTVoMzYydDlSdTNYUlZkODhvODNhOTdMcndldXVwcGhMNVpFaGk3aVJhQ0xpR3VLSWFUUzYxdVpXSGl4dWFsU0t1Z0VEVnhNU05BaS9QTHVlNkJZTWJCMmVOOWRZL1pxdnoiLCJtYWMiOiIyZjM0NjA0NzRiN2ZkYTNmNmUwMjc0NDUyNjljOWNiNzJiNThhZGJlZmFkYWI2ZGZmM2VhMWE5NmU2NGY3MDI2IiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6InlOQ0lQenVqaWpTREhYSlJOMGRxTWc9PSIsInZhbHVlIjoia0FIN3BYNEY4QVoyczFhaWdOaUUwZVV4ZzVGU0ZOaEs5emRCNis1SGIreWZ0VWxoNzQ5c2FYMkEwSnhEYlMvK1AreVVrcmtQUUhpU1k4Y1kraWxrZXRIc3pRd0o5V2dpRWJsY1BpZ09kdzl0bEFnT1pRVnJFVmtwVTFwUExVdjYiLCJtYWMiOiI2NTFiMTEwYmJjYTA2OTBkYWQ3YjQ1ZDA1YzMwMGNhY2M0YWMxYTY4YjMxOTRkNWUxYTM1YjNjNjA0NzZlZmRlIiwidGFnIjoiIn0%3D; expires=Fri, 12 Jul 2024 19:23:37 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkQzVWNwd3k2eHNpRFgvTmlITWg0OFE9PSIsInZhbHVlIjoiQzhHSisvTFRBYUlMRlRSdk5Wb25FMnRFWGhDSFFVYXRDM0hEL0xpcm0vdlpjVHBiMWVhemR6ZmNHMTNWSkZkdUhMUTlNNHJwSHYxNFFWQXhJRytrMzVCcE5TQVM1T2pMR1Nod2t4UTZZNWxnUC9rZk5KZlM1SXM4U0RUOG4zWDYiLCJtYWMiOiIzNTI3NDA3NWM5NmNjYmVlOTJiYWVkMmZlYTNkZmRkNGZjYjU3YTE2MzM1M2E3MDI4N2ZhMzMzN2U0YjJhODE0IiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6IlRPU3pUSGNnaVBsM0VTWEl6bDdSTEE9PSIsInZhbHVlIjoiV0NOaEtoNHdPMFlFcTdNSXVCWmZXUEthai9lMmYrbFVhemxNYndMVmNadDRGTVZOSGlvSUlNQnFzZUttRkNodjloQlNOM0tCRUQyR3A1bm1VMi9iOFZST0c1WjdBTkM1eU85V1RtK3pudlZJbUtKcVo4SHpHOFFhSk1tMStPTU8iLCJtYWMiOiJmYjA3NmRlZjEzNWQzNDYyOWE4YzY3MjkyOWFmMTg1MTMyYjYxNjMwZDE0ZjdkYTJjNGNjNjQxNDMwNjdlMzkwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
