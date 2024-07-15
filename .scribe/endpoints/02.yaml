@@ -1,22 +1,22 @@
-name: Member
+name: General
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: user
+    uri: /
     metadata:
-      groupName: Member
+      groupName: General
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Index
-      description: 'This endpoint enables member information after login'
-      authenticated: true
+      title: ''
+      description: ''
+      authenticated: false
       custom: []
     headers:
-      Referer: learnhub.mk
       Accept: application/json
+      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -26,68 +26,54 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"name":"LearnHub.mk API","version":1,"message":"Welcome to the LearnHub.mk API!"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-treblle-trace-id: ed6e64fd-531a-426a-883c-36da9261cb45
           vary: Origin
         description: null
         custom: []
     responseFields: []
-    auth:
-      - headers
-      - Referer
-      - 5eZdaEhPbc6v3a4D1gf6Vk8
+    auth: []
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - POST
-    uri: login
+      - GET
+    uri: sanctum/csrf-cookie
     metadata:
-      groupName: Member
+      groupName: General
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Login
-      description: 'This endpoint enables users with member role to sign in'
+      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      description: ''
       authenticated: false
       custom: []
     headers:
       Accept: application/json
       Referer: learnhub.mk
-      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: ''
-        required: true
-        example: rwindler@example.net
-        type: password
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: similique
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      email: rwindler@example.net
-      password: similique
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 204
+        content: ''
+        headers:
+          cache-control: 'no-cache, private'
+          vary: Origin
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik9tTk1YdDQ3V0NoYzFOOXNzdGYvMHc9PSIsInZhbHVlIjoiR01GZmhnc3FDbXhIU3VrN2dzdGVXLzFFY2RiRjdzN0x0WG1Na21wTXZLUWR2SE5kd29UMW9oY2R5N2NxR2VlVzN3U2p1RExkdUFPVUc0ckNnLzlOaDBFeStUd3FWR0xlSmZzYmxiSkVSdHhXRVJuSm4xOHZCWFlzUXdubk9OQTIiLCJtYWMiOiIxYTYxZDg1Y2NkMmUzNTdhZTlmNzkzMDI3ZGMwYWQ4YzQzY2RlMjViNmMzOGY1NmVlNWE4N2I1YjY2YTc4MTkyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ik9mVno0aFIvYjN5akowdGFZMnJhOEE9PSIsInZhbHVlIjoiZW1PaTZXM21ENzNDbjJ6Vk1FVE1CeTlKRU1WWCtqWXhHdVRvY1BGd1c0Qk1yZTZqT01Nb01iVEs0c21IcXJWTUFKV2tTVG5oKzlWZXZkcFc1YnI1NUJMRDc3MHBOclZNMU9ESG1FMWhleXgxTHVyYkxkZ1BBTUF2QlVmbzFYMDciLCJtYWMiOiIyYjRkNDE5ZWQ1MzUxNDAxOGY4OGU3Mzc1Y2U4MDYxOGE4MzVhODYwZmE0ZGZhNThhNWM2ZWVmYmM2MTlhMGUyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null

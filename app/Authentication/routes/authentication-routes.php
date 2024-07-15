@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Authentication\Http\Controllers\AdminAuthController;
 use App\Authentication\Http\Controllers\MemberAuthController;
 use App\Authentication\Http\Controllers\ContentManagerAuthController;
+use App\Authentication\Http\Controllers\SocialiteAuthController;
 
 Route::group(['middleware' => ['auth:sanctum', 'treblle', 'stateful']], function () {
     /**ADMIN*/
@@ -26,4 +27,8 @@ Route::group(['middleware' => ['auth:sanctum', 'treblle', 'stateful']], function
     Route::get('/user', [MemberAuthController::class, 'index'])->name('index');
     Route::post('/login', [MemberAuthController::class, 'login'])->name('login')->withoutMiddleware(['auth:sanctum']);
     Route::post('/logout', [MemberAuthController::class, 'logout'])->name('logout');
+
+    /**SOCALITE AUTH */
+    Route::get('/login/{provider}/redirect', [SocialiteAuthController::class, 'redirect'])->withoutMiddleware(['auth:sanctum']);
+    Route::get('/login/{provider}/callback', [SocialiteAuthController::class, 'handleCallback'])->withoutMiddleware(['auth:sanctum']);
 });

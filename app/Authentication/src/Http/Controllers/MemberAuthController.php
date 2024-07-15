@@ -15,16 +15,16 @@ use App\Authentication\Http\Requests\MemberLogoutRequest;
 class MemberAuthController extends Controller
 {
     #[Authenticated]
-    #[Endpoint(title: 'Index', description: 'This endpoint enables member information after login')]
-    #[Group('Member')]
+    #[Endpoint(title: 'Member User', description: 'This endpoint enables member information after login')]
+    #[Group('Authentication')]
 
     public function index(): AuthResource
     {
         return new AuthResource(auth()->user());
     }
 
-    #[Endpoint(title: 'Login', description: 'This endpoint enables users with member role to sign in')]
-    #[Group('Member')]
+    #[Endpoint(title: 'Member Login', description: 'This endpoint enables users with member role to sign in')]
+    #[Group('Authentication')]
     #[BodyParam('email', 'password', required: true)]
 
     public function login(MemberLoginRequest $request): AuthResource
@@ -37,8 +37,8 @@ class MemberAuthController extends Controller
     }
 
     #[Authenticated]
-    #[Endpoint(title: 'Logout', description: 'This endpoint enables users with Member role to log out')]
-    #[Group('Content')]
+    #[Endpoint(title: 'Memeber Logout', description: 'This endpoint enables users with Member role to log out')]
+    #[Group('Authentication')]
 
     public function logout(MemberLogoutRequest $request)
     {
