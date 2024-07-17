@@ -18,7 +18,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -77,7 +77,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: a0697ca5-993d-4565-b176-5c96bde968e2
+          x-treblle-trace-id: 06a99b39-feb2-48ff-a6e8-6846a9b15326
           vary: Origin
         description: null
         custom: []
@@ -102,7 +102,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -173,7 +173,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -198,7 +198,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 44895910-023f-476d-a12c-64d5e22ad2e6
+          x-treblle-trace-id: 36f3b25b-2738-4a20-81a8-acb6c274585d
           vary: Origin
         description: null
         custom: []
@@ -223,7 +223,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
       Content-Type: application/json
     urlParameters:
       blogPost_id:
@@ -314,7 +314,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters:
       blogPost_id:
         name: blogPost_id
@@ -354,7 +354,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
       Content-Type: application/json
     urlParameters:
       blogPost_id:
@@ -415,7 +415,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -456,7 +456,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
       Content-Type: application/json
     urlParameters:
       blogPostTag_id:
@@ -507,7 +507,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters:
       blogPostTag_id:
         name: blogPostTag_id
