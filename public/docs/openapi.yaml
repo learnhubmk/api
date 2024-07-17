@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: ''
+    url: 'https://staging-api.learnhub.mk'
 paths:
   /admin/user:
     get:
@@ -61,11 +61,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: brandt93@example.com
+                  example: johnston.yazmin@example.net
                 password:
                   type: string
                   description: ''
-                  example: velit
+                  example: vitae
               required:
                 - email
                 - password
@@ -140,11 +140,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: ihaley@example.com
+                  example: elody.bashirian@example.net
                 password:
                   type: string
                   description: ''
-                  example: accusamus
+                  example: dignissimos
               required:
                 - email
                 - password
@@ -219,11 +219,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: conroy.domenico@example.net
+                  example: georgette.block@example.com
                 password:
                   type: string
                   description: ''
-                  example: a
+                  example: aut
               required:
                 - email
                 - password
@@ -324,10 +324,413 @@ paths:
         required: true
         schema:
           type: string
+  /content/blog-posts:
+    get:
+      summary: 'Blog posts'
+      operationId: blogPosts
+      description: 'This endpoint list all blog post'
+      parameters:
+        -
+          in: query
+          name: title
+          description: ''
+          example: '?title=learnhub'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?title=learnhub'
+        -
+          in: query
+          name: tags
+          description: ''
+          example: '?tags=[php,laravel,react]'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?tags=[php,laravel,react]'
+        -
+          in: query
+          name: author
+          description: ''
+          example: '?author=john'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?author=john'
+        -
+          in: query
+          name: sort
+          description: ''
+          example: '?sort=title'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?sort=title'
+            enum:
+              - id
+              - title
+              - publish_date
+              - created_at
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Content
+      security: []
+    post:
+      summary: 'Create Blog posts'
+      operationId: createBlogPosts
+      description: 'This endpoint will create a single blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Example Blog Post Title '
+                excerpt:
+                  type: string
+                  description: ''
+                  example: 'This is test blogpost example'
+                content:
+                  type: string
+                  description: ''
+                  example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
+                tags:
+                  type: array
+                  description: ''
+                  example: '[1,2,3]'
+                  items:
+                    type: string
+              required:
+                - title
+                - excerpt
+                - content
+                - tags
+      security: []
+  '/content/blog-posts/{blogPost_id}':
+    get:
+      summary: 'Blog post'
+      operationId: blogPost
+      description: 'This endpoint returns a single blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Content
+      security: []
+    patch:
+      summary: 'Update Blog post'
+      operationId: updateBlogPost
+      description: 'This endpoint will update a single blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Example Blog Post Title '
+                excerpt:
+                  type: string
+                  description: ''
+                  example: 'This is test blogpost example'
+                slug:
+                  type: string
+                  description: ''
+                  example: 'example-blog-post-title '
+                content:
+                  type: string
+                  description: ''
+                  example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
+                tags:
+                  type: array
+                  description: ''
+                  example: '[1,2,3]'
+                  items:
+                    type: string
+      security: []
+    delete:
+      summary: 'Delete Blog posts'
+      operationId: deleteBlogPosts
+      description: 'This endpoint deletes blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      security: []
+    parameters:
+      -
+        in: path
+        name: blogPost_id
+        description: 'The ID of the blogPost.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/content/blog-posts/{blogPost_id}/statuses':
+    patch:
+      summary: 'Publish/Unpublish Blog posts'
+      operationId: publishUnpublishBlogPosts
+      description: 'This endpoint publish or unpublish blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                publish_date:
+                  type: date
+                  description: ''
+                  example: '2024-01-01'
+                status:
+                  type: string
+                  description: ''
+                  example: 'draft, published, in_review, archive'
+              required:
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: blogPost_id
+        description: 'The ID of the blogPost.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /content/blog-posts-tags:
+    post:
+      summary: 'Create Blog post tag'
+      operationId: createBlogPostTag
+      description: 'This endpoint will create a single blog post tag'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: test
+              required:
+                - name
+      security: []
+  '/content/blog-posts-tags/{blogPostTag_id}':
+    patch:
+      summary: 'Update Blog post tag'
+      operationId: updateBlogPostTag
+      description: 'This endpoint will update a single blog post tag'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: test
+              required:
+                - name
+      security: []
+    delete:
+      summary: 'Delete Blog post tag'
+      operationId: deleteBlogPostTag
+      description: 'This endpoint deletes blog post tag'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      security: []
+    parameters:
+      -
+        in: path
+        name: blogPostTag_id
+        description: 'The ID of the blogPostTag.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /:
+    get:
+      summary: ''
+      operationId: get
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  name: 'LearnHub.mk API'
+                  version: 1
+                  message: 'Welcome to the LearnHub.mk API!'
+                properties:
+                  name:
+                    type: string
+                    example: 'LearnHub.mk API'
+                  version:
+                    type: integer
+                    example: 1
+                  message:
+                    type: string
+                    example: 'Welcome to the LearnHub.mk API!'
+      tags:
+        - General
+      security: []
+  /sanctum/csrf-cookie:
+    get:
+      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: myapi.local
+          schema:
+            type: string
+      responses:
+        204:
+          description: ''
+      tags:
+        - General
+      security: []
   '/register/{provider}/redirect':
     get:
-      summary: 'Socialite Register Redirect'
-      operationId: socialiteRegisterRedirect
+      summary: 'Socialite Member Register Redirect'
+      operationId: socialiteMemberRegisterRedirect
       description: 'This endpoint redirect to the Social SignUp Form'
       parameters:
         -
@@ -355,7 +758,7 @@ paths:
                         type: string
                         example: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
       tags:
-        - Authentication
+        - Platform
       security: []
     parameters:
       -
@@ -368,8 +771,8 @@ paths:
           type: string
   '/register/{provider}/callback':
     get:
-      summary: 'Socialite Register Callback'
-      operationId: socialiteRegisterCallback
+      summary: 'Socialite Member Register Callback'
+      operationId: socialiteMemberRegisterCallback
       description: 'This endpoint sign up the users with Google, Github or LinkedIn Account'
       parameters:
         -
@@ -471,8 +874,8 @@ paths:
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
                     -
-                      file: /var/www/app/Authentication/src/Http/Controllers/MemberSocialAuthController.php
-                      line: 35
+                      file: /var/www/app/Platform/src/Http/Controllers/MemberSocialAuthController.php
+                      line: 36
                       function: user
                       class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                       type: '->'
@@ -480,7 +883,7 @@ paths:
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
                       line: 46
                       function: handleCallback
-                      class: App\Authentication\Http\Controllers\MemberSocialAuthController
+                      class: App\Platform\Http\Controllers\MemberSocialAuthController
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
@@ -1015,8 +1418,8 @@ paths:
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
                       -
-                        file: /var/www/app/Authentication/src/Http/Controllers/MemberSocialAuthController.php
-                        line: 35
+                        file: /var/www/app/Platform/src/Http/Controllers/MemberSocialAuthController.php
+                        line: 36
                         function: user
                         class: SocialiteProviders\Manager\OAuth2\AbstractProvider
                         type: '->'
@@ -1024,7 +1427,7 @@ paths:
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
                         line: 46
                         function: handleCallback
-                        class: App\Authentication\Http\Controllers\MemberSocialAuthController
+                        class: App\Platform\Http\Controllers\MemberSocialAuthController
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
@@ -1483,7 +1886,7 @@ paths:
                           type: string
                           example: '::'
       tags:
-        - Authentication
+        - Platform
       security: []
     parameters:
       -
@@ -1494,409 +1897,6 @@ paths:
         required: true
         schema:
           type: string
-  /content/blog-posts:
-    get:
-      summary: 'Blog posts'
-      operationId: blogPosts
-      description: 'This endpoint list all blog post'
-      parameters:
-        -
-          in: query
-          name: title
-          description: ''
-          example: '?title=learnhub'
-          required: false
-          schema:
-            type: string
-            description: ''
-            example: '?title=learnhub'
-        -
-          in: query
-          name: tags
-          description: ''
-          example: '?tags=[php,laravel,react]'
-          required: false
-          schema:
-            type: string
-            description: ''
-            example: '?tags=[php,laravel,react]'
-        -
-          in: query
-          name: author
-          description: ''
-          example: '?author=john'
-          required: false
-          schema:
-            type: string
-            description: ''
-            example: '?author=john'
-        -
-          in: query
-          name: sort
-          description: ''
-          example: '?sort=title'
-          required: false
-          schema:
-            type: string
-            description: ''
-            example: '?sort=title'
-            enum:
-              - id
-              - title
-              - publish_date
-              - created_at
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Content
-      security: []
-    post:
-      summary: 'Create Blog posts'
-      operationId: createBlogPosts
-      description: 'This endpoint will create a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: ''
-                  example: 'Example Blog Post Title '
-                excerpt:
-                  type: string
-                  description: ''
-                  example: 'This is test blogpost example'
-                content:
-                  type: string
-                  description: ''
-                  example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
-                tags:
-                  type: array
-                  description: ''
-                  example: '[1,2,3]'
-                  items:
-                    type: string
-              required:
-                - title
-                - excerpt
-                - content
-                - tags
-      security: []
-  '/content/blog-posts/{blogPost_id}':
-    get:
-      summary: 'Blog post'
-      operationId: blogPost
-      description: 'This endpoint returns a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Content
-      security: []
-    patch:
-      summary: 'Update Blog post'
-      operationId: updateBlogPost
-      description: 'This endpoint will update a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: ''
-                  example: 'Example Blog Post Title '
-                excerpt:
-                  type: string
-                  description: ''
-                  example: 'This is test blogpost example'
-                slug:
-                  type: string
-                  description: ''
-                  example: 'example-blog-post-title '
-                content:
-                  type: string
-                  description: ''
-                  example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
-                tags:
-                  type: array
-                  description: ''
-                  example: '[1,2,3]'
-                  items:
-                    type: string
-      security: []
-    delete:
-      summary: 'Delete Blog posts'
-      operationId: deleteBlogPosts
-      description: 'This endpoint deletes blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      security: []
-    parameters:
-      -
-        in: path
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/content/blog-posts/{blogPost_id}/statuses':
-    patch:
-      summary: 'Publish/Unpublish Blog posts'
-      operationId: publishUnpublishBlogPosts
-      description: 'This endpoint publish or unpublish blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                publish_date:
-                  type: date
-                  description: ''
-                  example: '2024-01-01'
-                status:
-                  type: string
-                  description: ''
-                  example: 'draft, published, in_review, archive'
-              required:
-                - status
-      security: []
-    parameters:
-      -
-        in: path
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /content/blog-posts-tags:
-    post:
-      summary: 'Create Blog post tag'
-      operationId: createBlogPostTag
-      description: 'This endpoint will create a single blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: test
-              required:
-                - name
-      security: []
-  '/content/blog-posts-tags/{blogPostTag_id}':
-    patch:
-      summary: 'Update Blog post tag'
-      operationId: updateBlogPostTag
-      description: 'This endpoint will update a single blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: test
-              required:
-                - name
-      security: []
-    delete:
-      summary: 'Delete Blog post tag'
-      operationId: deleteBlogPostTag
-      description: 'This endpoint deletes blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Content
-      security: []
-    parameters:
-      -
-        in: path
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /:
-    get:
-      summary: ''
-      operationId: get
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  name: 'LearnHub.mk API'
-                  version: 1
-                  message: 'Welcome to the LearnHub.mk API!'
-                properties:
-                  name:
-                    type: string
-                    example: 'LearnHub.mk API'
-                  version:
-                    type: integer
-                    example: 1
-                  message:
-                    type: string
-                    example: 'Welcome to the LearnHub.mk API!'
-      tags:
-        - General
-      security: []
-  /sanctum/csrf-cookie:
-    get:
-      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: myapi.local
-          schema:
-            type: string
-      responses:
-        204:
-          description: ''
-      tags:
-        - General
-      security: []
   /blog-posts:
     get:
       summary: 'Blog posts'
@@ -1907,12 +1907,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: non
+          example: autem
           required: false
           schema:
             type: string
             description: ''
-            example: non
+            example: autem
         -
           in: header
           name: Referer
@@ -1930,9 +1930,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Non numquam exercitationem modi minima eveniet aut.'
-                      slug: non-numquam-exercitationem-modi-minima-eveniet-aut
-                      excerpt: 'Consequatur odit officiis illo iure et.'
+                      title: 'Reiciendis facere vel autem modi fugit et ea occaecati.'
+                      slug: reiciendis-facere-vel-autem-modi-fugit-et-ea-occaecati
+                      excerpt: 'Aut quam doloribus ipsum soluta.'
                       tags:
                         -
                           name: php
@@ -1942,8 +1942,8 @@ paths:
                           name: react
                       publish_date: '2024-07-17'
                       author:
-                        first_name: 'Dr. Marlon Hand I'
-                        last_name: Anderson
+                        first_name: 'Ms. Anna Hackett'
+                        last_name: Fritsch
                         image: null
                   links:
                     first: 'http://learnhub.test/blog-posts?page=1'
@@ -1976,9 +1976,9 @@ paths:
                     type: array
                     example:
                       -
-                        title: 'Non numquam exercitationem modi minima eveniet aut.'
-                        slug: non-numquam-exercitationem-modi-minima-eveniet-aut
-                        excerpt: 'Consequatur odit officiis illo iure et.'
+                        title: 'Reiciendis facere vel autem modi fugit et ea occaecati.'
+                        slug: reiciendis-facere-vel-autem-modi-fugit-et-ea-occaecati
+                        excerpt: 'Aut quam doloribus ipsum soluta.'
                         tags:
                           -
                             name: php
@@ -1988,21 +1988,21 @@ paths:
                             name: react
                         publish_date: '2024-07-17'
                         author:
-                          first_name: 'Dr. Marlon Hand I'
-                          last_name: Anderson
+                          first_name: 'Ms. Anna Hackett'
+                          last_name: Fritsch
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Non numquam exercitationem modi minima eveniet aut.'
+                          example: 'Reiciendis facere vel autem modi fugit et ea occaecati.'
                         slug:
                           type: string
-                          example: non-numquam-exercitationem-modi-minima-eveniet-aut
+                          example: reiciendis-facere-vel-autem-modi-fugit-et-ea-occaecati
                         excerpt:
                           type: string
-                          example: 'Consequatur odit officiis illo iure et.'
+                          example: 'Aut quam doloribus ipsum soluta.'
                         tags:
                           type: array
                           example:
@@ -2026,10 +2026,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Dr. Marlon Hand I'
+                              example: 'Ms. Anna Hackett'
                             last_name:
                               type: string
-                              example: Anderson
+                              example: Fritsch
                             image:
                               type: string
                               example: null
@@ -2830,7 +2830,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: cupiditate
+        example: optio
         required: true
         schema:
           type: string
@@ -3072,8 +3072,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/vel?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/vel?page=1'
                     prev: null
                     next: null
                   meta:
@@ -3086,14 +3086,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/vel?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/perspiciatis'
+                    path: 'http://learnhub.test/blog-post-tags/vel'
                     per_page: 15
                     to: null
                     total: 0
@@ -3106,10 +3106,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/vel?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/vel?page=1'
                       prev:
                         type: string
                         example: null
@@ -3136,7 +3136,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/perspiciatis?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/vel?page=1'
                             label: '1'
                             active: true
                           -
@@ -3157,7 +3157,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/perspiciatis'
+                        example: 'http://learnhub.test/blog-post-tags/vel'
                       per_page:
                         type: integer
                         example: 15
@@ -3175,7 +3175,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: perspiciatis
+        example: vel
         required: true
         schema:
           type: string
@@ -3205,19 +3205,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: veritatis
+                  example: ab
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: ischroeder@example.net
+                  example: casper96@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: explicabo
+                  example: vel
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: voluptatem
+                  example: voluptas
               required:
                 - name
                 - email
@@ -3250,11 +3250,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: lrrwrlwkia
+                  example: lvjotwqxbfnhz
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: norval08@example.net
+                  example: wdenesik@example.net
                 cf-turnstile-response:
                   type: string
                   description: ''
@@ -3272,6 +3272,9 @@ tags:
     description: ''
   -
     name: General
+    description: ''
+  -
+    name: Platform
     description: ''
   -
     name: Website
