@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Authentication\Http\Controllers;
+namespace App\Platform\Http\Controllers;
 
 use App\Authentication\Http\Resources\AuthenticatedMemberResource;
 use App\Authentication\Http\Resources\RedirectLinkResource;
 use App\Framework\Enums\RoleName;
 use App\Framework\Models\User;
+use App\Platform\Models\MemberProfile;
 use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
@@ -14,8 +15,8 @@ use Laravel\Socialite\Facades\Socialite;
 
 class MemberSocialAuthController
 {
-    #[Group('Authentication')]
-    #[Endpoint(title: 'Socialite Register Redirect', description: 'This endpoint redirect to the Social SignUp Form')]
+    #[Group('Platform')]
+    #[Endpoint(title: 'Socialite Member Register Redirect', description: 'This endpoint redirect to the Social SignUp Form')]
     #[UrlParam('provider', 'string', required: true, example: "google", enum: ["github", "google", "linkedin"])]
     public function redirect($provider)
     {
@@ -24,8 +25,8 @@ class MemberSocialAuthController
         return new RedirectLinkResource(Socialite::driver($provider)->stateless()->redirect()->getTargetUrl());
     }
 
-    #[Group('Authentication')]
-    #[Endpoint(title: 'Socialite Register Callback', description: 'This endpoint sign up the users with Google, Github or LinkedIn Account')]
+    #[Group('Platform')]
+    #[Endpoint(title: 'Socialite Member Register Callback', description: 'This endpoint sign up the users with Google, Github or LinkedIn Account')]
     #[UrlParam('provider', 'string', required: true, example: "google", enum: ["github", "google", "linkedin"])]
     public function handleCallback($provider)
     {
@@ -41,6 +42,17 @@ class MemberSocialAuthController
                 $user->save();
 
                 $user->assignRole(RoleName::MEMBER->value);
+
+                $getName = explode(' ', $socialiteUser->getName(), 2);
+                $firstName = $getName[0];
+                $lastName = $getName[1];
+
+                MemberProfile::create([
+                    'user_id' => $user->id,
+                    'first_name' => $firstName,
+                    'last_name' => $lastName,
+                    'image' => $socialiteUser->getAvatar(),
+                ]);
             }
 
         } catch (Exception $e) {
