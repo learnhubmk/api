@@ -1,5 +1,6 @@
 <?php
 
+use App\Authentication\Http\Controllers\MemberSocialAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Authentication\Http\Controllers\AdminAuthController;
 use App\Authentication\Http\Controllers\MemberAuthController;
@@ -31,4 +32,6 @@ Route::group(['middleware' => ['auth:sanctum', 'treblle', 'stateful']], function
     /**SOCALITE AUTH */
     Route::get('/login/{provider}/redirect', [SocialiteAuthController::class, 'redirect'])->withoutMiddleware(['auth:sanctum']);
     Route::get('/login/{provider}/callback', [SocialiteAuthController::class, 'handleCallback'])->withoutMiddleware(['auth:sanctum']);
+    Route::get('/register/{provider}/redirect', [MemberSocialAuthController::class, 'redirect'])->withoutMiddleware(['auth:sanctum']);
+    Route::get('/register/{provider}/callback', [MemberSocialAuthController::class, 'handleCallback'])->withoutMiddleware(['auth:sanctum']);
 });

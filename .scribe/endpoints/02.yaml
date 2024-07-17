@@ -16,7 +16,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -31,7 +31,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: ed6e64fd-531a-426a-883c-36da9261cb45
+          x-treblle-trace-id: e9876606-eec9-46f4-94a0-446d3b5738bd
           vary: Origin
         description: null
         custom: []
@@ -56,7 +56,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
+      Referer: myapi.local
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -71,7 +71,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik9tTk1YdDQ3V0NoYzFOOXNzdGYvMHc9PSIsInZhbHVlIjoiR01GZmhnc3FDbXhIU3VrN2dzdGVXLzFFY2RiRjdzN0x0WG1Na21wTXZLUWR2SE5kd29UMW9oY2R5N2NxR2VlVzN3U2p1RExkdUFPVUc0ckNnLzlOaDBFeStUd3FWR0xlSmZzYmxiSkVSdHhXRVJuSm4xOHZCWFlzUXdubk9OQTIiLCJtYWMiOiIxYTYxZDg1Y2NkMmUzNTdhZTlmNzkzMDI3ZGMwYWQ4YzQzY2RlMjViNmMzOGY1NmVlNWE4N2I1YjY2YTc4MTkyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ik9mVno0aFIvYjN5akowdGFZMnJhOEE9PSIsInZhbHVlIjoiZW1PaTZXM21ENzNDbjJ6Vk1FVE1CeTlKRU1WWCtqWXhHdVRvY1BGd1c0Qk1yZTZqT01Nb01iVEs0c21IcXJWTUFKV2tTVG5oKzlWZXZkcFc1YnI1NUJMRDc3MHBOclZNMU9ESG1FMWhleXgxTHVyYkxkZ1BBTUF2QlVmbzFYMDciLCJtYWMiOiIyYjRkNDE5ZWQ1MzUxNDAxOGY4OGU3Mzc1Y2U4MDYxOGE4MzVhODYwZmE0ZGZhNThhNWM2ZWVmYmM2MTlhMGUyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlNRa1NxS0lmcFBXeXRLNDhPWGFIWFE9PSIsInZhbHVlIjoiTlB2YS9ZRFJoTkdWM2o4Z1NhRFRpbUw1ekxuT1Y1Zkl5cTh6alhveTBKMmpLSVVuZEFiNk9YcGRUamd2QXFwK29DaXBUU1RzenFhZ3RLZmx0QjBSUzRVQlByU3JNQWxSaVVHT2tjc2drcnFZUkRhcXFsYUFlWm5SMDc5UnZ2MDEiLCJtYWMiOiI5ZDA2NDQyZWIzMzU3NmFiYTkyY2JlZmYyNGI2NjY1NDMwMDBhYzZhYmM1NTdmYzA1NGE1MzJiYTk1YWJjMWRiIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jul 2024 04:18:22 GMT; Max-Age=7200; path=/; domain=.myapi.local; samesite=lax; learnhub_session=eyJpdiI6IkFWaS9aL0swczEzcFhNdGwyUCs5NGc9PSIsInZhbHVlIjoieVNQSlBad2VhaXZZR3dMeldKNitXR215N0JHd0J1TzJQeVgrV1pCYXJHS0JOZVpaQ05OS3BIRm9oandsdU02MldDa2hselRFK1FMQlhNOENlUDFqdlN3UzBIZmVSZTVqWXFSMU5aS2NBdjhiU1lFZkJPVUF1ZkFjMEtocUlhVk8iLCJtYWMiOiJkZTVkNTFlMDBhMmQ0MzExYjA1OTQ0YTBlODYxMjBhNzdhYTdhNThmMWEzNjI0MzcxZjRkNzU1NWZkZWQ1YmUxIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jul 2024 04:18:22 GMT; Max-Age=7200; path=/; domain=.myapi.local; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
