@@ -31,7 +31,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 9e9376c4-277e-4c1f-9eec-e3deaf1992b2
+          x-treblle-trace-id: 94fa6430-2e0e-4346-8b8d-9c8f37f46c53
           vary: Origin
         description: null
         custom: []
@@ -71,7 +71,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik5pMGdLNzFOZ2hzSEJyaTJwaW40eHc9PSIsInZhbHVlIjoiZDIrYnlXeEdFVFFNZVB4eXMvS0hYTmNTNkxzM3lDcFQrWGRha0ErMVQzV1V0ZEYxZTNGQ1lndm41RmMzRTM4bVdOS1lESkpvTDN0WFpWUll3NTgwaFNsU1NucHJRUWpVUkNvMTFyZUNkQ2d6K3VGMGFTL2NLNG1kWENBTzF6a0EiLCJtYWMiOiI5ZDVmODIzZGZiOTZjNjM2NzlhOTgzZWI0MmZiYTM0OTY1NDk2YTUxNDE0MzUxYmYzMjU3YzVlNDM2MmQxMWM0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:01 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6InJJbDlVV2NPemJWOUk4bDRVZzNXWWc9PSIsInZhbHVlIjoiSmp3UFMwMFI1ZUl1UWw3MXVYdlk4ME1jTDRjd2RxaFh2T04wMGVNMFZJME1YV3Bxa1JteG80aFd6R3BwYnpnVFhERmZpc1RxL1Q1QzVwelVCTUVCZTZHWG8wQW5nVEZaRy8yTERNdzdzc25ZQnFHb3J4cHkvYUpmb3AwQzcrU1EiLCJtYWMiOiI5MDMyNjJhMjM2OWFmYzg4YTRlMzEzNjNjMjYyZDAzMjYzZjY0YTIwODkyNGJlNDdiN2NmOWU0ZDQzMjRlZDk0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:01 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InE4QmpGbVY1dHZ3czY5REVnUnVwdlE9PSIsInZhbHVlIjoiVXJjZVN2Nzk5Zmo3MUQwazhFVXFwMmoxZFA0K1dxMk9BdDUrU3BoaDkvVFFnN0RZUktPM1RWM29GZERBVERuSDRWMnJvUlJuNnRlcXBidE5zLzNKUS9Yc1daVEhPRlpjUE95SmxCRDI0TTE0ZG5CT21uQ25kVjJ5OVp4c2orWHYiLCJtYWMiOiJhNzE2NjU4YTA0NGY5ZTcxZjZlMTI4NDU0MDg2NTZhNGJjNzA1YTUxMGZlNWFjNjY5MTI5ZDg4NTJmYWQyMmY0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:34 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ik16SDFBSEhYZkVLUlBMbThaUVhtc1E9PSIsInZhbHVlIjoiYmlYM2NDd2tFYzBOQ1htYmFKdVJ3aEVKY1hHL3kwZnNiSjhPc1JqYWFockJQbVYyS0RWa0tCZUlkY3RoTkhja1ZndW9wTXo4enJ0U2VoMmw2d0h5ajN6bk1SYkhhWkZMSUJIdndpNWR0OUxGbkYrb1pUN09lNjdSTGwzdTZoL1UiLCJtYWMiOiIwYjgyOTdiNTA5ZDY5MWQwNTY2MDc4NWVkZjU1MTM3ZTNmOGY0OGJkOTU0NjUxNzhhOTc4M2NkMzc0MjQxZTNmIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:34 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

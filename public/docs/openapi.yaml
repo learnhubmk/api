@@ -61,11 +61,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: arvid49@example.com
+                  example: darby.mraz@example.com
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: corporis
               required:
                 - email
                 - password
@@ -140,11 +140,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: senger.rick@example.org
+                  example: brook.hayes@example.com
                 password:
                   type: string
                   description: ''
-                  example: perspiciatis
+                  example: fugiat
               required:
                 - email
                 - password
@@ -219,11 +219,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: daron78@example.org
+                  example: bill.schinner@example.com
                 password:
                   type: string
                   description: ''
-                  example: cupiditate
+                  example: quo
               required:
                 - email
                 - password
@@ -543,7 +543,7 @@ paths:
         required: true
         schema:
           type: integer
-  /content/blog-posts-tags:
+  /content/blog-post-tags:
     get:
       summary: 'List Blog post tag'
       operationId: listBlogPostTag
@@ -621,7 +621,7 @@ paths:
                   example: test
               required:
                 - name
-  '/content/blog-posts-tags/{id}':
+  '/content/blog-post-tags/{id}':
     put:
       summary: 'Update Blog post tag'
       operationId: updateBlogPostTag
@@ -669,12 +669,12 @@ paths:
       -
         in: path
         name: id
-        description: 'The ID of the blog posts tag.'
+        description: 'The ID of the blog post tag.'
         example: 1
         required: true
         schema:
           type: integer
-  '/content/blog-posts/{blog_post_id}/statuses':
+  '/content/blog-posts/{id}/statuses':
     patch:
       summary: 'Publish/Unpublish Blog posts'
       operationId: publishUnpublishBlogPosts
@@ -711,12 +711,12 @@ paths:
     parameters:
       -
         in: path
-        name: blog_post_id
+        name: id
         description: 'The ID of the blog post.'
-        example: tempora
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
   /:
     get:
       summary: ''
@@ -1953,12 +1953,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: et
+          example: nihil
           required: false
           schema:
             type: string
             description: ''
-            example: et
+            example: nihil
         -
           in: header
           name: Referer
@@ -1975,230 +1975,6 @@ paths:
                 type: object
                 example:
                   data:
-                    -
-                      title: 'Perferendis totam et voluptatum eligendi reiciendis incidunt perspiciatis.'
-                      slug: perferendis-totam-et-voluptatum-eligendi-reiciendis-incidunt-perspiciatis
-                      excerpt: 'Nihil fuga doloremque animi repudiandae repellat.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Kolby Mante'
-                        last_name: Homenick
-                        image: null
-                    -
-                      title: 'Laboriosam consequuntur et ipsa rem repellendus magnam ut nobis.'
-                      slug: laboriosam-consequuntur-et-ipsa-rem-repellendus-magnam-ut-nobis
-                      excerpt: 'Sit dolores consequatur maxime error laudantium numquam.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Ms. Kamille Dicki Sr.'
-                        last_name: Schamberger
-                        image: null
-                    -
-                      title: 'Beatae earum fuga alias suscipit et assumenda repellat.'
-                      slug: beatae-earum-fuga-alias-suscipit-et-assumenda-repellat
-                      excerpt: 'Aut officiis quo sit nulla architecto est qui quia.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Eric Ullrich Jr.'
-                        last_name: Daniel
-                        image: null
-                    -
-                      title: 'Tempora debitis voluptas et.'
-                      slug: tempora-debitis-voluptas-et
-                      excerpt: 'Maxime deserunt neque commodi maiores et cum quod.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Buford Brakus'
-                        last_name: "O'Kon"
-                        image: null
-                    -
-                      title: 'Reiciendis quam incidunt eius esse fugit eum totam et.'
-                      slug: reiciendis-quam-incidunt-eius-esse-fugit-eum-totam-et
-                      excerpt: 'Et magni enim dolorem iure est laudantium.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Madisyn Bradtke'
-                        last_name: Harris
-                        image: null
-                    -
-                      title: 'Exercitationem et maiores dolores voluptatem et officiis.'
-                      slug: exercitationem-et-maiores-dolores-voluptatem-et-officiis
-                      excerpt: 'Consequatur cum nisi hic voluptatem.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Marianne Abernathy'
-                        last_name: Sipes
-                        image: null
-                    -
-                      title: 'Esse amet et nam corrupti.'
-                      slug: esse-amet-et-nam-corrupti
-                      excerpt: 'Consequatur doloremque quas et ut dolores nulla.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Joel Farrell'
-                        last_name: Witting
-                        image: null
-                    -
-                      title: 'Quo iure quaerat enim et ducimus debitis.'
-                      slug: quo-iure-quaerat-enim-et-ducimus-debitis
-                      excerpt: 'Deleniti quibusdam consequuntur fuga minus vel.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Marianne Abernathy'
-                        last_name: Sipes
-                        image: null
-                    -
-                      title: 'Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.'
-                      slug: et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta
-                      excerpt: 'Cumque quas magni aut praesentium voluptas architecto laboriosam.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Buford Brakus'
-                        last_name: "O'Kon"
-                        image: null
-                    -
-                      title: 'Pariatur hic est commodi et praesentium rem.'
-                      slug: pariatur-hic-est-commodi-et-praesentium-rem
-                      excerpt: 'Et ea qui sequi alias delectus ut fugit.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Garrison Beier'
-                        last_name: Mayert
-                        image: null
-                    -
-                      title: 'Consectetur ut similique est.'
-                      slug: consectetur-ut-similique-est
-                      excerpt: 'Eos architecto soluta nulla est inventore magni harum.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Kolby Mante'
-                        last_name: Homenick
-                        image: null
-                    -
-                      title: 'Aliquam voluptatem eum sed ipsam expedita et in illo.'
-                      slug: aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo
-                      excerpt: 'Et dolorem consectetur nobis voluptates laborum.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Ms. Kamille Dicki Sr.'
-                        last_name: Schamberger
-                        image: null
-                    -
-                      title: 'Nemo commodi doloribus et officiis dolores ipsam sit.'
-                      slug: nemo-commodi-doloribus-et-officiis-dolores-ipsam-sit
-                      excerpt: 'Sint exercitationem minima esse deleniti magni.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Buford Brakus'
-                        last_name: "O'Kon"
-                        image: null
-                    -
-                      title: 'Nobis totam ducimus deserunt maiores nulla et dolor.'
-                      slug: nobis-totam-ducimus-deserunt-maiores-nulla-et-dolor
-                      excerpt: 'Iusto facilis non magnam rem quos laudantium.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-17'
-                      author:
-                        first_name: 'Marianne Abernathy'
-                        last_name: Sipes
-                        image: null
                     -
                       title: 'Non tempore et ad nihil.'
                       slug: non-tempore-et-ad-nihil
@@ -2217,13 +1993,13 @@ paths:
                         image: null
                   links:
                     first: 'http://api.myapi.com/blog-posts?page=1'
-                    last: 'http://api.myapi.com/blog-posts?page=2'
+                    last: 'http://api.myapi.com/blog-posts?page=1'
                     prev: null
-                    next: 'http://api.myapi.com/blog-posts?page=2'
+                    next: null
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 2
+                    last_page: 1
                     links:
                       -
                         url: null
@@ -2234,245 +2010,17 @@ paths:
                         label: '1'
                         active: true
                       -
-                        url: 'http://api.myapi.com/blog-posts?page=2'
-                        label: '2'
-                        active: false
-                      -
-                        url: 'http://api.myapi.com/blog-posts?page=2'
+                        url: null
                         label: 'Next &raquo;'
                         active: false
                     path: 'http://api.myapi.com/blog-posts'
                     per_page: 15
-                    to: 15
-                    total: 19
+                    to: 1
+                    total: 1
                 properties:
                   data:
                     type: array
                     example:
-                      -
-                        title: 'Perferendis totam et voluptatum eligendi reiciendis incidunt perspiciatis.'
-                        slug: perferendis-totam-et-voluptatum-eligendi-reiciendis-incidunt-perspiciatis
-                        excerpt: 'Nihil fuga doloremque animi repudiandae repellat.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Kolby Mante'
-                          last_name: Homenick
-                          image: null
-                      -
-                        title: 'Laboriosam consequuntur et ipsa rem repellendus magnam ut nobis.'
-                        slug: laboriosam-consequuntur-et-ipsa-rem-repellendus-magnam-ut-nobis
-                        excerpt: 'Sit dolores consequatur maxime error laudantium numquam.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Ms. Kamille Dicki Sr.'
-                          last_name: Schamberger
-                          image: null
-                      -
-                        title: 'Beatae earum fuga alias suscipit et assumenda repellat.'
-                        slug: beatae-earum-fuga-alias-suscipit-et-assumenda-repellat
-                        excerpt: 'Aut officiis quo sit nulla architecto est qui quia.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Eric Ullrich Jr.'
-                          last_name: Daniel
-                          image: null
-                      -
-                        title: 'Tempora debitis voluptas et.'
-                        slug: tempora-debitis-voluptas-et
-                        excerpt: 'Maxime deserunt neque commodi maiores et cum quod.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Buford Brakus'
-                          last_name: "O'Kon"
-                          image: null
-                      -
-                        title: 'Reiciendis quam incidunt eius esse fugit eum totam et.'
-                        slug: reiciendis-quam-incidunt-eius-esse-fugit-eum-totam-et
-                        excerpt: 'Et magni enim dolorem iure est laudantium.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Madisyn Bradtke'
-                          last_name: Harris
-                          image: null
-                      -
-                        title: 'Exercitationem et maiores dolores voluptatem et officiis.'
-                        slug: exercitationem-et-maiores-dolores-voluptatem-et-officiis
-                        excerpt: 'Consequatur cum nisi hic voluptatem.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Marianne Abernathy'
-                          last_name: Sipes
-                          image: null
-                      -
-                        title: 'Esse amet et nam corrupti.'
-                        slug: esse-amet-et-nam-corrupti
-                        excerpt: 'Consequatur doloremque quas et ut dolores nulla.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Joel Farrell'
-                          last_name: Witting
-                          image: null
-                      -
-                        title: 'Quo iure quaerat enim et ducimus debitis.'
-                        slug: quo-iure-quaerat-enim-et-ducimus-debitis
-                        excerpt: 'Deleniti quibusdam consequuntur fuga minus vel.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Marianne Abernathy'
-                          last_name: Sipes
-                          image: null
-                      -
-                        title: 'Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.'
-                        slug: et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta
-                        excerpt: 'Cumque quas magni aut praesentium voluptas architecto laboriosam.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Buford Brakus'
-                          last_name: "O'Kon"
-                          image: null
-                      -
-                        title: 'Pariatur hic est commodi et praesentium rem.'
-                        slug: pariatur-hic-est-commodi-et-praesentium-rem
-                        excerpt: 'Et ea qui sequi alias delectus ut fugit.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Garrison Beier'
-                          last_name: Mayert
-                          image: null
-                      -
-                        title: 'Consectetur ut similique est.'
-                        slug: consectetur-ut-similique-est
-                        excerpt: 'Eos architecto soluta nulla est inventore magni harum.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Kolby Mante'
-                          last_name: Homenick
-                          image: null
-                      -
-                        title: 'Aliquam voluptatem eum sed ipsam expedita et in illo.'
-                        slug: aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo
-                        excerpt: 'Et dolorem consectetur nobis voluptates laborum.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Ms. Kamille Dicki Sr.'
-                          last_name: Schamberger
-                          image: null
-                      -
-                        title: 'Nemo commodi doloribus et officiis dolores ipsam sit.'
-                        slug: nemo-commodi-doloribus-et-officiis-dolores-ipsam-sit
-                        excerpt: 'Sint exercitationem minima esse deleniti magni.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Buford Brakus'
-                          last_name: "O'Kon"
-                          image: null
-                      -
-                        title: 'Nobis totam ducimus deserunt maiores nulla et dolor.'
-                        slug: nobis-totam-ducimus-deserunt-maiores-nulla-et-dolor
-                        excerpt: 'Iusto facilis non magnam rem quos laudantium.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-17'
-                        author:
-                          first_name: 'Marianne Abernathy'
-                          last_name: Sipes
-                          image: null
                       -
                         title: 'Non tempore et ad nihil.'
                         slug: non-tempore-et-ad-nihil
@@ -2494,13 +2042,13 @@ paths:
                       properties:
                         title:
                           type: string
-                          example: 'Perferendis totam et voluptatum eligendi reiciendis incidunt perspiciatis.'
+                          example: 'Non tempore et ad nihil.'
                         slug:
                           type: string
-                          example: perferendis-totam-et-voluptatum-eligendi-reiciendis-incidunt-perspiciatis
+                          example: non-tempore-et-ad-nihil
                         excerpt:
                           type: string
-                          example: 'Nihil fuga doloremque animi repudiandae repellat.'
+                          example: 'Praesentium ab non eos pariatur quo.'
                         tags:
                           type: array
                           example:
@@ -2524,10 +2072,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Kolby Mante'
+                              example: 'Buford Brakus'
                             last_name:
                               type: string
-                              example: Homenick
+                              example: "O'Kon"
                             image:
                               type: string
                               example: null
@@ -2539,13 +2087,13 @@ paths:
                         example: 'http://api.myapi.com/blog-posts?page=1'
                       last:
                         type: string
-                        example: 'http://api.myapi.com/blog-posts?page=2'
+                        example: 'http://api.myapi.com/blog-posts?page=1'
                       prev:
                         type: string
                         example: null
                       next:
                         type: string
-                        example: 'http://api.myapi.com/blog-posts?page=2'
+                        example: null
                   meta:
                     type: object
                     properties:
@@ -2557,7 +2105,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 2
+                        example: 1
                       links:
                         type: array
                         example:
@@ -2570,11 +2118,7 @@ paths:
                             label: '1'
                             active: true
                           -
-                            url: 'http://api.myapi.com/blog-posts?page=2'
-                            label: '2'
-                            active: false
-                          -
-                            url: 'http://api.myapi.com/blog-posts?page=2'
+                            url: null
                             label: 'Next &raquo;'
                             active: false
                         items:
@@ -2597,10 +2141,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 15
+                        example: 1
                       total:
                         type: integer
-                        example: 19
+                        example: 1
       tags:
         - Website
       security: []
@@ -3332,7 +2876,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: qui
+        example: illum
         required: true
         schema:
           type: string
@@ -3574,8 +3118,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://api.myapi.com/blog-post-tags/optio?page=1'
-                    last: 'http://api.myapi.com/blog-post-tags/optio?page=1'
+                    first: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                    last: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
                     prev: null
                     next: null
                   meta:
@@ -3588,14 +3132,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://api.myapi.com/blog-post-tags/optio?page=1'
+                        url: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://api.myapi.com/blog-post-tags/optio'
+                    path: 'http://api.myapi.com/blog-post-tags/sequi'
                     per_page: 15
                     to: null
                     total: 0
@@ -3608,10 +3152,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/optio?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
                       last:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/optio?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
                       prev:
                         type: string
                         example: null
@@ -3638,7 +3182,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://api.myapi.com/blog-post-tags/optio?page=1'
+                            url: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
                             label: '1'
                             active: true
                           -
@@ -3659,7 +3203,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/optio'
+                        example: 'http://api.myapi.com/blog-post-tags/sequi'
                       per_page:
                         type: integer
                         example: 15
@@ -3677,7 +3221,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: optio
+        example: sequi
         required: true
         schema:
           type: string
@@ -3711,15 +3255,15 @@ paths:
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: ryan.halvorson@example.org
+                  example: choppe@example.com
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: temporibus
+                  example: assumenda
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: consequatur
+                  example: facilis
               required:
                 - name
                 - email
@@ -3752,11 +3296,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: xtuosbzyo
+                  example: lvvdlaxiskariy
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: moshe52@example.net
+                  example: lschimmel@example.com
                 cf-turnstile-response:
                   type: string
                   description: ''

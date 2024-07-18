@@ -78,7 +78,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImE2b0tkMHpKek9OcTBHaDVBMlJHVUE9PSIsInZhbHVlIjoid3h1Z1RGMnUxMmszZSswZW9BTUZOeUlIQkVIT0hkN1l3NjZWRFlrSlhHUGJBMjM1Mmw1bWVVMDJveWFJLzRlRG8rUDVyRTlWcTlROUlRbjQ5TG9FNmlJWFlEOFNYTGN6eGQxdEgwNVRXY3hsYWdWdVhqSnlVemloVkZ0MjV4bDAiLCJtYWMiOiJiZDZhZGFiOGZkYmY4NTQwZTY0ZTAzMzE5YjBkMmI0YzY5ODNjMTc4ZGRlYTQwNzkyYmVkYzRkYjYzM2ZjZGRlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImpsL2R6bG1Hd0d6VWs2MHdXVHBGRGc9PSIsInZhbHVlIjoiQ3pBcXZQelV4Um9ZTDk2N01nejRQdEN6MGgwQXpIYzc4OHVvNmxWRGxqOG5QL2VKc000b25kZDRqQWkzNnFDd3grOXQ5a2I1OUZRcE9wTE44NnVTNkpqbXBVMEdyek9iREhNN3RaNituZ3B3UllDWTVrcGo5eVVETnptSjdPazUiLCJtYWMiOiJhYzc5OWQ5YjFhN2E5ZTk0MmFlODg4ZjJlZTE1ZmI5NWMxMGJmMWUzMjA4NWFmZmI0ZjIxMGY1ZDQzOGE4NmMzIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InJ6clJsVG40WGx3cEVTQlgwL2ZQRUE9PSIsInZhbHVlIjoicVI2K1NFN0FROWgxbGFsejArVzJYN2NhTXFHY0ZCeHVzOTREYWpHZGxpTnF1bWErbHNlQ0ovWEkwaGxxQk15bkpVcUhTOGNmemlaMFJ2MG5nYTlFd2Z3VzlQR3p0RHUzWTR4M21iWm5rcUJKMjB5RjVVb1dtNEpjeStaUEh1SHYiLCJtYWMiOiI0YWJmZTVmYTc3MTc3MzRlMzZjNTM0ODQ0YjY0NjExYmY1MDM2NzAzNzcwMjM5ZGNmMzkzYmUwYzEwZWE5MDYxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IjNCWE1ldHBCKzYzVDVMZXB0em5WSXc9PSIsInZhbHVlIjoiZ2g2MHBDSWRTeE5kWGpvaXlPZlNNL2FGV2hMVVB1STRqRWtQd2w3RzlDWVVLRUhsd0x2dUdmM080b21rajJ6OEtMMm80dUM1MVpuZFBvK0Fvb1k2cVg4azg5bVVpbkV6ejRaUHpLbFh5bmV2VlBJQitkL253aE9ROWZuRGhuNnEiLCJtYWMiOiI2MDcyZTczYjY4OTVkZDYxZDkxYWRmMDU4YTY4ZDI0ZmFmOWJkMGI3ODY4NmU0ZTE1MjMxZDRkMjFlNDAyMjQ3IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -199,7 +199,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImJPL3czNFJla0pYRVYxZlEzdmtDYUE9PSIsInZhbHVlIjoiQ0RoQXpBcmp5cDN3RVhFb1EvLzRvQnZZdWZveG9LUVJVZVRUTVduNmZvblhlVm1RZFFHcmtJSDNtRFBXWHpvWjUybnJKbmNmeFJoaVFOM0h5YXlZYWFnZWtCZGE0V0lZV0x6MGoyL2xKTk96UVdxcXhnRlNwZ1YwTUpUdFZhcnQiLCJtYWMiOiJhM2E0YjEzNTQ4ZDEyN2ZhZDllMjc1ZmVmMjVmZTJjZmFiYjQ1YzY1ZmRjMjczOWYxZGI3YjljYzZkMzQxNzI3IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IlJrWmJ4TWYza0lpVGRndDZYWDhwS2c9PSIsInZhbHVlIjoiNDRVdWNmWmd1QXhjL1RZbTBIbzgxT3d6d1NFMGROOFl0ZFIvaW5pWWlrbGUxOWxUd0RFN09rdkFKRmdHWGlmcHE1a3BsQjJodHZvck1TeDRXSW9FWWdEa2hjR2VZVEd0bWNZVWRvK0t2ZGp6RHNkV1R5dllUN2pmbzFDUmtoQzYiLCJtYWMiOiI0OTkxZmMyNWRhNzdmZTNmZjYwZTI2ZmNiODQwODA2Njk0NWJhYmIyZTQwMTU3YmM0NjI1ZjhiYTM3YzQ2OTk4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjNUcmhsbHJMdFJyQkNnR28wQURwZ2c9PSIsInZhbHVlIjoiUVFKcTNrR1hWdlZuZUdZd1Z2bnNOWUFwRXZkQjZ3dXlsL2N0cVM2TjdlVmNjWFVkRUtpMUdYU0srejVwT1ZnNElHU0RVWExBTmFyVHdhS25xT3c5WjJjM1JhZGU2bTZvSkkwc0wrOTRRUVZSaDNVZmFHSUQ1RmV5MkRrUXNiODciLCJtYWMiOiI2ZDBkZjY0ZTllYTY1NTk4MDU2ODkyOGMyMTc4MTZmMWFmOTE2ZTJmYWE3ZDE0ZDZjZTRkYjAyOGEyZDlkM2JlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IkR1djlTMUY5Z2VYMmhTS29HV3BaTUE9PSIsInZhbHVlIjoibVdXWElJc04yRVgzR05MVytqYjJxWS9RVkQ1WHdhTll6bW1wWTZJRXhGZ3hCa28xRDM1TlI2VmR6S0JNN2VPdStJMWs5RVUrLzJRc3ZBL2FvdHdCM2Y0VEQ5NE9UN2dTbXF4aUhhSDMrbWZZRTJVVUxEN3l0eUJBNE5qRjBxRjkiLCJtYWMiOiIzYWNkYTZhOWE3ZjA1MTU3NGMzODk0Y2Y2OTdhNTQ4YWM4M2VkMDk5NGQ4ZTIxZWI3YWE1MGNhZWQ5NmFjZDQ4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -343,7 +343,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: content/blog-posts-tags
+    uri: content/blog-post-tags
     metadata:
       groupName: Content
       groupDescription: ''
@@ -400,7 +400,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 6fh3eZcdagEa5bVDvP41k86
+      - af16vPak4hgc8Z3eV5dD6Eb
     controller: null
     method: null
     route: null
@@ -408,7 +408,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: content/blog-posts-tags
+    uri: content/blog-post-tags
     metadata:
       groupName: Content
       groupDescription: ''
@@ -444,7 +444,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - eE8bhZ4c3ka6615DPdfVagv
+      - eaV66Pb5kahg41fvEdDZ8c3
     controller: null
     method: null
     route: null
@@ -453,7 +453,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'content/blog-posts-tags/{id}'
+    uri: 'content/blog-post-tags/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -470,7 +470,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the blog posts tag.'
+        description: 'The ID of the blog post tag.'
         required: true
         example: 1
         type: integer
@@ -499,7 +499,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - aD6Vka6h3cdgP58ZEbf4e1v
+      - a8dch1ZbVE64ekg5faD3vP6
     controller: null
     method: null
     route: null
@@ -507,7 +507,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'content/blog-posts-tags/{id}'
+    uri: 'content/blog-post-tags/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -523,7 +523,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the blog posts tag.'
+        description: 'The ID of the blog post tag.'
         required: true
         example: 1
         type: integer
@@ -542,7 +542,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - gZ1ea68fa4Ec356hbvdDkVP
+      - 3ghd5EPZa68e4DfbVkcv16a
     controller: null
     method: null
     route: null
@@ -550,7 +550,7 @@ endpoints:
   -
     httpMethods:
       - PATCH
-    uri: 'content/blog-posts/{blog_post_id}/statuses'
+    uri: 'content/blog-posts/{id}/statuses'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -565,17 +565,17 @@ endpoints:
       Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
-      blog_post_id:
-        name: blog_post_id
+      id:
+        name: id
         description: 'The ID of the blog post.'
         required: true
-        example: tempora
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blog_post_id: tempora
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
