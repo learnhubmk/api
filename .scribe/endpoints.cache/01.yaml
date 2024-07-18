@@ -18,7 +18,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -77,8 +77,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 06a99b39-feb2-48ff-a6e8-6846a9b15326
           vary: Origin
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InJ6clJsVG40WGx3cEVTQlgwL2ZQRUE9PSIsInZhbHVlIjoicVI2K1NFN0FROWgxbGFsejArVzJYN2NhTXFHY0ZCeHVzOTREYWpHZGxpTnF1bWErbHNlQ0ovWEkwaGxxQk15bkpVcUhTOGNmemlaMFJ2MG5nYTlFd2Z3VzlQR3p0RHUzWTR4M21iWm5rcUJKMjB5RjVVb1dtNEpjeStaUEh1SHYiLCJtYWMiOiI0YWJmZTVmYTc3MTc3MzRlMzZjNTM0ODQ0YjY0NjExYmY1MDM2NzAzNzcwMjM5ZGNmMzkzYmUwYzEwZWE5MDYxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IjNCWE1ldHBCKzYzVDVMZXB0em5WSXc9PSIsInZhbHVlIjoiZ2g2MHBDSWRTeE5kWGpvaXlPZlNNL2FGV2hMVVB1STRqRWtQd2w3RzlDWVVLRUhsd0x2dUdmM080b21rajJ6OEtMMm80dUM1MVpuZFBvK0Fvb1k2cVg4azg5bVVpbkV6ejRaUHpLbFh5bmV2VlBJQitkL253aE9ROWZuRGhuNnEiLCJtYWMiOiI2MDcyZTczYjY4OTVkZDYxZDkxYWRmMDU4YTY4ZDI0ZmFmOWJkMGI3ODY4NmU0ZTE1MjMxZDRkMjFlNDAyMjQ3IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -102,7 +102,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -161,7 +161,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -173,11 +173,11 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -185,7 +185,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -198,8 +198,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 36f3b25b-2738-4a20-81a8-acb6c274585d
           vary: Origin
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjNUcmhsbHJMdFJyQkNnR28wQURwZ2c9PSIsInZhbHVlIjoiUVFKcTNrR1hWdlZuZUdZd1Z2bnNOWUFwRXZkQjZ3dXlsL2N0cVM2TjdlVmNjWFVkRUtpMUdYU0srejVwT1ZnNElHU0RVWExBTmFyVHdhS25xT3c5WjJjM1JhZGU2bTZvSkkwc0wrOTRRUVZSaDNVZmFHSUQ1RmV5MkRrUXNiODciLCJtYWMiOiI2ZDBkZjY0ZTllYTY1NTk4MDU2ODkyOGMyMTc4MTZmMWFmOTE2ZTJmYWE3ZDE0ZDZjZTRkYjAyOGEyZDlkM2JlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IkR1djlTMUY5Z2VYMmhTS29HV3BaTUE9PSIsInZhbHVlIjoibVdXWElJc04yRVgzR05MVytqYjJxWS9RVkQ1WHdhTll6bW1wWTZJRXhGZ3hCa28xRDM1TlI2VmR6S0JNN2VPdStJMWs5RVUrLzJRc3ZBL2FvdHdCM2Y0VEQ5NE9UN2dTbXF4aUhhSDMrbWZZRTJVVUxEN3l0eUJBNE5qRjBxRjkiLCJtYWMiOiIzYWNkYTZhOWE3ZjA1MTU3NGMzODk0Y2Y2OTdhNTQ4YWM4M2VkMDk5NGQ4ZTIxZWI3YWE1MGNhZWQ5NmFjZDQ4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -210,8 +210,9 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - PUT
       - PATCH
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -223,12 +224,12 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -236,7 +237,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -302,7 +303,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -314,11 +315,11 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -326,7 +327,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -341,8 +342,215 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - GET
+    uri: content/blog-post-tags
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List Blog post tag'
+      description: |-
+        List Blog Post Tags or you can use search query for searching by the name
+            or sort direction based on whether the key starts with - 
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      sort:
+        name: sort
+        description: ''
+        required: false
+        example: '?sort=name, -name'
+        type: string
+        enumValues:
+          - name
+        exampleWasSpecified: false
+        custom: []
+      search:
+        name: search
+        description: ''
+        required: false
+        example: '?search=name'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      sort: '?sort=name, -name'
+      search: '?search=name'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - af16vPak4hgc8Z3eV5dD6Eb
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/blog-post-tags
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create Blog post tag'
+      description: 'This endpoint will create a single blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: test
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: test
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - eaV66Pb5kahg41fvEdDZ8c3
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
       - PATCH
-    uri: 'content/blog-posts/{blogPost_id}/statuses'
+    uri: 'content/blog-post-tags/{id}'
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Blog post tag'
+      description: 'This endpoint will update a single blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the blog post tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: test
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: test
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - a8dch1ZbVE64ekg5faD3vP6
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'content/blog-post-tags/{id}'
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete Blog post tag'
+      description: 'This endpoint deletes blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Referer: learnhub.mk
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the blog post tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Referer
+      - 3ghd5EPZa68e4DfbVkcv16a
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'content/blog-posts/{id}/statuses'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -354,12 +562,12 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -367,7 +575,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -392,138 +600,6 @@ endpoints:
     cleanBodyParameters:
       publish_date: '2024-01-01'
       status: 'draft, published, in_review, archive'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: content/blog-posts-tags
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Create Blog post tag'
-      description: 'This endpoint will create a single blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Accept: application/json
-      Referer: myapi.local
-      Content-Type: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: test
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      name: test
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PATCH
-    uri: 'content/blog-posts-tags/{blogPostTag_id}'
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update Blog post tag'
-      description: 'This endpoint will update a single blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Accept: application/json
-      Referer: myapi.local
-      Content-Type: application/json
-    urlParameters:
-      blogPostTag_id:
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      blogPostTag_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: test
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      name: test
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'content/blog-posts-tags/{blogPostTag_id}'
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Delete Blog post tag'
-      description: 'This endpoint deletes blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Accept: application/json
-      Referer: myapi.local
-    urlParameters:
-      blogPostTag_id:
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      blogPostTag_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
