@@ -2,22 +2,24 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
-use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
-use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
-use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
-use App\Framework\Http\Controllers\Controller;
-use App\Website\Enums\BlogPostStatus;
+use Illuminate\Support\Str;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
-use Illuminate\Support\Str;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
+use App\Website\Enums\BlogPostStatus;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Illuminate\Auth\Events\Authenticated;
+use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\QueryParam;
+use App\Framework\Http\Controllers\Controller;
+use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
+use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
+use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
+use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 
 class BlogPostController extends Controller
 {
+    #[Authenticated]
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
     #[QueryParam('title', 'string', required: false, example: "?title=learnhub")]
@@ -50,6 +52,7 @@ class BlogPostController extends Controller
         return BlogPostsResource::collection($blogs);
     }
 
+    #[Authenticated]
     #[Endpoint(title: 'Create Blog posts', description: 'This endpoint will create a single blog post')]
     #[Group('Content')]
     #[BodyParam('title', 'string', required: true, example: "Example Blog Post Title ")]
@@ -72,6 +75,7 @@ class BlogPostController extends Controller
         return new BlogPostsResource($blogPost);
     }
 
+    #[Authenticated]
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
     public function show(BlogPost $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
@@ -81,6 +85,7 @@ class BlogPostController extends Controller
         return new BlogPostsResource($blogPost);
     }
 
+    #[Authenticated]
     #[Endpoint(title: 'Update Blog post', description: 'This endpoint will update a single blog post')]
     #[Group('Content')]
     #[BodyParam('title', 'string', required: false, example: "Example Blog Post Title ")]
@@ -102,6 +107,7 @@ class BlogPostController extends Controller
 
     }
 
+    #[Authenticated]
     #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
     #[Group('Content')]
     public function destroy(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response

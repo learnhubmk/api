@@ -2,14 +2,16 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Website\Models\BlogPost;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Illuminate\Auth\Events\Authenticated;
+use Knuckles\Scribe\Attributes\BodyParam;
+use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 
 class BlogPostStatusController
 {
+    #[Authenticated]
     #[Endpoint(title: 'Publish/Unpublish Blog posts', description: 'This endpoint publish or unpublish blog post')]
     #[BodyParam('publish_date', 'date', required: false, example: "2024-01-01")]
     #[BodyParam('status', 'string', required: true, example: "draft, published, in_review, archive")]

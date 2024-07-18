@@ -16,7 +16,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -75,9 +75,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 06a99b39-feb2-48ff-a6e8-6846a9b15326
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjZOVm56bnpNRUxXQ2Rwb1lNSWUzRnc9PSIsInZhbHVlIjoiL3h4N04xd2xVbkQxUGwxWmo3cVVLTnlxdzVtYUptTktKRytQeEZ2Vjk0WDJqVW1TbndJRjFLR210WDVwaDFuUWxXS0pTQWJ3M1UvN2llWUYwUzlsSEF1M3JtbDlDdEprYWdtUDdJUGl2cGhBRlY5RUZpMTNJRVBKbXRNb2lrdy8iLCJtYWMiOiJkMzNmMTNmNWQzMTA0N2UxOWQyYzBkNDI3MWE5ZmQyMTFjOTFkYWNiMTM3NjU2NDE5NDY4MGQ2MWM3MjU0Y2JhIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IjdFc3A2SGc3VDZlNCs3QlYyQzluYUE9PSIsInZhbHVlIjoib3NIVzFBek04WHBRVnh4cm1UOVFTRUhSL1MyTUNKdkViOEpHUFJUS2N3bHA0VHRFTitFRk9NbEppaGpLVHZ2eDZ0WU04cktKNnRDc1dRRTEvRmpXcDJYc2FlU1pvbG9XTStnMzhuc3oyOUk4YklESTJWYWt0WkF6M001eFlGTWwiLCJtYWMiOiI3YmM4MzcwNDRkODNlMTQ3Y2E0MzA5YjZhNTc5ODNkNzY2ZjUwMjU4YmRlNmVhZDhmNzcwZDM3ODE3M2JmOTM5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImE2b0tkMHpKek9OcTBHaDVBMlJHVUE9PSIsInZhbHVlIjoid3h1Z1RGMnUxMmszZSswZW9BTUZOeUlIQkVIT0hkN1l3NjZWRFlrSlhHUGJBMjM1Mmw1bWVVMDJveWFJLzRlRG8rUDVyRTlWcTlROUlRbjQ5TG9FNmlJWFlEOFNYTGN6eGQxdEgwNVRXY3hsYWdWdVhqSnlVemloVkZ0MjV4bDAiLCJtYWMiOiJiZDZhZGFiOGZkYmY4NTQwZTY0ZTAzMzE5YjBkMmI0YzY5ODNjMTc4ZGRlYTQwNzkyYmVkYzRkYjYzM2ZjZGRlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImpsL2R6bG1Hd0d6VWs2MHdXVHBGRGc9PSIsInZhbHVlIjoiQ3pBcXZQelV4Um9ZTDk2N01nejRQdEN6MGgwQXpIYzc4OHVvNmxWRGxqOG5QL2VKc000b25kZDRqQWkzNnFDd3grOXQ5a2I1OUZRcE9wTE44NnVTNkpqbXBVMEdyek9iREhNN3RaNituZ3B3UllDWTVrcGo5eVVETnptSjdPazUiLCJtYWMiOiJhYzc5OWQ5YjFhN2E5ZTk0MmFlODg4ZjJlZTE1ZmI5NWMxMGJmMWUzMjA4NWFmZmI0ZjIxMGY1ZDQzOGE4NmMzIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -101,7 +100,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -172,7 +171,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
       id:
         name: id
@@ -197,9 +196,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 36f3b25b-2738-4a20-81a8-acb6c274585d
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkF1ekRRT01qOE1tRVQ1aFJWeC9hWFE9PSIsInZhbHVlIjoiVFoxcW9kUG41cW9hbHlLQTdpajJqaWFzNGlwcGF4V3dmZnoveTkra2JoeG5UNExtRmNGWFNuc2xmdy8rS3kzTkErYzJhWmZSbEpaRXVIeGVaUU9VcURLTjQ1Zkx6eThCaTk4RW15MGMyam5JUjVUd0IyQTdPZTZubVY4ZHM2V2IiLCJtYWMiOiJkN2E3NjcxNjFlODE2MGIzNWVlNmQ5ODA5M2VlYzVhYzY0OWFhN2JiNGExZDJkNzliYjJiZmE5YjIyOWZlMGUxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImxaOC9MelZpbTV0dzduYkMwTjBJMnc9PSIsInZhbHVlIjoiclFGbUpSbjZMcWxOcjFnZ3FpR2FXdzRSRmlNSUc3dDBndFZkL3d6WllZZW5hNHRaWnVBaGt3b1JqVmt0MGNQL29PN3BCTStXaGhyVm16UUVFWmlaLzZxb3FWVkZFS2dkOUMveWtkRVRROWtBbE5QbGlZclo4enRETm1kODdMMnkiLCJtYWMiOiIyNWQ3NDhlZDI4NzcyY2IzYzIzMTNmMmE0MDEzODZmNDZiMWMwMmZmYjQ3NTlmMDcxZDEzYjhiNTg4MmNkMjljIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImJPL3czNFJla0pYRVYxZlEzdmtDYUE9PSIsInZhbHVlIjoiQ0RoQXpBcmp5cDN3RVhFb1EvLzRvQnZZdWZveG9LUVJVZVRUTVduNmZvblhlVm1RZFFHcmtJSDNtRFBXWHpvWjUybnJKbmNmeFJoaVFOM0h5YXlZYWFnZWtCZGE0V0lZV0x6MGoyL2xKTk96UVdxcXhnRlNwZ1YwTUpUdFZhcnQiLCJtYWMiOiJhM2E0YjEzNTQ4ZDEyN2ZhZDllMjc1ZmVmMjVmZTJjZmFiYjQ1YzY1ZmRjMjczOWYxZGI3YjljYzZkMzQxNzI3IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IlJrWmJ4TWYza0lpVGRndDZYWDhwS2c9PSIsInZhbHVlIjoiNDRVdWNmWmd1QXhjL1RZbTBIbzgxT3d6d1NFMGROOFl0ZFIvaW5pWWlrbGUxOWxUd0RFN09rdkFKRmdHWGlmcHE1a3BsQjJodHZvck1TeDRXSW9FWWdEa2hjR2VZVEd0bWNZVWRvK0t2ZGp6RHNkV1R5dllUN2pmbzFDUmtoQzYiLCJtYWMiOiI0OTkxZmMyNWRhNzdmZTNmZjYwZTI2ZmNiODQwODA2Njk0NWJhYmIyZTQwMTU3YmM0NjI1ZjhiYTM3YzQ2OTk4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -224,7 +222,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
       id:
@@ -315,7 +313,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
       id:
         name: id
@@ -352,39 +350,23 @@ endpoints:
       title: 'List Blog post tag'
       description: |-
         List Blog Post Tags or you can use search query for searching by the name
-            or sort direction based on whether the key starts with -
-      authenticated: false
+            or sort direction based on whether the key starts with - 
+      authenticated: true
       custom: []
     headers:
+      Referer: learnhub.mk
       Accept: application/json
-      Referer: myapi.local
-      Content-Type: application/json
-    urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      blogPost_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      publish_date:
-        name: publish_date
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      sort:
+        name: sort
         description: ''
         required: false
         example: '?sort=name, -name'
         type: string
         enumValues:
-          - id
           - name
-          - created_at
-          - updated_at
         exampleWasSpecified: false
         custom: []
       search:
@@ -410,11 +392,13 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IisrWUJvU0tuNThidGhXZzArUlJhWHc9PSIsInZhbHVlIjoiUjhqWTRzSm5XVCtIY3l3djViM2Z3WmFXVmZnc3p5bWt0b2NLbE9zZzVqNitEMmtlbG5uRU9xeXQ2c1kyM1BVcVRNaFBybDNFQnYyNHlwWUJqSjNjU2JEOUVkMWsvQWVPR0xtRXFwSGpxREFLMlI3d1NzeWdJWGxzSHRZdkZLeHAiLCJtYWMiOiIyY2E0N2FjNzU5MTM5YTA4NWQ5OTI3ZTEzMjUzNmFjNmFiNjIzNTg0M2YyNDNlZDFhOGU2NjdmMmRhZTM5ZDRhIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImZDRmRuM05IOFVXTVlyUFhad1JmNnc9PSIsInZhbHVlIjoiclZKR3NPWTE2ajdhbi91Ti9CbEtLNmxiZmEwNXQ4K2doL244cVVDSno1akZ1QlBsNmo3VVB4U0o0a0gxT3Y5UW5IdG9QNkRmYXJWMmVMWmdFMmpkSHZjUTd5QXV2cjVIVDNTQkdZRiswN05uRTkyeVdqUStKNzlCMkJKSGU0QXAiLCJtYWMiOiIxMTM5MTI4ZjVhNjg3NTZkNDlkNjY3Y2VjMDUwMzkzNTFjODM5MDcwOTBiYjVjY2I3ODVkNmQ2MjIyZGI0NGQwIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Referer
+      - 6fh3eZcdagEa5bVDvP41k86
     controller: null
     method: null
     route: null
@@ -430,11 +414,11 @@ endpoints:
       subgroupDescription: ''
       title: 'Create Blog post tag'
       description: 'This endpoint will create a single blog post tag'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Referer: learnhub.mk
       Accept: application/json
-      Referer: myapi.local
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -455,7 +439,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Referer
+      - eE8bhZ4c3ka6615DPdfVagv
     controller: null
     method: null
     route: null
@@ -472,11 +459,11 @@ endpoints:
       subgroupDescription: ''
       title: 'Update Blog post tag'
       description: 'This endpoint will update a single blog post tag'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Referer: learnhub.mk
       Accept: application/json
-      Referer: myapi.local
       Content-Type: application/json
     urlParameters:
       id:
@@ -507,7 +494,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Referer
+      - aD6Vka6h3cdgP58ZEbf4e1v
     controller: null
     method: null
     route: null
@@ -523,11 +513,11 @@ endpoints:
       subgroupDescription: ''
       title: 'Delete Blog post tag'
       description: 'This endpoint deletes blog post tag'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Referer: learnhub.mk
       Accept: application/json
-      Referer: myapi.local
     urlParameters:
       id:
         name: id
@@ -547,7 +537,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Referer
+      - gZ1ea68fa4Ec356hbvdDkVP
     controller: null
     method: null
     route: null
@@ -574,13 +567,13 @@ endpoints:
         name: blog_post_id
         description: 'The ID of the blog post.'
         required: true
-        example: quia
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blog_post_id: quia
+      blog_post_id: tempora
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:

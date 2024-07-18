@@ -17,7 +17,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -40,7 +40,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - fvahd6kZ43EbaD58cVgPe61
+      - Pav8aDZVgke66df1hb453Ec
     controller: null
     method: null
     route: null
@@ -60,7 +60,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -71,7 +71,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: johnston.yazmin@example.net
+        example: arvid49@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -80,14 +80,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: vitae
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: johnston.yazmin@example.net
-      password: vitae
+      email: arvid49@example.com
+      password: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -110,7 +110,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -124,7 +124,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - gVfZaeh663v5c814kPEadbD
+      - 3aPgdD68avbV6ZhcE1f5e4k
     controller: null
     method: null
     route: null
@@ -143,7 +143,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -166,7 +166,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - k45fhDePa1dc8EV6Zb3gav6
+      - eakc8b4h5V3adDvg61Ef6PZ
     controller: null
     method: null
     route: null
@@ -186,7 +186,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -197,7 +197,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: elody.bashirian@example.net
+        example: senger.rick@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -206,14 +206,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: dignissimos
+        example: perspiciatis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: elody.bashirian@example.net
-      password: dignissimos
+      email: senger.rick@example.org
+      password: perspiciatis
     fileParameters: []
     responses: []
     responseFields: []
@@ -236,7 +236,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -250,7 +250,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - VP5a4f8kD6gac6ehdv31bZE
+      - eZaPE14fVg65c638vbahdkD
     controller: null
     method: null
     route: null
@@ -269,7 +269,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -292,7 +292,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - bVPaeD64dak5g3hc8fZvE61
+      - 6dgcD1E56V3ab4feakhvP8Z
     controller: null
     method: null
     route: null
@@ -312,7 +312,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -323,7 +323,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: georgette.block@example.com
+        example: daron78@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -332,14 +332,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: aut
+        example: cupiditate
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: georgette.block@example.com
-      password: aut
+      email: daron78@example.org
+      password: cupiditate
     fileParameters: []
     responses: []
     responseFields: []
@@ -362,7 +362,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: myapi.local
+      Referer: learnhub.mk
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -376,7 +376,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - E6h8Z5b6faVdDa4g3Pcke1v
+      - v14cbeZ6kDP3d85f6gEhaaV
     controller: null
     method: null
     route: null
@@ -396,7 +396,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
       provider:
         name: provider
@@ -420,13 +420,13 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: aa22279c-24d8-472c-9b45-0a12030e7678
+          x-treblle-trace-id: ec351f7d-8be0-4b06-860e-caf18ee1e064
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Imp2a1pQa29EK2NDTm5tYTdvWkMwdlE9PSIsInZhbHVlIjoiVisrVnVaRFAyVm41NHdIUVlUZnJPcHpiTlNqUk5IVnV5MmhlNzcxNGZ5Und3dE5YRVVjTnVYRkpOeTJVblJZR2QydllMQjd3dldVWU5JTzZrMTFFbS9nSGxmUFpmRFZ0N2lLSkJ6cEdmYTFEKzRnTmtDZHEzQlorL3pDeitQNVAiLCJtYWMiOiI4MGZkM2E5ZjNkNTI5ZTZkMzljMjc0MzAzNjA1NzZjNTJkNzEyZTk3MzFkNWQ3ODBlY2E3MGQyYThlMjI4ODY5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 01:29:22 GMT; Max-Age=7200; path=/; domain=.myapi.local; samesite=lax; learnhub_session=eyJpdiI6InZwV0xERzFFUDdpalFhTE5Fcy9RcWc9PSIsInZhbHVlIjoiZzZSeFBlRG0xSHAvTWQ3UHBUUFlERnJ1ZnVUNWRXNUJuM1FqVXhpazJRcVVmaFo3T0R6c3Evd1hMWS85THJIUDg2QmhuSmZSdHFLZDZsbm9GaHVyVERadmw4ejdpdjlyZm9udWpVZlNVb1cvOFlHZUhhUFhVcWlONWsxZnhYM3EiLCJtYWMiOiI0YmRhM2QzZTA1NzU4YmNlZjgwZWE5MWE4YTk5NTNjYmJkY2QzMjY2MzE5NWU2ZjgxZGM3OWRhYzgzZWUyODgxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 01:29:22 GMT; Max-Age=7200; path=/; domain=.myapi.local; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZ1K1ZmVzdiWkduNkZaWnpST3RUWnc9PSIsInZhbHVlIjoidzVsWkMydllqbk1GUkZVZUhpN2h0R3VBMFUvNzlVV1l4eXZzMXFnaXN5S2lVcWVpNTB4a2xnUkppWnVTbmtuOXlBOXUvVWE1ZlZRRmRjMVVGYnhJY0I4M0ZYMnlJbkt3M3Z1K3FmRUlveStrTFh0NitGemkyV2JhZVIyZldPR0YiLCJtYWMiOiI5NzdkMzY1OGVmYTRhNDM1YzY5ZmU4ZmEyOWI5MDQ1YTZhZDU3ZDFkOGE5ZmExZDlkNDZiMzE3YjFkODFlNTg0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:26:59 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IldyNWpTTFdqVENoN0I3M0QyNW9rM2c9PSIsInZhbHVlIjoielk3b0UzU0hzYVpYQXVCbzNvWFpEQW42d3RaNjBTTFkrYmxSUXd5bUZMZWM0eHNLdk5ZWTQ1aEduOERrMnpGQWdxZkw5emFvNE1OcEVUdGk4c1hRdGRYaDErUU0zNXZWeENsNTFsUElNaW9rYTJHSnkyK0NYOFJYc3dyRWRDMVIiLCJtYWMiOiI4MjM4NjllZTU0M2M5NDg2NzFjZjM5ZjRlYTg4OWUwNjBmZTkyNDAzMDllY2FhZTIxNjU0ODg1YmMzYTgxOTk0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:26:59 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -450,7 +450,7 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: myapi.local
+      Referer: learnhub.mk
     urlParameters:
       provider:
         name: provider
@@ -478,9 +478,9 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: be9dc266-ac5e-4b52-9531-9e504aed1a9e
+          x-treblle-trace-id: 640733f2-0c6c-4f70-90e1-c3f85f6bbc8e
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InRoRHRoL2dzZHc4anhuQm82WEZzcHc9PSIsInZhbHVlIjoiK3lEUGw2T3BDdlBhVytyUTU2Z3dpM1ROZ0szL3M0U084Uy9NNVM5WkNib0EzajEvdEhoWFFtTVovSFpTRUc5T0hZZmYwd0N1cy9BOVBRaHAvZGt5MGUxNWdvSzRrb21XUG1QSG9Wd0FwQWU0SUpoWVJ3OTlDNHMyV0lLR3RKemEiLCJtYWMiOiJhN2RmODU1ODliZGQ5ZjI5NDBhZTE4MjdhZTFiNDQ5ZTQ2OWEzYmY5YWJkN2I1OTFmMzBlMzJhNmUyNzJjNzkzIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 01:29:23 GMT; Max-Age=7200; path=/; domain=.myapi.local; samesite=lax; learnhub_session=eyJpdiI6IitKbVhYdi9QWTNPRGdXN0k4dUNxTXc9PSIsInZhbHVlIjoia3dHb243ajNXRlUzZUsvSFFZSXUyeUpwMzhZbGphbDdDa1hYckk0eWpqaEt4VDJzekwwN05OOVNZYUVpN0kxWExMYmljZ0Q4bUdaUGJJMEFBbkZhN3RQbkcralBSQmJ6Z0pISWNhUDg1TXMvSWFQemsyYTVFRHBvcWJrSDk4T00iLCJtYWMiOiI4YmMyYTMzOThkNDBlNjkyYjAzMmY3YmE5MGQ0MzliYWM1M2IwZTA0MmU4MzlmNThmOWE3NjIwYzNjMGJjZmE5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 01:29:23 GMT; Max-Age=7200; path=/; domain=.myapi.local; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjdJa1ZXOFBFUExKWTk2Q0pEQnh6QVE9PSIsInZhbHVlIjoiNXZXWnI1QnNSdmVTNERhU0d0RXc0cDhTU1R1RVVPU2hnZVNDYlF0VFVKcFJpUVRXcHFjRlRqeTdZMkxkeHBuZEVNckdwWHF0cmE5a1pnOUxHaVdMc3QvVFA2UHpQNGlGVkE2NllFMDUxK25IYW5RZHI0bzFMcFpVUkVla01tTjIiLCJtYWMiOiJlOWI0ZDFmYWQzYjg1NmFiZTM3MGUyMWUyOWRkZmU2ZGY5NGVmM2UwZTgzYTA5ZmI1ZWM4ZWMyNjRkYmMyYjkxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImNqSEZMUW43TXFTM0pjcGlvZENLTEE9PSIsInZhbHVlIjoiYU0wdmtlR3N2YzErS2ZoUFNaUWFTOHZieXJMcXh0Y0xYMGhtSHIvNStVZnpubkFxY0NsamVISjRMbzVNTWhKQnlTSy9UY1dMNnV5TnFIQmQrUXhOMXBQTm80SWU2OG1xV2V0WmJTdUpKU1lrcTFIWEhPNVFKTFo0QllnUkNLMEkiLCJtYWMiOiI2ZmI1ZjE5NGYxOWFjNjc1NDQ2YzIwMjgwMDUyNWJmNmVmMjA1ZmVjMTlmMmI5NmZhYzBmNmMyMTEwYWNiZWI5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:27:00 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
