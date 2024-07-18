@@ -61,11 +61,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: mortimer.ortiz@example.com
+                  example: alphonso99@example.org
                 password:
                   type: string
                   description: ''
-                  example: quibusdam
+                  example: earum
               required:
                 - email
                 - password
@@ -140,11 +140,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: spencer.casey@example.com
+                  example: rondricka@example.org
                 password:
                   type: string
                   description: ''
-                  example: ut
+                  example: officia
               required:
                 - email
                 - password
@@ -219,11 +219,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: gideon88@example.org
+                  example: gilda.hayes@example.net
                 password:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: voluptate
               required:
                 - email
                 - password
@@ -444,7 +444,7 @@ paths:
                 - content
                 - tags
       security: []
-  '/content/blog-posts/{blogPost_id}':
+  '/content/blog-posts/{id}':
     get:
       summary: 'Blog post'
       operationId: blogPost
@@ -473,7 +473,7 @@ paths:
       tags:
         - Content
       security: []
-    patch:
+    put:
       summary: 'Update Blog post'
       operationId: updateBlogPost
       description: 'This endpoint will update a single blog post'
@@ -537,18 +537,43 @@ paths:
     parameters:
       -
         in: path
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+        name: id
+        description: 'The ID of the blog post.'
         example: 1
         required: true
         schema:
           type: integer
-  '/content/blog-posts/{blogPost_id}/statuses':
-    patch:
-      summary: 'Publish/Unpublish Blog posts'
-      operationId: publishUnpublishBlogPosts
-      description: 'This endpoint publish or unpublish blog post'
+  /content/blog-posts-tags:
+    get:
+      summary: 'List Blog post tag'
+      operationId: listBlogPostTag
+      description: "List Blog Post Tags or you can use search query for searching by the name\n    or sort direction based on whether the key starts with - "
       parameters:
+        -
+          in: query
+          name: sort
+          description: ''
+          example: '?sort=name, -name'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?sort=name, -name'
+            enum:
+              - id
+              - name
+              - created_at
+              - updated_at
+        -
+          in: query
+          name: search
+          description: ''
+          example: '?search=name'
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: '?search=name'
         -
           in: header
           name: Referer
@@ -556,37 +581,22 @@ paths:
           example: learnhub.mk
           schema:
             type: string
-      responses: {  }
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                publish_date:
-                  type: date
-                  description: ''
-                  example: '2024-01-01'
-                status:
-                  type: string
-                  description: ''
-                  example: 'draft, published, in_review, archive'
-              required:
-                - status
       security: []
-    parameters:
-      -
-        in: path
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /content/blog-posts-tags:
     post:
       summary: 'Create Blog post tag'
       operationId: createBlogPostTag
@@ -616,8 +626,8 @@ paths:
               required:
                 - name
       security: []
-  '/content/blog-posts-tags/{blogPostTag_id}':
-    patch:
+  '/content/blog-posts-tags/{id}':
+    put:
       summary: 'Update Blog post tag'
       operationId: updateBlogPostTag
       description: 'This endpoint will update a single blog post tag'
@@ -665,12 +675,55 @@ paths:
     parameters:
       -
         in: path
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
+        name: id
+        description: 'The ID of the blog posts tag.'
         example: 1
         required: true
         schema:
           type: integer
+  '/content/blog-posts/{blog_post_id}/statuses':
+    patch:
+      summary: 'Publish/Unpublish Blog posts'
+      operationId: publishUnpublishBlogPosts
+      description: 'This endpoint publish or unpublish blog post'
+      parameters:
+        -
+          in: header
+          name: Referer
+          description: ''
+          example: learnhub.mk
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                publish_date:
+                  type: date
+                  description: ''
+                  example: '2024-01-01'
+                status:
+                  type: string
+                  description: ''
+                  example: 'draft, published, in_review, archive'
+              required:
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: blog_post_id
+        description: 'The ID of the blog post.'
+        example: quia
+        required: true
+        schema:
+          type: string
   /:
     get:
       summary: ''
@@ -737,12 +790,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: blanditiis
+          example: ut
           required: false
           schema:
             type: string
             description: ''
-            example: blanditiis
+            example: ut
         -
           in: header
           name: Referer
@@ -760,9 +813,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Et corporis et libero blanditiis quam ut.'
-                      slug: et-corporis-et-libero-blanditiis-quam-ut
-                      excerpt: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                      title: 'Ducimus non autem dolor voluptatum.'
+                      slug: ducimus-non-autem-dolor-voluptatum
+                      excerpt: 'Aut occaecati tempora quibusdam eius ut.'
                       tags:
                         -
                           name: php
@@ -770,10 +823,186 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-07-09'
+                      publish_date: '2024-07-17'
                       author:
-                        first_name: 'Miss Adelle Wintheiser'
-                        last_name: Lind
+                        first_name: 'Prof. Jeromy Blick'
+                        last_name: Herzog
+                        image: null
+                    -
+                      title: 'Laboriosam consequuntur et ipsa rem repellendus magnam ut nobis.'
+                      slug: laboriosam-consequuntur-et-ipsa-rem-repellendus-magnam-ut-nobis
+                      excerpt: 'Sit dolores consequatur maxime error laudantium numquam.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Ms. Kamille Dicki Sr.'
+                        last_name: Schamberger
+                        image: null
+                    -
+                      title: 'Tempora quia doloribus ut.'
+                      slug: tempora-quia-doloribus-ut
+                      excerpt: 'Est porro et quibusdam aut consequuntur iste temporibus quia.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Prof. Jeromy Blick'
+                        last_name: Herzog
+                        image: null
+                    -
+                      title: 'Aut vel modi sequi in quisquam.'
+                      slug: aut-vel-modi-sequi-in-quisquam
+                      excerpt: 'Consectetur labore harum nesciunt nihil asperiores molestiae quas.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Prof. Jeromy Blick'
+                        last_name: Herzog
+                        image: null
+                    -
+                      title: 'Quia sed autem assumenda veritatis nemo provident.'
+                      slug: quia-sed-autem-assumenda-veritatis-nemo-provident
+                      excerpt: 'Voluptas ipsum dolor vero quae in.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Buford Brakus'
+                        last_name: "O'Kon"
+                        image: null
+                    -
+                      title: 'Fugit in voluptatem qui ut.'
+                      slug: fugit-in-voluptatem-qui-ut
+                      excerpt: 'Repudiandae quasi ut ut sunt illum fuga.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Buford Brakus'
+                        last_name: "O'Kon"
+                        image: null
+                    -
+                      title: 'Consectetur ut similique est.'
+                      slug: consectetur-ut-similique-est
+                      excerpt: 'Eos architecto soluta nulla est inventore magni harum.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Kolby Mante'
+                        last_name: Homenick
+                        image: null
+                    -
+                      title: 'Alias quo fugiat rerum porro aut exercitationem accusamus.'
+                      slug: alias-quo-fugiat-rerum-porro-aut-exercitationem-accusamus
+                      excerpt: 'Ratione in magni placeat vitae quisquam velit quia ipsam.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Madisyn Bradtke'
+                        last_name: Harris
+                        image: null
+                    -
+                      title: 'Odit vero libero quo aut.'
+                      slug: odit-vero-libero-quo-aut
+                      excerpt: 'Adipisci ad autem sit a.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Eric Ullrich Jr.'
+                        last_name: Daniel
+                        image: null
+                    -
+                      title: 'Soluta deleniti eum consequatur placeat.'
+                      slug: soluta-deleniti-eum-consequatur-placeat
+                      excerpt: 'Numquam similique eos sint id odio sed.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Ms. Kamille Dicki Sr.'
+                        last_name: Schamberger
+                        image: null
+                    -
+                      title: 'Odit earum commodi molestiae autem voluptatum.'
+                      slug: odit-earum-commodi-molestiae-autem-voluptatum
+                      excerpt: 'Est facilis et est deserunt porro.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Buford Brakus'
+                        last_name: "O'Kon"
+                        image: null
+                    -
+                      title: 'Fugiat eaque totam totam facilis unde ut.'
+                      slug: fugiat-eaque-totam-totam-facilis-unde-ut
+                      excerpt: 'Qui vel quo et et magni.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Joel Farrell'
+                        last_name: Witting
                         image: null
                   links:
                     first: 'http://api.myapi.com/blog-posts?page=1'
@@ -799,16 +1028,16 @@ paths:
                         active: false
                     path: 'http://api.myapi.com/blog-posts'
                     per_page: 15
-                    to: 1
-                    total: 1
+                    to: 12
+                    total: 12
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Et corporis et libero blanditiis quam ut.'
-                        slug: et-corporis-et-libero-blanditiis-quam-ut
-                        excerpt: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                        title: 'Ducimus non autem dolor voluptatum.'
+                        slug: ducimus-non-autem-dolor-voluptatum
+                        excerpt: 'Aut occaecati tempora quibusdam eius ut.'
                         tags:
                           -
                             name: php
@@ -816,23 +1045,199 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-07-09'
+                        publish_date: '2024-07-17'
                         author:
-                          first_name: 'Miss Adelle Wintheiser'
-                          last_name: Lind
+                          first_name: 'Prof. Jeromy Blick'
+                          last_name: Herzog
+                          image: null
+                      -
+                        title: 'Laboriosam consequuntur et ipsa rem repellendus magnam ut nobis.'
+                        slug: laboriosam-consequuntur-et-ipsa-rem-repellendus-magnam-ut-nobis
+                        excerpt: 'Sit dolores consequatur maxime error laudantium numquam.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Ms. Kamille Dicki Sr.'
+                          last_name: Schamberger
+                          image: null
+                      -
+                        title: 'Tempora quia doloribus ut.'
+                        slug: tempora-quia-doloribus-ut
+                        excerpt: 'Est porro et quibusdam aut consequuntur iste temporibus quia.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Prof. Jeromy Blick'
+                          last_name: Herzog
+                          image: null
+                      -
+                        title: 'Aut vel modi sequi in quisquam.'
+                        slug: aut-vel-modi-sequi-in-quisquam
+                        excerpt: 'Consectetur labore harum nesciunt nihil asperiores molestiae quas.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Prof. Jeromy Blick'
+                          last_name: Herzog
+                          image: null
+                      -
+                        title: 'Quia sed autem assumenda veritatis nemo provident.'
+                        slug: quia-sed-autem-assumenda-veritatis-nemo-provident
+                        excerpt: 'Voluptas ipsum dolor vero quae in.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Buford Brakus'
+                          last_name: "O'Kon"
+                          image: null
+                      -
+                        title: 'Fugit in voluptatem qui ut.'
+                        slug: fugit-in-voluptatem-qui-ut
+                        excerpt: 'Repudiandae quasi ut ut sunt illum fuga.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Buford Brakus'
+                          last_name: "O'Kon"
+                          image: null
+                      -
+                        title: 'Consectetur ut similique est.'
+                        slug: consectetur-ut-similique-est
+                        excerpt: 'Eos architecto soluta nulla est inventore magni harum.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Kolby Mante'
+                          last_name: Homenick
+                          image: null
+                      -
+                        title: 'Alias quo fugiat rerum porro aut exercitationem accusamus.'
+                        slug: alias-quo-fugiat-rerum-porro-aut-exercitationem-accusamus
+                        excerpt: 'Ratione in magni placeat vitae quisquam velit quia ipsam.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Madisyn Bradtke'
+                          last_name: Harris
+                          image: null
+                      -
+                        title: 'Odit vero libero quo aut.'
+                        slug: odit-vero-libero-quo-aut
+                        excerpt: 'Adipisci ad autem sit a.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Eric Ullrich Jr.'
+                          last_name: Daniel
+                          image: null
+                      -
+                        title: 'Soluta deleniti eum consequatur placeat.'
+                        slug: soluta-deleniti-eum-consequatur-placeat
+                        excerpt: 'Numquam similique eos sint id odio sed.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Ms. Kamille Dicki Sr.'
+                          last_name: Schamberger
+                          image: null
+                      -
+                        title: 'Odit earum commodi molestiae autem voluptatum.'
+                        slug: odit-earum-commodi-molestiae-autem-voluptatum
+                        excerpt: 'Est facilis et est deserunt porro.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Buford Brakus'
+                          last_name: "O'Kon"
+                          image: null
+                      -
+                        title: 'Fugiat eaque totam totam facilis unde ut.'
+                        slug: fugiat-eaque-totam-totam-facilis-unde-ut
+                        excerpt: 'Qui vel quo et et magni.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Joel Farrell'
+                          last_name: Witting
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Et corporis et libero blanditiis quam ut.'
+                          example: 'Ducimus non autem dolor voluptatum.'
                         slug:
                           type: string
-                          example: et-corporis-et-libero-blanditiis-quam-ut
+                          example: ducimus-non-autem-dolor-voluptatum
                         excerpt:
                           type: string
-                          example: 'Laborum explicabo voluptatibus incidunt sit totam ut nam.'
+                          example: 'Aut occaecati tempora quibusdam eius ut.'
                         tags:
                           type: array
                           example:
@@ -850,16 +1255,16 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-07-09'
+                          example: '2024-07-17'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Miss Adelle Wintheiser'
+                              example: 'Prof. Jeromy Blick'
                             last_name:
                               type: string
-                              example: Lind
+                              example: Herzog
                             image:
                               type: string
                               example: null
@@ -925,10 +1330,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 1
+                        example: 12
                       total:
                         type: integer
-                        example: 1
+                        example: 12
       tags:
         - Website
       security: []
@@ -1660,7 +2065,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: ut
+        example: odit
         required: true
         schema:
           type: string
@@ -1902,8 +2307,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://api.myapi.com/blog-post-tags/quia?page=1'
-                    last: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                    first: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
+                    last: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
                     prev: null
                     next: null
                   meta:
@@ -1916,14 +2321,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                        url: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://api.myapi.com/blog-post-tags/quia'
+                    path: 'http://api.myapi.com/blog-post-tags/placeat'
                     per_page: 15
                     to: null
                     total: 0
@@ -1936,10 +2341,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
                       last:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
                       prev:
                         type: string
                         example: null
@@ -1966,7 +2371,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://api.myapi.com/blog-post-tags/quia?page=1'
+                            url: 'http://api.myapi.com/blog-post-tags/placeat?page=1'
                             label: '1'
                             active: true
                           -
@@ -1987,7 +2392,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/quia'
+                        example: 'http://api.myapi.com/blog-post-tags/placeat'
                       per_page:
                         type: integer
                         example: 15
@@ -2005,7 +2410,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: quia
+        example: placeat
         required: true
         schema:
           type: string
@@ -2035,19 +2440,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: repellat
+                  example: est
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: billie12@example.com
+                  example: kennith.wiegand@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: enim
+                  example: est
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: autem
+                  example: non
               required:
                 - name
                 - email
@@ -2080,11 +2485,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: ardewvemhxcooygizbbw
+                  example: shesy
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: dare.randall@example.net
+                  example: berge.rowena@example.org
                 cf-turnstile-response:
                   type: string
                   description: ''

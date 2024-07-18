@@ -40,7 +40,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - vV5d6Z3c1P4kgf8eEaah6bD
+      - 6abfk46vDPgV8ZE31ached5
     controller: null
     method: null
     route: null
@@ -71,7 +71,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: mortimer.ortiz@example.com
+        example: alphonso99@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -80,14 +80,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quibusdam
+        example: earum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: mortimer.ortiz@example.com
-      password: quibusdam
+      email: alphonso99@example.org
+      password: earum
     fileParameters: []
     responses: []
     responseFields: []
@@ -124,7 +124,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 5h41ke63dDPZV6gabafv8cE
+      - ZEbe64vaca6hV85D1Pd3fkg
     controller: null
     method: null
     route: null
@@ -166,7 +166,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - d3ea1gb6f85ak6hZvPVc4DE
+      - 6f6PVcdga3Ebv1kD48he5Za
     controller: null
     method: null
     route: null
@@ -197,7 +197,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: spencer.casey@example.com
+        example: rondricka@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -206,14 +206,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ut
+        example: officia
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: spencer.casey@example.com
-      password: ut
+      email: rondricka@example.org
+      password: officia
     fileParameters: []
     responses: []
     responseFields: []
@@ -250,7 +250,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - 1d34baZvD86cfPgVkhe5E6a
+      - 85deb4DVfka61ha36ZvcgEP
     controller: null
     method: null
     route: null
@@ -292,7 +292,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - hcDkfg18aV6e35ZvabdEP64
+      - akh48dabf653DeEPV6vZ1gc
     controller: null
     method: null
     route: null
@@ -323,7 +323,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: gideon88@example.org
+        example: gilda.hayes@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -332,14 +332,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: voluptatem
+        example: voluptate
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: gideon88@example.org
-      password: voluptatem
+      email: gilda.hayes@example.net
+      password: voluptate
     fileParameters: []
     responses: []
     responseFields: []
@@ -376,7 +376,7 @@ endpoints:
     auth:
       - headers
       - Referer
-      - kVZ4hc3baEvPdf6g5aD86e1
+      - bEa6vaVcd5h6De814k3PZgf
     controller: null
     method: null
     route: null
@@ -424,9 +424,9 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: d7d21894-ec89-41c0-acb4-f7dc20cc3303
+          x-treblle-trace-id: 7303c220-bff5-4e95-9a0f-1b1da14cc287
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Iml3eFZBRTFJQWJENXhVSG5IQ1VKTWc9PSIsInZhbHVlIjoiQUF2aVVNaEZYaXZXY05USC9UWmZ1eGFjdVJNR2ZDRTFWMFpwUDBVSC8xU3I4Z1BBM0w0dVBIMkJGQm5KS2ZyR01tMVE3SDFwdFdEdHQ1d2xiY2VBTGliK1c4VGQ5VFJGNHorajhxY1BOV1AwakJITkhaY0lTU0JVN3dzdmxWOUkiLCJtYWMiOiI0NTc4MGVmM2NjMmU1Zjc0YzdiMzk0NjdiZjVkYzkxNzdlMGEzMjQ4YjUwNGY3ZjcxZjg4MDYxZWQ3NWZkOWQyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ild1WW52eklVNXVaa29SMmtZTVdXWmc9PSIsInZhbHVlIjoiQ1RDZDZkcng0NXI1V3kza1hCWE8zU1VxTlMxUmcvK2RWQXNlK1VvVlQwN01EeEdpMU53UjVuYkJZejFrcnFpaHVvbVJkUDJtZ2dHYkpLN3ovZEovbU1GOTg5K21xeWdaNTBKNVhsZXNIYUpmM2M5NU9aRWk4WFcrQmhlOG1CRFMiLCJtYWMiOiJjYWFmODRhYjg5ZDljMzZjMjYyZDdlNjMxODcxNGYxZDQwZjI1MjA3ZDE4ZWFiMDk2MmY5YjI3ODc2YTA2ZTlhIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im9QNi9ZMUxZai9UdWVGTmR3blZ2M1E9PSIsInZhbHVlIjoiMmZTTEluSWNTbHVGY0RKMWFBK2IxK2RIR3doTkFxbk9HRFgwTnBEVnZkeEdqeTVQMCsxd3Y0S0M2bHdvOWNObFV3eU5TcEw1TStRTjVFYm5MMTAzUEJIM3J6VE04VzBROG1qbmgvVnBXbEsxVUxXZXRIUmR3SG1CT1BkTnFDKzkiLCJtYWMiOiIwMzRmODY4NDI3MGQxMDM4Yjc2NDQ5Y2IxNmJhYjc0NThiNjBhZTYzY2U0NTU2MGIzYmU4NDUwZGRlYTMwNjU1IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:02 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ii9XTEU1RHVUZU5xSzQyRlJPS0Jpa3c9PSIsInZhbHVlIjoiVkd0TnRCTTlEZ1dKVjRvR3E2QStkaUlMMExMSmFzM1JIWjZPNkQ3UjJYd1F4SWpPVXZlNGRlbndYbGFIYjcxSmFqbzlYd05YUTB2RkJwK0hTOEhMT1NRL3dZUmt3clBqWlNKQXRQakpjQlpMcVlTNFE3SktZMTNRczlxQlR2b0wiLCJtYWMiOiJiMWIxYWQyMWUwZDExYmZiYzVjZTRiODQxZDRkMWJkNTc1NTY5M2JkMzVjZDI2NGY0Y2ZkOTgyMWY3NzZiYWZjIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:02 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -478,9 +478,9 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 1ec306a8-6f56-4cb2-8a6c-1ae69587fc1b
+          x-treblle-trace-id: 5da37a6b-9f35-4e05-959e-6b2af9d372c4
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkQzVWNwd3k2eHNpRFgvTmlITWg0OFE9PSIsInZhbHVlIjoiQzhHSisvTFRBYUlMRlRSdk5Wb25FMnRFWGhDSFFVYXRDM0hEL0xpcm0vdlpjVHBiMWVhemR6ZmNHMTNWSkZkdUhMUTlNNHJwSHYxNFFWQXhJRytrMzVCcE5TQVM1T2pMR1Nod2t4UTZZNWxnUC9rZk5KZlM1SXM4U0RUOG4zWDYiLCJtYWMiOiIzNTI3NDA3NWM5NmNjYmVlOTJiYWVkMmZlYTNkZmRkNGZjYjU3YTE2MzM1M2E3MDI4N2ZhMzMzN2U0YjJhODE0IiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6IlRPU3pUSGNnaVBsM0VTWEl6bDdSTEE9PSIsInZhbHVlIjoiV0NOaEtoNHdPMFlFcTdNSXVCWmZXUEthai9lMmYrbFVhemxNYndMVmNadDRGTVZOSGlvSUlNQnFzZUttRkNodjloQlNOM0tCRUQyR3A1bm1VMi9iOFZST0c1WjdBTkM1eU85V1RtK3pudlZJbUtKcVo4SHpHOFFhSk1tMStPTU8iLCJtYWMiOiJmYjA3NmRlZjEzNWQzNDYyOWE4YzY3MjkyOWFmMTg1MTMyYjYxNjMwZDE0ZjdkYTJjNGNjNjQxNDMwNjdlMzkwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=/; domain=.myapi.com; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtkV1RYblVHZk1nQjNlSXhZTlladGc9PSIsInZhbHVlIjoiQ01MNDQ5OUVJZC85amR3Q2V2dmh3SEJGMnhMOVM0eGh1cVJZWjFuTDkwclhDM09jajRTdWhaeVJxWFZ4RWs5SnJhcmZxYlRDTzZSdktwWWdBVVhOZ2VIczZjTGJiSCtVTVpIbU9hMUc2VWZpY1dJN0NaY05IYjBSbUFvc3grd2EiLCJtYWMiOiIwZWYxYWNkOGE3MzY1NjVkYTM5Nzg2NWViNDljODA0M2YzOTk0ZDc4ZDNkNmNjZWZjOGY5MjEzYWU1YzUzNmJiIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:03 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ii84di9EYWtvZ21nZ0dsMzBOMmZ1NWc9PSIsInZhbHVlIjoiMWprd0src3VnVW4yTjRJZHduN25FOEphTDNGRmJZSG1aSjM4SUpNSHVyRE1URlR6TTBERXpsYk1ZNitxY0pUZ3krcUNUMDZOWk1YN3BUbXV6WlNmSzgyVjk1SVpPUHhxd3FMR2ZJaHJlRTByK0dCUTV2REt2MTZnV25zZzU5ZFoiLCJtYWMiOiIwYmNhOTQzOGJhZjUyODQ1ZThlZDAyYWYzYjg0NzNkYTM3YjZlZDFhMDFhZWMzZGQ3OTlhNDgyNzNkZmVhYWI0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:03 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "0630a238-cce7-4521-9159-b31a89f4fbfe",
+        "_postman_id": "5e19f738-8a44-4659-8c51-041366880b91",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -82,7 +82,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"mortimer.ortiz@example.com\",\"password\":\"quibusdam\"}"
+                            "raw": "{\"email\":\"alphonso99@example.org\",\"password\":\"earum\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -175,7 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"spencer.casey@example.com\",\"password\":\"ut\"}"
+                            "raw": "{\"email\":\"rondricka@example.org\",\"password\":\"officia\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -268,7 +268,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gideon88@example.org\",\"password\":\"voluptatem\"}"
+                            "raw": "{\"email\":\"gilda.hayes@example.net\",\"password\":\"voluptate\"}"
                         },
                         "description": "This endpoint enables users with member role to sign in",
                         "auth": {
@@ -341,7 +341,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "d7d21894-ec89-41c0-acb4-f7dc20cc3303"
+                                    "value": "7303c220-bff5-4e95-9a0f-1b1da14cc287"
                                 },
                                 {
                                     "key": "vary",
@@ -349,7 +349,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Iml3eFZBRTFJQWJENXhVSG5IQ1VKTWc9PSIsInZhbHVlIjoiQUF2aVVNaEZYaXZXY05USC9UWmZ1eGFjdVJNR2ZDRTFWMFpwUDBVSC8xU3I4Z1BBM0w0dVBIMkJGQm5KS2ZyR01tMVE3SDFwdFdEdHQ1d2xiY2VBTGliK1c4VGQ5VFJGNHorajhxY1BOV1AwakJITkhaY0lTU0JVN3dzdmxWOUkiLCJtYWMiOiI0NTc4MGVmM2NjMmU1Zjc0YzdiMzk0NjdiZjVkYzkxNzdlMGEzMjQ4YjUwNGY3ZjcxZjg4MDYxZWQ3NWZkOWQyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ild1WW52eklVNXVaa29SMmtZTVdXWmc9PSIsInZhbHVlIjoiQ1RDZDZkcng0NXI1V3kza1hCWE8zU1VxTlMxUmcvK2RWQXNlK1VvVlQwN01EeEdpMU53UjVuYkJZejFrcnFpaHVvbVJkUDJtZ2dHYkpLN3ovZEovbU1GOTg5K21xeWdaNTBKNVhsZXNIYUpmM2M5NU9aRWk4WFcrQmhlOG1CRFMiLCJtYWMiOiJjYWFmODRhYjg5ZDljMzZjMjYyZDdlNjMxODcxNGYxZDQwZjI1MjA3ZDE4ZWFiMDk2MmY5YjI3ODc2YTA2ZTlhIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:48 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6Im9QNi9ZMUxZai9UdWVGTmR3blZ2M1E9PSIsInZhbHVlIjoiMmZTTEluSWNTbHVGY0RKMWFBK2IxK2RIR3doTkFxbk9HRFgwTnBEVnZkeEdqeTVQMCsxd3Y0S0M2bHdvOWNObFV3eU5TcEw1TStRTjVFYm5MMTAzUEJIM3J6VE04VzBROG1qbmgvVnBXbEsxVUxXZXRIUmR3SG1CT1BkTnFDKzkiLCJtYWMiOiIwMzRmODY4NDI3MGQxMDM4Yjc2NDQ5Y2IxNmJhYjc0NThiNjBhZTYzY2U0NTU2MGIzYmU4NDUwZGRlYTMwNjU1IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:02 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ii9XTEU1RHVUZU5xSzQyRlJPS0Jpa3c9PSIsInZhbHVlIjoiVkd0TnRCTTlEZ1dKVjRvR3E2QStkaUlMMExMSmFzM1JIWjZPNkQ3UjJYd1F4SWpPVXZlNGRlbndYbGFIYjcxSmFqbzlYd05YUTB2RkJwK0hTOEhMT1NRL3dZUmt3clBqWlNKQXRQakpjQlpMcVlTNFE3SktZMTNRczlxQlR2b0wiLCJtYWMiOiJiMWIxYWQyMWUwZDExYmZiYzVjZTRiODQxZDRkMWJkNTc1NTY5M2JkMzVjZDI2NGY0Y2ZkOTgyMWY3NzZiYWZjIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:02 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
                                 }
                             ],
                             "code": 200,
@@ -401,7 +401,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "1ec306a8-6f56-4cb2-8a6c-1ae69587fc1b"
+                                    "value": "5da37a6b-9f35-4e05-959e-6b2af9d372c4"
                                 },
                                 {
                                     "key": "vary",
@@ -409,7 +409,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IkQzVWNwd3k2eHNpRFgvTmlITWg0OFE9PSIsInZhbHVlIjoiQzhHSisvTFRBYUlMRlRSdk5Wb25FMnRFWGhDSFFVYXRDM0hEL0xpcm0vdlpjVHBiMWVhemR6ZmNHMTNWSkZkdUhMUTlNNHJwSHYxNFFWQXhJRytrMzVCcE5TQVM1T2pMR1Nod2t4UTZZNWxnUC9rZk5KZlM1SXM4U0RUOG4zWDYiLCJtYWMiOiIzNTI3NDA3NWM5NmNjYmVlOTJiYWVkMmZlYTNkZmRkNGZjYjU3YTE2MzM1M2E3MDI4N2ZhMzMzN2U0YjJhODE0IiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6IlRPU3pUSGNnaVBsM0VTWEl6bDdSTEE9PSIsInZhbHVlIjoiV0NOaEtoNHdPMFlFcTdNSXVCWmZXUEthai9lMmYrbFVhemxNYndMVmNadDRGTVZOSGlvSUlNQnFzZUttRkNodjloQlNOM0tCRUQyR3A1bm1VMi9iOFZST0c1WjdBTkM1eU85V1RtK3pudlZJbUtKcVo4SHpHOFFhSk1tMStPTU8iLCJtYWMiOiJmYjA3NmRlZjEzNWQzNDYyOWE4YzY3MjkyOWFmMTg1MTMyYjYxNjMwZDE0ZjdkYTJjNGNjNjQxNDMwNjdlMzkwIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:49 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImtkV1RYblVHZk1nQjNlSXhZTlladGc9PSIsInZhbHVlIjoiQ01MNDQ5OUVJZC85amR3Q2V2dmh3SEJGMnhMOVM0eGh1cVJZWjFuTDkwclhDM09jajRTdWhaeVJxWFZ4RWs5SnJhcmZxYlRDTzZSdktwWWdBVVhOZ2VIczZjTGJiSCtVTVpIbU9hMUc2VWZpY1dJN0NaY05IYjBSbUFvc3grd2EiLCJtYWMiOiIwZWYxYWNkOGE3MzY1NjVkYTM5Nzg2NWViNDljODA0M2YzOTk0ZDc4ZDNkNmNjZWZjOGY5MjEzYWU1YzUzNmJiIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:03 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ii84di9EYWtvZ21nZ0dsMzBOMmZ1NWc9PSIsInZhbHVlIjoiMWprd0src3VnVW4yTjRJZHduN25FOEphTDNGRmJZSG1aSjM4SUpNSHVyRE1URlR6TTBERXpsYk1ZNitxY0pUZ3krcUNUMDZOWk1YN3BUbXV6WlNmSzgyVjk1SVpPUHhxd3FMR2ZJaHJlRTByK0dCUTV2REt2MTZnV25zZzU5ZFoiLCJtYWMiOiIwYmNhOTQzOGJhZjUyODQ1ZThlZDAyYWYzYjg0NzNkYTM3YjZlZDFhMDFhZWMzZGQ3OTlhNDgyNzNkZmVhYWI0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:03 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
                                 }
                             ],
                             "code": 422,
@@ -483,12 +483,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-treblle-trace-id",
-                                    "value": "a0697ca5-993d-4565-b176-5c96bde968e2"
-                                },
-                                {
                                     "key": "vary",
                                     "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IjZOVm56bnpNRUxXQ2Rwb1lNSWUzRnc9PSIsInZhbHVlIjoiL3h4N04xd2xVbkQxUGwxWmo3cVVLTnlxdzVtYUptTktKRytQeEZ2Vjk0WDJqVW1TbndJRjFLR210WDVwaDFuUWxXS0pTQWJ3M1UvN2llWUYwUzlsSEF1M3JtbDlDdEprYWdtUDdJUGl2cGhBRlY5RUZpMTNJRVBKbXRNb2lrdy8iLCJtYWMiOiJkMzNmMTNmNWQzMTA0N2UxOWQyYzBkNDI3MWE5ZmQyMTFjOTFkYWNiMTM3NjU2NDE5NDY4MGQ2MWM3MjU0Y2JhIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IjdFc3A2SGc3VDZlNCs3QlYyQzluYUE9PSIsInZhbHVlIjoib3NIVzFBek04WHBRVnh4cm1UOVFTRUhSL1MyTUNKdkViOEpHUFJUS2N3bHA0VHRFTitFRk9NbEppaGpLVHZ2eDZ0WU04cktKNnRDc1dRRTEvRmpXcDJYc2FlU1pvbG9XTStnMzhuc3oyOUk4YklESTJWYWt0WkF6M001eFlGTWwiLCJtYWMiOiI3YmM4MzcwNDRkODNlMTQ3Y2E0MzA5YjZhNTc5ODNkNzY2ZjUwMjU4YmRlNmVhZDhmNzcwZDM3ODE3M2JmOTM5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -533,15 +533,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts\/:blogPost_id",
+                            "path": "content\/blog-posts\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts\/:blogPost_id",
+                            "raw": "{{baseUrl}}\/content\/blog-posts\/:id",
                             "variable": [
                                 {
-                                    "id": "blogPost_id",
-                                    "key": "blogPost_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the blogPost."
+                                    "description": "The ID of the blog post."
                                 }
                             ]
                         },
@@ -570,12 +570,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-treblle-trace-id",
-                                    "value": "44895910-023f-476d-a12c-64d5e22ad2e6"
-                                },
-                                {
                                     "key": "vary",
                                     "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IkF1ekRRT01qOE1tRVQ1aFJWeC9hWFE9PSIsInZhbHVlIjoiVFoxcW9kUG41cW9hbHlLQTdpajJqaWFzNGlwcGF4V3dmZnoveTkra2JoeG5UNExtRmNGWFNuc2xmdy8rS3kzTkErYzJhWmZSbEpaRXVIeGVaUU9VcURLTjQ1Zkx6eThCaTk4RW15MGMyam5JUjVUd0IyQTdPZTZubVY4ZHM2V2IiLCJtYWMiOiJkN2E3NjcxNjFlODE2MGIzNWVlNmQ5ODA5M2VlYzVhYzY0OWFhN2JiNGExZDJkNzliYjJiZmE5YjIyOWZlMGUxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImxaOC9MelZpbTV0dzduYkMwTjBJMnc9PSIsInZhbHVlIjoiclFGbUpSbjZMcWxOcjFnZ3FpR2FXdzRSRmlNSUc3dDBndFZkL3d6WllZZW5hNHRaWnVBaGt3b1JqVmt0MGNQL29PN3BCTStXaGhyVm16UUVFWmlaLzZxb3FWVkZFS2dkOUMveWtkRVRROWtBbE5QbGlZclo4enRETm1kODdMMnkiLCJtYWMiOiIyNWQ3NDhlZDI4NzcyY2IzYzIzMTNmMmE0MDEzODZmNDZiMWMwMmZmYjQ3NTlmMDcxZDEzYjhiNTg4MmNkMjljIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -589,19 +589,19 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts\/:blogPost_id",
+                            "path": "content\/blog-posts\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts\/:blogPost_id",
+                            "raw": "{{baseUrl}}\/content\/blog-posts\/:id",
                             "variable": [
                                 {
-                                    "id": "blogPost_id",
-                                    "key": "blogPost_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the blogPost."
+                                    "description": "The ID of the blog post."
                                 }
                             ]
                         },
-                        "method": "PATCH",
+                        "method": "PUT",
                         "header": [
                             {
                                 "key": "Accept",
@@ -628,15 +628,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts\/:blogPost_id",
+                            "path": "content\/blog-posts\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts\/:blogPost_id",
+                            "raw": "{{baseUrl}}\/content\/blog-posts\/:id",
                             "variable": [
                                 {
-                                    "id": "blogPost_id",
-                                    "key": "blogPost_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the blogPost."
+                                    "description": "The ID of the blog post."
                                 }
                             ]
                         },
@@ -656,43 +656,65 @@
                     "response": []
                 },
                 {
-                    "name": "Publish\/Unpublish Blog posts",
+                    "name": "List Blog post tag",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts\/:blogPost_id\/statuses",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts\/:blogPost_id\/statuses",
-                            "variable": [
+                            "path": "content\/blog-posts-tags",
+                            "query": [
                                 {
-                                    "id": "blogPost_id",
-                                    "key": "blogPost_id",
-                                    "value": "1",
-                                    "description": "The ID of the blogPost."
+                                    "key": "sort",
+                                    "value": "%3Fsort%3Dname%2C+-name",
+                                    "description": "",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "%3Fsearch%3Dname",
+                                    "description": "",
+                                    "disabled": false
                                 }
-                            ]
+                            ],
+                            "raw": "{{baseUrl}}\/content\/blog-posts-tags?sort=%3Fsort%3Dname%2C+-name&search=%3Fsearch%3Dname"
                         },
-                        "method": "PATCH",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"publish_date\":\"2024-01-01\",\"status\":\"draft, published, in_review, archive\"}"
-                        },
-                        "description": "This endpoint publish or unpublish blog post",
+                        "body": null,
+                        "description": "List Blog Post Tags or you can use search query for searching by the name\n    or sort direction based on whether the key starts with - ",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6IisrWUJvU0tuNThidGhXZzArUlJhWHc9PSIsInZhbHVlIjoiUjhqWTRzSm5XVCtIY3l3djViM2Z3WmFXVmZnc3p5bWt0b2NLbE9zZzVqNitEMmtlbG5uRU9xeXQ2c1kyM1BVcVRNaFBybDNFQnYyNHlwWUJqSjNjU2JEOUVkMWsvQWVPR0xtRXFwSGpxREFLMlI3d1NzeWdJWGxzSHRZdkZLeHAiLCJtYWMiOiIyY2E0N2FjNzU5MTM5YTA4NWQ5OTI3ZTEzMjUzNmFjNmFiNjIzNTg0M2YyNDNlZDFhOGU2NjdmMmRhZTM5ZDRhIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6ImZDRmRuM05IOFVXTVlyUFhad1JmNnc9PSIsInZhbHVlIjoiclZKR3NPWTE2ajdhbi91Ti9CbEtLNmxiZmEwNXQ4K2doL244cVVDSno1akZ1QlBsNmo3VVB4U0o0a0gxT3Y5UW5IdG9QNkRmYXJWMmVMWmdFMmpkSHZjUTd5QXV2cjVIVDNTQkdZRiswN05uRTkyeVdqUStKNzlCMkJKSGU0QXAiLCJtYWMiOiIxMTM5MTI4ZjVhNjg3NTZkNDlkNjY3Y2VjMDUwMzkzNTFjODM5MDcwOTBiYjVjY2I3ODVkNmQ2MjIyZGI0NGQwIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7200; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "Create Blog post tag",
@@ -730,19 +752,19 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts-tags\/:blogPostTag_id",
+                            "path": "content\/blog-posts-tags\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts-tags\/:blogPostTag_id",
+                            "raw": "{{baseUrl}}\/content\/blog-posts-tags\/:id",
                             "variable": [
                                 {
-                                    "id": "blogPostTag_id",
-                                    "key": "blogPostTag_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the blogPostTag."
+                                    "description": "The ID of the blog posts tag."
                                 }
                             ]
                         },
-                        "method": "PATCH",
+                        "method": "PUT",
                         "header": [
                             {
                                 "key": "Accept",
@@ -769,15 +791,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "content\/blog-posts-tags\/:blogPostTag_id",
+                            "path": "content\/blog-posts-tags\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/content\/blog-posts-tags\/:blogPostTag_id",
+                            "raw": "{{baseUrl}}\/content\/blog-posts-tags\/:id",
                             "variable": [
                                 {
-                                    "id": "blogPostTag_id",
-                                    "key": "blogPostTag_id",
+                                    "id": "id",
+                                    "key": "id",
                                     "value": "1",
-                                    "description": "The ID of the blogPostTag."
+                                    "description": "The ID of the blog posts tag."
                                 }
                             ]
                         },
@@ -790,6 +812,45 @@
                         ],
                         "body": null,
                         "description": "This endpoint deletes blog post tag",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Publish\/Unpublish Blog posts",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "content\/blog-posts\/:blog_post_id\/statuses",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/content\/blog-posts\/:blog_post_id\/statuses",
+                            "variable": [
+                                {
+                                    "id": "blog_post_id",
+                                    "key": "blog_post_id",
+                                    "value": "quia",
+                                    "description": "The ID of the blog post."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"publish_date\":\"2024-01-01\",\"status\":\"draft, published, in_review, archive\"}"
+                        },
+                        "description": "This endpoint publish or unpublish blog post",
                         "auth": {
                             "type": "noauth"
                         }
@@ -837,7 +898,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "ed6e64fd-531a-426a-883c-36da9261cb45"
+                                    "value": "6d0b9d97-a010-4a78-aaf7-682fe34ca99d"
                                 },
                                 {
                                     "key": "vary",
@@ -885,7 +946,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Ik9tTk1YdDQ3V0NoYzFOOXNzdGYvMHc9PSIsInZhbHVlIjoiR01GZmhnc3FDbXhIU3VrN2dzdGVXLzFFY2RiRjdzN0x0WG1Na21wTXZLUWR2SE5kd29UMW9oY2R5N2NxR2VlVzN3U2p1RExkdUFPVUc0ckNnLzlOaDBFeStUd3FWR0xlSmZzYmxiSkVSdHhXRVJuSm4xOHZCWFlzUXdubk9OQTIiLCJtYWMiOiIxYTYxZDg1Y2NkMmUzNTdhZTlmNzkzMDI3ZGMwYWQ4YzQzY2RlMjViNmMzOGY1NmVlNWE4N2I1YjY2YTc4MTkyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=\/; domain=.myapi.com; samesite=lax; learnhub_session=eyJpdiI6Ik9mVno0aFIvYjN5akowdGFZMnJhOEE9PSIsInZhbHVlIjoiZW1PaTZXM21ENzNDbjJ6Vk1FVE1CeTlKRU1WWCtqWXhHdVRvY1BGd1c0Qk1yZTZqT01Nb01iVEs0c21IcXJWTUFKV2tTVG5oKzlWZXZkcFc1YnI1NUJMRDc3MHBOclZNMU9ESG1FMWhleXgxTHVyYkxkZ1BBTUF2QlVmbzFYMDciLCJtYWMiOiIyYjRkNDE5ZWQ1MzUxNDAxOGY4OGU3Mzc1Y2U4MDYxOGE4MzVhODYwZmE0ZGZhNThhNWM2ZWVmYmM2MTlhMGUyIiwidGFnIjoiIn0%3D; expires=Mon, 15 Jul 2024 14:07:51 GMT; Max-Age=7200; path=\/; domain=.myapi.com; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6InBFM1JyRytvNzhpRFB0S2VFR1dsTUE9PSIsInZhbHVlIjoiRkU3U0pHVDRaS2tQbzVwdDdLdUdGM2RnVngraHhIT0NtdlZ2eUp0NTAxWThUVkhFSWZjaTcvSjRPZHJmNzV4RVZwdmQ3M09SbTJnNDFmczdXYitndHYrRDJwRjBBa2g3N3diVDlFVG04allrUDhHc3RyWmlqWnlKRjlhcURaMnciLCJtYWMiOiJiOGU4ODlmYWIxOTdhYWZmMzgyNmE4ZjEzNDI5YWJjMzRkODM4NmIwYjI0MWFhZjVmZjM3YzgwYzEyMTJhOTU4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7199; path=\/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IktuN1o1dnd0NUUyMCt0QWd0d1RWVXc9PSIsInZhbHVlIjoiYU15NVlyTFUyQnN4UUwvZ2N3YXdpM2dXMlpwYnVGUVVWdkcrYkNlWFBwVG9OUW9CY3p0aFJSTjByNXBlZjhvN250WWdyU1NvMjVLNDRpZWNNS3FPSHd3d3ZVTWg1cTRNaGFFaEN5eHVpNzZUNmFhWlFHcnpYQ0dIMWdiUW93Um0iLCJtYWMiOiI2YjYzMmRkZDk4Njk2ODRkNmQ4MzI2ODFkNzVjYWY4NGM0ZTFmYmJlN2YyNzFjNDViNzZhYTEwZDc4MThjNjE5IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 14:36:04 GMT; Max-Age=7199; path=\/; domain=.learnhub.mk; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -909,12 +970,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "blanditiis",
+                                    "value": "ut",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=blanditiis"
+                            "raw": "{{baseUrl}}\/blog-posts?title=ut"
                         },
                         "method": "GET",
                         "header": [
@@ -942,7 +1003,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "5cb2b775-d9af-4261-8b61-7b728068b7b4"
+                                    "value": "837f844e-19d0-4336-b135-5040faadb886"
                                 },
                                 {
                                     "key": "vary",
@@ -950,7 +1011,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Et corporis et libero blanditiis quam ut.\",\"slug\":\"et-corporis-et-libero-blanditiis-quam-ut\",\"excerpt\":\"Laborum explicabo voluptatibus incidunt sit totam ut nam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-09\",\"author\":{\"first_name\":\"Miss Adelle Wintheiser\",\"last_name\":\"Lind\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                            "body": "{\"data\":[{\"title\":\"Ducimus non autem dolor voluptatum.\",\"slug\":\"ducimus-non-autem-dolor-voluptatum\",\"excerpt\":\"Aut occaecati tempora quibusdam eius ut.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Prof. Jeromy Blick\",\"last_name\":\"Herzog\",\"image\":null}},{\"title\":\"Laboriosam consequuntur et ipsa rem repellendus magnam ut nobis.\",\"slug\":\"laboriosam-consequuntur-et-ipsa-rem-repellendus-magnam-ut-nobis\",\"excerpt\":\"Sit dolores consequatur maxime error laudantium numquam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Ms. Kamille Dicki Sr.\",\"last_name\":\"Schamberger\",\"image\":null}},{\"title\":\"Tempora quia doloribus ut.\",\"slug\":\"tempora-quia-doloribus-ut\",\"excerpt\":\"Est porro et quibusdam aut consequuntur iste temporibus quia.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Prof. Jeromy Blick\",\"last_name\":\"Herzog\",\"image\":null}},{\"title\":\"Aut vel modi sequi in quisquam.\",\"slug\":\"aut-vel-modi-sequi-in-quisquam\",\"excerpt\":\"Consectetur labore harum nesciunt nihil asperiores molestiae quas.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Prof. Jeromy Blick\",\"last_name\":\"Herzog\",\"image\":null}},{\"title\":\"Quia sed autem assumenda veritatis nemo provident.\",\"slug\":\"quia-sed-autem-assumenda-veritatis-nemo-provident\",\"excerpt\":\"Voluptas ipsum dolor vero quae in.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Buford Brakus\",\"last_name\":\"O'Kon\",\"image\":null}},{\"title\":\"Fugit in voluptatem qui ut.\",\"slug\":\"fugit-in-voluptatem-qui-ut\",\"excerpt\":\"Repudiandae quasi ut ut sunt illum fuga.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Buford Brakus\",\"last_name\":\"O'Kon\",\"image\":null}},{\"title\":\"Consectetur ut similique est.\",\"slug\":\"consectetur-ut-similique-est\",\"excerpt\":\"Eos architecto soluta nulla est inventore magni harum.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Kolby Mante\",\"last_name\":\"Homenick\",\"image\":null}},{\"title\":\"Alias quo fugiat rerum porro aut exercitationem accusamus.\",\"slug\":\"alias-quo-fugiat-rerum-porro-aut-exercitationem-accusamus\",\"excerpt\":\"Ratione in magni placeat vitae quisquam velit quia ipsam.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Madisyn Bradtke\",\"last_name\":\"Harris\",\"image\":null}},{\"title\":\"Odit vero libero quo aut.\",\"slug\":\"odit-vero-libero-quo-aut\",\"excerpt\":\"Adipisci ad autem sit a.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Eric Ullrich Jr.\",\"last_name\":\"Daniel\",\"image\":null}},{\"title\":\"Soluta deleniti eum consequatur placeat.\",\"slug\":\"soluta-deleniti-eum-consequatur-placeat\",\"excerpt\":\"Numquam similique eos sint id odio sed.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Ms. Kamille Dicki Sr.\",\"last_name\":\"Schamberger\",\"image\":null}},{\"title\":\"Odit earum commodi molestiae autem voluptatum.\",\"slug\":\"odit-earum-commodi-molestiae-autem-voluptatum\",\"excerpt\":\"Est facilis et est deserunt porro.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Buford Brakus\",\"last_name\":\"O'Kon\",\"image\":null}},{\"title\":\"Fugiat eaque totam totam facilis unde ut.\",\"slug\":\"fugiat-eaque-totam-totam-facilis-unde-ut\",\"excerpt\":\"Qui vel quo et et magni.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-17\",\"author\":{\"first_name\":\"Joel Farrell\",\"last_name\":\"Witting\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":12,\"total\":12}}",
                             "name": ""
                         }
                     ]
@@ -967,7 +1028,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "ut",
+                                    "value": "odit",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -998,7 +1059,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "a0114e37-807e-4e90-9b46-fa1125a827d0"
+                                    "value": "a016a1b2-1387-4f46-b14e-5ad90f5e9146"
                                 },
                                 {
                                     "key": "vary",
@@ -1046,7 +1107,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "356189c4-6e3b-4213-a74a-f88f7af980d5"
+                                    "value": "d1e86b33-11a0-4fed-b137-c3445875240b"
                                 },
                                 {
                                     "key": "vary",
@@ -1071,7 +1132,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "quia",
+                                    "value": "placeat",
                                     "description": ""
                                 }
                             ]
@@ -1102,7 +1163,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "14bd0a5f-d429-4435-bf4c-18ab6ae9abf0"
+                                    "value": "d6fcb165-3f63-4941-a71d-1ab786931888"
                                 },
                                 {
                                     "key": "vary",
@@ -1110,7 +1171,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/quia\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/placeat?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/placeat?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/placeat?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/placeat\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -1137,7 +1198,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"repellat\",\"email\":\"billie12@example.com\",\"message\":\"enim\",\"cf-turnstile-response\":\"autem\"}"
+                            "raw": "{\"name\":\"est\",\"email\":\"kennith.wiegand@example.org\",\"message\":\"est\",\"cf-turnstile-response\":\"non\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -1168,7 +1229,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"ardewvemhxcooygizbbw\",\"email\":\"dare.randall@example.net\"}"
+                            "raw": "{\"first_name\":\"shesy\",\"email\":\"berge.rowena@example.org\"}"
                         },
                         "description": " This endpoint is for subscribing to the Leanhub.mk newsletter.",
                         "auth": {
