@@ -72,6 +72,7 @@ php artisan key:generate
 - [Laravel Horizon](http://localhost:8000/horizon) - The queue monitoring system for Redis queues
 - [Laravel Telescope](http://localhost:8000/telescope) - The monitoring system for your Laravel API, you can debug everything here.
 - [Open API v3 Documentation](http://localhost:8000/docs) - the Open API v3 documentation for the project.
+- [PHPMyAdmin](http://localhost:8080) - the famous database UI.
 
 ### Regular Setup
 0. Install [PHP 8.3](https://windows.php.net/download/) or later
@@ -113,6 +114,8 @@ php artisan key:generate
 9. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
 For the local emails that the API may send, you may want to use something like [Mailtrap](https://mailtrap.io)
+
+For the database UI, you can use PHPMyAdmin, TablePlus, HeidiSQL, or MySQL Workbench.
 
 ### Packages 
 
