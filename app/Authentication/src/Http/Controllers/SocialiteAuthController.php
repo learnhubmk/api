@@ -47,7 +47,7 @@ class SocialiteAuthController
             ], 422);
         }
 
-        return  AuthenticatedMemberResource::make($user)->additional([
+        return AuthenticatedMemberResource::make($user)->additional([
             'access_token' => $token,
         ]);
     }

@@ -34,10 +34,9 @@ class AdminAuthController extends Controller
 
         $token = auth()->login($user);
 
-        return  AuthResource::make($user)->additional([
-                        'access_token'  => $token,
-                    ]);
-
+        return AuthResource::make($user)->additional([
+            'access_token'  => $token,
+        ]);
     }
 
     #[Authenticated]
