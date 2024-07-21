@@ -19,4 +19,16 @@ class AuthenticatedMemberResource extends JsonResource
             'email' => $this->email,
         ];
     }
+
+    /**
+     * Get additional data that should be returned with the resource array.
+     *
+     * @return array<string, mixed>
+     */
+    public function with(Request $request): array
+    {
+        return [
+                'access_token'  => $this->access_token,
+        ];
+    }
 }
