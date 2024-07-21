@@ -64,9 +64,13 @@ php artisan migrate --seed
 ```
 php artisan key:generate
 ```
-14. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+14. [Docker Container] Generate the JWT secret key (`JWT_SECRET`)
+```
+php artisan jwt:secret
+```
+15. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
-15. Additional useful links that you may want to know about:
+Additional useful links that you may want to know about:
 - [The Laravel API](http://localhost:8000) - the Laravel API project
 - [Mailpit](http://localhost:8025) - the email client, all emails will come here when the API sends an email
 - [Laravel Horizon](http://localhost:8000/horizon) - The queue monitoring system for Redis queues
@@ -80,38 +84,44 @@ php artisan key:generate
 1. Install [Composer 2.7.1](https://getcomposer.org/download/#manual-download) or later
 
 2. Clone the repository
-
-        git clone https://github.com/learnhubmkd/api.git
- 
+```
+git clone https://github.com/learnhubmkd/api.git
+```
 3. Get into your project directory
-
-        cd api
+```
+cd api
+```
 4. Create an ```.env``` file by copying ```.env.example```
 - Windows:
-
-         xcopy .env.example .env /y /f
+```
+xcopy .env.example .env /y /f
+```
 - Linux/Mac: 
-     
-         cp .env.example .env
-
+```
+cp .env.example .env
+```
 > - You can modify the `.env` file to test different configurations.
-
-
 5. Install composer dependencies
-
-         composer install
-
+```
+composer install
+```
 6. Generate an application key (`APP_KEY`)
-
-        php artisan key:generate  
-7. Run all migrations and database seeders
-
-        php artisan migrate --seed
-8. Start the PHP server
-
-        php artisan serve
-
-9. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
+```
+php artisan key:generate
+```  
+7. Generate the JWT secret key (`JWT_SECRET`)
+```
+php artisan jwt:secret
+```
+8. Run all migrations and database seeders
+```
+php artisan migrate --seed
+```
+9. Start the PHP server
+```
+php artisan serve
+```
+10. Access the site using [http://localhost:8000](http://localhost:8000) in your browser
 
 For the local emails that the API may send, you may want to use something like [Mailtrap](https://mailtrap.io)
 
