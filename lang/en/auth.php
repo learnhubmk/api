@@ -18,5 +18,6 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'logout'   => 'Logged Out!',
     'socialite-provider' => 'Please login with github, google or linkedin.',
+    'refresh' => 'New Token Created!'
 
 ];

@@ -16,7 +16,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -24,24 +23,24 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: nihil
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: nihil
+      title: voluptatem
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Non tempore et ad nihil.","slug":"non-tempore-et-ad-nihil","excerpt":"Praesentium ab non eos pariatur quo.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Buford Brakus","last_name":"O''Kon","image":null}}],"links":{"first":"http:\/\/api.myapi.com\/blog-posts?page=1","last":"http:\/\/api.myapi.com\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"title":"Exercitationem et maiores dolores voluptatem et officiis.","slug":"exercitationem-et-maiores-dolores-voluptatem-et-officiis","excerpt":"Consequatur cum nisi hic voluptatem.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Marianne Abernathy","last_name":"Sipes","image":null}},{"title":"Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.","slug":"et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta","excerpt":"Cumque quas magni aut praesentium voluptas architecto laboriosam.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Buford Brakus","last_name":"O''Kon","image":null}},{"title":"Fugit in voluptatem qui ut.","slug":"fugit-in-voluptatem-qui-ut","excerpt":"Repudiandae quasi ut ut sunt illum fuga.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Buford Brakus","last_name":"O''Kon","image":null}},{"title":"Aliquam voluptatem eum sed ipsam expedita et in illo.","slug":"aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo","excerpt":"Et dolorem consectetur nobis voluptates laborum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Ms. Kamille Dicki Sr.","last_name":"Schamberger","image":null}},{"title":"Quos sed voluptatem non neque vitae impedit.","slug":"quos-sed-voluptatem-non-neque-vitae-impedit","excerpt":"Et dolor tempore minima qui officiis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Joel Farrell","last_name":"Witting","image":null}},{"title":"Omnis natus voluptatem ipsam sit nam consequuntur.","slug":"omnis-natus-voluptatem-ipsam-sit-nam-consequuntur","excerpt":"Omnis ipsam aut fugiat sapiente enim assumenda esse.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Eric Ullrich Jr.","last_name":"Daniel","image":null}}],"links":{"first":"http:\/\/api.myapi.com\/blog-posts?page=1","last":"http:\/\/api.myapi.com\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-posts","per_page":15,"to":6,"total":6}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: d642dfee-fe8b-47dc-b3c7-bc311bb29358
+          x-treblle-trace-id: 33a2f506-5cec-4a97-966c-8b3f644da6bc
           vary: Origin
         description: null
         custom: []
@@ -66,19 +65,18 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       slug:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: illum
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: illum
+      slug: voluptatem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -484,7 +482,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: ed8ab71a-1b47-42bd-acac-85d93568d7dc
+          x-treblle-trace-id: d747a894-ead4-45c2-a04e-ff0b46c458f5
           vary: Origin
         description: null
         custom: []
@@ -509,7 +507,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -524,7 +521,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 947a2f30-7609-48bb-aab7-285901318077
+          x-treblle-trace-id: ad6f6b12-6bd8-4c36-9d4d-5313fb7f6175
           vary: Origin
         description: null
         custom: []
@@ -549,19 +546,18 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       tag:
         name: tag
         description: ''
         required: true
-        example: sequi
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: sequi
+      tag: eos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -570,11 +566,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags\/sequi?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags\/sequi?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags\/sequi?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags\/sequi","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags\/eos","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7cb9c0c1-4798-4cde-9b72-1343e4950e02
+          x-treblle-trace-id: 786c17c4-6472-4f12-924a-a42394fa70e1
           vary: Origin
         description: null
         custom: []
@@ -599,7 +595,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -610,7 +605,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: adipisci
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -619,7 +614,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: choppe@example.com
+        example: jnitzsche@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -628,7 +623,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: assumenda
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -637,16 +632,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: facilis
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: adipisci
-      email: choppe@example.com
-      message: assumenda
-      cf-turnstile-response: facilis
+      name: dolorem
+      email: jnitzsche@example.net
+      message: similique
+      cf-turnstile-response: qui
     fileParameters: []
     responses: []
     responseFields: []
@@ -670,7 +665,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -681,7 +675,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: lvvdlaxiskariy
+        example: dgtrwq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -690,7 +684,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lschimmel@example.com
+        example: ankunding.willow@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -705,8 +699,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: lvvdlaxiskariy
-      email: lschimmel@example.com
+      first_name: dgtrwq
+      email: ankunding.willow@example.com
     fileParameters: []
     responses: []
     responseFields: []

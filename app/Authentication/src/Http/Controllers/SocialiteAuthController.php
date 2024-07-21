@@ -39,13 +39,17 @@ class SocialiteAuthController
                 abort(404, __('auth.failed'));
             }
 
+            $token = auth()->login($user);
+
         } catch (Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),
             ], 422);
         }
 
-        return new AuthenticatedMemberResource($user);
+        return  AuthenticatedMemberResource::make($user)->additional([
+            'access_token' => $token,
+        ]);
     }
 
 

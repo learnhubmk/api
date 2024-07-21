@@ -12,14 +12,7 @@ paths:
       summary: 'Admin User'
       operationId: adminUser
       description: 'This endpoint enables to list admin information after login'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         401:
           description: ''
@@ -40,14 +33,7 @@ paths:
       summary: 'Admin Login'
       operationId: adminLogin
       description: 'This endpoint enables users with admin role to sign in'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -61,11 +47,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: darby.mraz@example.com
+                  example: ryan.michale@example.net
                 password:
                   type: string
                   description: ''
-                  example: corporis
+                  example: temporibus
               required:
                 - email
                 - password
@@ -75,14 +61,16 @@ paths:
       summary: 'Admin Logout'
       operationId: adminLogout
       description: 'This endpoint enables users with admin role to log out'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+  /admin/refresh:
+    post:
+      summary: 'Admin Refresh Token'
+      operationId: adminRefreshToken
+      description: 'This endpoint will delete old and create new token'
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -91,14 +79,7 @@ paths:
       summary: 'Content Manager User'
       operationId: contentManagerUser
       description: 'This endpoint enables to list content manager information after login'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         401:
           description: ''
@@ -119,14 +100,7 @@ paths:
       summary: 'Content Manager Login'
       operationId: contentManagerLogin
       description: 'This endpoint enables users with content role to sign in'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -140,11 +114,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: brook.hayes@example.com
+                  example: mozelle.bartoletti@example.com
                 password:
                   type: string
                   description: ''
-                  example: fugiat
+                  example: qui
               required:
                 - email
                 - password
@@ -154,14 +128,16 @@ paths:
       summary: 'Content Manager Logout'
       operationId: contentManagerLogout
       description: 'This endpoint enables users with content role to log out'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+  /content/refresh:
+    post:
+      summary: 'Content Manager Refresh Token'
+      operationId: contentManagerRefreshToken
+      description: 'This endpoint will delete old and create new token'
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -170,14 +146,7 @@ paths:
       summary: 'Member User'
       operationId: memberUser
       description: 'This endpoint enables member information after login'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         401:
           description: ''
@@ -198,14 +167,7 @@ paths:
       summary: 'Member Login'
       operationId: memberLogin
       description: 'This endpoint enables users with member role to sign in'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -219,11 +181,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: bill.schinner@example.com
+                  example: declan68@example.com
                 password:
                   type: string
                   description: ''
-                  example: quo
+                  example: doloremque
               required:
                 - email
                 - password
@@ -233,14 +195,16 @@ paths:
       summary: 'Memeber Logout'
       operationId: memeberLogout
       description: 'This endpoint enables users with Member role to log out'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+  /refresh:
+    post:
+      summary: 'Member Refresh Token'
+      operationId: memberRefreshToken
+      description: 'This endpoint will delete old and create new token'
+      parameters: []
       responses: {  }
       tags:
         - Authentication
@@ -249,14 +213,7 @@ paths:
       summary: 'Socialite Login Redirect'
       operationId: socialiteLoginRedirect
       description: 'This endpoint redirect to the Social SignIn Form'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -291,14 +248,7 @@ paths:
       summary: 'Socialite Login Callback'
       operationId: socialiteLoginCallback
       description: 'This endpoint sign in the users with Google, Github or LinkedIn Account'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         422:
           description: ''
@@ -375,13 +325,6 @@ paths:
               - title
               - publish_date
               - created_at
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
       responses:
         401:
           description: ''
@@ -402,14 +345,7 @@ paths:
       summary: 'Create Blog posts'
       operationId: createBlogPosts
       description: 'This endpoint will create a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -449,14 +385,7 @@ paths:
       summary: 'Blog post'
       operationId: blogPost
       description: 'This endpoint returns a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         401:
           description: ''
@@ -477,14 +406,7 @@ paths:
       summary: 'Update Blog post'
       operationId: updateBlogPost
       description: 'This endpoint will update a single blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -522,14 +444,7 @@ paths:
       summary: 'Delete Blog posts'
       operationId: deleteBlogPosts
       description: 'This endpoint deletes blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -571,13 +486,6 @@ paths:
             type: string
             description: ''
             example: '?search=name'
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
       responses:
         401:
           description: ''
@@ -597,14 +505,7 @@ paths:
       summary: 'Create Blog post tag'
       operationId: createBlogPostTag
       description: 'This endpoint will create a single blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -626,14 +527,7 @@ paths:
       summary: 'Update Blog post tag'
       operationId: updateBlogPostTag
       description: 'This endpoint will update a single blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -654,14 +548,7 @@ paths:
       summary: 'Delete Blog post tag'
       operationId: deleteBlogPostTag
       description: 'This endpoint deletes blog post tag'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -679,14 +566,7 @@ paths:
       summary: 'Publish/Unpublish Blog posts'
       operationId: publishUnpublishBlogPosts
       description: 'This endpoint publish or unpublish blog post'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Content
@@ -722,14 +602,7 @@ paths:
       summary: ''
       operationId: get
       description: ''
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -754,55 +627,13 @@ paths:
       tags:
         - General
       security: []
-  /sanctum/csrf-cookie:
-    get:
-      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
-      responses:
-        204:
-          description: ''
-      tags:
-        - General
-      security: []
   '/register/{provider}/redirect':
     get:
       summary: 'Socialite Member Register Redirect'
       operationId: socialiteMemberRegisterRedirect
       description: 'This endpoint redirect to the Social SignUp Form'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      redirect_link:
-                        type: string
-                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code'
+      parameters: []
+      responses: {  }
       tags:
         - Platform
       security: []
@@ -820,1117 +651,8 @@ paths:
       summary: 'Socialite Member Register Callback'
       operationId: socialiteMemberRegisterCallback
       description: 'This endpoint sign up the users with Google, Github or LinkedIn Account'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
-      responses:
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: "Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:\n{\n  \"error\": \"invalid_request\",\n  \"error_description\": \"Missing required parameter: code\"\n}\n"
-                  exception: GuzzleHttp\Exception\ClientException
-                  file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php'
-                  line: 113
-                  trace:
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Middleware.php'
-                      line: 72
-                      function: create
-                      class: GuzzleHttp\Exception\RequestException
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 209
-                      function: 'GuzzleHttp\{closure}'
-                      class: GuzzleHttp\Middleware
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 158
-                      function: callHandler
-                      class: GuzzleHttp\Promise\Promise
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\TaskQueue.php'
-                      line: 52
-                      function: 'GuzzleHttp\Promise\{closure}'
-                      class: GuzzleHttp\Promise\Promise
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 251
-                      function: run
-                      class: GuzzleHttp\Promise\TaskQueue
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 227
-                      function: invokeWaitFn
-                      class: GuzzleHttp\Promise\Promise
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 272
-                      function: waitIfPending
-                      class: GuzzleHttp\Promise\Promise
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 229
-                      function: invokeWaitList
-                      class: GuzzleHttp\Promise\Promise
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                      line: 69
-                      function: waitIfPending
-                      class: GuzzleHttp\Promise\Promise
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Client.php'
-                      line: 189
-                      function: wait
-                      class: GuzzleHttp\Promise\Promise
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\ClientTrait.php'
-                      line: 95
-                      function: request
-                      class: GuzzleHttp\Client
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\socialite\src\Two\AbstractProvider.php'
-                      line: 301
-                      function: post
-                      class: GuzzleHttp\Client
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\socialiteproviders\manager\src\OAuth2\AbstractProvider.php'
-                      line: 53
-                      function: getAccessTokenResponse
-                      class: Laravel\Socialite\Two\AbstractProvider
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\app\Platform\src\Http\Controllers\MemberSocialAuthController.php'
-                      line: 36
-                      function: user
-                      class: SocialiteProviders\Manager\OAuth2\AbstractProvider
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php'
-                      line: 46
-                      function: handleCallback
-                      class: App\Platform\Http\Controllers\MemberSocialAuthController
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 260
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 206
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 806
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 144
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                      line: 25
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 144
-                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\AuthenticateSession.php'
-                      line: 44
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Laravel\Sanctum\Http\Middleware\AuthenticateSession
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php'
-                      line: 88
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php'
-                      line: 121
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php'
-                      line: 64
-                      function: handleStatefulRequest
-                      class: Illuminate\Session\Middleware\StartSession
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Session\Middleware\StartSession
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php'
-                      line: 37
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php'
-                      line: 75
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Cookie\Middleware\EncryptCookies
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                      line: 60
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 165
-                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 119
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                      line: 24
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\treblle\treblle-laravel\src\Middlewares\TreblleMiddleware.php'
-                      line: 47
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Treblle\Middlewares\TreblleMiddleware
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 119
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 805
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 784
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 748
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 737
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 200
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 144
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                      line: 51
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php'
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                      line: 110
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                      line: 57
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 183
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 119
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 175
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 144
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 310
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 298
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 91
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 44
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 236
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 163
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 125
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 72
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 50
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                      line: 53
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 213
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\symfony\console\Command\Command.php'
-                      line: 279
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 182
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                      line: 1047
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                      line: 316
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                      line: 167
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                      line: 196
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\api\artisan'
-                      line: 35
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
-                properties:
-                  message:
-                    type: string
-                    example: "Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:\n{\n  \"error\": \"invalid_request\",\n  \"error_description\": \"Missing required parameter: code\"\n}\n"
-                  exception:
-                    type: string
-                    example: GuzzleHttp\Exception\ClientException
-                  file:
-                    type: string
-                    example: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php'
-                  line:
-                    type: integer
-                    example: 113
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Middleware.php'
-                        line: 72
-                        function: create
-                        class: GuzzleHttp\Exception\RequestException
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 209
-                        function: 'GuzzleHttp\{closure}'
-                        class: GuzzleHttp\Middleware
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 158
-                        function: callHandler
-                        class: GuzzleHttp\Promise\Promise
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\TaskQueue.php'
-                        line: 52
-                        function: 'GuzzleHttp\Promise\{closure}'
-                        class: GuzzleHttp\Promise\Promise
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 251
-                        function: run
-                        class: GuzzleHttp\Promise\TaskQueue
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 227
-                        function: invokeWaitFn
-                        class: GuzzleHttp\Promise\Promise
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 272
-                        function: waitIfPending
-                        class: GuzzleHttp\Promise\Promise
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 229
-                        function: invokeWaitList
-                        class: GuzzleHttp\Promise\Promise
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\promises\src\Promise.php'
-                        line: 69
-                        function: waitIfPending
-                        class: GuzzleHttp\Promise\Promise
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Client.php'
-                        line: 189
-                        function: wait
-                        class: GuzzleHttp\Promise\Promise
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\ClientTrait.php'
-                        line: 95
-                        function: request
-                        class: GuzzleHttp\Client
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\socialite\src\Two\AbstractProvider.php'
-                        line: 301
-                        function: post
-                        class: GuzzleHttp\Client
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\socialiteproviders\manager\src\OAuth2\AbstractProvider.php'
-                        line: 53
-                        function: getAccessTokenResponse
-                        class: Laravel\Socialite\Two\AbstractProvider
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\app\Platform\src\Http\Controllers\MemberSocialAuthController.php'
-                        line: 36
-                        function: user
-                        class: SocialiteProviders\Manager\OAuth2\AbstractProvider
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php'
-                        line: 46
-                        function: handleCallback
-                        class: App\Platform\Http\Controllers\MemberSocialAuthController
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 260
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 206
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 806
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 144
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                        line: 25
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 144
-                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\AuthenticateSession.php'
-                        line: 44
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Laravel\Sanctum\Http\Middleware\AuthenticateSession
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php'
-                        line: 88
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php'
-                        line: 121
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php'
-                        line: 64
-                        function: handleStatefulRequest
-                        class: Illuminate\Session\Middleware\StartSession
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Session\Middleware\StartSession
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php'
-                        line: 37
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php'
-                        line: 75
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Cookie\Middleware\EncryptCookies
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                        line: 60
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 165
-                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 119
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                        line: 24
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\treblle\treblle-laravel\src\Middlewares\TreblleMiddleware.php'
-                        line: 47
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Treblle\Middlewares\TreblleMiddleware
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 119
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 805
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 784
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 748
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 737
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 200
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 144
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                        line: 51
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php'
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                        line: 110
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                        line: 57
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 183
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 119
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 175
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 144
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 310
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 298
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 91
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 44
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 236
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 163
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 125
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 72
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 50
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                        line: 53
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 213
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\symfony\console\Command\Command.php'
-                        line: 279
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 182
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                        line: 1047
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                        line: 316
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\symfony\console\Application.php'
-                        line: 167
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                        line: 196
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\api\artisan'
-                        line: 35
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: 'C:\laragon\www\api\vendor\guzzlehttp\guzzle\src\Middleware.php'
-                        line:
-                          type: integer
-                          example: 72
-                        function:
-                          type: string
-                          example: create
-                        class:
-                          type: string
-                          example: GuzzleHttp\Exception\RequestException
-                        type:
-                          type: string
-                          example: '::'
+      parameters: []
+      responses: {  }
       tags:
         - Platform
       security: []
@@ -1953,19 +675,12 @@ paths:
           in: query
           name: title
           description: ''
-          example: nihil
+          example: voluptatem
           required: false
           schema:
             type: string
             description: ''
-            example: nihil
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+            example: voluptatem
       responses:
         200:
           description: ''
@@ -1976,9 +691,25 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Non tempore et ad nihil.'
-                      slug: non-tempore-et-ad-nihil
-                      excerpt: 'Praesentium ab non eos pariatur quo.'
+                      title: 'Exercitationem et maiores dolores voluptatem et officiis.'
+                      slug: exercitationem-et-maiores-dolores-voluptatem-et-officiis
+                      excerpt: 'Consequatur cum nisi hic voluptatem.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Marianne Abernathy'
+                        last_name: Sipes
+                        image: null
+                    -
+                      title: 'Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.'
+                      slug: et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta
+                      excerpt: 'Cumque quas magni aut praesentium voluptas architecto laboriosam.'
                       tags:
                         -
                           name: php
@@ -1990,6 +721,70 @@ paths:
                       author:
                         first_name: 'Buford Brakus'
                         last_name: "O'Kon"
+                        image: null
+                    -
+                      title: 'Fugit in voluptatem qui ut.'
+                      slug: fugit-in-voluptatem-qui-ut
+                      excerpt: 'Repudiandae quasi ut ut sunt illum fuga.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Buford Brakus'
+                        last_name: "O'Kon"
+                        image: null
+                    -
+                      title: 'Aliquam voluptatem eum sed ipsam expedita et in illo.'
+                      slug: aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo
+                      excerpt: 'Et dolorem consectetur nobis voluptates laborum.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Ms. Kamille Dicki Sr.'
+                        last_name: Schamberger
+                        image: null
+                    -
+                      title: 'Quos sed voluptatem non neque vitae impedit.'
+                      slug: quos-sed-voluptatem-non-neque-vitae-impedit
+                      excerpt: 'Et dolor tempore minima qui officiis.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Joel Farrell'
+                        last_name: Witting
+                        image: null
+                    -
+                      title: 'Omnis natus voluptatem ipsam sit nam consequuntur.'
+                      slug: omnis-natus-voluptatem-ipsam-sit-nam-consequuntur
+                      excerpt: 'Omnis ipsam aut fugiat sapiente enim assumenda esse.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-17'
+                      author:
+                        first_name: 'Eric Ullrich Jr.'
+                        last_name: Daniel
                         image: null
                   links:
                     first: 'http://api.myapi.com/blog-posts?page=1'
@@ -2015,16 +810,32 @@ paths:
                         active: false
                     path: 'http://api.myapi.com/blog-posts'
                     per_page: 15
-                    to: 1
-                    total: 1
+                    to: 6
+                    total: 6
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Non tempore et ad nihil.'
-                        slug: non-tempore-et-ad-nihil
-                        excerpt: 'Praesentium ab non eos pariatur quo.'
+                        title: 'Exercitationem et maiores dolores voluptatem et officiis.'
+                        slug: exercitationem-et-maiores-dolores-voluptatem-et-officiis
+                        excerpt: 'Consequatur cum nisi hic voluptatem.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Marianne Abernathy'
+                          last_name: Sipes
+                          image: null
+                      -
+                        title: 'Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.'
+                        slug: et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta
+                        excerpt: 'Cumque quas magni aut praesentium voluptas architecto laboriosam.'
                         tags:
                           -
                             name: php
@@ -2037,18 +848,82 @@ paths:
                           first_name: 'Buford Brakus'
                           last_name: "O'Kon"
                           image: null
+                      -
+                        title: 'Fugit in voluptatem qui ut.'
+                        slug: fugit-in-voluptatem-qui-ut
+                        excerpt: 'Repudiandae quasi ut ut sunt illum fuga.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Buford Brakus'
+                          last_name: "O'Kon"
+                          image: null
+                      -
+                        title: 'Aliquam voluptatem eum sed ipsam expedita et in illo.'
+                        slug: aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo
+                        excerpt: 'Et dolorem consectetur nobis voluptates laborum.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Ms. Kamille Dicki Sr.'
+                          last_name: Schamberger
+                          image: null
+                      -
+                        title: 'Quos sed voluptatem non neque vitae impedit.'
+                        slug: quos-sed-voluptatem-non-neque-vitae-impedit
+                        excerpt: 'Et dolor tempore minima qui officiis.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Joel Farrell'
+                          last_name: Witting
+                          image: null
+                      -
+                        title: 'Omnis natus voluptatem ipsam sit nam consequuntur.'
+                        slug: omnis-natus-voluptatem-ipsam-sit-nam-consequuntur
+                        excerpt: 'Omnis ipsam aut fugiat sapiente enim assumenda esse.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-17'
+                        author:
+                          first_name: 'Eric Ullrich Jr.'
+                          last_name: Daniel
+                          image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Non tempore et ad nihil.'
+                          example: 'Exercitationem et maiores dolores voluptatem et officiis.'
                         slug:
                           type: string
-                          example: non-tempore-et-ad-nihil
+                          example: exercitationem-et-maiores-dolores-voluptatem-et-officiis
                         excerpt:
                           type: string
-                          example: 'Praesentium ab non eos pariatur quo.'
+                          example: 'Consequatur cum nisi hic voluptatem.'
                         tags:
                           type: array
                           example:
@@ -2072,10 +947,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Buford Brakus'
+                              example: 'Marianne Abernathy'
                             last_name:
                               type: string
-                              example: "O'Kon"
+                              example: Sipes
                             image:
                               type: string
                               example: null
@@ -2141,10 +1016,10 @@ paths:
                         example: 15
                       to:
                         type: integer
-                        example: 1
+                        example: 6
                       total:
                         type: integer
-                        example: 1
+                        example: 6
       tags:
         - Website
       security: []
@@ -2153,14 +1028,7 @@ paths:
       summary: 'Blog Post'
       operationId: blogPost
       description: 'This endpoint retrieves blog post by a slug.'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         404:
           description: ''
@@ -2876,7 +1744,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: illum
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -2885,14 +1753,7 @@ paths:
       summary: 'Blog Post Tags'
       operationId: blogPostTags
       description: 'This endpoint list all blog post tags in alphabetically order paginated by 20.'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -3100,14 +1961,7 @@ paths:
       summary: 'Blog Post By Tag'
       operationId: blogPostByTag
       description: 'This endpoint retrieves blog posts by a specific tag.'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -3118,8 +1972,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
-                    last: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                    first: 'http://api.myapi.com/blog-post-tags/eos?page=1'
+                    last: 'http://api.myapi.com/blog-post-tags/eos?page=1'
                     prev: null
                     next: null
                   meta:
@@ -3132,14 +1986,14 @@ paths:
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                        url: 'http://api.myapi.com/blog-post-tags/eos?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Next &raquo;'
                         active: false
-                    path: 'http://api.myapi.com/blog-post-tags/sequi'
+                    path: 'http://api.myapi.com/blog-post-tags/eos'
                     per_page: 15
                     to: null
                     total: 0
@@ -3152,10 +2006,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/eos?page=1'
                       last:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                        example: 'http://api.myapi.com/blog-post-tags/eos?page=1'
                       prev:
                         type: string
                         example: null
@@ -3182,7 +2036,7 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://api.myapi.com/blog-post-tags/sequi?page=1'
+                            url: 'http://api.myapi.com/blog-post-tags/eos?page=1'
                             label: '1'
                             active: true
                           -
@@ -3203,7 +2057,7 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://api.myapi.com/blog-post-tags/sequi'
+                        example: 'http://api.myapi.com/blog-post-tags/eos'
                       per_page:
                         type: integer
                         example: 15
@@ -3221,7 +2075,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: sequi
+        example: eos
         required: true
         schema:
           type: string
@@ -3230,14 +2084,7 @@ paths:
       summary: Contact
       operationId: contact
       description: 'This endpoint is used for submitting contact form data.'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Website
@@ -3251,19 +2098,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: adipisci
+                  example: dolorem
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: choppe@example.com
+                  example: jnitzsche@example.net
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: assumenda
+                  example: similique
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: facilis
+                  example: qui
               required:
                 - name
                 - email
@@ -3275,14 +2122,7 @@ paths:
       summary: 'Subscribe To Newsletter'
       operationId: subscribeToNewsletter
       description: ' This endpoint is for subscribing to the Leanhub.mk newsletter.'
-      parameters:
-        -
-          in: header
-          name: Referer
-          description: ''
-          example: learnhub.mk
-          schema:
-            type: string
+      parameters: []
       responses: {  }
       tags:
         - Website
@@ -3296,11 +2136,11 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: lvvdlaxiskariy
+                  example: dgtrwq
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lschimmel@example.com
+                  example: ankunding.willow@example.com
                 cf-turnstile-response:
                   type: string
                   description: ''
@@ -3328,9 +2168,8 @@ tags:
 components:
   securitySchemes:
     default:
-      type: apiKey
-      name: Referer
-      in: header
+      type: http
+      scheme: bearer
       description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
 security:
   -

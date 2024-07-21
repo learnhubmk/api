@@ -18,7 +18,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -78,7 +77,6 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InJ6clJsVG40WGx3cEVTQlgwL2ZQRUE9PSIsInZhbHVlIjoicVI2K1NFN0FROWgxbGFsejArVzJYN2NhTXFHY0ZCeHVzOTREYWpHZGxpTnF1bWErbHNlQ0ovWEkwaGxxQk15bkpVcUhTOGNmemlaMFJ2MG5nYTlFd2Z3VzlQR3p0RHUzWTR4M21iWm5rcUJKMjB5RjVVb1dtNEpjeStaUEh1SHYiLCJtYWMiOiI0YWJmZTVmYTc3MTc3MzRlMzZjNTM0ODQ0YjY0NjExYmY1MDM2NzAzNzcwMjM5ZGNmMzkzYmUwYzEwZWE5MDYxIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IjNCWE1ldHBCKzYzVDVMZXB0em5WSXc9PSIsInZhbHVlIjoiZ2g2MHBDSWRTeE5kWGpvaXlPZlNNL2FGV2hMVVB1STRqRWtQd2w3RzlDWVVLRUhsd0x2dUdmM080b21rajJ6OEtMMm80dUM1MVpuZFBvK0Fvb1k2cVg4azg5bVVpbkV6ejRaUHpLbFh5bmV2VlBJQitkL253aE9ROWZuRGhuNnEiLCJtYWMiOiI2MDcyZTczYjY4OTVkZDYxZDkxYWRmMDU4YTY4ZDI0ZmFmOWJkMGI3ODY4NmU0ZTE1MjMxZDRkMjFlNDAyMjQ3IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -102,7 +100,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -173,7 +170,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       id:
         name: id
@@ -199,7 +195,6 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjNUcmhsbHJMdFJyQkNnR28wQURwZ2c9PSIsInZhbHVlIjoiUVFKcTNrR1hWdlZuZUdZd1Z2bnNOWUFwRXZkQjZ3dXlsL2N0cVM2TjdlVmNjWFVkRUtpMUdYU0srejVwT1ZnNElHU0RVWExBTmFyVHdhS25xT3c5WjJjM1JhZGU2bTZvSkkwc0wrOTRRUVZSaDNVZmFHSUQ1RmV5MkRrUXNiODciLCJtYWMiOiI2ZDBkZjY0ZTllYTY1NTk4MDU2ODkyOGMyMTc4MTZmMWFmOTE2ZTJmYWE3ZDE0ZDZjZTRkYjAyOGEyZDlkM2JlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IkR1djlTMUY5Z2VYMmhTS29HV3BaTUE9PSIsInZhbHVlIjoibVdXWElJc04yRVgzR05MVytqYjJxWS9RVkQ1WHdhTll6bW1wWTZJRXhGZ3hCa28xRDM1TlI2VmR6S0JNN2VPdStJMWs5RVUrLzJRc3ZBL2FvdHdCM2Y0VEQ5NE9UN2dTbXF4aUhhSDMrbWZZRTJVVUxEN3l0eUJBNE5qRjBxRjkiLCJtYWMiOiIzYWNkYTZhOWE3ZjA1MTU3NGMzODk0Y2Y2OTdhNTQ4YWM4M2VkMDk5NGQ4ZTIxZWI3YWE1MGNhZWQ5NmFjZDQ4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -224,7 +219,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
       id:
@@ -315,7 +309,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       id:
         name: id
@@ -356,7 +349,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -399,8 +392,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - af16vPak4hgc8Z3eV5dD6Eb
+      - Authorization
+      - 'Bearer 4avbck1ZDa5fe3hg8dV66PE'
     controller: null
     method: null
     route: null
@@ -419,7 +412,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
       Content-Type: application/json
     urlParameters: []
@@ -443,8 +436,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - eaV66Pb5kahg41fvEdDZ8c3
+      - Authorization
+      - 'Bearer D6Eh546Pad1vVa3Zgb8ekcf'
     controller: null
     method: null
     route: null
@@ -464,7 +457,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
       Content-Type: application/json
     urlParameters:
@@ -498,8 +491,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - a8dch1ZbVE64ekg5faD3vP6
+      - Authorization
+      - 'Bearer ZvaeV6b45Eg8fcDP36ahd1k'
     controller: null
     method: null
     route: null
@@ -518,7 +511,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters:
       id:
@@ -541,8 +534,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - 3ghd5EPZa68e4DfbVkcv16a
+      - Authorization
+      - 'Bearer 3VeZb5P8hg1vc4a6kDfad6E'
     controller: null
     method: null
     route: null
@@ -562,7 +555,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters:
       id:

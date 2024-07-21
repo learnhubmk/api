@@ -17,7 +17,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -39,8 +39,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - Eb638k6ZvagaDhdc541efPV
+      - Authorization
+      - 'Bearer 4DfVc616b5EaZgae3Pvdhk8'
     controller: null
     method: null
     route: null
@@ -60,7 +60,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -71,7 +70,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: darby.mraz@example.com
+        example: ryan.michale@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -80,14 +79,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: corporis
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: darby.mraz@example.com
-      password: corporis
+      email: ryan.michale@example.net
+      password: temporibus
     fileParameters: []
     responses: []
     responseFields: []
@@ -110,7 +109,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -123,8 +122,41 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - bdVha356vZcD6kfea4PEg81
+      - Authorization
+      - 'Bearer fVce48PvZa536g6kbhEd1Da'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: admin/refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Admin Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer VhEabZc58Dad6P13k64fvge'
     controller: null
     method: null
     route: null
@@ -143,7 +175,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -165,8 +197,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - h5fd613g4VE8vbekP6aacDZ
+      - Authorization
+      - 'Bearer fk5Pc1ah6bgZ8ae6VDvE3d4'
     controller: null
     method: null
     route: null
@@ -186,7 +218,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -197,7 +228,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: brook.hayes@example.com
+        example: mozelle.bartoletti@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -206,14 +237,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: fugiat
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: brook.hayes@example.com
-      password: fugiat
+      email: mozelle.bartoletti@example.com
+      password: qui
     fileParameters: []
     responses: []
     responseFields: []
@@ -236,7 +267,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -249,8 +280,41 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - hef3VbkD5P8E1c6Z6avdg4a
+      - Authorization
+      - 'Bearer av48a63PgcDfe5EVhdbk16Z'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Content Manager Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer d8aDPe4fhaZkvc36gbE6V15'
     controller: null
     method: null
     route: null
@@ -269,7 +333,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -291,8 +355,8 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - eav5P4Ek13d8VcgDaZ6hb6f
+      - Authorization
+      - 'Bearer PZaDVeh8dgcf3Ek4a6bv651'
     controller: null
     method: null
     route: null
@@ -312,7 +376,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
       Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -323,7 +386,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: bill.schinner@example.com
+        example: declan68@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -332,14 +395,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quo
+        example: doloremque
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: bill.schinner@example.com
-      password: quo
+      email: declan68@example.com
+      password: doloremque
     fileParameters: []
     responses: []
     responseFields: []
@@ -362,7 +425,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Referer: learnhub.mk
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -375,8 +438,41 @@ endpoints:
     responseFields: []
     auth:
       - headers
-      - Referer
-      - Vk4e6gv8PDfad3h6b15ZcEa
+      - Authorization
+      - 'Bearer 1vgf68P6d5Zhc3aVDb4aeEk'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Member Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer hec66faEDb45PdvagZV318k'
     controller: null
     method: null
     route: null
@@ -396,7 +492,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       provider:
         name: provider
@@ -424,9 +519,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 0ab40877-c60d-41a1-a0f1-194f97d123d8
+          x-treblle-trace-id: ead46984-5997-4749-bd20-bcac19c2a653
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkJXMHNMZmRCU3ZQYlF0dy9NMEErRVE9PSIsInZhbHVlIjoiOFliYVlsQzFBTDczTUd2QjloNGNLOEZCSDhncTNGN1kvQ0FoQjcvZEJ1aDJqTHZENEN1YWY1ZDJRNjgxNzRTZHdaU0djRThvVFRFSWZuejVjUGxQWTVxQlRlNFZwYVBrRkxVMnQ5V21EN1lSRTV5STVmZkxYeSsrdnZqWEdNZ2UiLCJtYWMiOiI0YTczMTM0MDQ2Y2EyNWM4M2E2MDMwYjc3ZTc5MjEzMWVlZTBkZWY2ZGE4YjZiNmE2Y2Y5MzllMmY0NjRjZDRlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6IkZPK2dFR3ZpTG9nTURyNTV6dGcrV0E9PSIsInZhbHVlIjoiaUVyVmx1a2dzdlA4VGQxQm1oSjRsdE5KQ2F6WTJxaGVBVnlGSGZyNEwyaGdmd0ZFanVuTHYyMWh6ZFhBSnlpRjAzWDlKUUlWZTNqSmJwa1VQb09Sc21IUU5RTlBaUlRpaHYzNVk3aGNTTFVWRkpBNUpSUHVnckM0NUltclpzd0IiLCJtYWMiOiJiZjU5MmNjNmNkNDE4ODFiZmI5NTc2ZTNlMWUzMGUzOWMzNjRmYTY3MGQzMjVhMzgzOTY3ODY4ZmQ0MWNmMDNlIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -450,7 +544,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters:
       provider:
         name: provider
@@ -478,9 +571,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: a22f714b-a52c-4455-acb6-5c7a9c9a4fa2
+          x-treblle-trace-id: bf33b0ac-bdcd-4c39-ae3f-b3c3f89eb5f3
           vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkYrejIzWFBmSDVqV2wrenNUYVcrR1E9PSIsInZhbHVlIjoiQnpybTFkeHFxZFNzakdGVVdyTmlTUkJjNVV2WlQrTWlOMVRBdG1nZ2lZekYxMG9aRE5aNW82Uk54OU1mUDNlc3J1RTIzV2pGeE8yN0MyTFVwMHY5eU42bkd4akFXcEZuY0RKSVUrT2hma1A3VHFRZGxsVWFUSk5BSEFHWWJPbzIiLCJtYWMiOiJlYzlmNzFmMDhlMGRjNzNjODI1Yjk0ZjU1M2RmODliNDM1NzU5NGJlMWY4Zjg4OGNhNWRhMjQ1NjQwMTgyMGRiIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6InBJVHBXcVRNKzJPWDJGbkVtdDREOVE9PSIsInZhbHVlIjoiL3NkcTBKRE4vUFBKMlgvbUNwc1F2bTNsYURhWmpkcGFRN2Y0WERXWS9TdzhjZ3RLRmJhWkJMUWJwRzJqbG1FT2lLazFFUWVmdW1BZEVkTnV4aTJaaHZoTVhKSGdPSXRlYkU0UDB3SXArWFRxZjlWMzBiWkRhQjFweGtZc21rdTIiLCJtYWMiOiIyOWFmYTIwNTAyZTIxNGJiNThmMjE1MWJmZWYyYWQxZmIzNTJlODdjMTczNzI4MTU5ZDg1NDBjY2U0OGJiYzU4IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:33 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

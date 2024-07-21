@@ -10,7 +10,6 @@ use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Authenticated;
 use App\Authentication\Http\Resources\AuthResource;
 use App\Authentication\Http\Requests\MemberLoginRequest;
-use App\Authentication\Http\Requests\MemberLogoutRequest;
 
 class MemberAuthController extends Controller
 {
@@ -33,22 +32,39 @@ class MemberAuthController extends Controller
 
         $request->authenticate($user);
 
-        return new AuthResource($user);
+        $token = auth()->login($user);
+
+        return  AuthResource::make($user)->additional([
+                        'access_token'  => $token,
+                    ]);
     }
 
     #[Authenticated]
     #[Endpoint(title: 'Memeber Logout', description: 'This endpoint enables users with Member role to log out')]
     #[Group('Authentication')]
 
-    public function logout(MemberLogoutRequest $request)
+    public function logout()
     {
 
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
+        auth()->logout();
 
         return response()->json([
             'message' => __('auth.logout')
         ]);
     }
+
+    #[Authenticated]
+    #[Endpoint(title: 'Member Refresh Token', description: 'This endpoint will delete old and create new token')]
+    #[Group('Authentication')]
+    public function refresh()
+    {
+
+        $newToken = auth()->refresh();
+
+        return response()->json([
+            'message' => __('auth.refresh'),
+            'new_token' => $newToken
+        ]);
+    }
+
 }

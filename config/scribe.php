@@ -83,7 +83,7 @@ return [
         'base_url' => env('APP_STAGING_URL'),
 
         // [Laravel Sanctum] Fetch a CSRF token before each request, and add it as an X-XSRF-TOKEN header.
-        'use_csrf' => true,
+        'use_csrf' => false,
 
         // The URL to fetch the CSRF token from (if `use_csrf` is true).
         'csrf_url' => '/sanctum/csrf-cookie',
@@ -100,10 +100,10 @@ return [
 
         // Where is the auth value meant to be sent in a request?
         // Options: query, body, basic, bearer, header (for custom header)
-        'in' => 'header',
+        'in' => 'bearer',
 
         // The name of the auth parameter (eg token, key, apiKey) or header (eg Authorization, Api-Key).
-        'name' => 'Referer',
+        'name' => 'Authorization',
 
         // The value of the parameter to be used by Scribe to authenticate response calls.
         // This will NOT be included in the generated documentation. If empty, Scribe will use a random value.
@@ -111,7 +111,7 @@ return [
 
         // Placeholder your users will see for the auth parameter in the example requests.
         // Set this to null if you want Scribe to use a random value as placeholder instead.
-        'placeholder' => env('SANCTUM_STATEFUL_DOMAINS'),
+        'placeholder' => '{ACCESS_TOKEN}',
 
         // Any extra authentication-related info for your users. Markdown and HTML are supported.
         'extra_info' => 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.',
@@ -221,7 +221,6 @@ INTRO
                 'override',
                 [
                     'Accept' => 'application/json',
-                    'Referer' => env('SANCTUM_STATEFUL_DOMAINS')
                 ],
             ],
         ],

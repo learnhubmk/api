@@ -19,19 +19,17 @@ class AuthResource extends JsonResource
         ];
     }
 
-      /**
-     * Get the token array structure.
+    /**
+     * Get additional data that should be returned with the resource array.
      *
-     * @param  string $token
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * @return array<string, mixed>
      */
-    protected function respondWithToken($token)
+    public function with(Request $request): array
     {
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
-        ]);
+        return [
+                'access_token'  => $this->access_token,
+        ];
     }
+
+
 }

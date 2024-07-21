@@ -18,7 +18,6 @@ endpoints:
       custom: []
     headers:
       Accept: application/json
-      Referer: learnhub.mk
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -33,47 +32,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 94fa6430-2e0e-4346-8b8d-9c8f37f46c53
+          x-treblle-trace-id: e03b4476-871f-4e8b-99e6-9f56016f7390
           vary: Origin
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: sanctum/csrf-cookie
-    metadata:
-      groupName: General
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Accept: application/json
-      Referer: learnhub.mk
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 204
-        content: ''
-        headers:
-          cache-control: 'no-cache, private'
-          vary: Origin
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6InE4QmpGbVY1dHZ3czY5REVnUnVwdlE9PSIsInZhbHVlIjoiVXJjZVN2Nzk5Zmo3MUQwazhFVXFwMmoxZFA0K1dxMk9BdDUrU3BoaDkvVFFnN0RZUktPM1RWM29GZERBVERuSDRWMnJvUlJuNnRlcXBidE5zLzNKUS9Yc1daVEhPRlpjUE95SmxCRDI0TTE0ZG5CT21uQ25kVjJ5OVp4c2orWHYiLCJtYWMiOiJhNzE2NjU4YTA0NGY5ZTcxZjZlMTI4NDU0MDg2NTZhNGJjNzA1YTUxMGZlNWFjNjY5MTI5ZDg4NTJmYWQyMmY0IiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:34 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; samesite=lax; learnhub_session=eyJpdiI6Ik16SDFBSEhYZkVLUlBMbThaUVhtc1E9PSIsInZhbHVlIjoiYmlYM2NDd2tFYzBOQ1htYmFKdVJ3aEVKY1hHL3kwZnNiSjhPc1JqYWFockJQbVYyS0RWa0tCZUlkY3RoTkhja1ZndW9wTXo4enJ0U2VoMmw2d0h5ajN6bk1SYkhhWkZMSUJIdndpNWR0OUxGbkYrb1pUN09lNjdSTGwzdTZoL1UiLCJtYWMiOiIwYjgyOTdiNTA5ZDY5MWQwNTY2MDc4NWVkZjU1MTM3ZTNmOGY0OGJkOTU0NjUxNzhhOTc4M2NkMzc0MjQxZTNmIiwidGFnIjoiIn0%3D; expires=Thu, 18 Jul 2024 15:36:34 GMT; Max-Age=7200; path=/; domain=.learnhub.mk; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
