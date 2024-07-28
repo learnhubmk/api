@@ -1,22 +1,64 @@
-name: Admin
+name: Authentication
 description: ''
 endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: admin/user
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Admin User'
+      description: 'This endpoint enables to list admin information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4DfVc616b5EaZgae3Pvdhk8'
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: admin/login
     metadata:
-      groupName: Admin
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Login
+      title: 'Admin Login'
       description: 'This endpoint enables users with admin role to sign in'
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -26,7 +68,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jazmyne.oreilly@example.org
+        example: ryan.michale@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +77,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: eum
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: jazmyne.oreilly@example.org
-      password: eum
+      email: ryan.michale@example.net
+      password: temporibus
     fileParameters: []
     responses: []
     responseFields: []
@@ -56,17 +98,16 @@ endpoints:
       - POST
     uri: admin/logout
     metadata:
-      groupName: Admin
+      groupName: Authentication
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: Logout
+      title: 'Admin Logout'
       description: 'This endpoint enables users with admin role to log out'
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -80,7 +121,460 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4E1bVcdaZPafg3k8e566vDh'
+      - 'Bearer fVce48PvZa536g6kbhEd1Da'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: admin/refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Admin Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer VhEabZc58Dad6P13k64fvge'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: content/user
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Content Manager User'
+      description: 'This endpoint enables to list content manager information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer fk5Pc1ah6bgZ8ae6VDvE3d4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/login
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Content Manager Login'
+      description: 'This endpoint enables users with content role to sign in'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: mozelle.bartoletti@example.com
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: mozelle.bartoletti@example.com
+      password: qui
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/logout
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Content Manager Logout'
+      description: 'This endpoint enables users with content role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer av48a63PgcDfe5EVhdbk16Z'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Content Manager Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer d8aDPe4fhaZkvc36gbE6V15'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: user
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Member User'
+      description: 'This endpoint enables member information after login'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer PZaDVeh8dgcf3Ek4a6bv651'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: login
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Member Login'
+      description: 'This endpoint enables users with member role to sign in'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: declan68@example.com
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: doloremque
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: declan68@example.com
+      password: doloremque
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Memeber Logout'
+      description: 'This endpoint enables users with Member role to log out'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1vgf68P6d5Zhc3aVDb4aeEk'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: refresh
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Member Refresh Token'
+      description: 'This endpoint will delete old and create new token'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer hec66faEDb45PdvagZV318k'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'login/{provider}/redirect'
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Socialite Login Redirect'
+      description: 'This endpoint redirect to the Social SignIn Form'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+    urlParameters:
+      provider:
+        name: provider
+        description: ''
+        required: true
+        example: google
+        type: string
+        enumValues:
+          - github
+          - google
+          - linkedin
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      provider: google
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: ead46984-5997-4749-bd20-bcac19c2a653
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'login/{provider}/callback'
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Socialite Login Callback'
+      description: 'This endpoint sign in the users with Google, Github or LinkedIn Account'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+    urlParameters:
+      provider:
+        name: provider
+        description: ''
+        required: true
+        example: google
+        type: string
+        enumValues:
+          - github
+          - google
+          - linkedin
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      provider: google
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 422
+        content: '{"error":"Client error: `POST https:\/\/oauth2.googleapis.com\/token` resulted in a `400 Bad Request` response:\n{\n  \"error\": \"invalid_request\",\n  \"error_description\": \"Missing required parameter: code\"\n}\n"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: bf33b0ac-bdcd-4c39-ae3f-b3c3f89eb5f3
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
     controller: null
     method: null
     route: null

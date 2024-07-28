@@ -5,9 +5,9 @@ namespace App\Framework\Models;
 use App\Admin\Models\AdminProfile;
 use App\Admin\Models\ContentManagerProfile;
 use App\Framework\Enums\RoleName;
-use App\Platform\Models\MemberProfile;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -17,9 +17,8 @@ use Illuminate\Support\Arr;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
-    use HasApiTokens;
     use HasFactory;
     use Notifiable;
     use HasRoles;
@@ -60,10 +59,10 @@ class User extends Authenticatable
         return "web";
     }
 
-    /**
-     * Create a new factory instance for the model.
+    /***
+     * Determines the proper factory for the model.
      */
-    protected static function newFactory(): Factory
+    protected static function newFactory(): UserFactory
     {
         return UserFactory::new();
     }
@@ -112,13 +111,51 @@ class User extends Authenticatable
     public function getSortByColumnByRole(array $filters): string
     {
         return match (true) {
-            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get($filters, 'first_name') => 'member_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get($filters, 'last_name') => 'member_profiles.last_name',
-            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get($filters, 'first_name') => 'admin_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get($filters, 'last_name') => 'admin_profiles.last_name',
-            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get($filters, 'first_name') => 'content_manager_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get($filters, 'last_name') => 'content_manager_profiles.last_name',
+            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get(
+                $filters,
+                'first_name'
+            ) => 'member_profiles.first_name',
+            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get(
+                $filters,
+                'last_name'
+            ) => 'member_profiles.last_name',
+            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get(
+                $filters,
+                'first_name'
+            ) => 'admin_profiles.first_name',
+            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get(
+                $filters,
+                'last_name'
+            ) => 'admin_profiles.last_name',
+            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get(
+                $filters,
+                'first_name'
+            ) => 'content_manager_profiles.first_name',
+            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get(
+                $filters,
+                'last_name'
+            ) => 'content_manager_profiles.last_name',
             default => 'users.id',
         };
+    }
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier(): string
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims(): array
+    {
+        return [];
     }
 }

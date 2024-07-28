@@ -5,90 +5,6 @@ description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: content/login
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: Login
-      description: 'This endpoint enables users with content role to sign in'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: ''
-        required: true
-        example: hwillms@example.net
-        type: password
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: qui
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      email: hwillms@example.net
-      password: qui
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: content/logout
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: Logout
-      description: 'This endpoint enables users with content role to log out'
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer e6V4c6Dh1gv8dPkEbZ3aaf5'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - GET
     uri: content/blog-posts
     metadata:
@@ -101,7 +17,6 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -120,7 +35,7 @@ endpoints:
         description: ''
         required: false
         example: '?tags=[php,laravel,react]'
-        type: 'string[]'
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
@@ -154,7 +69,16 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -175,8 +99,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -234,7 +158,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -245,12 +169,11 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -258,13 +181,22 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -273,8 +205,9 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - PUT
       - PATCH
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -285,12 +218,12 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -298,7 +231,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -364,7 +297,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'content/blog-posts/{blogPost_id}'
+    uri: 'content/blog-posts/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -375,12 +308,11 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -388,7 +320,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -403,8 +335,215 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - GET
+    uri: content/blog-post-tags
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List Blog post tag'
+      description: |-
+        List Blog Post Tags or you can use search query for searching by the name
+            or sort direction based on whether the key starts with - 
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      sort:
+        name: sort
+        description: ''
+        required: false
+        example: '?sort=name, -name'
+        type: string
+        enumValues:
+          - name
+        exampleWasSpecified: false
+        custom: []
+      search:
+        name: search
+        description: ''
+        required: false
+        example: '?search=name'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      sort: '?sort=name, -name'
+      search: '?search=name'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4avbck1ZDa5fe3hg8dV66PE'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: content/blog-post-tags
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create Blog post tag'
+      description: 'This endpoint will create a single blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: test
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: test
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer D6Eh546Pad1vVa3Zgb8ekcf'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
       - PATCH
-    uri: 'content/blog-posts/{blogPost_id}/statuses'
+    uri: 'content/blog-post-tags/{id}'
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Blog post tag'
+      description: 'This endpoint will update a single blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the blog post tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: test
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: test
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer ZvaeV6b45Eg8fcDP36ahd1k'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'content/blog-post-tags/{id}'
+    metadata:
+      groupName: Content
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete Blog post tag'
+      description: 'This endpoint deletes blog post tag'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the blog post tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3VeZb5P8hg1vc4a6kDfad6E'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'content/blog-posts/{id}/statuses'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -415,12 +554,12 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters:
-      blogPost_id:
-        name: blogPost_id
-        description: 'The ID of the blogPost.'
+      id:
+        name: id
+        description: 'The ID of the blog post.'
         required: true
         example: 1
         type: integer
@@ -428,7 +567,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blogPost_id: 1
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -453,136 +592,6 @@ endpoints:
     cleanBodyParameters:
       publish_date: '2024-01-01'
       status: 'draft, published, in_review, archive'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: content/blog-posts-tags
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Create Blog post tag'
-      description: 'This endpoint will create a single blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: test
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      name: test
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PATCH
-    uri: 'content/blog-posts-tags/{blogPostTag_id}'
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update Blog post tag'
-      description: 'This endpoint will update a single blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      blogPostTag_id:
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      blogPostTag_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: test
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      name: test
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'content/blog-posts-tags/{blogPostTag_id}'
-    metadata:
-      groupName: Content
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Delete Blog post tag'
-      description: 'This endpoint deletes blog post tag'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      blogPostTag_id:
-        name: blogPostTag_id
-        description: 'The ID of the blogPostTag.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      blogPostTag_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []

@@ -1,20 +1,12 @@
 <?php
 
-namespace App\Admin\Http\Resources\Auth;
+namespace App\Authentication\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthenticatedAdminResource extends JsonResource
+class AuthenticatedMemberResource extends JsonResource
 {
-    protected $token;
-
-    public function __construct($resource, $token)
-    {
-        parent::__construct($resource);
-        $this->token = $token;
-    }
-
     /**
      * Transform the resource into an array.
      *
@@ -25,7 +17,6 @@ class AuthenticatedAdminResource extends JsonResource
         return [
             'id' => $this->id,
             'email' => $this->email,
-            'token' => $this->token,
         ];
     }
 }

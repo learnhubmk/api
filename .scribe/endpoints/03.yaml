@@ -15,37 +15,6 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: sanctum/csrf-cookie
-    metadata:
-      groupName: General
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -56,12 +25,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 204
-        content: ''
+        status: 200
+        content: '{"name":"LearnHub.mk API","version":1,"message":"Welcome to the LearnHub.mk API!"}'
         headers:
           cache-control: 'no-cache, private'
-          access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjRCdUszc0ZTRkFQS0hEWHlwdVZLQmc9PSIsInZhbHVlIjoiazdRZHlMRlRFUXM5NWl0WUwzbEVuaHFoY09JOWJsWXN3eGtKUElLSnJMeDVyQ2w1VWV6dVM3MXRSUUxQcG1Vc2wwbmpMVmlteVVFSlpRMnA3TkhjQWxoVGxJa0tpeEVOOTErUnR1SjQ4NjlHTGZCYmsxbnJjVFh4aEJsV210QVYiLCJtYWMiOiI3MDRkNDIwOTAzOWJlZjk5ZGI4NTI3MGVlZjM1MDVmNjYyMGQ5ZDNmZDhkODczYTk1YmUxYWVlYWJjY2YxYWI3IiwidGFnIjoiIn0%3D; expires=Sat, 29 Jun 2024 01:31:28 GMT; Max-Age=7200; path=/; samesite=lax; learnhub_session=eyJpdiI6ImFYNmVYcUE5bzN0eXNSMnROSXArVHc9PSIsInZhbHVlIjoiNFl4OFJack9udkdPc0N2eXhSTGVkcDU5Q0VUQkJCV2xCQTQ3bVFmb3l3ZUxnaHVJMlBrbVI2SUdtOVVyQndaYldNNHQvQkFaYjFUb0Z3bnlNZ2k1dmNxMFRFTktqMzBPQVJQaHQ3ZitFZGloYmRSNjdqRUZOYUZzYUp0WlZ1N0ciLCJtYWMiOiI5NzdiY2MxOTk2OGY5YjFmOGRhYmQ2YzBhNDM4ZDJiNGUzMGQ2NTVjYTU4NzBhOWIyNmZhM2JmNjNiZTJlZmYxIiwidGFnIjoiIn0%3D; expires=Sat, 29 Jun 2024 01:31:28 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          content-type: application/json
+          x-treblle-trace-id: e03b4476-871f-4e8b-99e6-9f56016f7390
+          vary: Origin
         description: null
         custom: []
     responseFields: []

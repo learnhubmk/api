@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.3",
         "app/admin": "*",
+        "app/authentication": "*",
         "app/content": "*",
         "app/platform": "*",
         "app/website": "*",
@@ -18,9 +19,9 @@
         "internachi/modular": "^2.0",
         "laravel/framework": "^11.0",
         "laravel/horizon": "^5.23",
-        "laravel/sanctum": "^4.0",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.8",
+        "php-open-source-saver/jwt-auth": "^2.3",
         "ryangjchandler/laravel-cloudflare-turnstile": "^1.1",
         "socialiteproviders/github": "^4.1",
         "socialiteproviders/google": "^4.1",

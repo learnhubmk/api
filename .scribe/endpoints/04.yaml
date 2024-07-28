@@ -15,7 +15,6 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -24,17 +23,27 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: qui
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: qui
+      title: voluptatem
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"title":"Exercitationem et maiores dolores voluptatem et officiis.","slug":"exercitationem-et-maiores-dolores-voluptatem-et-officiis","excerpt":"Consequatur cum nisi hic voluptatem.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Marianne Abernathy","last_name":"Sipes","image":null}},{"title":"Et voluptatem omnis accusamus maiores accusantium commodi eum dicta.","slug":"et-voluptatem-omnis-accusamus-maiores-accusantium-commodi-eum-dicta","excerpt":"Cumque quas magni aut praesentium voluptas architecto laboriosam.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Buford Brakus","last_name":"O''Kon","image":null}},{"title":"Fugit in voluptatem qui ut.","slug":"fugit-in-voluptatem-qui-ut","excerpt":"Repudiandae quasi ut ut sunt illum fuga.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Buford Brakus","last_name":"O''Kon","image":null}},{"title":"Aliquam voluptatem eum sed ipsam expedita et in illo.","slug":"aliquam-voluptatem-eum-sed-ipsam-expedita-et-in-illo","excerpt":"Et dolorem consectetur nobis voluptates laborum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Ms. Kamille Dicki Sr.","last_name":"Schamberger","image":null}},{"title":"Quos sed voluptatem non neque vitae impedit.","slug":"quos-sed-voluptatem-non-neque-vitae-impedit","excerpt":"Et dolor tempore minima qui officiis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Joel Farrell","last_name":"Witting","image":null}},{"title":"Omnis natus voluptatem ipsam sit nam consequuntur.","slug":"omnis-natus-voluptatem-ipsam-sit-nam-consequuntur","excerpt":"Omnis ipsam aut fugiat sapiente enim assumenda esse.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-17","author":{"first_name":"Eric Ullrich Jr.","last_name":"Daniel","image":null}}],"links":{"first":"http:\/\/api.myapi.com\/blog-posts?page=1","last":"http:\/\/api.myapi.com\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-posts","per_page":15,"to":6,"total":6}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: 33a2f506-5cec-4a97-966c-8b3f644da6bc
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -55,26 +64,428 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters:
       slug:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: temporibus
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: temporibus
+      slug: voluptatem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Website\\Models\\BlogPost].",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+              "line": 629,
+              "trace": [
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+                      "line": 577,
+                      "function": "prepareException",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+                      "line": 54,
+                      "function": "render",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+                      "line": 51,
+                      "function": "render",
+                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 146,
+                      "function": "handleException",
+                      "class": "Illuminate\\Routing\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\treblle\\treblle-laravel\\src\\Middlewares\\TreblleMiddleware.php",
+                      "line": 47,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Treblle\\Middlewares\\TreblleMiddleware",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 805,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 784,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 748,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 737,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+                      "line": 51,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+                      "line": 110,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+                      "line": 57,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 310,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 298,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 213,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Command\\Command.php",
+                      "line": 279,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 182,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
+                      "line": 1047,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
+                      "line": 316,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
+                      "line": 167,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 196,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "C:\\laragon\\www\\api\\artisan",
+                      "line": 35,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: d747a894-ead4-45c2-a04e-ff0b46c458f5
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -95,7 +506,6 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -104,7 +514,17 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags?page=2","prev":null,"next":"http:\/\/api.myapi.com\/blog-post-tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=1","label":"1","active":true},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=2","label":"2","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags","per_page":20,"to":20,"total":23}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: ad6f6b12-6bd8-4c36-9d4d-5313fb7f6175
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -125,26 +545,35 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
     urlParameters:
       tag:
         name: tag
         description: ''
         required: true
-        example: praesentium
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: praesentium
+      tag: eos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags\/eos?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags\/eos","per_page":15,"to":null,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-treblle-trace-id: 786c17c4-6472-4f12-924a-a42394fa70e1
+          vary: Origin
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -165,8 +594,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -176,7 +605,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: cumque
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -185,7 +614,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: clockman@example.org
+        example: jnitzsche@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -194,7 +623,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: aperiam
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -203,16 +632,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: non
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: cumque
-      email: clockman@example.org
-      message: aperiam
-      cf-turnstile-response: non
+      name: dolorem
+      email: jnitzsche@example.net
+      message: similique
+      cf-turnstile-response: qui
     fileParameters: []
     responses: []
     responseFields: []
@@ -235,8 +664,8 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
       Accept: application/json
+      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -246,7 +675,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: qyrqxvcxepypmf
+        example: dgtrwq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -255,7 +684,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: king.gudrun@example.com
+        example: ankunding.willow@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -270,8 +699,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: qyrqxvcxepypmf
-      email: king.gudrun@example.com
+      first_name: dgtrwq
+      email: ankunding.willow@example.com
     fileParameters: []
     responses: []
     responseFields: []
