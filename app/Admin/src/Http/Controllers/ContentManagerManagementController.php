@@ -16,12 +16,24 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 
 class ContentManagerManagementController
 {
     /**
      * Display a listing of the resource.
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Content managers Listing', description: 'This endpoint lists all content managers')]
+    #[Group('Admin')]
+    #[QueryParam('query', 'string', required: false, example: "?query=john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "?sort_by=first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "?sort_direction=asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "?per_page=20")]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -49,6 +61,10 @@ class ContentManagerManagementController
         return ContentManagerManagementResource::collection($contentManagers);
     }
 
+
+    #[Authenticated]
+    #[Endpoint(title: 'Content Manager Profile Details', description: 'This endpoint shows details of a specific content manager profile')]
+    #[Group('Admin')]
     public function show(int $id): ContentManagerManagementResource
     {
         $user = User::query()->with(['roles', 'contentManagerProfile'])
@@ -62,6 +78,12 @@ class ContentManagerManagementController
      * Store a new resource in storage.
      * @throws \Throwable
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Content Manager Invitation', description: 'This endpoint invites a new content manager to join')]
+    #[Group('Admin')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function store(StoreContentManagerManagementRequest $request): ContentManagerManagementResource
     {
         $contentManager = DB::transaction(function () use ($request) {
@@ -88,6 +110,12 @@ class ContentManagerManagementController
     /**
      * Update the specified resource in storage.
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Edit Content Manager Details', description: 'This endpoint edits the details of a content manager profile')]
+    #[Group('Admin')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function update(UpdateContentManagerManagementRequest $request, int $id): ContentManagerManagementResource
     {
         /** @var User $contentManager */
@@ -112,6 +140,10 @@ class ContentManagerManagementController
      * Remove the specified resource from storage.
      * @throws \Throwable
      */
+
+    #[Authenticated]
+    #[Endpoint(title: 'Content Manager Profile Deletion', description: 'This endpoint deletes a specific content manager profile')]
+    #[Group('Admin')]
     public function destroy(int $id): Response
     {
         /** @var User $contentManager */

@@ -16,12 +16,24 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 
 class MemberManagementController
 {
     /**
      * Display a listing of the resource.
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Members Listing', description: 'This endpoint lists all members')]
+    #[Group('Admin')]
+    #[QueryParam('query', 'string', required: false, example: "?query=john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "?sort_by=first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "?sort_direction=asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "?per_page=20")]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -49,6 +61,9 @@ class MemberManagementController
         return MemberManagementResource::collection($users);
     }
 
+    #[Authenticated]
+    #[Endpoint(title: 'Member Profile Details', description: 'This endpoint shows details of a specific member profile')]
+    #[Group('Admin')]
     public function show(int $id): MemberManagementResource
     {
         $member = User::query()->with(['roles', 'memberProfile'])
@@ -62,6 +77,12 @@ class MemberManagementController
      * Store a new resource in storage.
      * @throws \Throwable
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Member Invitation', description: 'This endpoint invites a new member to join')]
+    #[Group('Admin')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@gmail.com")]
     public function store(StoreMemberManagementRequest $request): MemberManagementResource
     {
         $member = DB::transaction(function () use ($request) {
@@ -88,6 +109,12 @@ class MemberManagementController
     /**
      * Update the specified resource in storage.
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Edit Member Details', description: 'This endpoint edits the details of a member profile')]
+    #[Group('Admin')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@gmail.com")]
     public function update(UpdateMemberManagementRequest $request, int $id): MemberManagementResource
     {
         /** @var User $member */
@@ -112,6 +139,9 @@ class MemberManagementController
      * Remove the specified resource from storage.
      * @throws \Throwable
      */
+    #[Authenticated]
+    #[Endpoint(title: 'Member Profile Deletion', description: 'This endpoint deletes a specific member profile')]
+    #[Group('Admin')]
     public function destroy(int $id): Response
     {
         /** @var User $member */
