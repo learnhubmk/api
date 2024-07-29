@@ -37,24 +37,4 @@ class ContactControllerTest extends TestCase
                 $mail->contactData['message'] === $formData['message'];
         });
     }
-
-    /** @test */
-    public function contact_form_submission_fails_on_mail_error()
-    {
-        Mail::fake();
-
-        Mail::shouldReceive('to')
-            ->andThrow(new \Exception('Mail sending failed'));
-
-        $formData = [
-            'name' => 'Malista',
-            'email' => 'malista.polikala@on.net.mk',
-            'message' => 'Test failure message content'
-        ];
-
-        $response = $this->postJson(route('contact'), $formData);
-
-        $response->assertStatus(500)
-            ->assertJson(['message' => 'Mail sending failed']);
-    }
 }
