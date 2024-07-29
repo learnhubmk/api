@@ -39,9 +39,6 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         View::addNamespace('website', app_path('Website/resources/views'));
-        View::addNamespace('authentication', app_path('Authentication/resources/views'));
-        View::addNamespace('platform', app_path('Platform/resources/views'));
-        View::addNamespace('admin', app_path('Admin/resources/views'));
 
         RateLimiter::for('login', function (Request $request) {
             return [
