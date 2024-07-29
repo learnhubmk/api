@@ -6,7 +6,6 @@ use App\Admin\Models\AdminProfile;
 use App\Admin\Models\ContentManagerProfile;
 use App\Admin\Models\MemberProfile;
 use App\Authentication\Notifications\ResetPassword;
-use App\Framework\Enums\RoleName;
 use Database\Factories\UserFactory;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,7 +13,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Arr;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements JWTSubject
@@ -80,63 +78,6 @@ class User extends Authenticatable implements JWTSubject
     public function memberProfile(): HasOne
     {
         return $this->hasOne(MemberProfile::class);
-    }
-
-    public function scopeFilter($query, array $filters): void
-    {
-        $profileRelation = match(Arr::get($filters, 'role')) {
-            RoleName::MEMBER->value => 'memberProfile',
-            RoleName::CONTENT_MANAGER->value => 'contentManagerProfile',
-            RoleName::ADMIN->value => 'adminProfile',
-            default => null,
-        };
-
-        $sortBy = $this->getSortByColumnByRole($filters);
-
-        $query
-            ->with(['roles', $profileRelation])
-            ->whereRelation('roles', 'name', $role)
-            ->when(Arr::get($filters, 'first_name'), function ($query, $firstName) use ($profileRelation) {
-                return $query->whereRelation($profileRelation, 'first_name', 'LIKE', "$firstName%");
-            })->when(Arr::get($filters, 'last_name'), function ($query, $lastName) use ($profileRelation) {
-                return $query->whereRelation($profileRelation, 'last_name', 'LIKE', "$lastName%");
-            })->orderBy($sortBy, $filters['sortDirection'] ?? 'asc');
-    }
-
-    /**
-     * @param  string  $role
-     * @param  array  $filters
-     * @return string
-     */
-    public function getSortByColumnByRole(array $filters): string
-    {
-        return match (true) {
-            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get(
-                $filters,
-                'first_name'
-            ) => 'member_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::MEMBER->value && Arr::get(
-                $filters,
-                'last_name'
-            ) => 'member_profiles.last_name',
-            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get(
-                $filters,
-                'first_name'
-            ) => 'admin_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::ADMIN->value && Arr::get(
-                $filters,
-                'last_name'
-            ) => 'admin_profiles.last_name',
-            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get(
-                $filters,
-                'first_name'
-            ) => 'content_manager_profiles.first_name',
-            Arr::get($filters, 'role') === RoleName::CONTENT_MANAGER->value && Arr::get(
-                $filters,
-                'last_name'
-            ) => 'content_manager_profiles.last_name',
-            default => 'users.id',
-        };
     }
 
     /**
