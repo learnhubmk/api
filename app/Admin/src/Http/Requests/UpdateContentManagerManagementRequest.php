@@ -13,7 +13,7 @@ class UpdateContentManagerManagementRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -27,7 +27,7 @@ class UpdateContentManagerManagementRequest extends FormRequest
             'email' => ['required', 'email', 'max:255'],
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->smallerThan(4000)],
+            'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->max(4 * 1024)],
         ];
     }
 }

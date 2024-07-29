@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
@@ -59,17 +60,27 @@ class MemberManagementController
 
     /**
      * Store a new resource in storage.
+     * @throws \Throwable
      */
     public function store(StoreMemberManagementRequest $request): MemberManagementResource
     {
-        /** @var User $member */
-        $member = User::query()->create(['email' => $request->get('email'), 'password' => Str::password()]);
+        $member = DB::transaction(function () use ($request) {
+            /** @var User $member */
+            $member = User::query()->create([
+                'email' => $request->get('email'),
+                'password' => Str::password(),
+                'email_verified_at' => now(),
+                'status' => UserStatusName::ACTIVE->value,
+            ]);
 
-        $member->memberProfile()->create($request->only(['first_name' , 'last_name']));
+            $member->memberProfile()->create($request->only(['first_name' , 'last_name']));
 
-        $member->assignRole(RoleName::MEMBER);
+            $member->assignRole(RoleName::MEMBER);
 
-        Password::broker()->sendResetLink(['email' => $request->get('email')]);
+            Password::broker()->sendResetLink(['email' => $request->get('email')]);
+
+            return $member;
+        });
 
         return new MemberManagementResource($member);
     }
@@ -99,6 +110,7 @@ class MemberManagementController
 
     /**
      * Remove the specified resource from storage.
+     * @throws \Throwable
      */
     public function destroy(int $id): Response
     {
@@ -107,9 +119,11 @@ class MemberManagementController
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
 
-        $member->update(['status' => UserStatusName::DELETED]);
-        $member->memberProfile()->delete();
-        $member->delete();
+        DB::transaction(function () use ($member) {
+            $member->update(['status' => UserStatusName::DELETED]);
+            $member->memberProfile()->delete();
+            $member->delete();
+        });
 
         return response()->noContent();
     }

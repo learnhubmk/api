@@ -4,9 +4,10 @@ namespace App\Framework\Models;
 
 use App\Admin\Models\AdminProfile;
 use App\Admin\Models\ContentManagerProfile;
+use App\Admin\Models\MemberProfile;
+use App\Authentication\Notifications\ResetPassword;
 use App\Framework\Enums\RoleName;
 use Database\Factories\UserFactory;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -55,7 +56,7 @@ class User extends Authenticatable implements JWTSubject
 
     public function guardName(): string
     {
-        return "web";
+        return "api";
     }
 
     /***
@@ -156,5 +157,16 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(): array
     {
         return [];
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification(#[\SensitiveParameter] $token): void
+    {
+        $this->notify(new ResetPassword($token));
     }
 }

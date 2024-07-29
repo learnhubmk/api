@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
@@ -59,17 +60,27 @@ class AdminManagementController
 
     /**
      * Store a new resource in storage.
+     * @throws \Throwable
      */
     public function store(StoreAdminManagementRequest $request): AdminManagementResource
     {
-        /** @var User $admin */
-        $admin = User::query()->create(['email' => $request->get('email'), 'password' => Str::password()]);
+        $admin = DB::transaction(function () use ($request) {
+            /** @var User $admin */
+            $admin = User::query()->create([
+                'email' => $request->get('email'),
+                'password' => Str::password(),
+                'email_verified_at' => now(),
+                'status' => UserStatusName::ACTIVE->value,
+            ]);
 
-        $admin->adminProfile()->create($request->only(['first_name' , 'last_name']));
+            $admin->adminProfile()->create($request->only(['first_name' , 'last_name']));
 
-        $admin->assignRole(RoleName::ADMIN);
+            $admin->assignRole(RoleName::ADMIN);
 
-        Password::broker()->sendResetLink(['email' => $request->get('email')]);
+            Password::broker()->sendResetLink(['email' => $request->get('email')]);
+
+            return $admin;
+        });
 
         return new AdminManagementResource($admin);
     }
@@ -94,11 +105,12 @@ class AdminManagementController
             'image' => $image ?? $admin->adminProfile->image
         ]);
 
-        return new AdminManagementResource($admin);
+        return new AdminManagementResource($admin->fresh());
     }
 
     /**
      * Remove the specified resource from storage.
+     * @throws \Throwable
      */
     public function destroy(int $id): Response
     {
@@ -107,9 +119,11 @@ class AdminManagementController
             ->whereRelation('roles', 'name', RoleName::ADMIN->value)
             ->findOrFail($id);
 
-        $admin->update(['status' => UserStatusName::DELETED]);
-        $admin->adminProfile()->delete();
-        $admin->delete();
+        DB::transaction(function () use ($admin) {
+            $admin->update(['status' => UserStatusName::DELETED]);
+            $admin->adminProfile()->delete();
+            $admin->delete();
+        });
 
         return response()->noContent();
     }

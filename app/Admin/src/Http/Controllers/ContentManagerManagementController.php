@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
@@ -59,17 +60,27 @@ class ContentManagerManagementController
 
     /**
      * Store a new resource in storage.
+     * @throws \Throwable
      */
     public function store(StoreContentManagerManagementRequest $request): ContentManagerManagementResource
     {
-        /** @var User $contentManager */
-        $contentManager = User::query()->create(['email' => $request->get('email'), 'password' => Str::password()]);
+        $contentManager = DB::transaction(function () use ($request) {
+            /** @var User $contentManager */
+            $contentManager = User::query()->create([
+                'email' => $request->get('email'),
+                'password' => Str::password(),
+                'email_verified_at' => now(),
+                'status' => UserStatusName::ACTIVE->value,
+            ]);
 
-        $contentManager->contentManagerProfile()->create($request->only(['first_name' , 'last_name']));
+            $contentManager->contentManagerProfile()->create($request->only(['first_name' , 'last_name']));
 
-        $contentManager->assignRole(RoleName::CONTENT_MANAGER);
+            $contentManager->assignRole(RoleName::CONTENT_MANAGER);
 
-        Password::broker()->sendResetLink(['email' => $request->get('email')]);
+            Password::broker()->sendResetLink(['email' => $request->get('email')]);
+
+            return $contentManager;
+        });
 
         return new ContentManagerManagementResource($contentManager);
     }
@@ -99,6 +110,7 @@ class ContentManagerManagementController
 
     /**
      * Remove the specified resource from storage.
+     * @throws \Throwable
      */
     public function destroy(int $id): Response
     {
@@ -107,9 +119,11 @@ class ContentManagerManagementController
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->findOrFail($id);
 
-        $contentManager->update(['status' => UserStatusName::DELETED]);
-        $contentManager->contentManagerProfile()->delete();
-        $contentManager->delete();
+        DB::transaction(function () use ($contentManager) {
+            $contentManager->update(['status' => UserStatusName::DELETED]);
+            $contentManager->contentManagerProfile()->delete();
+            $contentManager->delete();
+        });
 
         return response()->noContent();
     }

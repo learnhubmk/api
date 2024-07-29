@@ -10,9 +10,8 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::table('blog_post_tags', function (Blueprint $table) {
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+        Schema::table('member_profiles', function (Blueprint $table) {
+            $table->string('image')->nullable()->change();
         });
     }
 
@@ -21,8 +20,8 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::table('blog_post_tags', function (Blueprint $table) {
-            $table->dropColumn(['created_at', 'updated_at']);
+        Schema::table('member_profiles', function (Blueprint $table) {
+            $table->string('image')->change();
         });
     }
 };
