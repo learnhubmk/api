@@ -22,7 +22,7 @@ return new class () extends Migration {
     public function down(): void
     {
         Schema::table('blog_post_tags', function (Blueprint $table) {
-            //
+            $table->dropColumn(['created_at', 'updated_at']);
         });
     }
 };

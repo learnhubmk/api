@@ -1,12 +1,14 @@
-name: PHP Unit tests
+name: PHPUnit tests
 
 on:
   pull_request:
     branches:
       - main
+      - staging
   push:
     branches:
       - main
+      - staging
 
 jobs:
   phpunit:
@@ -24,6 +26,7 @@ jobs:
       DB_DATABASE: learnhub_testing
       TURNSTILE_SITE_KEY: 'test'
       TURNSTILE_SECRET_KEY: 'test'
+      JWT_SECRET: 'secret'
     name: Run PHPUnit tests
     runs-on: ubuntu-latest
     steps:

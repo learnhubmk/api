@@ -6,9 +6,9 @@ use Illuminate\Support\Str;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
 use App\Website\Enums\BlogPostStatus;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Endpoint;
-use Illuminate\Auth\Events\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\QueryParam;
 use App\Framework\Http\Controllers\Controller;
@@ -65,7 +65,7 @@ class BlogPostController extends Controller
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'excerpt' => $request->excerpt,
-            'content' => $request->content,
+            'content' => $request->get('content'),
             'status' => BlogPostStatus::IN_REVIEW,
             'author_id' => Author::where('user_id', $request->user()->id)->value('id')
         ]);

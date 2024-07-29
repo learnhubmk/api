@@ -2,9 +2,15 @@
 
 namespace App\Framework\Models;
 
-use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
+use App\Admin\Models\AdminProfile;
+use App\Admin\Models\ContentManagerProfile;
+use App\Admin\Models\MemberProfile;
+use App\Authentication\Notifications\ResetPassword;
 use Database\Factories\UserFactory;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -14,6 +20,7 @@ class User extends Authenticatable implements JWTSubject
     use HasFactory;
     use Notifiable;
     use HasRoles;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -47,15 +54,30 @@ class User extends Authenticatable implements JWTSubject
 
     public function guardName(): string
     {
-        return "web";
+        return "api";
     }
 
-    /**
-     *
-     * Determines the proper factory for the model.*/
+    /***
+     * Determines the proper factory for the model.
+     */
     protected static function newFactory(): UserFactory
     {
         return UserFactory::new();
+    }
+
+    public function adminProfile(): HasOne
+    {
+        return $this->hasOne(AdminProfile::class);
+    }
+
+    public function contentManagerProfile(): HasOne
+    {
+        return $this->hasOne(ContentManagerProfile::class);
+    }
+
+    public function memberProfile(): HasOne
+    {
+        return $this->hasOne(MemberProfile::class);
     }
 
     /**
@@ -63,7 +85,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return mixed
      */
-    public function getJWTIdentifier()
+    public function getJWTIdentifier(): string
     {
         return $this->getKey();
     }
@@ -73,8 +95,19 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return array
      */
-    public function getJWTCustomClaims()
+    public function getJWTCustomClaims(): array
     {
         return [];
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification(#[\SensitiveParameter] $token): void
+    {
+        $this->notify(new ResetPassword($token));
     }
 }

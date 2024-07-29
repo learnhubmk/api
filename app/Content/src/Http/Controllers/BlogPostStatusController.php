@@ -3,9 +3,9 @@
 namespace App\Content\Http\Controllers;
 
 use App\Website\Models\BlogPost;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Endpoint;
-use Illuminate\Auth\Events\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 

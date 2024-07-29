@@ -10,7 +10,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Role::create(['name' => RoleName::CONTENT_MANAGER->value]);
+        Role::create(['name' => RoleName::CONTENT_MANAGER->value, 'guard_name' => 'api']);
     }
 
     /**
@@ -18,6 +18,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Role::where('name', RoleName::CONTENT_MANAGER->value)->delete();
+        Role::query()->where('name', RoleName::CONTENT_MANAGER->value)->delete();
     }
 };
