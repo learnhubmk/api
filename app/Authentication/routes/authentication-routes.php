@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Authentication\Http\Controllers\AdminAuthController;
 use App\Authentication\Http\Controllers\MemberAuthController;
 use App\Authentication\Http\Controllers\ContentManagerAuthController;
+use App\Authentication\Http\Controllers\NewPasswordController;
+use App\Authentication\Http\Controllers\PasswordResetLinkController;
 use App\Authentication\Http\Controllers\SocialiteAuthController;
 
 Route::group(['middleware' => ['auth:api', 'treblle']], function () {
@@ -34,4 +36,8 @@ Route::group(['middleware' => ['auth:api', 'treblle']], function () {
     /**SOCALITE AUTH */
     Route::get('/login/{provider}/redirect', [SocialiteAuthController::class, 'redirect'])->withoutMiddleware(['auth:api']);
     Route::get('/login/{provider}/callback', [SocialiteAuthController::class, 'handleCallback'])->withoutMiddleware(['auth:api']);
+
+    /**PASSWORD RESET */
+    Route::post('/forgot-password', PasswordResetLinkController::class)->withoutMiddleware(['auth:api']);
+    Route::post('/reset-password', NewPasswordController::class)->withoutMiddleware(['auth:api']);
 });
