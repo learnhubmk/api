@@ -2,21 +2,21 @@
 
 namespace App\Authentication\Http\Controllers;
 
-use Illuminate\Support\Str;
 use App\Framework\Models\User;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\BodyParam;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Authentication\Http\Requests\NewPasswordRequest;
-use App\Authentication\Http\Responses\PasswordResetResponse;
-use App\Authentication\Http\Responses\FailedPasswordResetResponse;
 
 class NewPasswordController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+    #[Endpoint(title: 'New password', description: 'This endpoint enables to set new password.[IMPORTANT] Please add the password_confirmation also!!')]
+    #[Group('Authentication')]
+    #[BodyParam('email', 'password', 'token',  required: true)]
     public function __invoke(NewPasswordRequest $request)
     {
         $request->validated();
@@ -26,7 +26,7 @@ class NewPasswordController extends Controller
             function (User $user, string $password) {
                 $user->fill([
                     'password' => Hash::make($password)
-                ])->setRememberToken(Str::random(60));
+                ]);
 
                 $user->save();
 
@@ -35,8 +35,8 @@ class NewPasswordController extends Controller
         );
 
         return $status == Password::PASSWORD_RESET
-                    ? (new PasswordResetResponse($status))
-                    : (new FailedPasswordResetResponse($status));
+                    ? response()->json(['message' => __($status)], 200)
+                    : response()->json(['message' => __($status)], 404);
     }
 
 }

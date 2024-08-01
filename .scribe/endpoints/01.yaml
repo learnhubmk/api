@@ -38,7 +38,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E3age61d5k6VDavfhbc4P8Z'
+      - 'Bearer Z35d4bfk8eac6vaP6hgEVD1'
     controller: null
     method: null
     route: null
@@ -68,7 +68,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: lacy.romaguera@example.net
+        example: jerde.lucienne@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -77,14 +77,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: voluptatem
+        example: veritatis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: lacy.romaguera@example.net
-      password: voluptatem
+      email: jerde.lucienne@example.net
+      password: veritatis
     fileParameters: []
     responses: []
     responseFields: []
@@ -121,7 +121,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DZghP3d68ak6v4ab5EfVec1'
+      - 'Bearer feag1khvcEZ63a8645PbdDV'
     controller: null
     method: null
     route: null
@@ -154,7 +154,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Pka6h5EfcVD3eb6Zvadg48'
+      - 'Bearer abP56DZ3gf1vchdE8aeV6k4'
     controller: null
     method: null
     route: null
@@ -196,7 +196,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a6cg385EbV4P6Zevkh1aDdf'
+      - 'Bearer 3E14kbagD8VPceh56d6Zvaf'
     controller: null
     method: null
     route: null
@@ -226,7 +226,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: oberbrunner.macy@example.net
+        example: mitchell.immanuel@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -235,14 +235,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: fugiat
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: oberbrunner.macy@example.net
-      password: fugiat
+      email: mitchell.immanuel@example.net
+      password: in
     fileParameters: []
     responses: []
     responseFields: []
@@ -279,7 +279,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 635EP8kavcfV6h4gDb1eaZd'
+      - 'Bearer f36Pg5aZ84ckhEaeDb6Vd1v'
     controller: null
     method: null
     route: null
@@ -312,7 +312,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer cE5Phafk8ad3gV1D646bevZ'
+      - 'Bearer f3kcv4bDa56hVgPaZd6E81e'
     controller: null
     method: null
     route: null
@@ -354,7 +354,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer afeVgbvkD8P6c4d5h36aEZ1'
+      - 'Bearer e3bhDaEk5v468cP61ZgVfda'
     controller: null
     method: null
     route: null
@@ -384,7 +384,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: nicole.koch@example.net
+        example: gerry.pagac@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -393,14 +393,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: occaecati
+        example: voluptates
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: nicole.koch@example.net
-      password: occaecati
+      email: gerry.pagac@example.com
+      password: voluptates
     fileParameters: []
     responses: []
     responseFields: []
@@ -437,7 +437,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5vfkbe1g6E3PVda86Za4Dch'
+      - 'Bearer PdkD1cb6g5V86evafhZ43aE'
     controller: null
     method: null
     route: null
@@ -470,7 +470,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f16VkdZh5baaDc46Ege8v3P'
+      - 'Bearer Z1dc6Pghf56kV4abeEDa8v3'
     controller: null
     method: null
     route: null
@@ -513,11 +513,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: fb2b9bc0-fc8d-4d5d-aeb6-6ef156a59375
+          x-treblle-trace-id: 4d5e2f29-d6e0-40a8-9239-8452130fd162
           vary: Origin
         description: null
         custom: []
@@ -569,10 +569,110 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: e22de103-108d-4a51-862b-444fd80c85f3
+          x-treblle-trace-id: a1069bce-7c39-4afd-b201-fa5a01e5b82f
           vary: Origin
         description: null
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: forgot-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Password Reset Link'
+      description: 'This endpoint enables to send reset link for forgotten password'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: vharber@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: vharber@example.com
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: reset-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'New password'
+      description: 'This endpoint enables to set new password.[IMPORTANT] Please add the password_confirmation also!!'
+      authenticated: false
+      custom: []
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: token
+        required: true
+        example: lon.lakin@example.com
+        type: password
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: ^A4hiQ
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      token: consequatur
+      email: lon.lakin@example.com
+      password: ^A4hiQ
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
