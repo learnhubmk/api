@@ -28,14 +28,16 @@ class AdminAuthController extends Controller
 
     public function login(AdminLoginRequest $request): AuthResource
     {
-        $user = User::where('email', $request->email)->first();
+        $user = User::query()->where('email', $request->email)->first();
 
         $request->authenticate($user);
 
         $token = auth()->login($user);
 
         return AuthResource::make($user)->additional([
-            'access_token'  => $token,
+            'data' => [
+                'access_token'  => $token,
+            ]
         ]);
     }
 
