@@ -38,6 +38,6 @@ Route::group(['middleware' => ['auth:api', 'treblle']], function () {
     Route::get('/login/{provider}/callback', [SocialiteAuthController::class, 'handleCallback'])->withoutMiddleware(['auth:api']);
 
     /**PASSWORD RESET */
-    Route::post('/forgot-password', PasswordResetLinkController::class)->withoutMiddleware(['auth:api']);
-    Route::post('/reset-password', NewPasswordController::class)->withoutMiddleware(['auth:api']);
+    Route::post('/passwords/request-new', PasswordResetLinkController::class)->withoutMiddleware(['auth:api']);
+    Route::post('/passwords/reset', NewPasswordController::class)->withoutMiddleware(['auth:api']);
 });
