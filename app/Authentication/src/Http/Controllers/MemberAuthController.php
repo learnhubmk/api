@@ -35,7 +35,9 @@ class MemberAuthController extends Controller
         $token = auth()->login($user);
 
         return AuthResource::make($user)->additional([
-            'access_token'  => $token,
+            'data' => [
+                'access_token'  => $token,
+            ]
         ]);
     }
 
