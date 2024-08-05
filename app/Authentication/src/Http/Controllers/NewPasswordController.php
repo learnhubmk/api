@@ -16,7 +16,7 @@ class NewPasswordController extends Controller
 {
     #[Endpoint(title: 'New password', description: 'This endpoint enables to set new password.[IMPORTANT] Please add the password_confirmation also!!')]
     #[Group('Authentication')]
-    #[BodyParam('email', 'password', 'token',  required: true)]
+    #[BodyParam('email', 'password', 'token', required: true)]
     public function __invoke(NewPasswordRequest $request)
     {
 
