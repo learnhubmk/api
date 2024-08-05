@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "49b28f58-fb16-4007-8f49-13ed6b7a4d3b",
+        "_postman_id": "89d5ab57-40a3-4326-afcc-24a8e99264f2",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -76,7 +76,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "61526fb1-10c6-42a0-a65a-7279db47949f"
+                                    "value": "edf2da76-e122-4606-a5bf-4361f9cd1259"
                                 },
                                 {
                                     "key": "vary",
@@ -129,7 +129,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sunt",
+                                    "value": "sit",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -157,7 +157,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "35ed28bb-50f0-47a6-ba3f-ba8634878f44"
+                                    "value": "80578462-fa24-4aa7-b5d9-1a078621050e"
                                 },
                                 {
                                     "key": "vary",
@@ -182,7 +182,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "perspiciatis",
+                                    "value": "quia",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -221,7 +221,7 @@
                                 },
                                 {
                                     "key": "status",
-                                    "value": "deleted",
+                                    "value": "banned",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -253,7 +253,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quis",
+                                    "value": "illum",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -327,7 +327,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "b02070de-101e-4568-b684-688d25b50912"
+                                    "value": "6f421d24-f8d5-4380-9d33-7f2ded262820"
                                 },
                                 {
                                     "key": "vary",
@@ -380,7 +380,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ipsum",
+                                    "value": "est",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "8998fca9-95c0-4714-9027-cf81543262b5"
+                                    "value": "31878939-8feb-4e6d-9840-216059ce04ed"
                                 },
                                 {
                                     "key": "vary",
@@ -433,7 +433,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quidem",
+                                    "value": "iusto",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -472,7 +472,7 @@
                                 },
                                 {
                                     "key": "status",
-                                    "value": "active",
+                                    "value": "banned",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -504,7 +504,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptate",
+                                    "value": "illo",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -578,7 +578,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "6a12a118-e050-4a5b-a2dd-66ad5f512051"
+                                    "value": "00beb37a-d5ed-45e2-a770-b1e3cff96acc"
                                 },
                                 {
                                     "key": "vary",
@@ -631,7 +631,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "accusantium",
+                                    "value": "et",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -659,7 +659,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "d035d63c-6e62-4645-9d8a-9b441fe27a4a"
+                                    "value": "acd35020-267f-4bf2-9afc-42cd2b96a1df"
                                 },
                                 {
                                     "key": "vary",
@@ -684,7 +684,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ea",
+                                    "value": "consequuntur",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -723,7 +723,7 @@
                                 },
                                 {
                                     "key": "status",
-                                    "value": "banned",
+                                    "value": "active",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -755,7 +755,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nam",
+                                    "value": "quos",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -841,7 +841,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"lacy.romaguera@example.net\",\"password\":\"voluptatem\"}"
+                            "raw": "{\"email\":\"jerde.lucienne@example.net\",\"password\":\"veritatis\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -955,7 +955,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"oberbrunner.macy@example.net\",\"password\":\"fugiat\"}"
+                            "raw": "{\"email\":\"mitchell.immanuel@example.net\",\"password\":\"in\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -1069,7 +1069,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"nicole.koch@example.net\",\"password\":\"occaecati\"}"
+                            "raw": "{\"email\":\"gerry.pagac@example.com\",\"password\":\"voluptates\"}"
                         },
                         "description": "This endpoint enables users with member role to sign in",
                         "auth": {
@@ -1163,7 +1163,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "fb2b9bc0-fc8d-4d5d-aeb6-6ef156a59375"
+                                    "value": "4d5e2f29-d6e0-40a8-9239-8452130fd162"
                                 },
                                 {
                                     "key": "vary",
@@ -1171,7 +1171,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/accounts.google.com\\\/o\\\/oauth2\\\/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code\"}}",
+                            "body": "{\"data\":{\"redirect_link\":\"https:\\\/\\\/accounts.google.com\\\/o\\\/oauth2\\\/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code\"}}",
                             "name": ""
                         }
                     ]
@@ -1219,7 +1219,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "e22de103-108d-4a51-862b-444fd80c85f3"
+                                    "value": "a1069bce-7c39-4afd-b201-fa5a01e5b82f"
                                 },
                                 {
                                     "key": "vary",
@@ -1231,6 +1231,68 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "Password Reset Link",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "forgot-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/forgot-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"vharber@example.com\"}"
+                        },
+                        "description": "This endpoint enables to send reset link for forgotten password",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "New password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "reset-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/reset-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"token\":\"consequatur\",\"email\":\"lon.lakin@example.com\",\"password\":\"^A4hiQ\"}"
+                        },
+                        "description": "This endpoint enables to set new password.[IMPORTANT] Please add the password_confirmation also!!",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         },
@@ -1670,7 +1732,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "b076b21f-0f27-41d9-a28e-39db970b5ce6"
+                                    "value": "b0ccffa9-22a0-42ca-9ff1-8af696f73fc0"
                                 },
                                 {
                                     "key": "vary",
@@ -1768,12 +1830,12 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "natus",
+                                    "value": "aut",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=natus"
+                            "raw": "{{baseUrl}}\/blog-posts?title=aut"
                         },
                         "method": "GET",
                         "header": [
@@ -1801,7 +1863,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "8d08b71f-0e40-442f-bcfd-44eb72c08db0"
+                                    "value": "452594f9-bfcb-4680-b208-f57cd5a492ad"
                                 },
                                 {
                                     "key": "vary",
@@ -1809,7 +1871,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Blanditiis soluta similique est dolorem voluptatum non natus.\",\"slug\":\"blanditiis-soluta-similique-est-dolorem-voluptatum-non-natus\",\"excerpt\":\"Aperiam et quidem iste facere accusamus molestiae qui.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-28\",\"author\":{\"first_name\":\"Arnulfo Lemke\",\"last_name\":\"Kunde\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":15,\"to\":1,\"total\":1}}",
+                            "body": "{\"data\":[{\"title\":\"Autem in voluptatem saepe recusandae ut fugiat est quae.\",\"slug\":\"autem-in-voluptatem-saepe-recusandae-ut-fugiat-est-quae\",\"excerpt\":\"Occaecati ipsum fugiat aut a.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Lucy Blanda Jr.\",\"last_name\":\"Greenfelder\",\"image\":null}},{\"title\":\"Aut repellendus quibusdam qui pariatur ipsam dolores a ut.\",\"slug\":\"aut-repellendus-quibusdam-qui-pariatur-ipsam-dolores-a-ut\",\"excerpt\":\"Dolorem quibusdam quis eligendi sint.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Rafaela Marks\",\"last_name\":\"Quigley\",\"image\":null}},{\"title\":\"Deserunt autem similique tenetur voluptate.\",\"slug\":\"deserunt-autem-similique-tenetur-voluptate\",\"excerpt\":\"Et non error voluptas ducimus.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Willie Stark\",\"last_name\":\"Murphy\",\"image\":null}},{\"title\":\"Et mollitia eos neque aut atque.\",\"slug\":\"et-mollitia-eos-neque-aut-atque\",\"excerpt\":\"Quis cupiditate corporis neque ullam velit eum sit.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Nelle Lehner\",\"last_name\":\"Batz\",\"image\":null}},{\"title\":\"Sit beatae aut esse nemo.\",\"slug\":\"sit-beatae-aut-esse-nemo\",\"excerpt\":\"Delectus quas voluptates qui quis.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Harold Quitzon\",\"last_name\":\"Ward\",\"image\":null}},{\"title\":\"Laboriosam assumenda autem veniam voluptatum velit ad iure.\",\"slug\":\"laboriosam-assumenda-autem-veniam-voluptatum-velit-ad-iure\",\"excerpt\":\"Aperiam consequatur architecto iusto commodi laudantium.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Willie Stark\",\"last_name\":\"Murphy\",\"image\":null}},{\"title\":\"Quae nam nesciunt nesciunt doloribus totam architecto autem quasi.\",\"slug\":\"quae-nam-nesciunt-nesciunt-doloribus-totam-architecto-autem-quasi\",\"excerpt\":\"Est et repellendus porro error et.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Willie Stark\",\"last_name\":\"Murphy\",\"image\":null}},{\"title\":\"Reprehenderit non placeat tempore aut non inventore maxime.\",\"slug\":\"reprehenderit-non-placeat-tempore-aut-non-inventore-maxime\",\"excerpt\":\"Corrupti ut dolore assumenda.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Lucy Blanda Jr.\",\"last_name\":\"Greenfelder\",\"image\":null}},{\"title\":\"Expedita et officia omnis aut omnis.\",\"slug\":\"expedita-et-officia-omnis-aut-omnis\",\"excerpt\":\"Est ipsa laudantium cupiditate consequuntur voluptas.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Rafaela Marks\",\"last_name\":\"Quigley\",\"image\":null}},{\"title\":\"Aut est at aut excepturi voluptate.\",\"slug\":\"aut-est-at-aut-excepturi-voluptate\",\"excerpt\":\"Quia velit dignissimos distinctio odit.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Nelle Lehner\",\"last_name\":\"Batz\",\"image\":null}},{\"title\":\"Aut assumenda non et mollitia sequi dolorem magni.\",\"slug\":\"aut-assumenda-non-et-mollitia-sequi-dolorem-magni\",\"excerpt\":\"Accusantium nisi molestiae adipisci et voluptas qui.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-30\",\"author\":{\"first_name\":\"Mr. Dewitt Skiles Jr.\",\"last_name\":\"Rowe\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-posts\",\"per_page\":15,\"to\":11,\"total\":11}}",
                             "name": ""
                         }
                     ]
@@ -1826,7 +1888,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "dolor",
+                                    "value": "odit",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -1857,7 +1919,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "4b415fc0-4f06-414a-8d10-aec6b9932261"
+                                    "value": "632fe7fa-c5cc-4224-8a5b-f388ab7e70c3"
                                 },
                                 {
                                     "key": "vary",
@@ -1865,7 +1927,7 @@
                                 }
                             ],
                             "code": 404,
-                            "body": "{\n    \"message\": \"No query results for model [App\\\\Website\\\\Models\\\\BlogPost].\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php\",\n    \"line\": 629,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php\",\n            \"line\": 577,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php\",\n            \"line\": 54,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"NunoMaduro\\\\Collision\\\\Adapters\\\\Laravel\\\\ExceptionHandler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 146,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/treblle\/treblle-laravel\/src\/Middlewares\/TreblleMiddleware.php\",\n            \"line\": 47,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Treblle\\\\Middlewares\\\\TreblleMiddleware\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 807,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 786,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 750,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 739,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 201,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 176,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 145,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 310,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 298,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 237,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 690,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 213,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 182,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 1047,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 316,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 197,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "body": "{\n    \"message\": \"No query results for model [App\\\\Website\\\\Models\\\\BlogPost].\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 629,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 577,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\nunomaduro\\\\collision\\\\src\\\\Adapters\\\\Laravel\\\\ExceptionHandler.php\",\n            \"line\": 54,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"NunoMaduro\\\\Collision\\\\Adapters\\\\Laravel\\\\ExceptionHandler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 146,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\treblle\\\\treblle-laravel\\\\src\\\\Middlewares\\\\TreblleMiddleware.php\",\n            \"line\": 47,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Treblle\\\\Middlewares\\\\TreblleMiddleware\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 310,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 298,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 91,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 44,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 163,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 125,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 72,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 50,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 53,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 35,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 213,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 279,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 182,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1047,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 316,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 196,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\api\\\\artisan\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
                             "name": ""
                         }
                     ]
@@ -1905,7 +1967,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "58c7129a-a272-4320-a066-d54a6343695e"
+                                    "value": "542e5614-f32c-4cde-a569-96111b66eb37"
                                 },
                                 {
                                     "key": "vary",
@@ -1913,7 +1975,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"},{\"name\":\"react\"},{\"name\":\"redis\"}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\",\"per_page\":20,\"to\":20,\"total\":23}}",
+                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"},{\"name\":\"react\"},{\"name\":\"redis\"}],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\",\"per_page\":20,\"to\":20,\"total\":23}}",
                             "name": ""
                         }
                     ]
@@ -1930,7 +1992,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "est",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -1961,7 +2023,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "da7ab910-d47f-4ee0-abd8-b84eab4ab505"
+                                    "value": "7477032d-5809-4b6b-9bf5-57e81c6ad056"
                                 },
                                 {
                                     "key": "vary",
@@ -1969,7 +2031,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/est?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/est?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/est?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/est\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/non?page=1\",\"last\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/non?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/non?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/api.myapi.com\\\/blog-post-tags\\\/non\",\"per_page\":15,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -1996,7 +2058,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"aspernatur\",\"email\":\"schinner.kurtis@example.org\",\"message\":\"autem\",\"cf-turnstile-response\":\"et\"}"
+                            "raw": "{\"name\":\"veniam\",\"email\":\"crist.stanley@example.net\",\"message\":\"assumenda\",\"cf-turnstile-response\":\"impedit\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -2027,7 +2089,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"eegpp\",\"email\":\"carole46@example.org\"}"
+                            "raw": "{\"first_name\":\"iwwfjcir\",\"email\":\"hane.joyce@example.net\"}"
                         },
                         "description": " This endpoint is for subscribing to the Leanhub.mk newsletter.",
                         "auth": {

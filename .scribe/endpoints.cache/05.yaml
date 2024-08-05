@@ -25,24 +25,24 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: natus
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: natus
+      title: aut
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Blanditiis soluta similique est dolorem voluptatum non natus.","slug":"blanditiis-soluta-similique-est-dolorem-voluptatum-non-natus","excerpt":"Aperiam et quidem iste facere accusamus molestiae qui.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Arnulfo Lemke","last_name":"Kunde","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"title":"Autem in voluptatem saepe recusandae ut fugiat est quae.","slug":"autem-in-voluptatem-saepe-recusandae-ut-fugiat-est-quae","excerpt":"Occaecati ipsum fugiat aut a.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Lucy Blanda Jr.","last_name":"Greenfelder","image":null}},{"title":"Aut repellendus quibusdam qui pariatur ipsam dolores a ut.","slug":"aut-repellendus-quibusdam-qui-pariatur-ipsam-dolores-a-ut","excerpt":"Dolorem quibusdam quis eligendi sint.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Rafaela Marks","last_name":"Quigley","image":null}},{"title":"Deserunt autem similique tenetur voluptate.","slug":"deserunt-autem-similique-tenetur-voluptate","excerpt":"Et non error voluptas ducimus.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Willie Stark","last_name":"Murphy","image":null}},{"title":"Et mollitia eos neque aut atque.","slug":"et-mollitia-eos-neque-aut-atque","excerpt":"Quis cupiditate corporis neque ullam velit eum sit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Nelle Lehner","last_name":"Batz","image":null}},{"title":"Sit beatae aut esse nemo.","slug":"sit-beatae-aut-esse-nemo","excerpt":"Delectus quas voluptates qui quis.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Harold Quitzon","last_name":"Ward","image":null}},{"title":"Laboriosam assumenda autem veniam voluptatum velit ad iure.","slug":"laboriosam-assumenda-autem-veniam-voluptatum-velit-ad-iure","excerpt":"Aperiam consequatur architecto iusto commodi laudantium.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Willie Stark","last_name":"Murphy","image":null}},{"title":"Quae nam nesciunt nesciunt doloribus totam architecto autem quasi.","slug":"quae-nam-nesciunt-nesciunt-doloribus-totam-architecto-autem-quasi","excerpt":"Est et repellendus porro error et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Willie Stark","last_name":"Murphy","image":null}},{"title":"Reprehenderit non placeat tempore aut non inventore maxime.","slug":"reprehenderit-non-placeat-tempore-aut-non-inventore-maxime","excerpt":"Corrupti ut dolore assumenda.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Lucy Blanda Jr.","last_name":"Greenfelder","image":null}},{"title":"Expedita et officia omnis aut omnis.","slug":"expedita-et-officia-omnis-aut-omnis","excerpt":"Est ipsa laudantium cupiditate consequuntur voluptas.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Rafaela Marks","last_name":"Quigley","image":null}},{"title":"Aut est at aut excepturi voluptate.","slug":"aut-est-at-aut-excepturi-voluptate","excerpt":"Quia velit dignissimos distinctio odit.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Nelle Lehner","last_name":"Batz","image":null}},{"title":"Aut assumenda non et mollitia sequi dolorem magni.","slug":"aut-assumenda-non-et-mollitia-sequi-dolorem-magni","excerpt":"Accusantium nisi molestiae adipisci et voluptas qui.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-30","author":{"first_name":"Mr. Dewitt Skiles Jr.","last_name":"Rowe","image":null}}],"links":{"first":"http:\/\/api.myapi.com\/blog-posts?page=1","last":"http:\/\/api.myapi.com\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-posts","per_page":15,"to":11,"total":11}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 8d08b71f-0e40-442f-bcfd-44eb72c08db0
+          x-treblle-trace-id: 452594f9-bfcb-4680-b208-f57cd5a492ad
           vary: Origin
         description: null
         custom: []
@@ -72,13 +72,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: dolor
+        example: odit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: dolor
+      slug: odit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -91,389 +91,389 @@ endpoints:
           {
               "message": "No query results for model [App\\Website\\Models\\BlogPost].",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
-              "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+              "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
               "line": 629,
               "trace": [
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
                       "line": 577,
                       "function": "prepareException",
                       "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
                       "line": 54,
                       "function": "render",
                       "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
                       "line": 51,
                       "function": "render",
                       "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 146,
                       "function": "handleException",
                       "class": "Illuminate\\Routing\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\treblle\\treblle-laravel\\src\\Middlewares\\TreblleMiddleware.php",
                       "line": 47,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Treblle\\Middlewares\\TreblleMiddleware",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 119,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 807,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 805,
                       "function": "then",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 786,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 784,
                       "function": "runRouteWithinStack",
                       "class": "Illuminate\\Routing\\Router",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 750,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 748,
                       "function": "runRoute",
                       "class": "Illuminate\\Routing\\Router",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 739,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 737,
                       "function": "dispatchToRoute",
                       "class": "Illuminate\\Routing\\Router",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 201,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 200,
                       "function": "dispatch",
                       "class": "Illuminate\\Routing\\Router",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 144,
                       "function": "Illuminate\\Foundation\\Http\\{closure}",
                       "class": "Illuminate\\Foundation\\Http\\Kernel",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
                       "line": 21,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
                       "line": 31,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
                       "line": 21,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
                       "line": 51,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
                       "line": 27,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
                       "line": 110,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
                       "line": 62,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Http\\Middleware\\HandleCors",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
                       "line": 57,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 183,
                       "function": "handle",
                       "class": "Illuminate\\Http\\Middleware\\TrustProxies",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
                       "line": 119,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 176,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 175,
                       "function": "then",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 145,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 144,
                       "function": "sendRequestThroughRouter",
                       "class": "Illuminate\\Foundation\\Http\\Kernel",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
                       "line": 310,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Http\\Kernel",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
                       "line": 298,
                       "function": "callLaravelOrLumenRoute",
                       "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
                       "line": 91,
                       "function": "makeApiCall",
                       "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
                       "line": 44,
                       "function": "makeResponseCall",
                       "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
                       "line": 35,
                       "function": "makeResponseCallIfConditionsPass",
                       "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 237,
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 236,
                       "function": "__invoke",
                       "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
                       "line": 163,
                       "function": "iterateThroughStrategies",
                       "class": "Knuckles\\Scribe\\Extracting\\Extractor",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
                       "line": 95,
                       "function": "fetchResponses",
                       "class": "Knuckles\\Scribe\\Extracting\\Extractor",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
                       "line": 125,
                       "function": "processRoute",
                       "class": "Knuckles\\Scribe\\Extracting\\Extractor",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
                       "line": 72,
                       "function": "extractEndpointsInfoFromLaravelApp",
                       "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
                       "line": 50,
                       "function": "extractEndpointsInfoAndWriteToDisk",
                       "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
                       "line": 53,
                       "function": "get",
                       "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
                       "line": 36,
                       "function": "handle",
                       "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
                       "line": 41,
                       "function": "Illuminate\\Container\\{closure}",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
                       "line": 93,
                       "function": "unwrapIfClosure",
                       "class": "Illuminate\\Container\\Util",
                       "type": "::"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
                       "line": 35,
                       "function": "callBoundMethod",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 690,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 662,
                       "function": "call",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
                       "line": 213,
                       "function": "call",
                       "class": "Illuminate\\Container\\Container",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/symfony/console/Command/Command.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Command\\Command.php",
                       "line": 279,
                       "function": "execute",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
                       "line": 182,
                       "function": "run",
                       "class": "Symfony\\Component\\Console\\Command\\Command",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/symfony/console/Application.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
                       "line": 1047,
                       "function": "run",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/symfony/console/Application.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
                       "line": 316,
                       "function": "doRunCommand",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/symfony/console/Application.php",
+                      "file": "C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php",
                       "line": 167,
                       "function": "doRun",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 197,
+                      "file": "C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 196,
                       "function": "run",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
-                      "file": "/var/www/artisan",
+                      "file": "C:\\laragon\\www\\api\\artisan",
                       "line": 35,
                       "function": "handle",
                       "class": "Illuminate\\Foundation\\Console\\Kernel",
@@ -484,7 +484,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 4b415fc0-4f06-414a-8d10-aec6b9932261
+          x-treblle-trace-id: 632fe7fa-c5cc-4224-8a5b-f388ab7e70c3
           vary: Origin
         description: null
         custom: []
@@ -519,11 +519,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags?page=1","last":"http:\/\/learnhub.test\/blog-post-tags?page=2","prev":null,"next":"http:\/\/learnhub.test\/blog-post-tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=1","label":"1","active":true},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"2","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags","per_page":20,"to":20,"total":23}}'
+        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags?page=2","prev":null,"next":"http:\/\/api.myapi.com\/blog-post-tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=1","label":"1","active":true},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=2","label":"2","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags","per_page":20,"to":20,"total":23}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 58c7129a-a272-4320-a066-d54a6343695e
+          x-treblle-trace-id: 542e5614-f32c-4cde-a569-96111b66eb37
           vary: Origin
         description: null
         custom: []
@@ -553,13 +553,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: est
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: est
+      tag: non
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -568,11 +568,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/est?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/est?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/est?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/est","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/api.myapi.com\/blog-post-tags\/non?page=1","last":"http:\/\/api.myapi.com\/blog-post-tags\/non?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/api.myapi.com\/blog-post-tags\/non?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/api.myapi.com\/blog-post-tags\/non","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: da7ab910-d47f-4ee0-abd8-b84eab4ab505
+          x-treblle-trace-id: 7477032d-5809-4b6b-9bf5-57e81c6ad056
           vary: Origin
         description: null
         custom: []
@@ -607,7 +607,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: aspernatur
+        example: veniam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -616,7 +616,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: schinner.kurtis@example.org
+        example: crist.stanley@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -625,7 +625,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: autem
+        example: assumenda
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -634,16 +634,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: et
+        example: impedit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: aspernatur
-      email: schinner.kurtis@example.org
-      message: autem
-      cf-turnstile-response: et
+      name: veniam
+      email: crist.stanley@example.net
+      message: assumenda
+      cf-turnstile-response: impedit
     fileParameters: []
     responses: []
     responseFields: []
@@ -677,7 +677,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: eegpp
+        example: iwwfjcir
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -686,7 +686,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: carole46@example.org
+        example: hane.joyce@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -701,8 +701,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: eegpp
-      email: carole46@example.org
+      first_name: iwwfjcir
+      email: hane.joyce@example.net
     fileParameters: []
     responses: []
     responseFields: []
