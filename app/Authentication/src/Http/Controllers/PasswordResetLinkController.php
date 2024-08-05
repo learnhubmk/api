@@ -16,7 +16,6 @@ class PasswordResetLinkController extends Controller
     #[BodyParam('email', required: true)]
     public function __invoke(PasswordResetLinkRequest $request)
     {
-        $request->validated();
 
         $status = Password::sendResetLink(
             $request->only('email')

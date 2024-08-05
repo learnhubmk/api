@@ -19,12 +19,11 @@ class NewPasswordController extends Controller
     #[BodyParam('email', 'password', 'token',  required: true)]
     public function __invoke(NewPasswordRequest $request)
     {
-        $request->validated();
 
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function (User $user, string $password) {
-                $user->fill([
+                $user->update([
                     'password' => Hash::make($password)
                 ]);
 
