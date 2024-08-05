@@ -26,7 +26,7 @@
             var useCsrf = Boolean();
             var csrfUrl = "/sanctum/csrf-cookie";
         </script>
-        <script src="../docs/js/tryitout-4.36.0.js"></script>
+        <script src="../docs/js/tryitout-4.37.1.js"></script>
         <style>
             .code-editor, .response-content {
                 color: whitesmoke;
@@ -104,6 +104,11 @@
                     preflightPromise = makeAPICall('GET', window.csrfUrl).then(() => {
                         headers['X-XSRF-TOKEN'] = getCookie('XSRF-TOKEN');
                     });
+                }
+
+                // content type has to be unset otherwise file upload won't work
+                if (form.dataset.hasfiles === "1") {
+                    delete headers['Content-Type'];
                 }
 
                 return preflightPromise.then(() => makeAPICall(method, path, body, query, headers, endpointId))
@@ -676,10 +681,10 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTforgot-password">
+                                             id="toc-item-authentication-POSTpasswords-request-new">
                                             <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Password Reset Link">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTforgot-password">
+                                                   href="#authentication-POSTpasswords-request-new">
                                                     Password Reset Link
                                                 </a>
                                             </div>
@@ -688,10 +693,10 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTreset-password">
+                                             id="toc-item-authentication-POSTpasswords-reset">
                                             <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="New password">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTreset-password">
+                                                   href="#authentication-POSTpasswords-reset">
                                                     New password
                                                 </a>
                                             </div>
@@ -1008,7 +1013,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: August 1, 2024
+            Last updated: August 5, 2024
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1611,7 +1616,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : edf2da76-e122-4606-a5bf-4361f9cd1259
+                                                            : fef17ffc-a600-45e4-a64a-9a9a3bea7709
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -2224,7 +2229,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sit
+                        nam
                     </div>
                 </div>
             </div>
@@ -2346,7 +2351,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="sit" data-component="url"
+                                               value="nam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -2444,7 +2449,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/administrators/sit" \
+    --get "https://staging-api.learnhub.mk/admin/administrators/nam" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2454,7 +2459,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/sit"
+    "https://staging-api.learnhub.mk/admin/administrators/nam"
 );
 
 const headers = {
@@ -2473,7 +2478,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/sit';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/nam';
 $response = $client-&gt;get(
     $url,
     [
@@ -2494,7 +2499,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/sit'
+url = 'https://staging-api.learnhub.mk/admin/administrators/nam'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -2558,7 +2563,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 80578462-fa24-4aa7-b5d9-1a078621050e
+                                                            : a2498786-03ac-4d18-ad71-a3abf8f092fb
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -2703,7 +2708,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        molestiae
                     </div>
                 </div>
             </div>
@@ -2833,7 +2838,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        C:\Users\calex\AppData\Local\Temp\php8524.tmp
+                        /tmp/phpZsbmyT
                     </div>
                 </div>
             </div>
@@ -2965,7 +2970,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="quia" data-component="url"
+                                               value="molestiae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3148,7 +3153,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/administrators/quia" \
+    "https://staging-api.learnhub.mk/admin/administrators/molestiae" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
@@ -3156,7 +3161,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "first_name=John"\
     --form "last_name=Doe"\
     --form "status=banned"\
-    --form "image=@C:\Users\calex\AppData\Local\Temp\php8524.tmp" </code></pre>                                        </div>
+    --form "image=@/tmp/phpZsbmyT" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -3164,7 +3169,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/quia"
+    "https://staging-api.learnhub.mk/admin/administrators/molestiae"
 );
 
 const headers = {
@@ -3192,7 +3197,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/quia';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/molestiae';
 $response = $client-&gt;put(
     $url,
     [
@@ -3220,7 +3225,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\calex\AppData\Local\Temp\php8524.tmp', 'r')
+                'contents' =&gt; fopen('/tmp/phpZsbmyT', 'r')
             ],
         ],
     ]
@@ -3236,13 +3241,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/quia'
+url = 'https://staging-api.learnhub.mk/admin/administrators/molestiae'
 files = {
   'email': (None, 'johndoes@learnhub.mk'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
   'status': (None, 'banned'),
-  'image': open('C:\Users\calex\AppData\Local\Temp\php8524.tmp', 'rb')}
+  'image': open('/tmp/phpZsbmyT', 'rb')}
 payload = {
     "email": "johndoes@learnhub.mk",
     "first_name": "John",
@@ -3370,7 +3375,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        illum
+                        voluptatem
                     </div>
                 </div>
             </div>
@@ -3492,7 +3497,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="illum" data-component="url"
+                                               value="voluptatem" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3590,7 +3595,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/administrators/illum" \
+    "https://staging-api.learnhub.mk/admin/administrators/voluptatem" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3600,7 +3605,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/illum"
+    "https://staging-api.learnhub.mk/admin/administrators/voluptatem"
 );
 
 const headers = {
@@ -3619,7 +3624,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/illum';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/voluptatem';
 $response = $client-&gt;delete(
     $url,
     [
@@ -3640,7 +3645,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/illum'
+url = 'https://staging-api.learnhub.mk/admin/administrators/voluptatem'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -4208,7 +4213,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 6f421d24-f8d5-4380-9d33-7f2ded262820
+                                                            : 11db41ed-f8dc-4962-ac8c-eb9406568211
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -4821,7 +4826,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        debitis
                     </div>
                 </div>
             </div>
@@ -4943,7 +4948,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="est" data-component="url"
+                                               value="debitis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5041,7 +5046,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/members/est" \
+    --get "https://staging-api.learnhub.mk/admin/members/debitis" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -5051,7 +5056,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/est"
+    "https://staging-api.learnhub.mk/admin/members/debitis"
 );
 
 const headers = {
@@ -5070,7 +5075,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/est';
+$url = 'https://staging-api.learnhub.mk/admin/members/debitis';
 $response = $client-&gt;get(
     $url,
     [
@@ -5091,7 +5096,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/est'
+url = 'https://staging-api.learnhub.mk/admin/members/debitis'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -5155,7 +5160,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 31878939-8feb-4e6d-9840-216059ce04ed
+                                                            : c92d7c2f-3d88-4fcb-9618-74c9c985148a
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -5300,7 +5305,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        iusto
+                        pariatur
                     </div>
                 </div>
             </div>
@@ -5405,7 +5410,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        banned
+                        active
                     </div>
                 </div>
             </div>
@@ -5430,7 +5435,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        C:\Users\calex\AppData\Local\Temp\php8563.tmp
+                        /tmp/php01yqJC
                     </div>
                 </div>
             </div>
@@ -5562,7 +5567,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="iusto" data-component="url"
+                                               value="pariatur" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5636,7 +5641,7 @@ response.json()</code></pre>                                        </div>
                                                                                             <input aria-label="status" name="status"
                                                        id="bodyparam-PUTadmin-members--id--status"
                                                        placeholder=""
-                                                       value="banned" data-component="body"
+                                                       value="active" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -5745,15 +5750,15 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/members/iusto" \
+    "https://staging-api.learnhub.mk/admin/members/pariatur" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
     --form "email=johndoes@gmail.com"\
     --form "first_name=John"\
     --form "last_name=Doe"\
-    --form "status=banned"\
-    --form "image=@C:\Users\calex\AppData\Local\Temp\php8563.tmp" </code></pre>                                        </div>
+    --form "status=active"\
+    --form "image=@/tmp/php01yqJC" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -5761,7 +5766,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/iusto"
+    "https://staging-api.learnhub.mk/admin/members/pariatur"
 );
 
 const headers = {
@@ -5774,7 +5779,7 @@ const body = new FormData();
 body.append('email', 'johndoes@gmail.com');
 body.append('first_name', 'John');
 body.append('last_name', 'Doe');
-body.append('status', 'banned');
+body.append('status', 'active');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -5789,7 +5794,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/iusto';
+$url = 'https://staging-api.learnhub.mk/admin/members/pariatur';
 $response = $client-&gt;put(
     $url,
     [
@@ -5813,11 +5818,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'status',
-                'contents' =&gt; 'banned'
+                'contents' =&gt; 'active'
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\calex\AppData\Local\Temp\php8563.tmp', 'r')
+                'contents' =&gt; fopen('/tmp/php01yqJC', 'r')
             ],
         ],
     ]
@@ -5833,18 +5838,18 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/iusto'
+url = 'https://staging-api.learnhub.mk/admin/members/pariatur'
 files = {
   'email': (None, 'johndoes@gmail.com'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
-  'status': (None, 'banned'),
-  'image': open('C:\Users\calex\AppData\Local\Temp\php8563.tmp', 'rb')}
+  'status': (None, 'active'),
+  'image': open('/tmp/php01yqJC', 'rb')}
 payload = {
     "email": "johndoes@gmail.com",
     "first_name": "John",
     "last_name": "Doe",
-    "status": "banned"
+    "status": "active"
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -5967,7 +5972,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        illo
+                        corrupti
                     </div>
                 </div>
             </div>
@@ -6089,7 +6094,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="illo" data-component="url"
+                                               value="corrupti" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6187,7 +6192,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/members/illo" \
+    "https://staging-api.learnhub.mk/admin/members/corrupti" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -6197,7 +6202,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/illo"
+    "https://staging-api.learnhub.mk/admin/members/corrupti"
 );
 
 const headers = {
@@ -6216,7 +6221,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/illo';
+$url = 'https://staging-api.learnhub.mk/admin/members/corrupti';
 $response = $client-&gt;delete(
     $url,
     [
@@ -6237,7 +6242,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/illo'
+url = 'https://staging-api.learnhub.mk/admin/members/corrupti'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -6805,7 +6810,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 00beb37a-d5ed-45e2-a770-b1e3cff96acc
+                                                            : 73d1886e-d815-4d77-8b9f-c37941ca3493
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -7418,7 +7423,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        aspernatur
                     </div>
                 </div>
             </div>
@@ -7540,7 +7545,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="et" data-component="url"
+                                               value="aspernatur" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7638,7 +7643,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/content-managers/et" \
+    --get "https://staging-api.learnhub.mk/admin/content-managers/aspernatur" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -7648,7 +7653,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/et"
+    "https://staging-api.learnhub.mk/admin/content-managers/aspernatur"
 );
 
 const headers = {
@@ -7667,7 +7672,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/et';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/aspernatur';
 $response = $client-&gt;get(
     $url,
     [
@@ -7688,7 +7693,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/et'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/aspernatur'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -7752,7 +7757,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : acd35020-267f-4bf2-9afc-42cd2b96a1df
+                                                            : 84af7cc2-e466-4570-9a52-8e4d1ab74418
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -7897,7 +7902,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequuntur
+                        aut
                     </div>
                 </div>
             </div>
@@ -8002,7 +8007,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        active
+                        banned
                     </div>
                 </div>
             </div>
@@ -8027,7 +8032,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        C:\Users\calex\AppData\Local\Temp\php8593.tmp
+                        /tmp/phpZNLlFX
                     </div>
                 </div>
             </div>
@@ -8159,7 +8164,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="consequuntur" data-component="url"
+                                               value="aut" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8233,7 +8238,7 @@ response.json()</code></pre>                                        </div>
                                                                                             <input aria-label="status" name="status"
                                                        id="bodyparam-PUTadmin-content-managers--id--status"
                                                        placeholder=""
-                                                       value="active" data-component="body"
+                                                       value="banned" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -8342,15 +8347,15 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/content-managers/consequuntur" \
+    "https://staging-api.learnhub.mk/admin/content-managers/aut" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
     --form "email=johndoes@learnhub.mk"\
     --form "first_name=John"\
     --form "last_name=Doe"\
-    --form "status=active"\
-    --form "image=@C:\Users\calex\AppData\Local\Temp\php8593.tmp" </code></pre>                                        </div>
+    --form "status=banned"\
+    --form "image=@/tmp/phpZNLlFX" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -8358,7 +8363,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/consequuntur"
+    "https://staging-api.learnhub.mk/admin/content-managers/aut"
 );
 
 const headers = {
@@ -8371,7 +8376,7 @@ const body = new FormData();
 body.append('email', 'johndoes@learnhub.mk');
 body.append('first_name', 'John');
 body.append('last_name', 'Doe');
-body.append('status', 'active');
+body.append('status', 'banned');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -8386,7 +8391,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/consequuntur';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/aut';
 $response = $client-&gt;put(
     $url,
     [
@@ -8410,11 +8415,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'status',
-                'contents' =&gt; 'active'
+                'contents' =&gt; 'banned'
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\calex\AppData\Local\Temp\php8593.tmp', 'r')
+                'contents' =&gt; fopen('/tmp/phpZNLlFX', 'r')
             ],
         ],
     ]
@@ -8430,18 +8435,18 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/consequuntur'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/aut'
 files = {
   'email': (None, 'johndoes@learnhub.mk'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
-  'status': (None, 'active'),
-  'image': open('C:\Users\calex\AppData\Local\Temp\php8593.tmp', 'rb')}
+  'status': (None, 'banned'),
+  'image': open('/tmp/phpZNLlFX', 'rb')}
 payload = {
     "email": "johndoes@learnhub.mk",
     "first_name": "John",
     "last_name": "Doe",
-    "status": "active"
+    "status": "banned"
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -8564,7 +8569,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quos
+                        voluptatem
                     </div>
                 </div>
             </div>
@@ -8686,7 +8691,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="quos" data-component="url"
+                                               value="voluptatem" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8784,7 +8789,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/content-managers/quos" \
+    "https://staging-api.learnhub.mk/admin/content-managers/voluptatem" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -8794,7 +8799,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/quos"
+    "https://staging-api.learnhub.mk/admin/content-managers/voluptatem"
 );
 
 const headers = {
@@ -8813,7 +8818,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/quos';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/voluptatem';
 $response = $client-&gt;delete(
     $url,
     [
@@ -8834,7 +8839,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/quos'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/voluptatem'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -9351,7 +9356,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        jerde.lucienne@example.net
+                        jayde.stehr@example.org
                     </div>
                 </div>
             </div>
@@ -9375,7 +9380,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veritatis
+                        eveniet
                     </div>
                 </div>
             </div>
@@ -9469,8 +9474,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTadmin-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "jerde.lucienne@example.net",
-    "password": "veritatis"
+    "email": "jayde.stehr@example.org",
+    "password": "eveniet"
 }</div>
                             </div>
                                             </div>
@@ -9568,8 +9573,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"jerde.lucienne@example.net\",
-    \"password\": \"veritatis\"
+    \"email\": \"jayde.stehr@example.org\",
+    \"password\": \"eveniet\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -9588,8 +9593,8 @@ const headers = {
 };
 
 let body = {
-    "email": "jerde.lucienne@example.net",
-    "password": "veritatis"
+    "email": "jayde.stehr@example.org",
+    "password": "eveniet"
 };
 
 fetch(url, {
@@ -9613,8 +9618,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'jerde.lucienne@example.net',
-            'password' =&gt; 'veritatis',
+            'email' =&gt; 'jayde.stehr@example.org',
+            'password' =&gt; 'eveniet',
         ],
     ]
 );
@@ -9631,8 +9636,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/admin/login'
 payload = {
-    "email": "jerde.lucienne@example.net",
-    "password": "veritatis"
+    "email": "jayde.stehr@example.org",
+    "password": "eveniet"
 }
 headers = {
   'Accept': 'application/json',
@@ -10798,7 +10803,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        mitchell.immanuel@example.net
+                        qprohaska@example.net
                     </div>
                 </div>
             </div>
@@ -10822,7 +10827,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        in
+                        assumenda
                     </div>
                 </div>
             </div>
@@ -10916,8 +10921,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontent-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "mitchell.immanuel@example.net",
-    "password": "in"
+    "email": "qprohaska@example.net",
+    "password": "assumenda"
 }</div>
                             </div>
                                             </div>
@@ -11015,8 +11020,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"mitchell.immanuel@example.net\",
-    \"password\": \"in\"
+    \"email\": \"qprohaska@example.net\",
+    \"password\": \"assumenda\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -11035,8 +11040,8 @@ const headers = {
 };
 
 let body = {
-    "email": "mitchell.immanuel@example.net",
-    "password": "in"
+    "email": "qprohaska@example.net",
+    "password": "assumenda"
 };
 
 fetch(url, {
@@ -11060,8 +11065,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'mitchell.immanuel@example.net',
-            'password' =&gt; 'in',
+            'email' =&gt; 'qprohaska@example.net',
+            'password' =&gt; 'assumenda',
         ],
     ]
 );
@@ -11078,8 +11083,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/content/login'
 payload = {
-    "email": "mitchell.immanuel@example.net",
-    "password": "in"
+    "email": "qprohaska@example.net",
+    "password": "assumenda"
 }
 headers = {
   'Accept': 'application/json',
@@ -12245,7 +12250,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        gerry.pagac@example.com
+                        josefina.mayer@example.org
                     </div>
                 </div>
             </div>
@@ -12269,7 +12274,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        voluptates
+                        qui
                     </div>
                 </div>
             </div>
@@ -12363,8 +12368,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTlogin"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "gerry.pagac@example.com",
-    "password": "voluptates"
+    "email": "josefina.mayer@example.org",
+    "password": "qui"
 }</div>
                             </div>
                                             </div>
@@ -12462,8 +12467,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"gerry.pagac@example.com\",
-    \"password\": \"voluptates\"
+    \"email\": \"josefina.mayer@example.org\",
+    \"password\": \"qui\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -12482,8 +12487,8 @@ const headers = {
 };
 
 let body = {
-    "email": "gerry.pagac@example.com",
-    "password": "voluptates"
+    "email": "josefina.mayer@example.org",
+    "password": "qui"
 };
 
 fetch(url, {
@@ -12507,8 +12512,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'gerry.pagac@example.com',
-            'password' =&gt; 'voluptates',
+            'email' =&gt; 'josefina.mayer@example.org',
+            'password' =&gt; 'qui',
         ],
     ]
 );
@@ -12525,8 +12530,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/login'
 payload = {
-    "email": "gerry.pagac@example.com",
-    "password": "voluptates"
+    "email": "josefina.mayer@example.org",
+    "password": "qui"
 }
 headers = {
   'Accept': 'application/json',
@@ -13575,7 +13580,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 4d5e2f29-d6e0-40a8-9239-8452130fd162
+                                                            : 7427e95c-bb17-4298-811b-533250dc45a8
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -13584,7 +13589,7 @@ response.json()</code></pre>                                        </div>
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;redirect_link&quot;: &quot;https://accounts.google.com/o/oauth2/auth?client_id=904015105190-9hh31lighl0mba4fsvguruue7r42djmh.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fapi.myapi.com%2Flogin%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&quot;
+        &quot;redirect_link&quot;: &quot;https://accounts.google.com/o/oauth2/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&amp;scope=openid+profile+email&amp;response_type=code&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -13970,7 +13975,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : a1069bce-7c39-4afd-b201-fa5a01e5b82f
+                                                            : 7392a363-dd14-4b55-8450-59b14219beef
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -13992,14 +13997,14 @@ response.json()</code></pre>                                        </div>
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTforgot-password">
+                    id="authentication-POSTpasswords-request-new">
                     Password Reset Link
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="https://staging-api.learnhub.mk/forgot-password"
+            <div title="https://staging-api.learnhub.mk/passwords/request-new"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -14010,7 +14015,7 @@ response.json()</code></pre>                                        </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://staging-api.learnhub.mk</div>
-                        <div class="sl-flex-1 sl-font-semibold">/forgot-password</div>
+                        <div class="sl-flex-1 sl-font-semibold">/passwords/request-new</div>
                     </div>
 
                                     </div>
@@ -14089,7 +14094,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        vharber@example.com
+                        skoch@example.com
                     </div>
                 </div>
             </div>
@@ -14111,7 +14116,7 @@ response.json()</code></pre>                                        </div>
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
-              data-path="forgot-password"
+              data-path="passwords/request-new"
               data-hasfiles="0"
               data-hasjsonbody="1">
             
@@ -14134,23 +14139,23 @@ response.json()</code></pre>                                        </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTforgot-password-Accept">Accept</label>
+                                       for="header-POSTpasswords-request-new-Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-POSTforgot-password-Accept"
+                                               id="header-POSTpasswords-request-new-Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTforgot-password-Content-Type">Content-Type</label>
+                                       for="header-POSTpasswords-request-new-Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTforgot-password-Content-Type"
+                                               id="header-POSTpasswords-request-new-Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -14180,10 +14185,10 @@ response.json()</code></pre>                                        </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                                                     <div class="TextRequestBody sl-p-4">
                                 <div class="code-editor language-json"
-                                     id="json-body-POSTforgot-password"
+                                     id="json-body-POSTpasswords-request-new"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "vharber@example.com"
+    "email": "skoch@example.com"
 }</div>
                             </div>
                                             </div>
@@ -14191,7 +14196,7 @@ response.json()</code></pre>                                        </div>
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTforgot-password"
+                    <button type="button" data-endpoint="POSTpasswords-request-new"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -14199,7 +14204,7 @@ response.json()</code></pre>                                        </div>
                 </div>
             </div>
 
-            <div data-endpoint="POSTforgot-password"
+            <div data-endpoint="POSTpasswords-request-new"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -14226,7 +14231,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="POSTforgot-password"
+                <div data-endpoint="POSTpasswords-request-new"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -14277,11 +14282,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://staging-api.learnhub.mk/forgot-password" \
+    "https://staging-api.learnhub.mk/passwords/request-new" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"vharber@example.com\"
+    \"email\": \"skoch@example.com\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -14291,7 +14296,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/forgot-password"
+    "https://staging-api.learnhub.mk/passwords/request-new"
 );
 
 const headers = {
@@ -14300,7 +14305,7 @@ const headers = {
 };
 
 let body = {
-    "email": "vharber@example.com"
+    "email": "skoch@example.com"
 };
 
 fetch(url, {
@@ -14315,7 +14320,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/forgot-password';
+$url = 'https://staging-api.learnhub.mk/passwords/request-new';
 $response = $client-&gt;post(
     $url,
     [
@@ -14324,7 +14329,7 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'vharber@example.com',
+            'email' =&gt; 'skoch@example.com',
         ],
     ]
 );
@@ -14339,9 +14344,9 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/forgot-password'
+url = 'https://staging-api.learnhub.mk/passwords/request-new'
 payload = {
-    "email": "vharber@example.com"
+    "email": "skoch@example.com"
 }
 headers = {
   'Accept': 'application/json',
@@ -14363,14 +14368,14 @@ response.json()</code></pre>                                        </div>
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTreset-password">
+                    id="authentication-POSTpasswords-reset">
                     New password
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="https://staging-api.learnhub.mk/reset-password"
+            <div title="https://staging-api.learnhub.mk/passwords/reset"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -14381,7 +14386,7 @@ response.json()</code></pre>                                        </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://staging-api.learnhub.mk</div>
-                        <div class="sl-flex-1 sl-font-semibold">/reset-password</div>
+                        <div class="sl-flex-1 sl-font-semibold">/passwords/reset</div>
                     </div>
 
                                     </div>
@@ -14460,7 +14465,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequatur
+                        adipisci
                     </div>
                 </div>
             </div>
@@ -14487,7 +14492,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        lon.lakin@example.com
+                        qaltenwerth@example.com
                     </div>
                 </div>
             </div>
@@ -14514,7 +14519,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ^A4hiQ
+                        Dm^J;h&amp;vucAmL
                     </div>
                 </div>
             </div>
@@ -14536,7 +14541,7 @@ response.json()</code></pre>                                        </div>
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
-              data-path="reset-password"
+              data-path="passwords/reset"
               data-hasfiles="0"
               data-hasjsonbody="1">
             
@@ -14559,23 +14564,23 @@ response.json()</code></pre>                                        </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTreset-password-Accept">Accept</label>
+                                       for="header-POSTpasswords-reset-Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-POSTreset-password-Accept"
+                                               id="header-POSTpasswords-reset-Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTreset-password-Content-Type">Content-Type</label>
+                                       for="header-POSTpasswords-reset-Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTreset-password-Content-Type"
+                                               id="header-POSTpasswords-reset-Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -14605,12 +14610,12 @@ response.json()</code></pre>                                        </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                                                     <div class="TextRequestBody sl-p-4">
                                 <div class="code-editor language-json"
-                                     id="json-body-POSTreset-password"
+                                     id="json-body-POSTpasswords-reset"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "token": "consequatur",
-    "email": "lon.lakin@example.com",
-    "password": "^A4hiQ"
+    "token": "adipisci",
+    "email": "qaltenwerth@example.com",
+    "password": "Dm^J;h&vucAmL"
 }</div>
                             </div>
                                             </div>
@@ -14618,7 +14623,7 @@ response.json()</code></pre>                                        </div>
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTreset-password"
+                    <button type="button" data-endpoint="POSTpasswords-reset"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -14626,7 +14631,7 @@ response.json()</code></pre>                                        </div>
                 </div>
             </div>
 
-            <div data-endpoint="POSTreset-password"
+            <div data-endpoint="POSTpasswords-reset"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -14653,7 +14658,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="POSTreset-password"
+                <div data-endpoint="POSTpasswords-reset"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -14704,13 +14709,13 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://staging-api.learnhub.mk/reset-password" \
+    "https://staging-api.learnhub.mk/passwords/reset" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"token\": \"consequatur\",
-    \"email\": \"lon.lakin@example.com\",
-    \"password\": \"^A4hiQ\"
+    \"token\": \"adipisci\",
+    \"email\": \"qaltenwerth@example.com\",
+    \"password\": \"Dm^J;h&amp;vucAmL\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -14720,7 +14725,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/reset-password"
+    "https://staging-api.learnhub.mk/passwords/reset"
 );
 
 const headers = {
@@ -14729,9 +14734,9 @@ const headers = {
 };
 
 let body = {
-    "token": "consequatur",
-    "email": "lon.lakin@example.com",
-    "password": "^A4hiQ"
+    "token": "adipisci",
+    "email": "qaltenwerth@example.com",
+    "password": "Dm^J;h&amp;vucAmL"
 };
 
 fetch(url, {
@@ -14746,7 +14751,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/reset-password';
+$url = 'https://staging-api.learnhub.mk/passwords/reset';
 $response = $client-&gt;post(
     $url,
     [
@@ -14755,9 +14760,9 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'token' =&gt; 'consequatur',
-            'email' =&gt; 'lon.lakin@example.com',
-            'password' =&gt; '^A4hiQ',
+            'token' =&gt; 'adipisci',
+            'email' =&gt; 'qaltenwerth@example.com',
+            'password' =&gt; 'Dm^J;h&amp;vucAmL',
         ],
     ]
 );
@@ -14772,11 +14777,11 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/reset-password'
+url = 'https://staging-api.learnhub.mk/passwords/reset'
 payload = {
-    "token": "consequatur",
-    "email": "lon.lakin@example.com",
-    "password": "^A4hiQ"
+    "token": "adipisci",
+    "email": "qaltenwerth@example.com",
+    "password": "Dm^J;h&amp;vucAmL"
 }
 headers = {
   'Accept': 'application/json',
@@ -20012,7 +20017,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : b0ccffa9-22a0-42ca-9ff1-8af696f73fc0
+                                                            : 74102285-868a-42cd-8bef-45fef4731cf8
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -20839,7 +20844,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        voluptas
                     </div>
                 </div>
             </div>
@@ -20924,7 +20929,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="title" name="title"
                                                    id="queryparam-GETblog-posts-title"
                                                    placeholder=""
-                                                   value="aut" data-component="query"
+                                                   value="voluptas" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -21022,7 +21027,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-posts?title=aut" \
+    --get "https://staging-api.learnhub.mk/blog-posts?title=voluptas" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -21035,7 +21040,7 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
-    "title": "aut",
+    "title": "voluptas",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -21063,7 +21068,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'title' =&gt; 'aut',
+            'title' =&gt; 'voluptas',
         ],
     ]
 );
@@ -21080,7 +21085,7 @@ import json
 
 url = 'https://staging-api.learnhub.mk/blog-posts'
 params = {
-  'title': 'aut',
+  'title': 'voluptas',
 }
 headers = {
   'Accept': 'application/json'
@@ -21144,7 +21149,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 452594f9-bfcb-4680-b208-f57cd5a492ad
+                                                            : 8f8cfa62-3529-43f1-b978-dfdcceddfa14
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -21154,9 +21159,9 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Autem in voluptatem saepe recusandae ut fugiat est quae.&quot;,
-            &quot;slug&quot;: &quot;autem-in-voluptatem-saepe-recusandae-ut-fugiat-est-quae&quot;,
-            &quot;excerpt&quot;: &quot;Occaecati ipsum fugiat aut a.&quot;,
+            &quot;title&quot;: &quot;Placeat quaerat totam quas voluptas eaque ea.&quot;,
+            &quot;slug&quot;: &quot;placeat-quaerat-totam-quas-voluptas-eaque-ea&quot;,
+            &quot;excerpt&quot;: &quot;Quam sed quibusdam et incidunt et.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -21168,17 +21173,17 @@ response.json()</code></pre>                                        </div>
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Lucy Blanda Jr.&quot;,
-                &quot;last_name&quot;: &quot;Greenfelder&quot;,
+                &quot;first_name&quot;: &quot;Nikki Ledner&quot;,
+                &quot;last_name&quot;: &quot;Bode&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Aut repellendus quibusdam qui pariatur ipsam dolores a ut.&quot;,
-            &quot;slug&quot;: &quot;aut-repellendus-quibusdam-qui-pariatur-ipsam-dolores-a-ut&quot;,
-            &quot;excerpt&quot;: &quot;Dolorem quibusdam quis eligendi sint.&quot;,
+            &quot;title&quot;: &quot;Non voluptas sit et saepe maiores officiis consectetur.&quot;,
+            &quot;slug&quot;: &quot;non-voluptas-sit-et-saepe-maiores-officiis-consectetur&quot;,
+            &quot;excerpt&quot;: &quot;Voluptas a optio harum.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -21190,17 +21195,17 @@ response.json()</code></pre>                                        </div>
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Rafaela Marks&quot;,
-                &quot;last_name&quot;: &quot;Quigley&quot;,
+                &quot;first_name&quot;: &quot;Eloise Klocko&quot;,
+                &quot;last_name&quot;: &quot;Anderson&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Deserunt autem similique tenetur voluptate.&quot;,
-            &quot;slug&quot;: &quot;deserunt-autem-similique-tenetur-voluptate&quot;,
-            &quot;excerpt&quot;: &quot;Et non error voluptas ducimus.&quot;,
+            &quot;title&quot;: &quot;Sunt possimus voluptas rerum numquam nam eligendi at.&quot;,
+            &quot;slug&quot;: &quot;sunt-possimus-voluptas-rerum-numquam-nam-eligendi-at&quot;,
+            &quot;excerpt&quot;: &quot;Sint tempore et earum dolore sed non inventore repellendus.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -21212,17 +21217,17 @@ response.json()</code></pre>                                        </div>
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Willie Stark&quot;,
-                &quot;last_name&quot;: &quot;Murphy&quot;,
+                &quot;first_name&quot;: &quot;Ruby Goodwin&quot;,
+                &quot;last_name&quot;: &quot;Carter&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Et mollitia eos neque aut atque.&quot;,
-            &quot;slug&quot;: &quot;et-mollitia-eos-neque-aut-atque&quot;,
-            &quot;excerpt&quot;: &quot;Quis cupiditate corporis neque ullam velit eum sit.&quot;,
+            &quot;title&quot;: &quot;Qui voluptas eaque officia et aut tempora dolorum voluptatem.&quot;,
+            &quot;slug&quot;: &quot;qui-voluptas-eaque-officia-et-aut-tempora-dolorum-voluptatem&quot;,
+            &quot;excerpt&quot;: &quot;Tempora voluptatum accusantium iusto.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -21234,17 +21239,17 @@ response.json()</code></pre>                                        </div>
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Nelle Lehner&quot;,
-                &quot;last_name&quot;: &quot;Batz&quot;,
+                &quot;first_name&quot;: &quot;Jamar Upton&quot;,
+                &quot;last_name&quot;: &quot;Williamson&quot;,
                 &quot;image&quot;: null
             }
         },
         {
-            &quot;title&quot;: &quot;Sit beatae aut esse nemo.&quot;,
-            &quot;slug&quot;: &quot;sit-beatae-aut-esse-nemo&quot;,
-            &quot;excerpt&quot;: &quot;Delectus quas voluptates qui quis.&quot;,
+            &quot;title&quot;: &quot;Ut rerum voluptate molestiae optio voluptas et ut.&quot;,
+            &quot;slug&quot;: &quot;ut-rerum-voluptate-molestiae-optio-voluptas-et-ut&quot;,
+            &quot;excerpt&quot;: &quot;Impedit aut ducimus magni et sint.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -21256,149 +21261,17 @@ response.json()</code></pre>                                        </div>
                     &quot;name&quot;: &quot;react&quot;
                 }
             ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Harold Quitzon&quot;,
-                &quot;last_name&quot;: &quot;Ward&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Laboriosam assumenda autem veniam voluptatum velit ad iure.&quot;,
-            &quot;slug&quot;: &quot;laboriosam-assumenda-autem-veniam-voluptatum-velit-ad-iure&quot;,
-            &quot;excerpt&quot;: &quot;Aperiam consequatur architecto iusto commodi laudantium.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Willie Stark&quot;,
-                &quot;last_name&quot;: &quot;Murphy&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Quae nam nesciunt nesciunt doloribus totam architecto autem quasi.&quot;,
-            &quot;slug&quot;: &quot;quae-nam-nesciunt-nesciunt-doloribus-totam-architecto-autem-quasi&quot;,
-            &quot;excerpt&quot;: &quot;Est et repellendus porro error et.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Willie Stark&quot;,
-                &quot;last_name&quot;: &quot;Murphy&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Reprehenderit non placeat tempore aut non inventore maxime.&quot;,
-            &quot;slug&quot;: &quot;reprehenderit-non-placeat-tempore-aut-non-inventore-maxime&quot;,
-            &quot;excerpt&quot;: &quot;Corrupti ut dolore assumenda.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Lucy Blanda Jr.&quot;,
-                &quot;last_name&quot;: &quot;Greenfelder&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Expedita et officia omnis aut omnis.&quot;,
-            &quot;slug&quot;: &quot;expedita-et-officia-omnis-aut-omnis&quot;,
-            &quot;excerpt&quot;: &quot;Est ipsa laudantium cupiditate consequuntur voluptas.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Rafaela Marks&quot;,
-                &quot;last_name&quot;: &quot;Quigley&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Aut est at aut excepturi voluptate.&quot;,
-            &quot;slug&quot;: &quot;aut-est-at-aut-excepturi-voluptate&quot;,
-            &quot;excerpt&quot;: &quot;Quia velit dignissimos distinctio odit.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Nelle Lehner&quot;,
-                &quot;last_name&quot;: &quot;Batz&quot;,
-                &quot;image&quot;: null
-            }
-        },
-        {
-            &quot;title&quot;: &quot;Aut assumenda non et mollitia sequi dolorem magni.&quot;,
-            &quot;slug&quot;: &quot;aut-assumenda-non-et-mollitia-sequi-dolorem-magni&quot;,
-            &quot;excerpt&quot;: &quot;Accusantium nisi molestiae adipisci et voluptas qui.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-30&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Mr. Dewitt Skiles Jr.&quot;,
-                &quot;last_name&quot;: &quot;Rowe&quot;,
+                &quot;first_name&quot;: &quot;Arnulfo Lemke&quot;,
+                &quot;last_name&quot;: &quot;Kunde&quot;,
                 &quot;image&quot;: null
             }
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://api.myapi.com/blog-posts?page=1&quot;,
-        &quot;last&quot;: &quot;http://api.myapi.com/blog-posts?page=1&quot;,
+        &quot;first&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -21413,7 +21286,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://api.myapi.com/blog-posts?page=1&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-posts?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -21423,10 +21296,10 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://api.myapi.com/blog-posts&quot;,
+        &quot;path&quot;: &quot;http://learnhub.test/blog-posts&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 11,
-        &quot;total&quot;: 11
+        &quot;to&quot;: 5,
+        &quot;total&quot;: 5
     }
 }</code></pre>
                                                                             </div>
@@ -21519,7 +21392,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        odit
+                        ullam
                     </div>
                 </div>
             </div>
@@ -21605,7 +21478,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="slug" name="slug"
                                                id="urlparam-GETblog-posts--slug--slug"
                                                placeholder="The slug of the blog post."
-                                               value="odit" data-component="url"
+                                               value="ullam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -21703,7 +21576,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-posts/odit" \
+    --get "https://staging-api.learnhub.mk/blog-posts/ullam" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -21712,7 +21585,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/blog-posts/odit"
+    "https://staging-api.learnhub.mk/blog-posts/ullam"
 );
 
 const headers = {
@@ -21730,7 +21603,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/blog-posts/odit';
+$url = 'https://staging-api.learnhub.mk/blog-posts/ullam';
 $response = $client-&gt;get(
     $url,
     [
@@ -21750,7 +21623,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/blog-posts/odit'
+url = 'https://staging-api.learnhub.mk/blog-posts/ullam'
 headers = {
   'Accept': 'application/json'
 }
@@ -21813,7 +21686,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 632fe7fa-c5cc-4224-8a5b-f388ab7e70c3
+                                                            : 897f3078-7a07-4553-adbc-e17afc700ae1
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -21823,389 +21696,389 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;message&quot;: &quot;No query results for model [App\\Website\\Models\\BlogPost].&quot;,
     &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
-    &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+    &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
     &quot;line&quot;: 629,
     &quot;trace&quot;: [
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
             &quot;line&quot;: 577,
             &quot;function&quot;: &quot;prepareException&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php&quot;,
             &quot;line&quot;: 54,
             &quot;function&quot;: &quot;render&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php&quot;,
             &quot;line&quot;: 51,
             &quot;function&quot;: &quot;render&quot;,
             &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 146,
             &quot;function&quot;: &quot;handleException&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\treblle\\treblle-laravel\\src\\Middlewares\\TreblleMiddleware.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php&quot;,
             &quot;line&quot;: 47,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Treblle\\Middlewares\\TreblleMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 805,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 807,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 784,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 786,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 748,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 750,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 737,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 739,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 200,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 201,
             &quot;function&quot;: &quot;dispatch&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
             &quot;line&quot;: 21,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
             &quot;line&quot;: 31,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
             &quot;line&quot;: 21,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
             &quot;line&quot;: 51,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php&quot;,
             &quot;line&quot;: 27,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
             &quot;line&quot;: 110,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
             &quot;line&quot;: 62,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
             &quot;line&quot;: 57,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
             &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 175,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 176,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 144,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 145,
             &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
             &quot;line&quot;: 310,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
             &quot;line&quot;: 298,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
             &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
             &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
             &quot;line&quot;: 35,
             &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 236,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 237,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
             &quot;line&quot;: 163,
             &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
             &quot;line&quot;: 95,
             &quot;function&quot;: &quot;fetchResponses&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
             &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
             &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
             &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
             &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
             &quot;line&quot;: 36,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
             &quot;line&quot;: 41,
             &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
             &quot;line&quot;: 93,
             &quot;function&quot;: &quot;unwrapIfClosure&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
             &quot;line&quot;: 35,
             &quot;function&quot;: &quot;callBoundMethod&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 662,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 690,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
             &quot;line&quot;: 213,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Command/Command.php&quot;,
             &quot;line&quot;: 279,
             &quot;function&quot;: &quot;execute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
             &quot;line&quot;: 182,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
             &quot;line&quot;: 1047,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
             &quot;line&quot;: 316,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
             &quot;line&quot;: 167,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 196,
+            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 197,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\laragon\\www\\api\\artisan&quot;,
+            &quot;file&quot;: &quot;/var/www/artisan&quot;,
             &quot;line&quot;: 35,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
@@ -22534,7 +22407,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 542e5614-f32c-4cde-a569-96111b66eb37
+                                                            : 7698f695-1e7e-4aa8-9b53-392677d87342
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -22605,10 +22478,10 @@ response.json()</code></pre>                                        </div>
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://api.myapi.com/blog-post-tags?page=1&quot;,
-        &quot;last&quot;: &quot;http://api.myapi.com/blog-post-tags?page=2&quot;,
+        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://api.myapi.com/blog-post-tags?page=2&quot;
+        &quot;next&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -22621,22 +22494,22 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://api.myapi.com/blog-post-tags?page=1&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://api.myapi.com/blog-post-tags?page=2&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://api.myapi.com/blog-post-tags?page=2&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://api.myapi.com/blog-post-tags&quot;,
+        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags&quot;,
         &quot;per_page&quot;: 20,
         &quot;to&quot;: 20,
         &quot;total&quot;: 23
@@ -22729,7 +22602,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        non
+                        accusamus
                     </div>
                 </div>
             </div>
@@ -22815,7 +22688,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="tag" name="tag"
                                                id="urlparam-GETblog-post-tags--tag--tag"
                                                placeholder=""
-                                               value="non" data-component="url"
+                                               value="accusamus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -22913,7 +22786,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-post-tags/non" \
+    --get "https://staging-api.learnhub.mk/blog-post-tags/accusamus" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -22922,7 +22795,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/blog-post-tags/non"
+    "https://staging-api.learnhub.mk/blog-post-tags/accusamus"
 );
 
 const headers = {
@@ -22940,7 +22813,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/blog-post-tags/non';
+$url = 'https://staging-api.learnhub.mk/blog-post-tags/accusamus';
 $response = $client-&gt;get(
     $url,
     [
@@ -22960,7 +22833,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/blog-post-tags/non'
+url = 'https://staging-api.learnhub.mk/blog-post-tags/accusamus'
 headers = {
   'Accept': 'application/json'
 }
@@ -23023,7 +22896,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     content-type
                                                             : application/json
                                                                                                                     x-treblle-trace-id
-                                                            : 7477032d-5809-4b6b-9bf5-57e81c6ad056
+                                                            : 7f390737-1b87-4a82-80de-a8ca66211971
                                                                                                                     vary
                                                             : Origin
                                                          </code></pre>
@@ -23033,8 +22906,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://api.myapi.com/blog-post-tags/non?page=1&quot;,
-        &quot;last&quot;: &quot;http://api.myapi.com/blog-post-tags/non?page=1&quot;,
+        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/accusamus?page=1&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/accusamus?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -23049,7 +22922,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://api.myapi.com/blog-post-tags/non?page=1&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/accusamus?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -23059,7 +22932,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://api.myapi.com/blog-post-tags/non&quot;,
+        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/accusamus&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
@@ -23177,7 +23050,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veniam
+                        blanditiis
                     </div>
                 </div>
             </div>
@@ -23204,7 +23077,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        crist.stanley@example.net
+                        eboyle@example.com
                     </div>
                 </div>
             </div>
@@ -23231,7 +23104,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        assumenda
+                        quod
                     </div>
                 </div>
             </div>
@@ -23258,7 +23131,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        impedit
+                        assumenda
                     </div>
                 </div>
             </div>
@@ -23352,10 +23225,10 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontact"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "name": "veniam",
-    "email": "crist.stanley@example.net",
-    "message": "assumenda",
-    "cf-turnstile-response": "impedit"
+    "name": "blanditiis",
+    "email": "eboyle@example.com",
+    "message": "quod",
+    "cf-turnstile-response": "assumenda"
 }</div>
                             </div>
                                             </div>
@@ -23453,10 +23326,10 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"name\": \"veniam\",
-    \"email\": \"crist.stanley@example.net\",
-    \"message\": \"assumenda\",
-    \"cf-turnstile-response\": \"impedit\"
+    \"name\": \"blanditiis\",
+    \"email\": \"eboyle@example.com\",
+    \"message\": \"quod\",
+    \"cf-turnstile-response\": \"assumenda\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -23475,10 +23348,10 @@ const headers = {
 };
 
 let body = {
-    "name": "veniam",
-    "email": "crist.stanley@example.net",
-    "message": "assumenda",
-    "cf-turnstile-response": "impedit"
+    "name": "blanditiis",
+    "email": "eboyle@example.com",
+    "message": "quod",
+    "cf-turnstile-response": "assumenda"
 };
 
 fetch(url, {
@@ -23502,10 +23375,10 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'veniam',
-            'email' =&gt; 'crist.stanley@example.net',
-            'message' =&gt; 'assumenda',
-            'cf-turnstile-response' =&gt; 'impedit',
+            'name' =&gt; 'blanditiis',
+            'email' =&gt; 'eboyle@example.com',
+            'message' =&gt; 'quod',
+            'cf-turnstile-response' =&gt; 'assumenda',
         ],
     ]
 );
@@ -23522,10 +23395,10 @@ import json
 
 url = 'https://staging-api.learnhub.mk/contact'
 payload = {
-    "name": "veniam",
-    "email": "crist.stanley@example.net",
-    "message": "assumenda",
-    "cf-turnstile-response": "impedit"
+    "name": "blanditiis",
+    "email": "eboyle@example.com",
+    "message": "quod",
+    "cf-turnstile-response": "assumenda"
 }
 headers = {
   'Accept': 'application/json',
@@ -23647,7 +23520,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        iwwfjcir
+                        dqhppxtf
                     </div>
                 </div>
             </div>
@@ -23674,7 +23547,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        hane.joyce@example.net
+                        zella16@example.org
                     </div>
                 </div>
             </div>
@@ -23782,8 +23655,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTnewsletter-subscribers"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "first_name": "iwwfjcir",
-    "email": "hane.joyce@example.net",
+    "first_name": "dqhppxtf",
+    "email": "zella16@example.org",
     "cf-turnstile-response": null
 }</div>
                             </div>
@@ -23882,8 +23755,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"first_name\": \"iwwfjcir\",
-    \"email\": \"hane.joyce@example.net\"
+    \"first_name\": \"dqhppxtf\",
+    \"email\": \"zella16@example.org\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -23902,8 +23775,8 @@ const headers = {
 };
 
 let body = {
-    "first_name": "iwwfjcir",
-    "email": "hane.joyce@example.net"
+    "first_name": "dqhppxtf",
+    "email": "zella16@example.org"
 };
 
 fetch(url, {
@@ -23927,8 +23800,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'first_name' =&gt; 'iwwfjcir',
-            'email' =&gt; 'hane.joyce@example.net',
+            'first_name' =&gt; 'dqhppxtf',
+            'email' =&gt; 'zella16@example.org',
         ],
     ]
 );
@@ -23945,8 +23818,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/newsletter-subscribers'
 payload = {
-    "first_name": "iwwfjcir",
-    "email": "hane.joyce@example.net"
+    "first_name": "dqhppxtf",
+    "email": "zella16@example.org"
 }
 headers = {
   'Accept': 'application/json',
