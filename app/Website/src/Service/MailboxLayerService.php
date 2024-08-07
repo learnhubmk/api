@@ -2,33 +2,34 @@
 
 namespace App\Website\Service;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
+use Exception;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Http;
 
 class MailboxLayerService
 {
-    protected Client $client;
-    protected string $baseUrl = 'http://apilayer.net/api';
+    protected string $baseUrl;
 
-    public function __construct(Client $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->baseUrl = Config::get('mailboxlayer.base_url');
     }
 
     /**
-     * @throws GuzzleException
+     * @throws Exception
      */
     public function check($email)
     {
         $accessKey = Config::get('mailboxlayer.access_key');
-        $response = $this->client->get("{$this->baseUrl}/bulk_check", [
-            'query' => [
-                'access_key' => $accessKey,
-                'email' => $email,
-            ]
+        $response = Http::get("{$this->baseUrl}/bulk_check", [
+            'access_key' => $accessKey,
+            'email' => $email,
         ]);
 
-        return json_decode($response->getBody(), true);
+        if ($response->failed()) {
+            throw new Exception('Failed to fetch data from MailboxLayer API');
+        }
+
+        return $response->json();
     }
 }
