@@ -27,17 +27,17 @@ class NewsletterSubscriberController extends Controller
             $subscriber = Mailcoach::createSubscriber(
                 emailListUuid: config('mailcoach-sdk.email_list'),
                 attributes: [
-                'firstName' => $firstName,
-                'email' => $email,
-            ]
+                    'firstName' => $firstName,
+                    'email' => $email,
+                ]
             );
 
         } catch (InvalidData $e) {
 
-            return response()->json(["message" => "Електронската пошта е веќе претплатена!"], 422);
+            return response()->json(['message' => 'Електронската пошта е веќе претплатена!'], 422);
         }
 
-        return response()->json(["message" => "Успешно! Ве молиме потврдете ја вашата претпата на вашата електронска пошта."], Response::HTTP_OK);
+        return response()->json(['message' => 'Успешно! Ве молиме потврдете ја вашата претпата на вашата електронска пошта.'], Response::HTTP_OK);
 
     }
 }
