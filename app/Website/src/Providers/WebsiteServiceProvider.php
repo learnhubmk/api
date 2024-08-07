@@ -12,9 +12,11 @@ class WebsiteServiceProvider extends ServiceProvider
     {
 
         $this->app->singleton('mailboxlayer', function () {
-            return new MailboxLayerService(new Client);
+            return new MailboxLayerService(new Client());
         });
     }
 
-    public function boot() {}
+    public function boot()
+    {
+    }
 }
