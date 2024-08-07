@@ -132,3 +132,12 @@ For the database UI, you can use PHPMyAdmin, TablePlus, HeidiSQL, or MySQL Workb
 > - Laravel Socialite: [SOCIALITE.md](SOCIALITE.md)
 > - Laravel Scribe: [SCRIBE.md](SCRIBE.md)
 > - Laravel Modular: [MODULAR.md](MODULAR.md)
+
+### PHPStan
+1. run php stan
+```
+./vendor/bin/phpstan analyse --memory-limit=2G
+```
+2. run phpStan pro 
+```
+./vendor/bin/phpstan --pro analyse --memory-limit=2G
