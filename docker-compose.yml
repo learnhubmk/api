@@ -1,8 +1,8 @@
-version: "3.7"
 services:
     app:
         ports:
             - "9004:9004"  # Expose Xdebug port
+            - "11112:11111"  # Add this line to publish PHPStan Pro's port
         build:
             context: docker
             dockerfile: Dockerfile
@@ -37,7 +37,7 @@ services:
             - SERVICE_TAGS=dev
             - SERVICE_NAME=mysql
         ports:
-            - "3306:3306"
+            - "3305:3306"
         volumes:
             - dbdata:/var/lib/mysql
         networks:
@@ -48,7 +48,7 @@ services:
         container_name: LearnHub_nginx
         restart: unless-stopped
         ports:
-            - "8000:80"
+            - "8001:80"
         volumes:
             - ./:/var/www
             - ./docker/nginx:/etc/nginx/conf.d
@@ -60,7 +60,7 @@ services:
         container_name: LearnHub_redis
         restart: unless-stopped
         ports:
-            - "6379:6379"
+            - "6378:6379"
         volumes:
             - redisdata:/data
         networks:
@@ -80,6 +80,7 @@ services:
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
+        platform: linux/x86_64
         container_name: LearnHub_phpmyadmin
         environment:
             - PMA_HOST=db
