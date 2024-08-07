@@ -2,7 +2,7 @@ services:
     app:
         ports:
             - "9004:9004"  # Expose Xdebug port
-            - "11112:11111"  # Add this line to publish PHPStan Pro's port
+            - "11111:11111"  # Add this line to publish PHPStan Pro's port
         build:
             context: docker
             dockerfile: Dockerfile
