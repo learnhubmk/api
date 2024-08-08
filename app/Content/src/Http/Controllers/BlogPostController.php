@@ -10,6 +10,7 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
@@ -26,9 +27,7 @@ class BlogPostController extends Controller
     #[QueryParam('tags', 'string', required: false, example: '[php,laravel,react]')]
     #[QueryParam('author', 'string', required: false, example: 'john')]
     #[QueryParam('sort', 'string', required: false, example: 'title', enum: ['id', 'title', 'publish_date', 'created_at'])]
-
-
-    public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+    public function index(BlogPostPermissionsRequest $request): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
             ->when($request->has('title'), function ($query) use ($request) {
@@ -81,9 +80,9 @@ class BlogPostController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
-    public function show(BlogPost $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
+    public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
     {
-        $blogPost->load('author', 'tags');
+        $blogPost = BlogPost::with(['author', 'tags'])->findOrFail($blogPost);
 
         return new BlogPostsResource($blogPost);
     }
@@ -96,10 +95,10 @@ class BlogPostController extends Controller
     #[BodyParam('excerpt', 'string', required: false, example: 'This is test blogpost example')]
     #[BodyParam('content', 'string', required: false, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
     #[BodyParam('tags', 'array', required: false, example: '[1,2,3]')]
-    public function update(UpdateBlogPostRequest $request, BlogPost $blogPost): BlogPostsResource
+    public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostsResource
     {
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
-
+        $blogPost = BlogPost::findOrFail($blogPost);
         $blogPost->update($blogPostData);
 
         if ($request->has('tags')) {
@@ -113,8 +112,9 @@ class BlogPostController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
     #[Group('Content')]
-    public function destroy(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    public function destroy(int $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
     {
+        $blogPost = BlogPost::findOrFail($blogPost);
         $blogPost->delete();
 
         return response()->noContent();

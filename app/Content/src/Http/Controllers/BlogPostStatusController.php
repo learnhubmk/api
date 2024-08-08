@@ -4,6 +4,7 @@ namespace App\Content\Http\Controllers;
 
 use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Website\Models\BlogPost;
+use Illuminate\Http\Response;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
@@ -16,8 +17,9 @@ class BlogPostStatusController
     #[BodyParam('publish_date', 'date', required: false, example: '2024-01-01')]
     #[BodyParam('status', 'string', required: true, example: 'draft, published, in_review, archive')]
     #[Group('Content')]
-    public function update(BlogPost $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    public function update(int $blogPost, BlogPostPermissionsRequest $request): Response
     {
+        $blogPost = BlogPost::findOrFail($blogPost);
         $blogPost->update(['status' => $request->status, 'publish_date' => $request->publish_date ?? null]);
 
         return response()->noContent();

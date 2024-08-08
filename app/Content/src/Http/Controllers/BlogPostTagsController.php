@@ -9,6 +9,7 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Models\BlogPostTag;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
@@ -64,8 +65,9 @@ class BlogPostTagsController extends Controller
     #[Endpoint(title: 'Update Blog post tag', description: 'This endpoint will update a single blog post tag')]
     #[Group('Content')]
     #[BodyParam('name', 'string', required: true, example: 'test')]
-    public function update(BlogPostTagsRequest $request, BlogPostTag $blogPostTag): BlogPostTagResource
+    public function update(BlogPostTagsRequest $request, int $blogPostTag): BlogPostTagResource
     {
+        $blogPostTag = BlogPostTag::findOrFail($blogPostTag);
         $blogPostTag->update(['name' => $request->name]);
 
         return new BlogPostTagResource($blogPostTag);
@@ -74,8 +76,9 @@ class BlogPostTagsController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Delete Blog post tag', description: 'This endpoint deletes blog post tag')]
     #[Group('Content')]
-    public function destroy(BlogPostTag $blogPostTag, BlogPostTagsDeleteRequest $request): \Illuminate\Http\Response
+    public function destroy(int $blogPostTag, BlogPostTagsDeleteRequest $request): Response
     {
+        $blogPostTag = BlogPostTag::findOrFail($blogPostTag);
         $blogPostTag->delete();
 
         return response()->noContent();
