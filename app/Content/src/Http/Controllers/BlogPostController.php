@@ -10,6 +10,7 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
@@ -26,7 +27,7 @@ class BlogPostController extends Controller
     #[QueryParam('tags', 'string', required: false, example: '[php,laravel,react]')]
     #[QueryParam('author', 'string', required: false, example: 'john')]
     #[QueryParam('sort', 'string', required: false, example: 'title', enum: ['id', 'title', 'publish_date', 'created_at'])]
-    public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+    public function index(BlogPostPermissionsRequest $request): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
             ->when($request->has('title'), function ($query) use ($request) {
@@ -81,8 +82,7 @@ class BlogPostController extends Controller
     #[Group('Content')]
     public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
     {
-        $blogPost = BlogPost::findOrFail($blogPost);
-        $blogPost->load('author', 'tags');
+        $blogPost = BlogPost::findOrFail($blogPost)->with(['author', 'tags']);
 
         return new BlogPostsResource($blogPost);
     }
