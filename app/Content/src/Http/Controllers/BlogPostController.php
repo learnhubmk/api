@@ -82,7 +82,7 @@ class BlogPostController extends Controller
     #[Group('Content')]
     public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
     {
-        $blogPost = BlogPost::findOrFail($blogPost)->with(['author', 'tags']);
+        $blogPost = BlogPost::with(['author', 'tags'])->findOrFail($blogPost);
 
         return new BlogPostsResource($blogPost);
     }
