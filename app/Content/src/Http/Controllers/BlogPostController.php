@@ -30,23 +30,23 @@ class BlogPostController extends Controller
     public function index(BlogPostPermissionsRequest $request): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
-            ->when($request->has('title'), function ($query) use ($request) {
+            ->when($request->get('title'), function ($query) use ($request) {
                 return $query->where('title', 'like', "%{$request->title}%");
             })
-            ->when($request->has('tags'), function ($query) use ($request) {
+            ->when($request->get('tags'), function ($query) use ($request) {
                 $tags = explode(',', $request->tag);
 
                 return $query->whereHas('tags', function ($tagQuery) use ($tags) {
                     $tagQuery->whereIn('name', $tags);
                 });
             })
-            ->when($request->has('author'), function ($query) use ($request) {
+            ->when($request->get('author'), function ($query) use ($request) {
                 return $query->whereHas('author', function ($authorQuery) use ($request) {
                     $authorQuery->where('first_name', 'like', "%$request->author%")
                         ->orWhere('last_name', 'like', "%$request->author%");
                 });
             })
-            ->when($request->has('sort'), function ($query) use ($request) {
+            ->when($request->get('sort'), function ($query) use ($request) {
                 $query->orderByDesc($request->sort);
             })
             ->paginate(15);
@@ -101,7 +101,7 @@ class BlogPostController extends Controller
         $blogPost = BlogPost::findOrFail($blogPost);
         $blogPost->update($blogPostData);
 
-        if ($request->has('tags')) {
+        if ($request->get('tags')) {
             $blogPost->tags()->sync($request->tags);
         }
 
