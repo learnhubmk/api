@@ -31,7 +31,9 @@ RUN docker-php-source delete
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
-
+# Set PHPStan Pro port and expose it
+ENV PHPSTAN_PRO_WEB_PORT=11111
+EXPOSE 11111
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
