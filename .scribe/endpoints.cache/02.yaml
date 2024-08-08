@@ -84,7 +84,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 48dbE16Zg5Phv6f3ckVaDae'
+      - 'Bearer aDhP1bcZgd3a8f5kvE64Ve6'
     controller: null
     method: null
     route: null
@@ -158,7 +158,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8V4a6gekZh63Dv1dbfc5PEa'
+      - 'Bearer 83cDbf164avVEakeZ56hdgP'
     controller: null
     method: null
     route: null
@@ -210,7 +210,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3fhV8ac66bEDd1Zeg4vk5aP'
+      - 'Bearer D6kveVc61a438ZgadEPf5bh'
     controller: null
     method: null
     route: null
@@ -305,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer avDeagfP1Vk56d64bcZhE83'
+      - 'Bearer acZ84EbaV6hPgvDde6k5f31'
     controller: null
     method: null
     route: null
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6ae8va31bc6P5kdVghZ4EDf'
+      - 'Bearer aev6VbP35E1dfDg6k8hZc4a'
     controller: null
     method: null
     route: null
@@ -413,7 +413,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer eh6Dbd5E4a1fcavkZVP68g3'
+      - 'Bearer 8eafDvVag1E6bh3ck45dP6Z'
     controller: null
     method: null
     route: null
@@ -457,7 +457,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a664Z5Pvh8dgE3cVD1afkeb'
+      - 'Bearer ec4dh8VPbf651ZvaagD3Ek6'
     controller: null
     method: null
     route: null
@@ -512,7 +512,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8DcvkPbgV6E31ade4hZ6a5f'
+      - 'Bearer fg83PkeDbV46cavEha5Z6d1'
     controller: null
     method: null
     route: null
@@ -520,7 +520,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'content/blog-post-tags/{blog_post_tag_id}'
+    uri: 'content/blog-post-tags/{id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -534,17 +534,17 @@ endpoints:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters:
-      blog_post_tag_id:
-        name: blog_post_tag_id
+      id:
+        name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: illum
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      blog_post_tag_id: illum
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -555,7 +555,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aZ8kP35bv6ecV4D1h6afEgd'
+      - 'Bearer P3cV1dgaEa5be48vDhZf6k6'
     controller: null
     method: null
     route: null
@@ -619,7 +619,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6E46Z3aPD8adk15Vgbvfhce'
+      - 'Bearer 631VhDvg4b5fZkcaEedP86a'
     controller: null
     method: null
     route: null
