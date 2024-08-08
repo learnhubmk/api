@@ -12,6 +12,6 @@ Route::group(['prefix' => '/content', 'middleware' => ['auth:api', 'treblle']], 
         ->name('show', 'content.blog-post-tags.show')
         ->name('store', 'content.blog-post-tags.store')
         ->name('update', 'content.blog-post-tags.update')
-        ->name('destroy', 'content.blog-pos t-tags.destroy');
+        ->name('destroy', 'content.blog-post-tags.destroy');
     Route::patch('blog-posts/{id}/statuses', [BlogPostStatusController::class, 'update']);
 });
