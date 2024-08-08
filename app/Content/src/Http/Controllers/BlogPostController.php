@@ -2,30 +2,32 @@
 
 namespace App\Content\Http\Controllers;
 
-use Illuminate\Support\Str;
-use App\Website\Models\Author;
-use App\Website\Models\BlogPost;
-use App\Website\Enums\BlogPostStatus;
-use Knuckles\Scribe\Attributes\Authenticated;
-use Knuckles\Scribe\Attributes\Group;
-use Knuckles\Scribe\Attributes\Endpoint;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\QueryParam;
-use App\Framework\Http\Controllers\Controller;
-use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
+use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
 use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
 use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
+use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
+use App\Framework\Http\Controllers\Controller;
+use App\Website\Enums\BlogPostStatus;
+use App\Website\Models\Author;
+use App\Website\Models\BlogPost;
+use Illuminate\Support\Str;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\QueryParam;
 
 class BlogPostController extends Controller
 {
     #[Authenticated]
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
-    #[QueryParam('title', 'string', required: false, example: "?title=learnhub")]
-    #[QueryParam('tags', 'string', required: false, example: "?tags=[php,laravel,react]")]
-    #[QueryParam('author', 'string', required: false, example: "?author=john")]
-    #[QueryParam('sort', 'string', required: false, example: "?sort=title", enum: ['id', 'title', 'publish_date', 'created_at'])]
+    #[QueryParam('title', 'string', required: false, example: 'learnhub')]
+    #[QueryParam('tags', 'string', required: false, example: '[php,laravel,react]')]
+    #[QueryParam('author', 'string', required: false, example: 'john')]
+    #[QueryParam('sort', 'string', required: false, example: 'title', enum: ['id', 'title', 'publish_date', 'created_at'])]
+
+
     public function index(BlogPostPermissionsRequest $request): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
@@ -34,6 +36,7 @@ class BlogPostController extends Controller
             })
             ->when($request->has('tags'), function ($query) use ($request) {
                 $tags = explode(',', $request->tag);
+
                 return $query->whereHas('tags', function ($tagQuery) use ($tags) {
                     $tagQuery->whereIn('name', $tags);
                 });
@@ -41,7 +44,7 @@ class BlogPostController extends Controller
             ->when($request->has('author'), function ($query) use ($request) {
                 return $query->whereHas('author', function ($authorQuery) use ($request) {
                     $authorQuery->where('first_name', 'like', "%$request->author%")
-                    ->orWhere('last_name', 'like', "%$request->author%");
+                        ->orWhere('last_name', 'like', "%$request->author%");
                 });
             })
             ->when($request->has('sort'), function ($query) use ($request) {
@@ -55,10 +58,10 @@ class BlogPostController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Create Blog posts', description: 'This endpoint will create a single blog post')]
     #[Group('Content')]
-    #[BodyParam('title', 'string', required: true, example: "Example Blog Post Title ")]
-    #[BodyParam('excerpt', 'string', required: true, example: "This is test blogpost example")]
-    #[BodyParam('content', 'string', required: true, example: "Lorem ipsum dolor sit amet, consectetur adipiscing ...")]
-    #[BodyParam('tags', 'array', required: true, example: "[1,2,3]")]
+    #[BodyParam('title', 'string', required: true, example: 'Example Blog Post Title ')]
+    #[BodyParam('excerpt', 'string', required: true, example: 'This is test blogpost example')]
+    #[BodyParam('content', 'string', required: true, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
+    #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
     public function store(CreateBlogPostRequest $request): BlogPostsResource
     {
         $blogPost = BlogPost::create([
@@ -67,7 +70,7 @@ class BlogPostController extends Controller
             'excerpt' => $request->excerpt,
             'content' => $request->get('content'),
             'status' => BlogPostStatus::IN_REVIEW,
-            'author_id' => Author::where('user_id', $request->user()->id)->value('id')
+            'author_id' => Author::where('user_id', $request->user()->id)->value('id'),
         ]);
 
         $blogPost->tags()->sync($request->tags);
@@ -88,11 +91,11 @@ class BlogPostController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Update Blog post', description: 'This endpoint will update a single blog post')]
     #[Group('Content')]
-    #[BodyParam('title', 'string', required: false, example: "Example Blog Post Title ")]
-    #[BodyParam('slug', 'string', required: false, example: "example-blog-post-title ")]
-    #[BodyParam('excerpt', 'string', required: false, example: "This is test blogpost example")]
-    #[BodyParam('content', 'string', required: false, example: "Lorem ipsum dolor sit amet, consectetur adipiscing ...")]
-    #[BodyParam('tags', 'array', required: false, example: "[1,2,3]")]
+    #[BodyParam('title', 'string', required: false, example: 'Example Blog Post Title ')]
+    #[BodyParam('slug', 'string', required: false, example: 'example-blog-post-title ')]
+    #[BodyParam('excerpt', 'string', required: false, example: 'This is test blogpost example')]
+    #[BodyParam('content', 'string', required: false, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
+    #[BodyParam('tags', 'array', required: false, example: '[1,2,3]')]
     public function update(UpdateBlogPostRequest $request, BlogPost $blogPost): BlogPostsResource
     {
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
@@ -116,5 +119,4 @@ class BlogPostController extends Controller
 
         return response()->noContent();
     }
-
 }

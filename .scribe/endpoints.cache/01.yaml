@@ -40,7 +40,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bE1VZa5dh8gPca4f66k3veD'
+      - 'Bearer dD618E6a5acZVhg3fvPkb4e'
     controller: null
     method: null
     route: null
@@ -70,7 +70,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jayde.stehr@example.org
+        example: gusikowski.susan@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -79,14 +79,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: eveniet
+        example: tenetur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: jayde.stehr@example.org
-      password: eveniet
+      email: gusikowski.susan@example.net
+      password: tenetur
     fileParameters: []
     responses: []
     responseFields: []
@@ -123,7 +123,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bv4h5eg1PD8fE63VacZkd6a'
+      - 'Bearer Ev56adb6fPae4hg1VZ38cDk'
     controller: null
     method: null
     route: null
@@ -156,7 +156,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aP6k5dvDaE4cefV3Z81hbg6'
+      - 'Bearer 8Ve13gEba6vDafdZ5P46ckh'
     controller: null
     method: null
     route: null
@@ -198,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5661kPhca4Eg3bdeDvfa8VZ'
+      - 'Bearer Dgd63P5Vfhv4E81cekbaZa6'
     controller: null
     method: null
     route: null
@@ -228,7 +228,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: qprohaska@example.net
+        example: dewitt.littel@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -237,14 +237,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: assumenda
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: qprohaska@example.net
-      password: assumenda
+      email: dewitt.littel@example.org
+      password: nesciunt
     fileParameters: []
     responses: []
     responseFields: []
@@ -281,7 +281,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8P5kg4had16VbeZEvaD6fc3'
+      - 'Bearer 3bd46VE5vfeZD18aghckPa6'
     controller: null
     method: null
     route: null
@@ -314,7 +314,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5ha6VP643bZ18cDdaevEfkg'
+      - 'Bearer ahP68bvd34kV65aDecgZfE1'
     controller: null
     method: null
     route: null
@@ -356,7 +356,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer e6DVbEa1fa8P65cZv3g4khd'
+      - 'Bearer Z56Ehkfvd4c86geVDaPb1a3'
     controller: null
     method: null
     route: null
@@ -386,7 +386,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: josefina.mayer@example.org
+        example: tlueilwitz@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -395,14 +395,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: qui
+        example: accusamus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: josefina.mayer@example.org
-      password: qui
+      email: tlueilwitz@example.net
+      password: accusamus
     fileParameters: []
     responses: []
     responseFields: []
@@ -439,7 +439,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8kaE1faPeDv53d4hZ6gcV6b'
+      - 'Bearer 6akcEV5hev1DbdZPg6483af'
     controller: null
     method: null
     route: null
@@ -472,7 +472,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer h8f3VP1ca66b5v4DgdZEkea'
+      - 'Bearer 8ac4gfEk6hZbad1563ePDvV'
     controller: null
     method: null
     route: null
@@ -515,11 +515,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7427e95c-bb17-4298-811b-533250dc45a8
+          x-treblle-trace-id: ca9b735a-ad1b-4493-bcf6-bec3f1518f07
           vary: Origin
         description: null
         custom: []
@@ -571,7 +571,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7392a363-dd14-4b55-8450-59b14219beef
+          x-treblle-trace-id: 8f4e98f5-1eb2-45ee-adb8-2de5a1691a5f
           vary: Origin
         description: null
         custom: []
@@ -606,13 +606,13 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: skoch@example.com
+        example: chesley86@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: skoch@example.com
+      email: chesley86@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -646,7 +646,7 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: adipisci
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -655,7 +655,7 @@ endpoints:
         name: email
         description: token
         required: true
-        example: qaltenwerth@example.com
+        example: brook.volkman@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
@@ -664,15 +664,15 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'Dm^J;h&vucAmL'
+        example: '\%X.[i^)a''X'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      token: adipisci
-      email: qaltenwerth@example.com
-      password: 'Dm^J;h&vucAmL'
+      token: omnis
+      email: brook.volkman@example.org
+      password: '\%X.[i^)a''X'
     fileParameters: []
     responses: []
     responseFields: []

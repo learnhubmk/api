@@ -10,14 +10,6 @@ use Illuminate\Validation\Rules\RequiredIf;
 
 class StoreNewsletterSubscriberRequest extends FormRequest
 {
-    protected MailboxValidEmail $mailboxValidEmail;
-
-    public function __construct(MailboxValidEmail $mailboxValidEmail)
-    {
-        parent::__construct();
-        $this->mailboxValidEmail = $mailboxValidEmail;
-    }
-
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -33,14 +25,20 @@ class StoreNewsletterSubscriberRequest extends FormRequest
      */
     public function rules(): array
     {
+        // Resolve the MailboxValidEmail dependency from the container
+        $mailboxValidEmail = app(MailboxValidEmail::class);
+
         return [
             'first_name' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email:filter', $this->mailboxValidEmail],
+            'email' => [
+                'required',
+                'email:filter',
+                Rule::when(app()->isProduction(), $mailboxValidEmail),
+            ],
             'cf-turnstile-response' => [
                 new RequiredIf(function () {
                     return app()->isProduction();
                 }),
-
                 Rule::when(app()->isProduction(), [
                     'string',
                     Rule::turnstile(),
