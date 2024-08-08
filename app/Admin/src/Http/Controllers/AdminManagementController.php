@@ -32,10 +32,10 @@ class AdminManagementController
     #[Authenticated]
     #[Endpoint(title: 'Administrators Listing', description: 'This endpoint lists all administrators')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: "?query=john")]
-    #[QueryParam('sort_by', 'string', required: false, example: "?sort_by=first_name")]
-    #[QueryParam('sort_direction', 'string', required: false, example: "?sort_direction=asc")]
-    #[QueryParam('per_page', 'integer', required: false, example: "?per_page=20")]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');

@@ -23,24 +23,24 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: voluptas
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: voluptas
+      title: voluptatem
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Placeat quaerat totam quas voluptas eaque ea.","slug":"placeat-quaerat-totam-quas-voluptas-eaque-ea","excerpt":"Quam sed quibusdam et incidunt et.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Nikki Ledner","last_name":"Bode","image":null}},{"title":"Non voluptas sit et saepe maiores officiis consectetur.","slug":"non-voluptas-sit-et-saepe-maiores-officiis-consectetur","excerpt":"Voluptas a optio harum.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Eloise Klocko","last_name":"Anderson","image":null}},{"title":"Sunt possimus voluptas rerum numquam nam eligendi at.","slug":"sunt-possimus-voluptas-rerum-numquam-nam-eligendi-at","excerpt":"Sint tempore et earum dolore sed non inventore repellendus.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Ruby Goodwin","last_name":"Carter","image":null}},{"title":"Qui voluptas eaque officia et aut tempora dolorum voluptatem.","slug":"qui-voluptas-eaque-officia-et-aut-tempora-dolorum-voluptatem","excerpt":"Tempora voluptatum accusantium iusto.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Jamar Upton","last_name":"Williamson","image":null}},{"title":"Ut rerum voluptate molestiae optio voluptas et ut.","slug":"ut-rerum-voluptate-molestiae-optio-voluptas-et-ut","excerpt":"Impedit aut ducimus magni et sint.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-07-28","author":{"first_name":"Arnulfo Lemke","last_name":"Kunde","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":5,"total":5}}'
+        content: '{"data":[{"title":"At dolores atque totam voluptatem.","slug":"at-dolores-atque-totam-voluptatem","excerpt":"Tempora veritatis exercitationem autem alias enim.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-08-07","author":{"first_name":"Mr. Karl Kreiger","last_name":"Schmidt","image":null}},{"title":"Voluptatem accusantium quibusdam aut in et quidem.","slug":"voluptatem-accusantium-quibusdam-aut-in-et-quidem","excerpt":"Possimus similique a similique dolorum assumenda iusto adipisci.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-08-07","author":{"first_name":"Telly Keebler","last_name":"Hauck","image":null}},{"title":"Doloremque quo architecto rerum iure voluptatem sed.","slug":"doloremque-quo-architecto-rerum-iure-voluptatem-sed","excerpt":"Similique nihil consequatur nesciunt veniam amet esse.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-08-07","author":{"first_name":"Eunice Jakubowski MD","last_name":"Crist","image":null}},{"title":"Neque quasi voluptate voluptatem voluptatem.","slug":"neque-quasi-voluptate-voluptatem-voluptatem","excerpt":"Soluta qui qui nesciunt quibusdam voluptate beatae.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-08-07","author":{"first_name":"Telly Keebler","last_name":"Hauck","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":4,"total":4}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 8f8cfa62-3529-43f1-b978-dfdcceddfa14
+          x-treblle-trace-id: 698928b8-931d-47a7-bf3f-3ea7829ec3f0
           vary: Origin
         description: null
         custom: []
@@ -70,13 +70,13 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: ullam
+        example: voluptatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      slug: ullam
+      slug: voluptatibus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -90,11 +90,11 @@ endpoints:
               "message": "No query results for model [App\\Website\\Models\\BlogPost].",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 629,
+              "line": 634,
               "trace": [
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 577,
+                      "line": 582,
                       "function": "prepareException",
                       "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
@@ -482,7 +482,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 897f3078-7a07-4553-adbc-e17afc700ae1
+          x-treblle-trace-id: d9b0702e-b90c-4679-bd4e-3c1706362cf2
           vary: Origin
         description: null
         custom: []
@@ -521,7 +521,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7698f695-1e7e-4aa8-9b53-392677d87342
+          x-treblle-trace-id: 633dd904-37a1-42fd-a22b-5293c7acfb9e
           vary: Origin
         description: null
         custom: []
@@ -551,13 +551,13 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: accusamus
+        example: libero
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      tag: accusamus
+      tag: libero
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -566,11 +566,11 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/accusamus?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/accusamus?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/accusamus?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/accusamus","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/libero?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/libero","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7f390737-1b87-4a82-80de-a8ca66211971
+          x-treblle-trace-id: 32de6207-b9ae-416c-be1f-c8a9c7241ed1
           vary: Origin
         description: null
         custom: []
@@ -605,7 +605,7 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: blanditiis
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -614,7 +614,7 @@ endpoints:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: eboyle@example.com
+        example: gerlach.sandrine@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -623,7 +623,7 @@ endpoints:
         name: message
         description: 'The body of the message.'
         required: true
-        example: quod
+        example: neque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -632,16 +632,16 @@ endpoints:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: assumenda
+        example: enim
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: blanditiis
-      email: eboyle@example.com
-      message: quod
-      cf-turnstile-response: assumenda
+      name: qui
+      email: gerlach.sandrine@example.org
+      message: neque
+      cf-turnstile-response: enim
     fileParameters: []
     responses: []
     responseFields: []
@@ -675,7 +675,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: dqhppxtf
+        example: cq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -684,7 +684,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: zella16@example.org
+        example: apollich@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -699,8 +699,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: dqhppxtf
-      email: zella16@example.org
+      first_name: cq
+      email: apollich@example.org
     fileParameters: []
     responses: []
     responseFields: []

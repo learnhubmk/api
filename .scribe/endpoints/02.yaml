@@ -24,7 +24,7 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: '?title=learnhub'
+        example: learnhub
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -33,7 +33,7 @@ endpoints:
         name: tags
         description: ''
         required: false
-        example: '?tags=[php,laravel,react]'
+        example: '[php,laravel,react]'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,7 +42,7 @@ endpoints:
         name: author
         description: ''
         required: false
-        example: '?author=john'
+        example: john
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -51,7 +51,7 @@ endpoints:
         name: sort
         description: ''
         required: false
-        example: '?sort=title'
+        example: title
         type: string
         enumValues:
           - id
@@ -61,10 +61,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      title: '?title=learnhub'
-      tags: '?tags=[php,laravel,react]'
-      author: '?author=john'
-      sort: '?sort=title'
+      title: learnhub
+      tags: '[php,laravel,react]'
+      author: john
+      sort: title
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ZD638fha5v6eg4EaV1Pdbck'
+      - 'Bearer 48dbE16Zg5Phv6f3ckVaDae'
     controller: null
     method: null
     route: null
@@ -156,7 +156,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Egav4e8afVhb6Zc6dP3Dk5'
+      - 'Bearer 8V4a6gekZh63Dv1dbfc5PEa'
     controller: null
     method: null
     route: null
@@ -208,7 +208,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PebEvDf6Z4akd5V83hc1a6g'
+      - 'Bearer 3fhV8ac66bEDd1Zeg4vk5aP'
     controller: null
     method: null
     route: null
@@ -303,7 +303,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D5PeZ834afk6agEcbv16dVh'
+      - 'Bearer avDeagfP1Vk56d64bcZhE83'
     controller: null
     method: null
     route: null
@@ -346,7 +346,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6g58bEaeDPV6cdkvf1aZh34'
+      - 'Bearer 6ae8va31bc6P5kdVghZ4EDf'
     controller: null
     method: null
     route: null
@@ -376,7 +376,7 @@ endpoints:
         name: sort
         description: ''
         required: false
-        example: '?sort=name, -name'
+        example: 'name, -name'
         type: string
         enumValues:
           - name
@@ -386,14 +386,14 @@ endpoints:
         name: search
         description: ''
         required: false
-        example: '?search=name'
+        example: name
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      sort: '?sort=name, -name'
-      search: '?search=name'
+      sort: 'name, -name'
+      search: name
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -411,7 +411,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8ZfcevhE4DV6k6aa3P5bgd1'
+      - 'Bearer eh6Dbd5E4a1fcavkZVP68g3'
     controller: null
     method: null
     route: null
@@ -455,7 +455,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kca6e6d4hgv1EaDfV3PbZ85'
+      - 'Bearer a664Z5Pvh8dgE3cVD1afkeb'
     controller: null
     method: null
     route: null
@@ -510,7 +510,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer EZk1Dgehf6dav385bc6VP4a'
+      - 'Bearer 8DcvkPbgV6E31ade4hZ6a5f'
     controller: null
     method: null
     route: null
@@ -518,7 +518,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'content/blog-post-tags/{id}'
+    uri: 'content/blog-post-tags/{blog_post_tag_id}'
     metadata:
       groupName: Content
       groupDescription: ''
@@ -532,17 +532,17 @@ endpoints:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
     urlParameters:
-      id:
-        name: id
+      blog_post_tag_id:
+        name: blog_post_tag_id
         description: 'The ID of the blog post tag.'
         required: true
-        example: 1
-        type: integer
+        example: illum
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      blog_post_tag_id: illum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -553,7 +553,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5aZE6evbD3h681fcPdkgVa4'
+      - 'Bearer aZ8kP35bv6ecV4D1h6afEgd'
     controller: null
     method: null
     route: null
@@ -617,7 +617,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 38vfhdaD6baZ6EP5kVg1c4e'
+      - 'Bearer 6E46Z3aPD8adk15Vgbvfhce'
     controller: null
     method: null
     route: null
