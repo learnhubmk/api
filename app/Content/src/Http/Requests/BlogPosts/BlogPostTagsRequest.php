@@ -4,6 +4,7 @@ namespace App\Content\Http\Requests\BlogPosts;
 
 use App\Framework\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BlogPostTagsRequest extends FormRequest
 {
@@ -23,7 +24,7 @@ class BlogPostTagsRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'name' => ['required', 'string', 'max:255', 'unique:blog_post_tags,name'],
+           'name' => ['required', 'string', 'max:255', Rule::unique('blog_post_tags', 'name')->whereNull('deleted_at')],
         ];
     }
 }
