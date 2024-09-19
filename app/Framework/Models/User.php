@@ -6,55 +6,77 @@ use App\Admin\Models\AdminProfile;
 use App\Admin\Models\ContentManagerProfile;
 use App\Admin\Models\MemberProfile;
 use App\Authentication\Notifications\ResetPassword;
+use App\Website\Models\Author;
 use Database\Factories\UserFactory;
-use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
+use SensitiveParameter;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * Class User
+ *
+ * @property int $id
+ * @property string $email
+ * @property Carbon|null $email_verified_at
+ * @property string|null $password
+ * @property string|null $remember_token
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string $status
+ * @property string|null $deleted_at
+ *
+ * @property Collection|Author[] $authors
+ * @property Collection|MemberProfile[] $member_profiles
+ *
+ * @package App\Models
+ */
 class User extends Authenticatable implements JWTSubject
 {
     use HasFactory;
-    use Notifiable;
     use HasRoles;
+    use Notifiable;
     use SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'email',
-        'password',
+    protected $table = 'users';
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+    protected $fillable = [
+        'email',
+        'email_verified_at',
+        'password',
+        'remember_token',
+        'status',
     ];
+
+    public function authors(): HasMany
+    {
+        return $this->hasMany(Author::class);
+    }
+
+    public function member_profiles(): HasMany
+    {
+        return $this->hasMany(MemberProfile::class);
+    }
 
     public function guardName(): string
     {
-        return "api";
+        return 'api';
     }
 
     /***
@@ -92,8 +114,6 @@ class User extends Authenticatable implements JWTSubject
 
     /**
      * Return a key value array, containing any custom claims to be added to the JWT.
-     *
-     * @return array
      */
     public function getJWTCustomClaims(): array
     {
@@ -104,9 +124,8 @@ class User extends Authenticatable implements JWTSubject
      * Send the password reset notification.
      *
      * @param  string  $token
-     * @return void
      */
-    public function sendPasswordResetNotification(#[\SensitiveParameter] $token): void
+    public function sendPasswordResetNotification(#[SensitiveParameter] $token): void
     {
         $this->notify(new ResetPassword($token));
     }
