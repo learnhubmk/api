@@ -29,7 +29,7 @@ class MemberLoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-                'email' => ['required', Rule::exists('users', 'email'), 'email', 'ends_with:learnhub.mk'],
+                'email' => ['required', Rule::exists('users', 'email')],
                 'password' => ['required']
         ];
     }
