@@ -10,14 +10,20 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\UrlParam;
 
 class RegisterMemberController
 {
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws ValidationException
-     */
+    #[Group('Platform')]
+    #[Endpoint(title: 'Sign Up', description: 'This endpoint is for registering new members')]
+    #[BodyParam('email', 'string', required: true, example: "example@test.com")]
+    #[BodyParam('password', 'string', required: true, example: "password")]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('image', 'file', required: false)]
     public function store(RegisterRequest $request)
     {
         $user = User::query()->create([
