@@ -7,13 +7,10 @@ use App\Framework\Models\User;
 use App\Platform\Http\Requests\RegisterRequest;
 use App\Platform\Http\Resources\MemberProfileResource;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
-use Knuckles\Scribe\Attributes\UrlParam;
 
 class RegisterMemberController
 {
