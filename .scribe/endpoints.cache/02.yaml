@@ -84,7 +84,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aDhP1bcZgd3a8f5kvE64Ve6'
+      - 'Bearer ahE56vb46e8aZcdgDP3V1kf'
     controller: null
     method: null
     route: null
@@ -158,7 +158,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 83cDbf164avVEakeZ56hdgP'
+      - 'Bearer gc65Z3kVevbaf1h8EPDad46'
     controller: null
     method: null
     route: null
@@ -184,13 +184,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: 1
-        type: integer
+        example: laborum
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: laborum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -210,7 +210,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D6kveVc61a438ZgadEPf5bh'
+      - 'Bearer EPVf63dkebcaZ1v5g6h48Da'
     controller: null
     method: null
     route: null
@@ -238,13 +238,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: 1
-        type: integer
+        example: tenetur
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: tenetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -305,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer acZ84EbaV6hPgvDde6k5f31'
+      - 'Bearer kf1DVbh6aZc5634Pa8Egdve'
     controller: null
     method: null
     route: null
@@ -331,13 +331,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: 1
-        type: integer
+        example: et
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aev6VbP35E1dfDg6k8hZc4a'
+      - 'Bearer 1Zh536fab6VgvakEe8DcPd4'
     controller: null
     method: null
     route: null
@@ -413,7 +413,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8eafDvVag1E6bh3ck45dP6Z'
+      - 'Bearer cagha4E3k6bD8d1eZ5PV6vf'
     controller: null
     method: null
     route: null
@@ -457,7 +457,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ec4dh8VPbf651ZvaagD3Ek6'
+      - 'Bearer hgPvka86acZ1dVf53DEb46e'
     controller: null
     method: null
     route: null
@@ -485,13 +485,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: 1
-        type: integer
+        example: quibusdam
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: quibusdam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -512,7 +512,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fg83PkeDbV46cavEha5Z6d1'
+      - 'Bearer h4kdZ8a66bVEcPv3ag5Def1'
     controller: null
     method: null
     route: null
@@ -538,13 +538,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: 1
-        type: integer
+        example: consequatur
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -555,7 +555,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer P3cV1dgaEa5be48vDhZf6k6'
+      - 'Bearer haZVv56k8PDf1gd63abe4cE'
     controller: null
     method: null
     route: null
@@ -582,13 +582,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: 1
-        type: integer
+        example: repudiandae
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: repudiandae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -619,7 +619,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 631VhDvg4b5fZkcaEedP86a'
+      - 'Bearer 61hfc5ZPak4adgbDVEv3e86'
     controller: null
     method: null
     route: null
