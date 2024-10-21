@@ -84,7 +84,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1DaaZkhved8V66E4bP3fg5c'
+      - 'Bearer ahE56vb46e8aZcdgDP3V1kf'
     controller: null
     method: null
     route: null
@@ -158,7 +158,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vPkaba1Z8EhD6cdf63egV54'
+      - 'Bearer gc65Z3kVevbaf1h8EPDad46'
     controller: null
     method: null
     route: null
@@ -184,13 +184,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: ut
+        example: laborum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: ut
+      id: laborum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -210,7 +210,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Ddef56khvaZP64b3g8ac1VE'
+      - 'Bearer EPVf63dkebcaZ1v5g6h48Da'
     controller: null
     method: null
     route: null
@@ -238,13 +238,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: harum
+        example: tenetur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: harum
+      id: tenetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -305,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3a4Dd1PvVEk86h6agbec5Zf'
+      - 'Bearer kf1DVbh6aZc5634Pa8Egdve'
     controller: null
     method: null
     route: null
@@ -331,13 +331,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: dolorem
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: dolorem
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b3EVha646P1cveafZDdg5k'
+      - 'Bearer 1Zh536fab6VgvakEe8DcPd4'
     controller: null
     method: null
     route: null
@@ -413,7 +413,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1feV6ahEdaP8ZvD6c3k5gb4'
+      - 'Bearer cagha4E3k6bD8d1eZ5PV6vf'
     controller: null
     method: null
     route: null
@@ -457,7 +457,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1gakv4PZaED5dhe36fcbV86'
+      - 'Bearer hgPvka86acZ1dVf53DEb46e'
     controller: null
     method: null
     route: null
@@ -485,13 +485,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: repellendus
+        example: quibusdam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: repellendus
+      id: quibusdam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -512,7 +512,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3fPEd66cbge48DkVah15Zav'
+      - 'Bearer h4kdZ8a66bVEcPv3ag5Def1'
     controller: null
     method: null
     route: null
@@ -555,7 +555,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8Peh3fbagv4E1Zck56Dd6Va'
+      - 'Bearer haZVv56k8PDf1gd63abe4cE'
     controller: null
     method: null
     route: null
@@ -582,13 +582,13 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: magni
+        example: repudiandae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: magni
+      id: repudiandae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -619,7 +619,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer g66eVcaE8vPdahfZ31b54kD'
+      - 'Bearer 61hfc5ZPak4adgbDVEv3e86'
     controller: null
     method: null
     route: null
