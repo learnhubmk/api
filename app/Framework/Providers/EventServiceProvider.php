@@ -2,7 +2,9 @@
 
 namespace App\Framework\Providers;
 
+use App\Framework\Listeners\SendWelcomeEmail;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -17,6 +19,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        Verified::class => [
+            SendWelcomeEmail::class,
+        ],
+
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [
             \SocialiteProviders\GitHub\GitHubExtendSocialite::class.'@handle',
             \SocialiteProviders\Google\GoogleExtendSocialite::class.'@handle',
