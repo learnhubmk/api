@@ -1,8 +1,8 @@
 <?php
 
+use App\Platform\Http\Controllers\EmailVerificationController;
 use App\Platform\Http\Controllers\MemberSocialAuthController;
 use App\Platform\Http\Controllers\RegisterMemberController;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:api', 'treblle']], function () {
@@ -14,11 +14,6 @@ Route::group(['middleware' => ['auth:api', 'treblle']], function () {
 
 });
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-
-    return response()->json([
-        'message' => 'Email verified successfully',
-        'status' => 200
-    ]);
-})->middleware(['guest', 'signed', 'api'])->name('verification.verify');
+Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'])
+    ->middleware(['guest', 'signed', 'api'])
+    ->name('verification.verify');

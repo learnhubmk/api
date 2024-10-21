@@ -2,7 +2,7 @@
 
 namespace App\Framework\Listeners;
 
-use App\Framework\Mail\WelcomeEmail;
+use App\Platform\Mail\WelcomeEmail;
 use Illuminate\Support\Facades\Mail;
 
 class SendWelcomeEmail

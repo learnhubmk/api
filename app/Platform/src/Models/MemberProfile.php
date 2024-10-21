@@ -15,13 +15,6 @@ class MemberProfile extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = [
-        'first_name',
-        'last_name',
-        'image',
-        'user_id'
-    ];
-
     /**
      * Create a new factory instance for the model.
      */

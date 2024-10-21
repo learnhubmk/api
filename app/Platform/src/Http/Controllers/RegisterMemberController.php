@@ -7,6 +7,7 @@ use App\Framework\Models\User;
 use App\Platform\Http\Requests\RegisterRequest;
 use App\Platform\Http\Resources\MemberProfileResource;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
@@ -23,28 +24,29 @@ class RegisterMemberController
     #[BodyParam('image', 'file', required: false)]
     public function store(RegisterRequest $request)
     {
-        $user = User::query()->create([
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        return DB::transaction(function () use ($request) {
+            $user = User::query()->create([
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
 
-        $user->assignRole(RoleName::MEMBER->value);
+            $user->assignRole(RoleName::MEMBER->value);
 
-        $user->memberProfile()->create([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'image' => $request->image,
-        ]);
+            $user->memberProfile()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'image' => $request->image,
+            ]);
 
-        event(new Registered($user));
+            event(new Registered($user));
 
-        $token = auth()->login($user);
+            $token = auth()->login($user);
 
-        return MemberProfileResource::make($user)->additional([
-            'data' => [
-                'access_token'  => $token,
-            ]
-        ]);
-
+            return MemberProfileResource::make($user)->additional([
+                'data' => [
+                    'access_token' => $token,
+                ]
+            ]);
+        });
     }
 }

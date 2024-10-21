@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Framework\Mail;
+namespace App\Platform\Mail;
 
 use App\Framework\Models\User;
 use Illuminate\Bus\Queueable;
@@ -29,7 +29,7 @@ class WelcomeEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Welcome to LearnHub MK',
+            subject: __('Welcome to LearnHub.mk'),
         );
     }
 
@@ -39,7 +39,7 @@ class WelcomeEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.welcome',
+            markdown: 'еmails.welcome',
         );
     }
 
