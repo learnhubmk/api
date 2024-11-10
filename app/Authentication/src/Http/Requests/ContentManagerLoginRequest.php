@@ -43,9 +43,11 @@ class ContentManagerLoginRequest extends FormRequest
      */
     public function authenticate($user)
     {
-        $this->ensureIsNotRateLimited();
-
-        if (!$user || !$user->hasRole(RoleName::CONTENT_MANAGER) || !Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (
+            !$user ||
+            !($user->hasRole(RoleName::CONTENT_MANAGER) || $user->hasRole(RoleName::ADMIN)) ||
+            !Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))
+        ) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
