@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Website\Enums;
+namespace App\Framework\Enums;
 
 enum BlogPostStatus: string
 {

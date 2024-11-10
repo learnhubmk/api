@@ -6,7 +6,7 @@ use App\Content\Http\Requests\BlogPosts\BlogPostTagsDeleteRequest;
 use App\Content\Http\Requests\BlogPosts\BlogPostTagsRequest;
 use App\Content\Http\Resources\BlogPosts\BlogPostTagResource;
 use App\Framework\Http\Controllers\Controller;
-use App\Website\Models\BlogPostTag;
+use App\Content\Models\BlogPostTag;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
