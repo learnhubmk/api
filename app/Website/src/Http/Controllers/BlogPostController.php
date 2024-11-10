@@ -3,7 +3,7 @@
 namespace App\Website\Http\Controllers;
 
 use App\Framework\Http\Controllers\Controller;
-use App\Website\Enums\BlogPostStatus;
+use App\Framework\Enums\BlogPostStatus;
 use App\Website\Http\Resources\Blogs\BlogPostsResource;
 use App\Website\Http\Resources\Blogs\SingleBlogPostResource;
 use App\Website\Models\BlogPost;

@@ -3,7 +3,7 @@
 namespace App\Content\Http\Controllers;
 
 use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
-use App\Website\Models\BlogPost;
+use App\Content\Models\BlogPost;
 use Illuminate\Http\Response;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;

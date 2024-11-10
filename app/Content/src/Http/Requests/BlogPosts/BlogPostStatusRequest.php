@@ -3,7 +3,7 @@
 namespace App\Content\Http\Requests\BlogPosts;
 
 use App\Framework\Enums\RoleName;
-use App\Website\Enums\BlogPostStatus;
+use App\Framework\Enums\BlogPostStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
