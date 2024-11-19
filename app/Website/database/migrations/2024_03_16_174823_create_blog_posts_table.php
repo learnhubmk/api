@@ -1,6 +1,6 @@
 <?php
 
-use App\Website\Enums\BlogPostStatus;
+use App\Framework\Enums\BlogPostStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
