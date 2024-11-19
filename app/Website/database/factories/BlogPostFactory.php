@@ -2,7 +2,7 @@
 
 namespace App\Website\Database\Factories;
 
-use App\Website\Enums\BlogPostStatus;
+use App\Framework\Enums\BlogPostStatus;
 use App\Website\Models\Author;
 use App\Website\Models\BlogPost;
 use App\Website\Models\BlogPostTag;
