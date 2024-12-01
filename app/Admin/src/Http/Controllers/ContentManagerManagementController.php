@@ -104,7 +104,7 @@ class ContentManagerManagementController
             return $contentManager;
         });
 
-        return new ContentManagerManagementResource($contentManager);
+        return new ContentManagerManagementResource($contentManager->fresh());
     }
 
     /**

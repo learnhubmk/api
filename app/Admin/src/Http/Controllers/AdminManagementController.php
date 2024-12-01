@@ -45,7 +45,7 @@ class AdminManagementController
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
         $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
 
-        $users = User::query()
+        $administrators = User::query()
             ->with(['roles', 'adminProfile'])
             ->whereRelation('roles', 'name', RoleName::ADMIN->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
@@ -60,7 +60,7 @@ class AdminManagementController
             }, $sortDirection)
             ->paginate($recordsPerPage);
 
-        return AdminManagementResource::collection($users);
+        return AdminManagementResource::collection($administrators);
     }
 
 

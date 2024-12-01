@@ -132,7 +132,7 @@ class MemberManagementController
             'image' => $image ?? $member->memberProfile->image
         ]);
 
-        return new MemberManagementResource($member);
+        return new MemberManagementResource($member->fresh());
     }
 
     /**
