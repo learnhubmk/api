@@ -25,25 +25,37 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: sed
+        example: sapiente
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanQueryParameters:
-      title: sed
+      title: sapiente
+      per_page: 14
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Alias quis omnis debitis sed et ut quaerat quia.","slug":"alias-quis-omnis-debitis-sed-et-ut-quaerat-quia","excerpt":"Est sit vel est.","tags":[{"name":"php"},{"name":"laravel"},{"name":"react"}],"publish_date":"2024-10-20","author":{"first_name":"Demario Tremblay","last_name":"Swift","image":null}}],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-posts?page=1","last":"http:\/\/learnhub.test\/blog-posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-posts?page=1","label":"1","active":true},{"url":null,"label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-posts","per_page":14,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: df1788c1-6573-4cf8-8907-946ec4f6998a
           vary: Origin
+          x-treblle-trace-id: 20a710e0-972d-44db-a15d-a6bd62b4ad10
         description: null
         custom: []
     responseFields: []
@@ -72,13 +84,14 @@ endpoints:
         name: slug
         description: 'The slug of the blog post.'
         required: true
-        example: aliquid
+        example: alias
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      slug: aliquid
+      slug: alias
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -92,11 +105,11 @@ endpoints:
               "message": "No query results for model [App\\Website\\Models\\BlogPost].",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 629,
+              "line": 634,
               "trace": [
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 577,
+                      "line": 582,
                       "function": "prepareException",
                       "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
@@ -124,7 +137,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php",
-                      "line": 47,
+                      "line": 37,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -271,7 +284,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 57,
+                      "line": 58,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -397,14 +410,14 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
+                      "line": 43,
                       "function": "Illuminate\\Container\\{closure}",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
+                      "line": 95,
                       "function": "unwrapIfClosure",
                       "class": "Illuminate\\Container\\Util",
                       "type": "::"
@@ -418,7 +431,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 690,
+                      "line": 694,
                       "function": "call",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
@@ -446,21 +459,21 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 1047,
+                      "line": 1094,
                       "function": "run",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 316,
+                      "line": 342,
                       "function": "doRunCommand",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 167,
+                      "line": 193,
                       "function": "doRun",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
@@ -484,8 +497,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: cce80ca5-0b52-4032-a084-6aa2f121132b
           vary: Origin
+          x-treblle-trace-id: 29c6b5a4-698e-408a-accf-224e16695e49
         description: null
         custom: []
     responseFields: []
@@ -511,20 +524,31 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      per_page: 7
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"},{"name":"docker"},{"name":"java"},{"name":"javascript"},{"name":"laravel"},{"name":"marketing"},{"name":"mongodb"},{"name":"mysql"},{"name":"nodejs"},{"name":"php"},{"name":"postgresql"},{"name":"python"},{"name":"react"},{"name":"redis"}],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags?page=1","last":"http:\/\/learnhub.test\/blog-post-tags?page=2","prev":null,"next":"http:\/\/learnhub.test\/blog-post-tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=1","label":"1","active":true},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"2","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags","per_page":20,"to":20,"total":23}}'
+        content: '{"data":[{"name":".net"},{"name":"algorithms"},{"name":"c#"},{"name":"c++"},{"name":"databases"},{"name":"design"},{"name":"development"}],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags?page=1","last":"http:\/\/learnhub.test\/blog-post-tags?page=4","prev":null,"next":"http:\/\/learnhub.test\/blog-post-tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":4,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=1","label":"1","active":true},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"2","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=3","label":"3","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=4","label":"4","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags?page=2","label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags","per_page":7,"to":7,"total":23}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: fc5f0e18-bff2-48a5-ae35-00674f2c2d8f
           vary: Origin
+          x-treblle-trace-id: 24786a39-4077-494f-96a7-81be6b280c06
         description: null
         custom: []
     responseFields: []
@@ -553,27 +577,39 @@ endpoints:
         name: tag
         description: ''
         required: true
-        example: alias
+        example: corporis
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      tag: alias
-    queryParameters: []
-    cleanQueryParameters: []
+      tag: corporis
+    queryParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      per_page: 16
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/alias?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/alias?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/alias?page=1","label":"1","active":true},{"url":null,"label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/alias","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[],"links":{"first":"http:\/\/learnhub.test\/blog-post-tags\/corporis?page=1","last":"http:\/\/learnhub.test\/blog-post-tags\/corporis?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; \u041f\u0440\u0435\u0442\u0445\u043e\u0434\u043d\u0430","active":false},{"url":"http:\/\/learnhub.test\/blog-post-tags\/corporis?page=1","label":"1","active":true},{"url":null,"label":"\u0421\u043b\u0435\u0434\u043d\u0430 &raquo;","active":false}],"path":"http:\/\/learnhub.test\/blog-post-tags\/corporis","per_page":16,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 1fdd0de5-6631-4802-9ba8-86b1e115fcad
           vary: Origin
+          x-treblle-trace-id: 977eaa1b-9240-4f3d-bd86-3c4c1a90100d
         description: null
         custom: []
     responseFields: []
@@ -607,43 +643,47 @@ endpoints:
         name: name
         description: 'The name of the visitor.'
         required: true
-        example: ut
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       email:
         name: email
         description: 'The email address of the visitor.'
         required: true
-        example: treutel.brock@example.com
+        example: durgan.deja@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       message:
         name: message
         description: 'The body of the message.'
         required: true
-        example: modi
+        example: eaque
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       cf-turnstile-response:
         name: cf-turnstile-response
         description: 'Cloudflare Turnstile ReCaptcha token'
         required: true
-        example: dignissimos
+        example: error
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
-      name: ut
-      email: treutel.brock@example.com
-      message: modi
-      cf-turnstile-response: dignissimos
+      name: qui
+      email: durgan.deja@example.net
+      message: eaque
+      cf-turnstile-response: error
     fileParameters: []
     responses: []
     responseFields: []
@@ -677,19 +717,21 @@ endpoints:
         name: first_name
         description: 'Полето value мора да има помалку од 50 карактери.'
         required: true
-        example: j
+        example: sag
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       email:
         name: email
         description: 'Полето value не е во валиден формат.'
         required: true
-        example: alta11@example.net
+        example: ptowne@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       cf-turnstile-response:
         name: cf-turnstile-response
@@ -699,10 +741,11 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
-      first_name: j
-      email: alta11@example.net
+      first_name: sag
+      email: ptowne@example.org
     fileParameters: []
     responses: []
     responseFields: []

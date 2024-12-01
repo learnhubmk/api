@@ -30,6 +30,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_by:
         name: sort_by
@@ -39,6 +40,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_direction:
         name: sort_direction
@@ -48,6 +50,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       per_page:
         name: per_page
@@ -57,6 +60,7 @@ endpoints:
         type: integer
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanQueryParameters:
       query: john
@@ -73,15 +77,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 7cc1218a-f92c-47b0-9e5e-6d2ba07e94ba
           vary: Origin
+          x-treblle-trace-id: 301836c3-d2c9-45b4-9dcb-306a1ec970f0
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6g4h81akP6dEcDZefV5ab3v'
+      - 'Bearer Dfdakb481PhvcEe35ag6ZV6'
     controller: null
     method: null
     route: null
@@ -116,6 +120,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -125,6 +130,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -134,6 +140,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
       email: johndoes@learnhub.mk
@@ -145,7 +152,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 36h4gVf8EZvD6dc51akbPea'
+      - 'Bearer 1PgfZh3c4Dk865bE6Vveada'
     controller: null
     method: null
     route: null
@@ -171,13 +178,14 @@ endpoints:
         name: id
         description: 'The ID of the administrator.'
         required: true
-        example: totam
+        example: natus
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: totam
+      id: natus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -190,15 +198,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 4cebabdd-9b7c-49e5-8db1-a60b57a07d9e
           vary: Origin
+          x-treblle-trace-id: 72764717-24e1-43ae-8f9a-e078ad6d785a
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer c61f5PaZDgaev84bV3Edkh6'
+      - 'Bearer cP6DVZ1agebda386hE4vf5k'
     controller: null
     method: null
     route: null
@@ -226,13 +234,14 @@ endpoints:
         name: id
         description: 'The ID of the administrator.'
         required: true
-        example: ratione
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: ratione
+      id: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -244,6 +253,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -253,6 +263,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -262,18 +273,20 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       status:
         name: status
         description: ''
         required: true
-        example: banned
+        example: active
         type: string
         enumValues:
           - active
           - banned
           - deleted
         exampleWasSpecified: false
+        nullable: false
         custom: []
       image:
         name: image
@@ -283,12 +296,13 @@ endpoints:
         type: file
         enumValues: []
         exampleWasSpecified: false
+        nullable: true
         custom: []
     cleanBodyParameters:
       email: johndoes@learnhub.mk
       first_name: John
       last_name: Doe
-      status: banned
+      status: active
     fileParameters:
       image: null
     responses: []
@@ -296,7 +310,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D16bad6gfca4eZhk83vPEV5'
+      - 'Bearer e6aPv8hfcba6Ek35D1gVZ4d'
     controller: null
     method: null
     route: null
@@ -322,13 +336,14 @@ endpoints:
         name: id
         description: 'The ID of the administrator.'
         required: true
-        example: id
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: id
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -339,7 +354,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4ea5dc6vkEZPbD6Vh3afg18'
+      - 'Bearer dVgaEDeP6a68Z53vkb1hfc4'
     controller: null
     method: null
     route: null
@@ -371,6 +386,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_by:
         name: sort_by
@@ -380,6 +396,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_direction:
         name: sort_direction
@@ -389,6 +406,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       per_page:
         name: per_page
@@ -398,6 +416,7 @@ endpoints:
         type: integer
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanQueryParameters:
       query: john
@@ -414,15 +433,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 27eb143e-2adf-4389-8b1c-74ddd9601a95
           vary: Origin
+          x-treblle-trace-id: a9558709-857a-45a6-b5d5-1691a07fd125
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer k5fg4DbZahdEc6ae68v3P1V'
+      - 'Bearer DZvc15ed3P6aVfgEk6a8bh4'
     controller: null
     method: null
     route: null
@@ -457,6 +476,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -466,6 +486,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -475,6 +496,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
       email: johndoes@gmail.com
@@ -486,7 +508,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Dca4d6bg3f1Pk8EhvZa6Ve5'
+      - 'Bearer V8gfhPDbdEZ6c5aav1e6k43'
     controller: null
     method: null
     route: null
@@ -512,13 +534,14 @@ endpoints:
         name: id
         description: 'The ID of the member.'
         required: true
-        example: qui
+        example: quasi
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: qui
+      id: quasi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -531,15 +554,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 0d696681-3fa9-4c6e-8f7e-74bb357dab1a
           vary: Origin
+          x-treblle-trace-id: 0987f93c-285f-47ba-81e8-75ec044f8bf9
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 5v3P4baD1fZa86kEe6hdVcg'
+      - 'Bearer EehZ664gfdac5akb13vVPD8'
     controller: null
     method: null
     route: null
@@ -567,13 +590,14 @@ endpoints:
         name: id
         description: 'The ID of the member.'
         required: true
-        example: minus
+        example: doloribus
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: minus
+      id: doloribus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -585,6 +609,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -594,6 +619,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -603,18 +629,20 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       status:
         name: status
         description: ''
         required: true
-        example: active
+        example: deleted
         type: string
         enumValues:
           - active
           - banned
           - deleted
         exampleWasSpecified: false
+        nullable: false
         custom: []
       image:
         name: image
@@ -624,12 +652,13 @@ endpoints:
         type: file
         enumValues: []
         exampleWasSpecified: false
+        nullable: true
         custom: []
     cleanBodyParameters:
       email: johndoes@gmail.com
       first_name: John
       last_name: Doe
-      status: active
+      status: deleted
     fileParameters:
       image: null
     responses: []
@@ -637,7 +666,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1c8g66aa35dbDehZ4vEVfPk'
+      - 'Bearer 6bgvafhdP4E65Z1c8DakVe3'
     controller: null
     method: null
     route: null
@@ -663,13 +692,14 @@ endpoints:
         name: id
         description: 'The ID of the member.'
         required: true
-        example: placeat
+        example: aspernatur
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: placeat
+      id: aspernatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -680,7 +710,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6af36ZDkh4158cdVavEbePg'
+      - 'Bearer aahb8cdZg6D6k1Pf3Vve54E'
     controller: null
     method: null
     route: null
@@ -712,6 +742,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_by:
         name: sort_by
@@ -721,6 +752,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       sort_direction:
         name: sort_direction
@@ -730,6 +762,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       per_page:
         name: per_page
@@ -739,6 +772,7 @@ endpoints:
         type: integer
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanQueryParameters:
       query: john
@@ -755,15 +789,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 439e9f2d-5086-4790-b08f-24dda4b83083
           vary: Origin
+          x-treblle-trace-id: 0fc29f16-3254-4074-a8fb-3333f654280c
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Vh84ZDc6vfdab3Ee15agP6k'
+      - 'Bearer 8ZdDag345ekcPhavbEVf616'
     controller: null
     method: null
     route: null
@@ -798,6 +832,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -807,6 +842,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -816,6 +852,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
       email: johndoes@learnhub.mk
@@ -827,7 +864,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Eebc4h85avDPZfa3Vg6k1d6'
+      - 'Bearer 5D314vaPVdhZ6Eb8f6kgeac'
     controller: null
     method: null
     route: null
@@ -853,13 +890,14 @@ endpoints:
         name: id
         description: 'The ID of the content manager.'
         required: true
-        example: laudantium
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: laudantium
+      id: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -872,15 +910,15 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 75b30660-4545-40c6-9166-23509009addf
           vary: Origin
+          x-treblle-trace-id: c4aef372-fe57-47f1-a26f-caf99d392996
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer e6bkcPhg568V4EZDfvda3a1'
+      - 'Bearer Vc8gbZ56Da6h3ak1vfdPE4e'
     controller: null
     method: null
     route: null
@@ -908,13 +946,14 @@ endpoints:
         name: id
         description: 'The ID of the content manager.'
         required: true
-        example: quae
+        example: vero
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: quae
+      id: vero
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -926,6 +965,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -935,6 +975,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -944,18 +985,20 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       status:
         name: status
         description: ''
         required: true
-        example: banned
+        example: deleted
         type: string
         enumValues:
           - active
           - banned
           - deleted
         exampleWasSpecified: false
+        nullable: false
         custom: []
       image:
         name: image
@@ -965,12 +1008,13 @@ endpoints:
         type: file
         enumValues: []
         exampleWasSpecified: false
+        nullable: true
         custom: []
     cleanBodyParameters:
       email: johndoes@learnhub.mk
       first_name: John
       last_name: Doe
-      status: banned
+      status: deleted
     fileParameters:
       image: null
     responses: []
@@ -978,7 +1022,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Ed686b3v5Zhc4fVkPaDae1g'
+      - 'Bearer fZeEa4d6gV5k1avPh68b3cD'
     controller: null
     method: null
     route: null
@@ -1004,13 +1048,14 @@ endpoints:
         name: id
         description: 'The ID of the content manager.'
         required: true
-        example: explicabo
+        example: earum
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
-      id: explicabo
+      id: earum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1021,7 +1066,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PdEv365k164eZhaVgbfacD8'
+      - 'Bearer Za5bhkdvP6834Vc1DfaEg6e'
     controller: null
     method: null
     route: null

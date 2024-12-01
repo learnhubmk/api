@@ -25,6 +25,7 @@ class BlogPostTagsController extends Controller
     #[Group('Content')]
     #[QueryParam('sort', 'string', required: false, example: 'name, -name', enum: ['name'])]
     #[QueryParam('search', 'string', required: false, example: 'name')]
+    #[QueryParam('per_page', 'integer', required: false)]
     public function index(Request $request)
     {
         $query = BlogPostTag::query()
@@ -45,9 +46,9 @@ class BlogPostTagsController extends Controller
                     $query->orderBy($sortColumn, $sortDirection);
 
                 }
-            );
+            )->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
-        return BlogPostTagResource::collection($query->paginate(20));
+        return BlogPostTagResource::collection($query);
     }
 
     #[Authenticated]

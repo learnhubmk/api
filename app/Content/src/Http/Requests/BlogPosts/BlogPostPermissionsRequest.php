@@ -2,8 +2,11 @@
 
 namespace App\Content\Http\Requests\BlogPosts;
 
+use App\Framework\Enums\BlogPostStatus;
 use App\Framework\Enums\RoleName;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class BlogPostPermissionsRequest extends FormRequest
 {
@@ -18,12 +21,13 @@ class BlogPostPermissionsRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-            //
+            'status' => ['required', 'string', new Enum(BlogPostStatus::class)],
+            'publish_date' => ['nullable', 'date_format:Y-m-d H:i:s']
         ];
     }
 }

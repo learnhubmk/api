@@ -32,6 +32,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       password:
         name: password
@@ -41,6 +42,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       first_name:
         name: first_name
@@ -50,6 +52,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       last_name:
         name: last_name
@@ -59,6 +62,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       image:
         name: image
@@ -68,6 +72,7 @@ endpoints:
         type: file
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanBodyParameters:
       email: example@test.com
@@ -110,6 +115,7 @@ endpoints:
           - google
           - linkedin
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
       provider: google
@@ -121,12 +127,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 41ce1f16-205f-4b39-802f-c4624ffde64a
           vary: Origin
+          x-treblle-trace-id: aa987477-113d-4349-bf8b-5db2dd62f785
         description: null
         custom: []
     responseFields: []
@@ -162,6 +168,7 @@ endpoints:
           - google
           - linkedin
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
       provider: google
@@ -266,7 +273,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php",
-                      "line": 53,
+                      "line": 52,
                       "function": "getAccessTokenResponse",
                       "class": "Laravel\\Socialite\\Two\\AbstractProvider",
                       "type": "->"
@@ -287,14 +294,14 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 260,
+                      "line": 265,
                       "function": "dispatch",
                       "class": "Illuminate\\Routing\\ControllerDispatcher",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 206,
+                      "line": 211,
                       "function": "runController",
                       "class": "Illuminate\\Routing\\Route",
                       "type": "->"
@@ -315,7 +322,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php",
-                      "line": 47,
+                      "line": 37,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -462,7 +469,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 57,
+                      "line": 58,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -588,14 +595,14 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
+                      "line": 43,
                       "function": "Illuminate\\Container\\{closure}",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
+                      "line": 95,
                       "function": "unwrapIfClosure",
                       "class": "Illuminate\\Container\\Util",
                       "type": "::"
@@ -609,7 +616,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 690,
+                      "line": 694,
                       "function": "call",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
@@ -637,21 +644,21 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 1047,
+                      "line": 1094,
                       "function": "run",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 316,
+                      "line": 342,
                       "function": "doRunCommand",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 167,
+                      "line": 193,
                       "function": "doRun",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
@@ -675,8 +682,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-treblle-trace-id: 92bdcf84-3728-44b6-a163-2bdda9f9d428
           vary: Origin
+          x-treblle-trace-id: 56450ac1-c856-4cf9-879b-4a9b6dcf9755
         description: null
         custom: []
     responseFields: []
@@ -709,6 +716,7 @@ endpoints:
         type: integer
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
       hash:
         name: hash
@@ -718,6 +726,7 @@ endpoints:
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
         custom: []
     cleanUrlParameters:
       id: 1
@@ -893,7 +902,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 57,
+                      "line": 58,
                       "function": "Illuminate\\Pipeline\\{closure}",
                       "class": "Illuminate\\Pipeline\\Pipeline",
                       "type": "->"
@@ -1019,14 +1028,14 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
+                      "line": 43,
                       "function": "Illuminate\\Container\\{closure}",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
+                      "line": 95,
                       "function": "unwrapIfClosure",
                       "class": "Illuminate\\Container\\Util",
                       "type": "::"
@@ -1040,7 +1049,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 690,
+                      "line": 694,
                       "function": "call",
                       "class": "Illuminate\\Container\\BoundMethod",
                       "type": "::"
@@ -1068,21 +1077,21 @@ endpoints:
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 1047,
+                      "line": 1094,
                       "function": "run",
                       "class": "Illuminate\\Console\\Command",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 316,
+                      "line": 342,
                       "function": "doRunCommand",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"
                   },
                   {
                       "file": "/var/www/vendor/symfony/console/Application.php",
-                      "line": 167,
+                      "line": 193,
                       "function": "doRun",
                       "class": "Symfony\\Component\\Console\\Application",
                       "type": "->"

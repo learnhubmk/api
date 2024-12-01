@@ -27,6 +27,7 @@ class BlogPostController extends Controller
     #[QueryParam('tags', 'string', required: false, example: '[php,laravel,react]')]
     #[QueryParam('author', 'string', required: false, example: 'john')]
     #[QueryParam('sort', 'string', required: false, example: 'title', enum: ['id', 'title', 'publish_date', 'created_at'])]
+    #[QueryParam('per_page', 'integer', required: false)]
     public function index(BlogPostPermissionsRequest $request): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
@@ -49,7 +50,7 @@ class BlogPostController extends Controller
             ->when($request->get('sort'), function ($query) use ($request) {
                 $query->orderByDesc($request->sort);
             })
-            ->paginate(15);
+            ->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
         return BlogPostsResource::collection($blogs);
     }
