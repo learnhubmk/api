@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -7,7 +10,7 @@ return [
     | Application Name
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application, which will be used when the
+    | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | other UI elements where an application name needs to be displayed.
     |
@@ -48,13 +51,15 @@ return [
     |
     | This URL is used by the console to properly generate URLs when using
     | the Artisan command line tool. You should set this to the root of
-    | the application so that it's available within Artisan commands.
+    | your application so that it is used when running Artisan tasks.
     |
     */
 
     'url' => env('APP_URL', 'http://localhost'),
 
     'password_reset_url' => env('APP_PASSWORD_RESET_URL', env('APP_URL') . ':' . env('APP_PORT') . '/password-resets'),
+
+    'asset_url' => env('ASSET_URL'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,6 +102,8 @@ return [
     |
     */
 
+    'key' => env('APP_KEY'),
+
     'cipher' => 'AES-256-CBC',
 
     'key' => env('APP_KEY'),
@@ -124,4 +131,48 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'redis'),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Autoloaded Service Providers
+    |--------------------------------------------------------------------------
+    |
+    | The service providers listed here will be automatically loaded on the
+    | request to your application. Feel free to add your own services to
+    | this array to grant expanded functionality to your applications.
+    |
+    */
+
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        /*
+         * Package Service Providers...
+         */
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+
+        /*
+         * Application Service Providers...
+         */
+        \App\Framework\Providers\AppServiceProvider::class,
+        \App\Framework\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        \App\Framework\Providers\EventServiceProvider::class,
+        \App\Framework\Providers\HorizonServiceProvider::class,
+        \App\Framework\Providers\RouteServiceProvider::class,
+    ])->toArray(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Class Aliases
+    |--------------------------------------------------------------------------
+    |
+    | This array of class aliases will be registered when this application
+    | is started. However, feel free to register as many as you wish as
+    | the aliases are "lazy" loaded so they don't hinder performance.
+    |
+    */
+
+    'aliases' => Facade::defaultAliases()->merge([
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
+    ])->toArray(),
+
 ];
