@@ -10,6 +10,7 @@ use App\Framework\Http\Controllers\Controller;
 use App\Framework\Enums\BlogPostStatus;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
@@ -24,7 +25,8 @@ class BlogPostController extends Controller
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post')]
     #[Group('Content')]
     #[QueryParam('title', 'string', required: false, example: 'learnhub')]
-    #[QueryParam('tags', 'string', required: false, example: '[php,laravel,react]')]
+    #[QueryParam('status', 'string', required: false, example: 'published', enum: ['draft', 'archived', 'published', 'in_review'])]
+    #[QueryParam('tags', 'string[]', required: false, example: ['php', 'javascript', 'mysql'])]
     #[QueryParam('author', 'string', required: false, example: 'john')]
     #[QueryParam('sort', 'string', required: false, example: 'title', enum: ['id', 'title', 'publish_date', 'created_at'])]
     #[QueryParam('per_page', 'integer', required: false)]
@@ -46,6 +48,9 @@ class BlogPostController extends Controller
                     $authorQuery->where('first_name', 'like', "%$request->author%")
                         ->orWhere('last_name', 'like', "%$request->author%");
                 });
+            })
+            ->when($request->get('status'), function ($query) use ($request) {
+                $query->where('status', $request->get('status'));
             })
             ->when($request->get('sort'), function ($query) use ($request) {
                 $query->orderByDesc($request->sort);

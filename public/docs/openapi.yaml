@@ -189,7 +189,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the administrator.'
-        example: natus
+        example: et
         required: true
         schema:
           type: string
@@ -375,7 +375,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the member.'
-        example: quasi
+        example: quod
         required: true
         schema:
           type: string
@@ -532,7 +532,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: deleted
+                  example: active
                   nullable: false
                   enum:
                     - active
@@ -561,7 +561,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the content manager.'
-        example: est
+        example: sit
         required: true
         schema:
           type: string
@@ -605,12 +605,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: florine.powlowski@example.com
+                  example: labadie.georgette@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: repellat
+                  example: cum
                   nullable: false
               required:
                 - email
@@ -674,12 +674,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: uweimann@example.com
+                  example: billie.herman@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: sit
+                  example: consequuntur
                   nullable: false
               required:
                 - email
@@ -743,12 +743,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: hudson.katharina@example.net
+                  example: vgibson@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: qui
+                  example: voluptatem
                   nullable: false
               required:
                 - email
@@ -857,7 +857,7 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: wisoky.merl@example.com
+                  example: jerod67@example.org
                   nullable: false
               required:
                 - email
@@ -881,17 +881,17 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: ad
                   nullable: false
                 email:
                   type: password
                   description: token
-                  example: flatley.zakary@example.com
+                  example: arnulfo61@example.net
                   nullable: false
                 password:
                   type: string
                   description: 'Полето value мора да има минимум 8 карактери.'
-                  example: '`)BbyO^'
+                  example: ;$y1JB
                   nullable: false
               required:
                 - token
@@ -917,15 +917,38 @@ paths:
             nullable: false
         -
           in: query
-          name: tags
+          name: status
           description: ''
-          example: '[php,laravel,react]'
+          example: published
           required: false
           schema:
             type: string
             description: ''
-            example: '[php,laravel,react]'
+            example: published
             nullable: false
+            enum:
+              - draft
+              - archived
+              - published
+              - in_review
+        -
+          in: query
+          name: tags
+          description: ''
+          example:
+            - php
+            - javascript
+            - mysql
+          required: false
+          schema:
+            type: array
+            description: ''
+            example:
+              - php
+              - javascript
+              - mysql
+            items:
+              type: string
         -
           in: query
           name: author
@@ -957,12 +980,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 3
+          example: 4
           required: false
           schema:
             type: integer
             description: ''
-            example: 3
+            example: 4
             nullable: false
       responses:
         401:
@@ -979,30 +1002,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                status:
-                  type: string
-                  description: ''
-                  example: archived
-                  nullable: false
-                  enum:
-                    - draft
-                    - published
-                    - in_review
-                    - archived
-                publish_date:
-                  type: string
-                  description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-                  example: '2024-12-01 02:38:26'
-                  nullable: true
-              required:
-                - status
     post:
       summary: 'Create Blog posts'
       operationId: createBlogPosts
@@ -1065,30 +1064,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                status:
-                  type: string
-                  description: ''
-                  example: published
-                  nullable: false
-                  enum:
-                    - draft
-                    - published
-                    - in_review
-                    - archived
-                publish_date:
-                  type: string
-                  description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-                  example: '2024-12-01 02:38:27'
-                  nullable: true
-              required:
-                - status
     put:
       summary: 'Update Blog post'
       operationId: updateBlogPost
@@ -1138,36 +1113,12 @@ paths:
       responses: {  }
       tags:
         - Content
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                status:
-                  type: string
-                  description: ''
-                  example: archived
-                  nullable: false
-                  enum:
-                    - draft
-                    - published
-                    - in_review
-                    - archived
-                publish_date:
-                  type: string
-                  description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-                  example: '2024-12-01 02:38:27'
-                  nullable: true
-              required:
-                - status
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: non
+        example: sit
         required: true
         schema:
           type: string
@@ -1205,12 +1156,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 20
+          example: 4
           required: false
           schema:
             type: integer
             description: ''
-            example: 20
+            example: 4
             nullable: false
       responses:
         401:
@@ -1285,7 +1236,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post tag.'
-        example: nihil
+        example: consectetur
         required: true
         schema:
           type: string
@@ -1305,15 +1256,15 @@ paths:
             schema:
               type: object
               properties:
-                status:
-                  type: string
-                  description: ''
-                  example: 'draft, published, in_review, archive'
-                  nullable: false
                 publish_date:
                   type: date
                   description: ''
                   example: '2024-01-01'
+                  nullable: false
+                status:
+                  type: string
+                  description: ''
+                  example: 'draft, published, in_review, archive'
                   nullable: false
               required:
                 - status
@@ -1322,7 +1273,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: vero
+        example: rem
         required: true
         schema:
           type: string
@@ -3050,23 +3001,23 @@ paths:
           in: query
           name: title
           description: ''
-          example: sapiente
+          example: quaerat
           required: false
           schema:
             type: string
             description: ''
-            example: sapiente
+            example: quaerat
             nullable: false
         -
           in: query
           name: per_page
           description: ''
-          example: 14
+          example: 3
           required: false
           schema:
             type: integer
             description: ''
-            example: 14
+            example: 3
             nullable: false
       responses:
         200:
@@ -3076,7 +3027,55 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    -
+                      title: 'Placeat quaerat totam quas voluptas eaque ea.'
+                      slug: placeat-quaerat-totam-quas-voluptas-eaque-ea
+                      excerpt: 'Quam sed quibusdam et incidunt et.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-28'
+                      author:
+                        first_name: 'Nikki Ledner'
+                        last_name: Bode
+                        image: null
+                    -
+                      title: 'Nobis quia quia eaque dolore quaerat ut.'
+                      slug: nobis-quia-quia-eaque-dolore-quaerat-ut
+                      excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-28'
+                      author:
+                        first_name: 'Justen Blanda'
+                        last_name: Boyer
+                        image: null
+                    -
+                      title: 'Voluptatem accusamus quis itaque quaerat vero.'
+                      slug: voluptatem-accusamus-quis-itaque-quaerat-vero
+                      excerpt: 'Aut enim doloremque quae voluptatem libero est quia.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-28'
+                      author:
+                        first_name: 'Nikki Ledner'
+                        last_name: Bode
+                        image: null
                   links:
                     first: 'http://learnhub.test/blog-posts?page=1'
                     last: 'http://learnhub.test/blog-posts?page=1'
@@ -3084,7 +3083,7 @@ paths:
                     next: null
                   meta:
                     current_page: 1
-                    from: null
+                    from: 1
                     last_page: 1
                     links:
                       -
@@ -3100,13 +3099,103 @@ paths:
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-posts'
-                    per_page: 14
-                    to: null
-                    total: 0
+                    per_page: 3
+                    to: 3
+                    total: 3
                 properties:
                   data:
                     type: array
-                    example: []
+                    example:
+                      -
+                        title: 'Placeat quaerat totam quas voluptas eaque ea.'
+                        slug: placeat-quaerat-totam-quas-voluptas-eaque-ea
+                        excerpt: 'Quam sed quibusdam et incidunt et.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-28'
+                        author:
+                          first_name: 'Nikki Ledner'
+                          last_name: Bode
+                          image: null
+                      -
+                        title: 'Nobis quia quia eaque dolore quaerat ut.'
+                        slug: nobis-quia-quia-eaque-dolore-quaerat-ut
+                        excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-28'
+                        author:
+                          first_name: 'Justen Blanda'
+                          last_name: Boyer
+                          image: null
+                      -
+                        title: 'Voluptatem accusamus quis itaque quaerat vero.'
+                        slug: voluptatem-accusamus-quis-itaque-quaerat-vero
+                        excerpt: 'Aut enim doloremque quae voluptatem libero est quia.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-28'
+                        author:
+                          first_name: 'Nikki Ledner'
+                          last_name: Bode
+                          image: null
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Placeat quaerat totam quas voluptas eaque ea.'
+                        slug:
+                          type: string
+                          example: placeat-quaerat-totam-quas-voluptas-eaque-ea
+                        excerpt:
+                          type: string
+                          example: 'Quam sed quibusdam et incidunt et.'
+                        tags:
+                          type: array
+                          example:
+                            -
+                              name: php
+                            -
+                              name: laravel
+                            -
+                              name: react
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                example: php
+                        publish_date:
+                          type: string
+                          example: '2024-07-28'
+                        author:
+                          type: object
+                          properties:
+                            first_name:
+                              type: string
+                              example: 'Nikki Ledner'
+                            last_name:
+                              type: string
+                              example: Bode
+                            image:
+                              type: string
+                              example: null
                   links:
                     type: object
                     properties:
@@ -3129,8 +3218,8 @@ paths:
                         type: integer
                         example: 1
                       from:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       last_page:
                         type: integer
                         example: 1
@@ -3166,13 +3255,13 @@ paths:
                         example: 'http://learnhub.test/blog-posts'
                       per_page:
                         type: integer
-                        example: 14
+                        example: 3
                       to:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 3
                       total:
                         type: integer
-                        example: 0
+                        example: 3
       tags:
         - Website
       security: []
@@ -3897,7 +3986,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: alias
+        example: aut
         required: true
         schema:
           type: string
@@ -3911,12 +4000,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 7
+          example: 18
           required: false
           schema:
             type: integer
             description: ''
-            example: 7
+            example: 18
             nullable: false
       responses:
         200:
@@ -3941,15 +4030,37 @@ paths:
                       name: design
                     -
                       name: development
+                    -
+                      name: docker
+                    -
+                      name: java
+                    -
+                      name: javascript
+                    -
+                      name: laravel
+                    -
+                      name: marketing
+                    -
+                      name: mongodb
+                    -
+                      name: mysql
+                    -
+                      name: nodejs
+                    -
+                      name: php
+                    -
+                      name: postgresql
+                    -
+                      name: python
                   links:
                     first: 'http://learnhub.test/blog-post-tags?page=1'
-                    last: 'http://learnhub.test/blog-post-tags?page=4'
+                    last: 'http://learnhub.test/blog-post-tags?page=2'
                     prev: null
                     next: 'http://learnhub.test/blog-post-tags?page=2'
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 4
+                    last_page: 2
                     links:
                       -
                         url: null
@@ -3964,20 +4075,12 @@ paths:
                         label: '2'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=3'
-                        label: '3'
-                        active: false
-                      -
-                        url: 'http://learnhub.test/blog-post-tags?page=4'
-                        label: '4'
-                        active: false
-                      -
                         url: 'http://learnhub.test/blog-post-tags?page=2'
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-post-tags'
-                    per_page: 7
-                    to: 7
+                    per_page: 18
+                    to: 18
                     total: 23
                 properties:
                   data:
@@ -3997,6 +4100,28 @@ paths:
                         name: design
                       -
                         name: development
+                      -
+                        name: docker
+                      -
+                        name: java
+                      -
+                        name: javascript
+                      -
+                        name: laravel
+                      -
+                        name: marketing
+                      -
+                        name: mongodb
+                      -
+                        name: mysql
+                      -
+                        name: nodejs
+                      -
+                        name: php
+                      -
+                        name: postgresql
+                      -
+                        name: python
                     items:
                       type: object
                       properties:
@@ -4011,7 +4136,7 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=4'
+                        example: 'http://learnhub.test/blog-post-tags?page=2'
                       prev:
                         type: string
                         example: null
@@ -4029,7 +4154,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 4
+                        example: 2
                       links:
                         type: array
                         example:
@@ -4044,14 +4169,6 @@ paths:
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=2'
                             label: '2'
-                            active: false
-                          -
-                            url: 'http://learnhub.test/blog-post-tags?page=3'
-                            label: '3'
-                            active: false
-                          -
-                            url: 'http://learnhub.test/blog-post-tags?page=4'
-                            label: '4'
                             active: false
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=2'
@@ -4074,10 +4191,10 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags'
                       per_page:
                         type: integer
-                        example: 7
+                        example: 18
                       to:
                         type: integer
-                        example: 7
+                        example: 18
                       total:
                         type: integer
                         example: 23
@@ -4094,12 +4211,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 16
+          example: 8
           required: false
           schema:
             type: integer
             description: ''
-            example: 16
+            example: 8
             nullable: false
       responses:
         200:
@@ -4111,8 +4228,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/corporis?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/corporis?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/architecto?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4125,15 +4242,15 @@ paths:
                         label: '&laquo; Претходна'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/corporis?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/architecto?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Следна &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/corporis'
-                    per_page: 16
+                    path: 'http://learnhub.test/blog-post-tags/architecto'
+                    per_page: 8
                     to: null
                     total: 0
                 properties:
@@ -4145,10 +4262,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/corporis?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/architecto?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/corporis?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/architecto?page=1'
                       prev:
                         type: string
                         example: null
@@ -4175,7 +4292,7 @@ paths:
                             label: '&laquo; Претходна'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/corporis?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/architecto?page=1'
                             label: '1'
                             active: true
                           -
@@ -4196,10 +4313,10 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/corporis'
+                        example: 'http://learnhub.test/blog-post-tags/architecto'
                       per_page:
                         type: integer
-                        example: 16
+                        example: 8
                       to:
                         type: string
                         example: null
@@ -4214,7 +4331,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: corporis
+        example: architecto
         required: true
         schema:
           type: string
@@ -4237,22 +4354,22 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: qui
+                  example: asperiores
                   nullable: false
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: durgan.deja@example.net
+                  example: barrows.buck@example.com
                   nullable: false
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: eaque
+                  example: deserunt
                   nullable: false
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: error
+                  example: voluptate
                   nullable: false
               required:
                 - name
@@ -4279,12 +4396,12 @@ paths:
                 first_name:
                   type: string
                   description: 'Полето value мора да има помалку од 50 карактери.'
-                  example: sag
+                  example: rvftylacigrgbqgrjqr
                   nullable: false
                 email:
                   type: string
                   description: 'Полето value не е во валиден формат.'
-                  example: ptowne@example.org
+                  example: lwehner@example.net
                   nullable: false
                 cf-turnstile-response:
                   type: string

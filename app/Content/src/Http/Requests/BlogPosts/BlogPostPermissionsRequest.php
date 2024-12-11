@@ -25,9 +25,6 @@ class BlogPostPermissionsRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'status' => ['required', 'string', new Enum(BlogPostStatus::class)],
-            'publish_date' => ['nullable', 'date_format:Y-m-d H:i:s']
-        ];
+        return [];
     }
 }
