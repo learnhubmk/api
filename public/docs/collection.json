@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "LearnHub API Documentation",
-        "_postman_id": "25c9e005-ac21-49c2-8381-62eaf83f0a50",
+        "_postman_id": "fd8fd5d1-50cf-47c5-a9a5-996accb4400c",
         "description": "The documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -80,7 +80,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "301836c3-d2c9-45b4-9dcb-306a1ec970f0"
+                                    "value": "15174c4a-c803-4922-aa04-aea9a65329e1"
                                 }
                             ],
                             "code": 401,
@@ -129,7 +129,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "natus",
+                                    "value": "et",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -161,7 +161,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "72764717-24e1-43ae-8f9a-e078ad6d785a"
+                                    "value": "5602ef21-db72-442d-a493-37b8db2af991"
                                 }
                             ],
                             "code": 401,
@@ -182,7 +182,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "aut",
+                                    "value": "quo",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -253,7 +253,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "quia",
                                     "description": "The ID of the administrator."
                                 }
                             ]
@@ -331,7 +331,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "a9558709-857a-45a6-b5d5-1691a07fd125"
+                                    "value": "1ff9da6f-fcb9-40c3-866d-cbec190d2502"
                                 }
                             ],
                             "code": 401,
@@ -380,7 +380,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quasi",
+                                    "value": "quod",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -412,7 +412,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "0987f93c-285f-47ba-81e8-75ec044f8bf9"
+                                    "value": "6e7b2f3e-3025-44e7-bd43-0a348c8ca04b"
                                 }
                             ],
                             "code": 401,
@@ -433,7 +433,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "doloribus",
+                                    "value": "voluptas",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -504,7 +504,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "aspernatur",
+                                    "value": "hic",
                                     "description": "The ID of the member."
                                 }
                             ]
@@ -582,7 +582,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "0fc29f16-3254-4074-a8fb-3333f654280c"
+                                    "value": "a9d0b1fd-7d91-4c52-a2aa-9301d5313f11"
                                 }
                             ],
                             "code": 401,
@@ -631,7 +631,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "sit",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -663,7 +663,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "c4aef372-fe57-47f1-a26f-caf99d392996"
+                                    "value": "cae9cf46-4ce1-40f9-b1b0-3fbc1345acaf"
                                 }
                             ],
                             "code": 401,
@@ -684,7 +684,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vero",
+                                    "value": "aliquid",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -723,7 +723,7 @@
                                 },
                                 {
                                     "key": "status",
-                                    "value": "deleted",
+                                    "value": "active",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -755,7 +755,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "earum",
+                                    "value": "vel",
                                     "description": "The ID of the content manager."
                                 }
                             ]
@@ -814,7 +814,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "3848ad38-a518-4a44-b9ff-efe0a453a841"
+                                    "value": "6cc0fefa-09f4-40a0-b63d-76c95c2fb6a6"
                                 }
                             ],
                             "code": 401,
@@ -845,7 +845,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"florine.powlowski@example.com\",\"password\":\"repellat\"}"
+                            "raw": "{\"email\":\"labadie.georgette@example.com\",\"password\":\"cum\"}"
                         },
                         "description": "This endpoint enables users with admin role to sign in",
                         "auth": {
@@ -932,7 +932,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "03cef3c3-2838-4e57-ac0e-0afdeded7f4f"
+                                    "value": "b79d6cb6-9e68-4f69-844f-4086a2521ee6"
                                 }
                             ],
                             "code": 401,
@@ -963,7 +963,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"uweimann@example.com\",\"password\":\"sit\"}"
+                            "raw": "{\"email\":\"billie.herman@example.com\",\"password\":\"consequuntur\"}"
                         },
                         "description": "This endpoint enables users with content role to sign in",
                         "auth": {
@@ -1050,7 +1050,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "63023774-aaba-4425-b6e7-ecf514e7f956"
+                                    "value": "b8e4142f-5d13-4af7-a10c-72aa34d68a8d"
                                 }
                             ],
                             "code": 401,
@@ -1081,7 +1081,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"hudson.katharina@example.net\",\"password\":\"qui\"}"
+                            "raw": "{\"email\":\"vgibson@example.com\",\"password\":\"voluptatem\"}"
                         },
                         "description": "This endpoint enables users with member role to sign in",
                         "auth": {
@@ -1179,7 +1179,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "74ae8b2c-263c-4fa7-8d86-298f9d860071"
+                                    "value": "6f2bb37b-4374-47d3-b886-c525a0fa36b9"
                                 }
                             ],
                             "code": 200,
@@ -1235,7 +1235,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "913aa96e-1651-4a39-a9c6-2736d9fa42f6"
+                                    "value": "f214eb60-0952-401e-ac0f-2d2efe677680"
                                 }
                             ],
                             "code": 422,
@@ -1266,7 +1266,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"wisoky.merl@example.com\"}"
+                            "raw": "{\"email\":\"jerod67@example.org\"}"
                         },
                         "description": "This endpoint enables to send reset link for forgotten password",
                         "auth": {
@@ -1297,7 +1297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"token\":\"voluptas\",\"email\":\"flatley.zakary@example.com\",\"password\":\"`)BbyO^\"}"
+                            "raw": "{\"token\":\"ad\",\"email\":\"arnulfo61@example.net\",\"password\":\";$y1JB\"}"
                         },
                         "description": "This endpoint enables to set new password.[IMPORTANT] Please add the password_confirmation also!!",
                         "auth": {
@@ -1326,8 +1326,26 @@
                                     "disabled": false
                                 },
                                 {
-                                    "key": "tags",
-                                    "value": "%5Bphp%2Claravel%2Creact%5D",
+                                    "key": "status",
+                                    "value": "published",
+                                    "description": "",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tags[0]",
+                                    "value": "php",
+                                    "description": "",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tags[1]",
+                                    "value": "javascript",
+                                    "description": "",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tags[2]",
+                                    "value": "mysql",
                                     "description": "",
                                     "disabled": false
                                 },
@@ -1345,28 +1363,21 @@
                                 },
                                 {
                                     "key": "per_page",
-                                    "value": "3",
+                                    "value": "4",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/content\/blog-posts?title=learnhub&tags=%5Bphp%2Claravel%2Creact%5D&author=john&sort=title&per_page=3"
+                            "raw": "{{baseUrl}}\/content\/blog-posts?title=learnhub&status=published&tags[0]=php&tags[1]=javascript&tags[2]=mysql&author=john&sort=title&per_page=4"
                         },
                         "method": "GET",
                         "header": [
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"status\":\"archived\",\"publish_date\":\"2024-12-01 02:38:26\"}"
-                        },
+                        "body": null,
                         "description": "This endpoint list all blog post"
                     },
                     "response": [
@@ -1386,7 +1397,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "d2e31acb-16c3-4b99-8882-270fea1fa212"
+                                    "value": "7b6e9bcd-22f7-4c29-a743-8af67083a97c"
                                 }
                             ],
                             "code": 401,
@@ -1435,7 +1446,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "sit",
                                     "description": "The ID of the blog post."
                                 }
                             ]
@@ -1445,16 +1456,9 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"status\":\"published\",\"publish_date\":\"2024-12-01 02:38:27\"}"
-                        },
+                        "body": null,
                         "description": "This endpoint returns a single blog post"
                     },
                     "response": [
@@ -1474,7 +1478,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "14fedaff-396e-4d9d-9814-52c6484c431f"
+                                    "value": "877062d6-2d72-4352-a72a-d0f88dd1e935"
                                 }
                             ],
                             "code": 401,
@@ -1495,7 +1499,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quas",
+                                    "value": "perferendis",
                                     "description": "The ID of the blog post."
                                 }
                             ]
@@ -1531,7 +1535,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "at",
+                                    "value": "quae",
                                     "description": "The ID of the blog post."
                                 }
                             ]
@@ -1541,16 +1545,9 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"status\":\"archived\",\"publish_date\":\"2024-12-01 02:38:27\"}"
-                        },
+                        "body": null,
                         "description": "This endpoint deletes blog post"
                     },
                     "response": []
@@ -1576,12 +1573,12 @@
                                 },
                                 {
                                     "key": "per_page",
-                                    "value": "20",
+                                    "value": "4",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/content\/blog-post-tags?sort=name%2C+-name&search=name&per_page=20"
+                            "raw": "{{baseUrl}}\/content\/blog-post-tags?sort=name%2C+-name&search=name&per_page=4"
                         },
                         "method": "GET",
                         "header": [
@@ -1610,7 +1607,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "2c4f94bc-e27f-4481-9e07-e3c8bf4c08a4"
+                                    "value": "fb5ebd66-9439-4344-84b0-043bf5646560"
                                 }
                             ],
                             "code": 401,
@@ -1659,7 +1656,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nihil",
+                                    "value": "consectetur",
                                     "description": "The ID of the blog post tag."
                                 }
                             ]
@@ -1695,7 +1692,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "cumque",
+                                    "value": "consequuntur",
                                     "description": "The ID of the blog post tag."
                                 }
                             ]
@@ -1724,7 +1721,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vero",
+                                    "value": "rem",
                                     "description": "The ID of the blog post."
                                 }
                             ]
@@ -1742,7 +1739,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"status\":\"draft, published, in_review, archive\",\"publish_date\":\"2024-01-01\"}"
+                            "raw": "{\"publish_date\":\"2024-01-01\",\"status\":\"draft, published, in_review, archive\"}"
                         },
                         "description": "This endpoint publish or unpublish blog post"
                     },
@@ -1793,7 +1790,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "cb3b7270-fd58-4e31-af0f-7038070daa55"
+                                    "value": "a6f4ac12-4479-40b4-bf4c-26e6c461de5b"
                                 }
                             ],
                             "code": 200,
@@ -1916,7 +1913,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "aa987477-113d-4349-bf8b-5db2dd62f785"
+                                    "value": "1179ed0d-eaab-4c33-8241-9f85393fbb8f"
                                 }
                             ],
                             "code": 200,
@@ -1972,7 +1969,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "56450ac1-c856-4cf9-879b-4a9b6dcf9755"
+                                    "value": "ed0e9f83-7982-4fff-bfd2-a92ef3bb059c"
                                 }
                             ],
                             "code": 500,
@@ -2054,18 +2051,18 @@
                             "query": [
                                 {
                                     "key": "title",
-                                    "value": "sapiente",
+                                    "value": "quaerat",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "per_page",
-                                    "value": "14",
+                                    "value": "3",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-posts?title=sapiente&per_page=14"
+                            "raw": "{{baseUrl}}\/blog-posts?title=quaerat&per_page=3"
                         },
                         "method": "GET",
                         "header": [
@@ -2097,11 +2094,11 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "20a710e0-972d-44db-a15d-a6bd62b4ad10"
+                                    "value": "d14d64e3-9229-45eb-8904-06292d2162a5"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":14,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[{\"title\":\"Placeat quaerat totam quas voluptas eaque ea.\",\"slug\":\"placeat-quaerat-totam-quas-voluptas-eaque-ea\",\"excerpt\":\"Quam sed quibusdam et incidunt et.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-28\",\"author\":{\"first_name\":\"Nikki Ledner\",\"last_name\":\"Bode\",\"image\":null}},{\"title\":\"Nobis quia quia eaque dolore quaerat ut.\",\"slug\":\"nobis-quia-quia-eaque-dolore-quaerat-ut\",\"excerpt\":\"Vitae amet autem recusandae aut sit culpa.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-28\",\"author\":{\"first_name\":\"Justen Blanda\",\"last_name\":\"Boyer\",\"image\":null}},{\"title\":\"Voluptatem accusamus quis itaque quaerat vero.\",\"slug\":\"voluptatem-accusamus-quis-itaque-quaerat-vero\",\"excerpt\":\"Aut enim doloremque quae voluptatem libero est quia.\",\"tags\":[{\"name\":\"php\"},{\"name\":\"laravel\"},{\"name\":\"react\"}],\"publish_date\":\"2024-07-28\",\"author\":{\"first_name\":\"Nikki Ledner\",\"last_name\":\"Bode\",\"image\":null}}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-posts\",\"per_page\":3,\"to\":3,\"total\":3}}",
                             "name": ""
                         }
                     ]
@@ -2118,7 +2115,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "alias",
+                                    "value": "aut",
                                     "description": "The slug of the blog post."
                                 }
                             ]
@@ -2153,7 +2150,7 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "29c6b5a4-698e-408a-accf-224e16695e49"
+                                    "value": "ad042431-111d-4ae1-b608-0065fb5beed9"
                                 }
                             ],
                             "code": 404,
@@ -2171,12 +2168,12 @@
                             "query": [
                                 {
                                     "key": "per_page",
-                                    "value": "7",
+                                    "value": "18",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-post-tags?per_page=7"
+                            "raw": "{{baseUrl}}\/blog-post-tags?per_page=18"
                         },
                         "method": "GET",
                         "header": [
@@ -2208,11 +2205,11 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "24786a39-4077-494f-96a7-81be6b280c06"
+                                    "value": "d984b1a2-c07c-4a8b-abd1-c790805a9ed3"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=4\",\"prev\":null,\"next\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":4,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=3\",\"label\":\"3\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=4\",\"label\":\"4\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\",\"per_page\":7,\"to\":7,\"total\":23}}",
+                            "body": "{\"data\":[{\"name\":\".net\"},{\"name\":\"algorithms\"},{\"name\":\"c#\"},{\"name\":\"c++\"},{\"name\":\"databases\"},{\"name\":\"design\"},{\"name\":\"development\"},{\"name\":\"docker\"},{\"name\":\"java\"},{\"name\":\"javascript\"},{\"name\":\"laravel\"},{\"name\":\"marketing\"},{\"name\":\"mongodb\"},{\"name\":\"mysql\"},{\"name\":\"nodejs\"},{\"name\":\"php\"},{\"name\":\"postgresql\"},{\"name\":\"python\"}],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags?page=2\",\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\",\"per_page\":18,\"to\":18,\"total\":23}}",
                             "name": ""
                         }
                     ]
@@ -2226,17 +2223,17 @@
                             "query": [
                                 {
                                     "key": "per_page",
-                                    "value": "16",
+                                    "value": "8",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/blog-post-tags\/:tag?per_page=16",
+                            "raw": "{{baseUrl}}\/blog-post-tags\/:tag?per_page=8",
                             "variable": [
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "corporis",
+                                    "value": "architecto",
                                     "description": ""
                                 }
                             ]
@@ -2271,11 +2268,11 @@
                                 },
                                 {
                                     "key": "x-treblle-trace-id",
-                                    "value": "977eaa1b-9240-4f3d-bd86-3c4c1a90100d"
+                                    "value": "51b7cb2a-03fd-4cde-9736-f7df4bf8699f"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/corporis?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/corporis?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/corporis?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/corporis\",\"per_page\":16,\"to\":null,\"total\":0}}",
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/architecto?page=1\",\"last\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/architecto?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; \\u041f\\u0440\\u0435\\u0442\\u0445\\u043e\\u0434\\u043d\\u0430\",\"active\":false},{\"url\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/architecto?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u0421\\u043b\\u0435\\u0434\\u043d\\u0430 &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/learnhub.test\\\/blog-post-tags\\\/architecto\",\"per_page\":8,\"to\":null,\"total\":0}}",
                             "name": ""
                         }
                     ]
@@ -2302,7 +2299,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"qui\",\"email\":\"durgan.deja@example.net\",\"message\":\"eaque\",\"cf-turnstile-response\":\"error\"}"
+                            "raw": "{\"name\":\"asperiores\",\"email\":\"barrows.buck@example.com\",\"message\":\"deserunt\",\"cf-turnstile-response\":\"voluptate\"}"
                         },
                         "description": "This endpoint is used for submitting contact form data.",
                         "auth": {
@@ -2333,7 +2330,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"sag\",\"email\":\"ptowne@example.org\"}"
+                            "raw": "{\"first_name\":\"rvftylacigrgbqgrjqr\",\"email\":\"lwehner@example.net\"}"
                         },
                         "description": " This endpoint is for subscribing to the Leanhub.mk newsletter.",
                         "auth": {

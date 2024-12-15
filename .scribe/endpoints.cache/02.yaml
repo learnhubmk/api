@@ -19,7 +19,6 @@ endpoints:
     headers:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
-      Content-Type: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
@@ -33,12 +32,29 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      status:
+        name: status
+        description: ''
+        required: false
+        example: published
+        type: string
+        enumValues:
+          - draft
+          - archived
+          - published
+          - in_review
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       tags:
         name: tags
         description: ''
         required: false
-        example: '[php,laravel,react]'
-        type: string
+        example:
+          - php
+          - javascript
+          - mysql
+        type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -71,7 +87,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 3
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -79,38 +95,16 @@ endpoints:
         custom: []
     cleanQueryParameters:
       title: learnhub
-      tags: '[php,laravel,react]'
+      status: published
+      tags:
+        - php
+        - javascript
+        - mysql
       author: john
       sort: title
-      per_page: 3
-    bodyParameters:
-      status:
-        name: status
-        description: ''
-        required: true
-        example: archived
-        type: string
-        enumValues:
-          - draft
-          - published
-          - in_review
-          - archived
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      publish_date:
-        name: publish_date
-        description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-        required: false
-        example: '2024-12-01 02:38:26'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      status: archived
-      publish_date: '2024-12-01 02:38:26'
+      per_page: 4
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
@@ -120,14 +114,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: d2e31acb-16c3-4b99-8882-270fea1fa212
+          x-treblle-trace-id: 7b6e9bcd-22f7-4c29-a743-8af67083a97c
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer c6Db1fegZ8ahVa5P4Ekv63d'
+      - 'Bearer hkfE4gda6bVv158cePaD6Z3'
     controller: null
     method: null
     route: null
@@ -205,7 +199,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer v3V84eaDZd6k5gfabPh1Ec6'
+      - 'Bearer a3Ea16v8Vfg45Zhdb6ceDPk'
     controller: null
     method: null
     route: null
@@ -226,50 +220,23 @@ endpoints:
     headers:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
-      Content-Type: application/json
     urlParameters:
       id:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: non
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: non
+      id: sit
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      status:
-        name: status
-        description: ''
-        required: true
-        example: published
-        type: string
-        enumValues:
-          - draft
-          - published
-          - in_review
-          - archived
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      publish_date:
-        name: publish_date
-        description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-        required: false
-        example: '2024-12-01 02:38:27'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      status: published
-      publish_date: '2024-12-01 02:38:27'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
@@ -279,14 +246,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 14fedaff-396e-4d9d-9814-52c6484c431f
+          x-treblle-trace-id: 877062d6-2d72-4352-a72a-d0f88dd1e935
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer bhaD843geE6av6PcZVdf1k5'
+      - 'Bearer 6baev8dP1a364V5ZfkcDhEg'
     controller: null
     method: null
     route: null
@@ -314,14 +281,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: quas
+        example: perferendis
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: quas
+      id: perferendis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -387,7 +354,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer g1ea3VDEc4df68k6vZbah5P'
+      - 'Bearer fPag36Vvk15bZ48aedD6cEh'
     controller: null
     method: null
     route: null
@@ -408,57 +375,30 @@ endpoints:
     headers:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
-      Content-Type: application/json
     urlParameters:
       id:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: at
+        example: quae
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: at
+      id: quae
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      status:
-        name: status
-        description: ''
-        required: true
-        example: archived
-        type: string
-        enumValues:
-          - draft
-          - published
-          - in_review
-          - archived
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      publish_date:
-        name: publish_date
-        description: 'Must be a valid date in the format <code>Y-m-d H:i:s</code>.'
-        required: false
-        example: '2024-12-01 02:38:27'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      status: archived
-      publish_date: '2024-12-01 02:38:27'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 14Zhkdv83Da6aVEb5e6gfPc'
+      - 'Bearer Zc1Ekbe46Df53ga6PvVh8da'
     controller: null
     method: null
     route: null
@@ -509,7 +449,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 20
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -518,7 +458,7 @@ endpoints:
     cleanQueryParameters:
       sort: 'name, -name'
       search: name
-      per_page: 20
+      per_page: 4
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -530,14 +470,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 2c4f94bc-e27f-4481-9e07-e3c8bf4c08a4
+          x-treblle-trace-id: fb5ebd66-9439-4344-84b0-043bf5646560
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer g3kd8ZEc1ba46Pahef5v6VD'
+      - 'Bearer Z38ge6a4dvVPa6Ek1Dfcbh5'
     controller: null
     method: null
     route: null
@@ -582,7 +522,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f1dcPZg6khE4856VeDv3baa'
+      - 'Bearer dk685aP4hEe6gv3cfDZVab1'
     controller: null
     method: null
     route: null
@@ -610,14 +550,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: nihil
+        example: consectetur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: nihil
+      id: consectetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -639,7 +579,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer e36d1DakPbhEa6vgVcfZ584'
+      - 'Bearer v1c3h6g85Zfk4Vab6eaEPdD'
     controller: null
     method: null
     route: null
@@ -665,14 +605,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: cumque
+        example: consequuntur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: cumque
+      id: consequuntur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -683,7 +623,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 46Eg3bchvfa5dPak6D1ZVe8'
+      - 'Bearer 56gbevh1kP6adfV3c4DE8aZ'
     controller: null
     method: null
     route: null
@@ -710,27 +650,17 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: vero
+        example: rem
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: vero
+      id: rem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      status:
-        name: status
-        description: ''
-        required: true
-        example: 'draft, published, in_review, archive'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
       publish_date:
         name: publish_date
         description: ''
@@ -741,16 +671,26 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: 'draft, published, in_review, archive'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
     cleanBodyParameters:
-      status: 'draft, published, in_review, archive'
       publish_date: '2024-01-01'
+      status: 'draft, published, in_review, archive'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Vgk6deZaPaE5fh8cbD36v14'
+      - 'Bearer P68dbvE3e4Z1g5acD6Vkfah'
     controller: null
     method: null
     route: null
