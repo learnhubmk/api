@@ -10,7 +10,6 @@ use App\Framework\Http\Controllers\Controller;
 use App\Framework\Enums\BlogPostStatus;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;

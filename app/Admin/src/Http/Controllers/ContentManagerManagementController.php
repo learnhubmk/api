@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\RestoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
@@ -156,6 +157,22 @@ class ContentManagerManagementController
             $contentManager->contentManagerProfile()->delete();
             $contentManager->delete();
         });
+
+        return response()->noContent();
+    }
+
+    #[Authenticated]
+    #[Endpoint(title: 'Restore Deleted Content Manager', description: 'This endpoint restores deleted content manager profile')]
+    #[Group('Admin')]
+    public function restore(RestoreContentManagerManagementRequest $request, int $id): Response
+    {
+        /** @var User $contentManager */
+        $contentManager = User::query()
+            ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
+            ->onlyTrashed()
+            ->findOrFail($id);
+
+        $contentManager->restore();
 
         return response()->noContent();
     }
