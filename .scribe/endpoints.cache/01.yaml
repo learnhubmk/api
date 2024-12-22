@@ -34,14 +34,13 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 6cc0fefa-09f4-40a0-b63d-76c95c2fb6a6
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer h1VgaZev5E4D6c6P8ad3fkb'
+      - 'Bearer 6cEvh4ZV1a6aD3Pebk8d5fg'
     controller: null
     method: null
     route: null
@@ -71,25 +70,23 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: labadie.georgette@example.com
+        example: blanda.jerry@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: cum
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanBodyParameters:
-      email: labadie.georgette@example.com
-      password: cum
+      email: blanda.jerry@example.com
+      password: sed
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,7 +123,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gheVDadZ5fkEa1bvPc46683'
+      - 'Bearer ba8hf3EgDVa1c4Pe6Zdk5v6'
     controller: null
     method: null
     route: null
@@ -159,7 +156,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a8D354kcEedZ16faVv6bghP'
+      - 'Bearer ZgdVavEc864k1DP6hf5ba3e'
     controller: null
     method: null
     route: null
@@ -195,14 +192,13 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: b79d6cb6-9e68-4f69-844f-4086a2521ee6
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer PhaD8vfVecE643kaZ6g15bd'
+      - 'Bearer P6vc4bD6eg8f315EhdakaVZ'
     controller: null
     method: null
     route: null
@@ -232,25 +228,23 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: billie.herman@example.com
+        example: rau.eloy@example.net
         type: password
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: consequuntur
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanBodyParameters:
-      email: billie.herman@example.com
-      password: consequuntur
+      email: rau.eloy@example.net
+      password: non
     fileParameters: []
     responses: []
     responseFields: []
@@ -287,7 +281,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4dg1b3aEPfVh685c6DeaZvk'
+      - 'Bearer 65kac8hgE1fPb6vDdeVZa34'
     controller: null
     method: null
     route: null
@@ -320,7 +314,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bev3aD5ad416cVZhE6gkfP8'
+      - 'Bearer Vv3kaed6EZh4b65aDcP8g1f'
     controller: null
     method: null
     route: null
@@ -356,14 +350,13 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: b8e4142f-5d13-4af7-a10c-72aa34d68a8d
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer vf3chd64kg618eVba5aDPZE'
+      - 'Bearer 6c3vVbP1df8aEDa6Zk5ehg4'
     controller: null
     method: null
     route: null
@@ -393,25 +386,23 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: vgibson@example.com
+        example: estark@example.com
         type: password
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: voluptatem
+        example: atque
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanBodyParameters:
-      email: vgibson@example.com
-      password: voluptatem
+      email: estark@example.com
+      password: atque
     fileParameters: []
     responses: []
     responseFields: []
@@ -448,7 +439,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PaEad3v65D1fghZcekb8V46'
+      - 'Bearer V6a5Z6vfdEb1caPhDe483kg'
     controller: null
     method: null
     route: null
@@ -481,7 +472,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3ZVvab18ch4E6kaPe56dfDg'
+      - 'Bearer 61kac8gV4eh6ZEfdabv53DP'
     controller: null
     method: null
     route: null
@@ -513,7 +504,6 @@ endpoints:
           - google
           - linkedin
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanUrlParameters:
       provider: google
@@ -525,12 +515,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code"}}'
+        content: '{"data":{"redirect_link":"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-treblle-trace-id: a148bd02-d6d3-42fb-87e0-d63946729491
           vary: Origin
-          x-treblle-trace-id: 6f2bb37b-4374-47d3-b886-c525a0fa36b9
         description: null
         custom: []
     responseFields: []
@@ -566,7 +556,6 @@ endpoints:
           - google
           - linkedin
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanUrlParameters:
       provider: google
@@ -582,8 +571,8 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-treblle-trace-id: 6b39b772-e86f-4a50-b847-a850329b0ccb
           vary: Origin
-          x-treblle-trace-id: f214eb60-0952-401e-ac0f-2d2efe677680
         description: null
         custom: []
     responseFields: []
@@ -617,14 +606,13 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jerod67@example.org
+        example: jillian.ebert@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanBodyParameters:
-      email: jerod67@example.org
+      email: jillian.ebert@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -658,36 +646,33 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: ad
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
       email:
         name: email
         description: token
         required: true
-        example: arnulfo61@example.net
+        example: lubowitz.elwyn@example.org
         type: password
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
       password:
         name: password
         description: 'Полето value мора да има минимум 8 карактери.'
         required: true
-        example: ;$y1JB
+        example: 'lkU]*G.B2yKvRH4'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
         custom: []
     cleanBodyParameters:
-      token: ad
-      email: arnulfo61@example.net
-      password: ;$y1JB
+      token: numquam
+      email: lubowitz.elwyn@example.org
+      password: 'lkU]*G.B2yKvRH4'
     fileParameters: []
     responses: []
     responseFields: []

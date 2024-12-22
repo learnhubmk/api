@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\RestoreMemberManagementRequest;
 use App\Admin\Http\Requests\StoreMemberManagementRequest;
 use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
@@ -154,6 +155,22 @@ class MemberManagementController
             $member->memberProfile()->delete();
             $member->delete();
         });
+
+        return response()->noContent();
+    }
+
+    #[Authenticated]
+    #[Endpoint(title: 'Restore Deleted Member', description: 'This endpoint restores deleted member profile')]
+    #[Group('Admin')]
+    public function restore(RestoreMemberManagementRequest $request, int $id): Response
+    {
+        /** @var User $member */
+        $member = User::query()
+            ->whereRelation('roles', 'name', RoleName::MEMBER->value)
+            ->onlyTrashed()
+            ->findOrFail($id);
+
+        $member->restore();
 
         return response()->noContent();
     }

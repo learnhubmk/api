@@ -1,28 +1,29 @@
 <?php
 
-namespace App\Content\Http\Requests\BlogPosts;
+namespace App\Admin\Http\Requests;
 
 use App\Framework\Enums\RoleName;
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class BlogPostPermissionsRequest extends FormRequest
+class RestoreContentManagerManagementRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return $this->user()->hasRole(RoleName::ADMIN) || $this->user()->hasRole(RoleName::CONTENT_MANAGER);
+        return $this->user()->hasRole(RoleName::ADMIN);
     }
 
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, ValidationRule|array<mixed>|string>
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
-        return [];
+        return [
+            //
+        ];
     }
 }

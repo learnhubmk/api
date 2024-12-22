@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\RestoreAdminManagementRequest;
 use App\Admin\Http\Requests\StoreAdminManagementRequest;
 use App\Admin\Http\Requests\UpdateAdminManagementRequest;
 use App\Admin\Http\Resources\AdminManagementResource;
@@ -163,6 +164,23 @@ class AdminManagementController
             $admin->adminProfile()->delete();
             $admin->delete();
         });
+
+        return response()->noContent();
+    }
+
+
+    #[Authenticated]
+    #[Endpoint(title: 'Restore Deleted Administrator', description: 'This endpoint restores deleted admin profile')]
+    #[Group('Admin')]
+    public function restore(RestoreAdminManagementRequest $request, int $id): Response
+    {
+        /** @var User $admin */
+        $admin = User::query()
+            ->whereRelation('roles', 'name', RoleName::ADMIN->value)
+            ->onlyTrashed()
+            ->findOrFail($id);
+
+        $admin->restore();
 
         return response()->noContent();
     }
