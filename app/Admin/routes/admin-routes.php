@@ -11,4 +11,5 @@ Route::group(['prefix' => '/admin', 'middleware' => ['treblle', 'auth:api', 'ver
     Route::apiResource('/content-managers', ContentManagerManagementController::class);
 
     Route::patch('/administrators/{id}/restore', [AdminManagementController::class, 'restore']);
+    Route::patch('/members/{id}/restore', [MemberManagementController::class, 'restore']);
 });

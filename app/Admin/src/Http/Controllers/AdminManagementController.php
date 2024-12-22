@@ -174,6 +174,7 @@ class AdminManagementController
     #[Group('Admin')]
     public function restore(RestoreAdminManagementRequest $request, int $id): Response
     {
+        /** @var User $admin */
         $admin = User::query()
             ->whereRelation('roles', 'name', RoleName::ADMIN->value)
             ->onlyTrashed()
