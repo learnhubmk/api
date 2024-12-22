@@ -2,11 +2,9 @@
 
 namespace App\Content\Http\Requests\BlogPosts;
 
-use App\Framework\Enums\BlogPostStatus;
 use App\Framework\Enums\RoleName;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rules\Enum;
 
 class BlogPostPermissionsRequest extends FormRequest
 {
