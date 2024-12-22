@@ -23,7 +23,6 @@ paths:
             type: string
             description: ''
             example: john
-            nullable: false
         -
           in: query
           name: sort_by
@@ -34,7 +33,6 @@ paths:
             type: string
             description: ''
             example: first_name
-            nullable: false
         -
           in: query
           name: sort_direction
@@ -45,7 +43,6 @@ paths:
             type: string
             description: ''
             example: asc
-            nullable: false
         -
           in: query
           name: per_page
@@ -56,7 +53,6 @@ paths:
             type: integer
             description: ''
             example: '20'
-            nullable: false
       responses:
         401:
           description: ''
@@ -91,17 +87,14 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@learnhub.mk
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
               required:
                 - email
                 - first_name
@@ -146,22 +139,18 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@learnhub.mk
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
                 status:
                   type: string
                   description: ''
-                  example: active
-                  nullable: false
+                  example: banned
                   enum:
                     - active
                     - banned
@@ -170,7 +159,6 @@ paths:
                   type: string
                   format: binary
                   description: 'Must be a file.'
-                  nullable: true
               required:
                 - email
                 - first_name
@@ -189,7 +177,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the administrator.'
-        example: et
+        example: reiciendis
         required: true
         schema:
           type: string
@@ -209,7 +197,6 @@ paths:
             type: string
             description: ''
             example: john
-            nullable: false
         -
           in: query
           name: sort_by
@@ -220,7 +207,6 @@ paths:
             type: string
             description: ''
             example: first_name
-            nullable: false
         -
           in: query
           name: sort_direction
@@ -231,7 +217,6 @@ paths:
             type: string
             description: ''
             example: asc
-            nullable: false
         -
           in: query
           name: per_page
@@ -242,7 +227,6 @@ paths:
             type: integer
             description: ''
             example: '20'
-            nullable: false
       responses:
         401:
           description: ''
@@ -277,17 +261,14 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@gmail.com
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
               required:
                 - email
                 - first_name
@@ -332,22 +313,18 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@gmail.com
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
                 status:
                   type: string
                   description: ''
-                  example: deleted
-                  nullable: false
+                  example: active
                   enum:
                     - active
                     - banned
@@ -356,7 +333,6 @@ paths:
                   type: string
                   format: binary
                   description: 'Must be a file.'
-                  nullable: true
               required:
                 - email
                 - first_name
@@ -375,7 +351,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the member.'
-        example: quod
+        example: unde
         required: true
         schema:
           type: string
@@ -395,7 +371,6 @@ paths:
             type: string
             description: ''
             example: john
-            nullable: false
         -
           in: query
           name: sort_by
@@ -406,7 +381,6 @@ paths:
             type: string
             description: ''
             example: first_name
-            nullable: false
         -
           in: query
           name: sort_direction
@@ -417,7 +391,6 @@ paths:
             type: string
             description: ''
             example: asc
-            nullable: false
         -
           in: query
           name: per_page
@@ -428,7 +401,6 @@ paths:
             type: integer
             description: ''
             example: '20'
-            nullable: false
       responses:
         401:
           description: ''
@@ -463,17 +435,14 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@learnhub.mk
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
               required:
                 - email
                 - first_name
@@ -518,22 +487,18 @@ paths:
                   type: string
                   description: ''
                   example: johndoes@learnhub.mk
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
                 status:
                   type: string
                   description: ''
-                  example: active
-                  nullable: false
+                  example: banned
                   enum:
                     - active
                     - banned
@@ -542,7 +507,6 @@ paths:
                   type: string
                   format: binary
                   description: 'Must be a file.'
-                  nullable: true
               required:
                 - email
                 - first_name
@@ -561,7 +525,61 @@ paths:
         in: path
         name: id
         description: 'The ID of the content manager.'
-        example: sit
+        example: fuga
+        required: true
+        schema:
+          type: string
+  '/admin/administrators/{id}/restore':
+    patch:
+      summary: 'Restore Deleted Administrator'
+      operationId: restoreDeletedAdministrator
+      description: 'This endpoint restores deleted admin profile'
+      parameters: []
+      responses: {  }
+      tags:
+        - Admin
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the administrator.'
+        example: quia
+        required: true
+        schema:
+          type: string
+  '/admin/members/{id}/restore':
+    patch:
+      summary: 'Restore Deleted Member'
+      operationId: restoreDeletedMember
+      description: 'This endpoint restores deleted member profile'
+      parameters: []
+      responses: {  }
+      tags:
+        - Admin
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the member.'
+        example: et
+        required: true
+        schema:
+          type: string
+  '/admin/content-managers/{id}/restore':
+    patch:
+      summary: 'Restore Deleted Content Manager'
+      operationId: restoreDeletedContentManager
+      description: 'This endpoint restores deleted content manager profile'
+      parameters: []
+      responses: {  }
+      tags:
+        - Admin
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the content manager.'
+        example: et
         required: true
         schema:
           type: string
@@ -605,13 +623,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: labadie.georgette@example.com
-                  nullable: false
+                  example: blanda.jerry@example.com
                 password:
                   type: string
                   description: ''
-                  example: cum
-                  nullable: false
+                  example: sed
               required:
                 - email
                 - password
@@ -674,13 +690,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: billie.herman@example.com
-                  nullable: false
+                  example: rau.eloy@example.net
                 password:
                   type: string
                   description: ''
-                  example: consequuntur
-                  nullable: false
+                  example: non
               required:
                 - email
                 - password
@@ -743,13 +757,11 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: vgibson@example.com
-                  nullable: false
+                  example: estark@example.com
                 password:
                   type: string
                   description: ''
-                  example: voluptatem
-                  nullable: false
+                  example: atque
               required:
                 - email
                 - password
@@ -787,14 +799,14 @@ paths:
                 type: object
                 example:
                   data:
-                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code'
+                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
                 properties:
                   data:
                     type: object
                     properties:
                       redirect_link:
                         type: string
-                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code'
+                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
       tags:
         - Authentication
       security: []
@@ -857,8 +869,7 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: jerod67@example.org
-                  nullable: false
+                  example: jillian.ebert@example.org
               required:
                 - email
       security: []
@@ -881,18 +892,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: ad
-                  nullable: false
+                  example: numquam
                 email:
                   type: password
                   description: token
-                  example: arnulfo61@example.net
-                  nullable: false
+                  example: lubowitz.elwyn@example.org
                 password:
                   type: string
                   description: 'Полето value мора да има минимум 8 карактери.'
-                  example: ;$y1JB
-                  nullable: false
+                  example: 'lkU]*G.B2yKvRH4'
               required:
                 - token
                 - email
@@ -914,7 +922,6 @@ paths:
             type: string
             description: ''
             example: learnhub
-            nullable: false
         -
           in: query
           name: status
@@ -925,7 +932,6 @@ paths:
             type: string
             description: ''
             example: published
-            nullable: false
             enum:
               - draft
               - archived
@@ -959,7 +965,6 @@ paths:
             type: string
             description: ''
             example: john
-            nullable: false
         -
           in: query
           name: sort
@@ -970,7 +975,6 @@ paths:
             type: string
             description: ''
             example: title
-            nullable: false
             enum:
               - id
               - title
@@ -980,13 +984,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 4
+          example: 3
           required: false
           schema:
             type: integer
             description: ''
-            example: 4
-            nullable: false
+            example: 3
       responses:
         401:
           description: ''
@@ -1021,17 +1024,14 @@ paths:
                   type: string
                   description: ''
                   example: 'Example Blog Post Title '
-                  nullable: false
                 excerpt:
                   type: string
                   description: ''
                   example: 'This is test blogpost example'
-                  nullable: false
                 content:
                   type: string
                   description: ''
                   example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
-                  nullable: false
                 tags:
                   type: array
                   description: ''
@@ -1083,22 +1083,18 @@ paths:
                   type: string
                   description: ''
                   example: 'Example Blog Post Title '
-                  nullable: false
                 excerpt:
                   type: string
                   description: ''
                   example: 'This is test blogpost example'
-                  nullable: false
                 slug:
                   type: string
                   description: ''
                   example: 'example-blog-post-title '
-                  nullable: false
                 content:
                   type: string
                   description: ''
                   example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
-                  nullable: false
                 tags:
                   type: array
                   description: ''
@@ -1118,7 +1114,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: sit
+        example: sunt
         required: true
         schema:
           type: string
@@ -1138,7 +1134,6 @@ paths:
             type: string
             description: ''
             example: 'name, -name'
-            nullable: false
             enum:
               - name
         -
@@ -1151,18 +1146,16 @@ paths:
             type: string
             description: ''
             example: name
-            nullable: false
         -
           in: query
           name: per_page
           description: ''
-          example: 4
+          example: 14
           required: false
           schema:
             type: integer
             description: ''
-            example: 4
-            nullable: false
+            example: 14
       responses:
         401:
           description: ''
@@ -1197,7 +1190,6 @@ paths:
                   type: string
                   description: ''
                   example: test
-                  nullable: false
               required:
                 - name
   '/content/blog-post-tags/{id}':
@@ -1220,7 +1212,6 @@ paths:
                   type: string
                   description: ''
                   example: test
-                  nullable: false
               required:
                 - name
     delete:
@@ -1236,7 +1227,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post tag.'
-        example: consectetur
+        example: sit
         required: true
         schema:
           type: string
@@ -1260,12 +1251,10 @@ paths:
                   type: date
                   description: ''
                   example: '2024-01-01'
-                  nullable: false
                 status:
                   type: string
                   description: ''
                   example: 'draft, published, in_review, archive'
-                  nullable: false
               required:
                 - status
     parameters:
@@ -1273,7 +1262,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: rem
+        example: et
         required: true
         schema:
           type: string
@@ -1327,27 +1316,22 @@ paths:
                   type: string
                   description: ''
                   example: example@test.com
-                  nullable: false
                 password:
                   type: string
                   description: ''
                   example: password
-                  nullable: false
                 first_name:
                   type: string
                   description: ''
                   example: John
-                  nullable: false
                 last_name:
                   type: string
                   description: ''
                   example: Doe
-                  nullable: false
                 image:
                   type: string
                   format: binary
                   description: ''
-                  nullable: false
               required:
                 - email
                 - password
@@ -1369,14 +1353,14 @@ paths:
                 type: object
                 example:
                   data:
-                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code'
+                    redirect_link: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
                 properties:
                   data:
                     type: object
                     properties:
                       redirect_link:
                         type: string
-                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=471373775047-a78du2vd27cjv5bt1r9ua5mrpii8kloh.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fstaging-api.learnhub.mk%2Flogin%2Fgoogle%2Fredirect&scope=openid+profile+email&response_type=code'
+                        example: 'https://accounts.google.com/o/oauth2/auth?client_id=&redirect_uri=&scope=openid+profile+email&response_type=code'
       tags:
         - Platform
       security: []
@@ -1482,7 +1466,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php
-                      line: 52
+                      line: 53
                       function: getAccessTokenResponse
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
@@ -1500,13 +1484,13 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 265
+                      line: 260
                       function: dispatch
                       class: Illuminate\Routing\ControllerDispatcher
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 211
+                      line: 206
                       function: runController
                       class: Illuminate\Routing\Route
                       type: '->'
@@ -1524,7 +1508,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php
-                      line: 37
+                      line: 47
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -1650,7 +1634,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 58
+                      line: 57
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -1758,13 +1742,13 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 43
+                      line: 41
                       function: 'Illuminate\Container\{closure}'
                       class: Illuminate\Container\BoundMethod
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 95
+                      line: 93
                       function: unwrapIfClosure
                       class: Illuminate\Container\Util
                       type: '::'
@@ -1776,7 +1760,7 @@ paths:
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 694
+                      line: 690
                       function: call
                       class: Illuminate\Container\BoundMethod
                       type: '::'
@@ -1800,19 +1784,19 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 1094
+                      line: 1047
                       function: run
                       class: Illuminate\Console\Command
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 342
+                      line: 316
                       function: doRunCommand
                       class: Symfony\Component\Console\Application
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 193
+                      line: 167
                       function: doRun
                       class: Symfony\Component\Console\Application
                       type: '->'
@@ -1918,7 +1902,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/socialiteproviders/manager/src/OAuth2/AbstractProvider.php
-                        line: 52
+                        line: 53
                         function: getAccessTokenResponse
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
@@ -1936,13 +1920,13 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 265
+                        line: 260
                         function: dispatch
                         class: Illuminate\Routing\ControllerDispatcher
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 211
+                        line: 206
                         function: runController
                         class: Illuminate\Routing\Route
                         type: '->'
@@ -1960,7 +1944,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php
-                        line: 37
+                        line: 47
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -2086,7 +2070,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 58
+                        line: 57
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -2194,13 +2178,13 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 43
+                        line: 41
                         function: 'Illuminate\Container\{closure}'
                         class: Illuminate\Container\BoundMethod
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 95
+                        line: 93
                         function: unwrapIfClosure
                         class: Illuminate\Container\Util
                         type: '::'
@@ -2212,7 +2196,7 @@ paths:
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 694
+                        line: 690
                         function: call
                         class: Illuminate\Container\BoundMethod
                         type: '::'
@@ -2236,19 +2220,19 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 1094
+                        line: 1047
                         function: run
                         class: Illuminate\Console\Command
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 342
+                        line: 316
                         function: doRunCommand
                         class: Symfony\Component\Console\Application
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 193
+                        line: 167
                         function: doRun
                         class: Symfony\Component\Console\Application
                         type: '->'
@@ -2447,7 +2431,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 58
+                      line: 57
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -2555,13 +2539,13 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 43
+                      line: 41
                       function: 'Illuminate\Container\{closure}'
                       class: Illuminate\Container\BoundMethod
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 95
+                      line: 93
                       function: unwrapIfClosure
                       class: Illuminate\Container\Util
                       type: '::'
@@ -2573,7 +2557,7 @@ paths:
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 694
+                      line: 690
                       function: call
                       class: Illuminate\Container\BoundMethod
                       type: '::'
@@ -2597,19 +2581,19 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 1094
+                      line: 1047
                       function: run
                       class: Illuminate\Console\Command
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 342
+                      line: 316
                       function: doRunCommand
                       class: Symfony\Component\Console\Application
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 193
+                      line: 167
                       function: doRun
                       class: Symfony\Component\Console\Application
                       type: '->'
@@ -2775,7 +2759,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 58
+                        line: 57
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -2883,13 +2867,13 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 43
+                        line: 41
                         function: 'Illuminate\Container\{closure}'
                         class: Illuminate\Container\BoundMethod
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 95
+                        line: 93
                         function: unwrapIfClosure
                         class: Illuminate\Container\Util
                         type: '::'
@@ -2901,7 +2885,7 @@ paths:
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 694
+                        line: 690
                         function: call
                         class: Illuminate\Container\BoundMethod
                         type: '::'
@@ -2925,19 +2909,19 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 1094
+                        line: 1047
                         function: run
                         class: Illuminate\Console\Command
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 342
+                        line: 316
                         function: doRunCommand
                         class: Symfony\Component\Console\Application
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 193
+                        line: 167
                         function: doRun
                         class: Symfony\Component\Console\Application
                         type: '->'
@@ -3001,24 +2985,22 @@ paths:
           in: query
           name: title
           description: ''
-          example: quaerat
+          example: distinctio
           required: false
           schema:
             type: string
             description: ''
-            example: quaerat
-            nullable: false
+            example: distinctio
         -
           in: query
           name: per_page
           description: ''
-          example: 3
+          example: 14
           required: false
           schema:
             type: integer
             description: ''
-            example: 3
-            nullable: false
+            example: 14
       responses:
         200:
           description: ''
@@ -3029,9 +3011,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Placeat quaerat totam quas voluptas eaque ea.'
-                      slug: placeat-quaerat-totam-quas-voluptas-eaque-ea
-                      excerpt: 'Quam sed quibusdam et incidunt et.'
+                      title: 'Tenetur aspernatur occaecati animi distinctio nostrum deleniti voluptatum.'
+                      slug: tenetur-aspernatur-occaecati-animi-distinctio-nostrum-deleniti-voluptatum
+                      excerpt: 'Ipsa magnam deserunt qui ut harum repudiandae.'
                       tags:
                         -
                           name: php
@@ -3039,15 +3021,15 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-07-28'
+                      publish_date: '2024-12-22'
                       author:
-                        first_name: 'Nikki Ledner'
-                        last_name: Bode
+                        first_name: 'Dr. Domenico Fisher'
+                        last_name: Stark
                         image: null
                     -
-                      title: 'Nobis quia quia eaque dolore quaerat ut.'
-                      slug: nobis-quia-quia-eaque-dolore-quaerat-ut
-                      excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                      title: 'Et distinctio dolore in et sit eligendi.'
+                      slug: et-distinctio-dolore-in-et-sit-eligendi
+                      excerpt: 'Perspiciatis sed eius ipsam molestiae eum.'
                       tags:
                         -
                           name: php
@@ -3055,26 +3037,10 @@ paths:
                           name: laravel
                         -
                           name: react
-                      publish_date: '2024-07-28'
+                      publish_date: '2024-12-22'
                       author:
-                        first_name: 'Justen Blanda'
-                        last_name: Boyer
-                        image: null
-                    -
-                      title: 'Voluptatem accusamus quis itaque quaerat vero.'
-                      slug: voluptatem-accusamus-quis-itaque-quaerat-vero
-                      excerpt: 'Aut enim doloremque quae voluptatem libero est quia.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-28'
-                      author:
-                        first_name: 'Nikki Ledner'
-                        last_name: Bode
+                        first_name: 'Sanford Kreiger'
+                        last_name: Romaguera
                         image: null
                   links:
                     first: 'http://learnhub.test/blog-posts?page=1'
@@ -3099,17 +3065,17 @@ paths:
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-posts'
-                    per_page: 3
-                    to: 3
-                    total: 3
+                    per_page: 14
+                    to: 2
+                    total: 2
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        title: 'Placeat quaerat totam quas voluptas eaque ea.'
-                        slug: placeat-quaerat-totam-quas-voluptas-eaque-ea
-                        excerpt: 'Quam sed quibusdam et incidunt et.'
+                        title: 'Tenetur aspernatur occaecati animi distinctio nostrum deleniti voluptatum.'
+                        slug: tenetur-aspernatur-occaecati-animi-distinctio-nostrum-deleniti-voluptatum
+                        excerpt: 'Ipsa magnam deserunt qui ut harum repudiandae.'
                         tags:
                           -
                             name: php
@@ -3117,15 +3083,15 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-07-28'
+                        publish_date: '2024-12-22'
                         author:
-                          first_name: 'Nikki Ledner'
-                          last_name: Bode
+                          first_name: 'Dr. Domenico Fisher'
+                          last_name: Stark
                           image: null
                       -
-                        title: 'Nobis quia quia eaque dolore quaerat ut.'
-                        slug: nobis-quia-quia-eaque-dolore-quaerat-ut
-                        excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                        title: 'Et distinctio dolore in et sit eligendi.'
+                        slug: et-distinctio-dolore-in-et-sit-eligendi
+                        excerpt: 'Perspiciatis sed eius ipsam molestiae eum.'
                         tags:
                           -
                             name: php
@@ -3133,39 +3099,23 @@ paths:
                             name: laravel
                           -
                             name: react
-                        publish_date: '2024-07-28'
+                        publish_date: '2024-12-22'
                         author:
-                          first_name: 'Justen Blanda'
-                          last_name: Boyer
-                          image: null
-                      -
-                        title: 'Voluptatem accusamus quis itaque quaerat vero.'
-                        slug: voluptatem-accusamus-quis-itaque-quaerat-vero
-                        excerpt: 'Aut enim doloremque quae voluptatem libero est quia.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-28'
-                        author:
-                          first_name: 'Nikki Ledner'
-                          last_name: Bode
+                          first_name: 'Sanford Kreiger'
+                          last_name: Romaguera
                           image: null
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: 'Placeat quaerat totam quas voluptas eaque ea.'
+                          example: 'Tenetur aspernatur occaecati animi distinctio nostrum deleniti voluptatum.'
                         slug:
                           type: string
-                          example: placeat-quaerat-totam-quas-voluptas-eaque-ea
+                          example: tenetur-aspernatur-occaecati-animi-distinctio-nostrum-deleniti-voluptatum
                         excerpt:
                           type: string
-                          example: 'Quam sed quibusdam et incidunt et.'
+                          example: 'Ipsa magnam deserunt qui ut harum repudiandae.'
                         tags:
                           type: array
                           example:
@@ -3183,16 +3133,16 @@ paths:
                                 example: php
                         publish_date:
                           type: string
-                          example: '2024-07-28'
+                          example: '2024-12-22'
                         author:
                           type: object
                           properties:
                             first_name:
                               type: string
-                              example: 'Nikki Ledner'
+                              example: 'Dr. Domenico Fisher'
                             last_name:
                               type: string
-                              example: Bode
+                              example: Stark
                             image:
                               type: string
                               example: null
@@ -3255,13 +3205,13 @@ paths:
                         example: 'http://learnhub.test/blog-posts'
                       per_page:
                         type: integer
-                        example: 3
+                        example: 14
                       to:
                         type: integer
-                        example: 3
+                        example: 2
                       total:
                         type: integer
-                        example: 3
+                        example: 2
       tags:
         - Website
       security: []
@@ -3282,11 +3232,11 @@ paths:
                   message: 'No query results for model [App\Website\Models\BlogPost].'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                  line: 634
+                  line: 629
                   trace:
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                      line: 582
+                      line: 577
                       function: prepareException
                       class: Illuminate\Foundation\Exceptions\Handler
                       type: '->'
@@ -3310,7 +3260,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php
-                      line: 37
+                      line: 47
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -3436,7 +3386,7 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 58
+                      line: 57
                       function: 'Illuminate\Pipeline\{closure}'
                       class: Illuminate\Pipeline\Pipeline
                       type: '->'
@@ -3544,13 +3494,13 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 43
+                      line: 41
                       function: 'Illuminate\Container\{closure}'
                       class: Illuminate\Container\BoundMethod
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 95
+                      line: 93
                       function: unwrapIfClosure
                       class: Illuminate\Container\Util
                       type: '::'
@@ -3562,7 +3512,7 @@ paths:
                       type: '::'
                     -
                       file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 694
+                      line: 690
                       function: call
                       class: Illuminate\Container\BoundMethod
                       type: '::'
@@ -3586,19 +3536,19 @@ paths:
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 1094
+                      line: 1047
                       function: run
                       class: Illuminate\Console\Command
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 342
+                      line: 316
                       function: doRunCommand
                       class: Symfony\Component\Console\Application
                       type: '->'
                     -
                       file: /var/www/vendor/symfony/console/Application.php
-                      line: 193
+                      line: 167
                       function: doRun
                       class: Symfony\Component\Console\Application
                       type: '->'
@@ -3626,13 +3576,13 @@ paths:
                     example: /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line:
                     type: integer
-                    example: 634
+                    example: 629
                   trace:
                     type: array
                     example:
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
-                        line: 582
+                        line: 577
                         function: prepareException
                         class: Illuminate\Foundation\Exceptions\Handler
                         type: '->'
@@ -3656,7 +3606,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/treblle/treblle-laravel/src/Middlewares/TreblleMiddleware.php
-                        line: 37
+                        line: 47
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -3782,7 +3732,7 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 58
+                        line: 57
                         function: 'Illuminate\Pipeline\{closure}'
                         class: Illuminate\Pipeline\Pipeline
                         type: '->'
@@ -3890,13 +3840,13 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 43
+                        line: 41
                         function: 'Illuminate\Container\{closure}'
                         class: Illuminate\Container\BoundMethod
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 95
+                        line: 93
                         function: unwrapIfClosure
                         class: Illuminate\Container\Util
                         type: '::'
@@ -3908,7 +3858,7 @@ paths:
                         type: '::'
                       -
                         file: /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 694
+                        line: 690
                         function: call
                         class: Illuminate\Container\BoundMethod
                         type: '::'
@@ -3932,19 +3882,19 @@ paths:
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 1094
+                        line: 1047
                         function: run
                         class: Illuminate\Console\Command
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 342
+                        line: 316
                         function: doRunCommand
                         class: Symfony\Component\Console\Application
                         type: '->'
                       -
                         file: /var/www/vendor/symfony/console/Application.php
-                        line: 193
+                        line: 167
                         function: doRun
                         class: Symfony\Component\Console\Application
                         type: '->'
@@ -3968,7 +3918,7 @@ paths:
                           example: /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                         line:
                           type: integer
-                          example: 582
+                          example: 577
                         function:
                           type: string
                           example: prepareException
@@ -3986,7 +3936,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: aut
+        example: ea
         required: true
         schema:
           type: string
@@ -4000,13 +3950,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 18
+          example: 2
           required: false
           schema:
             type: integer
             description: ''
-            example: 18
-            nullable: false
+            example: 2
       responses:
         200:
           description: ''
@@ -4020,47 +3969,15 @@ paths:
                       name: .net
                     -
                       name: algorithms
-                    -
-                      name: 'c#'
-                    -
-                      name: c++
-                    -
-                      name: databases
-                    -
-                      name: design
-                    -
-                      name: development
-                    -
-                      name: docker
-                    -
-                      name: java
-                    -
-                      name: javascript
-                    -
-                      name: laravel
-                    -
-                      name: marketing
-                    -
-                      name: mongodb
-                    -
-                      name: mysql
-                    -
-                      name: nodejs
-                    -
-                      name: php
-                    -
-                      name: postgresql
-                    -
-                      name: python
                   links:
                     first: 'http://learnhub.test/blog-post-tags?page=1'
-                    last: 'http://learnhub.test/blog-post-tags?page=2'
+                    last: 'http://learnhub.test/blog-post-tags?page=12'
                     prev: null
                     next: 'http://learnhub.test/blog-post-tags?page=2'
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 2
+                    last_page: 12
                     links:
                       -
                         url: null
@@ -4075,12 +3992,52 @@ paths:
                         label: '2'
                         active: false
                       -
+                        url: 'http://learnhub.test/blog-post-tags?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=11'
+                        label: '11'
+                        active: false
+                      -
+                        url: 'http://learnhub.test/blog-post-tags?page=12'
+                        label: '12'
+                        active: false
+                      -
                         url: 'http://learnhub.test/blog-post-tags?page=2'
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-post-tags'
-                    per_page: 18
-                    to: 18
+                    per_page: 2
+                    to: 2
                     total: 23
                 properties:
                   data:
@@ -4090,38 +4047,6 @@ paths:
                         name: .net
                       -
                         name: algorithms
-                      -
-                        name: 'c#'
-                      -
-                        name: c++
-                      -
-                        name: databases
-                      -
-                        name: design
-                      -
-                        name: development
-                      -
-                        name: docker
-                      -
-                        name: java
-                      -
-                        name: javascript
-                      -
-                        name: laravel
-                      -
-                        name: marketing
-                      -
-                        name: mongodb
-                      -
-                        name: mysql
-                      -
-                        name: nodejs
-                      -
-                        name: php
-                      -
-                        name: postgresql
-                      -
-                        name: python
                     items:
                       type: object
                       properties:
@@ -4136,7 +4061,7 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=2'
+                        example: 'http://learnhub.test/blog-post-tags?page=12'
                       prev:
                         type: string
                         example: null
@@ -4154,7 +4079,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 2
+                        example: 12
                       links:
                         type: array
                         example:
@@ -4169,6 +4094,46 @@ paths:
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=2'
                             label: '2'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=11'
+                            label: '11'
+                            active: false
+                          -
+                            url: 'http://learnhub.test/blog-post-tags?page=12'
+                            label: '12'
                             active: false
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=2'
@@ -4191,10 +4156,10 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags'
                       per_page:
                         type: integer
-                        example: 18
+                        example: 2
                       to:
                         type: integer
-                        example: 18
+                        example: 2
                       total:
                         type: integer
                         example: 23
@@ -4211,13 +4176,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 8
+          example: 13
           required: false
           schema:
             type: integer
             description: ''
-            example: 8
-            nullable: false
+            example: 13
       responses:
         200:
           description: ''
@@ -4228,8 +4192,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/architecto?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/sequi?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/sequi?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4242,15 +4206,15 @@ paths:
                         label: '&laquo; Претходна'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/sequi?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Следна &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/architecto'
-                    per_page: 8
+                    path: 'http://learnhub.test/blog-post-tags/sequi'
+                    per_page: 13
                     to: null
                     total: 0
                 properties:
@@ -4262,10 +4226,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/sequi?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/sequi?page=1'
                       prev:
                         type: string
                         example: null
@@ -4292,7 +4256,7 @@ paths:
                             label: '&laquo; Претходна'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/architecto?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/sequi?page=1'
                             label: '1'
                             active: true
                           -
@@ -4313,10 +4277,10 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/architecto'
+                        example: 'http://learnhub.test/blog-post-tags/sequi'
                       per_page:
                         type: integer
-                        example: 8
+                        example: 13
                       to:
                         type: string
                         example: null
@@ -4331,7 +4295,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: architecto
+        example: sequi
         required: true
         schema:
           type: string
@@ -4354,23 +4318,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: asperiores
-                  nullable: false
+                  example: in
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: barrows.buck@example.com
-                  nullable: false
+                  example: mbaumbach@example.org
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: deserunt
-                  nullable: false
+                  example: autem
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: voluptate
-                  nullable: false
+                  example: neque
               required:
                 - name
                 - email
@@ -4396,18 +4356,15 @@ paths:
                 first_name:
                   type: string
                   description: 'Полето value мора да има помалку од 50 карактери.'
-                  example: rvftylacigrgbqgrjqr
-                  nullable: false
+                  example: tqzwhljmezrpmarlxyfzqz
                 email:
                   type: string
                   description: 'Полето value не е во валиден формат.'
-                  example: lwehner@example.net
-                  nullable: false
+                  example: mtremblay@example.org
                 cf-turnstile-response:
                   type: string
                   description: ''
                   example: null
-                  nullable: false
               required:
                 - first_name
                 - email
