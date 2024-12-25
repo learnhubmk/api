@@ -2,26 +2,26 @@
 
 namespace App\Website\Tests\Feature;
 
-use App\Website\Mail\ContactEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
+use Illuminate\Support\Facades\Mail;
+use App\Website\Mail\ContactEmail;
 
 class ContactControllerTest extends TestCase
 {
-    use RefreshDatabase;
     use WithFaker;
+    use RefreshDatabase;
 
     /** @test */
-    public function contact_form_submission_succeeds(): void
+    public function contact_form_submission_succeeds()
     {
         Mail::fake();
 
         $formData = [
             'name' => 'Malista',
             'email' => 'malista.polikala@onnet.mk',
-            'message' => 'Test message content',
+            'message' => 'Test message content'
         ];
 
         $response = $this->postJson(route('contact'), $formData);
@@ -38,7 +38,7 @@ class ContactControllerTest extends TestCase
     }
 
     /** @test */
-    public function contact_form_submission_fails_on_mail_error(): void
+    public function contact_form_submission_fails_on_mail_error()
     {
         Mail::fake();
 
@@ -48,7 +48,7 @@ class ContactControllerTest extends TestCase
         $formData = [
             'name' => 'Malista',
             'email' => 'malista.polikala@on.net.mk',
-            'message' => 'Test failure message content',
+            'message' => 'Test failure message content'
         ];
 
         $response = $this->postJson(route('contact'), $formData);

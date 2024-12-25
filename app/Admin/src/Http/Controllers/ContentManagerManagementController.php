@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\RestoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
@@ -30,10 +31,10 @@ class ContentManagerManagementController
     #[Authenticated]
     #[Endpoint(title: 'Content managers Listing', description: 'This endpoint lists all content managers')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: "?query=john")]
-    #[QueryParam('sort_by', 'string', required: false, example: "?sort_by=first_name")]
-    #[QueryParam('sort_direction', 'string', required: false, example: "?sort_direction=asc")]
-    #[QueryParam('per_page', 'integer', required: false, example: "?per_page=20")]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -104,7 +105,7 @@ class ContentManagerManagementController
             return $contentManager;
         });
 
-        return new ContentManagerManagementResource($contentManager);
+        return new ContentManagerManagementResource($contentManager->fresh());
     }
 
     /**
@@ -156,6 +157,22 @@ class ContentManagerManagementController
             $contentManager->contentManagerProfile()->delete();
             $contentManager->delete();
         });
+
+        return response()->noContent();
+    }
+
+    #[Authenticated]
+    #[Endpoint(title: 'Restore Deleted Content Manager', description: 'This endpoint restores deleted content manager profile')]
+    #[Group('Admin')]
+    public function restore(RestoreContentManagerManagementRequest $request, int $id): Response
+    {
+        /** @var User $contentManager */
+        $contentManager = User::query()
+            ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
+            ->onlyTrashed()
+            ->findOrFail($id);
+
+        $contentManager->restore();
 
         return response()->noContent();
     }

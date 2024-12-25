@@ -2,6 +2,7 @@
 
 namespace App\Admin\Http\Controllers;
 
+use App\Admin\Http\Requests\RestoreMemberManagementRequest;
 use App\Admin\Http\Requests\StoreMemberManagementRequest;
 use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
@@ -30,10 +31,10 @@ class MemberManagementController
     #[Authenticated]
     #[Endpoint(title: 'Members Listing', description: 'This endpoint lists all members')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: "?query=john")]
-    #[QueryParam('sort_by', 'string', required: false, example: "?sort_by=first_name")]
-    #[QueryParam('sort_direction', 'string', required: false, example: "?sort_direction=asc")]
-    #[QueryParam('per_page', 'integer', required: false, example: "?per_page=20")]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -132,7 +133,7 @@ class MemberManagementController
             'image' => $image ?? $member->memberProfile->image
         ]);
 
-        return new MemberManagementResource($member);
+        return new MemberManagementResource($member->fresh());
     }
 
     /**
@@ -154,6 +155,22 @@ class MemberManagementController
             $member->memberProfile()->delete();
             $member->delete();
         });
+
+        return response()->noContent();
+    }
+
+    #[Authenticated]
+    #[Endpoint(title: 'Restore Deleted Member', description: 'This endpoint restores deleted member profile')]
+    #[Group('Admin')]
+    public function restore(RestoreMemberManagementRequest $request, int $id): Response
+    {
+        /** @var User $member */
+        $member = User::query()
+            ->whereRelation('roles', 'name', RoleName::MEMBER->value)
+            ->onlyTrashed()
+            ->findOrFail($id);
+
+        $member->restore();
 
         return response()->noContent();
     }

@@ -3,7 +3,7 @@
 namespace App\Website\Http\Controllers;
 
 use App\Framework\Http\Controllers\Controller;
-use App\Website\Enums\BlogPostStatus;
+use App\Framework\Enums\BlogPostStatus;
 use App\Website\Http\Resources\Blogs\BlogPostsResource;
 use App\Website\Http\Resources\Blogs\SingleBlogPostResource;
 use App\Website\Models\BlogPost;
@@ -18,6 +18,7 @@ class BlogPostController extends Controller
     #[Endpoint(title: 'Blog posts', description: 'This endpoint list all blog post from newest ones to the oldest.Additionally you may use ?title= query param to filter by title')]
     #[Group('Website')]
     #[QueryParam('title', 'string', required: false)]
+    #[QueryParam('per_page', 'integer', required: false)]
     public function index(Request $request): AnonymousResourceCollection
     {
         $blogs = BlogPost::with('author', 'tags')
@@ -26,7 +27,7 @@ class BlogPostController extends Controller
                 return $query->where('title', 'like', "%{$request->title}%");
             })
             ->orderBy('publish_date', 'desc')
-            ->paginate(15);
+            ->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
         return BlogPostsResource::collection($blogs);
     }

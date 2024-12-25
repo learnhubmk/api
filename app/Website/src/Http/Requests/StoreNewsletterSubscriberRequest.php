@@ -2,8 +2,10 @@
 
 namespace App\Website\Http\Requests;
 
-use Illuminate\Validation\Rule;
+use App\Website\Http\Roules\MailboxValidEmail;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\RequiredIf;
 
 class StoreNewsletterSubscriberRequest extends FormRequest
@@ -19,13 +21,20 @@ class StoreNewsletterSubscriberRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array|string>
      */
     public function rules(): array
     {
+        // Resolve the MailboxValidEmail dependency from the container
+        $mailboxValidEmail = app(MailboxValidEmail::class);
+
         return [
             'first_name' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email:filter'],
+            'email' => [
+                'required',
+                'email:filter',
+                Rule::when(app()->isProduction(), $mailboxValidEmail),
+            ],
             'cf-turnstile-response' => [
                 new RequiredIf(function () {
                     return app()->isProduction();
