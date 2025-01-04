@@ -36,6 +36,7 @@ class MemberManagementController
     #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
     #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
     #[QueryParam('per_page', 'integer', required: false, example: "20")]
+    #[QueryParam('status', 'string', required: false, example: 'active', enum: ['active', 'deleted', 'banned'])]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -44,14 +45,19 @@ class MemberManagementController
         $sortDirection = $request->query('sort_direction');
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
         $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
+        $status = $request->query('status');
 
         $users = User::query()
             ->with(['roles', 'memberProfile'])
+            ->where('status', $status)
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
                 return $query
                     ->whereRelation('memberProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('memberProfile', 'last_name', 'LIKE', "$searchQuery%");
+            })
+            ->when($status, function (Builder $query) use ($status) {
+                $query->where('status', $status);
             })
             ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('member_profiles')

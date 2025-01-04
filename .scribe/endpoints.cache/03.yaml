@@ -132,7 +132,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 3a13793b-4156-435d-85fb-220438fabf4e
+          x-treblle-trace-id: 6ac66479-1a1b-4b4d-ab7f-36052558e645
         description: null
         custom: []
     responseFields: []
@@ -683,7 +683,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: f2f386ce-d7cb-4087-8d77-0438cfb81e3b
+          x-treblle-trace-id: 529c71d5-726d-4939-b1e6-87030176ff1a
         description: null
         custom: []
     responseFields: []
