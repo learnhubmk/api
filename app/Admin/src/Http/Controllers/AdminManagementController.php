@@ -6,6 +6,7 @@ use App\Admin\Http\Requests\RestoreAdminManagementRequest;
 use App\Admin\Http\Requests\StoreAdminManagementRequest;
 use App\Admin\Http\Requests\UpdateAdminManagementRequest;
 use App\Admin\Http\Resources\AdminManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
@@ -102,6 +103,12 @@ class AdminManagementController
 
             $admin->assignRole(RoleName::ADMIN);
 
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $admin->id,
+            ]);
+
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
             return $admin;
@@ -112,6 +119,7 @@ class AdminManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Administrator Details', description: 'This endpoint edits the details of an administrator profile')]
@@ -121,20 +129,31 @@ class AdminManagementController
     #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function update(UpdateAdminManagementRequest $request, int $id): AdminManagementResource
     {
-        /** @var User $admin */
-        $admin = User::query()->with(['roles', 'adminProfile'])
-            ->whereRelation('roles', 'name', RoleName::ADMIN->value)
-            ->findOrFail($id);
+        $admin = DB::transaction(function () use ($id, $request) {
+            /** @var User $admin */
+            $admin = User::query()->with(['roles', 'adminProfile'])
+                ->whereRelation('roles', 'name', RoleName::ADMIN->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $image = $request->file('image')?->storePubliclyAs('profile-pictures');
 
-        $admin->update(['email' => $request->get('email')]);
+            $admin->update(['email' => $request->get('email')]);
 
-        $admin->adminProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? $admin->adminProfile->image
-        ]);
+            $admin->adminProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $admin->adminProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $admin->id,
+                'image' => $image ?? $admin->adminProfile->image
+            ]);
+
+            return $admin;
+        });
 
         return new AdminManagementResource($admin->fresh());
     }

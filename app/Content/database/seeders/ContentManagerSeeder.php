@@ -3,6 +3,7 @@
 namespace App\Content\Database\Seeders;
 
 use App\Admin\Models\ContentManagerProfile;
+use App\Content\Models\Author;
 use App\Framework\Models\User;
 use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
@@ -23,6 +24,16 @@ class ContentManagerSeeder extends Seeder
 
         $user->assignRole(RoleName::CONTENT_MANAGER->value);
 
-        ContentManagerProfile::factory()->create(['user_id' => $user->id]);
+        ContentManagerProfile::factory()->create([
+            'first_name' => 'Kontent',
+            'last_name' => 'Menadzerski',
+            'user_id' => $user->id
+        ]);
+
+        Author::factory()->create([
+            'first_name' => 'Kontent',
+            'last_name' => 'Menadzerski',
+            'user_id' => $user->id
+        ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Admin\Http\Requests\RestoreMemberManagementRequest;
 use App\Admin\Http\Requests\StoreMemberManagementRequest;
 use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
@@ -99,6 +100,12 @@ class MemberManagementController
 
             $member->assignRole(RoleName::MEMBER);
 
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $member->id,
+            ]);
+
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
             return $member;
@@ -109,6 +116,7 @@ class MemberManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Member Details', description: 'This endpoint edits the details of a member profile')]
@@ -118,20 +126,31 @@ class MemberManagementController
     #[BodyParam('email', 'string', required: true, example: "johndoes@gmail.com")]
     public function update(UpdateMemberManagementRequest $request, int $id): MemberManagementResource
     {
-        /** @var User $member */
-        $member = User::query()->with(['roles', 'memberProfile'])
-            ->whereRelation('roles', 'name', RoleName::MEMBER->value)
-            ->findOrFail($id);
+        $member = DB::transaction(function () use ($id, $request) {
+            /** @var User $member */
+            $member = User::query()->with(['roles', 'memberProfile'])
+                ->whereRelation('roles', 'name', RoleName::MEMBER->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $image = $request->file('image')?->storePubliclyAs('profile-pictures');
 
-        $member->update(['email' => $request->get('email')]);
+            $member->update(['email' => $request->get('email')]);
 
-        $member->memberProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? $member->memberProfile->image
-        ]);
+            $member->memberProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $member->memberProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $member->id,
+                'image' => $image ?? $member->memberProfile->image,
+            ]);
+
+            return $member;
+        });
 
         return new MemberManagementResource($member->fresh());
     }
