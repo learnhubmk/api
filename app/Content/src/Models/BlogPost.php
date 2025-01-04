@@ -54,6 +54,7 @@ class BlogPost extends Model
         'author_id',
         'publish_date',
         'content',
+        'image',
     ];
 
     protected $casts = [

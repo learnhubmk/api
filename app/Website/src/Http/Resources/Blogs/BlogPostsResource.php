@@ -23,6 +23,7 @@ class BlogPostsResource extends JsonResource
             'tags' => $this->whenLoaded('tags', BlogPostTagResource::collection($this->tags)),
             'publish_date' => $this->publish_date,
             'author' => $this->whenLoaded('author', new BlogAuthorResource($this->author)),
+            'image' => $this->resource->image,
         ];
     }
 }

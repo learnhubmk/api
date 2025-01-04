@@ -85,7 +85,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 10
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -100,7 +100,7 @@ endpoints:
         - mysql
       author: john
       sort: title
-      per_page: 10
+      per_page: 12
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -112,14 +112,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 939244b6-2d4b-48fc-a81f-11e2651970de
+          x-treblle-trace-id: 9ca173d3-964c-41ba-824d-8c1a367e7a98
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 3hdDgefP5akv6Ea814bV6cZ'
+      - 'Bearer c3fa8PEh65e6Vd4vgbkDa1Z'
     controller: null
     method: null
     route: null
@@ -140,7 +140,7 @@ endpoints:
     headers:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
-      Content-Type: application/json
+      Content-Type: multipart/form-data
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -186,18 +186,29 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
       title: 'Example Blog Post Title '
       excerpt: 'This is test blogpost example'
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
       tags: '[1,2,3]'
-    fileParameters: []
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer d6kgfV4aa8ePZDEc5bv61h3'
+      - 'Bearer d1Dkv38eV5agbZP6cfh4Ea6'
     controller: null
     method: null
     route: null
@@ -223,14 +234,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: aut
+        example: adipisci
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: aut
+      id: adipisci
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -244,14 +255,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: e52dde47-af97-43a6-8c7a-32d83e23c1ea
+          x-treblle-trace-id: c3106a9e-daca-48c9-a898-5003a39a8328
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6d46vc1ekb5Z8gfhVa3DPaE'
+      - 'Bearer 6akdc5VgebhD3Z46a1P8fvE'
     controller: null
     method: null
     route: null
@@ -273,20 +284,20 @@ endpoints:
     headers:
       Authorization: 'Bearer {ACCESS_TOKEN}'
       Accept: application/json
-      Content-Type: application/json
+      Content-Type: multipart/form-data
     urlParameters:
       id:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: minima
+        example: corporis
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: minima
+      id: corporis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -340,19 +351,30 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
       title: 'Example Blog Post Title '
       excerpt: 'This is test blogpost example'
       slug: 'example-blog-post-title '
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'
       tags: '[1,2,3]'
-    fileParameters: []
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer kd5hPfga8E4bc66eZvaVD31'
+      - 'Bearer bPVdg643hD65afc1vak8ZeE'
     controller: null
     method: null
     route: null
@@ -378,14 +400,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: voluptatem
+        example: deleniti
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: voluptatem
+      id: deleniti
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -396,7 +418,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Efc6VPhDgZ8da3ke54bva16'
+      - 'Bearer Ed41kVa3h6cZabge6Dvf8P5'
     controller: null
     method: null
     route: null
@@ -447,7 +469,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 12
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -456,7 +478,7 @@ endpoints:
     cleanQueryParameters:
       sort: 'name, -name'
       search: name
-      per_page: 12
+      per_page: 10
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -468,14 +490,14 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 30f1f54c-54de-44e1-a442-c1687717e31e
+          x-treblle-trace-id: 9913b2fe-ef08-4869-aba4-1a3b2953d02e
         description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer D6V63ecaafEbk48g1PvhZ5d'
+      - 'Bearer Va6D83kegbf4vPc5adEhZ16'
     controller: null
     method: null
     route: null
@@ -520,7 +542,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dZ68P13ckvDg5ahba4VefE6'
+      - 'Bearer ad6gV1k6Zafeh8534cbDEvP'
     controller: null
     method: null
     route: null
@@ -548,14 +570,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: qui
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: qui
+      id: tempore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -577,7 +599,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Ebg1PD4e83v6Zhkd5fcaVa6'
+      - 'Bearer 8vhE4651gDV3fc6abaPkZde'
     controller: null
     method: null
     route: null
@@ -603,14 +625,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post tag.'
         required: true
-        example: at
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: at
+      id: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -621,7 +643,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bVZd8cav36fgke561Da4EPh'
+      - 'Bearer cE56aDVP148hdagevfkb36Z'
     controller: null
     method: null
     route: null
@@ -648,14 +670,14 @@ endpoints:
         name: id
         description: 'The ID of the blog post.'
         required: true
-        example: voluptas
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: voluptas
+      id: ut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -688,7 +710,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer av5V18daPhke4gb6EZ3cD6f'
+      - 'Bearer 6ahba3541kvEDVP8fdZgc6e'
     controller: null
     method: null
     route: null
