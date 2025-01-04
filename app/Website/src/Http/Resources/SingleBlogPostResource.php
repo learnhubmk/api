@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Website\Http\Resources\Blogs;
+namespace App\Website\Http\Resources;
 
-use App\Website\Http\Resources\Tags\BlogPostTagResource;
-use App\Website\Http\Resources\User\BlogAuthorResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BlogPostsResource extends JsonResource
+class SingleBlogPostResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -20,10 +18,10 @@ class BlogPostsResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
+            'content' => $this->content,
             'tags' => $this->whenLoaded('tags', BlogPostTagResource::collection($this->tags)),
             'publish_date' => $this->publish_date,
             'author' => $this->whenLoaded('author', new BlogAuthorResource($this->author)),
-            'image' => $this->resource->image,
         ];
     }
 }

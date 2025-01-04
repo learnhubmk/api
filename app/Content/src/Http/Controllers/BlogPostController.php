@@ -2,14 +2,14 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
-use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
-use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
-use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
-use App\Framework\Http\Controllers\Controller;
-use App\Framework\Enums\BlogPostStatus;
+use App\Content\Http\Requests\BlogPostPermissionsRequest;
+use App\Content\Http\Requests\CreateBlogPostRequest;
+use App\Content\Http\Requests\UpdateBlogPostRequest;
+use App\Content\Http\Resources\BlogPostResource;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
+use App\Framework\Enums\BlogPostStatus;
+use App\Framework\Http\Controllers\Controller;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
@@ -58,7 +58,7 @@ class BlogPostController extends Controller
             })
             ->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
-        return BlogPostsResource::collection($blogs);
+        return BlogPostResource::collection($blogs);
     }
 
     #[Authenticated]
@@ -68,7 +68,7 @@ class BlogPostController extends Controller
     #[BodyParam('excerpt', 'string', required: true, example: 'This is test blogpost example')]
     #[BodyParam('content', 'string', required: true, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
-    public function store(CreateBlogPostRequest $request): BlogPostsResource
+    public function store(CreateBlogPostRequest $request): BlogPostResource
     {
         $image = $request->file('image')?->storePubliclyAs('blog-post-images');
 
@@ -84,17 +84,17 @@ class BlogPostController extends Controller
 
         $blogPost->tags()->sync($request->tags);
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
     }
 
     #[Authenticated]
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
-    public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
+    public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostResource
     {
         $blogPost = BlogPost::with(['author', 'tags'])->findOrFail($blogPost);
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
     }
 
     #[Authenticated]
@@ -105,7 +105,7 @@ class BlogPostController extends Controller
     #[BodyParam('excerpt', 'string', required: false, example: 'This is test blogpost example')]
     #[BodyParam('content', 'string', required: false, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
     #[BodyParam('tags', 'array', required: false, example: '[1,2,3]')]
-    public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostsResource
+    public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostResource
     {
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
         $image = $request->file('image')?->storePubliclyAs('blog-post-images');
@@ -122,7 +122,7 @@ class BlogPostController extends Controller
             $blogPost->tags()->sync($request->tags);
         }
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
 
     }
 

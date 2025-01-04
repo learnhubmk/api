@@ -2,7 +2,7 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
+use App\Content\Http\Requests\BlogPostPermissionsRequest;
 use App\Content\Models\BlogPost;
 use Illuminate\Http\Response;
 use Knuckles\Scribe\Attributes\Authenticated;

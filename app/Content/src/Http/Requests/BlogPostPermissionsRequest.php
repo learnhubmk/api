@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Content\Http\Requests\BlogPosts;
+namespace App\Content\Http\Requests;
 
 use App\Framework\Enums\RoleName;
 use Illuminate\Contracts\Validation\ValidationRule;
