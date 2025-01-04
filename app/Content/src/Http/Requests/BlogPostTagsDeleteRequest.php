@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Content\Http\Requests\Auth;
+namespace App\Content\Http\Requests;
 
+use App\Framework\Enums\RoleName;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class LoginRequest extends FormRequest
+class BlogPostTagsDeleteRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return $this->user()->hasRole(RoleName::ADMIN) || $this->user()->hasRole(RoleName::CONTENT_MANAGER);
     }
 
     /**
@@ -23,8 +23,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', Rule::exists('users', 'email'), 'email', 'ends_with:learnhub.mk'],
-            'password' => ['required']
+            //
         ];
     }
 }

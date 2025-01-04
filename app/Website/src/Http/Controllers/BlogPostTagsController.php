@@ -2,10 +2,10 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Framework\Http\Controllers\Controller;
 use App\Framework\Enums\BlogPostStatus;
-use App\Website\Http\Resources\Blogs\BlogPostsResource;
-use App\Website\Http\Resources\Tags\BlogPostTagResource;
+use App\Framework\Http\Controllers\Controller;
+use App\Website\Http\Resources\BlogPostResource;
+use App\Website\Http\Resources\BlogPostTagResource;
 use App\Website\Models\BlogPost;
 use App\Website\Models\BlogPostTag;
 use Illuminate\Http\Request;
@@ -41,6 +41,6 @@ class BlogPostTagsController extends Controller
             ->orderBy('publish_date', 'desc')
             ->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
-        return BlogPostsResource::collection($blogs);
+        return BlogPostResource::collection($blogs);
     }
 }

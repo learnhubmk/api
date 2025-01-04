@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Content\Http\Requests\BlogPosts;
+namespace App\Content\Http\Requests;
 
 use App\Framework\Enums\RoleName;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\File;
 
-class UpdateBlogPostRequest extends FormRequest
+class CreateBlogPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,11 @@ class UpdateBlogPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['sometimes', 'string', 'max:255'],
-            'excerpt' => ['sometimes', 'string', 'max:255'],
-            'slug' => ['sometimes', 'string', 'max:255'],
-            'content' => ['sometimes', 'string'],
-            'tags' => ['sometimes', 'array'],
-            'tags.*' => ['sometimes', 'exists:blog_post_tags,id', 'distinct:strict'],
+            'title' => ['required', 'string', 'max:255'],
+            'excerpt' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string'],
+            'tags' => ['required', 'array'],
+            'tags.*' => ['required', 'exists:blog_post_tags,id'],
             'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->max(4 * 1024)],
         ];
     }
