@@ -73,7 +73,7 @@ class BlogPostController extends Controller
             'slug' => Str::slug($request->title),
             'excerpt' => $request->excerpt,
             'content' => $request->get('content'),
-            'status' => BlogPostStatus::IN_REVIEW,
+            'status' => BlogPostStatus::DRAFT,
             'author_id' => Author::where('user_id', $request->user()->id)->value('id'),
         ]);
 
