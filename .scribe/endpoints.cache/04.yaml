@@ -33,7 +33,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
-          x-treblle-trace-id: 61df62c4-7cf2-4495-ad00-8a49d0c3bb63
+          x-treblle-trace-id: e173319f-e316-42dd-9b99-27a1dda3c8eb
         description: null
         custom: []
     responseFields: []
