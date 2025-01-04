@@ -2,14 +2,18 @@
 
 namespace App\Website\Database\Factories;
 
+use App\Website\Models\Author;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Framework\Models\User;
+use Illuminate\Database\Eloquent\Model;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Website\Models\Model>
+ * @extends Factory<Model>
  */
 class AuthorFactory extends Factory
 {
+    protected $model = Author::class;
+
     /**
      * Define the model's default state.
      *
