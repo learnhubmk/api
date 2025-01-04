@@ -6,6 +6,7 @@ use App\Admin\Http\Requests\RestoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
@@ -100,6 +101,12 @@ class ContentManagerManagementController
 
             $contentManager->assignRole(RoleName::CONTENT_MANAGER);
 
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $contentManager->id,
+            ]);
+
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
             return $contentManager;
@@ -110,6 +117,7 @@ class ContentManagerManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Content Manager Details', description: 'This endpoint edits the details of a content manager profile')]
@@ -119,20 +127,31 @@ class ContentManagerManagementController
     #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function update(UpdateContentManagerManagementRequest $request, int $id): ContentManagerManagementResource
     {
-        /** @var User $contentManager */
-        $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
-            ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
-            ->findOrFail($id);
+        $contentManager = DB::transaction(function () use ($id, $request) {
+            /** @var User $contentManager */
+            $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
+                ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $image = $request->file('image')?->storePubliclyAs('profile-pictures');
 
-        $contentManager->update(['email' => $request->get('email')]);
+            $contentManager->update(['email' => $request->get('email')]);
 
-        $contentManager->contentManagerProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? $contentManager->contentManagerProfile->image
-        ]);
+            $contentManager->contentManagerProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $contentManager->contentManagerProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $contentManager->id,
+                'image' => $image ?? $contentManager->contentManagerProfile->image
+            ]);
+
+            return $contentManager;
+        });
 
         return new ContentManagerManagementResource($contentManager);
     }

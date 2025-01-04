@@ -3,6 +3,7 @@
 namespace App\Admin\Database\Seeders;
 
 use App\Admin\Models\AdminProfile;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -23,6 +24,16 @@ class AdminSeeder extends Seeder
 
         $user->assignRole(RoleName::ADMIN->value);
 
-        AdminProfile::factory()->create(['user_id' => $user->id]);
+        AdminProfile::factory()->create([
+            'first_name' => 'Admin',
+            'last_name' => 'Adminovski',
+            'user_id' => $user->id
+        ]);
+
+        Author::factory()->create([
+            'first_name' => 'Admin',
+            'last_name' => 'Adminovski',
+            'user_id' => $user->id
+        ]);
     }
 }
