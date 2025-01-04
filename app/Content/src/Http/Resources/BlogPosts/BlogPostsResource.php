@@ -24,6 +24,7 @@ class BlogPostsResource extends JsonResource
             'publish_date' => $this->publish_date,
             'created_at' => $this->created_at,
             'author' => $this->whenLoaded('author', new BlogAuthorResource($this->author)),
+            'image' => $this->resource->image,
         ];
     }
 }

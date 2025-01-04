@@ -11,6 +11,8 @@ use App\Framework\Enums\BlogPostStatus;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\BodyParam;
@@ -68,13 +70,16 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
     public function store(CreateBlogPostRequest $request): BlogPostsResource
     {
+        $image = $request->file('image')?->storePubliclyAs('blog-post-images');
+
         $blogPost = BlogPost::create([
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'excerpt' => $request->excerpt,
             'content' => $request->get('content'),
             'status' => BlogPostStatus::DRAFT,
-            'author_id' => Author::where('user_id', $request->user()->id)->value('id'),
+            'image' => $image,
+            'author_id' => Author::query()->where('user_id', $request->user()->id)->value('id'),
         ]);
 
         $blogPost->tags()->sync($request->tags);
@@ -103,8 +108,15 @@ class BlogPostController extends Controller
     public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostsResource
     {
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
+        $image = $request->file('image')?->storePubliclyAs('blog-post-images');
+        $blogPostData = $image ? array_merge(['image' => $image], $blogPostData) : $blogPostData;
+
         $blogPost = BlogPost::findOrFail($blogPost);
-        $blogPost->update($blogPostData);
+        $blogPost->update(array_merge($blogPostData));
+
+        if(Storage::has($blogPost->image)) {
+            Storage::delete($blogPost->image);
+        }
 
         if ($request->get('tags')) {
             $blogPost->tags()->sync($request->tags);
@@ -117,9 +129,14 @@ class BlogPostController extends Controller
     #[Authenticated]
     #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
     #[Group('Content')]
-    public function destroy(int $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    public function destroy(int $blogPost, BlogPostPermissionsRequest $request): Response
     {
         $blogPost = BlogPost::findOrFail($blogPost);
+
+        if(Storage::has($blogPost->image)) {
+            Storage::delete($blogPost->image);
+        }
+
         $blogPost->delete();
 
         return response()->noContent();

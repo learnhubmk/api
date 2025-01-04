@@ -5,6 +5,7 @@ namespace App\Content\Http\Requests\BlogPosts;
 use App\Framework\Enums\RoleName;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 
 class UpdateBlogPostRequest extends FormRequest
 {
@@ -30,6 +31,7 @@ class UpdateBlogPostRequest extends FormRequest
             'content' => ['sometimes', 'string'],
             'tags' => ['sometimes', 'array'],
             'tags.*' => ['sometimes', 'exists:blog_post_tags,id', 'distinct:strict'],
+            'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->max(4 * 1024)],
         ];
     }
 }
