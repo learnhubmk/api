@@ -36,6 +36,7 @@ class ContentManagerManagementController
     #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
     #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
     #[QueryParam('per_page', 'integer', required: false, example: "20")]
+    #[QueryParam('status', 'string', required: false, example: 'active', enum: ['active', 'deleted', 'banned'])]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -44,14 +45,19 @@ class ContentManagerManagementController
         $sortDirection = $request->query('sort_direction');
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
         $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
+        $status = $request->query('status');
 
         $contentManagers = User::query()
             ->with(['roles', 'contentManagerProfile'])
+            ->where('status', $status)
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
                 return $query
                     ->whereRelation('contentManagerProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('contentManagerProfile', 'last_name', 'LIKE', "$searchQuery%");
+            })
+            ->when($status, function (Builder $query) use ($status) {
+                $query->where('status', $status);
             })
             ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('content_manager_profiles')

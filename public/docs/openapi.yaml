@@ -57,6 +57,21 @@ paths:
             description: ''
             example: '20'
             nullable: false
+        -
+          in: query
+          name: status
+          description: ''
+          example: active
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: active
+            nullable: false
+            enum:
+              - active
+              - deleted
+              - banned
       responses:
         401:
           description: ''
@@ -160,7 +175,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: active
+                  example: deleted
                   nullable: false
                   enum:
                     - active
@@ -189,7 +204,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the administrator.'
-        example: optio
+        example: doloribus
         required: true
         schema:
           type: string
@@ -243,6 +258,21 @@ paths:
             description: ''
             example: '20'
             nullable: false
+        -
+          in: query
+          name: status
+          description: ''
+          example: active
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: active
+            nullable: false
+            enum:
+              - active
+              - deleted
+              - banned
       responses:
         401:
           description: ''
@@ -375,7 +405,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the member.'
-        example: quod
+        example: itaque
         required: true
         schema:
           type: string
@@ -429,6 +459,21 @@ paths:
             description: ''
             example: '20'
             nullable: false
+        -
+          in: query
+          name: status
+          description: ''
+          example: active
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: active
+            nullable: false
+            enum:
+              - active
+              - deleted
+              - banned
       responses:
         401:
           description: ''
@@ -561,7 +606,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the content manager.'
-        example: omnis
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -579,7 +624,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the administrator.'
-        example: nobis
+        example: expedita
         required: true
         schema:
           type: string
@@ -597,7 +642,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the member.'
-        example: est
+        example: nam
         required: true
         schema:
           type: string
@@ -615,7 +660,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the content manager.'
-        example: officia
+        example: amet
         required: true
         schema:
           type: string
@@ -659,12 +704,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: camille.rath@example.com
+                  example: prippin@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: a
+                  example: ullam
                   nullable: false
               required:
                 - email
@@ -728,12 +773,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: gkuvalis@example.net
+                  example: lamar16@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: beatae
+                  example: aperiam
                   nullable: false
               required:
                 - email
@@ -797,12 +842,12 @@ paths:
                 email:
                   type: password
                   description: ''
-                  example: howell.aleen@example.net
+                  example: walter.simone@example.org
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: eos
+                  example: debitis
                   nullable: false
               required:
                 - email
@@ -911,7 +956,7 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: gebert@example.net
+                  example: breanna93@example.com
                   nullable: false
               required:
                 - email
@@ -935,17 +980,17 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: est
+                  example: cumque
                   nullable: false
                 email:
                   type: password
                   description: token
-                  example: merl65@example.org
+                  example: shanon.rath@example.net
                   nullable: false
                 password:
                   type: string
                   description: 'Полето value мора да има минимум 8 карактери.'
-                  example: "K<ipm(fQl+]67C'5,XD"
+                  example: '74=|_t*S52OKQU$L>L'
                   nullable: false
               required:
                 - token
@@ -1034,12 +1079,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 12
+          example: 8
           required: false
           schema:
             type: integer
             description: ''
-            example: 12
+            example: 8
             nullable: false
       responses:
         401:
@@ -1182,7 +1227,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: adipisci
+        example: pariatur
         required: true
         schema:
           type: string
@@ -1220,12 +1265,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 10
+          example: 7
           required: false
           schema:
             type: integer
             description: ''
-            example: 10
+            example: 7
             nullable: false
       responses:
         401:
@@ -1300,7 +1345,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post tag.'
-        example: tempore
+        example: voluptatibus
         required: true
         schema:
           type: string
@@ -1337,7 +1382,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the blog post.'
-        example: ut
+        example: ad
         required: true
         schema:
           type: string
@@ -3065,23 +3110,23 @@ paths:
           in: query
           name: title
           description: ''
-          example: quia
+          example: est
           required: false
           schema:
             type: string
             description: ''
-            example: quia
+            example: est
             nullable: false
         -
           in: query
           name: per_page
           description: ''
-          example: 7
+          example: 9
           required: false
           schema:
             type: integer
             description: ''
-            example: 7
+            example: 9
             nullable: false
       responses:
         200:
@@ -3093,9 +3138,9 @@ paths:
                 example:
                   data:
                     -
-                      title: 'Qui id veritatis aliquid quia ab aut.'
-                      slug: qui-id-veritatis-aliquid-quia-ab-aut
-                      excerpt: 'Doloremque deserunt modi cupiditate voluptatem.'
+                      title: 'Eum et corrupti est.'
+                      slug: eum-et-corrupti-est
+                      excerpt: 'Perferendis repellendus magni maiores temporibus hic sint maxime.'
                       tags:
                         -
                           name: php
@@ -3105,31 +3150,14 @@ paths:
                           name: react
                       publish_date: '2024-07-28'
                       author:
-                        first_name: 'Eloise Klocko'
-                        last_name: Anderson
+                        first_name: 'Arnulfo Lemke'
+                        last_name: Kunde
                         image: null
                       image: null
                     -
-                      title: 'Eaque at quia quae aut doloribus.'
-                      slug: eaque-at-quia-quae-aut-doloribus
-                      excerpt: 'Ea earum culpa voluptas.'
-                      tags:
-                        -
-                          name: php
-                        -
-                          name: laravel
-                        -
-                          name: react
-                      publish_date: '2024-07-28'
-                      author:
-                        first_name: 'Eloise Klocko'
-                        last_name: Anderson
-                        image: null
-                      image: null
-                    -
-                      title: 'Quia sed dolorum voluptatum voluptatem praesentium odio voluptate ea.'
-                      slug: quia-sed-dolorum-voluptatum-voluptatem-praesentium-odio-voluptate-ea
-                      excerpt: 'Aperiam architecto vitae est totam beatae.'
+                      title: 'Officiis molestiae eveniet optio placeat.'
+                      slug: officiis-molestiae-eveniet-optio-placeat
+                      excerpt: 'Minus deleniti aperiam nisi.'
                       tags:
                         -
                           name: php
@@ -3144,9 +3172,9 @@ paths:
                         image: null
                       image: null
                     -
-                      title: 'Quia exercitationem beatae atque.'
-                      slug: quia-exercitationem-beatae-atque
-                      excerpt: 'In rerum qui quae.'
+                      title: 'Enim ut vel iusto ut est.'
+                      slug: enim-ut-vel-iusto-ut-est
+                      excerpt: 'Quibusdam non rerum iste qui qui sit qui.'
                       tags:
                         -
                           name: php
@@ -3161,9 +3189,9 @@ paths:
                         image: null
                       image: null
                     -
-                      title: 'Vel aut laborum odio nihil quia autem.'
-                      slug: vel-aut-laborum-odio-nihil-quia-autem
-                      excerpt: 'Dolorem quaerat quia ex.'
+                      title: 'Blanditiis soluta similique est dolorem voluptatum non natus.'
+                      slug: blanditiis-soluta-similique-est-dolorem-voluptatum-non-natus
+                      excerpt: 'Aperiam et quidem iste facere accusamus molestiae qui.'
                       tags:
                         -
                           name: php
@@ -3173,14 +3201,14 @@ paths:
                           name: react
                       publish_date: '2024-07-28'
                       author:
-                        first_name: 'Ruby Goodwin'
-                        last_name: Carter
+                        first_name: 'Arnulfo Lemke'
+                        last_name: Kunde
                         image: null
                       image: null
                     -
-                      title: 'Nobis quia quia eaque dolore quaerat ut.'
-                      slug: nobis-quia-quia-eaque-dolore-quaerat-ut
-                      excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                      title: 'Ut rerum voluptate molestiae optio voluptas et ut.'
+                      slug: ut-rerum-voluptate-molestiae-optio-voluptas-et-ut
+                      excerpt: 'Impedit aut ducimus magni et sint.'
                       tags:
                         -
                           name: php
@@ -3190,8 +3218,25 @@ paths:
                           name: react
                       publish_date: '2024-07-28'
                       author:
-                        first_name: 'Justen Blanda'
-                        last_name: Boyer
+                        first_name: 'Arnulfo Lemke'
+                        last_name: Kunde
+                        image: null
+                      image: null
+                    -
+                      title: 'Accusantium suscipit omnis recusandae hic eum est dolore.'
+                      slug: accusantium-suscipit-omnis-recusandae-hic-eum-est-dolore
+                      excerpt: 'Explicabo sit sit magnam impedit consectetur.'
+                      tags:
+                        -
+                          name: php
+                        -
+                          name: laravel
+                        -
+                          name: react
+                      publish_date: '2024-07-28'
+                      author:
+                        first_name: 'Sim Will V'
+                        last_name: Harris
                         image: null
                       image: null
                   links:
@@ -3217,7 +3262,7 @@ paths:
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-posts'
-                    per_page: 7
+                    per_page: 9
                     to: 6
                     total: 6
                 properties:
@@ -3225,9 +3270,9 @@ paths:
                     type: array
                     example:
                       -
-                        title: 'Qui id veritatis aliquid quia ab aut.'
-                        slug: qui-id-veritatis-aliquid-quia-ab-aut
-                        excerpt: 'Doloremque deserunt modi cupiditate voluptatem.'
+                        title: 'Eum et corrupti est.'
+                        slug: eum-et-corrupti-est
+                        excerpt: 'Perferendis repellendus magni maiores temporibus hic sint maxime.'
                         tags:
                           -
                             name: php
@@ -3237,31 +3282,14 @@ paths:
                             name: react
                         publish_date: '2024-07-28'
                         author:
-                          first_name: 'Eloise Klocko'
-                          last_name: Anderson
+                          first_name: 'Arnulfo Lemke'
+                          last_name: Kunde
                           image: null
                         image: null
                       -
-                        title: 'Eaque at quia quae aut doloribus.'
-                        slug: eaque-at-quia-quae-aut-doloribus
-                        excerpt: 'Ea earum culpa voluptas.'
-                        tags:
-                          -
-                            name: php
-                          -
-                            name: laravel
-                          -
-                            name: react
-                        publish_date: '2024-07-28'
-                        author:
-                          first_name: 'Eloise Klocko'
-                          last_name: Anderson
-                          image: null
-                        image: null
-                      -
-                        title: 'Quia sed dolorum voluptatum voluptatem praesentium odio voluptate ea.'
-                        slug: quia-sed-dolorum-voluptatum-voluptatem-praesentium-odio-voluptate-ea
-                        excerpt: 'Aperiam architecto vitae est totam beatae.'
+                        title: 'Officiis molestiae eveniet optio placeat.'
+                        slug: officiis-molestiae-eveniet-optio-placeat
+                        excerpt: 'Minus deleniti aperiam nisi.'
                         tags:
                           -
                             name: php
@@ -3276,9 +3304,9 @@ paths:
                           image: null
                         image: null
                       -
-                        title: 'Quia exercitationem beatae atque.'
-                        slug: quia-exercitationem-beatae-atque
-                        excerpt: 'In rerum qui quae.'
+                        title: 'Enim ut vel iusto ut est.'
+                        slug: enim-ut-vel-iusto-ut-est
+                        excerpt: 'Quibusdam non rerum iste qui qui sit qui.'
                         tags:
                           -
                             name: php
@@ -3293,9 +3321,9 @@ paths:
                           image: null
                         image: null
                       -
-                        title: 'Vel aut laborum odio nihil quia autem.'
-                        slug: vel-aut-laborum-odio-nihil-quia-autem
-                        excerpt: 'Dolorem quaerat quia ex.'
+                        title: 'Blanditiis soluta similique est dolorem voluptatum non natus.'
+                        slug: blanditiis-soluta-similique-est-dolorem-voluptatum-non-natus
+                        excerpt: 'Aperiam et quidem iste facere accusamus molestiae qui.'
                         tags:
                           -
                             name: php
@@ -3305,14 +3333,14 @@ paths:
                             name: react
                         publish_date: '2024-07-28'
                         author:
-                          first_name: 'Ruby Goodwin'
-                          last_name: Carter
+                          first_name: 'Arnulfo Lemke'
+                          last_name: Kunde
                           image: null
                         image: null
                       -
-                        title: 'Nobis quia quia eaque dolore quaerat ut.'
-                        slug: nobis-quia-quia-eaque-dolore-quaerat-ut
-                        excerpt: 'Vitae amet autem recusandae aut sit culpa.'
+                        title: 'Ut rerum voluptate molestiae optio voluptas et ut.'
+                        slug: ut-rerum-voluptate-molestiae-optio-voluptas-et-ut
+                        excerpt: 'Impedit aut ducimus magni et sint.'
                         tags:
                           -
                             name: php
@@ -3322,8 +3350,25 @@ paths:
                             name: react
                         publish_date: '2024-07-28'
                         author:
-                          first_name: 'Justen Blanda'
-                          last_name: Boyer
+                          first_name: 'Arnulfo Lemke'
+                          last_name: Kunde
+                          image: null
+                        image: null
+                      -
+                        title: 'Accusantium suscipit omnis recusandae hic eum est dolore.'
+                        slug: accusantium-suscipit-omnis-recusandae-hic-eum-est-dolore
+                        excerpt: 'Explicabo sit sit magnam impedit consectetur.'
+                        tags:
+                          -
+                            name: php
+                          -
+                            name: laravel
+                          -
+                            name: react
+                        publish_date: '2024-07-28'
+                        author:
+                          first_name: 'Sim Will V'
+                          last_name: Harris
                           image: null
                         image: null
                     items:
@@ -3331,13 +3376,13 @@ paths:
                       properties:
                         title:
                           type: string
-                          example: 'Qui id veritatis aliquid quia ab aut.'
+                          example: 'Eum et corrupti est.'
                         slug:
                           type: string
-                          example: qui-id-veritatis-aliquid-quia-ab-aut
+                          example: eum-et-corrupti-est
                         excerpt:
                           type: string
-                          example: 'Doloremque deserunt modi cupiditate voluptatem.'
+                          example: 'Perferendis repellendus magni maiores temporibus hic sint maxime.'
                         tags:
                           type: array
                           example:
@@ -3361,10 +3406,10 @@ paths:
                           properties:
                             first_name:
                               type: string
-                              example: 'Eloise Klocko'
+                              example: 'Arnulfo Lemke'
                             last_name:
                               type: string
-                              example: Anderson
+                              example: Kunde
                             image:
                               type: string
                               example: null
@@ -3430,7 +3475,7 @@ paths:
                         example: 'http://learnhub.test/blog-posts'
                       per_page:
                         type: integer
-                        example: 7
+                        example: 9
                       to:
                         type: integer
                         example: 6
@@ -4161,7 +4206,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the blog post.'
-        example: quia
+        example: accusantium
         required: true
         schema:
           type: string
@@ -4175,12 +4220,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 5
+          example: 11
           required: false
           schema:
             type: integer
             description: ''
-            example: 5
+            example: 11
             nullable: false
       responses:
         200:
@@ -4201,15 +4246,27 @@ paths:
                       name: c++
                     -
                       name: databases
+                    -
+                      name: design
+                    -
+                      name: development
+                    -
+                      name: docker
+                    -
+                      name: java
+                    -
+                      name: javascript
+                    -
+                      name: laravel
                   links:
                     first: 'http://learnhub.test/blog-post-tags?page=1'
-                    last: 'http://learnhub.test/blog-post-tags?page=5'
+                    last: 'http://learnhub.test/blog-post-tags?page=3'
                     prev: null
                     next: 'http://learnhub.test/blog-post-tags?page=2'
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 5
+                    last_page: 3
                     links:
                       -
                         url: null
@@ -4228,20 +4285,12 @@ paths:
                         label: '3'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags?page=4'
-                        label: '4'
-                        active: false
-                      -
-                        url: 'http://learnhub.test/blog-post-tags?page=5'
-                        label: '5'
-                        active: false
-                      -
                         url: 'http://learnhub.test/blog-post-tags?page=2'
                         label: 'Следна &raquo;'
                         active: false
                     path: 'http://learnhub.test/blog-post-tags'
-                    per_page: 5
-                    to: 5
+                    per_page: 11
+                    to: 11
                     total: 23
                 properties:
                   data:
@@ -4257,6 +4306,18 @@ paths:
                         name: c++
                       -
                         name: databases
+                      -
+                        name: design
+                      -
+                        name: development
+                      -
+                        name: docker
+                      -
+                        name: java
+                      -
+                        name: javascript
+                      -
+                        name: laravel
                     items:
                       type: object
                       properties:
@@ -4271,7 +4332,7 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags?page=5'
+                        example: 'http://learnhub.test/blog-post-tags?page=3'
                       prev:
                         type: string
                         example: null
@@ -4289,7 +4350,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 5
+                        example: 3
                       links:
                         type: array
                         example:
@@ -4308,14 +4369,6 @@ paths:
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=3'
                             label: '3'
-                            active: false
-                          -
-                            url: 'http://learnhub.test/blog-post-tags?page=4'
-                            label: '4'
-                            active: false
-                          -
-                            url: 'http://learnhub.test/blog-post-tags?page=5'
-                            label: '5'
                             active: false
                           -
                             url: 'http://learnhub.test/blog-post-tags?page=2'
@@ -4338,10 +4391,10 @@ paths:
                         example: 'http://learnhub.test/blog-post-tags'
                       per_page:
                         type: integer
-                        example: 5
+                        example: 11
                       to:
                         type: integer
-                        example: 5
+                        example: 11
                       total:
                         type: integer
                         example: 23
@@ -4358,12 +4411,12 @@ paths:
           in: query
           name: per_page
           description: ''
-          example: 10
+          example: 15
           required: false
           schema:
             type: integer
             description: ''
-            example: 10
+            example: 15
             nullable: false
       responses:
         200:
@@ -4375,8 +4428,8 @@ paths:
                 example:
                   data: []
                   links:
-                    first: 'http://learnhub.test/blog-post-tags/est?page=1'
-                    last: 'http://learnhub.test/blog-post-tags/est?page=1'
+                    first: 'http://learnhub.test/blog-post-tags/impedit?page=1'
+                    last: 'http://learnhub.test/blog-post-tags/impedit?page=1'
                     prev: null
                     next: null
                   meta:
@@ -4389,15 +4442,15 @@ paths:
                         label: '&laquo; Претходна'
                         active: false
                       -
-                        url: 'http://learnhub.test/blog-post-tags/est?page=1'
+                        url: 'http://learnhub.test/blog-post-tags/impedit?page=1'
                         label: '1'
                         active: true
                       -
                         url: null
                         label: 'Следна &raquo;'
                         active: false
-                    path: 'http://learnhub.test/blog-post-tags/est'
-                    per_page: 10
+                    path: 'http://learnhub.test/blog-post-tags/impedit'
+                    per_page: 15
                     to: null
                     total: 0
                 properties:
@@ -4409,10 +4462,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/est?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/impedit?page=1'
                       last:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/est?page=1'
+                        example: 'http://learnhub.test/blog-post-tags/impedit?page=1'
                       prev:
                         type: string
                         example: null
@@ -4439,7 +4492,7 @@ paths:
                             label: '&laquo; Претходна'
                             active: false
                           -
-                            url: 'http://learnhub.test/blog-post-tags/est?page=1'
+                            url: 'http://learnhub.test/blog-post-tags/impedit?page=1'
                             label: '1'
                             active: true
                           -
@@ -4460,10 +4513,10 @@ paths:
                               example: false
                       path:
                         type: string
-                        example: 'http://learnhub.test/blog-post-tags/est'
+                        example: 'http://learnhub.test/blog-post-tags/impedit'
                       per_page:
                         type: integer
-                        example: 10
+                        example: 15
                       to:
                         type: string
                         example: null
@@ -4478,7 +4531,7 @@ paths:
         in: path
         name: tag
         description: ''
-        example: est
+        example: impedit
         required: true
         schema:
           type: string
@@ -4501,22 +4554,22 @@ paths:
                 name:
                   type: string
                   description: 'The name of the visitor.'
-                  example: doloribus
+                  example: suscipit
                   nullable: false
                 email:
                   type: string
                   description: 'The email address of the visitor.'
-                  example: forest91@example.org
+                  example: feeney.manley@example.com
                   nullable: false
                 message:
                   type: string
                   description: 'The body of the message.'
-                  example: facere
+                  example: debitis
                   nullable: false
                 cf-turnstile-response:
                   type: string
                   description: 'Cloudflare Turnstile ReCaptcha token'
-                  example: soluta
+                  example: est
                   nullable: false
               required:
                 - name
@@ -4543,12 +4596,12 @@ paths:
                 first_name:
                   type: string
                   description: 'Полето value мора да има помалку од 50 карактери.'
-                  example: zqkz
+                  example: vexuqdpqltvymqouwzftmssyg
                   nullable: false
                 email:
                   type: string
                   description: 'Полето value не е во валиден формат.'
-                  example: jaskolski.katrina@example.net
+                  example: derick67@example.org
                   nullable: false
                 cf-turnstile-response:
                   type: string

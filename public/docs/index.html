@@ -1292,6 +1292,27 @@ You can switch the language used with the tabs at the top right (or from the nav
             </div>
             </div>
 </div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">status</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                            Must be one of:
+            <ul style="list-style-position: inside; list-style-type: square;"><li><code>active</code></li> <li><code>deleted</code></li> <li><code>banned</code></li></ul>
+                                    <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        active
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
                                                                 </div>
                         </div>
                     
@@ -1451,6 +1472,19 @@ You can switch the language used with the tabs at the top right (or from the nav
                                             >
                                                                             </div>
                                 </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETadmin-administrators-status">status</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="status" name="status"
+                                                   id="queryparam-GETadmin-administrators-status"
+                                                   placeholder=""
+                                                   value="active" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
                                                     </div>
                     </div>
                 </div>
@@ -1544,7 +1578,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/administrators?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20" \
+    --get "https://staging-api.learnhub.mk/admin/administrators?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20&amp;status=active" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -1562,6 +1596,7 @@ const params = {
     "sort_by": "first_name",
     "sort_direction": "asc",
     "per_page": "20",
+    "status": "active",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1595,6 +1630,7 @@ $response = $client-&gt;get(
             'sort_by' =&gt; 'first_name',
             'sort_direction' =&gt; 'asc',
             'per_page' =&gt; '20',
+            'status' =&gt; 'active',
         ],
     ]
 );
@@ -1615,6 +1651,7 @@ params = {
   'sort_by': 'first_name',
   'sort_direction': 'asc',
   'per_page': '20',
+  'status': 'active',
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -1681,7 +1718,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : c256f8ba-40cf-464a-acbb-b3bddd290864
+                                                            : cb3d4db7-8bd5-44a3-8f7d-a06fd8be63f1
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -2292,7 +2329,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        optio
+                        doloribus
                     </div>
                 </div>
             </div>
@@ -2414,7 +2451,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="optio" data-component="url"
+                                               value="doloribus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -2512,7 +2549,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/administrators/optio" \
+    --get "https://staging-api.learnhub.mk/admin/administrators/doloribus" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -2522,7 +2559,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/optio"
+    "https://staging-api.learnhub.mk/admin/administrators/doloribus"
 );
 
 const headers = {
@@ -2541,7 +2578,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/optio';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/doloribus';
 $response = $client-&gt;get(
     $url,
     [
@@ -2562,7 +2599,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/optio'
+url = 'https://staging-api.learnhub.mk/admin/administrators/doloribus'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -2628,7 +2665,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 19db48bc-ca2a-40ad-b10e-a15bb1afe46d
+                                                            : 8a3afb91-22fe-4c47-a0e0-54990c15d991
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -2771,7 +2808,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequatur
+                        excepturi
                     </div>
                 </div>
             </div>
@@ -2876,7 +2913,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        active
+                        deleted
                     </div>
                 </div>
             </div>
@@ -2901,7 +2938,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpeKr0Uq
+                        /tmp/phpyhraZf
                     </div>
                 </div>
             </div>
@@ -3033,7 +3070,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="consequatur" data-component="url"
+                                               value="excepturi" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3107,7 +3144,7 @@ response.json()</code></pre>                                        </div>
                                                                                             <input aria-label="status" name="status"
                                                        id="bodyparam-PUTadmin-administrators--id--status"
                                                        placeholder=""
-                                                       value="active" data-component="body"
+                                                       value="deleted" data-component="body"
                                                        class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                                 >
                                                                                     </div>
@@ -3216,15 +3253,15 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/administrators/consequatur" \
+    "https://staging-api.learnhub.mk/admin/administrators/excepturi" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
     --form "email=johndoes@learnhub.mk"\
     --form "first_name=John"\
     --form "last_name=Doe"\
-    --form "status=active"\
-    --form "image=@/tmp/phpeKr0Uq" </code></pre>                                        </div>
+    --form "status=deleted"\
+    --form "image=@/tmp/phpyhraZf" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -3232,7 +3269,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/consequatur"
+    "https://staging-api.learnhub.mk/admin/administrators/excepturi"
 );
 
 const headers = {
@@ -3245,7 +3282,7 @@ const body = new FormData();
 body.append('email', 'johndoes@learnhub.mk');
 body.append('first_name', 'John');
 body.append('last_name', 'Doe');
-body.append('status', 'active');
+body.append('status', 'deleted');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -3260,7 +3297,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/consequatur';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/excepturi';
 $response = $client-&gt;put(
     $url,
     [
@@ -3284,11 +3321,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'status',
-                'contents' =&gt; 'active'
+                'contents' =&gt; 'deleted'
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpeKr0Uq', 'r')
+                'contents' =&gt; fopen('/tmp/phpyhraZf', 'r')
             ],
         ],
     ]
@@ -3304,18 +3341,18 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/consequatur'
+url = 'https://staging-api.learnhub.mk/admin/administrators/excepturi'
 files = {
   'email': (None, 'johndoes@learnhub.mk'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
-  'status': (None, 'active'),
-  'image': open('/tmp/phpeKr0Uq', 'rb')}
+  'status': (None, 'deleted'),
+  'image': open('/tmp/phpyhraZf', 'rb')}
 payload = {
     "email": "johndoes@learnhub.mk",
     "first_name": "John",
     "last_name": "Doe",
-    "status": "active"
+    "status": "deleted"
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -3438,7 +3475,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sint
+                        inventore
                     </div>
                 </div>
             </div>
@@ -3560,7 +3597,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-administrators--id--id"
                                                placeholder="The ID of the administrator."
-                                               value="sint" data-component="url"
+                                               value="inventore" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3658,7 +3695,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/administrators/sint" \
+    "https://staging-api.learnhub.mk/admin/administrators/inventore" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -3668,7 +3705,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/sint"
+    "https://staging-api.learnhub.mk/admin/administrators/inventore"
 );
 
 const headers = {
@@ -3687,7 +3724,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/sint';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/inventore';
 $response = $client-&gt;delete(
     $url,
     [
@@ -3708,7 +3745,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/sint'
+url = 'https://staging-api.learnhub.mk/admin/administrators/inventore'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -3889,6 +3926,27 @@ response.json()</code></pre>                                        </div>
             </div>
             </div>
 </div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">status</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                            Must be one of:
+            <ul style="list-style-position: inside; list-style-type: square;"><li><code>active</code></li> <li><code>deleted</code></li> <li><code>banned</code></li></ul>
+                                    <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        active
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
                                                                 </div>
                         </div>
                     
@@ -4048,6 +4106,19 @@ response.json()</code></pre>                                        </div>
                                             >
                                                                             </div>
                                 </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETadmin-members-status">status</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="status" name="status"
+                                                   id="queryparam-GETadmin-members-status"
+                                                   placeholder=""
+                                                   value="active" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
                                                     </div>
                     </div>
                 </div>
@@ -4141,7 +4212,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/members?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20" \
+    --get "https://staging-api.learnhub.mk/admin/members?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20&amp;status=active" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -4159,6 +4230,7 @@ const params = {
     "sort_by": "first_name",
     "sort_direction": "asc",
     "per_page": "20",
+    "status": "active",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -4192,6 +4264,7 @@ $response = $client-&gt;get(
             'sort_by' =&gt; 'first_name',
             'sort_direction' =&gt; 'asc',
             'per_page' =&gt; '20',
+            'status' =&gt; 'active',
         ],
     ]
 );
@@ -4212,6 +4285,7 @@ params = {
   'sort_by': 'first_name',
   'sort_direction': 'asc',
   'per_page': '20',
+  'status': 'active',
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -4278,7 +4352,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : f9dbed97-260c-4b20-88c7-48f85a9efcb5
+                                                            : 873e562c-a836-4a22-9157-b762735f953a
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -4889,7 +4963,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quod
+                        itaque
                     </div>
                 </div>
             </div>
@@ -5011,7 +5085,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="quod" data-component="url"
+                                               value="itaque" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5109,7 +5183,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/members/quod" \
+    --get "https://staging-api.learnhub.mk/admin/members/itaque" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -5119,7 +5193,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/quod"
+    "https://staging-api.learnhub.mk/admin/members/itaque"
 );
 
 const headers = {
@@ -5138,7 +5212,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/quod';
+$url = 'https://staging-api.learnhub.mk/admin/members/itaque';
 $response = $client-&gt;get(
     $url,
     [
@@ -5159,7 +5233,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/quod'
+url = 'https://staging-api.learnhub.mk/admin/members/itaque'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -5225,7 +5299,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 1d6dbe39-75c0-4c65-8b13-be593e254691
+                                                            : 460f2362-f32a-4b13-b35d-0a7193533726
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -5368,7 +5442,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veniam
+                        ullam
                     </div>
                 </div>
             </div>
@@ -5498,7 +5572,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php4oQyjm
+                        /tmp/phpM9UVhJ
                     </div>
                 </div>
             </div>
@@ -5630,7 +5704,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="veniam" data-component="url"
+                                               value="ullam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5813,7 +5887,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/members/veniam" \
+    "https://staging-api.learnhub.mk/admin/members/ullam" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
@@ -5821,7 +5895,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "first_name=John"\
     --form "last_name=Doe"\
     --form "status=deleted"\
-    --form "image=@/tmp/php4oQyjm" </code></pre>                                        </div>
+    --form "image=@/tmp/phpM9UVhJ" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -5829,7 +5903,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/veniam"
+    "https://staging-api.learnhub.mk/admin/members/ullam"
 );
 
 const headers = {
@@ -5857,7 +5931,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/veniam';
+$url = 'https://staging-api.learnhub.mk/admin/members/ullam';
 $response = $client-&gt;put(
     $url,
     [
@@ -5885,7 +5959,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/php4oQyjm', 'r')
+                'contents' =&gt; fopen('/tmp/phpM9UVhJ', 'r')
             ],
         ],
     ]
@@ -5901,13 +5975,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/veniam'
+url = 'https://staging-api.learnhub.mk/admin/members/ullam'
 files = {
   'email': (None, 'johndoes@gmail.com'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
   'status': (None, 'deleted'),
-  'image': open('/tmp/php4oQyjm', 'rb')}
+  'image': open('/tmp/phpM9UVhJ', 'rb')}
 payload = {
     "email": "johndoes@gmail.com",
     "first_name": "John",
@@ -6035,7 +6109,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ipsa
+                        tempora
                     </div>
                 </div>
             </div>
@@ -6157,7 +6231,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-members--id--id"
                                                placeholder="The ID of the member."
-                                               value="ipsa" data-component="url"
+                                               value="tempora" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6255,7 +6329,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/members/ipsa" \
+    "https://staging-api.learnhub.mk/admin/members/tempora" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -6265,7 +6339,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/ipsa"
+    "https://staging-api.learnhub.mk/admin/members/tempora"
 );
 
 const headers = {
@@ -6284,7 +6358,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/ipsa';
+$url = 'https://staging-api.learnhub.mk/admin/members/tempora';
 $response = $client-&gt;delete(
     $url,
     [
@@ -6305,7 +6379,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/ipsa'
+url = 'https://staging-api.learnhub.mk/admin/members/tempora'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -6486,6 +6560,27 @@ response.json()</code></pre>                                        </div>
             </div>
             </div>
 </div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">status</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                            Must be one of:
+            <ul style="list-style-position: inside; list-style-type: square;"><li><code>active</code></li> <li><code>deleted</code></li> <li><code>banned</code></li></ul>
+                                    <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        active
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
                                                                 </div>
                         </div>
                     
@@ -6645,6 +6740,19 @@ response.json()</code></pre>                                        </div>
                                             >
                                                                             </div>
                                 </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETadmin-content-managers-status">status</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="status" name="status"
+                                                   id="queryparam-GETadmin-content-managers-status"
+                                                   placeholder=""
+                                                   value="active" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
                                                     </div>
                     </div>
                 </div>
@@ -6738,7 +6846,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/content-managers?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20" \
+    --get "https://staging-api.learnhub.mk/admin/content-managers?query=john&amp;sort_by=first_name&amp;sort_direction=asc&amp;per_page=20&amp;status=active" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -6756,6 +6864,7 @@ const params = {
     "sort_by": "first_name",
     "sort_direction": "asc",
     "per_page": "20",
+    "status": "active",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -6789,6 +6898,7 @@ $response = $client-&gt;get(
             'sort_by' =&gt; 'first_name',
             'sort_direction' =&gt; 'asc',
             'per_page' =&gt; '20',
+            'status' =&gt; 'active',
         ],
     ]
 );
@@ -6809,6 +6919,7 @@ params = {
   'sort_by': 'first_name',
   'sort_direction': 'asc',
   'per_page': '20',
+  'status': 'active',
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -6875,7 +6986,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : c5f4717c-137f-4b6e-9439-cc06ac78828d
+                                                            : 49f782fc-b992-428f-b6d7-7cb136b4714c
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -7486,7 +7597,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        omnis
+                        consequuntur
                     </div>
                 </div>
             </div>
@@ -7608,7 +7719,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="omnis" data-component="url"
+                                               value="consequuntur" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7706,7 +7817,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/admin/content-managers/omnis" \
+    --get "https://staging-api.learnhub.mk/admin/content-managers/consequuntur" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -7716,7 +7827,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/omnis"
+    "https://staging-api.learnhub.mk/admin/content-managers/consequuntur"
 );
 
 const headers = {
@@ -7735,7 +7846,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/omnis';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/consequuntur';
 $response = $client-&gt;get(
     $url,
     [
@@ -7756,7 +7867,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/omnis'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/consequuntur'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -7822,7 +7933,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 34819c5b-71a9-4a1c-a790-dd2c7bce3c81
+                                                            : 39b7c2e4-15f6-41d3-9ff0-a06b7fe8fb47
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -7965,7 +8076,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        recusandae
+                        aliquam
                     </div>
                 </div>
             </div>
@@ -8095,7 +8206,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpznZoxJ
+                        /tmp/phpllA8Kw
                     </div>
                 </div>
             </div>
@@ -8227,7 +8338,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="recusandae" data-component="url"
+                                               value="aliquam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8410,7 +8521,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/admin/content-managers/recusandae" \
+    "https://staging-api.learnhub.mk/admin/content-managers/aliquam" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
@@ -8418,7 +8529,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "first_name=John"\
     --form "last_name=Doe"\
     --form "status=deleted"\
-    --form "image=@/tmp/phpznZoxJ" </code></pre>                                        </div>
+    --form "image=@/tmp/phpllA8Kw" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -8426,7 +8537,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/recusandae"
+    "https://staging-api.learnhub.mk/admin/content-managers/aliquam"
 );
 
 const headers = {
@@ -8454,7 +8565,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/recusandae';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/aliquam';
 $response = $client-&gt;put(
     $url,
     [
@@ -8482,7 +8593,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpznZoxJ', 'r')
+                'contents' =&gt; fopen('/tmp/phpllA8Kw', 'r')
             ],
         ],
     ]
@@ -8498,13 +8609,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/recusandae'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/aliquam'
 files = {
   'email': (None, 'johndoes@learnhub.mk'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
   'status': (None, 'deleted'),
-  'image': open('/tmp/phpznZoxJ', 'rb')}
+  'image': open('/tmp/phpllA8Kw', 'rb')}
 payload = {
     "email": "johndoes@learnhub.mk",
     "first_name": "John",
@@ -8632,7 +8743,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ratione
+                        accusamus
                     </div>
                 </div>
             </div>
@@ -8754,7 +8865,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEadmin-content-managers--id--id"
                                                placeholder="The ID of the content manager."
-                                               value="ratione" data-component="url"
+                                               value="accusamus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8852,7 +8963,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/admin/content-managers/ratione" \
+    "https://staging-api.learnhub.mk/admin/content-managers/accusamus" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -8862,7 +8973,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/ratione"
+    "https://staging-api.learnhub.mk/admin/content-managers/accusamus"
 );
 
 const headers = {
@@ -8881,7 +8992,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/ratione';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/accusamus';
 $response = $client-&gt;delete(
     $url,
     [
@@ -8902,7 +9013,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/ratione'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/accusamus'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -9023,7 +9134,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        nobis
+                        expedita
                     </div>
                 </div>
             </div>
@@ -9145,7 +9256,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PATCHadmin-administrators--id--restore-id"
                                                placeholder="The ID of the administrator."
-                                               value="nobis" data-component="url"
+                                               value="expedita" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -9243,7 +9354,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PATCH \
-    "https://staging-api.learnhub.mk/admin/administrators/nobis/restore" \
+    "https://staging-api.learnhub.mk/admin/administrators/expedita/restore" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -9253,7 +9364,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/administrators/nobis/restore"
+    "https://staging-api.learnhub.mk/admin/administrators/expedita/restore"
 );
 
 const headers = {
@@ -9272,7 +9383,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/administrators/nobis/restore';
+$url = 'https://staging-api.learnhub.mk/admin/administrators/expedita/restore';
 $response = $client-&gt;patch(
     $url,
     [
@@ -9293,7 +9404,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/administrators/nobis/restore'
+url = 'https://staging-api.learnhub.mk/admin/administrators/expedita/restore'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -9414,7 +9525,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        nam
                     </div>
                 </div>
             </div>
@@ -9536,7 +9647,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PATCHadmin-members--id--restore-id"
                                                placeholder="The ID of the member."
-                                               value="est" data-component="url"
+                                               value="nam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -9634,7 +9745,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PATCH \
-    "https://staging-api.learnhub.mk/admin/members/est/restore" \
+    "https://staging-api.learnhub.mk/admin/members/nam/restore" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -9644,7 +9755,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/members/est/restore"
+    "https://staging-api.learnhub.mk/admin/members/nam/restore"
 );
 
 const headers = {
@@ -9663,7 +9774,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/members/est/restore';
+$url = 'https://staging-api.learnhub.mk/admin/members/nam/restore';
 $response = $client-&gt;patch(
     $url,
     [
@@ -9684,7 +9795,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/members/est/restore'
+url = 'https://staging-api.learnhub.mk/admin/members/nam/restore'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -9805,7 +9916,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        officia
+                        amet
                     </div>
                 </div>
             </div>
@@ -9927,7 +10038,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PATCHadmin-content-managers--id--restore-id"
                                                placeholder="The ID of the content manager."
-                                               value="officia" data-component="url"
+                                               value="amet" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10025,7 +10136,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PATCH \
-    "https://staging-api.learnhub.mk/admin/content-managers/officia/restore" \
+    "https://staging-api.learnhub.mk/admin/content-managers/amet/restore" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -10035,7 +10146,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/admin/content-managers/officia/restore"
+    "https://staging-api.learnhub.mk/admin/content-managers/amet/restore"
 );
 
 const headers = {
@@ -10054,7 +10165,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/admin/content-managers/officia/restore';
+$url = 'https://staging-api.learnhub.mk/admin/content-managers/amet/restore';
 $response = $client-&gt;patch(
     $url,
     [
@@ -10075,7 +10186,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/admin/content-managers/officia/restore'
+url = 'https://staging-api.learnhub.mk/admin/content-managers/amet/restore'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -10477,7 +10588,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 887dd4d9-2081-4786-a767-122c644089b8
+                                                            : 9510fff5-a192-453b-8ca6-5e29f16c8d76
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -10594,7 +10705,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        camille.rath@example.com
+                        prippin@example.com
                     </div>
                 </div>
             </div>
@@ -10618,7 +10729,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        a
+                        ullam
                     </div>
                 </div>
             </div>
@@ -10712,8 +10823,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTadmin-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "camille.rath@example.com",
-    "password": "a"
+    "email": "prippin@example.com",
+    "password": "ullam"
 }</div>
                             </div>
                                             </div>
@@ -10811,8 +10922,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"camille.rath@example.com\",
-    \"password\": \"a\"
+    \"email\": \"prippin@example.com\",
+    \"password\": \"ullam\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -10831,8 +10942,8 @@ const headers = {
 };
 
 let body = {
-    "email": "camille.rath@example.com",
-    "password": "a"
+    "email": "prippin@example.com",
+    "password": "ullam"
 };
 
 fetch(url, {
@@ -10856,8 +10967,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'camille.rath@example.com',
-            'password' =&gt; 'a',
+            'email' =&gt; 'prippin@example.com',
+            'password' =&gt; 'ullam',
         ],
     ]
 );
@@ -10874,8 +10985,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/admin/login'
 payload = {
-    "email": "camille.rath@example.com",
-    "password": "a"
+    "email": "prippin@example.com",
+    "password": "ullam"
 }
 headers = {
   'Accept': 'application/json',
@@ -11926,7 +12037,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 1714e000-9a3c-455a-80e0-83cde03e339e
+                                                            : bef8d0ba-f586-4885-a1a6-4eb27a799a79
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -12043,7 +12154,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        gkuvalis@example.net
+                        lamar16@example.net
                     </div>
                 </div>
             </div>
@@ -12067,7 +12178,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        beatae
+                        aperiam
                     </div>
                 </div>
             </div>
@@ -12161,8 +12272,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontent-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "gkuvalis@example.net",
-    "password": "beatae"
+    "email": "lamar16@example.net",
+    "password": "aperiam"
 }</div>
                             </div>
                                             </div>
@@ -12260,8 +12371,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"gkuvalis@example.net\",
-    \"password\": \"beatae\"
+    \"email\": \"lamar16@example.net\",
+    \"password\": \"aperiam\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -12280,8 +12391,8 @@ const headers = {
 };
 
 let body = {
-    "email": "gkuvalis@example.net",
-    "password": "beatae"
+    "email": "lamar16@example.net",
+    "password": "aperiam"
 };
 
 fetch(url, {
@@ -12305,8 +12416,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'gkuvalis@example.net',
-            'password' =&gt; 'beatae',
+            'email' =&gt; 'lamar16@example.net',
+            'password' =&gt; 'aperiam',
         ],
     ]
 );
@@ -12323,8 +12434,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/content/login'
 payload = {
-    "email": "gkuvalis@example.net",
-    "password": "beatae"
+    "email": "lamar16@example.net",
+    "password": "aperiam"
 }
 headers = {
   'Accept': 'application/json',
@@ -13375,7 +13486,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 2fec3934-b5c9-414e-b28b-59c7c208c2ca
+                                                            : ae00b8b4-d66e-4518-8bec-ed14a34d8db9
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -13492,7 +13603,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        howell.aleen@example.net
+                        walter.simone@example.org
                     </div>
                 </div>
             </div>
@@ -13516,7 +13627,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eos
+                        debitis
                     </div>
                 </div>
             </div>
@@ -13610,8 +13721,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTlogin"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "howell.aleen@example.net",
-    "password": "eos"
+    "email": "walter.simone@example.org",
+    "password": "debitis"
 }</div>
                             </div>
                                             </div>
@@ -13709,8 +13820,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"howell.aleen@example.net\",
-    \"password\": \"eos\"
+    \"email\": \"walter.simone@example.org\",
+    \"password\": \"debitis\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -13729,8 +13840,8 @@ const headers = {
 };
 
 let body = {
-    "email": "howell.aleen@example.net",
-    "password": "eos"
+    "email": "walter.simone@example.org",
+    "password": "debitis"
 };
 
 fetch(url, {
@@ -13754,8 +13865,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'howell.aleen@example.net',
-            'password' =&gt; 'eos',
+            'email' =&gt; 'walter.simone@example.org',
+            'password' =&gt; 'debitis',
         ],
     ]
 );
@@ -13772,8 +13883,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/login'
 payload = {
-    "email": "howell.aleen@example.net",
-    "password": "eos"
+    "email": "walter.simone@example.org",
+    "password": "debitis"
 }
 headers = {
   'Accept': 'application/json',
@@ -14824,7 +14935,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 3b5f901d-b050-4374-9bb9-f4a03cc505f3
+                                                            : 6d014b14-287f-46b9-84dd-5000c1c9b1c2
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -15219,7 +15330,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : ddcb1090-b078-4ca5-ab8c-ca702c8a9d0c
+                                                            : b0bdab31-88e6-4010-9abf-4bd4e026e9bd
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -15336,7 +15447,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        gebert@example.net
+                        breanna93@example.com
                     </div>
                 </div>
             </div>
@@ -15430,7 +15541,7 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTpasswords-request-new"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "gebert@example.net"
+    "email": "breanna93@example.com"
 }</div>
                             </div>
                                             </div>
@@ -15528,7 +15639,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"email\": \"gebert@example.net\"
+    \"email\": \"breanna93@example.com\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -15547,7 +15658,7 @@ const headers = {
 };
 
 let body = {
-    "email": "gebert@example.net"
+    "email": "breanna93@example.com"
 };
 
 fetch(url, {
@@ -15571,7 +15682,7 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'gebert@example.net',
+            'email' =&gt; 'breanna93@example.com',
         ],
     ]
 );
@@ -15588,7 +15699,7 @@ import json
 
 url = 'https://staging-api.learnhub.mk/passwords/request-new'
 payload = {
-    "email": "gebert@example.net"
+    "email": "breanna93@example.com"
 }
 headers = {
   'Accept': 'application/json',
@@ -15707,7 +15818,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        cumque
                     </div>
                 </div>
             </div>
@@ -15734,7 +15845,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        merl65@example.org
+                        shanon.rath@example.net
                     </div>
                 </div>
             </div>
@@ -15761,7 +15872,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        K&lt;ipm(fQl+]67C&#039;5,XD
+                        74=|_t*S52OKQU$L&gt;L
                     </div>
                 </div>
             </div>
@@ -15855,9 +15966,9 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTpasswords-reset"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "token": "est",
-    "email": "merl65@example.org",
-    "password": "K<ipm(fQl+]67C'5,XD"
+    "token": "cumque",
+    "email": "shanon.rath@example.net",
+    "password": "74=|_t*S52OKQU$L>L"
 }</div>
                             </div>
                                             </div>
@@ -15955,9 +16066,9 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"token\": \"est\",
-    \"email\": \"merl65@example.org\",
-    \"password\": \"K&lt;ipm(fQl+]67C\'5,XD\"
+    \"token\": \"cumque\",
+    \"email\": \"shanon.rath@example.net\",
+    \"password\": \"74=|_t*S52OKQU$L&gt;L\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -15976,9 +16087,9 @@ const headers = {
 };
 
 let body = {
-    "token": "est",
-    "email": "merl65@example.org",
-    "password": "K&lt;ipm(fQl+]67C'5,XD"
+    "token": "cumque",
+    "email": "shanon.rath@example.net",
+    "password": "74=|_t*S52OKQU$L&gt;L"
 };
 
 fetch(url, {
@@ -16002,9 +16113,9 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'token' =&gt; 'est',
-            'email' =&gt; 'merl65@example.org',
-            'password' =&gt; 'K&lt;ipm(fQl+]67C\'5,XD',
+            'token' =&gt; 'cumque',
+            'email' =&gt; 'shanon.rath@example.net',
+            'password' =&gt; '74=|_t*S52OKQU$L&gt;L',
         ],
     ]
 );
@@ -16021,9 +16132,9 @@ import json
 
 url = 'https://staging-api.learnhub.mk/passwords/reset'
 payload = {
-    "token": "est",
-    "email": "merl65@example.org",
-    "password": "K&lt;ipm(fQl+]67C'5,XD"
+    "token": "cumque",
+    "email": "shanon.rath@example.net",
+    "password": "74=|_t*S52OKQU$L&gt;L"
 }
 headers = {
   'Accept': 'application/json',
@@ -16249,7 +16360,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        12
+                        8
                     </div>
                 </div>
             </div>
@@ -16435,7 +16546,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="per_page" name="per_page"
                                                    id="queryparam-GETcontent-blog-posts-per_page"
                                                    placeholder=""
-                                                   value="12" data-component="query"
+                                                   value="8" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -16533,7 +16644,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/content/blog-posts?title=learnhub&amp;status=published&amp;tags[]=php&amp;tags[]=javascript&amp;tags[]=mysql&amp;author=john&amp;sort=title&amp;per_page=12" \
+    --get "https://staging-api.learnhub.mk/content/blog-posts?title=learnhub&amp;status=published&amp;tags[]=php&amp;tags[]=javascript&amp;tags[]=mysql&amp;author=john&amp;sort=title&amp;per_page=8" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -16554,7 +16665,7 @@ const params = {
     "tags[2]": "mysql",
     "author": "john",
     "sort": "title",
-    "per_page": "12",
+    "per_page": "8",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -16591,7 +16702,7 @@ $response = $client-&gt;get(
             'tags[2]' =&gt; 'mysql',
             'author' =&gt; 'john',
             'sort' =&gt; 'title',
-            'per_page' =&gt; '12',
+            'per_page' =&gt; '8',
         ],
     ]
 );
@@ -16615,7 +16726,7 @@ params = {
   'tags[2]': 'mysql',
   'author': 'john',
   'sort': 'title',
-  'per_page': '12',
+  'per_page': '8',
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -16682,7 +16793,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 9ca173d3-964c-41ba-824d-8c1a367e7a98
+                                                            : 214031ce-9216-4ad7-b080-963e8b388620
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -16918,7 +17029,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpaqI7j3
+                        /tmp/phphmSSdd
                     </div>
                 </div>
             </div>
@@ -17208,7 +17319,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "excerpt=This is test blogpost example"\
     --form "content=Lorem ipsum dolor sit amet, consectetur adipiscing ..."\
     --form "tags=[1,2,3]"\
-    --form "image=@/tmp/phpaqI7j3" </code></pre>                                        </div>
+    --form "image=@/tmp/phphmSSdd" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -17272,7 +17383,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpaqI7j3', 'r')
+                'contents' =&gt; fopen('/tmp/phphmSSdd', 'r')
             ],
         ],
     ]
@@ -17294,7 +17405,7 @@ files = {
   'excerpt': (None, 'This is test blogpost example'),
   'content': (None, 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'),
   'tags': (None, '[1,2,3]'),
-  'image': open('/tmp/phpaqI7j3', 'rb')}
+  'image': open('/tmp/phphmSSdd', 'rb')}
 payload = {
     "title": "Example Blog Post Title ",
     "excerpt": "This is test blogpost example",
@@ -17422,7 +17533,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        adipisci
+                        pariatur
                     </div>
                 </div>
             </div>
@@ -17544,7 +17655,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETcontent-blog-posts--id--id"
                                                placeholder="The ID of the blog post."
-                                               value="adipisci" data-component="url"
+                                               value="pariatur" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -17642,7 +17753,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/content/blog-posts/adipisci" \
+    --get "https://staging-api.learnhub.mk/content/blog-posts/pariatur" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -17652,7 +17763,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-posts/adipisci"
+    "https://staging-api.learnhub.mk/content/blog-posts/pariatur"
 );
 
 const headers = {
@@ -17671,7 +17782,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-posts/adipisci';
+$url = 'https://staging-api.learnhub.mk/content/blog-posts/pariatur';
 $response = $client-&gt;get(
     $url,
     [
@@ -17692,7 +17803,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-posts/adipisci'
+url = 'https://staging-api.learnhub.mk/content/blog-posts/pariatur'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -17758,7 +17869,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : c3106a9e-daca-48c9-a898-5003a39a8328
+                                                            : abf67d1d-0f41-401a-bd44-9c42bc4241f3
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -17901,7 +18012,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        corporis
+                        eveniet
                     </div>
                 </div>
             </div>
@@ -18043,7 +18154,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpW99QU3
+                        /tmp/php6c6gGl
                     </div>
                 </div>
             </div>
@@ -18175,7 +18286,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTcontent-blog-posts--id--id"
                                                placeholder="The ID of the blog post."
-                                               value="corporis" data-component="url"
+                                               value="eveniet" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -18371,7 +18482,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/content/blog-posts/corporis" \
+    "https://staging-api.learnhub.mk/content/blog-posts/eveniet" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: multipart/form-data" \
@@ -18380,7 +18491,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "slug=example-blog-post-title "\
     --form "content=Lorem ipsum dolor sit amet, consectetur adipiscing ..."\
     --form "tags=[1,2,3]"\
-    --form "image=@/tmp/phpW99QU3" </code></pre>                                        </div>
+    --form "image=@/tmp/php6c6gGl" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -18388,7 +18499,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-posts/corporis"
+    "https://staging-api.learnhub.mk/content/blog-posts/eveniet"
 );
 
 const headers = {
@@ -18417,7 +18528,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-posts/corporis';
+$url = 'https://staging-api.learnhub.mk/content/blog-posts/eveniet';
 $response = $client-&gt;put(
     $url,
     [
@@ -18449,7 +18560,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpW99QU3', 'r')
+                'contents' =&gt; fopen('/tmp/php6c6gGl', 'r')
             ],
         ],
     ]
@@ -18465,14 +18576,14 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-posts/corporis'
+url = 'https://staging-api.learnhub.mk/content/blog-posts/eveniet'
 files = {
   'title': (None, 'Example Blog Post Title '),
   'excerpt': (None, 'This is test blogpost example'),
   'slug': (None, 'example-blog-post-title '),
   'content': (None, 'Lorem ipsum dolor sit amet, consectetur adipiscing ...'),
   'tags': (None, '[1,2,3]'),
-  'image': open('/tmp/phpW99QU3', 'rb')}
+  'image': open('/tmp/php6c6gGl', 'rb')}
 payload = {
     "title": "Example Blog Post Title ",
     "excerpt": "This is test blogpost example",
@@ -18601,7 +18712,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        deleniti
+                        facere
                     </div>
                 </div>
             </div>
@@ -18723,7 +18834,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEcontent-blog-posts--id--id"
                                                placeholder="The ID of the blog post."
-                                               value="deleniti" data-component="url"
+                                               value="facere" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -18821,7 +18932,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/content/blog-posts/deleniti" \
+    "https://staging-api.learnhub.mk/content/blog-posts/facere" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -18831,7 +18942,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-posts/deleniti"
+    "https://staging-api.learnhub.mk/content/blog-posts/facere"
 );
 
 const headers = {
@@ -18850,7 +18961,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-posts/deleniti';
+$url = 'https://staging-api.learnhub.mk/content/blog-posts/facere';
 $response = $client-&gt;delete(
     $url,
     [
@@ -18871,7 +18982,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-posts/deleniti'
+url = 'https://staging-api.learnhub.mk/content/blog-posts/facere'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -19030,7 +19141,7 @@ or sort direction based on whether the key starts with - </p>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        10
+                        7
                     </div>
                 </div>
             </div>
@@ -19177,7 +19288,7 @@ or sort direction based on whether the key starts with - </p>
                                                                                     <input aria-label="per_page" name="per_page"
                                                    id="queryparam-GETcontent-blog-post-tags-per_page"
                                                    placeholder=""
-                                                   value="10" data-component="query"
+                                                   value="7" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -19275,7 +19386,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/content/blog-post-tags?sort=name%2C+-name&amp;search=name&amp;per_page=10" \
+    --get "https://staging-api.learnhub.mk/content/blog-post-tags?sort=name%2C+-name&amp;search=name&amp;per_page=7" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -19291,7 +19402,7 @@ You can check the Dev Tools console for debugging information.</p>
 const params = {
     "sort": "name, -name",
     "search": "name",
-    "per_page": "10",
+    "per_page": "7",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -19323,7 +19434,7 @@ $response = $client-&gt;get(
         'query' =&gt; [
             'sort' =&gt; 'name, -name',
             'search' =&gt; 'name',
-            'per_page' =&gt; '10',
+            'per_page' =&gt; '7',
         ],
     ]
 );
@@ -19342,7 +19453,7 @@ url = 'https://staging-api.learnhub.mk/content/blog-post-tags'
 params = {
   'sort': 'name, -name',
   'search': 'name',
-  'per_page': '10',
+  'per_page': '7',
 }
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
@@ -19409,7 +19520,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 9913b2fe-ef08-4869-aba4-1a3b2953d02e
+                                                            : f1ddbec5-3fb0-413d-89c0-2e2a1d653eef
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -19985,7 +20096,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        tempore
+                        voluptatibus
                     </div>
                 </div>
             </div>
@@ -20148,7 +20259,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTcontent-blog-post-tags--id--id"
                                                placeholder="The ID of the blog post tag."
-                                               value="tempore" data-component="url"
+                                               value="voluptatibus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20273,7 +20384,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://staging-api.learnhub.mk/content/blog-post-tags/tempore" \
+    "https://staging-api.learnhub.mk/content/blog-post-tags/voluptatibus" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
@@ -20288,7 +20399,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-post-tags/tempore"
+    "https://staging-api.learnhub.mk/content/blog-post-tags/voluptatibus"
 );
 
 const headers = {
@@ -20313,7 +20424,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-post-tags/tempore';
+$url = 'https://staging-api.learnhub.mk/content/blog-post-tags/voluptatibus';
 $response = $client-&gt;put(
     $url,
     [
@@ -20338,7 +20449,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-post-tags/tempore'
+url = 'https://staging-api.learnhub.mk/content/blog-post-tags/voluptatibus'
 payload = {
     "name": "test"
 }
@@ -20463,7 +20574,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        eos
                     </div>
                 </div>
             </div>
@@ -20585,7 +20696,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEcontent-blog-post-tags--id--id"
                                                placeholder="The ID of the blog post tag."
-                                               value="aut" data-component="url"
+                                               value="eos" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20683,7 +20794,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://staging-api.learnhub.mk/content/blog-post-tags/aut" \
+    "https://staging-api.learnhub.mk/content/blog-post-tags/eos" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -20693,7 +20804,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-post-tags/aut"
+    "https://staging-api.learnhub.mk/content/blog-post-tags/eos"
 );
 
 const headers = {
@@ -20712,7 +20823,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-post-tags/aut';
+$url = 'https://staging-api.learnhub.mk/content/blog-post-tags/eos';
 $response = $client-&gt;delete(
     $url,
     [
@@ -20733,7 +20844,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-post-tags/aut'
+url = 'https://staging-api.learnhub.mk/content/blog-post-tags/eos'
 headers = {
   'Authorization': 'Bearer {ACCESS_TOKEN}',
   'Accept': 'application/json'
@@ -20872,7 +20983,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ut
+                        ad
                     </div>
                 </div>
             </div>
@@ -21057,7 +21168,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PATCHcontent-blog-posts--id--statuses-id"
                                                placeholder="The ID of the blog post."
-                                               value="ut" data-component="url"
+                                               value="ad" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -21183,7 +21294,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PATCH \
-    "https://staging-api.learnhub.mk/content/blog-posts/ut/statuses" \
+    "https://staging-api.learnhub.mk/content/blog-posts/ad/statuses" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
@@ -21199,7 +21310,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/content/blog-posts/ut/statuses"
+    "https://staging-api.learnhub.mk/content/blog-posts/ad/statuses"
 );
 
 const headers = {
@@ -21225,7 +21336,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/content/blog-posts/ut/statuses';
+$url = 'https://staging-api.learnhub.mk/content/blog-posts/ad/statuses';
 $response = $client-&gt;patch(
     $url,
     [
@@ -21251,7 +21362,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/content/blog-posts/ut/statuses'
+url = 'https://staging-api.learnhub.mk/content/blog-posts/ad/statuses'
 payload = {
     "publish_date": "2024-01-01",
     "status": "draft, published, in_review, archive"
@@ -21596,7 +21707,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : f12c1b1f-69ee-45e0-8584-1c10399e4d4f
+                                                            : 37eeb144-572c-479d-8c0f-b3faddd8994b
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -21817,7 +21928,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpMDYS9W
+                        /tmp/phpbCczKo
                     </div>
                 </div>
             </div>
@@ -22070,7 +22181,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "password=password"\
     --form "first_name=John"\
     --form "last_name=Doe"\
-    --form "image=@/tmp/phpMDYS9W" </code></pre>                                        </div>
+    --form "image=@/tmp/phpbCczKo" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -22132,7 +22243,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpMDYS9W', 'r')
+                'contents' =&gt; fopen('/tmp/phpbCczKo', 'r')
             ],
         ],
     ]
@@ -22154,7 +22265,7 @@ files = {
   'password': (None, 'password'),
   'first_name': (None, 'John'),
   'last_name': (None, 'Doe'),
-  'image': open('/tmp/phpMDYS9W', 'rb')}
+  'image': open('/tmp/phpbCczKo', 'rb')}
 payload = {
     "email": "example@test.com",
     "password": "password",
@@ -22554,7 +22665,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 3a13793b-4156-435d-85fb-220438fabf4e
+                                                            : 6ac66479-1a1b-4b4d-ab7f-36052558e645
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -22949,7 +23060,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : f2f386ce-d7cb-4087-8d77-0438cfb81e3b
+                                                            : 529c71d5-726d-4939-b1e6-87030176ff1a
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -24344,7 +24455,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        est
                     </div>
                 </div>
             </div>
@@ -24363,7 +24474,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        7
+                        9
                     </div>
                 </div>
             </div>
@@ -24448,7 +24559,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="title" name="title"
                                                    id="queryparam-GETblog-posts-title"
                                                    placeholder=""
-                                                   value="quia" data-component="query"
+                                                   value="est" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -24461,7 +24572,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="per_page" name="per_page"
                                                    id="queryparam-GETblog-posts-per_page"
                                                    placeholder=""
-                                                   value="7" data-component="query"
+                                                   value="9" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -24559,7 +24670,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-posts?title=quia&amp;per_page=7" \
+    --get "https://staging-api.learnhub.mk/blog-posts?title=est&amp;per_page=9" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -24572,8 +24683,8 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
-    "title": "quia",
-    "per_page": "7",
+    "title": "est",
+    "per_page": "9",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -24601,8 +24712,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'title' =&gt; 'quia',
-            'per_page' =&gt; '7',
+            'title' =&gt; 'est',
+            'per_page' =&gt; '9',
         ],
     ]
 );
@@ -24619,8 +24730,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/blog-posts'
 params = {
-  'title': 'quia',
-  'per_page': '7',
+  'title': 'est',
+  'per_page': '9',
 }
 headers = {
   'Accept': 'application/json'
@@ -24686,7 +24797,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 83efad01-9037-417f-84bb-e55dec892a2b
+                                                            : 1f7add01-234a-4791-a6eb-60d0f0ef9a73
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -24694,9 +24805,9 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;title&quot;: &quot;Qui id veritatis aliquid quia ab aut.&quot;,
-            &quot;slug&quot;: &quot;qui-id-veritatis-aliquid-quia-ab-aut&quot;,
-            &quot;excerpt&quot;: &quot;Doloremque deserunt modi cupiditate voluptatem.&quot;,
+            &quot;title&quot;: &quot;Eum et corrupti est.&quot;,
+            &quot;slug&quot;: &quot;eum-et-corrupti-est&quot;,
+            &quot;excerpt&quot;: &quot;Perferendis repellendus magni maiores temporibus hic sint maxime.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -24710,39 +24821,16 @@ response.json()</code></pre>                                        </div>
             ],
             &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Eloise Klocko&quot;,
-                &quot;last_name&quot;: &quot;Anderson&quot;,
+                &quot;first_name&quot;: &quot;Arnulfo Lemke&quot;,
+                &quot;last_name&quot;: &quot;Kunde&quot;,
                 &quot;image&quot;: null
             },
             &quot;image&quot;: null
         },
         {
-            &quot;title&quot;: &quot;Eaque at quia quae aut doloribus.&quot;,
-            &quot;slug&quot;: &quot;eaque-at-quia-quae-aut-doloribus&quot;,
-            &quot;excerpt&quot;: &quot;Ea earum culpa voluptas.&quot;,
-            &quot;tags&quot;: [
-                {
-                    &quot;name&quot;: &quot;php&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;laravel&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;react&quot;
-                }
-            ],
-            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
-            &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Eloise Klocko&quot;,
-                &quot;last_name&quot;: &quot;Anderson&quot;,
-                &quot;image&quot;: null
-            },
-            &quot;image&quot;: null
-        },
-        {
-            &quot;title&quot;: &quot;Quia sed dolorum voluptatum voluptatem praesentium odio voluptate ea.&quot;,
-            &quot;slug&quot;: &quot;quia-sed-dolorum-voluptatum-voluptatem-praesentium-odio-voluptate-ea&quot;,
-            &quot;excerpt&quot;: &quot;Aperiam architecto vitae est totam beatae.&quot;,
+            &quot;title&quot;: &quot;Officiis molestiae eveniet optio placeat.&quot;,
+            &quot;slug&quot;: &quot;officiis-molestiae-eveniet-optio-placeat&quot;,
+            &quot;excerpt&quot;: &quot;Minus deleniti aperiam nisi.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -24763,9 +24851,9 @@ response.json()</code></pre>                                        </div>
             &quot;image&quot;: null
         },
         {
-            &quot;title&quot;: &quot;Quia exercitationem beatae atque.&quot;,
-            &quot;slug&quot;: &quot;quia-exercitationem-beatae-atque&quot;,
-            &quot;excerpt&quot;: &quot;In rerum qui quae.&quot;,
+            &quot;title&quot;: &quot;Enim ut vel iusto ut est.&quot;,
+            &quot;slug&quot;: &quot;enim-ut-vel-iusto-ut-est&quot;,
+            &quot;excerpt&quot;: &quot;Quibusdam non rerum iste qui qui sit qui.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -24786,9 +24874,9 @@ response.json()</code></pre>                                        </div>
             &quot;image&quot;: null
         },
         {
-            &quot;title&quot;: &quot;Vel aut laborum odio nihil quia autem.&quot;,
-            &quot;slug&quot;: &quot;vel-aut-laborum-odio-nihil-quia-autem&quot;,
-            &quot;excerpt&quot;: &quot;Dolorem quaerat quia ex.&quot;,
+            &quot;title&quot;: &quot;Blanditiis soluta similique est dolorem voluptatum non natus.&quot;,
+            &quot;slug&quot;: &quot;blanditiis-soluta-similique-est-dolorem-voluptatum-non-natus&quot;,
+            &quot;excerpt&quot;: &quot;Aperiam et quidem iste facere accusamus molestiae qui.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -24802,16 +24890,16 @@ response.json()</code></pre>                                        </div>
             ],
             &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Ruby Goodwin&quot;,
-                &quot;last_name&quot;: &quot;Carter&quot;,
+                &quot;first_name&quot;: &quot;Arnulfo Lemke&quot;,
+                &quot;last_name&quot;: &quot;Kunde&quot;,
                 &quot;image&quot;: null
             },
             &quot;image&quot;: null
         },
         {
-            &quot;title&quot;: &quot;Nobis quia quia eaque dolore quaerat ut.&quot;,
-            &quot;slug&quot;: &quot;nobis-quia-quia-eaque-dolore-quaerat-ut&quot;,
-            &quot;excerpt&quot;: &quot;Vitae amet autem recusandae aut sit culpa.&quot;,
+            &quot;title&quot;: &quot;Ut rerum voluptate molestiae optio voluptas et ut.&quot;,
+            &quot;slug&quot;: &quot;ut-rerum-voluptate-molestiae-optio-voluptas-et-ut&quot;,
+            &quot;excerpt&quot;: &quot;Impedit aut ducimus magni et sint.&quot;,
             &quot;tags&quot;: [
                 {
                     &quot;name&quot;: &quot;php&quot;
@@ -24825,8 +24913,31 @@ response.json()</code></pre>                                        </div>
             ],
             &quot;publish_date&quot;: &quot;2024-07-28&quot;,
             &quot;author&quot;: {
-                &quot;first_name&quot;: &quot;Justen Blanda&quot;,
-                &quot;last_name&quot;: &quot;Boyer&quot;,
+                &quot;first_name&quot;: &quot;Arnulfo Lemke&quot;,
+                &quot;last_name&quot;: &quot;Kunde&quot;,
+                &quot;image&quot;: null
+            },
+            &quot;image&quot;: null
+        },
+        {
+            &quot;title&quot;: &quot;Accusantium suscipit omnis recusandae hic eum est dolore.&quot;,
+            &quot;slug&quot;: &quot;accusantium-suscipit-omnis-recusandae-hic-eum-est-dolore&quot;,
+            &quot;excerpt&quot;: &quot;Explicabo sit sit magnam impedit consectetur.&quot;,
+            &quot;tags&quot;: [
+                {
+                    &quot;name&quot;: &quot;php&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;laravel&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;react&quot;
+                }
+            ],
+            &quot;publish_date&quot;: &quot;2024-07-28&quot;,
+            &quot;author&quot;: {
+                &quot;first_name&quot;: &quot;Sim Will V&quot;,
+                &quot;last_name&quot;: &quot;Harris&quot;,
                 &quot;image&quot;: null
             },
             &quot;image&quot;: null
@@ -24860,7 +24971,7 @@ response.json()</code></pre>                                        </div>
             }
         ],
         &quot;path&quot;: &quot;http://learnhub.test/blog-posts&quot;,
-        &quot;per_page&quot;: 7,
+        &quot;per_page&quot;: 9,
         &quot;to&quot;: 6,
         &quot;total&quot;: 6
     }
@@ -24955,7 +25066,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        accusantium
                     </div>
                 </div>
             </div>
@@ -25041,7 +25152,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="slug" name="slug"
                                                id="urlparam-GETblog-posts--slug--slug"
                                                placeholder="The slug of the blog post."
-                                               value="quia" data-component="url"
+                                               value="accusantium" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -25139,7 +25250,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-posts/quia" \
+    --get "https://staging-api.learnhub.mk/blog-posts/accusantium" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -25148,7 +25259,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/blog-posts/quia"
+    "https://staging-api.learnhub.mk/blog-posts/accusantium"
 );
 
 const headers = {
@@ -25166,7 +25277,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/blog-posts/quia';
+$url = 'https://staging-api.learnhub.mk/blog-posts/accusantium';
 $response = $client-&gt;get(
     $url,
     [
@@ -25186,7 +25297,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/blog-posts/quia'
+url = 'https://staging-api.learnhub.mk/blog-posts/accusantium'
 headers = {
   'Accept': 'application/json'
 }
@@ -25251,7 +25362,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : 5486c02c-0174-4794-8854-dc57fc7e8d1b
+                                                            : dce98235-b8a3-4397-8864-63a7526483ef
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -25736,7 +25847,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        5
+                        11
                     </div>
                 </div>
             </div>
@@ -25821,7 +25932,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="per_page" name="per_page"
                                                    id="queryparam-GETblog-post-tags-per_page"
                                                    placeholder=""
-                                                   value="5" data-component="query"
+                                                   value="11" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -25919,7 +26030,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-post-tags?per_page=5" \
+    --get "https://staging-api.learnhub.mk/blog-post-tags?per_page=11" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -25932,7 +26043,7 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
-    "per_page": "5",
+    "per_page": "11",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -25960,7 +26071,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '5',
+            'per_page' =&gt; '11',
         ],
     ]
 );
@@ -25977,7 +26088,7 @@ import json
 
 url = 'https://staging-api.learnhub.mk/blog-post-tags'
 params = {
-  'per_page': '5',
+  'per_page': '11',
 }
 headers = {
   'Accept': 'application/json'
@@ -26043,7 +26154,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : c18bff6d-bf1f-4211-bb27-c1b10cf39a1e
+                                                            : 6775a608-1a37-4b56-819d-77ff54b47e14
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -26064,18 +26175,36 @@ response.json()</code></pre>                                        </div>
         },
         {
             &quot;name&quot;: &quot;databases&quot;
+        },
+        {
+            &quot;name&quot;: &quot;design&quot;
+        },
+        {
+            &quot;name&quot;: &quot;development&quot;
+        },
+        {
+            &quot;name&quot;: &quot;docker&quot;
+        },
+        {
+            &quot;name&quot;: &quot;java&quot;
+        },
+        {
+            &quot;name&quot;: &quot;javascript&quot;
+        },
+        {
+            &quot;name&quot;: &quot;laravel&quot;
         }
     ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags?page=5&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags?page=3&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 5,
+        &quot;last_page&quot;: 3,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -26098,24 +26227,14 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=5&quot;,
-                &quot;label&quot;: &quot;5&quot;,
-                &quot;active&quot;: false
-            },
-            {
                 &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags?page=2&quot;,
                 &quot;label&quot;: &quot;Следна &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
         &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags&quot;,
-        &quot;per_page&quot;: 5,
-        &quot;to&quot;: 5,
+        &quot;per_page&quot;: 11,
+        &quot;to&quot;: 11,
         &quot;total&quot;: 23
     }
 }</code></pre>
@@ -26206,7 +26325,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        impedit
                     </div>
                 </div>
             </div>
@@ -26233,7 +26352,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        10
+                        15
                     </div>
                 </div>
             </div>
@@ -26317,7 +26436,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="tag" name="tag"
                                                id="urlparam-GETblog-post-tags--tag--tag"
                                                placeholder=""
-                                               value="est" data-component="url"
+                                               value="impedit" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -26351,7 +26470,7 @@ response.json()</code></pre>                                        </div>
                                                                                     <input aria-label="per_page" name="per_page"
                                                    id="queryparam-GETblog-post-tags--tag--per_page"
                                                    placeholder=""
-                                                   value="10" data-component="query"
+                                                   value="15" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -26449,7 +26568,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://staging-api.learnhub.mk/blog-post-tags/est?per_page=10" \
+    --get "https://staging-api.learnhub.mk/blog-post-tags/impedit?per_page=15" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -26458,11 +26577,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://staging-api.learnhub.mk/blog-post-tags/est"
+    "https://staging-api.learnhub.mk/blog-post-tags/impedit"
 );
 
 const params = {
-    "per_page": "10",
+    "per_page": "15",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -26482,7 +26601,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://staging-api.learnhub.mk/blog-post-tags/est';
+$url = 'https://staging-api.learnhub.mk/blog-post-tags/impedit';
 $response = $client-&gt;get(
     $url,
     [
@@ -26490,7 +26609,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'per_page' =&gt; '10',
+            'per_page' =&gt; '15',
         ],
     ]
 );
@@ -26505,9 +26624,9 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'https://staging-api.learnhub.mk/blog-post-tags/est'
+url = 'https://staging-api.learnhub.mk/blog-post-tags/impedit'
 params = {
-  'per_page': '10',
+  'per_page': '15',
 }
 headers = {
   'Accept': 'application/json'
@@ -26573,7 +26692,7 @@ response.json()</code></pre>                                        </div>
                                                                                                                     vary
                                                             : Origin
                                                                                                                     x-treblle-trace-id
-                                                            : a75a26ab-375e-47b8-841a-9d0570d71bcb
+                                                            : 860f37ab-c880-4c42-9814-cea2ed77b925
                                                          </code></pre>
                                             </details>
                                                                                                                                                                         
@@ -26581,8 +26700,8 @@ response.json()</code></pre>                                        </div>
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/est?page=1&quot;,
-        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/est?page=1&quot;,
+        &quot;first&quot;: &quot;http://learnhub.test/blog-post-tags/impedit?page=1&quot;,
+        &quot;last&quot;: &quot;http://learnhub.test/blog-post-tags/impedit?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -26597,7 +26716,7 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/est?page=1&quot;,
+                &quot;url&quot;: &quot;http://learnhub.test/blog-post-tags/impedit?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
@@ -26607,8 +26726,8 @@ response.json()</code></pre>                                        </div>
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/est&quot;,
-        &quot;per_page&quot;: 10,
+        &quot;path&quot;: &quot;http://learnhub.test/blog-post-tags/impedit&quot;,
+        &quot;per_page&quot;: 15,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
     }
@@ -26725,7 +26844,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        doloribus
+                        suscipit
                     </div>
                 </div>
             </div>
@@ -26752,7 +26871,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        forest91@example.org
+                        feeney.manley@example.com
                     </div>
                 </div>
             </div>
@@ -26779,7 +26898,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        facere
+                        debitis
                     </div>
                 </div>
             </div>
@@ -26806,7 +26925,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        soluta
+                        est
                     </div>
                 </div>
             </div>
@@ -26900,10 +27019,10 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTcontact"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "name": "doloribus",
-    "email": "forest91@example.org",
-    "message": "facere",
-    "cf-turnstile-response": "soluta"
+    "name": "suscipit",
+    "email": "feeney.manley@example.com",
+    "message": "debitis",
+    "cf-turnstile-response": "est"
 }</div>
                             </div>
                                             </div>
@@ -27001,10 +27120,10 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"name\": \"doloribus\",
-    \"email\": \"forest91@example.org\",
-    \"message\": \"facere\",
-    \"cf-turnstile-response\": \"soluta\"
+    \"name\": \"suscipit\",
+    \"email\": \"feeney.manley@example.com\",
+    \"message\": \"debitis\",
+    \"cf-turnstile-response\": \"est\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -27023,10 +27142,10 @@ const headers = {
 };
 
 let body = {
-    "name": "doloribus",
-    "email": "forest91@example.org",
-    "message": "facere",
-    "cf-turnstile-response": "soluta"
+    "name": "suscipit",
+    "email": "feeney.manley@example.com",
+    "message": "debitis",
+    "cf-turnstile-response": "est"
 };
 
 fetch(url, {
@@ -27050,10 +27169,10 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'doloribus',
-            'email' =&gt; 'forest91@example.org',
-            'message' =&gt; 'facere',
-            'cf-turnstile-response' =&gt; 'soluta',
+            'name' =&gt; 'suscipit',
+            'email' =&gt; 'feeney.manley@example.com',
+            'message' =&gt; 'debitis',
+            'cf-turnstile-response' =&gt; 'est',
         ],
     ]
 );
@@ -27070,10 +27189,10 @@ import json
 
 url = 'https://staging-api.learnhub.mk/contact'
 payload = {
-    "name": "doloribus",
-    "email": "forest91@example.org",
-    "message": "facere",
-    "cf-turnstile-response": "soluta"
+    "name": "suscipit",
+    "email": "feeney.manley@example.com",
+    "message": "debitis",
+    "cf-turnstile-response": "est"
 }
 headers = {
   'Accept': 'application/json',
@@ -27195,7 +27314,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        zqkz
+                        vexuqdpqltvymqouwzftmssyg
                     </div>
                 </div>
             </div>
@@ -27222,7 +27341,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        jaskolski.katrina@example.net
+                        derick67@example.org
                     </div>
                 </div>
             </div>
@@ -27330,8 +27449,8 @@ response.json()</code></pre>                                        </div>
                                      id="json-body-POSTnewsletter-subscribers"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "first_name": "zqkz",
-    "email": "jaskolski.katrina@example.net",
+    "first_name": "vexuqdpqltvymqouwzftmssyg",
+    "email": "derick67@example.org",
     "cf-turnstile-response": null
 }</div>
                             </div>
@@ -27430,8 +27549,8 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "{
-    \"first_name\": \"zqkz\",
-    \"email\": \"jaskolski.katrina@example.net\"
+    \"first_name\": \"vexuqdpqltvymqouwzftmssyg\",
+    \"email\": \"derick67@example.org\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -27450,8 +27569,8 @@ const headers = {
 };
 
 let body = {
-    "first_name": "zqkz",
-    "email": "jaskolski.katrina@example.net"
+    "first_name": "vexuqdpqltvymqouwzftmssyg",
+    "email": "derick67@example.org"
 };
 
 fetch(url, {
@@ -27475,8 +27594,8 @@ $response = $client-&gt;post(
             'Content-Type' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'first_name' =&gt; 'zqkz',
-            'email' =&gt; 'jaskolski.katrina@example.net',
+            'first_name' =&gt; 'vexuqdpqltvymqouwzftmssyg',
+            'email' =&gt; 'derick67@example.org',
         ],
     ]
 );
@@ -27493,8 +27612,8 @@ import json
 
 url = 'https://staging-api.learnhub.mk/newsletter-subscribers'
 payload = {
-    "first_name": "zqkz",
-    "email": "jaskolski.katrina@example.net"
+    "first_name": "vexuqdpqltvymqouwzftmssyg",
+    "email": "derick67@example.org"
 }
 headers = {
   'Accept': 'application/json',
