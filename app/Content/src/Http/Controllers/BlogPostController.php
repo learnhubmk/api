@@ -114,7 +114,7 @@ class BlogPostController extends Controller
         $blogPost = BlogPost::findOrFail($blogPost);
         $blogPost->update(array_merge($blogPostData));
 
-        if (Storage::has($blogPost->image)) {
+        if ($blogPost->image && Storage::has($blogPost->image)) {
             Storage::delete($blogPost->image);
         }
 
@@ -133,7 +133,7 @@ class BlogPostController extends Controller
     {
         $blogPost = BlogPost::findOrFail($blogPost);
 
-        if (Storage::has($blogPost->image)) {
+        if ($blogPost->image && Storage::has($blogPost->image)) {
             Storage::delete($blogPost->image);
         }
 
