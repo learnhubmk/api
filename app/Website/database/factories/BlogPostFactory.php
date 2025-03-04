@@ -23,6 +23,7 @@ class BlogPostFactory extends Factory
     {
         $title = $this->faker->sentence;
         $slug = Str::slug($title, '-');
+        $imageUrl = 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 
         return [
             'title' => $title,
@@ -30,6 +31,7 @@ class BlogPostFactory extends Factory
             'excerpt' => $this->faker->sentence,
             'author_id' => Author::all()->random()->id,
             'content' => $this->faker->text,
+            'image' => $imageUrl,
             'status' => BlogPostStatus::PUBLISHED,
             'publish_date' => now(),
         ];

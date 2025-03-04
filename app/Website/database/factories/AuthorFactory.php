@@ -21,9 +21,14 @@ class AuthorFactory extends Factory
      */
     public function definition(): array
     {
+        $imageUrl = 'https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg';
         return [
             'first_name' => fake()->name,
             'last_name' => fake()->lastName,
+            'image' => $imageUrl,
+            'bio' => fake()->text,
+            'website_url' => fake()->url(),
+            'linkedin_url' => fake()->url(),
             'user_id' => User::all()->random()->id,
         ];
     }
