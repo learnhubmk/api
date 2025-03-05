@@ -140,8 +140,8 @@ class AdminManagementController
                 ->whereRelation('roles', 'name', RoleName::ADMIN->value)
                 ->findOrFail($id);
 
-            $imageName = time().'.'.$request->image->extension();
-            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/admin/', $imageName);
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/admin', $imageName, 'public');
 
             $admin->update(['email' => $request->get('email')]);
 

@@ -139,8 +139,8 @@ class ContentManagerManagementController
                 ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
                 ->findOrFail($id);
 
-            $imageName = time().'.'.$request->image->extension();
-            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/manager/', $imageName);
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/manager', $imageName, 'public');
 
             $contentManager->update(['email' => $request->get('email')]);
 
