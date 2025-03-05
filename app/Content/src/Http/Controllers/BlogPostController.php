@@ -70,7 +70,6 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
     public function store(CreateBlogPostRequest $request): BlogPostResource
     {
-        //dd($request->file('image'));
         $imageName = time().'.'.$request->image->extension();
         $image = $request->file('image')?->storePubliclyAs('/images/blog-posts/', $imageName);
 
