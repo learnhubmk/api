@@ -70,8 +70,8 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
     public function store(CreateBlogPostRequest $request): BlogPostResource
     {
-        $imageName = time().'.'.$request->image->extension();
-        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts/', $imageName);
+        $imageName = $request->image->getClientOriginalName();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts', $imageName, 'public');
 
         $blogPost = BlogPost::create([
             'title' => $request->title,
@@ -108,13 +108,22 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: false, example: '[1,2,3]')]
     public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostResource
     {
-        $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
-        $imageName = time().'.'.$request->image->extension();
-        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts/', $imageName);
-        $blogPostData = $image ? array_merge(['image' => $image], $blogPostData) : $blogPostData;
+
+        $imageName = $request->image->getClientOriginalName();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts', $imageName, 'public');
 
         $blogPost = BlogPost::findOrFail($blogPost);
-        $blogPost->update(array_merge($blogPostData));
+        $blogPost->title = $request->title ?: $blogPost->title;
+        $blogPost->slug = $request->slug ?: $blogPost->slug;
+        $blogPost->excerpt = $request->excerpt ?: $blogPost->excerpt;
+        $blogPost->content = $request->content ?: $blogPost->content;
+
+
+        if ($request->has('image')) {
+            $blogPost->image = $image;
+        }
+
+        $blogPost->update();
 
         if ($blogPost->image && Storage::has($blogPost->image)) {
             Storage::delete($blogPost->image);
