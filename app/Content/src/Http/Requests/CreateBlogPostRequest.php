@@ -28,7 +28,7 @@ class CreateBlogPostRequest extends FormRequest
             'title' => ['required', 'string', 'max:255'],
             'excerpt' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string'],
-            'tags' => ['required', ],
+            'tags' => ['required', 'array'],
             'tags.*' => ['required', 'exists:blog_post_tags,id'],
             'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->max(4 * 1024)],
         ];
