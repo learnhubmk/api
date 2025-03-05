@@ -2,23 +2,23 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPostPermissionsRequest;
-use App\Content\Http\Requests\CreateBlogPostRequest;
-use App\Content\Http\Requests\UpdateBlogPostRequest;
-use App\Content\Http\Resources\BlogPostResource;
+use Illuminate\Support\Str;
+use Illuminate\Http\Response;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
-use App\Framework\Enums\BlogPostStatus;
-use App\Framework\Http\Controllers\Controller;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Knuckles\Scribe\Attributes\Authenticated;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use App\Framework\Enums\BlogPostStatus;
+use Illuminate\Support\Facades\Storage;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\Authenticated;
+use App\Framework\Http\Controllers\Controller;
+use App\Content\Http\Resources\BlogPostResource;
+use App\Content\Http\Requests\CreateBlogPostRequest;
+use App\Content\Http\Requests\UpdateBlogPostRequest;
+use App\Content\Http\Requests\BlogPostPermissionsRequest;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class BlogPostController extends Controller
 {
@@ -70,7 +70,9 @@ class BlogPostController extends Controller
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
     public function store(CreateBlogPostRequest $request): BlogPostResource
     {
-        $image = $request->file('image')?->storePubliclyAs('blog-post-images');
+        //dd($request->file('image'));
+        $imageName = time().'.'.$request->image->extension();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts/', $imageName);
 
         $blogPost = BlogPost::create([
             'title' => $request->title,
@@ -108,7 +110,8 @@ class BlogPostController extends Controller
     public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostResource
     {
         $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
-        $image = $request->file('image')?->storePubliclyAs('blog-post-images');
+        $imageName = time().'.'.$request->image->extension();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts/', $imageName);
         $blogPostData = $image ? array_merge(['image' => $image], $blogPostData) : $blogPostData;
 
         $blogPost = BlogPost::findOrFail($blogPost);
