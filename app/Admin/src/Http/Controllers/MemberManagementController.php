@@ -138,7 +138,8 @@ class MemberManagementController
                 ->whereRelation('roles', 'name', RoleName::MEMBER->value)
                 ->findOrFail($id);
 
-            $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/member', $imageName, 'public');
 
             $member->update(['email' => $request->get('email')]);
 
