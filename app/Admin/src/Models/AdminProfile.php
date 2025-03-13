@@ -41,14 +41,15 @@ class AdminProfile extends Model
         'image',
     ];
 
+    /**
+     * @return BelongsTo<User, AdminProfile>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    /**
-     * Create a new factory instance for the model.
-     */
+    /** @return Factory<AdminProfile> */
     protected static function newFactory(): Factory
     {
         return AdminProfileFactory::new();

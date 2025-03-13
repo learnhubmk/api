@@ -3,6 +3,9 @@
 namespace App\Website\Models;
 
 use App\Framework\Models\User;
+use App\Website\Database\Factories\AuthorFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -27,6 +30,8 @@ use Illuminate\Support\Collection;
  */
 class Author extends Model
 {
+    use HasFactory;
+
     protected $table = 'authors';
 
     protected $casts = [
@@ -43,13 +48,26 @@ class Author extends Model
         'user_id',
     ];
 
+    /**
+     * Get the user that owns the author.
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Get the blog posts associated with the author.
+     *
+     * @return HasMany<BlogPost>
+     */
     public function blog_posts(): HasMany
     {
         return $this->hasMany(BlogPost::class);
+    }
+
+    protected static function newFactory(): AuthorFactory|Factory
+    {
+        return AuthorFactory::new();
     }
 }

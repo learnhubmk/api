@@ -2,9 +2,11 @@
 
 namespace App\Platform\Http\Resources;
 
+use App\Platform\Models\MemberProfile;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/** @mixin MemberProfile */
 class MemberProfileDetailsResource extends JsonResource
 {
     /**
@@ -15,11 +17,11 @@ class MemberProfileDetailsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'first_name' => $this->first_name,
-            'last_name' => $this->last_name,
-            'image' => $this->image,
-            'user_id' => $this->user_id,
+            'id' => $this->resource->id,
+            'first_name' => $this->resource->first_name,
+            'last_name' => $this->resource->last_name,
+            'image' => $this->resource->image,
+            'user_id' => $this->resource->user_id,
         ];
     }
 }

@@ -7,13 +7,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class AuthenticatedContentManagerResource extends JsonResource
 {
-    protected $token;
+    protected string $token;
 
-    public function __construct($resource, $token)
+    public function __construct(mixed $resource, string $token)
     {
         parent::__construct($resource);
         $this->token = $token;
     }
+
     /**
      * Transform the resource into an array.
      *
@@ -22,8 +23,8 @@ class AuthenticatedContentManagerResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'email' => $this->email,
+            'id' => $this->resource->id,
+            'email' => $this->resource->email,
             'token' => $this->token,
         ];
     }

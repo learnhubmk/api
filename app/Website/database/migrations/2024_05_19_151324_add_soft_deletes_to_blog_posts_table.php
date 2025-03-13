@@ -10,7 +10,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::table('blog_posts', function (Blueprint $table) {
+        Schema::table('blog_posts', function (Blueprint $table): void {
             $table->softDeletes();
         });
     }
@@ -20,7 +20,7 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::table('blog_posts', function (Blueprint $table) {
+        Schema::table('blog_posts', function (Blueprint $table): void {
             $table->dropSoftDeletes();
         });
     }

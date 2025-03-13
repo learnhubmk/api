@@ -2,41 +2,48 @@
 
 namespace App\Authentication\Http\Controllers;
 
-use Exception;
+use App\Authentication\Http\Resources\AuthenticatedMemberResource;
+use App\Authentication\Http\Resources\RedirectLinkResource;
 use App\Framework\Models\User;
-use Knuckles\Scribe\Attributes\Group;
+use Exception;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\UrlParam;
 use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Validation\ValidationException;
-use App\Authentication\Http\Resources\RedirectLinkResource;
-use App\Authentication\Http\Resources\AuthenticatedMemberResource;
+use Laravel\Socialite\Contracts\User as SocialiteUser;
 
 class SocialiteAuthController
 {
     #[Group('Authentication')]
-    #[Endpoint(title: 'Socialite Login Redirect', description: 'This endpoint redirect to the Social SignIn Form')]
-    #[UrlParam('provider', 'string', required: true, enum: ["github", "google", "linkedin"], example: "google")]
-    public function redirect($provider)
+    #[Endpoint(title: 'Socialite Login Redirect', description: 'This endpoint redirects to the Social Sign-In Form')]
+    #[UrlParam('provider', 'string', required: true, enum: ['github', 'google', 'linkedin'], example: 'google')]
+    public function redirect(string $provider): RedirectLinkResource
     {
         $this->validateProvider($provider);
 
-        return new RedirectLinkResource(Socialite::driver($provider)->stateless()->redirect()->getTargetUrl());
+        /** @var RedirectResponse $redirect */
+        $redirect = Socialite::driver($provider)->redirect();
+
+        return new RedirectLinkResource($redirect->getTargetUrl());
     }
 
     #[Group('Authentication')]
-    #[Endpoint(title: 'Socialite Login Callback', description: 'This endpoint sign in the users with Google, Github or LinkedIn Account')]
-    #[UrlParam('provider', 'string', required: true, enum: ["github", "google", "linkedin"], example: "google")]
-    public function handleCallback($provider)
+    #[Endpoint(title: 'Socialite Login Callback', description: 'This endpoint signs in the user with a Google, Github, or LinkedIn account')]
+    #[UrlParam('provider', 'string', required: true, enum: ['github', 'google', 'linkedin'], example: 'google')]
+    public function handleCallback(string $provider): JsonResponse|AuthenticatedMemberResource
     {
         $this->validateProvider($provider);
 
         try {
-            $sociliteUser = Socialite::driver($provider)->stateless()->user();
-            $user = User::where('email', $sociliteUser->email)->first();
+            /** @var SocialiteUser $socialiteUser */
+            $socialiteUser = Socialite::driver($provider)->user();
+            $user = User::where('email', $socialiteUser->getEmail())->first();
 
-            if (!$user) {
-                abort(404, __('auth.failed'));
+            if (! $user) {
+                return response()->json(['error' => __('auth.failed')], 404);
             }
 
             $token = auth()->login($user);
@@ -52,14 +59,12 @@ class SocialiteAuthController
         ]);
     }
 
-
-    protected function validateProvider($provider)
+    protected function validateProvider(string $provider): void
     {
-        if (!in_array($provider, ['google', 'github', 'linkedin'])) {
+        if (! in_array($provider, ['google', 'github', 'linkedin'], true)) {
             throw ValidationException::withMessages([
                 'error' => __('auth.socialite-provider'),
             ]);
         }
     }
-
 }

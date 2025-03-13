@@ -31,13 +31,13 @@ class BlogPostTagsController extends Controller
         $query = BlogPostTag::query()
             ->when(
                 $request->search,
-                function (Builder $query) use ($request) {
+                function (Builder $query) use ($request): void {
                     $query->where('name', 'like', "%{$request->search}%");
                 }
             )
             ->when(
                 $request->sort,
-                function (Builder $query) use ($request) {
+                function (Builder $query) use ($request): void {
                     $sortColumn = $request->input('sort', 'name');
 
                     $sortDirection = Str::startsWith($sortColumn, '-') ? 'desc' : 'asc';

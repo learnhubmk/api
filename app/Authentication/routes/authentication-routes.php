@@ -8,9 +8,9 @@ use App\Authentication\Http\Controllers\NewPasswordController;
 use App\Authentication\Http\Controllers\PasswordResetLinkController;
 use App\Authentication\Http\Controllers\SocialiteAuthController;
 
-Route::group(['middleware' => ['auth:api', 'treblle']], function () {
+Route::group(['middleware' => ['auth:api', 'treblle']], function (): void {
     /**ADMIN*/
-    Route::group(['prefix' => '/admin', 'as' => 'admin.'], function () {
+    Route::group(['prefix' => '/admin', 'as' => 'admin.'], function (): void {
         Route::get('/user', [AdminAuthController::class, 'index'])->name('index');
         Route::post('/login', [AdminAuthController::class, 'login'])->name('login')->withoutMiddleware(['auth:api']);
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
@@ -19,7 +19,7 @@ Route::group(['middleware' => ['auth:api', 'treblle']], function () {
     });
 
     /**CONTENT MANAGER*/
-    Route::group(['prefix' => '/content', 'as' => 'content.'], function () {
+    Route::group(['prefix' => '/content', 'as' => 'content.'], function (): void {
         Route::get('/user', [ContentManagerAuthController::class, 'index'])->name('index');
         Route::post('/login', [ContentManagerAuthController::class, 'login'])->name('login')->withoutMiddleware(['auth:api']);
         Route::post('/logout', [ContentManagerAuthController::class, 'logout'])->name('logout');

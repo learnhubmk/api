@@ -7,12 +7,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class RedirectLinkResource extends JsonResource
 {
-    protected $redirectLink;
+    protected string $redirectLink;
 
-    public function __construct($redirectLink)
+    public function __construct(string $redirectLink)
     {
+        parent::__construct(null);
         $this->redirectLink = $redirectLink;
     }
+
     /**
      * Transform the resource into an array.
      *

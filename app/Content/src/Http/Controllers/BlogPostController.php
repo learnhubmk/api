@@ -38,23 +38,23 @@ class BlogPostController extends Controller
             ->when($request->get('tags'), function ($query) use ($request) {
                 $tags = explode(',', $request->tag);
 
-                return $query->whereHas('tags', function ($tagQuery) use ($tags) {
+                return $query->whereHas('tags', function ($tagQuery) use ($tags): void {
                     $tagQuery->whereIn('name', $tags);
                 });
             })
             ->when($request->get('author'), function ($query) use ($request) {
-                return $query->whereHas('author', function ($authorQuery) use ($request) {
+                return $query->whereHas('author', function ($authorQuery) use ($request): void {
                     $authorQuery->where('first_name', 'like', "%$request->author%")
                         ->orWhere('last_name', 'like', "%$request->author%");
                 });
             })
-            ->when($request->get('status'), function ($query) use ($request) {
+            ->when($request->get('status'), function ($query) use ($request): void {
                 $query->where('status', $request->get('status'));
             })
-            ->when($request->get('sort'), function ($query) use ($request) {
+            ->when($request->get('sort'), function ($query) use ($request): void {
                 $query->orderByDesc($request->sort);
             })
-            ->paginate(min((int) $request->query('per_page') ?? 20, 100));
+            ->paginate(min((int) ($request->query('per_page') ?? 20), 100));
 
         return BlogPostsResource::collection($blogs);
     }

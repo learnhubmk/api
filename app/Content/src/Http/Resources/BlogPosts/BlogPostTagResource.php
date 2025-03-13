@@ -2,6 +2,7 @@
 
 namespace App\Content\Http\Resources\BlogPosts;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class BlogPostTagResource extends JsonResource
@@ -11,13 +12,13 @@ class BlogPostTagResource extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray($tags): array
+    public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'name' => $this->name,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'id' => $this->resource->id,
+            'name' => $this->resource->name,
+            'created_at' => $this->resource->created_at,
+            'updated_at' => $this->resource->updated_at,
         ];
     }
 }

@@ -2,15 +2,13 @@
 
 namespace App\Website\Models;
 
-use App\Models\BlogPostTagPivot;
 use App\Website\Database\Factories\BlogPostFactory;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 
@@ -48,7 +46,6 @@ use Illuminate\Support\Carbon;
  */
 class BlogPost extends Model
 {
-    use HasFactory;
     use SoftDeletes;
 
     protected $table = 'blog_posts';
@@ -68,18 +65,29 @@ class BlogPost extends Model
         'publish_date',
     ];
 
-    public function author()
+    /**
+     * Get the author of the blog post.
+     *
+     * @return BelongsTo<Author, BlogPost>
+     */
+    public function author(): BelongsTo
     {
         return $this->belongsTo(Author::class);
     }
 
-    public function blog_post_tag_pivot(): HasOne
-    {
-        return $this->hasOne(BlogPostTagPivot::class);
-    }
-
+    /**
+     * Get the tags for the blog post.
+     *
+     * @return BelongsToMany<BlogPostTag, BlogPost>
+     */
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(BlogPostTag::class, 'blog_post_tag_pivot', 'blog_post_id', 'tag_id');
+        return $this->belongsToMany(
+            BlogPostTag::class,
+            'blog_post_tag_pivot',
+            'blog_post_id',
+            'tag_id'
+        );
     }
 }
+

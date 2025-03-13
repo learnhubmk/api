@@ -11,8 +11,6 @@ class ResetPassword extends Notification
 {
     /**
      * The password reset token.
-     *
-     * @var string
      */
     public string $token;
 
@@ -32,9 +30,6 @@ class ResetPassword extends Notification
 
     /**
      * Create a notification instance.
-     *
-     * @param  string  $token
-     * @return void
      */
     public function __construct(#[\SensitiveParameter] string $token)
     {
@@ -45,9 +40,9 @@ class ResetPassword extends Notification
      * Get the notification's channels.
      *
      * @param  mixed  $notifiable
-     * @return array|string
+     * @return array<string>
      */
-    public function via($notifiable): array|string
+    public function via($notifiable): array
     {
         return ['mail'];
     }
@@ -56,7 +51,6 @@ class ResetPassword extends Notification
      * Build the mail representation of the notification.
      *
      * @param  mixed  $notifiable
-     * @return MailMessage
      */
     public function toMail($notifiable): MailMessage
     {
@@ -69,13 +63,10 @@ class ResetPassword extends Notification
 
     /**
      * Get the reset password notification mail message for the given URL.
-     *
-     * @param  string  $url
-     * @return MailMessage
      */
     protected function buildMailMessage(string $url): MailMessage
     {
-        return (new MailMessage())
+        return (new MailMessage)
             ->subject(__('emails.password-reset.subject'))
             ->line(__('emails.password-reset.first_line'))
             ->action(__('emails.password-reset.action'), $url)
@@ -85,9 +76,6 @@ class ResetPassword extends Notification
 
     /**
      * Get the reset URL for the given notifiable.
-     *
-     * @param  mixed  $notifiable
-     * @return string
      */
     protected function resetUrl($notifiable): string
     {
@@ -98,27 +86,21 @@ class ResetPassword extends Notification
         $token = $this->token;
         $email = $notifiable->getEmailForPasswordReset();
 
-        return config('app.password_reset_url') . "?token=$token&email=$email";
+        return config('app.password_reset_url')."?token=$token&email=$email";
     }
 
     /**
      * Set a callback that should be used when creating the reset password button URL.
-     *
-     * @param  Closure(mixed, string): string  $callback
-     * @return void
      */
-    public static function createUrlUsing($callback): void
+    public static function createUrlUsing(Closure $callback): void
     {
         static::$createUrlCallback = $callback;
     }
 
     /**
      * Set a callback that should be used when building the notification mail message.
-     *
-     * @param  Closure(mixed, string): (MailMessage|Mailable)  $callback
-     * @return void
      */
-    public static function toMailUsing($callback): void
+    public static function toMailUsing(Closure $callback): void
     {
         static::$toMailCallback = $callback;
     }

@@ -5,7 +5,7 @@ use App\Platform\Http\Controllers\MemberSocialAuthController;
 use App\Platform\Http\Controllers\RegisterMemberController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => ['auth:api', 'treblle']], function () {
+Route::group(['middleware' => ['auth:api', 'treblle']], function (): void {
 
     Route::post('/register', [RegisterMemberController::class, 'store'])->withoutMiddleware(['auth:api']);
 

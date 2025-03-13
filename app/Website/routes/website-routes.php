@@ -7,7 +7,7 @@ use App\Website\Http\Controllers\BlogPostController;
 use App\Website\Http\Controllers\BlogPostTagsController;
 use App\Website\Http\Controllers\NewsletterSubscriberController;
 
-Route::group(['middleware' => ['treblle']], function () {
+Route::group(['middleware' => ['treblle']], function (): void {
     Route::get('/', HomeController::class)->name('home');
 
     Route::get('blog-posts', [BlogPostController::class, 'index'])->name('blog-post.index');

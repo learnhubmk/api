@@ -15,15 +15,16 @@ class BlogPostsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'title' => $this->title,
-            'slug' => $this->slug,
-            'excerpt' => $this->excerpt,
-            'status' => $this->status,
-            'tags' => $this->whenLoaded('tags', BlogPostTagResource::collection($this->tags)),
-            'publish_date' => $this->publish_date,
-            'created_at' => $this->created_at,
-            'author' => $this->whenLoaded('author', new BlogAuthorResource($this->author)),
+            'id' => $this->resource->id,
+            'title' => $this->resource->title,
+            'slug' => $this->resource->slug,
+            'excerpt' => $this->resource->excerpt,
+            'status' => $this->resource->status,
+            'tags' => $this->whenLoaded('tags', BlogPostTagResource::collection($this->resource->tags)),
+            'publish_date' => $this->resource->publish_date,
+            'created_at' => $this->resource->created_at,
+            'author' => $this->whenLoaded('author', new BlogAuthorResource($this->resource->author)),
         ];
     }
 }
+

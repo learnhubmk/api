@@ -17,12 +17,12 @@ class RegisterMemberController
 {
     #[Group('Platform')]
     #[Endpoint(title: 'Sign Up', description: 'This endpoint is for registering new members')]
-    #[BodyParam('email', 'string', required: true, example: "example@test.com")]
-    #[BodyParam('password', 'string', required: true, example: "password")]
-    #[BodyParam('first_name', 'string', required: true, example: "John")]
-    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: 'example@test.com')]
+    #[BodyParam('password', 'string', required: true, example: 'password')]
+    #[BodyParam('first_name', 'string', required: true, example: 'John')]
+    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
     #[BodyParam('image', 'file', required: false)]
-    public function store(RegisterRequest $request)
+    public function store(RegisterRequest $request): MemberProfileResource
     {
         return DB::transaction(function () use ($request) {
             $user = User::query()->create([
@@ -45,7 +45,7 @@ class RegisterMemberController
             return MemberProfileResource::make($user)->additional([
                 'data' => [
                     'access_token' => $token,
-                ]
+                ],
             ]);
         });
     }

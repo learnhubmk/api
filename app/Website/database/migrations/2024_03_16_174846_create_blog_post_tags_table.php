@@ -10,7 +10,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('blog_post_tag_pivot', function (Blueprint $table) {
+        Schema::create('blog_post_tag_pivot', function (Blueprint $table): void {
             $table->unsignedBigInteger('blog_post_id');
             $table->foreign('blog_post_id')->references('id')->on('blog_posts')->onDelete('cascade');
             $table->unsignedBigInteger('tag_id');

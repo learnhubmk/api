@@ -42,10 +42,14 @@ class MemberProfile extends Model
         'user_id',
     ];
 
-    public function user()
+    /**
+     * Get the user that owns the profile.
+     */
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
+
     /**
      * Create a new factory instance for the model.
      */
@@ -53,10 +57,5 @@ class MemberProfile extends Model
     {
         return MemberProfileFactory::new();
     }
-
-
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
 }
+

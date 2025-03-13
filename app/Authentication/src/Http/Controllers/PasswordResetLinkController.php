@@ -2,6 +2,7 @@
 
 namespace App\Authentication\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Password;
 use Knuckles\Scribe\Attributes\Group;
@@ -14,7 +15,7 @@ class PasswordResetLinkController extends Controller
     #[Endpoint(title: 'Password Reset Link', description: 'This endpoint enables to send reset link for forgotten password')]
     #[Group('Authentication')]
     #[BodyParam('email', required: true)]
-    public function __invoke(PasswordResetLinkRequest $request)
+    public function __invoke(PasswordResetLinkRequest $request): JsonResponse
     {
 
         $status = Password::sendResetLink(

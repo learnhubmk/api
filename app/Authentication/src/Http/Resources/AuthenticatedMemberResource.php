@@ -5,6 +5,10 @@ namespace App\Authentication\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @property mixed $id
+ * @property mixed $email
+ */
 class AuthenticatedMemberResource extends JsonResource
 {
     /**
