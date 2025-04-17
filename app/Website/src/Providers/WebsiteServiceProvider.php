@@ -10,9 +10,11 @@ class WebsiteServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(MailboxLayerService::class, function (): MailboxLayerService {
-            return new MailboxLayerService;
+            return new MailboxLayerService();
         });
     }
 
-    public function boot(): void {}
+    public function boot(): void
+    {
+    }
 }

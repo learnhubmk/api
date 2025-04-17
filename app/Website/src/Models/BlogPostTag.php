@@ -44,4 +44,3 @@ class BlogPostTag extends Model
         );
     }
 }
-

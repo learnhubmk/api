@@ -58,4 +58,3 @@ class MemberProfile extends Model
         return MemberProfileFactory::new();
     }
 }
-
