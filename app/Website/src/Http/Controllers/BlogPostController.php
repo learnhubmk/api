@@ -2,10 +2,10 @@
 
 namespace App\Website\Http\Controllers;
 
-use App\Framework\Http\Controllers\Controller;
 use App\Framework\Enums\BlogPostStatus;
-use App\Website\Http\Resources\Blogs\BlogPostsResource;
-use App\Website\Http\Resources\Blogs\SingleBlogPostResource;
+use App\Framework\Http\Controllers\Controller;
+use App\Website\Http\Resources\BlogPostResource;
+use App\Website\Http\Resources\SingleBlogPostResource;
 use App\Website\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -29,7 +29,7 @@ class BlogPostController extends Controller
             ->orderBy('publish_date', 'desc')
             ->paginate(min((int) $request->query('per_page') ?? 20, 100));
 
-        return BlogPostsResource::collection($blogs);
+        return BlogPostResource::collection($blogs);
     }
 
     #[Endpoint(title: 'Blog Post', description: 'This endpoint retrieves blog post by a slug.')]

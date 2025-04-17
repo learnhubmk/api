@@ -6,11 +6,12 @@ use App\Admin\Http\Requests\RestoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\StoreContentManagerManagementRequest;
 use App\Admin\Http\Requests\UpdateContentManagerManagementRequest;
 use App\Admin\Http\Resources\ContentManagerManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
-use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -31,10 +32,11 @@ class ContentManagerManagementController
     #[Authenticated]
     #[Endpoint(title: 'Content managers Listing', description: 'This endpoint lists all content managers')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: 'john')]
-    #[QueryParam('sort_by', 'string', required: false, example: 'first_name')]
-    #[QueryParam('sort_direction', 'string', required: false, example: 'asc')]
-    #[QueryParam('per_page', 'integer', required: false, example: '20')]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
+    #[QueryParam('status', 'string', required: false, example: 'active', enum: ['active', 'deleted', 'banned'])]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -42,14 +44,20 @@ class ContentManagerManagementController
         $sortBy = in_array($sortBy, ['created_at', 'first_name', 'last_name']) ? $sortBy : 'created_at';
         $sortDirection = $request->query('sort_direction');
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
-        $recordsPerPage = min((int) $request->query('per_page', '20'), 100);
+        $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
+        $status = $request->query('status');
+
         $contentManagers = User::query()
             ->with(['roles', 'contentManagerProfile'])
+            ->where('status', $status)
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
                 return $query
                     ->whereRelation('contentManagerProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('contentManagerProfile', 'last_name', 'LIKE', "$searchQuery%");
+            })
+            ->when($status, function (Builder $query) use ($status) {
+                $query->where('status', $status);
             })
             ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('content_manager_profiles')
@@ -60,6 +68,7 @@ class ContentManagerManagementController
 
         return ContentManagerManagementResource::collection($contentManagers);
     }
+
 
     #[Authenticated]
     #[Endpoint(title: 'Content Manager Profile Details', description: 'This endpoint shows details of a specific content manager profile')]
@@ -75,15 +84,14 @@ class ContentManagerManagementController
 
     /**
      * Store a new resource in storage.
-     *
      * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Content Manager Invitation', description: 'This endpoint invites a new content manager to join')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@learnhub.mk')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function store(StoreContentManagerManagementRequest $request): ContentManagerManagementResource
     {
         $contentManager = DB::transaction(function () use ($request) {
@@ -95,9 +103,15 @@ class ContentManagerManagementController
                 'status' => UserStatusName::ACTIVE->value,
             ]);
 
-            $contentManager->contentManagerProfile()->create($request->only(['first_name', 'last_name']));
+            $contentManager->contentManagerProfile()->create($request->only(['first_name' , 'last_name']));
 
             $contentManager->assignRole(RoleName::CONTENT_MANAGER);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $contentManager->id,
+            ]);
 
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
@@ -109,38 +123,51 @@ class ContentManagerManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Content Manager Details', description: 'This endpoint edits the details of a content manager profile')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@learnhub.mk')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function update(UpdateContentManagerManagementRequest $request, int $id): ContentManagerManagementResource
     {
-        /** @var User $contentManager */
-        $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
-            ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
-            ->findOrFail($id);
+        $contentManager = DB::transaction(function () use ($id, $request) {
+            /** @var User $contentManager */
+            $contentManager = User::query()->with(['roles', 'contentManagerProfile'])
+                ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/manager', $imageName, 'public');
 
-        $contentManager->update(['email' => $request->get('email')]);
+            $contentManager->update(['email' => $request->get('email')]);
 
-        $contentManager->contentManagerProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? optional($contentManager->contentManagerProfile)->image,
-        ]);
+            $contentManager->contentManagerProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $contentManager->contentManagerProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $contentManager->id,
+                'image' => $image ?? $contentManager->contentManagerProfile->image
+            ]);
+
+            return $contentManager;
+        });
 
         return new ContentManagerManagementResource($contentManager);
     }
 
     /**
      * Remove the specified resource from storage.
-     *
      * @throws \Throwable
      */
+
     #[Authenticated]
     #[Endpoint(title: 'Content Manager Profile Deletion', description: 'This endpoint deletes a specific content manager profile')]
     #[Group('Admin')]
@@ -151,7 +178,7 @@ class ContentManagerManagementController
             ->whereRelation('roles', 'name', RoleName::CONTENT_MANAGER->value)
             ->findOrFail($id);
 
-        DB::transaction(function () use ($contentManager): void {
+        DB::transaction(function () use ($contentManager) {
             $contentManager->update(['status' => UserStatusName::DELETED]);
             $contentManager->contentManagerProfile()->delete();
             $contentManager->delete();

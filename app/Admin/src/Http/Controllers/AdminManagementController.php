@@ -6,11 +6,12 @@ use App\Admin\Http\Requests\RestoreAdminManagementRequest;
 use App\Admin\Http\Requests\StoreAdminManagementRequest;
 use App\Admin\Http\Requests\UpdateAdminManagementRequest;
 use App\Admin\Http\Resources\AdminManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
-use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -33,10 +34,11 @@ class AdminManagementController
     #[Authenticated]
     #[Endpoint(title: 'Administrators Listing', description: 'This endpoint lists all administrators')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: 'john')]
-    #[QueryParam('sort_by', 'string', required: false, example: 'first_name')]
-    #[QueryParam('sort_direction', 'string', required: false, example: 'asc')]
-    #[QueryParam('per_page', 'integer', required: false, example: '20')]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
+    #[QueryParam('status', 'string', required: false, example: 'active', enum: ['active', 'deleted', 'banned'])]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -44,7 +46,8 @@ class AdminManagementController
         $sortBy = in_array($sortBy, ['created_at', 'first_name', 'last_name']) ? $sortBy : 'created_at';
         $sortDirection = $request->query('sort_direction');
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
-        $recordsPerPage = min((int) $request->query('per_page', '20'), 100);
+        $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
+        $status = $request->query('status');
 
         $administrators = User::query()
             ->with(['roles', 'adminProfile'])
@@ -53,6 +56,9 @@ class AdminManagementController
                 return $query
                     ->whereRelation('adminProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('adminProfile', 'last_name', 'LIKE', "$searchQuery%");
+            })
+            ->when($status, function (Builder $query) use ($status) {
+                $query->where('status', $status);
             })
             ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('admin_profiles')
@@ -63,6 +69,7 @@ class AdminManagementController
 
         return AdminManagementResource::collection($administrators);
     }
+
 
     #[Authenticated]
     #[Endpoint(title: 'Administrator Profile Details', description: 'This endpoint shows details of a specific administrator profile')]
@@ -78,15 +85,14 @@ class AdminManagementController
 
     /**
      * Store a new resource in storage.
-     *
      * @throws Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Administrator Invitation', description: 'This endpoint invites a new administrator to join')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@learnhub.mk')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function store(StoreAdminManagementRequest $request): AdminManagementResource
     {
         $admin = DB::transaction(function () use ($request) {
@@ -98,9 +104,15 @@ class AdminManagementController
                 'status' => UserStatusName::ACTIVE->value,
             ]);
 
-            $admin->adminProfile()->create($request->only(['first_name', 'last_name']));
+            $admin->adminProfile()->create($request->only(['first_name' , 'last_name']));
 
             $admin->assignRole(RoleName::ADMIN);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $admin->id,
+            ]);
 
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
@@ -112,36 +124,48 @@ class AdminManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Administrator Details', description: 'This endpoint edits the details of an administrator profile')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@learnhub.mk')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@learnhub.mk")]
     public function update(UpdateAdminManagementRequest $request, int $id): AdminManagementResource
     {
-        /** @var User $admin */
-        $admin = User::query()->with(['roles', 'adminProfile'])
-            ->whereRelation('roles', 'name', RoleName::ADMIN->value)
-            ->findOrFail($id);
+        $admin = DB::transaction(function () use ($id, $request) {
+            /** @var User $admin */
+            $admin = User::query()->with(['roles', 'adminProfile'])
+                ->whereRelation('roles', 'name', RoleName::ADMIN->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/admin', $imageName, 'public');
 
-        $admin->update(['email' => $request->get('email')]);
+            $admin->update(['email' => $request->get('email')]);
 
-        $admin->adminProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? $admin->adminProfile->image,
-        ]);
+            $admin->adminProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $admin->adminProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $admin->id,
+                'image' => $image ?? $admin->adminProfile->image
+            ]);
+
+            return $admin;
+        });
 
         return new AdminManagementResource($admin->fresh());
     }
 
     /**
      * Remove the specified resource from storage.
-     *
      * @throws Throwable
      */
     #[Authenticated]
@@ -156,11 +180,11 @@ class AdminManagementController
 
         if ($admin->is(auth()->user())) {
             throw ValidationException::withMessages([
-                'message' => __('custom-exception-messages.forbidden_profile_deletion_message'),
+                'message' => __('custom-exception-messages.forbidden_profile_deletion_message')
             ]);
         }
 
-        DB::transaction(function () use ($admin): void {
+        DB::transaction(function () use ($admin) {
             $admin->update(['status' => UserStatusName::DELETED]);
             $admin->adminProfile()->delete();
             $admin->delete();
@@ -168,6 +192,7 @@ class AdminManagementController
 
         return response()->noContent();
     }
+
 
     #[Authenticated]
     #[Endpoint(title: 'Restore Deleted Administrator', description: 'This endpoint restores deleted admin profile')]

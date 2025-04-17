@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Content\Http\Requests\BlogPosts;
+namespace App\Content\Http\Requests;
 
 use App\Framework\Enums\RoleName;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 
 class CreateBlogPostRequest extends FormRequest
 {
@@ -18,7 +20,7 @@ class CreateBlogPostRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
@@ -27,7 +29,8 @@ class CreateBlogPostRequest extends FormRequest
             'excerpt' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string'],
             'tags' => ['required', 'array'],
-            'tags.*' => ['required', 'exists:blog_post_tags,id']
+            'tags.*' => ['required', 'exists:blog_post_tags,id'],
+            'image' => ['nullable', 'file', File::types(['jpeg', 'png'])->max(4 * 1024)],
         ];
     }
 }

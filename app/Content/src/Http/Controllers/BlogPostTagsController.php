@@ -2,11 +2,11 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostTagsDeleteRequest;
-use App\Content\Http\Requests\BlogPosts\BlogPostTagsRequest;
-use App\Content\Http\Resources\BlogPosts\BlogPostTagResource;
-use App\Framework\Http\Controllers\Controller;
+use App\Content\Http\Requests\BlogPostTagsDeleteRequest;
+use App\Content\Http\Requests\BlogPostTagsRequest;
+use App\Content\Http\Resources\BlogPostTagResource;
 use App\Content\Models\BlogPostTag;
+use App\Framework\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

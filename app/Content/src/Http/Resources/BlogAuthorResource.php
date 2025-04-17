@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Content\Http\Resources\BlogPosts;
+namespace App\Content\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BlogPostTagResource extends JsonResource
+class BlogAuthorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +16,9 @@ class BlogPostTagResource extends JsonResource
     {
         return [
             'id' => $this->resource->id,
-            'name' => $this->resource->name,
-            'created_at' => $this->resource->created_at,
-            'updated_at' => $this->resource->updated_at,
+            'first_name' => $this->resource->first_name,
+            'last_name' => $this->resource->last_name,
+            'image' => $this->resource->image,
         ];
     }
 }

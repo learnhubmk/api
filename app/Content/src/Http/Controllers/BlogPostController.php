@@ -2,21 +2,23 @@
 
 namespace App\Content\Http\Controllers;
 
-use App\Content\Http\Requests\BlogPosts\BlogPostPermissionsRequest;
-use App\Content\Http\Requests\BlogPosts\CreateBlogPostRequest;
-use App\Content\Http\Requests\BlogPosts\UpdateBlogPostRequest;
-use App\Content\Http\Resources\BlogPosts\BlogPostsResource;
-use App\Framework\Http\Controllers\Controller;
-use App\Framework\Enums\BlogPostStatus;
+use Illuminate\Support\Str;
+use Illuminate\Http\Response;
 use App\Content\Models\Author;
 use App\Content\Models\BlogPost;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Support\Str;
-use Knuckles\Scribe\Attributes\Authenticated;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use App\Framework\Enums\BlogPostStatus;
+use Illuminate\Support\Facades\Storage;
+use Knuckles\Scribe\Attributes\Endpoint;
+use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\Authenticated;
+use App\Framework\Http\Controllers\Controller;
+use App\Content\Http\Resources\BlogPostResource;
+use App\Content\Http\Requests\CreateBlogPostRequest;
+use App\Content\Http\Requests\UpdateBlogPostRequest;
+use App\Content\Http\Requests\BlogPostPermissionsRequest;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class BlogPostController extends Controller
 {
@@ -56,7 +58,7 @@ class BlogPostController extends Controller
             })
             ->paginate(min((int) ($request->query('per_page') ?? 20), 100));
 
-        return BlogPostsResource::collection($blogs);
+        return BlogPostResource::collection($blogs);
     }
 
     #[Authenticated]
@@ -66,30 +68,34 @@ class BlogPostController extends Controller
     #[BodyParam('excerpt', 'string', required: true, example: 'This is test blogpost example')]
     #[BodyParam('content', 'string', required: true, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
     #[BodyParam('tags', 'array', required: true, example: '[1,2,3]')]
-    public function store(CreateBlogPostRequest $request): BlogPostsResource
+    public function store(CreateBlogPostRequest $request): BlogPostResource
     {
+        $imageName = $request->image->getClientOriginalName();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts', $imageName, 'public');
+
         $blogPost = BlogPost::create([
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'excerpt' => $request->excerpt,
             'content' => $request->get('content'),
-            'status' => BlogPostStatus::IN_REVIEW,
-            'author_id' => Author::where('user_id', $request->user()->id)->value('id'),
+            'status' => BlogPostStatus::DRAFT,
+            'image' => $image,
+            'author_id' => Author::query()->where('user_id', $request->user()->id)->value('id'),
         ]);
 
         $blogPost->tags()->sync($request->tags);
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
     }
 
     #[Authenticated]
     #[Endpoint(title: 'Blog post', description: 'This endpoint returns a single blog post')]
     #[Group('Content')]
-    public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostsResource
+    public function show(int $blogPost, BlogPostPermissionsRequest $request): BlogPostResource
     {
         $blogPost = BlogPost::with(['author', 'tags'])->findOrFail($blogPost);
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
     }
 
     #[Authenticated]
@@ -100,26 +106,48 @@ class BlogPostController extends Controller
     #[BodyParam('excerpt', 'string', required: false, example: 'This is test blogpost example')]
     #[BodyParam('content', 'string', required: false, example: 'Lorem ipsum dolor sit amet, consectetur adipiscing ...')]
     #[BodyParam('tags', 'array', required: false, example: '[1,2,3]')]
-    public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostsResource
+    public function update(UpdateBlogPostRequest $request, int $blogPost): BlogPostResource
     {
-        $blogPostData = $request->only(['title', 'slug', 'excerpt', 'content']);
+
+        $imageName = $request->image->getClientOriginalName();
+        $image = $request->file('image')?->storePubliclyAs('/images/blog-posts', $imageName, 'public');
+
         $blogPost = BlogPost::findOrFail($blogPost);
-        $blogPost->update($blogPostData);
+        $blogPost->title = $request->title ?: $blogPost->title;
+        $blogPost->slug = $request->slug ?: $blogPost->slug;
+        $blogPost->excerpt = $request->excerpt ?: $blogPost->excerpt;
+        $blogPost->content = $request->content ?: $blogPost->content;
+
+
+        if ($request->has('image')) {
+            $blogPost->image = $image;
+        }
+
+        $blogPost->update();
+
+        if ($blogPost->image && Storage::has($blogPost->image)) {
+            Storage::delete($blogPost->image);
+        }
 
         if ($request->get('tags')) {
             $blogPost->tags()->sync($request->tags);
         }
 
-        return new BlogPostsResource($blogPost);
+        return new BlogPostResource($blogPost);
 
     }
 
     #[Authenticated]
     #[Endpoint(title: 'Delete Blog posts', description: 'This endpoint deletes blog post')]
     #[Group('Content')]
-    public function destroy(int $blogPost, BlogPostPermissionsRequest $request): \Illuminate\Http\Response
+    public function destroy(int $blogPost, BlogPostPermissionsRequest $request): Response
     {
         $blogPost = BlogPost::findOrFail($blogPost);
+
+        if ($blogPost->image && Storage::has($blogPost->image)) {
+            Storage::delete($blogPost->image);
+        }
+
         $blogPost->delete();
 
         return response()->noContent();

@@ -6,11 +6,12 @@ use App\Admin\Http\Requests\RestoreMemberManagementRequest;
 use App\Admin\Http\Requests\StoreMemberManagementRequest;
 use App\Admin\Http\Requests\UpdateMemberManagementRequest;
 use App\Admin\Http\Resources\MemberManagementResource;
+use App\Admin\Models\Author;
 use App\Framework\Enums\RoleName;
 use App\Framework\Enums\UserStatusName;
 use App\Framework\Models\User;
-use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -31,10 +32,11 @@ class MemberManagementController
     #[Authenticated]
     #[Endpoint(title: 'Members Listing', description: 'This endpoint lists all members')]
     #[Group('Admin')]
-    #[QueryParam('query', 'string', required: false, example: 'john')]
-    #[QueryParam('sort_by', 'string', required: false, example: 'first_name')]
-    #[QueryParam('sort_direction', 'string', required: false, example: 'asc')]
-    #[QueryParam('per_page', 'integer', required: false, example: '20')]
+    #[QueryParam('query', 'string', required: false, example: "john")]
+    #[QueryParam('sort_by', 'string', required: false, example: "first_name")]
+    #[QueryParam('sort_direction', 'string', required: false, example: "asc")]
+    #[QueryParam('per_page', 'integer', required: false, example: "20")]
+    #[QueryParam('status', 'string', required: false, example: 'active', enum: ['active', 'deleted', 'banned'])]
     public function index(Request $request): AnonymousResourceCollection
     {
         $searchQuery = $request->query('query');
@@ -42,15 +44,20 @@ class MemberManagementController
         $sortBy = in_array($sortBy, ['created_at', 'first_name', 'last_name']) ? $sortBy : 'created_at';
         $sortDirection = $request->query('sort_direction');
         $sortDirection = in_array($sortDirection, ['asc', 'desc']) ? $sortDirection : 'asc';
-        $recordsPerPage = min((int) $request->query('per_page', '20'), 100);
+        $recordsPerPage = min((int) $request->query('per_page') ?? 20, 100);
+        $status = $request->query('status');
 
         $users = User::query()
             ->with(['roles', 'memberProfile'])
+            ->where('status', $status)
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->when($searchQuery, function (EloquentQueryBuilder $query) use ($searchQuery) {
                 return $query
                     ->whereRelation('memberProfile', 'first_name', 'LIKE', "$searchQuery%")
                     ->orWhereRelation('memberProfile', 'last_name', 'LIKE', "$searchQuery%");
+            })
+            ->when($status, function (Builder $query) use ($status) {
+                $query->where('status', $status);
             })
             ->orderBy(function (Builder $query) use ($sortBy) {
                 return $query->from('member_profiles')
@@ -76,15 +83,14 @@ class MemberManagementController
 
     /**
      * Store a new resource in storage.
-     *
      * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Member Invitation', description: 'This endpoint invites a new member to join')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@gmail.com')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@gmail.com")]
     public function store(StoreMemberManagementRequest $request): MemberManagementResource
     {
         $member = DB::transaction(function () use ($request) {
@@ -96,9 +102,15 @@ class MemberManagementController
                 'status' => UserStatusName::ACTIVE->value,
             ]);
 
-            $member->memberProfile()->create($request->only(['first_name', 'last_name']));
+            $member->memberProfile()->create($request->only(['first_name' , 'last_name']));
 
             $member->assignRole(RoleName::MEMBER);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $member->id,
+            ]);
 
             Password::broker()->sendResetLink(['email' => $request->get('email')]);
 
@@ -110,36 +122,48 @@ class MemberManagementController
 
     /**
      * Update the specified resource in storage.
+     * @throws \Throwable
      */
     #[Authenticated]
     #[Endpoint(title: 'Edit Member Details', description: 'This endpoint edits the details of a member profile')]
     #[Group('Admin')]
-    #[BodyParam('first_name', 'string', required: true, example: 'John')]
-    #[BodyParam('last_name', 'string', required: true, example: 'Doe')]
-    #[BodyParam('email', 'string', required: true, example: 'johndoes@gmail.com')]
+    #[BodyParam('first_name', 'string', required: true, example: "John")]
+    #[BodyParam('last_name', 'string', required: true, example: "Doe")]
+    #[BodyParam('email', 'string', required: true, example: "johndoes@gmail.com")]
     public function update(UpdateMemberManagementRequest $request, int $id): MemberManagementResource
     {
-        /** @var User $member */
-        $member = User::query()->with(['roles', 'memberProfile'])
-            ->whereRelation('roles', 'name', RoleName::MEMBER->value)
-            ->findOrFail($id);
+        $member = DB::transaction(function () use ($id, $request) {
+            /** @var User $member */
+            $member = User::query()->with(['roles', 'memberProfile'])
+                ->whereRelation('roles', 'name', RoleName::MEMBER->value)
+                ->findOrFail($id);
 
-        $image = $request->file('image')?->storePubliclyAs('profile-pictures');
+            $imageName = $request->image->getClientOriginalName();
+            $image = $request->file('image')?->storePubliclyAs('/images/profile-pictures/member', $imageName, 'public');
 
-        $member->update(['email' => $request->get('email')]);
+            $member->update(['email' => $request->get('email')]);
 
-        $member->memberProfile()->update([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'image' => $image ?? optional($member->memberProfile)->image,
-        ]);
+            $member->memberProfile()->update([
+                'first_name' => $request->get('first_name'),
+                'last_name' => $request->get('last_name'),
+                'image' => $image ?? $member->memberProfile->image
+            ]);
+
+            Author::query()->create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_id' => $member->id,
+                'image' => $image ?? $member->memberProfile->image,
+            ]);
+
+            return $member;
+        });
 
         return new MemberManagementResource($member->fresh());
     }
 
     /**
      * Remove the specified resource from storage.
-     *
      * @throws \Throwable
      */
     #[Authenticated]
@@ -152,7 +176,7 @@ class MemberManagementController
             ->whereRelation('roles', 'name', RoleName::MEMBER->value)
             ->findOrFail($id);
 
-        DB::transaction(function () use ($member): void {
+        DB::transaction(function () use ($member) {
             $member->update(['status' => UserStatusName::DELETED]);
             $member->memberProfile()->delete();
             $member->delete();

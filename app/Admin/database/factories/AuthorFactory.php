@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Website\Database\Factories;
+namespace App\Admin\Database\factories;
 
-use App\Website\Models\Author;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Admin\Models\Author;
 use App\Framework\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 
 /**

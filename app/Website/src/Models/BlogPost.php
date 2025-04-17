@@ -2,17 +2,15 @@
 
 namespace App\Website\Models;
 
-use App\Website\Database\Factories\BlogPostFactory;
-use Eloquent;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Carbon;
 
 /**
+ *
+ *
  * @property int $id
  * @property string $title
  * @property string $slug
@@ -21,73 +19,54 @@ use Illuminate\Support\Carbon;
  * @property string $status
  * @property int $author_id
  * @property string|null $publish_date
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property-read Author                       $author
- * @property-read Collection<int, BlogPostTag> $tags
- * @property-read int|null                     $tags_count
- *
- * @method static BlogPostFactory factory($count = null, $state = [])
- * @method static Builder|BlogPost newModelQuery()
- * @method static Builder|BlogPost newQuery()
- * @method static Builder|BlogPost query()
- * @method static Builder|BlogPost whereAuthorId($value)
- * @method static Builder|BlogPost whereContent($value)
- * @method static Builder|BlogPost whereCreatedAt($value)
- * @method static Builder|BlogPost whereExcerpt($value)
- * @method static Builder|BlogPost whereId($value)
- * @method static Builder|BlogPost wherePublishDate($value)
- * @method static Builder|BlogPost whereSlug($value)
- * @method static Builder|BlogPost whereStatus($value)
- * @method static Builder|BlogPost whereTitle($value)
- * @method static Builder|BlogPost whereUpdatedAt($value)
- *
- * @mixin Eloquent
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Website\Models\Author $author
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Website\Models\BlogPostTag> $tags
+ * @property-read int|null $tags_count
+ * @method static \App\Website\Database\Factories\BlogPostFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost query()
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereExcerpt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost wherePublishDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BlogPost whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 class BlogPost extends Model
 {
+    use HasFactory;
     use SoftDeletes;
-
-    protected $table = 'blog_posts';
-
-    protected $casts = [
-        'author_id' => 'int',
-        'publish_date' => 'datetime',
-    ];
 
     protected $fillable = [
         'title',
         'slug',
         'excerpt',
-        'content',
         'status',
         'author_id',
         'publish_date',
+        'content',
+        'image',
     ];
 
-    /**
-     * Get the author of the blog post.
-     *
-     * @return BelongsTo<Author, BlogPost>
-     */
+    protected $casts = [
+        'publish_date ' => 'date',
+    ];
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(Author::class);
     }
 
-    /**
-     * Get the tags for the blog post.
-     *
-     * @return BelongsToMany<BlogPostTag, BlogPost>
-     */
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(
-            BlogPostTag::class,
-            'blog_post_tag_pivot',
-            'blog_post_id',
-            'tag_id'
-        );
+        return $this->belongsToMany(BlogPostTag::class, 'blog_post_tag_pivot', 'blog_post_id', 'tag_id');
     }
 }
-

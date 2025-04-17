@@ -1,14 +1,10 @@
 <?php
 
-namespace App\Website\Http\Resources\Tags;
+namespace App\Content\Http\Resources;
 
-use App\Website\Models\BlogPostTag;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-/**
- * @mixin BlogPostTag
- */
 class BlogPostTagResource extends JsonResource
 {
     /**
@@ -19,7 +15,10 @@ class BlogPostTagResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->resource->id,
             'name' => $this->resource->name,
+            'created_at' => $this->resource->created_at,
+            'updated_at' => $this->resource->updated_at,
         ];
     }
 }
