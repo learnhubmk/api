@@ -6,7 +6,6 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\StoreNewsletterSubscriberRequest;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
-use Spatie\MailcoachSdk\Exceptions\InvalidData;
 use Spatie\MailcoachSdk\Facades\Mailcoach;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -22,20 +21,13 @@ class NewsletterSubscriberController extends Controller
         $firstName = $request->input('firstName');
         $email = $request->input('email');
 
-        try {
-
-            $subscriber = Mailcoach::createSubscriber(
-                emailListUuid: config('mailcoach-sdk.email_list'),
-                attributes: [
-                    'firstName' => $firstName,
-                    'email' => $email,
-                ]
-            );
-
-        } catch (InvalidData $e) {
-
-            return response()->json(['message' => 'Електронската пошта е веќе претплатена!'], 422);
-        }
+        Mailcoach::createSubscriber(
+            emailListUuid: config('mailcoach-sdk.email_list'),
+            attributes: [
+                'firstName' => $firstName,
+                'email' => $email,
+            ]
+        );
 
         return response()->json(['message' => 'Успешно! Ве молиме потврдете ја вашата претпата на вашата електронска пошта.'], Response::HTTP_OK);
 

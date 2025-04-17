@@ -12,15 +12,22 @@ class MailboxLayerService
 
     public function __construct()
     {
-        $this->baseUrl = Config::get('mailboxlayer.base_url');
+        $this->baseUrl = is_string(Config::get('mailboxlayer.base_url'))
+            ? Config::get('mailboxlayer.base_url')
+            : 'https://apilayer.net/api';
     }
 
     /**
+     * @return array<string, mixed>
+     *
      * @throws Exception
      */
-    public function check($email)
+    public function check(string $email): array
     {
-        $accessKey = Config::get('mailboxlayer.access_key');
+        $accessKey = is_string(Config::get('mailboxlayer.access_key'))
+            ? Config::get('mailboxlayer.access_key')
+            : throw new Exception('MailboxLayer access key is not set.');
+
         $response = Http::get("{$this->baseUrl}/bulk_check", [
             'access_key' => $accessKey,
             'email' => $email,
@@ -30,6 +37,11 @@ class MailboxLayerService
             throw new Exception('Failed to fetch data from MailboxLayer API');
         }
 
-        return $response->json();
+        $data = $response->json();
+        if (! is_array($data)) {
+            throw new Exception('Invalid response from MailboxLayer API');
+        }
+
+        return $data;
     }
 }

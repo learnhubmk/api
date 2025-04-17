@@ -10,7 +10,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::table('member_profiles', function (Blueprint $table) {
+        Schema::table('member_profiles', function (Blueprint $table): void {
             $table->string('image')->nullable()->change();
         });
     }
@@ -20,7 +20,7 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::table('member_profiles', function (Blueprint $table) {
+        Schema::table('member_profiles', function (Blueprint $table): void {
             $table->string('image')->change();
         });
     }

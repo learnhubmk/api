@@ -3,20 +3,18 @@
 namespace App\Website\Providers;
 
 use App\Website\Service\MailboxLayerService;
-use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
 class WebsiteServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
-
-        $this->app->singleton('mailboxlayer', function () {
-            return new MailboxLayerService(new Client());
+        $this->app->singleton(MailboxLayerService::class, function (): MailboxLayerService {
+            return new MailboxLayerService();
         });
     }
 
-    public function boot()
+    public function boot(): void
     {
     }
 }

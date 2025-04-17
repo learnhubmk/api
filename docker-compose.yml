@@ -24,7 +24,6 @@ services:
             - PHP_IDE_CONFIG=serverName=Docker
         networks:
             - learnhub
-
     db:
         image: mysql:latest
         container_name: LearnHub_mysql
@@ -48,7 +47,7 @@ services:
         container_name: LearnHub_nginx
         restart: unless-stopped
         ports:
-            - "8000:80"
+            - "8001:80"
         volumes:
             - ./:/var/www
             - ./docker/nginx:/etc/nginx/conf.d
@@ -81,6 +80,7 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: LearnHub_phpmyadmin
+        platform: linux/x86_64
         environment:
             - PMA_HOST=db
             - PMA_PORT=3306

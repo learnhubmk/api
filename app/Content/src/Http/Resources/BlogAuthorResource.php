@@ -15,10 +15,10 @@ class BlogAuthorResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'first_name' => $this->first_name,
-            'last_name' => $this->last_name,
-            'image' => $this->image,
+            'id' => $this->resource->id,
+            'first_name' => $this->resource->first_name,
+            'last_name' => $this->resource->last_name,
+            'image' => $this->resource->image,
         ];
     }
 }

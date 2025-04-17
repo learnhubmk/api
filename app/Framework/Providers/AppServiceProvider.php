@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
 
         View::addNamespace('website', app_path('Website/resources/views'));
 
-        RateLimiter::for('login', function (Request $request) {
+        RateLimiter::for('login', function (Request $request): array {
             return [
                 Limit::perMinute(5),
                 Limit::perMinute(5)->by($request->input('email')),

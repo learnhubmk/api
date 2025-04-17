@@ -2,13 +2,15 @@
 
 namespace App\Authentication\Http\Requests;
 
+use App\Framework\Enums\RoleName;
+use App\Framework\Models\User;
+use Illuminate\Auth\Events\Lockout;
+use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
-use App\Framework\Enums\RoleName;
-use Illuminate\Auth\Events\Lockout;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\ValidationException;
 
 class MemberLoginRequest extends FormRequest
@@ -24,27 +26,27 @@ class MemberLoginRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-                'email' => ['required', Rule::exists('users', 'email')],
-                'password' => ['required']
+            'email' => ['required', Rule::exists('users', 'email')],
+            'password' => ['required'],
         ];
     }
+
     /**
      * Attempt to authenticate the request's credentials.
      *
-     * @return void
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
-    public function authenticate($user)
+    public function authenticate(?User $user): void
     {
         $this->ensureIsNotRateLimited();
 
-        if (!$user || !$user->hasRole(RoleName::MEMBER) || !Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (! $user || ! $user->hasRole(RoleName::MEMBER) || ! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -57,11 +59,10 @@ class MemberLoginRequest extends FormRequest
     /**
      * Ensure the login request is not rate limited.
      *
-     * @return void
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
-    public function ensureIsNotRateLimited()
+    public function ensureIsNotRateLimited(): void
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
             return;
@@ -81,10 +82,8 @@ class MemberLoginRequest extends FormRequest
 
     /**
      * Get the rate limiting throttle key for the request.
-     *
-     * @return string
      */
-    public function throttleKey()
+    public function throttleKey(): string
     {
         return Str::lower($this->input('email')).'|'.$this->ip();
     }

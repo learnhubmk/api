@@ -10,21 +10,30 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class ContentManagerProfile
+ *
+ * @extends Model<ContentManagerProfile>
+ */
 class ContentManagerProfile extends Model
 {
-    use SoftDeletes;
     use HasFactory;
+    use SoftDeletes;
 
     protected $table = 'content_manager_profiles';
 
+    /**
+     * @return BelongsTo<User, ContentManagerProfile>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-
     /**
      * Create a new factory instance for the model.
+     *
+     * @return Factory<ContentManagerProfile>
      */
     protected static function newFactory(): Factory
     {

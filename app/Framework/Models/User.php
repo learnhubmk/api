@@ -8,19 +8,22 @@ use App\Admin\Models\MemberProfile;
 use App\Authentication\Notifications\ResetPassword;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * @extends Authenticatable<User>
+ */
 class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 {
     use HasFactory;
-    use Notifiable;
     use HasRoles;
+    use Notifiable;
     use SoftDeletes;
 
     /**
@@ -55,27 +58,38 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 
     public function guardName(): string
     {
-        return "api";
+        return 'api';
     }
 
-    /***
+    /**
      * Determines the proper factory for the model.
+     *
+     * @return UserFactory
      */
     protected static function newFactory(): UserFactory
     {
         return UserFactory::new();
     }
 
+    /**
+     * @return HasOne<AdminProfile, User>
+     */
     public function adminProfile(): HasOne
     {
         return $this->hasOne(AdminProfile::class);
     }
 
+    /**
+     * @return HasOne<ContentManagerProfile, User>
+     */
     public function contentManagerProfile(): HasOne
     {
         return $this->hasOne(ContentManagerProfile::class);
     }
 
+    /**
+     * @return HasOne<MemberProfile, User>
+     */
     public function memberProfile(): HasOne
     {
         return $this->hasOne(MemberProfile::class);
@@ -83,18 +97,16 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
-     *
-     * @return mixed
      */
     public function getJWTIdentifier(): string
     {
-        return $this->getKey();
+        return (string) $this->getKey();
     }
 
     /**
-     * Return a key value array, containing any custom claims to be added to the JWT.
+     * Return a key-value array, containing any custom claims to be added to the JWT.
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function getJWTCustomClaims(): array
     {
@@ -103,11 +115,8 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 
     /**
      * Send the password reset notification.
-     *
-     * @param  string  $token
-     * @return void
      */
-    public function sendPasswordResetNotification(#[\SensitiveParameter] $token): void
+    public function sendPasswordResetNotification($token): void
     {
         $this->notify(new ResetPassword($token));
     }

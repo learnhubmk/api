@@ -23,7 +23,7 @@ class BlogPostTagsController extends Controller
     {
         $tags = BlogPostTag::query()
             ->orderBy('name', 'asc')
-            ->paginate(min((int) $request->query('per_page') ?? 20, 100));
+            ->paginate(min((int) ($request->query('per_page') ?: 20), 100));
 
         return BlogPostTagResource::collection($tags);
     }
@@ -35,11 +35,11 @@ class BlogPostTagsController extends Controller
     {
         $blogs = BlogPost::with('author', 'tags')
             ->where('status', BlogPostStatus::PUBLISHED)
-            ->whereHas('tags', function ($query) use ($tag) {
+            ->whereHas('tags', function ($query) use ($tag): void {
                 $query->where('name', $tag);
             })
             ->orderBy('publish_date', 'desc')
-            ->paginate(min((int) $request->query('per_page') ?? 20, 100));
+            ->paginate(min((int) ($request->query('per_page') ?: 20), 100));
 
         return BlogPostResource::collection($blogs);
     }

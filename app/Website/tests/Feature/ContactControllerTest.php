@@ -14,7 +14,7 @@ class ContactControllerTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function contact_form_submission_succeeds()
+    public function contact_form_submission_succeeds(): void
     {
         Mail::fake();
 
@@ -29,7 +29,7 @@ class ContactControllerTest extends TestCase
         $response->assertOk()
             ->assertJson(['message' => 'Вашата порака е успешно испратена!']);
 
-        Mail::assertQueued(ContactEmail::class, function ($mail) use ($formData) {
+        Mail::assertQueued(ContactEmail::class, function ($mail) use ($formData): bool {
             return $mail->hasTo(config('mail.contact_email')) &&
                 $mail->contactData['name'] === $formData['name'] &&
                 $mail->contactData['email'] === $formData['email'] &&
@@ -38,7 +38,7 @@ class ContactControllerTest extends TestCase
     }
 
     /** @test */
-    public function contact_form_submission_fails_on_mail_error()
+    public function contact_form_submission_fails_on_mail_error(): void
     {
         Mail::fake();
 
