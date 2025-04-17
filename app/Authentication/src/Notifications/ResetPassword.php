@@ -66,7 +66,7 @@ class ResetPassword extends Notification
      */
     protected function buildMailMessage(string $url): MailMessage
     {
-        return (new MailMessage)
+        return (new MailMessage())
             ->subject(__('emails.password-reset.subject'))
             ->line(__('emails.password-reset.first_line'))
             ->action(__('emails.password-reset.action'), $url)

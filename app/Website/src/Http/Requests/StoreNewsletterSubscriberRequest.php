@@ -5,7 +5,6 @@ namespace App\Website\Http\Requests;
 use App\Website\Http\Roules\MailboxValidEmail;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use Illuminate\Validation\Rules\RequiredIf;
 
 class StoreNewsletterSubscriberRequest extends FormRequest
 {
@@ -40,4 +39,3 @@ class StoreNewsletterSubscriberRequest extends FormRequest
         ];
     }
 }
-

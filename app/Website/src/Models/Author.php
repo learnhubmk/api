@@ -27,6 +27,9 @@ use Illuminate\Support\Collection;
  * @property Carbon|null $updated_at
  * @property User $user
  * @property Collection|BlogPost[] $blog_posts
+ *
+ * @template TFactory of Factory<Author>
+ * @use HasFactory<TFactory>
  */
 class Author extends Model
 {
@@ -50,6 +53,8 @@ class Author extends Model
 
     /**
      * Get the user that owns the author.
+     *
+     * @return BelongsTo<User, Author>
      */
     public function user(): BelongsTo
     {
@@ -59,14 +64,17 @@ class Author extends Model
     /**
      * Get the blog posts associated with the author.
      *
-     * @return HasMany<BlogPost>
+     * @return HasMany<BlogPost, Author>
      */
     public function blog_posts(): HasMany
     {
         return $this->hasMany(BlogPost::class);
     }
 
-    protected static function newFactory(): AuthorFactory|Factory
+    /**
+     * @return TFactory
+     */
+    protected static function newFactory()
     {
         return AuthorFactory::new();
     }

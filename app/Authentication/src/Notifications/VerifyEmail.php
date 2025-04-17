@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Authentication\Notifications;
 
 use Illuminate\Notifications\Messages\MailMessage;
@@ -38,7 +39,6 @@ class VerifyEmail extends Notification
      * Build the mail representation of the notification.
      *
      * @param  mixed  $notifiable
-     * @return MailMessage
      */
     public function toMail($notifiable): MailMessage
     {
@@ -53,9 +53,6 @@ class VerifyEmail extends Notification
 
     /**
      * Get the verify email notification mail message for the given URL.
-     *
-     * @param  string  $url
-     * @return MailMessage
      */
     protected function buildMailMessage(string $url): MailMessage
     {
@@ -70,7 +67,6 @@ class VerifyEmail extends Notification
      * Get the verification URL for the given notifiable.
      *
      * @param  mixed  $notifiable
-     * @return string
      */
     protected function verificationUrl($notifiable): string
     {
@@ -90,8 +86,6 @@ class VerifyEmail extends Notification
 
     /**
      * Set a callback that should be used when creating the email verification URL.
-     *
-     * @param  \Closure  $callback
      */
     public static function createUrlUsing(\Closure $callback): void
     {
@@ -100,8 +94,6 @@ class VerifyEmail extends Notification
 
     /**
      * Set a callback that should be used when building the notification mail message.
-     *
-     * @param  \Closure  $callback
      */
     public static function toMailUsing(\Closure $callback): void
     {

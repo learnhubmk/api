@@ -6,7 +6,6 @@ use App\Framework\Http\Controllers\Controller;
 use App\Website\Http\Requests\StoreNewsletterSubscriberRequest;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
-use Spatie\MailcoachSdk\Exceptions\InvalidData;
 use Spatie\MailcoachSdk\Facades\Mailcoach;
 use Symfony\Component\HttpFoundation\Response;
 

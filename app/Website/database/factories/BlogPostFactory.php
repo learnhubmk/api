@@ -56,4 +56,3 @@ class BlogPostFactory extends Factory
         });
     }
 }
-
