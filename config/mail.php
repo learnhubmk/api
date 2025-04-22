@@ -39,6 +39,7 @@ return [
 
         'smtp' => [
             'transport' => 'smtp',
+            'scheme' => env('MAIL_SCHEME'),
             'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
@@ -120,6 +121,17 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    'contact_email' => env('MAIL_CONTACT_ADDRESS', 'contact@learnhub.mk')
+    /*
+    |--------------------------------------------------------------------------
+    | Markdown Mail Settings
+    |--------------------------------------------------------------------------
+    |
+    | If you are using Markdown based email rendering, you may configure your
+    | theme and component paths here, allowing you to customize the design
+    | of the emails. Or, you may simply stick with the Laravel defaults!
+    |
+    */
+
+    'contact_email' => env('MAIL_CONTACT_ADDRESS', 'contact@learnhub.mk'),
 
 ];

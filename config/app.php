@@ -7,7 +7,7 @@ return [
     | Application Name
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application, which will be  used when the
+    | This value is the name of your application, which will be used when the
     | framework needs to place the application's name in a notification or
     | other UI elements where an application name needs to be displayed.
     |
@@ -84,7 +84,7 @@ return [
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'mk'),
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'mk_MK'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     | This key is utilized by the Laravel's encryption services and should be set
     | to a random, 32 character string to ensure that all encrypted values
-    | are secure. You should do this prior to deploying the application!
+    | are secure. You should do this prior to deploying the application.
     |
     */
 
