@@ -1,6 +1,7 @@
 <?php
 
 return [
+    Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
     App\Admin\Providers\AdminServiceProvider::class,
     App\Authentication\Providers\AuthenticationServiceProvider::class,
     App\Content\Providers\ContentServiceProvider::class,
@@ -12,5 +13,5 @@ return [
     App\Framework\Providers\RouteServiceProvider::class,
     App\Framework\Providers\TelescopeServiceProvider::class,
     App\Platform\Providers\PlatformServiceProvider::class,
-    Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+    App\Website\Providers\WebsiteServiceProvider::class,
 ];
