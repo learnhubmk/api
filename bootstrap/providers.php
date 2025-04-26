@@ -11,7 +11,7 @@ return [
     App\Framework\Providers\EventServiceProvider::class,
     App\Framework\Providers\HorizonServiceProvider::class,
     App\Framework\Providers\RouteServiceProvider::class,
-    App\Framework\Providers\TelescopeServiceProvider::class,
+    //App\Framework\Providers\TelescopeServiceProvider::class,
     App\Platform\Providers\PlatformServiceProvider::class,
     App\Website\Providers\WebsiteServiceProvider::class,
 ];
